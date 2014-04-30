@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="mymath">
+  <mrow>
+    <msup>
+      <mi>x</mi>
+      <msup>
+	<mi>x</mi>
+	<msup>
+	  <mi>x</mi>
+	  <msup>
+	    <mi>x</mi>
+	    <mn>2</mn>
+          </msup>
+        </msup>
+      </msup>
+    </msup>
+    <mo>+</mo>
+    <msub>
+      <mi>x</mi>
+      <msub>
+	<mi>x</mi>
+	<msub>
+	  <mi>x</mi>
+	  <msub>
+	    <mi>x</mi>
+	    <mn>2</mn>
+          </msub>
+        </msub>
+      </msub>
+    </msub>
+    <mo>+</mo>
+    <mroot>
+      <mrow>
+        <mfrac>
+          <mn>99</mn>
+          <mi>x</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mroot>
+          <mi>y</mi>
+          <mn>3</mn>
+        </mroot>
+      </mrow>
+      <mn>2</mn>
+    </mroot>
+  </mrow>
+</math>

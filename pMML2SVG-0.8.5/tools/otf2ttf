@@ -1,0 +1,10 @@
+#!/bin/sh
+otfdir=/usr/share/fonts/opentype/stix
+ttfdir=/usr/local/share/fonts/truetype/stix
+
+for otf in $otfdir/*.otf; do
+    fontpath=${otf%.*}
+    font=${fontpath##*/}
+    ttf=$font.ttf
+    fontforge -lang=ff -c 'Open($1); Generate($2)' $otf $ttfdir/$ttf
+done

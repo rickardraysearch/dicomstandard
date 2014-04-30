@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="mymath">
+  <!-- Correct notation: -->
+  <msubsup>
+    <mi>x</mi>
+    <mrow/>
+    <mi>&#x2032;</mi>
+  </msubsup>
+  <msubsup>
+    <mi>X</mi>
+    <mrow/>
+    <mi>&#x2032;</mi>
+  </msubsup>
+  
+  <!-- Correct notation: -->
+  <msubsup>
+    <mi>x</mi>
+    <mn>1</mn>
+    <mi>&#x2032;</mi>
+  </msubsup>
+  <msubsup>
+    <mi>X</mi>
+    <mn>1</mn>
+    <mi>&#x2032;</mi>
+  </msubsup>
+  
+  <!-- Correct notation: -->
+  <msup>
+    <mi>x</mi>
+    <mi>&#x2032;</mi>
+  </msup>
+  <msup>
+    <mi>X</mi>
+    <mi>&#x2032;</mi>
+  </msup>
+
+  <!-- Incorrect notation: -->
+  <mrow>
+    <mi>x</mi>
+    <mi>&#x2032;</mi>
+  </mrow>
+  <mrow>
+    <mi>X</mi>
+    <mi>&#x2032;</mi>
+  </mrow>
+</math>

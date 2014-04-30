@@ -1,0 +1,33 @@
+#!/bin/sh
+htmlfile=examples.xhtml
+
+echo '<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
+               "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd" [
+  <!ENTITY mathml "http://www.w3.org/1998/Math/MathML">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>pMML2SVG test</title>
+    <style type="text/css">
+body { font-size:20px }
+    </style>
+  </head>
+  <body>
+    <table>' >$htmlfile
+
+for mmlfile in `ls *.xml`; do
+    file=${mmlfile%.*}
+    echo '      <tr>'                                    >>$htmlfile
+    echo '        <td>'$file'</td>'                      >>$htmlfile
+    echo '        <td>'                                  >>$htmlfile
+    tail --lines=+2 $mmlfile                             >>$htmlfile
+    echo '        </td>'                                 >>$htmlfile
+    echo '        <td><object data="'$file.svg'"/></td>' >>$htmlfile
+    echo '      </tr>'                                   >>$htmlfile
+done
+
+echo '
+    </table>
+  </body>
+</html>' >>$htmlfile

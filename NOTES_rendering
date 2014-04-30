@@ -1,0 +1,59 @@
+2014/02/26
+
+These instructions are for MacOS but should be generalizable to other platforms.
+
+Pre-requisites:
+
+	- you need to obtain and install "xsltproc" (e.g., "port install xsltproc")
+	
+	- you need to obtain and install "saxon" (e.g., "port install saxon") ... needed for pMML2SVG
+	
+	- for PDF, you need to have the right fonts in /Library/Fonts, specifically:
+	
+		Arial Unicode.ttf
+		Arial Italic.ttf
+		Arial Bold.ttf
+		Arial Bold Italic.ttf
+		AdobeSongStd-Light.otf
+		KozMinPr6N-Regular.otf
+		STIXGeneral.otf
+		STIXGeneralItalic.otf
+		STIXGeneralBol.otf
+		STIXGeneralBolIta.otf
+		STIXSizOneSymReg.otf
+		STIXSizOneSymBol.otf
+		
+	- to enable DOCX generation you need to purchase the XMLmind XSL-FO Converter
+
+You need to update the absolute paths in:
+
+	catalogs/catalog.xml
+	olinkdb_html.xml
+	olinkdb_pdf.xml
+
+by running:
+
+	./updateabsolutepaths.sh
+	
+To enable PDF generation using a trial version of RenderX (XEP):
+
+	mv XEP_trial XEP
+	
+To enable DOCX generation using a purchased version of XMLmind XSL-FO Converter called "xfc_pro_java-5_0_0":
+
+	ln -s xfc_pro_java-5_0_0 xfc_pro_java
+	
+To make PDF and (X)HTML and chunked (X)HTML (and optionally DOCX) output run:
+
+	./generateforrelease.sh
+
+Note that the XEP/xep shell script and XEP/xep.xml config files have been patched (paths, fonts, etc.)
+
+Note that the pMML2SVG/XSLT2/pmml2svg.xsl stylesheet has been patched (to use indent no rather than yes in output FO)
+
+Note that the DOCX will be formatted with Arial as the sans-serif fonts, and that Asian text may or may
+not be visible depending on your platform, and even if it is visible it will be low resolution; any Asian
+text that is not visible can be made so by changing the font for the text to "Arial Unicode MS" after
+installed ARIALUNI.TTF.
+
+

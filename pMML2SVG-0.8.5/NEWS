@@ -1,0 +1,16 @@
+Release 0.8.5: move to STIX fonts 1.x
+
+Release 0.8.4: move to STIX fonts (from STIXbeta)
+
+Release 0.8.3: removed all references to DTDs
+	       no longer output DOCTYPE declarations
+	       fixed (or papered over) bug that caused gaps
+	         in horizontally stretched, composed glyphs
+
+Release 0.8.1: fixed two bugs:
+	       - removed illegal "tunnel" stylesheet parameter attribute
+	       - fixed baseline problem revealed by examples/primes*.xml
+
+Release 0.8: major leap; beta status
+
+Release 0.1: initial release

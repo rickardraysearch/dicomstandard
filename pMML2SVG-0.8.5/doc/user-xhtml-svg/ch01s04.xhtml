@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Changing the Font</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/>
+      <link rel="home" href="index.xhtml"
+            title="Conversion of MathML to SVG via XSLT: pMML2SVG"/>
+      <link rel="up" href="ch01.xhtml" title="Chapter 1. pMML2SVG: User guide"/>
+      <link rel="prev" href="ch01s03.xhtml" title="Toolchain"/>
+      <link rel="next" href="ch01s05.xhtml" title="Usage Examples"/>
+      <style type="text/css"><![CDATA[
+	p { font-size: 15px; }
+      ]]></style>
+   </head>
+   <body>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Changing the Font</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left">
+                  <a accesskey="p" href="ch01s03.xhtml">Prev</a> </td>
+               <th width="60%" align="center">Chapter 1. pMML2SVG: User guide</th>
+               <td width="20%" align="right"> <a accesskey="n" href="ch01s05.xhtml">Next</a>
+               </td>
+            </tr>
+         </table>
+         <hr/>
+      </div>
+      <div class="sect1" title="Changing the Font">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both">
+                     <a id="ChangingFont"/>Changing the Font</h2>
+               </div>
+            </div>
+         </div>
+    
+
+         <p>
+      In this section we will see how to change the default font of pMML2SVG and how to create the metrics file that are necessary to do the transformation.
+    </p>
+
+         <div class="sect2" title="FOP font metrics">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title">
+                        <a id="d5e222"/>FOP font metrics</h3>
+                  </div>
+               </div>
+            </div>
+      
+
+            <p>
+	To add a new font to pMML2SVG, you need to create font metrics files and add them in the <code class="filename">XSLT2/</code> directory
+	of pMML2SVG distribution. These font metrics files are created with <code class="filename">ttfreader</code> tool that comes with 
+	<acronym class="acronym">FOP</acronym>. To fully support a font, you need to create four <acronym class="acronym">XML</acronym> font metrics files with 
+	<acronym class="acronym">FOP</acronym> 
+               <code class="filename">ttfreader</code>. The first file, named <code class="filename">MyFont.xml</code>, contains the 
+	normal style font metrics, from <code class="filename">MyFont.ttf</code> for example. The second font metrics file, named
+	<code class="filename">MyFont-Italic.xml</code>, contains all metrics information about the italic font, from <code class="filename">MyFontItalic.ttf</code>
+	for example. The third file, called <code class="filename">MyFont-Bold.xml</code>, contains all information about the bold font, from
+	<code class="filename">MyFontBol.ttf</code>. And the last file, named <code class="filename">MyFont-Bold-Italic.xml</code> contains all metrics information
+	about the bold italic font, from <code class="filename">MyFontBolIta.ttf</code> for example.
+      </p>
+
+            <p>
+	Since the initial <acronym class="acronym">FOP</acronym> 
+               <code class="filename">ttfreader</code> did not provide enough precision to draw the character, some modifications
+	have been done to the source code to add more precision to it. The new source code can be found in the <code class="filename">ttfreader/</code> folder coming
+	with the pMML2SVG distribution. To create font metrics files, this tool has to be compiled. It requires a complete <acronym class="acronym">FOP</acronym>
+	distribution to work correctly.
+      </p>
+
+            <p>
+	To compile the code, we will use the <code class="filename">make</code> script in the <code class="filename">ttfreader/</code> folder. First, you have
+	to modify the first two lines of this script to adapt the script to your local installation. The first line is the path to a <acronym class="acronym">FOP</acronym>
+	distribution and the second line is the Java <code class="filename">classpath</code> used in the compilation. This classpath must includes the following
+	libraries: <code class="filename">FOP.jar</code>, <code class="filename">commons-logging</code>, <code class="filename">commons-io</code> and <code class="filename">xmlgraphics-commons</code>.
+      </p>
+
+            <p>
+	After making this configuration, you can compile the tool using <span class="command">
+                  <strong>./make</strong>
+               </span> command. This script will produce the
+	<code class="filename">TTFReader.jar</code> file. This final JAR file will be used to compile font metrics files.
+      </p>
+
+            <p>
+	To create a font metrics file, configuration has to be done in the <code class="filename">TTFReader</code> script that comes with pMML2SVG
+	distribution in the <code class="filename">ttfreader/</code> directory. As the <code class="filename">make</code> file, the first two lines have to be changed in
+	the same way. The <code class="filename">classpath</code> must contain: <code class="filename">TTFReader.jar</code>, <code class="filename">FOP.jar</code>, 
+	<code class="filename">commons-logging</code>, <code class="filename">commons-io</code> and <code class="filename">xmlgraphics-commons</code>. The 
+	<code class="filename">TTFReader.jar</code> archive must be written before <code class="filename">FOP.jar</code> in the classpath.
+      </p>
+
+            <p>
+	We can now call <code class="filename">TTFReader</code> script to create a metrics file like that:
+
+	</p>
+            <pre class="programlisting">./TTFReader MyFont.ttf</pre>
+            <p>
+
+	This command will produce a <code class="filename">MyFont.xml</code> file that contains all the metrics that are needed by pMML2SVG. This script can also
+	create a group of <acronym class="acronym">TTF</acronym> files in one shot. For example, if you want to compile your entire font folder, you can run the following 
+	command:
+	
+	</p>
+            <pre class="programlisting">./TTFReader $HOME/.fonts/*.ttf</pre>
+            <p>
+
+	All the newly created <acronym class="acronym">XML</acronym> metrics files will be created in <code class="filename">$HOME/.fonts/</code> folder. You can then
+	copy all these metrics in the <code class="filename">XSLT2/</code> directory of pMML2SVG by using, for example, the following <span class="command">
+                  <strong>cp</strong>
+               </span> command:
+	
+	</p>
+            <pre class="programlisting">cp $HOME/.fonts/*.xml pMML2SVG/XSLT2/</pre>
+            <p>
+      </p>
+
+            <p>
+	Once these <acronym class="acronym">XML</acronym> metrics files have been copied into <code class="filename">XSLT2/</code> pMML2SVG folder, it will be able to use these
+	new fonts in the transformation.
+      </p>
+         </div>
+
+         <div class="sect2" title="Font parameter">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title">
+                        <a id="d5e282"/>Font parameter</h3>
+                  </div>
+               </div>
+            </div>
+      
+
+            <p>
+	To tell pMML2SVG that it will use the new fonts, we can simply change the <code class="filename">fontName</code> parameter when calling the transformation.
+	For example, the command will be (using the previous <code class="filename">test.xml</code> 
+               <acronym class="acronym">MathML</acronym> example):
+
+	</p>
+            <pre class="programlisting">java -jar saxon9.jar -s:test.xml 
+     -xsl:pMML2SVG/XSLT2/pmml2svg.xsl -o:test.svg fontName=MyFont</pre>
+            <p>
+      </p>
+
+            <p>
+	You can also keep the default font and add your font at the beginning of the fonts list, for our example, the parameter <code class="filename">fontName</code>
+	will be <code class="filename">MyFont,STIXGeneral,STIXSizeOneSym</code>. This last modification can be done directly in the stylesheet or using the parameter.
+      </p>
+      
+            <p>
+	Note that the font has to implement all the mathematical Unicode glyphs to have a correct rendering.
+      </p>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr/>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left">
+                  <a accesskey="p" href="ch01s03.xhtml">Prev</a> </td>
+               <td width="20%" align="center">
+                  <a accesskey="u" href="ch01.xhtml">Up</a>
+               </td>
+               <td width="40%" align="right"> <a accesskey="n" href="ch01s05.xhtml">Next</a>
+               </td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Toolchain </td>
+               <td width="20%" align="center">
+                  <a accesskey="h" href="index.xhtml">Home</a>
+               </td>
+               <td width="40%" align="right" valign="top"> Usage Examples</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,16 @@
+This is TTFReader, the modified FOP tool to produce an XML metrics font file
+from a TTF file. It has been modified to add bounding box of each glyph to the
+XML metrics file.
+It is distributed under the LGPL; see ../COPYING.
+
+
+USAGE:   Before using the TTFReader, you have to build the source using a FOP
+         distribution. For more detail about how to build and use this
+         tool, please refer to the user documentation in the ../doc/ directory.
+
+AUTHORS: Alexandre Stevens <stevens_alex@users.sourceforge.net>
+	 Thibault Mouton
+	 Justus H. Piater <piater@users.sourceforge.net>
+	 Jérôme Joslet
+
+HOME:    http://sourceforge.net/projects/pmml2svg

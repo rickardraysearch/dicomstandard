@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Basic Usage</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/>
+      <link rel="home" href="index.xhtml"
+            title="Conversion of MathML to SVG via XSLT: pMML2SVG"/>
+      <link rel="up" href="ch01.xhtml" title="Chapter 1. pMML2SVG: User guide"/>
+      <link rel="prev" href="ch01.xhtml" title="Chapter 1. pMML2SVG: User guide"/>
+      <link rel="next" href="ch01s03.xhtml" title="Toolchain"/>
+      <style type="text/css"><![CDATA[
+	p { font-size: 15px; }
+      ]]></style>
+   </head>
+   <body>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Basic Usage</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left">
+                  <a accesskey="p" href="ch01.xhtml">Prev</a> </td>
+               <th width="60%" align="center">Chapter 1. pMML2SVG: User guide</th>
+               <td width="20%" align="right"> <a accesskey="n" href="ch01s03.xhtml">Next</a>
+               </td>
+            </tr>
+         </table>
+         <hr/>
+      </div>
+      <div class="sect1" title="Basic Usage">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both">
+                     <a id="d5e45"/>Basic Usage</h2>
+               </div>
+            </div>
+         </div>
+    
+
+         <p>
+      The easiest way to use the stylesheet is to simply process a <acronym class="acronym">MathML</acronym> file and transform it into a <acronym class="acronym">SVG</acronym> file.
+      Suppose that we have a <acronym class="acronym">MathML</acronym> file, called <code class="filename">test.xml</code>, containing the following <acronym class="acronym">MathML</acronym> code :
+    </p>
+    
+         <div class="example">
+            <a id="d5e53"/>
+            <p class="title">
+               <strong>Example 1.1. test.xml example: source code</strong>
+            </p>
+            <div class="example-contents">
+      
+
+               <pre class="programlisting">&lt;?xml version="1.0"?&gt;
+&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+  &lt;mrow&gt;
+    &lt;mi&gt;x&lt;/mi&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;msqrt&gt;
+      &lt;mn&gt;245&lt;/mn&gt;
+      &lt;mo&gt;+&lt;/mo&gt;
+      &lt;mi&gt;y&lt;/mi&gt;
+    &lt;/msqrt&gt;
+  &lt;/mrow&gt;
+&lt;/math&gt;
+</pre>
+            </div>
+         </div>
+         <br class="example-break"/>
+
+         <p>
+      We can simply transform this file into <acronym class="acronym">SVG</acronym> using the Saxon 9 processor with the following command:
+    </p>
+
+         <pre class="programlisting">java -jar SAXON/saxon9.jar -s:test.xml 
+     -xsl:pMML2SVG/XSLT2/pmml2svg.xsl -o:test.svg</pre>
+
+         <p>
+      This command produces a file <code class="filename">test.svg</code> containing the following code:
+    </p>
+
+         <div class="example">
+            <a id="d5e61"/>
+            <p class="title">
+               <strong>Example 1.2. test.xml example: SVG transformation source code</strong>
+            </p>
+            <div class="example-contents">
+      
+      
+               <pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;svg xmlns:pmml2svg="https://sourceforge.net/projects/pmml2svg/"
+     xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     width="280.0444px"
+     height="73.03333333333333px"
+     viewBox="0 0 280.0444 73.03333333333333"&gt;
+   &lt;metadata&gt;
+      &lt;pmml2svg:baseline-shift&gt;20.299999999999997&lt;/pmml2svg:baseline-shift&gt;
+   &lt;/metadata&gt;
+   &lt;g stroke="none" fill="#000000" text-rendering="optimizeLegibility"
+      font-family="STIXGeneral,STIXSizeOneSym"&gt;
+      &lt;g xmlns:doc="http://nwalsh.com/xsl/documentation/1.0"
+         style="font-family: STIXGeneral,STIXSizeOneSym; fill: ; background-color: transparent; "&gt;
+         &lt;g style="font-family: STIXGeneral,STIXSizeOneSym; fill: ; background-color: transparent; "&gt;
+            &lt;text style="font-family: STIXGeneral, STIXSizeOneSym; font-style: italic; fill: black; background-color: transparent; "
+                  x="11.35"
+                  y="52.733333333333334"
+                  font-size="50"&gt;x&lt;/text&gt;
+            &lt;text x="44.8111" y="52.733333333333334" font-size="50"
+                  style="font-family: STIXGeneral, STIXSizeOneSym; fill: black; background-color: transparent; "&gt;+&lt;/text&gt;
+            &lt;text style="font-family: STIXGeneral, STIXSizeOneSym; fill: black; background-color: transparent; "
+                  x="115.1722"
+                  y="52.733333333333334"
+                  font-size="50"&gt;245&lt;/text&gt;
+            &lt;text x="201.2833" y="52.733333333333334" font-size="50"
+                  style="font-family: STIXGeneral, STIXSizeOneSym; fill: black; background-color: transparent; "&gt;+&lt;/text&gt;
+            &lt;text style="font-family: STIXGeneral, STIXSizeOneSym; font-style: italic; fill: black; background-color: transparent; "
+                  x="247.8444"
+                  y="52.733333333333334"
+                  font-size="50"&gt;y&lt;/text&gt;
+            &lt;line x1="92.6722" y1="36.516666666666666" x2="97.1722" y2="25.91" fill="none"
+                  stroke="black"
+                  stroke-width="1"/&gt;
+            &lt;line x1="97.1722" y1="25.91" x2="103.9222" y2="63.03333333333333" fill="none"
+                  stroke="black"
+                  stroke-width="2"/&gt;
+            &lt;line x1="103.9222" y1="63.03333333333333" x2="115.1722" y2="10.000000000000002"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1"/&gt;
+            &lt;line x1="115.1722" y1="10.000000000000002" x2="272.5444" y2="10.000000000000002"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1"/&gt;
+         &lt;/g&gt;
+      &lt;/g&gt;
+   &lt;/g&gt;
+&lt;/svg&gt;</pre>
+            </div>
+         </div>
+         <br class="example-break"/>
+    
+         <p>
+      This code renders like that:
+    </p>
+
+         <div class="example">
+            <a id="d5e65"/>
+            <p class="title">
+               <strong>Example 1.3. test.xml example: SVG transformation result</strong>
+            </p>
+            <div class="example-contents">
+      
+
+               <div class="mediaobject" align="center">
+                  <object type="image/svg+xml" data="figures/test.svg" align="middle"/>
+               </div>
+            </div>
+         </div>
+         <br class="example-break"/>
+
+         <p>
+      The transformation result can be modified by tuning some
+      parameters. The parameters that can be changed and their
+      meanings are listed below.
+    </p>
+
+         <div class="variablelist" title="Stylesheet parameters">
+            <p class="title">
+               <strong>Stylesheet parameters</strong>
+            </p>
+            <dl>
+               <dt>
+                  <span class="term">
+                     <code class="filename">svgMasterUnit</code>
+                  </span>
+               </dt>
+               <dd>
+	                 <p>
+	    Defines the unit that will be used in the <acronym class="acronym">SVG</acronym> (default is <code class="filename">px</code>).
+	  </p>
+	              </dd>
+               <dt>
+                  <span class="term">
+                     <code class="filename">initSize</code>
+                  </span>
+               </dt>
+               <dd>
+	                 <p>
+	    Defines the initial font size (default is 50).
+	  </p>
+	              </dd>
+               <dt>
+                  <span class="term">
+                     <code class="filename">minSize</code>
+                  </span>
+               </dt>
+               <dd>
+	                 <p>
+	    Defines the minimal font size in the SVG rendering (default is 8). This parameter is used to render fraction, superscript, subscript, etc. which
+	    have to be smaller than the normal text.
+	  </p>
+	              </dd>
+               <dt>
+                  <span class="term">
+                     <code class="filename">fontName</code>
+                  </span>
+               </dt>
+               <dd>
+	                 <p>
+	    Defines fonts that will be used to render the <acronym class="acronym">SVG</acronym> file. To learn how to change default fonts, have a look at 
+	    <a class="xref" href="ch01s04.xhtml" title="Changing the Font">the section called “Changing the Font”</a>. By default, the value of this parameter is <code class="filename">STIXGeneral,STIXSizeOneSym</code>. These fonts can 
+	    be <a class="ulink" href="http://www.stixfonts.org/" target="_top">downloaded from the Internet</a>. The objective of the STIX project
+	    is to provide a font that serves the scientific and engineering community.
+	  </p>
+	              </dd>
+            </dl>
+         </div>
+
+
+         <p>
+      For example, to change the initial size of the font, we can change the parameter <code class="filename">initSize</code> by adding information in the 
+      command line:
+    </p>
+
+         <pre class="programlisting">java -jar saxon9.jar -s:test.xml 
+     -xsl:pMML2SVG/XSLT2/pmml2svg.xsl -o:test.svg initSize=15</pre>
+
+         <p>
+      You will obtain the following equation:
+    </p>
+
+         <div class="example">
+            <a id="d5e103"/>
+            <p class="title">
+               <strong>Example 1.4. test.xml example: SVG transformation result (modified initSize)</strong>
+            </p>
+            <div class="example-contents">
+      
+
+               <div class="mediaobject" align="center">
+                  <object type="image/svg+xml" data="figures/test15.svg" align="middle"/>
+               </div>
+            </div>
+         </div>
+         <br class="example-break"/>
+
+         <p>
+      pMML2SVG comes with an example script called
+      <code class="filename">pmml2svg</code>. This script can be used for batch
+      conversion and validation of a set of files using a command such
+      as <span class="command">
+               <strong>./pmml2svg examples/*.xml</strong>
+            </span>.  You may want
+      to adapt it to your needs.
+    </p>
+
+         <p>
+      In the examples directory you will also find a script that can create an <acronym class="acronym">XHTML</acronym> file containing both <code class="filename">MathML</code> code
+      and <acronym class="acronym">SVG</acronym> pictures. You can open this script using Firefox and compare Gecko MathML renderer with pMML2SVG. To use this script, simply go in 
+      <code class="filename">examples/</code> directory and execute <span class="command">
+               <strong>genhtml</strong>
+            </span>. It will create the file <code class="filename">examples.xhtml</code> containing
+      all the examples in <acronym class="acronym">MathML</acronym> and in <acronym class="acronym">SVG</acronym>.
+    </p>
+      </div>
+      <div class="navfooter">
+         <hr/>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left">
+                  <a accesskey="p" href="ch01.xhtml">Prev</a> </td>
+               <td width="20%" align="center">
+                  <a accesskey="u" href="ch01.xhtml">Up</a>
+               </td>
+               <td width="40%" align="right"> <a accesskey="n" href="ch01s03.xhtml">Next</a>
+               </td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Chapter 1. pMML2SVG: User guide </td>
+               <td width="20%" align="center">
+                  <a accesskey="h" href="index.xhtml">Home</a>
+               </td>
+               <td width="40%" align="right" valign="top"> Toolchain</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

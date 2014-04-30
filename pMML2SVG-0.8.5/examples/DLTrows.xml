@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- two empty lines -->
+<!-- two empty lines -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mi>P</mi>
+      <msub>
+        <mrow>
+          <mi mathvariant="bold">X</mi>
+        </mrow>
+        <mrow>
+          <mi>i</mi>
+        </mrow>
+      </msub>
+      <mo>=</mo>
+      <mrow>
+        <mo>[</mo>
+        <mtable>
+          <mtr>
+            <mtd columnalign="right">
+              <mrow>
+                <msubsup>
+                  <mrow>
+                    <mi mathvariant="bold">p</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>1</mn>
+                  </mrow>
+                  <mrow>
+                    <mi mathvariant="normal">T</mi>
+                  </mrow>
+                </msubsup>
+                <msub>
+                  <mrow>
+                    <mi mathvariant="bold">X</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd columnalign="right">
+              <mrow>
+                <msubsup>
+                  <mrow>
+                    <mi mathvariant="bold">p</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                  <mrow>
+                    <mi mathvariant="normal">T</mi>
+                  </mrow>
+                </msubsup>
+                <msub>
+                  <mrow>
+
+                    <mi mathvariant="bold">X</mi>
+
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd columnalign="right">
+              <mrow>
+                <msubsup>
+                  <mrow>
+                    <mi mathvariant="bold">p</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn>
+                  </mrow>
+                  <mrow>
+                    <mi mathvariant="normal">T</mi>
+                  </mrow>
+                </msubsup>
+                <msub>
+                  <mrow>
+                    <mi mathvariant="bold">X</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>]</mo>
+      </mrow>
+    </mrow>
+  </mstyle>
+</math>

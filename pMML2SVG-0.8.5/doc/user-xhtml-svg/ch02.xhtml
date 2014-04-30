@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Chapter 2. MathML Compliance</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/>
+      <link rel="home" href="index.xhtml"
+            title="Conversion of MathML to SVG via XSLT: pMML2SVG"/>
+      <link rel="up" href="index.xhtml"
+            title="Conversion of MathML to SVG via XSLT: pMML2SVG"/>
+      <link rel="prev" href="ch01s05.xhtml" title="Usage Examples"/>
+      <link rel="next" href="apa.xhtml" title="Appendix A. DocBook test file source code"/>
+      <style type="text/css"><![CDATA[
+	p { font-size: 15px; }
+      ]]></style>
+   </head>
+   <body>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Chapter 2. MathML Compliance</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left">
+                  <a accesskey="p" href="ch01s05.xhtml">Prev</a> </td>
+               <th width="60%" align="center"> </th>
+               <td width="20%" align="right"> <a accesskey="n" href="apa.xhtml">Next</a>
+               </td>
+            </tr>
+         </table>
+         <hr/>
+      </div>
+      <div xml:lang="" class="chapter" title="Chapter 2. MathML Compliance">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title">
+                     <a id="d5e721"/>Chapter 2. MathML Compliance</h2>
+               </div>
+            </div>
+         </div>
+         <p>
+    The following tables show the compliance of pMML2SVG with the MathML specification. 
+  </p>
+         <p>
+    The first five tables address the implementation of elements and their attributes. A name in <span class="emphasis">
+               <em>
+                  <span class="command">
+                     <strong>bold italic</strong>
+                  </span>
+               </em>
+            </span>
+    represents a MathML element. A value <span class="command">
+               <strong>Yes</strong>
+            </span> in the implementation column means that the basic renderer for this element is 
+    implemented (correct default display). A name with no style is an attribute, a <span class="command">
+               <strong>Yes</strong>
+            </span> in the implementation column means that 
+    this attribute is fully supported. <span class="command">
+               <strong>Partial</strong>
+            </span> in the implementation always comes with a text that gives more detail about the 
+    current status of the implementation.
+  </p>
+         <p>
+    The last two tables show the attributes that are common to all MathML elements. These are mainly style attributes.
+  </p>
+         <div class="table">
+            <a id="conformanceTokens"/>
+            <p class="title">
+               <strong>Table 2.1. Conformance: MathML elements: Tokens</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Conformance: MathML elements: Tokens" border="1">
+                  <colgroup>
+                     <col/>
+                     <col/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>Implementation</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mi</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mn</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mo</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>form</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>fence</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>separator</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>lspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>rspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>stretchy</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span>: More operators can be stretched but are not yet supported</td>
+                     </tr>
+                     <tr>
+                        <td>Operator Dictionary</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>symmetric</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>maxsize</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>minsize</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>largeop</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>movablelimits</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>accent</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Invisible operator</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mtext</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mspace</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>width</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>height</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>depth</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>linebreak</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>ms</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>lquote</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>rquote</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mglyph</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>alt</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>fontfamily</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>index</td>
+                        <td>No</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="conformanceGenLayout"/>
+            <p class="title">
+               <strong>Table 2.2. Conformance: MathML elements: General layout</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Conformance: MathML elements: General layout" border="1">
+                  <colgroup>
+                     <col/>
+                     <col/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>Implementation</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mrow</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mfrac</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>linethickness</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>numalign</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>denomalign</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>bevelled</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>msqrt</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mroot</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span>: Size of base index &gt; 1 not yet supported</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mstyle</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>other elements attributes</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>scriptlevel</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>displaystyle</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>scriptsizemultiplier</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>scriptminsize</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>background</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>veryverythinmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>verythinmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>thinmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mediummathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>thickmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>verythickmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>veryverythickmathspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>merror</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mpadded</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>width</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>lspace</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>height</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>depth</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mphantom</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mfenced</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>open</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>close</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>separators</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>menclose</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>notation</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="conformanceScript"/>
+            <p class="title">
+               <strong>Table 2.3. Conformance: MathML elements: Scripts and limits</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Conformance: MathML elements: Scripts and limits" border="1">
+                  <colgroup>
+                     <col/>
+                     <col/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>Implementation</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>msub</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>subscriptshift</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>msup</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>superscriptshift</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>msubsup</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>subscriptshift</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>superscriptshift</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>munder</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>accentunder</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mover</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>accent</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>munderover</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>accent</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>accentunder</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mmultiscripts</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>subscriptshift</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>superscriptshift</td>
+                        <td>No</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="conformanceTables"/>
+            <p class="title">
+               <strong>Table 2.4. Conformance: MathML elements: Tables and matrices</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Conformance: MathML elements: Tables and matrices" border="1">
+                  <colgroup>
+                     <col/>
+                     <col/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>Implementation</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mtable</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>align</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>rowalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnalign</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>groupalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>alignmentscope</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnwidth</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>width</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>rowspacing</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnspacing</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>rowlines</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnlines</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>frame</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>framespacing</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>equalrows</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>equalcolumns</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>displaystyle</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>side</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>minlabelspacing</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mtr</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>rowalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnalign</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>groupalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mlabeledtr</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>rowalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>groupalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>mtd</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>rowspan</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnspan</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>rowalign</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>columnalign</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>groupalign</td>
+                        <td>No</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="conformanceAction"/>
+            <p class="title">
+               <strong>Table 2.5. Conformance: MathML elements: Enlivening expressions</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Conformance: MathML elements: Enlivening expressions" border="1">
+                  <colgroup>
+                     <col/>
+                     <col/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>Implementation</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="emphasis">
+                              <em>
+                                 <span class="command">
+                                    <strong>maction</strong>
+                                 </span>
+                              </em>
+                           </span>
+                        </td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>actiontype</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>selection</td>
+                        <td>No</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="d5e1254"/>
+            <p class="title">
+               <strong>Table 2.6. Attributes common to all elements: tokens and general layout</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Attributes common to all elements: tokens and general layout"
+                      border="1">
+                  <colgroup>
+                     <col class="c1"/>
+                     <col/>
+                     <col/>
+                     <col/>
+                     <col class="c5"/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>mathvariant</th>
+                        <th>mathsize</th>
+                        <th>mathbackground</th>
+                        <th>mathcolor</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td colspan="5">
+                           <span class="command">
+                              <strong>Tokens</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mi</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic). One letter default italic is implemented.</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mn</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mo</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>ms</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mtext</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mspace</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mglyph</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td colspan="5">
+                           <span class="command">
+                              <strong>General layout</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mrow</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>math</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mfrac</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>msqrt</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mroot</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mstyle</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>merror</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mpadded</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mphantom</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mfenced</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>menclose</td>
+                        <td>
+                           <span class="command">
+                              <strong>Partial</strong>
+                           </span> (bold, italic, bold-italic)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>
+                           <span class="command">
+                              <strong>Yes</strong>
+                           </span>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+         <div class="table">
+            <a id="d5e1407"/>
+            <p class="title">
+               <strong>Table 2.7. Attributes common to all elements: scripts and limits, tables and matrices and enlivening expressions</strong>
+            </p>
+            <div class="table-contents">
+               <table summary="Attributes common to all elements: scripts and limits, tables and matrices and enlivening expressions"
+                      border="1">
+                  <colgroup>
+                     <col class="c1"/>
+                     <col/>
+                     <col/>
+                     <col/>
+                     <col class="c5"/>
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th>Tag name</th>
+                        <th>mathvariant</th>
+                        <th>mathsize</th>
+                        <th>mathbackground</th>
+                        <th>mathcolor</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td colspan="5">
+                           <span class="command">
+                              <strong>Script and limit</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>msub</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>msup</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>msubsup</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>munder</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mover</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>munderover</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mmultiscripts</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td colspan="5">
+                           <span class="command">
+                              <strong>Tables and matrices</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>mtable</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mlabeledtr</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mtr</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td>mtd</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                     <tr>
+                        <td colspan="5">
+                           <span class="command">
+                              <strong>Enlivening expressions</strong>
+                           </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>maction</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <br class="table-break"/>
+      </div>
+      <div class="navfooter">
+         <hr/>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left">
+                  <a accesskey="p" href="ch01s05.xhtml">Prev</a> </td>
+               <td width="20%" align="center"> </td>
+               <td width="40%" align="right"> <a accesskey="n" href="apa.xhtml">Next</a>
+               </td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Usage Examples </td>
+               <td width="20%" align="center">
+                  <a accesskey="h" href="index.xhtml">Home</a>
+               </td>
+               <td width="40%" align="right" valign="top"> Appendix A. DocBook test file source code</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

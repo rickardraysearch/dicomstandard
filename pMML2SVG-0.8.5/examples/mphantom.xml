@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="mymath">
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>8</mn>
+      </msub>
+      <mo>+</mo>
+      <mfrac>
+	<mn>2567</mn>
+	<mn>98</mn>
+      </mfrac>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>x</mi>
+        <mn>8</mn>
+      </msub>
+      <mo>+</mo>
+      <mphantom>
+	<mfrac>
+	  <mn>2567</mn>
+	  <mn>98</mn>
+	</mfrac>
+      </mphantom>
+      <mo>+</mo>
+      <msup>
+        <mi>y</mi>
+        <mn>3</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+</math>

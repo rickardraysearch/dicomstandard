@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- two empty lines -->
+<!-- two empty lines -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mtable>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <msup>
+                <mrow>
+                  <mrow>
+                    <mover>
+                      <mrow>
+                        <msup>
+                          <mrow>
+                            <mi mathvariant="bold">C</mi>
+                          </mrow>
+                          <mrow>
+                            <mo>&#x2032;</mo>
+                          </mrow>
+                        </msup>
+                        <msup>
+                          <mrow>
+                            <mrow>
+                              <mover>
+                                <mrow>
+                                  <mi>x</mi>
+                                </mrow>
+                                <mo>̂</mo>
+                              </mover>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mo>&#x2032;</mo>
+                          </mrow>
+                        </msup>
+                      </mrow>
+                      <mo stretchy="true">&#x2192;</mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mrow>
+                  <mi>T</mi>
+                </mrow>
+              </msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mover>
+                    <mrow>
+                      <mi mathvariant="bold">C</mi>
+                      <msup>
+                        <mrow>
+                          <mi mathvariant="bold">C</mi>
+                        </mrow>
+                        <mrow>
+                          <mo>&#x2032;</mo>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                    <mo stretchy="true">&#x2192;</mo>
+                  </mover>
+                </mrow>
+
+                <mo>&#xD7;</mo>
+
+                <mrow>
+                  <mover>
+                    <mrow>
+                      <mi mathvariant="bold">C</mi>
+                      <mrow>
+                        <mover>
+                          <mrow>
+                            <mi>x</mi>
+                          </mrow>
+                          <mo>̂</mo>
+                        </mover>
+                      </mrow>
+                    </mrow>
+                    <mo stretchy="true">&#x2192;</mo>
+                  </mover>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mn>0</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+	      <msup>
+		<msup>
+		  <mover>
+		    <mi mathvariant="bold">x</mi>
+		    <mo>̂</mo>
+		  </mover>
+		  <mo>&#x2032;</mo>
+		</msup>
+		<mi>T</mi>
+	      </msup>
+              <mrow>
+                <mo>(</mo>
+                <mi mathvariant="bold">t</mi>
+                <mo>&#xD7;</mo>
+                <mo stretchy="false">(</mo>
+                <mi>R</mi>
+                <mrow>
+                  <mover>
+                    <mrow>
+                      <mi mathvariant="bold">x</mi>
+                    </mrow>
+                    <mo>̂</mo>
+                  </mover>
+                </mrow>
+                <mo stretchy="false">)</mo>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mn>0</mn>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <msup>
+		<msup>
+		  <mover>
+		    <mi mathvariant="bold">x</mi>
+		    <mo>̂</mo>
+		  </mover>
+		  <mo>&#x2032;</mo>
+		</msup>
+		<mi>T</mi>
+              </msup>
+              <mi>E</mi>
+              <mrow>
+                <mover>
+                  <mrow>
+                    <mi mathvariant="bold">x</mi>
+                  </mrow>
+                  <mo>̂</mo>
+                </mover>
+              </mrow>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mn>0</mn>
+              <mtext>&#xA0;with&#xA0;</mtext>
+              <mi>E</mi>
+              <mo>=</mo>
+              <mo stretchy="false">[</mo>
+              <mi mathvariant="bold">t</mi>
+              <msub>
+                <mrow>
+                  <mo stretchy="false">]</mo>
+                </mrow>
+                <mrow>
+                  <mo>&#xD7;</mo>
+                </mrow>
+              </msub>
+              <mi>R</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </mstyle>
+</math>

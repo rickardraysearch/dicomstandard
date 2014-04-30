@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <!-- Explicit, normally recommended notation: -->
+  <msup>
+    <mi>x</mi>
+    <mi>&#x2032;</mi>
+  </msup>
+  <msup>
+    <mi>X</mi>
+    <mi>&#x2032;</mi>
+  </msup>
+
+  <!-- Flat notation, normally discouraged: -->
+  <mrow>
+    <mi>x</mi>
+    <mi>&#x2032;</mi>
+  </mrow>
+  <mrow>
+    <mi>X</mi>
+    <mi>&#x2032;</mi>
+  </mrow>
+
+  <!-- Implicit notation, normally discouraged: -->
+  <mi>x'</mi>
+  <mi>X'</mi>
+</math>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="mymath">
+  <msqrt>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mfrac><mi>n</mi><mn>3</mn></mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mfrac>
+	<mi>l</mi>
+	<mn>8</mn>
+      </mfrac>
+      <mfrac>
+	<mi>p</mi>
+	<mn>6</mn>
+      </mfrac>
+    </mfrac>
+  </msqrt>
+</math>

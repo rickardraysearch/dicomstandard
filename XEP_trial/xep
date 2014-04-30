@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# XEP command-line
+
+JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+DOCBOOK_HOME="$HOME/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013"
+XEP_HOME="$DOCBOOK_HOME/XEP"
+
+CP="$JAVA_HOME/lib/tools.jar:\
+$XEP_HOME/lib/xep.jar:\
+$XEP_HOME/lib/saxon6.5.5/saxon.jar:\
+$XEP_HOME/lib/saxon6.5.5/saxon-xml-apis.jar:\
+$XEP_HOME/lib/xt.jar:\
+$DOCBOOK_HOME/lib/resolver.jar:\
+$DOCBOOK_HOME/lib"
+
+"$JAVA_HOME/bin/java" \
+	-classpath "$CP" \
+	"-Dcom.renderx.xep.CONFIG=$XEP_HOME/xep.xml" \
+	-Dcom.renderx.sax.entityresolver=org.apache.xml.resolver.tools.CatalogResolver \
+	-Dcom.renderx.jaxp.uriresolver=org.apache.xml.resolver.tools.CatalogResolver \
+	com.renderx.xep.XSLDriver "$@" 
+

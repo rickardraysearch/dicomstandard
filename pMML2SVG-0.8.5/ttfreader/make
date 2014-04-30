@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Change these lines to adapt to your fop distribution.
+# The build dir must come before the fop jar in the classpath.
+foppath=/usr/share/java
+classpath="build:$foppath/commons-logging.jar:$foppath/commons-io.jar:$foppath/xmlgraphics-commons.jar:$foppath/fop.jar"
+
+echo "---------------------------------------------------------------------"
+echo "Compiling files"
+echo "---------------------------------------------------------------------"
+mkdir build/
+javac -d build/ -sourcepath ./ -cp $classpath org/apache/fop/fonts/truetype/*.java
+javac -d build/ -sourcepath ./ -cp $classpath org/apache/fop/fonts/apps/*.java
+echo "---------------------------------------------------------------------"
+echo "Building jar file"
+echo "---------------------------------------------------------------------"
+jar cvf TTFReader.jar -C build org

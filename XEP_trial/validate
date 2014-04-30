@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# XSL FO Validator command-line
+
+JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+XEP_HOME="/Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/XEP"
+
+CP="$JAVA_HOME/lib/tools.jar:\
+$XEP_HOME/lib/xep.jar:\
+$XEP_HOME/lib/saxon6.5.5/saxon.jar:\
+$XEP_HOME/lib/saxon6.5.5/saxon-xml-apis.jar:\
+$XEP_HOME/lib/xt.jar"
+
+"$JAVA_HOME/bin/java" \
+	-classpath "$CP" \
+	"-Dcom.renderx.xep.CONFIG=$XEP_HOME/xep.xml" \
+	com.renderx.xep.Validator "$@"

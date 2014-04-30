@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Two empty lines -->
+<!-- Two empty lines -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mtable>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>p</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>j</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mrow>
+                <mo>{</mo>
+                <mtable>
+                  <mtr>
+                    <mtd columnalign="left">
+                      <mrow>
+                        <mi>&#x3BC;</mi>
+                      </mrow>
+                    </mtd>
+                    <mtd columnalign="left">
+                      <mrow>
+                        <mtext>if&#xA0;</mtext>
+                        <mi>j</mi>
+
+                        <mtext>&#xA0;can produce&#xA0;</mtext>
+
+                        <mi>i</mi>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd columnalign="left">
+                      <mrow>
+                        <mn>0</mn>
+                      </mrow>
+                    </mtd>
+                    <mtd columnalign="left">
+                      <mrow>
+                        <mtext>otherwise</mtext>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                </mtable>
+              </mrow>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <msub>
+                <mrow>
+                  <mi>p</mi>
+                </mrow>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>X</mi>
+                </mrow>
+              </msub>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mi>&#x3BB;</mi>
+              <mo>&lt;</mo>
+              <mi>&#x3BC;</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </mstyle>
+</math>

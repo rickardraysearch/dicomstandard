@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE targetset 
+       SYSTEM "http://docbook.sourceforge.net/release/xsl-ns/current/common/targetdatabase.dtd" [
+<!ENTITY PS3_01targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_01_target.db">
+<!ENTITY PS3_02targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_02_target.db">
+<!ENTITY PS3_03targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_03_target.db">
+<!ENTITY PS3_04targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_04_target.db">
+<!ENTITY PS3_05targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_05_target.db">
+<!ENTITY PS3_06targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_06_target.db">
+<!ENTITY PS3_07targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_07_target.db">
+<!ENTITY PS3_08targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_08_target.db">
+<!ENTITY PS3_10targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_10_target.db">
+<!ENTITY PS3_11targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_11_target.db">
+<!ENTITY PS3_12targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_12_target.db">
+<!ENTITY PS3_14targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_14_target.db">
+<!ENTITY PS3_15targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_15_target.db">
+<!ENTITY PS3_16targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_16_target.db">
+<!ENTITY PS3_17targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_17_target.db">
+<!ENTITY PS3_18targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_18_target.db">
+<!ENTITY PS3_19targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_19_target.db">
+<!ENTITY PS3_20targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/html/targetdb/PS3_20_target.db">
+]>
+<targetset>
+  <targetsetinfo>
+    Description of this target database document,
+    which is for the examples in olink doc.
+  </targetsetinfo>
+
+  <!-- Site map for generating relative paths between documents -->
+  <sitemap>
+    <dir name="output">
+      <dir name="html">
+		<document targetdoc="PS3.1" baseuri="part01.html">&PS3_01targets;</document>
+		<document targetdoc="PS3.2" baseuri="part02.html">&PS3_02targets;</document>
+		<document targetdoc="PS3.3" baseuri="part03.html">&PS3_03targets;</document>
+		<document targetdoc="PS3.4" baseuri="part04.html">&PS3_04targets;</document>
+		<document targetdoc="PS3.5" baseuri="part05.html">&PS3_05targets;</document>
+		<document targetdoc="PS3.6" baseuri="part06.html">&PS3_06targets;</document>
+		<document targetdoc="PS3.7" baseuri="part07.html">&PS3_07targets;</document>
+		<document targetdoc="PS3.8" baseuri="part08.html">&PS3_08targets;</document>
+		<document targetdoc="PS3.10" baseuri="part10.html">&PS3_10targets;</document>
+		<document targetdoc="PS3.11" baseuri="part11.html">&PS3_11targets;</document>
+		<document targetdoc="PS3.12" baseuri="part12.html">&PS3_12targets;</document>
+		<document targetdoc="PS3.14" baseuri="part14.html">&PS3_14targets;</document>
+		<document targetdoc="PS3.15" baseuri="part15.html">&PS3_15targets;</document>
+		<document targetdoc="PS3.16" baseuri="part16.html">&PS3_16targets;</document>
+		<document targetdoc="PS3.17" baseuri="part17.html">&PS3_17targets;</document>
+		<document targetdoc="PS3.18" baseuri="part18.html">&PS3_18targets;</document>
+		<document targetdoc="PS3.19" baseuri="part19.html">&PS3_19targets;</document>
+		<document targetdoc="PS3.20" baseuri="part20.html">&PS3_20targets;</document>
+      </dir>
+    </dir>
+  </sitemap>
+</targetset>

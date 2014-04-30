@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- two empty lines -->
+<!-- two empty lines -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <mtable>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <mi>F</mi>
+              <mo stretchy="false">(</mo>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>y</mi>
+              <mo stretchy="false">)</mo>
+              <mo stretchy="false">)</mo>
+              <mo stretchy="false">(</mo>
+              <mi>u</mi>
+              <mo>,</mo>
+              <mi>v</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+	      <mo>&#x222B;</mo>
+              <msubsup>
+		<mo>&#x222B;</mo>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mi>&#x221E;</mi>
+                </mrow>
+                <mrow>
+                  <mi>&#x221E;</mi>
+                </mrow>
+              </msubsup>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo>,</mo>
+              <mi>y</mi>
+              <mo stretchy="false">)</mo>
+              <mi>&#x2009;</mi>
+              <msup>
+                <mrow>
+                  <mi mathvariant="normal">e</mi>
+                </mrow>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mi>i</mi>
+                  <mn>2</mn>
+                  <mi>&#x3C0;</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>u</mi>
+                  <mi>x</mi>
+                  <mo>+</mo>
+                  <mi>v</mi>
+                  <mi>y</mi>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </msup>
+              <mi>&#x2009;</mi>
+              <mi mathvariant="normal">d</mi>
+              <mi>x</mi>
+              <mi mathvariant="normal">d</mi>
+              <mi>y</mi>
+            </mrow>
+          </mtd>
+        </mtr>
+        <mtr>
+          <mtd columnalign="right">
+            <mrow>
+              <msup>
+                <mrow>
+                  <mi mathvariant="normal">e</mi>
+                </mrow>
+                <mrow>
+                  <mo>&#x2212;</mo>
+                  <mi>i</mi>
+                  <mn>2</mn>
+                  <mi>&#x3C0;</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>u</mi>
+                  <mi>x</mi>
+                  <mo>+</mo>
+                  <mi>v</mi>
+                  <mi>y</mi>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </msup>
+            </mrow>
+          </mtd>
+          <mtd columnalign="center">
+            <mrow>
+              <mo>=</mo>
+            </mrow>
+          </mtd>
+          <mtd columnalign="left">
+            <mrow>
+              <mi>cos</mi>
+              <mo stretchy="false">(</mo>
+              <mn>2</mn>
+              <mi>&#x3C0;</mi>
+              <mo stretchy="false">(</mo>
+              <mi>u</mi>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>v</mi>
+              <mi>y</mi>
+              <mo stretchy="false">)</mo>
+              <mo stretchy="false">)</mo>
+
+              <mo>+</mo>
+
+              <mi>i</mi>
+              <mi>sin</mi>
+              <mo stretchy="false">(</mo>
+              <mn>2</mn>
+              <mi>&#x3C0;</mi>
+              <mo stretchy="false">(</mo>
+              <mi>u</mi>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mi>v</mi>
+              <mi>y</mi>
+              <mo stretchy="false">)</mo>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mtd>
+        </mtr>
+      </mtable>
+    </mrow>
+  </mstyle>
+</math>

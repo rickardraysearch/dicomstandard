@@ -1,0 +1,22 @@
+This is pMML2SVG tools to transform MathML into SVG inside XSL-FO and (X)HTML
+code by using an XSLT 2.0 stylesheet.
+It is distributed under the LGPL; see ../COPYING.
+
+
+USAGE:   Edit and run otf2ttf to convert OpenType fonts to TrueType fonts.
+
+	 Run fopmml2svg.xsl on a FO file to create a new FO file with
+	 MathML replaced by embedded SVG.
+
+	 Run htmlpmml2svg.xsl on an XHTML file to create a new XHTML
+	 file with MathML replaced by external SVG files.
+
+         For more detail about how to use these stylesheets, please
+         refer to the user documentation in the ../doc/ directory.
+
+AUTHORS: Alexandre Stevens <stevens_alex@users.sourceforge.net>
+	 Thibault Mouton
+	 Justus H. Piater <piater@users.sourceforge.net>
+	 Joslet Jérôme
+
+HOME:    http://sourceforge.net/projects/pmml2svg

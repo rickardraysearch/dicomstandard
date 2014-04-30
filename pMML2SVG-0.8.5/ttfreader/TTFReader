@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Change these lines to adapt to your fop distribution.
+# The TTFReader jar file must come before the fop jar in the classpath.
+foppath=/usr/share/java
+classpath="${0%/*}/TTFReader.jar:$foppath/commons-logging.jar:$foppath/commons-io.jar:$foppath/xmlgraphics-commons.jar:$foppath/fop.jar"
+
+transform="java -cp $classpath org.apache.fop.fonts.apps.TTFReaderBBox "
+
+for TTFfile in $*; do
+    file=${TTFfile%.*}
+    base=${file##*/}
+    xmlfile=$base.xml
+
+    echo "---------------------------------------------------------------------"
+    echo "Transforming font: " $TTFfile
+    echo "---------------------------------------------------------------------"
+    $transform $TTFfile $xmlfile
+    echo "---------------------------------------------------------------------"
+done

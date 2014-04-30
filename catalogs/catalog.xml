@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+	"http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<group
+			xml:base="file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/"
+			prefer="public">
+		<public
+			publicId="-//OASIS//DTD DocBook V4.4//EN"
+			uri="docbook-xml-4.4/docbookx.dtd"/>
+		<system
+			systemId="http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
+			uri="docbook-xml-4.4/docbookx.dtd"/>
+		<system
+			systemId="docbook4.4.dtd"
+			uri="docbook-xml-4.4/docbookx.dtd"/>
+
+		<rewriteURI
+			uriStartString="http://docbook.sourceforge.net/release/xsl-ns/current/"
+			rewritePrefix="docbook-xsl-ns-1.78.1/"/>
+	</group>
+	<!--<group>
+		<public
+			publicId="-//W3C//DTD XHTML 1.1//EN"
+            uri="lib/xhtml1/dtd/xhtml1-strict.dtd"/>
+		<public
+			publicId="-//W3C//DTD XHTML 1.0 Strict//EN"
+            uri="lib/xhtml1/dtd/xhtml1-strict.dtd"/>
+ 		<public
+			publicId="-//W3C//DTD XHTML 1.0 Transitional//EN"
+            uri="lib/xhtml1/dtd/xhtml1-transitional.dtd"/>
+		<system
+			systemId="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+            uri="lib/xhtml1/dtd/xhtml1-strict.dtd"/>
+ 		<system
+			systemId="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+            uri="lib/xhtml1/dtd/xhtml1-transitional.dtd"/>
+	</group>-->
+</catalog>

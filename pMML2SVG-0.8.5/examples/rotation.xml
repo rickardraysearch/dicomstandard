@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- two empty lines -->
+<!-- two empty lines -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mrow>
+      <msup>
+        <mrow>
+          <mi mathvariant="bold">x</mi>
+        </mrow>
+        <mrow>
+          <mo>&#x2032;</mo>
+        </mrow>
+      </msup>
+      <mo>=</mo>
+      <mrow>
+        <mo>[</mo>
+        <mtable>
+          <mtr>
+
+            <mtd columnalign="right">
+              <mrow>
+                <mi>cos</mi>
+                <mi>&#x3B8;</mi>
+              </mrow>
+            </mtd>
+
+            <mtd columnalign="right">
+              <mrow>
+                <mi>sin</mi>
+                <mi>&#x3B8;</mi>
+              </mrow>
+            </mtd>
+          </mtr>
+          <mtr>
+            <mtd columnalign="right">
+              <mrow>
+                <mo>&#x2212;</mo>
+                <mi>sin</mi>
+                <mi>&#x3B8;</mi>
+              </mrow>
+            </mtd>
+            <mtd columnalign="right">
+              <mrow>
+                <mi>cos</mi>
+                <mi>&#x3B8;</mi>
+              </mrow>
+            </mtd>
+          </mtr>
+        </mtable>
+        <mo>]</mo>
+      </mrow>
+      <mi mathvariant="bold">x</mi>
+    </mrow>
+  </mstyle>
+</math>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Toolchain</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/>
+      <link rel="home" href="index.xhtml"
+            title="Conversion of MathML to SVG via XSLT: pMML2SVG"/>
+      <link rel="up" href="ch01.xhtml" title="Chapter 1. pMML2SVG: User guide"/>
+      <link rel="prev" href="ch01s02.xhtml" title="Basic Usage"/>
+      <link rel="next" href="ch01s04.xhtml" title="Changing the Font"/>
+      <style type="text/css"><![CDATA[
+	p { font-size: 15px; }
+      ]]></style>
+   </head>
+   <body>
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Toolchain</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left">
+                  <a accesskey="p" href="ch01s02.xhtml">Prev</a> </td>
+               <th width="60%" align="center">Chapter 1. pMML2SVG: User guide</th>
+               <td width="20%" align="right"> <a accesskey="n" href="ch01s04.xhtml">Next</a>
+               </td>
+            </tr>
+         </table>
+         <hr/>
+      </div>
+      <div class="sect1" title="Toolchain">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both">
+                     <a id="d5e120"/>Toolchain</h2>
+               </div>
+            </div>
+         </div>
+    
+
+         <p>
+      In this section, we will see how to transform a DocBook file into a <acronym class="acronym">PDF</acronym> or an <acronym class="acronym">(X)HTML</acronym> file by adding an 
+      intermediate pMML2SVG step to transform MathML into <acronym class="acronym">SVG</acronym>.
+    </p>
+
+         <p>
+      The DocBook example source code that I will use can be seen in <a class="xref" href="apa.xhtml" title="Appendix A. DocBook test file source code">Appendix A, <em>DocBook test file source code</em>
+            </a>. Suppose in this section that we
+      have a file, <code class="filename">test.xml</code>, containing this code.
+    </p>
+
+         <p>
+      Do not forget to adapt files path to your system installation when testing the commands described in this section.
+    </p>
+
+         <div class="sect2" title="DocBook to PDF renderer">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title">
+                        <a id="d5e130"/>DocBook to PDF renderer</h3>
+                  </div>
+               </div>
+            </div>
+      
+
+            <p>
+	To transform a DocBook file into a <acronym class="acronym">PDF</acronym>, including pMML2SVG step, we have to do three transformations. First,
+	the DocBook file will be transformed into an <acronym class="acronym">XSL-FO</acronym> file. This transformation is done by using the DocBook-XSL <acronym class="acronym">XSLT</acronym> 
+	stylesheets<sup>[<a id="d5e136" href="#ftn.d5e136" class="footnote">1</a>]</sup> and 
+	an <acronym class="acronym">XSLT</acronym> 1 processor. Let see some command examples using different <acronym class="acronym">XSLT</acronym> processors.
+      </p>
+
+            <p>
+	              <code class="filename">xsltproc</code> can be used to transform <code class="filename">test.xml</code> with this command (if <code class="filename">xsltproc</code> is 
+	already installed):
+	</p>
+            <pre class="programlisting">xsltproc -o test.fo docbook-xsl-1.74.3/fo/docbook.xsl test.xml</pre>
+            <p>
+      </p>
+
+            <p>
+	Saxon 6.5.5 can also be used to do this first transformation, the following command must be used:
+	</p>
+            <pre class="programlisting">java -jar saxon.jar -o test.fo test.xml 
+     docbook-xsl-1.74.3/fo/docbook.xsl</pre>
+            <p>
+      </p>
+
+            <p>
+	              <acronym class="acronym">FOP</acronym> is also able to do this transformation with the following command:
+	</p>
+            <pre class="programlisting">fop -xml test.xml -xsl docbook-xsl-1.74.3/fo/docbook.xsl
+    -foout test.fo</pre>
+            <p>
+      </p>
+
+            <p>
+	All these commands will create a file called <code class="filename">test.fo</code> containing the <acronym class="acronym">XSL-FO</acronym> code that will be used
+	to render a <acronym class="acronym">PDF</acronym> file. If you transform directly a <acronym class="acronym">PDF</acronym> file with this code, the MathML source code will
+	be displayed in red on the <acronym class="acronym">PDF</acronym> page.
+      </p>
+
+            <p>
+	The second transformation of our toolchain is <acronym class="acronym">MathML</acronym> to <acronym class="acronym">SVG</acronym> transformation using pMML2SVG.
+	This time, we need an <acronym class="acronym">XSLT</acronym> 2 processor and we will use Saxon 9. We will also use the pMML2SVG stylesheet
+	named <code class="filename">fopmml2svg.xsl</code> from the <code class="filename">tools</code> directory of pMML2SVG distribution. This stylesheet
+	is used to transform all <acronym class="acronym">MathML</acronym> that it will find inside the <acronym class="acronym">XSL-FO</acronym> code. The following 
+	command line is used:
+
+	</p>
+            <pre class="programlisting">java -jar saxon9.jar -xsl:pMML2SVG/tools/fopmml2svg.xsl
+     -o:mathml_test.fo test.fo</pre>
+            <p>
+
+	This command creates a file called <code class="filename">mathml_test.fo</code> containing <acronym class="acronym">XSL-FO</acronym> code with MathML
+	transformed into <acronym class="acronym">SVG</acronym>. This file will be used to render the final <acronym class="acronym">PDF</acronym> output file.
+      </p>
+
+            <p>
+	The last step of our toolchain is to transform the <code class="filename">mathml_test.fo</code> file into a <acronym class="acronym">PDF</acronym> file. This transformation is 
+	done by using <acronym class="acronym">FOP</acronym> with the following command:
+	</p>
+            <pre class="programlisting">fop mathml_test.fo test.pdf</pre>
+            <p>
+      </p>
+
+            <p>
+	You can now open <code class="filename">test.pdf</code> with your favorite <acronym class="acronym">PDF</acronym> viewer and see the result.
+      </p>
+
+            <p>
+	It is a real waste of time to always type all  these commands each time you want to compile your DocBook document into <acronym class="acronym">PDF</acronym>. 
+	Therefore, it is useful to write a small script that will do all these commands for you. For example, create a file, called 
+	<code class="filename">pmml2svgpdf</code> with the following source code:
+      </p>
+      
+            <pre class="programlisting">#!/bin/sh
+fop="fop" # Path to FOP
+
+mathxsl="pMML2SVG/tools/fopmml2svg.xsl" # Path to pmml2svg XSLT 
+                                        # stylesheet to treat fo
+mathtransform="java -jar saxon9.jar -xsl:$mathxsl -o:" # Saxon 9
+
+docbookxsl="docbook-xsl-1.74.3/fo/docbook.xsl" # Path to Norman 
+                                               # Walsh XSLT
+docbooktransform="$fop -xsl $docbookxsl -xml" # FOP command
+
+for xmlfile in $*; do
+  file=${xmlfile%.*}
+  
+  # First step: DocBook to XSL-FO transformation by using N. Walsh
+  # stylesheet.
+  fofile=$file.fo
+  echo "DocBook to XSL-FO: " $file
+  $docbooktransform $xmlfile "-foout" $fofile
+
+  # Second step: MathML to SVG transformation by using pMML2SVG.
+  mmlfile=mathml_$file.fo
+  echo "MathML Transformation: " $file
+  $mathtransform$mmlfile $fofile
+  
+  # Third step: XSL-FO to PDF computation by using FOP.
+  pdffile=$file.pdf
+  echo "XSL-FO to PDF: " $file
+  $fop $mmlfile $pdffile
+  
+  # This last command will clean all temporary files created
+  # in the toolchain transformation.
+  echo "Cleaning temporary file"
+  rm -rf $fofile $mmlfile # Remove temporary file
+done
+</pre>
+
+            <p>
+	Now, you can execute all the toolchain transformations by using this unique command:
+	</p>
+            <pre class="programlisting">./pmml2svgpdf test.xml</pre>
+            <p>
+      </p>
+      
+            <p>
+	You can also use it to treat a group of DocBook file. For example, the command <span class="command">
+                  <strong>./pmml2svgpdf *.xml</strong>
+               </span> will transform all the 
+	<acronym class="acronym">XML</acronym> DocBook files of the current folder into <acronym class="acronym">PDF</acronym> files.
+      </p>
+
+            <p>
+	This document was compiled to <acronym class="acronym">PDF</acronym> by using the same script and this toolchain transformation.
+      </p>
+         </div>
+
+         <div class="sect2" title="DocBook to (X)HTML renderer">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title">
+                        <a id="d5e190"/>DocBook to (X)HTML renderer</h3>
+                  </div>
+               </div>
+            </div>
+      
+
+            <p>
+	To transform a DocBook file into <acronym class="acronym">(X)HTML</acronym>, only one transformation is done. After that transformation, pMML2SVG is used
+	to transform <acronym class="acronym">MathML</acronym> into <acronym class="acronym">SVG</acronym>. The main transformation uses an <acronym class="acronym">XSLT</acronym> 1 stylesheet from Norman Walsh.
+	Therefore, you can use both <code class="filename">xsltproc</code> or Saxon. Here are the command lines for each of these processors:
+      </p>
+
+            <pre class="programlisting">xsltproc -o test.xhtml docbook-xsl-1.74.3/xhtml-1_1/docbook.xsl 
+      test.xml</pre>
+
+            <pre class="programlisting">java -jar saxon.jar -o test.xhtml test.xml 
+     docbook-xsl-1.74.3/xhtml-1_1/docbook.xsl</pre>
+
+            <p>
+	If your browser supports <acronym class="acronym">MathML</acronym> rendering (Firefox or Opera for example), you can open <code class="filename">test.xhtml</code> with it to see 
+	the result. To transform the <acronym class="acronym">MathML</acronym> code into <acronym class="acronym">SVG</acronym>, you have to use <code class="filename">htmlpmml2svg.xsl</code> stylesheet
+	(coming with pMML2SVG distribution in the <code class="filename">tools/</code> folder) with an <acronym class="acronym">XSLT</acronym> 2 processor. Here is a command that 
+	executes this transformation:
+
+	</p>
+            <pre class="programlisting">java -jar saxon9.jar -xsl:pMML2SVG/tools/htmlpmml2svg.xsl
+     -o:testSVG.xhtml test.xhtml</pre>
+            <p>
+      </p>
+
+            <p>
+	If your browser supports <acronym class="acronym">SVG</acronym> (the majority of modern browsers do), you can open <code class="filename">testSVG.xhtml</code> with 
+	it to see the result.
+      </p>
+
+            <p>
+	Likewise the <acronym class="acronym">PDF</acronym> transformation, you can also use a script to make the transformation. Here is a sample script code that transforms 
+	a DocBook file into an <acronym class="acronym">(X)HTML</acronym> file:
+      </p>
+      
+            <pre class="programlisting">#!/bin/sh
+mathxsl="pMML2SVG/tools/htmlpmml2svg.xsl" # pmml2svg html stylesheet
+mathtransform="java -jar saxon9.jar -xsl:$mathxsl -o:" # Saxon 9
+
+docbookxsl="docbook-xsl-1.74.3/xhtml-1_1/docbook.xsl" # DocBook to
+                                                      # XHTML 
+                                                      # stylesheet
+docbooktransform="xsltproc --output " # XSLT 1 processor 
+                                      # (xsltproc here)
+
+for xmlfile in $*; do
+  file=${xmlfile%.*}
+  
+  # First step: DocBook to XHTML transformation by using N. Walsh
+  # stylesheet.
+  tempfile=temp_$file.xhtml
+  echo "DocBook to HTML: " $file
+  $docbooktransform $tempfile $docbookxsl $xmlfile
+    
+  # Second step: MathML to SVG transformation by using pMML2SVG.
+  htmlfile=$file.xhtml
+  echo "MathML Transformation: " $file
+  $mathtransform$htmlfile $tempfile
+  
+  # This last command will clean all temporary files created
+  # in the toolchain transformation. 
+  echo "Cleaning temporary file"
+  rm -rf $tempfile
+done</pre>
+
+            <p>
+	This script can also be used to transform a group of DocBook files into <acronym class="acronym">(X)HTML</acronym> files the same way as 
+	<acronym class="acronym">PDF</acronym> script does.
+      </p>
+         </div>
+         <div class="footnotes">
+            <br/>
+            <hr width="100" align="left"/>
+            <div class="footnote">
+               <p>
+                  <sup>[<a id="ftn.d5e136" href="#d5e136" class="para">1</a>] </sup>These stylesheets can be found on this website: <code class="uri">http://docbook.sourceforge.net/</code>
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="navfooter">
+         <hr/>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left">
+                  <a accesskey="p" href="ch01s02.xhtml">Prev</a> </td>
+               <td width="20%" align="center">
+                  <a accesskey="u" href="ch01.xhtml">Up</a>
+               </td>
+               <td width="40%" align="right"> <a accesskey="n" href="ch01s04.xhtml">Next</a>
+               </td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Basic Usage </td>
+               <td width="20%" align="center">
+                  <a accesskey="h" href="index.xhtml">Home</a>
+               </td>
+               <td width="40%" align="right" valign="top"> Changing the Font</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
