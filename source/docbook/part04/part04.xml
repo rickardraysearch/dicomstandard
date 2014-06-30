@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="5.0" xml:id="PS3.4" label="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2013 - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2014a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1184,6 +1184,24 @@
                 </td>
               </tr>
               <tr valign="top">
+                <td align="left" colspan="1" rowspan="3">
+                  <para>Radiopharmaceutical Radiation Dose SR</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Enhanced SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Comprehensive SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Comprehensive 3D SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para>Spectacle Prescription Report</para>
                 </td>
@@ -2058,6 +2076,32 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Presentation</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.4</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Processing</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.5</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>Intravascular Optical Coherence Tomography Image Storage - For Presentation</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2645,6 +2689,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>Radiopharmaceutical Radiation Dose SR</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.88.68</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>Colon CAD SR</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2982,6 +3039,9 @@
               <para>X-Ray Radiation Dose SR</para>
             </listitem>
             <listitem>
+              <para>Radiopharmaceutical  Radiation Dose SR</para>
+            </listitem>
+            <listitem>
               <para>Spectacle Prescription Report</para>
             </listitem>
             <listitem>
@@ -3148,6 +3208,12 @@
           <note>
             <para>This requirement means that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition and Private Attributes associated with the SOP Class will be stored and may be accessed.</para>
           </note>
+        </section>
+        <section label="B.5.1.18" status="4" xml:id="sect_B.5.1.18">
+          <title>Breast Projection X-Ray Image Storage SOP Classes</title>
+          <para>The Breast Projection X-Ray Image Storage - For Presentation SOP Class shall use the Breast Projection X-Ray Image IOD with an Enumerated Value of FOR PRESENTATION for Presentation Intent Type (0008,0068).</para>
+          <para>The Breast Projection X-Ray Image Storage - For Processing SOP Class shall use the Breast Projection X-Ray Image IOD with an Enumerated Value of FOR PROCESSING for Presentation Intent Type (0008,0068).</para>
+          <para>An SCU or SCP of the Breast Projection X-Ray Image Storage - For Processing SOP Class shall also support the Breast Projection X-Ray Image Storage - For Presentation SOP Class.</para>
         </section>
       </section>
     </section>
@@ -3495,7 +3561,17 @@
             <para>then single value matching shall be performed. Except for Attributes with a PN Value Representation, only entities with values that match exactly the value specified in the request shall match. This matching is case-sensitive, i.e., sensitive to the exact encoding of the key Attribute value in character sets where a letter may have multiple encodings (e.g., based on its case, its position in a word, or whether it is accented).</para>
             <para>For Attributes with a PN Value Representation (e.g., Patient Name (0010,0010)), an application may perform literal matching that is either case-sensitive, or that is insensitive to some or all aspects of case, position, accent, or other character encoding variants.</para>
             <note>
-              <para>For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; wild card matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
+              <orderedlist>
+                <listitem>
+                  <para>For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; wild card matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
+                </listitem>
+                <listitem>
+                  <para>Using attributes with VR of AE, LO, PN and SH as matching keys will not allow single value matching on values that contain characters "*" and "?" - such queries will always be treated as queries with wildcard matching.</para>
+                </listitem>
+                <listitem>
+                  <para>Attributes with VR of ST, LT and UT are intended for conveying narrative text and may contain wildcard characters "*" and "?". Attempts to match on a string explicitly containing "*" or "?" will be treated as wildcard matching and thus may return multiple results rather than a single one. </para>
+                </listitem>
+              </orderedlist>
             </note>
             <para>If extended negotiation of fuzzy semantic matching rather than literal matching of PN Value Representation is successful, not only may matching be insensitive to case, position, accent, and character encoding, but in addition other techniques such as phonetic matching may be applied.</para>
             <para>If the Timezone Offset From UTC (0008,0201) Attribute is present in the Identifier and Timezone query adjustment was negotiated, it shall be used to adjust values of time Attributes (and associated date Attributes, if present) from the local timezone to UTC. It shall also adjust values of datetime Attributes that do not specify a timezone offset. The encoding and semantics of the Timezone Offset From UTC (0008,0201) Attribute shall be as defined in the SOP Common Module in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
@@ -3575,6 +3651,12 @@
                 </listitem>
                 <listitem>
                   <para>For multi-component group names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally. E.g., "*=*" or "*=*=*" may or may not return all strings, and hence is not equivalent to "*", nor to universal matching.</para>
+                </listitem>
+                <listitem>
+                  <para>Using attributes with VR of AE, LO, PN and SH as matching keys will not allow single value matching on values that contain characters "*" and "?" - such queries will always be treated as queries with wildcard matching.</para>
+                </listitem>
+                <listitem>
+                  <para>Attributes with VR of ST, LT and UT are intended for conveying narrative text and may contain wildcard characters "*" and "?". Attempts to match on a string explicitly containing "*" or "?" will be treated as wildcard matching and thus may return multiple results rather than a single one.</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -17002,6 +17084,32 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Presentation</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.4</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Processing</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.5</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>Intravascular Optical Coherence Tomography Image Storage - For Presentation</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -17587,6 +17695,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>Radiopharmaceutical Radiation Dose SR</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.88.68</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>Colon CAD SR</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -17932,6 +18053,9 @@
             </listitem>
             <listitem>
               <para>X-Ray Radiation Dose SR</para>
+            </listitem>
+            <listitem>
+              <para>Radiopharmaceutical  Radiation Dose SR</para>
             </listitem>
             <listitem>
               <para>Spectacle Prescription Report</para>
@@ -19323,19 +19447,7 @@
             <para>timezone query adjustment unspecified</para>
           </listitem>
         </itemizedlist>
-        <para>The Association-requester, for each SOP Class, may use one SOP Class Extended Negotiation Sub-Item. The SOP Class is identified by the corresponding Abstract Syntax Name (as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>) followed by the Service-class-application-information field. This field defines either three sub-fields:</para>
-        <itemizedlist>
-          <listitem>
-            <para>reserved; shall always be 1</para>
-          </listitem>
-          <listitem>
-            <para>reserved; shall always be 1</para>
-          </listitem>
-          <listitem>
-            <para>literal or fuzzy semantic matching of person names by the Association-requester</para>
-          </listitem>
-        </itemizedlist>
-        <para>or four sub-fields:</para>
+        <para>The Association-requester, for each SOP Class, may use one SOP Class Extended Negotiation Sub-Item. The SOP Class is identified by the corresponding Abstract Syntax Name (as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>) followed by the Service-class-application-information field. This field defines three or more sub-fields:</para>
         <itemizedlist>
           <listitem>
             <para>reserved; shall always be 1</para>
@@ -19351,7 +19463,7 @@
           </listitem>
         </itemizedlist>
         <para>The meaning of fuzzy semantic person name matching and of timezone query adjustment is as defined in <xref linkend="sect_K.2.2.2" xrefstyle="select: label"/> and <xref linkend="sect_C.2.2.2.1" xrefstyle="select: label"/>.</para>
-        <para>The Association-acceptor shall return a three byte field (three sub-fields) if offered a three byte field (three sub-fields) by the Association-requester. The Association-acceptor may return either a three byte field (three sub-fields) or a four byte field (three sub-fields) if offered a four byte field (four sub-fields) by the Association-requester. A three byte response to a four byte request means that the missing sub-field shall be treated as 0 values.</para>
+        <para>The Association-acceptor shall return a three byte field (three sub-fields) if offered a three byte field (three sub-fields) by the Association-requester. The Association-acceptor may return more than three bytes if offered more than three bytes by the Association-requester. A three byte response to a more than three byte request means that the missing sub-field shall be treated as 0 values.</para>
         <para>The Association-acceptor, for each sub-field of the SOP Class Extended Negotiation Sub-Item offered, either accepts the Association-requester proposal by returning the same value (1) or turns down the proposal by returning the value (0)..</para>
         <para>If the SOP Class Extended Negotiation Sub-Item is not returned by the Association-acceptor then fuzzy semantic matching of person names is not supported and timezone query adjustment is unspecified over the Association (default condition).</para>
         <para>If the SOP Class Extended Negotiation Sub-Items do not exist in the A-ASSOCIATE indication they shall be omitted in the A-ASSOCIATE response.</para>
@@ -19431,7 +19543,7 @@
             </tbody>
           </table>
           <note>
-            <para>This Sub-Item is identical to Extended Negotiation Sub-Items as used by the Query/Retrieve SOP Classes. However, relational queries (Byte 1) are not relevant since the worklist information models are single level, and date-time matching (Byte 2) is already required by the worklist information models.</para>
+            <para>This Sub-Item is identical to Extended Negotiation Sub-Items as used by the Query/Retrieve SOP Classes. However, relational queries (Byte 1) are not relevant since the worklist information models are single level, and date-time matching (Byte 2) is already required by the worklist information models and Enhanced Multi-Frame Image Conversion support is not applicable (Byte 5).</para>
           </note>
         </section>
         <section label="K.5.1.2" status="4" xml:id="sect_K.5.1.2">
@@ -28892,7 +29004,7 @@
             <para>The range shall include all frames between the specified times including any frames at the specified times.</para>
             <para>The range may be expanded as a consequence of the format in which the information is stored. Where such expansion occurs, any embedded audio data shall be similarly selected. Under all circumstances, the returned Composite SOP Instance shall retain the relationship between image and audio data.</para>
             <note>
-              <para>For MPEG-2 this would be to the nearest surrounding Key Frames</para>
+              <para>For MPEG-2 and MPEG-4 AVC/H.264 this would be to the nearest surrounding Key Frames.</para>
             </note>
             <para>For JPEG 2000 Part 2, this would be to nearest surrounding precinct or tile boundary</para>
             <para>Time Range shall only be used to specify extraction from SOP instances where the times of frames can be ascertained using one or more of the following Attributes:</para>
@@ -34424,7 +34536,7 @@
                     <para>-</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if the value of Coding Scheme Designator (0008,0102) is not sufficient to identify the Code Value (0008,0100) unambiguously.</para>
@@ -34649,7 +34761,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Datetime value for this name-value Item.</para>
@@ -34677,7 +34789,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Date value for this name-value Item.</para>
@@ -34705,7 +34817,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Time value for this name-value Item.</para>
@@ -34733,7 +34845,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Person name value for this name-value Item.</para>
@@ -34761,7 +34873,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>UID value for this name-value Item.</para>
@@ -34789,7 +34901,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Text value for this name-value Item.</para>
@@ -34817,7 +34929,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Coded concept value of this name-value Item.</para>
@@ -34857,7 +34969,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Numeric value for this name-value Item.</para>
@@ -34885,7 +34997,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Units of measurement for a numeric value in this name-value Item.</para>
@@ -35004,7 +35116,7 @@
                     <para>O</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if Type of Instances (0040,E020) is DICOM</para>
@@ -35031,7 +35143,7 @@
                     <para>O</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if Type of Instances (0040,E020) is DICOM</para>
@@ -35133,7 +35245,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if Type of Instances (0040,E020) is CDA.</para>
@@ -35160,7 +35272,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if the Referenced SOP Instance is a multi-frame image and the reference does not apply to all frames, and Referenced Segment Number (0062,000B) is not present.</para>
@@ -35187,7 +35299,7 @@
                     <para>*</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
+                    <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>Required if the Referenced SOP Instance is a Segmentation and the reference does not apply to all segments and Referenced Frame Number (0008,1160) is not present.</para>
@@ -37088,6 +37200,41 @@
                     <para>2</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Referenced Patient Photo Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>(0010,1100)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>-</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="9" rowspan="1">
+                    <para>
+                      <emphasis role="italic">&gt;Include <xref linkend="table_CC.2.5-2c" xrefstyle="select: label quotedtitle"/></emphasis>
+                    </para>
+                  </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
@@ -43301,4 +43448,1467 @@
       </section>
     </section>
   </chapter>
+
+  <chapter xml:id="chapter_EE" label="EE" status="1">
+    <title>Display System Management Service Class (Normative)</title>
+    <section xml:id="sect_EE.1" label="EE.1" status="2">
+      <title>Scope</title>
+      <para>The Display System Service Class allows service users retrieve parameters related to the Display Subsystem(s).</para>
+      <para>
+        <figure xml:id="figure_EE.1-1" label="EE.1-1" pgwide="1">
+          <title>Display System Management Data Flow</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/PS3.4_EE.1-1.svg"/>
+              <!--<imagedata fileref="sup124_fromword_files/image004.png"/>-->
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </para>
+    </section>
+    <section xml:id="sect_EE.2" label="EE.2" status="2">
+      <title>Display System SOP Class</title>
+      <section xml:id="sect_EE.2.1" label="EE.2.1" status="3">
+        <title>IOD Description</title>
+        <para>The Display System IOD is an abstraction of the soft-copy display system and is the basic Information Entity to monitor the status of a Display System. The Display System SOP Instance is created by the SCP during start-up of the Display System and has a well-known SOP Instance UID.</para>
+      </section>
+      <section xml:id="sect_EE.2.2" label="EE.2.2" status="3">
+        <title>DIMSE Service Group</title>
+        <para>The DIMSE Service shown in <xref linkend="table_EE.2.2-1" xrefstyle="select: label"/> is applicable to the Display System IOD under the Display System SOP Class.</para>
+        <table frame="box" label="EE.2.2-1" rules="all" xml:id="table_EE.2.2-1">
+          <caption>DIMSE Service Group - Display System</caption>
+          <thead>
+            <tr valign="top">
+              <th align="left" colspan="1" rowspan="1">
+                <para>DIMSE Service Element</para>
+              </th>
+              <th align="left" colspan="1" rowspan="1">
+                <para>Usage SCU/SCP</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para>N-GET</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>M/M</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <para>This section describes the behavior of the DIMSE services that are specific for this IOD. The general behavior of the DIMSE services is specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+        <section xml:id="sect_EE.2.2.1" label="EE.2.2.1" status="4">
+          <title>N-GET</title>
+          <para>N-GET is used to retrieve information from an instance of the Display System SOP class.</para>
+          <section xml:id="sect_EE.2.2.1.1" label="EE.2.2.1.1" status="5">
+            <title>Attributes</title>
+            <section xml:id="sect_EE.2.2.1.1.1" label="EE.2.2.1.1.1" status="6">
+              <title>Display Subsystem Macros</title>
+              <para>To reduce the size and complexity of <xref linkend="table_EE.2.2.1-2" xrefstyle="select: labelnumber"/>, a macro notation is used.</para>
+              <table frame="box" label="EE.2.2.1-1" rules="all" xml:id="table_EE.2.2.1-1">
+                <caption>Table Result Context Macro</caption>
+                <thead>
+                  <tr valign="top">
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Attribute Name</para>
+                    </th>
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Tag</para>
+                    </th>
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Usage SCU/SCP</para>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Performed Procedure Step Start DateTime</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4050)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Performed Procedure Step End DateTime</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4051)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Actual Human Performer Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4035)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Human Performer Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4009)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Human Performer's Name (0040,4037) is not present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Human Performer's Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4037)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Human Performer Code Sequence (0040,4009) is not present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Human Performer's Organization</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,4036)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Measurement Equipment Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7012)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Measurement Functions</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7013)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Measured Characteristics</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7026)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Measurement Equipment Type</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7014)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Manufacturer</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0070)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Manufacturer's Model Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1090)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Device Serial Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1000)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;DateTime of Last Calibration</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1202)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section xml:id="sect_EE.2.2.1.1.2" label="EE.2.2.1.1.2" status="6">
+              <title>Display System N-GET Attribute Requirements</title>
+              <para>The attributes that may be retrieved are shown in <xref linkend="table_EE.2.2.1-2" xrefstyle="select: label"/>.</para>
+              <table frame="box" label="EE.2.2.1-2" rules="all" xml:id="table_EE.2.2.1-2">
+                <caption>Display System N-GET Attributes</caption>
+                <thead>
+                  <tr valign="top">
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Attribute Name</para>
+                    </th>
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Tag</para>
+                    </th>
+                    <th align="left" colspan="1" rowspan="1">
+                      <para>Usage SCU/SCP</para>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Specific Character Set</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0005)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if an extended or replacement character set is used)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="bold">Display System Module</emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Manufacturer</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0070)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Institution Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0080)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Institution Address</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0081)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Device Serial Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1000)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Station Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1010)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Institutional Department Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1040)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Manufacturer's Model Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1090)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Equipment Administrator Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7000)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Person Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,A123)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Person Identification Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,1101)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Person's Address</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,1102)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Person's Telephone Numbers</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0040,1103)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Institution Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0080)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Institution Code Sequence (0008,0082) is not present. May be present otherwise.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Institution Address</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0081)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Institution Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0082)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Institution Name (0008,0080) is not present.May be present otherwise.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Number of Display Subsystems</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7001)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Display Subsystem Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7023)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7003)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7004)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem Description</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7005)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Device Type Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7022)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Manufacturer</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0070)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Device Serial Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1000)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Manufacturer's Model Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1090)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;System Status</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7006)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;System Status Comment</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7007)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem Configuration Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700A)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Configuration ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Configuration Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700C)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Configuration Description</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700D)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Referenced Target Luminance Characteristics ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700E)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Current Configuration ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7002)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Measurement Equipment Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7012)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Measurement Functions</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7013)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Measured Characteristics</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7026)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Measurement Equipment Type</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7014)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Manufacturer</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,0070)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Manufacturer's Model Name</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1090)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Device Serial Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1000)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;DateTime of Last Calibration</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0018,1202)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="bold">Target Luminance Characteristics Module</emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>Target Luminance Characteristics Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7008)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>2/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Luminance Characteristics ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7009)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Function Type</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7019)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Target Minimum Luminance</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701D)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Target Maximum Luminance</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701E)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Gamma Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701A)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the value of Display Function Type (0028,7019) is GAMMA)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Number of Luminance Points</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the value of Display Function Type (0028,7019) is USER_DEFINED)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Luminance Response Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701C)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the value of Display Function Type (0028,7019) is USER_DEFINED)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;DDL Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7017)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Luminance Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701F)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Luminance Response Description</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7020)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the value of Display Function Type (0028,7019) is USER_DEFINED. May be present otherwise.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;CIExy White Point</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7018)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Reflected Ambient Light</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(2010,0160)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Ambient Light Value Source</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7025)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Reflected Ambient Light (2010,0160) is present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="bold">QA Results Module</emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>QA Results Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700F)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>3/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7003)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;Display Subsystem QA Results Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7010)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;Configuration ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,700B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt; Configuration QA Results Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7011)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;Display Calibration Result Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7016)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;Include <xref linkend="table_EE.2.2.1-1" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Luminance Characteristics ID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7009)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;Visual Evaluation Result Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7015)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;Include <xref linkend="table_EE.2.2.1-1" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Visual Evaluation Test Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7028)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Test Result</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7029)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Test Result Comment</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,702A)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Test Pattern Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,702C)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Referenced Image Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1140)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Test Pattern Code Sequence (0028,702C) is absent in this item.May be present otherwise.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;&gt;Referenced SOP Class UID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1150)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;&gt;Referenced SOP Instance UID</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1151)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;&gt;Referenced Frame Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0008,1160)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the Referenced SOP Instance is a multi-frame image and the reference does not apply to all frames, and Referenced Segment Number (0062,000B) is not present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;&gt;Referenced Segment Number</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0062,000B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the Referenced SOP Instance is a Segmentation or Surface Segmentation and the reference does not apply to all segments and Referenced Frame Number (0008,1160) is not present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;&gt;Test Image Validation</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,702B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Visual Evaluation Method Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,702E)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;Luminance Uniformity Result Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7027)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;Include <xref linkend="table_EE.2.2.1-1" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Number of Luminance Points</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Measurement Pattern Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,702D)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;DDL Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7017)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;White Point Flag</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7021)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Luminance Response Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701C)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Luminance Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701F)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;CIExy White Point</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7018)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if the value of White Point Flag (0028,7021) is YES.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Reflected Ambient Light</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(2010,0160)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Ambient Light Value Source</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7025)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Reflected Ambient Light (2010,0160) is present.)</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;Luminance Result Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7024)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/2</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="3" rowspan="1">
+                      <para>
+                        <emphasis role="italic">&gt;&gt;&gt;&gt;Include <xref linkend="table_EE.2.2.1-1" xrefstyle="select: label quotedtitle"/></emphasis>
+                      </para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Number of Luminance Points</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701B)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Luminance Response Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701C)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;DDL Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7017)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;Luminance Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,701F)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;&gt;CIExy White Point</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7018)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Reflected Ambient Light</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(2010,0160)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/3</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para>&gt;&gt;&gt;&gt;Ambient Light Value Source</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>(0028,7025)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                      <para>-/1C</para>
+                      <para>(Required if Reflected Ambient Light (2010,0160) is present.)</para>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section xml:id="sect_EE.2.2.1.2" label="EE.2.2.1.2" status="5">
+            <title>SCU Behavior</title>
+            <para>The SCU uses the N-GET to request the SCP to provide the contents of a Display System SOP Instance. The SCU shall specify in the N-GET request primitive the UID of the SOP Instance from which attributes are to be returned.</para>
+            <para>The SCU shall specify the list of Display System Attributes for which values are to be returned. The SCU shall not specify Attributes which are defined within a Sequence, but rather specify the sequence itself to be returned in its entirety.</para>
+            <para>The SCU shall specify in the N-GET request primitive the well-known UID of the SOP Instance.</para>
+          </section>
+          <section xml:id="sect_EE.2.2.1.3" label="EE.2.2.1.3" status="5">
+            <title>SCP Behavior</title>
+            <para>The SCP shall return the values for the specified Attributes of the Display System SOP Instance.</para>
+            <para>The SCP shall return the status code for the requested SOP Instance retrieval. The meaning of success, warning, and failure status codes are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_EE.2.3" label="EE.2.3" status="3">
+        <title>SOP Class Definitions and UIDs</title>
+        <para>The SOP Class UID of the Display System SOP class shall have the value of "1.2.840.10008.5.1.1.40".</para>
+      </section>
+      <section xml:id="sect_EE.2.4" label="EE.2.4" status="3">
+        <title>Reserved Identifications</title>
+        <para>The well-known UID of the Display System SOP Instance shall have the value of "1.2.840.10008.5.1.1.40.1".</para>
+      </section>
+    </section>
+    <section xml:id="sect_EE.3" label="EE.3" status="2">
+      <title>Conformance</title>
+      <section xml:id="sect_EE.3.1" label="EE.3.1" status="3">
+        <title>Conformance Statement</title>
+        <para>The implementation conformance statement of this SOP class shall follow <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+        <para>The SCU Conformance Statement shall specify the following items:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Maximum number of associations to be supported at the same time</para>
+          </listitem>
+          <listitem>
+            <para>List of SOP Classes supported</para>
+          </listitem>
+          <listitem>
+            <para>For each of the supported SOP classes:</para>
+            <itemizedlist>
+              <listitem><para>List of supported SOP class attributes and DIMSE service elements</para></listitem>
+              <listitem><para>For each supported attribute (mandatory and optional), a valid value range</para></listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+        <para>The SCP Conformance Statement shall specify the following items:</para>
+        <itemizedlist>
+          <listitem><para>Maximum number of associations to be supported at the same time</para></listitem>
+          <listitem><para>List of SOP Classes supported</para></listitem>
+          <listitem>
+            <para>For each of the supported SOP classes:</para>
+            <itemizedlist>
+              <listitem>
+                <para>List of supported SOP class attributes and DIMSE service elements</para>
+              </listitem>
+              <listitem>
+                <para>For each supported attribute (mandatory and optional)</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Valid value range</para>
+                  </listitem>
+                  <listitem>
+                    <para>Default value if no value is supplied by the SCU</para>
+                  </listitem>
+                  <listitem>
+                    <para>Status code (Failure or Warning) if the SCU supplies a value that is out of range</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>For each supported DIMSE service</para>
+            <itemizedlist>
+              <listitem>
+                <para>SCP behavior for all specific status codes</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+  </chapter>
+  
 </book>

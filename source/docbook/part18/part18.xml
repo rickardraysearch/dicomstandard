@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2013 - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2014a - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1201,17 +1201,17 @@
         </listitem>
         <listitem>
           <para>RetrieveMetadata</para>
-          <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed. The response is XML encoded metadata for the DICOM attributes as defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>.</para>
+          <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed.</para>
         </listitem>
       </orderedlist>
-      <para>All responses will be HTTP multipart messages.</para>
       <para>DICOM objects returned shall be <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary objects encoded in a requested Transfer Syntax (Explicit VR Little Endian by default) with one message part per DICOM Instance.</para>
       <para>
         <figure xml:id="figure_6.5-1" label="6.5-1" pgwide="1">
           <title>Mapping between IOD and HTTP message parts</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="part18_fromword_files/image004.png"/>
+              <imagedata fileref="figures/PS3.18_6.5-1.svg"/>
+              <!--<imagedata fileref="part18_fromword_files/image004.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -1220,6 +1220,9 @@
       <itemizedlist>
         <listitem>
           <para>All XML responses shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object.</para>
+        </listitem>
+        <listitem>
+          <para>All JSON responses shall be encoded as a DICOM JSON Model Object as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
         </listitem>
         <listitem>
           <para>Uncompressed bulk and pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
@@ -1554,7 +1557,7 @@
         </section>
         <section xml:id="sect_6.5.1.2" label="6.5.1.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the XML metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para>The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the data to any of the requested media types/Transfer Syntaxes, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
           <para>The client can compare the SOP Instance UIDs or bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
@@ -1720,7 +1723,7 @@
         </section>
         <section xml:id="sect_6.5.2.2" label="6.5.2.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the XML metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para>The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the data to any of the requested media types/Transfer Syntaxes, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
           <para>The client can compare the SOP Instance UIDs or bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
@@ -1886,7 +1889,7 @@
         </section>
         <section xml:id="sect_6.5.3.2" label="6.5.3.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide either a single DICOM <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> object for the SOP Instance or one or more bulk data items. In order to parse the bulk data items it is necessary to also retrieve the XML metadata for the Study.</para>
+          <para>The Server shall provide either a single DICOM <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> object for the SOP Instance or one or more bulk data items. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para>The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the bulk data to any of the requested media types, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
           <para>The client can compare the bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
@@ -2048,7 +2051,7 @@
         </section>
         <section xml:id="sect_6.5.4.2" label="6.5.4.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the XML metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para>The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
           <para>All response formats has a content type of multipart/related with a message boundary separator.</para>
           <section xml:id="sect_6.5.4.2.1" label="6.5.4.2.1" status="5">
@@ -2132,7 +2135,7 @@
                   <para>{BulkDataURL}, where</para>
                   <itemizedlist>
                     <listitem>
-                      <para>{BulkDataURL} is the URL of a bulk data element. This may be the URL attribute of a BulkData element from a DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML file received in response to a WADO-RS RetrieveMetadataRequest.</para>
+                      <para>{BulkDataURL} is the URL of a bulk data element. This may be the URL attribute of a BulkData element received in response to a WADO-RS RetrieveMetadataRequest.</para>
                     </listitem>
                     <listitem>
                       <para>The server shall always return the same bulk data for a specified BulkData URL if the data is available.</para>
@@ -2193,7 +2196,7 @@
         </section>
         <section xml:id="sect_6.5.5.2" label="6.5.5.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the XML metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para>The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section xml:id="sect_6.5.5.2.1" label="6.5.5.2.1" status="5">
@@ -2243,7 +2246,7 @@
       </section>
       <section xml:id="sect_6.5.6" label="6.5.6" status="3">
         <title>WADO-RS - RetrieveMetadata</title>
-        <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed. The response is XML encoded metadata for the DICOM attributes as defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>.</para>
+        <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed. The response is metadata for the DICOM attributes.</para>
         <para>The full study metadata includes all attributes of the study; however, a RESTful Service is permitted to replace the Value Field of an attribute with a BulkDataURL for attributes with Value Representations (VR) of FL, FD, IS, LT, OB, OD, OF, OW, SL, SS, ST, UL, UN, US, and UT. The client can use the BulkDataURL with the RetrieveBulkData action to retrieve the original Value Field of that attribute.</para>
         <note>
           <orderedlist numeration="arabic">
@@ -2294,7 +2297,11 @@
                   <itemizedlist>
                     <listitem>
                       <para>multipart/related; type=application/dicom+xml</para>
-                      <para>Specifies that the response should be WADO XML.</para>
+                      <para>Specifies that the response should be <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML. All WADO-RS providers must support this Media Type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the results should be DICOM JSON (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>). A WADO-RS provider may optionally support this Media Type</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -2305,9 +2312,21 @@
         <section xml:id="sect_6.5.6.2" label="6.5.6.2" status="4">
           <title>Response</title>
           <para>The Server shall provide the document(s) indicated in the request. The Server shall return the document(s) or an error code when the document(s) could not be returned.</para>
-          <para>The response format has a content type of application/dicom+xml as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> and must include the URL attribute for each BulkData element.</para>
+          <para>The response has a content type of either:</para>
+          <itemizedlist>
+            <listitem>
+              <para>multipart/related; type=application/dicom+xml, as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
+            </listitem>
+            <listitem>
+              <para>application/json, as described in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+            </listitem>
+          </itemizedlist>
+          <para>The response must include the URL attribute for each BulkData element.</para>
+          <note>
+            <para>The metadata is consistent with the characteristics of the bulk data on the server. If bulk data is requested using specified Transfer Syntaxes or media types, it is possible that the bulk data retrieved may be inconsistent with the metadata. For example, for a Study whose DICOM Tag (0028,2110) "LossyImageCompression" is set to "00", indicating no lossy compression, calling RetrieveStudy and requesting a lossy compression media type will provide pixel data that is inconsistent with the metadata. It is the responsibility of the client to deal with these inconsistencies appropriately.</para>
+          </note>
           <section xml:id="sect_6.5.6.2.1" label="6.5.6.2.1" status="5">
-            <title>Metadata Response</title>
+            <title>XML Metadata Response</title>
             <itemizedlist>
               <listitem>
                 <para>Content-Type:</para>
@@ -2330,9 +2349,26 @@
                 </itemizedlist>
               </listitem>
             </itemizedlist>
-            <note>
-              <para>The metadata is consistent with the characteristics of the bulk data on the server. If bulk data is requested using specified Transfer Syntaxes or media types, it is possible that the bulk data retrieved may be inconsistent with the metadata. For example, for a Study whose DICOM Tag (0028,2110) "LossyImageCompression" is set to "00", indicating no lossy compression, calling RetrieveStudy and requesting a lossy compression media type will provide pixel data that is inconsistent with the metadata. It is the responsibility of the client to deal with these inconsistencies appropriately.</para>
-            </note>
+          </section>
+          <section xml:id="sect_6.5.6.2.2" label="6.5.6.2.2" status="5">
+            <title>JSON Metadata Response</title>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/json; transfer-syntax={TransferSyntaxUID}</para>
+                    <para>Where {TransferSyntaxUID} is the UID of the DICOM Transfer Syntax used to encode the inline binary data in the XML metadata.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>The response is a JSON array that contains all metadata for the specified Study.</para>
+              </listitem>
+              <listitem>
+                <para>Each element in the array is the DICOM JSON encoded metadata for an Instance (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>).</para>
+              </listitem>
+            </itemizedlist>
           </section>
         </section>
       </section>
@@ -2442,10 +2478,13 @@
       </orderedlist>
       <para>All request messages are HTTP/1.1 multipart messages. The organization of SOP Instances into message parts depends on whether the SOP Instances are structured as <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances, or metadata and bulk data.</para>
       <para><olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances shall be encoded with one message part per DICOM Instance.</para>
-      <para>Metadata and bulk data requests will be encoded in the following manner:(see <xref linkend="figure_6.5-1" xrefstyle="select: label"/> WADO-RS Mapping Between IOD and HTTP message body parts):</para>
+      <para>Metadata and bulk data requests will be encoded in the following manner:(see <xref linkend="figure_6.5-1" xrefstyle="select: label title"/>):</para>
       <itemizedlist>
         <listitem>
           <para>All XML request messages shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object.</para>
+        </listitem>
+        <listitem>
+          <para>All JSON requests shall be encoded as an array of DICOM JSON Model Objects defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
         </listitem>
         <listitem>
           <para>Uncompressed bulk and pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
@@ -2504,11 +2543,15 @@
                   <itemizedlist>
                     <listitem>
                       <para>multipart/related; type=application/dicom; boundary={messageBoundary}</para>
-                      <para>Specifies that the post is <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances.</para>
+                      <para>Specifies that the post is <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances. All STOW-RS providers must accept this Content-Type.</para>
                     </listitem>
                     <listitem>
                       <para>multipart/related; type=application/dicom+xml; boundary={messageBoundary}</para>
-                      <para>Specifies that the post is <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata and bulk data.</para>
+                      <para>Specifies that the post is <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata and bulk data. All STOW-RS providers must accept this Content-Type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>multipart/related; type=application/json; boundary={messageBoundary}</para>
+                      <para>Specifies that the post is DICOM JSON metadata and bulk data. A STOW-RS provider may optionally accept this Content-Type.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -2544,8 +2587,8 @@
             </itemizedlist>
           </section>
           <section xml:id="sect_6.6.1.1.2" label="6.6.1.1.2" status="5">
-            <title>Metadata and Bulk Data Request Message Body</title>
-            <para>The Metadata and Bulk Data Request Message has a multipart body.</para>
+            <title>XML Metadata and Bulk Data Request Message Body</title>
+            <para>The XML Metadata and Bulk Data Request Message has a multipart body.</para>
             <itemizedlist>
               <listitem>
                 <para>Content-Type:</para>
@@ -2612,6 +2655,64 @@
               <para>It is not intended that metadata and bulk data be stored separately in multiple POST requests since the service always requires the metadata for context.</para>
             </note>
           </section>
+          <section xml:id="sect_6.6.1.1.3" label="6.6.1.1.3" status="5">
+            <title>JSON Metadata and Bulk Data Request Message Body</title>
+            <para>The JSON Metadata and Bulk Data Request Message has a multipart body.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>multipart/related; type=application/json; boundary={MessageBoundary}</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>The multipart request body contains all the metadata and bulk data to be stored. If the number of bulk data parts does not correspond to the number of unique BulkDataURIs in the metadata then the entire message is invalid and will generate an error status line.</para>
+              </listitem>
+              <listitem>
+                <para>The first part in the multipart request will contain a JSON array of DICOM JSON Model Objects (defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>). Each array element is the metadata from a SOP Instance sent as part of the Store operation. This message part will have the following headers:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>Content-Type: application/json; transfer-syntax={TransferSyntaxUID}</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>Subsequent items will be one of the following:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>an uncompressed bulk data element encoded in Little Endian binary format with the following headers:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>Content-Type: application/octet-stream</para>
+                      </listitem>
+                      <listitem>
+                        <para>Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para>a compressed pixel data object from a SOP Instance in the Study with the following headers:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>Content-Type: {MediaType}</para>
+                      </listitem>
+                      <listitem>
+                        <para>Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>JSON Metadata and its associated bulk data shall always be sent in the same POST request.</para>
+              </listitem>
+            </itemizedlist>
+            <note>
+              <para>It is not intended that metadata and bulk data be stored separately in multiple POST requests since the service always requires the metadata for context.</para>
+            </note>
+          </section>
         </section>
         <section xml:id="sect_6.6.1.2" label="6.6.1.2" status="4">
           <title>Action</title>
@@ -2623,12 +2724,20 @@
         </section>
         <section xml:id="sect_6.6.1.3" label="6.6.1.3" status="4">
           <title>Response</title>
-          <para>The RESTful Service shall return an HTTP status line, including a status code and associated textual phrase for the entire set of stored SOP Instances, followed by an XML message body containing a <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML representation of the Store Instances Response Module as defined in <xref linkend="table_6.6.1-2" xrefstyle="select: label"/>.</para>
+          <para>The RESTful Service shall return an HTTP status line, including a status code and associated textual phrase for the entire set of stored SOP Instances, followed by a message body containing the Store Instances Response Module as defined in <xref linkend="table_6.6.1-2" xrefstyle="select: label"/>. The message body shall be encoded as either:</para>
+          <itemizedlist>
+            <listitem>
+              <para>an XML object as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
+            </listitem>
+            <listitem>
+              <para>a DICOM JSON Model Object defined as defined in  <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+            </listitem>
+          </itemizedlist>
           <section xml:id="sect_6.6.1.3.1" label="6.6.1.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the status for all instances included in the POST request is Success, the RESTful Service shall return an "HTTP 200 - Success" response code.</para>
-            <para>If the status for all instances included in the POST request is Failure, the RESTful Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.6.1-1" xrefstyle="select: label"/>. If there are instance specific errors, the response code shall be a 409 and will be followed by the PS3.18 XML Store Instances Response Module as the message body, which contains additional information regarding instance errors.</para>
-            <para>In all other conditions, the RESTful Service shall return an "HTTP 202 - Accepted" response code. Additional information regarding the instance warnings or failures will be found in the PS3.18 XML Store Instances Response Module in the response message body.</para>
+            <para>If the status for all instances included in the POST request is Failure, the RESTful Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.6.1-1" xrefstyle="select: label"/>. If there are instance specific errors, the response code shall be a 409 and the response payload shall contain the Store Instances Response Module, which contains additional information regarding instance errors.</para>
+            <para>In all other conditions, the RESTful Service shall return an "HTTP 202 - Accepted" response code. The response payload may contain a Store Instances Response Module, which specifies additional information regarding instance warnings or failures.</para>
             <table rules="all" frame="box" xml:id="table_6.6.1-1" label="6.6.1-1">
               <caption>HTTP/1.1 Standard Response Code</caption>
               <thead>
@@ -2688,6 +2797,15 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
+                    <para>415 - Unsupported Media Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>This indicates that the STOW-RS Service does not support the Content-Type specified in the storage request (e.g., the service does not support JSON metadata).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="left" colspan="1" rowspan="1">
                     <para>503 - Busy</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
@@ -2728,9 +2846,9 @@
           </section>
           <section xml:id="sect_6.6.1.3.2" label="6.6.1.3.2" status="5">
             <title>Response Message Body</title>
-            <para>The XML message body shall provide appropriate status codes for individual SOP Instances indicating success, warning, or failure as defined below.</para>
-            <para>The XML message body may also include details about the processing of attributes by the service.</para>
-            <para><xref linkend="table_6.6.1-2" xrefstyle="select: label"/> defines the Attributes for referencing SOP Instances that are contained in a PS3.18 XML Store Instances Response Module in the response message body.</para>
+            <para>The message body shall provide appropriate status codes for individual SOP Instances indicating success, warning, or failure as defined below.</para>
+            <para>The message body may also include details about the processing of attributes by the service.</para>
+            <para><xref linkend="table_6.6.1-2" xrefstyle="select: label"/> defines the Attributes for referencing SOP Instances that are contained in a Store Instances Response Module in the response message body.</para>
             <table rules="all" frame="box" xml:id="table_6.6.1-2" label="6.6.1-2">
               <caption>Store Instances Response Module Attributes</caption>
               <thead>
@@ -4323,6 +4441,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <listitem>
                 <para>application/dicom+xml</para>
               </listitem>
+              <listitem>
+                <para>application/json</para>
+              </listitem>
             </itemizedlist>
           </listitem>
         </itemizedlist>
@@ -4393,6 +4514,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </listitem>
               <listitem>
                 <para>application/dicom+xml</para>
+              </listitem>
+              <listitem>
+                <para>application/json</para>
               </listitem>
             </itemizedlist>
           </listitem>

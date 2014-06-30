@@ -151,7 +151,7 @@
 		</g>
 		<polygon fill="#4F8ABE" stroke="#000000" points="149.755,76.284 81.978,86.312 313.572,137.854 374.201,113.694 		"/>
 		<line fill="none" stroke="#000000" x1="86.776" y1="75.327" x2="390.593" y2="135.011"/>
-		<text transform="matrix(1 0 0 1 380.2363 182.708)" font-size="10">Axis of Rotation</text>
+		<text transform="matrix(1 0 0 1 380.2363 182.6982)" font-size="10">Axis of Rotation</text>
 		<g>
 			<ellipse fill="#FFFFFF" stroke="#000000" cx="390.288" cy="135.915" rx="10.902" ry="28.021"/>
 			<g>
@@ -319,10 +319,11 @@
 				l-4.988-2.146l-3.451-0.481l-2.199-0.246l-3.747,0.315l-1.74,0.352l-1.572,0.811l-1.084,1.11l-0.377,1.187l0.409,1.025
 				l0.786,0.646c2.371,0.748,5.055,1.17,7.409,1.518C208.669,110.673,208.718,110.695,208.776,110.706z"/>
 		</g>
-		<text transform="matrix(1 0 0 1 390.0107 78.4478)" font-size="10">Patient Plane</text>
-		<text transform="matrix(1 0 0 1 161.0479 24.8481)" font-size="10">0º</text>
-		<text transform="matrix(1 0 0 1 220.3887 77.2173)" font-size="10">LAO = +90º</text>
-		<text transform="matrix(1 0 0 1 51.729 113.0723)" font-size="10">RAO = -90º</text>
+		<text transform="matrix(1 0 0 1 390.0107 78.4385)" font-size="10">Patient Plane</text>
+		<text transform="matrix(1 0 0 1 161.0479 24.8389)" font-size="10">0º</text>
+		<text transform="matrix(1 0 0 1 148.6064 169.0342)" font-size="10">±180º</text>
+		<text transform="matrix(1 0 0 1 220.3887 77.208)" font-size="10">LAO = +90º</text>
+		<text transform="matrix(1 0 0 1 51.729 113.0635)" font-size="10">RAO = -90º</text>
 		<polyline fill="none" stroke="#000000" points="196.781,83.626 196.781,30.047 127.344,38.496 127.344,156.38 196.781,129.456 
 			196.781,114.046 		"/>
 		<g>

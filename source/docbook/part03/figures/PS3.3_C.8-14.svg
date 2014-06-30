@@ -25,33 +25,15 @@
 			154.334,337.754 151.981,326.516 385.439,430.123 		"/>
 		<polygon fill="#58595B" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="470.059,273.455 
 			384.287,441.348 385.439,430.123 471.98,262.504 		"/>
-		<polygon fill="#CCDEF0" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="151.981,325.971 
+		<polygon fill="#CCDEF0" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" points="151.981,325.971 
 			385.439,429.578 471.98,261.961 282.889,204.518 		"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="378.137" y1="412.613" x2="168.973" y2="322.67"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="286.002" y1="212.513" x2="458.881" y2="265.27"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="458.881" y1="265.27" x2="378.137" y2="412.613"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="168.973" y1="322.67" x2="286.002" y2="212.513"/>
+		<polygon fill="none" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" points="458.881,265.27 286.002,212.513 
+			168.973,322.67 378.137,412.613 		"/>
+		<polygon fill="none" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" points="437.273,269.549 291.234,223.873 
+			195.957,317.326 367.016,388.459 		"/>
+		<polygon fill="none" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" points="415.25,273.906 296.779,235.916 
+			222.374,312.096 356.766,366.197 		"/>
 		<polygon stroke="#000000" points="322.176,248.373 375.975,266.291 322.79,340.383 264.187,317.047 		"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="367.016" y1="388.459" x2="195.957" y2="317.326"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="291.234" y1="223.873" x2="437.273" y2="269.549"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="437.273" y1="269.549" x2="367.016" y2="388.459"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="195.957" y1="317.326" x2="291.234" y2="223.873"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="356.766" y1="366.197" x2="222.374" y2="312.096"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="296.779" y1="235.916" x2="415.25" y2="273.906"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="415.25" y1="273.906" x2="356.766" y2="366.197"/>
-		
-			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" x1="222.374" y1="312.096" x2="296.779" y2="235.916"/>
 		<g>
 			<defs>
 				<polygon id="SVGID_1_" points="338.213,335.826 261.911,305.412 308.078,252.93 378.25,276.977 				"/>
@@ -324,82 +306,90 @@ MGMV/9k=" transform="matrix(0.1575 0 0 0.1575 261.6484 233.0137)">
 		
 			<line fill="#4F8ABE" stroke="#005695" stroke-width="4" stroke-linejoin="bevel" stroke-miterlimit="1" x1="245.106" y1="48.105" x2="319.719" y2="48.105"/>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 169.2271 50.3828)" font-size="12">Collimator</text>
+			<text transform="matrix(0.8815 0 0 1 169.2271 50.377)" font-size="12">Collimator</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 151.1333 26.2871)" font-size="12">X-Ray Source</text>
+			<text transform="matrix(0.8815 0 0 1 151.1333 26.2812)" font-size="12">X-Ray Source</text>
 		</g>
-		
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" stroke-dasharray="6,2" x1="220.26" y1="23.105" x2="316.646" y2="23.105"/>
-		
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" stroke-dasharray="6,2" x1="220.26" y1="47.105" x2="240.106" y2="47.105"/>
+		<g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="220.26" y1="23.105" x2="311.331" y2="23.105"/>
+				<g>
+					<polygon points="310.142,24.849 316.646,23.105 310.142,21.362 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="220.26" y1="47.105" x2="234.791" y2="47.105"/>
+				<g>
+					<polygon points="233.602,48.849 240.106,47.105 233.602,45.362 					"/>
+				</g>
+			</g>
+		</g>
 		
 			<line fill="none" stroke="#ED1C24" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4" x1="326.059" y1="29.356" x2="323.228" y2="340.004"/>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 41.3418 204.3418)"><tspan x="0" y="0" font-size="12">Exposed Area</tspan><tspan x="-5.988" y="26.4" font-size="12">Display Shutter</tspan><tspan x="50.713" y="52.8" font-size="12">FOV</tspan><tspan x="14.021" y="79.2" font-size="12">Active Area</tspan><tspan x="-5.97" y="105.6" font-size="12">Detector Matrix</tspan><tspan x="-17.332" y="132" font-size="12">Detector Housing</tspan></text>
+			<text transform="matrix(0.8815 0 0 1 41.3418 204.3359)"><tspan x="0" y="0" font-size="12">Exposed Area</tspan><tspan x="-5.988" y="26.4" font-size="12">Display Shutter</tspan><tspan x="50.713" y="52.8" font-size="12">FOV</tspan><tspan x="14.021" y="79.2" font-size="12">Active Area</tspan><tspan x="-5.97" y="105.6" font-size="12">Detector Matrix</tspan><tspan x="-17.332" y="132" font-size="12">Detector Housing</tspan></text>
 		</g>
 		<g>
 			<g>
-				<polyline fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" points="113.33,200.105 137.443,200.105 
-					308.93,248.258 				"/>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="113.33,200.105 137.443,200.105 310.635,248.736 				"/>
 				<g>
-					<polygon fill="#003468" points="306.774,250.067 315.753,250.174 308.031,245.592 					"/>
+					<polygon points="309.02,250.094 315.753,250.174 309.962,246.737 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polyline fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" points="113.33,226.773 137.069,226.773 
-					283.293,268.136 				"/>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="113.33,226.773 137.069,226.773 284.998,268.617 				"/>
 				<g>
-					<polygon fill="#003468" points="281.136,269.94 290.113,270.064 282.4,265.468 					"/>
+					<polygon points="283.38,269.972 290.113,270.064 284.329,266.616 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polyline fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" points="113.33,253.441 136.449,253.441 
-					239.991,283.668 				"/>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="113.33,253.441 136.449,253.441 241.692,284.165 				"/>
 				<g>
-					<polygon fill="#003468" points="237.818,285.455 246.795,285.654 239.121,280.993 					"/>
+					<polygon points="240.062,285.505 246.795,285.654 241.04,282.158 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polyline fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" points="113.33,280.109 135.815,280.109 
-					202.584,301.244 				"/>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="113.33,280.109 135.815,280.109 204.273,301.778 				"/>
 				<g>
-					<polygon fill="#003468" points="200.371,302.981 209.341,303.383 201.774,298.55 					"/>
+					<polygon points="202.613,303.082 209.341,303.383 203.666,299.758 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polyline fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" points="113.33,306.775 136.515,306.775 
-					166.922,315.411 				"/>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="113.33,306.775 136.515,306.775 168.626,315.896 				"/>
 				<g>
-					<polygon fill="#003468" points="164.762,317.214 173.74,317.348 166.032,312.742 					"/>
+					<polygon points="167.006,317.247 173.74,317.348 167.959,313.894 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				
-					<line fill="none" stroke="#003468" stroke-width="2" stroke-miterlimit="1" x1="113.33" y1="333.443" x2="145.797" y2="333.443"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="113.33" y1="333.443" x2="147.569" y2="333.443"/>
 				<g>
-					<polygon fill="#003468" points="144.211,335.768 152.884,333.443 144.211,331.119 					"/>
+					<polygon points="146.38,335.187 152.884,333.443 146.38,331.7 					"/>
 				</g>
 			</g>
 		</g>
-		<ellipse fill="#FEDA00" cx="325.768" cy="24.218" rx="7.773" ry="7.989"/>
-		<circle cx="325.84" cy="24.371" r="0.785"/>
-		<path d="M326.789,22.585c0.602,0.343,1.008,1.002,1.008,1.76c0,0.057-0.002,0.112-0.008,0.169h4.764
-			c0.002-0.057,0.002-0.113,0.002-0.169c0-2.562-1.357-4.798-3.373-5.988L326.789,22.585z"/>
-		<path d="M324.922,22.585c-0.602,0.343-1.008,1.002-1.008,1.76c0,0.057,0.002,0.112,0.006,0.169h-4.764c0-0.057,0-0.113,0-0.169
-			c0-2.562,1.357-4.798,3.373-5.988L324.922,22.585z"/>
-		<path d="M326.951,26.019c-0.598,0.35-1.371,0.47-2.027,0.091c-0.049-0.028-0.096-0.059-0.143-0.091l-2.383,4.125
-			c0.049,0.029,0.098,0.058,0.146,0.087c2.219,1.28,4.834,1.064,6.873-0.087L326.951,26.019z"/>
+		<g>
+			<ellipse fill="#FEDA00" cx="325.768" cy="24.218" rx="7.773" ry="7.989"/>
+			<circle cx="325.84" cy="24.371" r="0.785"/>
+			<path d="M326.789,22.585c0.602,0.343,1.008,1.002,1.008,1.76c0,0.057-0.002,0.112-0.008,0.169h4.764
+				c0.002-0.057,0.002-0.113,0.002-0.169c0-2.562-1.357-4.798-3.373-5.988L326.789,22.585z"/>
+			<path d="M324.922,22.585c-0.602,0.343-1.008,1.002-1.008,1.76c0,0.057,0.002,0.112,0.006,0.169h-4.764c0-0.057,0-0.113,0-0.169
+				c0-2.562,1.357-4.798,3.373-5.988L324.922,22.585z"/>
+			<path d="M326.951,26.019c-0.598,0.35-1.371,0.47-2.027,0.091c-0.049-0.028-0.096-0.059-0.143-0.091l-2.383,4.125
+				c0.049,0.029,0.098,0.058,0.146,0.087c2.219,1.28,4.834,1.064,6.873-0.087L326.951,26.019z"/>
+		</g>
 	</g>
 </g>
 </svg>

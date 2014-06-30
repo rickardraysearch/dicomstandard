@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2013 - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2014a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -908,6 +908,37 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>The DICOM Application Entity (AE) Title of the AE that wrote this file's content (or last updated it). If used, it allows the tracing of the source of errors in the event of media interchange problems. The policies associated with AE Titles are the same as those defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>.</para>
+              <note><para>If the data set was created de novo by the application writing the file, its AE Title, if it has one, may be used. If the data set was received over the network, there is potential ambiguity as to whether the value is the same as Sending Application Entity Title (0002,0017) or Receiving Application Entity Title (0002,0018) or some other value.</para></note>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>Sending Application Entity Title</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>(0002,0017)</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>The DICOM Application Entity (AE) Title of the AE that sent this file's content over a network.</para>
+              <note><para>This is the AE that was the sender (source) of the content (the data set), in the case of a data set sent over the network (i.e., the Calling AET of the SCU for a C-STORE operation). If the data set was instead created de novo by the application writing the file, it should not be present.</para></note>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>Receiving Application Entity Title</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>(0002,0018)</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>The DICOM Application Entity (AE) Title of the AE that received this file's content over a network.</para>
+              <note><para>This is the AE that was the recipient (destination) of the content (the data set), in the case of a data set received over the network (i.e., the Called AET of the SCP for a C-STORE operation). If the data set was instead created de novo by the application writing the file, it should not be present.</para></note>
             </td>
           </tr>
           <tr valign="top">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2013 - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2014a - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -59,8 +59,8 @@
       <title>Interface between Hosted Application and Hosting System.</title>
       <mediaobject>
         <imageobject>
-          <!--<imagedata fileref="figures/PS3.19_1-1.svg"/>-->
-          <imagedata fileref="part19_fromword_files/figure_1-1.png"/>
+          <imagedata fileref="figures/PS3.19_1-1.svg"/>
+          <!--<imagedata fileref="part19_fromword_files/figure_1-1.png"/>-->
         </imageobject>
       </mediaobject>
     </figure>
@@ -70,8 +70,8 @@
         <title>Illustration of Platform Independence via Hosted Application Architecture.</title>
         <mediaobject>
           <imageobject>
-            <!--<imagedata fileref="figures/PS3.19_1-2.svg"/>-->
-            <imagedata fileref="part19_fromword_files/image002.png"/>
+            <imagedata fileref="figures/PS3.19_1-2.svg"/>
+            <!--<imagedata fileref="part19_fromword_files/image002.png"/>-->
           </imageobject>
         </mediaobject>
       </figure>
@@ -553,8 +553,8 @@
           <title>Hosted Application Initialization Sequence</title>
           <mediaobject>
             <imageobject>
-              <!--<imagedata fileref="figures/PS3.19_7.1-1.svg"/>-->
-              <imagedata fileref="part19_fromword_files/image004.png"/>
+              <imagedata fileref="figures/PS3.19_7.1-1.svg"/>
+              <!--<imagedata fileref="part19_fromword_files/image004.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -786,8 +786,8 @@
           <title>State Diagram of Hosted Applications.</title>
           <mediaobject>
             <imageobject>
-              <!--<imagedata fileref="figures/PS3.19_7.2-1.svg"/>-->
-              <imagedata fileref="part19_fromword_files/image006.png"/>
+              <imagedata fileref="figures/PS3.19_7.2-1.svg"/>
+              <!--<imagedata fileref="part19_fromword_files/image006.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -819,8 +819,8 @@
         <title>Diagram of the Interface Between the Hosting System and the Hosted Application</title>
         <mediaobject>
           <imageobject>
-            <!--<imagedata fileref="figures/PS3.19_8-1.svg"/>-->
-            <imagedata fileref="part19_fromword_files/image008.png"/>
+            <imagedata fileref="figures/PS3.19_8-1.svg"/>
+            <!--<imagedata fileref="part19_fromword_files/image008.png"/>-->
           </imageobject>
         </mediaobject>
       </figure>
@@ -920,8 +920,8 @@
           <title>Example File-based Data Exchange Sequence</title>
           <mediaobject>
             <imageobject>
-              <!--<imagedata fileref="figures/PS3.19_8.3-1.svg"/>-->
-              <imagedata fileref="part19_fromword_files/image010.png"/>
+              <imagedata fileref="figures/PS3.19_8.3-1.svg"/>
+              <!--<imagedata fileref="part19_fromword_files/image010.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -936,8 +936,8 @@
           <title>Example Model-based Data Exchange Sequence (continued on next page)</title>
           <mediaobject>
             <imageobject>
-              <!--<imagedata fileref="figures/PS3.19_8.3-2.svg"/>-->
-              <imagedata fileref="part19_fromword_files/image012.png"/>
+              <imagedata fileref="figures/PS3.19_8.3-2.svg"/>
+              <!--<imagedata fileref="part19_fromword_files/image012.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -947,8 +947,8 @@
           <title>Example Model-based Data Exchange Sequence (continued from previous page)</title>
           <mediaobject>
             <imageobject>
-              <!--<imagedata fileref="figures/PS3.19_8.3-2b.svg"/>-->
-              <imagedata fileref="part19_fromword_files/image014.png"/>
+              <imagedata fileref="figures/PS3.19_8.3-2b.svg"/>
+              <!--<imagedata fileref="part19_fromword_files/image014.png"/>-->
             </imageobject>
           </mediaobject>
         </figure>
@@ -1741,8 +1741,8 @@
             <title>Native DICOM Model</title>
             <mediaobject>
               <imageobject>
-                <!--<imagedata fileref="figures/PS3.19_A.1.4-1.svg"/>-->
-                <imagedata fileref="part19_fromword_files/figure_A.1.4-1.png"/>
+                <imagedata fileref="figures/PS3.19_A.1.4-1.svg"/>
+                <!--<imagedata fileref="part19_fromword_files/figure_A.1.4-1.png"/>-->
               </imageobject>
             </mediaobject>
           </figure>
@@ -2324,8 +2324,8 @@ Number = attribute number { xsd:positiveInteger }
             <title>Abstract Multi-Dimensional Image Model</title>
             <mediaobject>
               <imageobject>
-                <!--<imagedata fileref="figures/PS3.19_A.2.4-1.svg"/>-->
-                <imagedata fileref="part19_fromword_files/image016.png"/>
+                <imagedata fileref="figures/PS3.19_A.2.4-1.svg"/>
+                <!--<imagedata fileref="part19_fromword_files/image016.png"/>-->
               </imageobject>
             </mediaobject>
           </figure>
@@ -3347,8 +3347,8 @@ CodedTerm =
               <title>Simple 3D Volume Example</title>
               <mediaobject>
                 <imageobject>
-                  <!--<imagedata fileref="figures/PS3.19_A.2.7.1-1.svg"/>-->
-                  <imagedata fileref="part19_fromword_files/image018.png"/>
+                  <imagedata fileref="figures/PS3.19_A.2.7.1-1.svg"/>
+                  <!--<imagedata fileref="part19_fromword_files/image018.png"/>-->
                 </imageobject>
               </mediaobject>
             </figure>
@@ -3361,8 +3361,8 @@ CodedTerm =
               <title>Simple 4D Volume Example</title>
               <mediaobject>
                 <imageobject>
-                  <!--<imagedata fileref="figures/PS3.19_A.2.7.2-1.svg"/>-->
-                  <imagedata fileref="part19_fromword_files/image020.png"/>
+                  <imagedata fileref="figures/PS3.19_A.2.7.2-1.svg"/>
+                  <!--<imagedata fileref="part19_fromword_files/image020.png"/>-->
                 </imageobject>
               </mediaobject>
             </figure>
@@ -3375,8 +3375,8 @@ CodedTerm =
               <title>2D Ultrasound Example</title>
               <mediaobject>
                 <imageobject>
-                  <!--<imagedata fileref="figures/PS3.19_A.2.7.3-1.svg"/>-->
-                  <imagedata fileref="part19_fromword_files/figure_A.2.7.3-1.png"/>
+                  <imagedata fileref="figures/PS3.19_A.2.7.3-1.svg"/>
+                  <!--<imagedata fileref="part19_fromword_files/figure_A.2.7.3-1.png"/>-->
                 </imageobject>
               </mediaobject>
             </figure>
@@ -3397,8 +3397,8 @@ CodedTerm =
               <title>Single Component 3D MR Metabolite Example</title>
               <mediaobject>
                 <imageobject>
-                  <!--<imagedata fileref="figures/PS3.19_A.2.7.4-1.svg"/>-->
-                  <imagedata fileref="part19_fromword_files/image022.png"/>
+                  <imagedata fileref="figures/PS3.19_A.2.7.4-1.svg"/>
+                  <!--<imagedata fileref="part19_fromword_files/image022.png"/>-->
                 </imageobject>
               </mediaobject>
             </figure>
@@ -3411,8 +3411,8 @@ CodedTerm =
               <title>Multiple Component 3D MR Metabolite Map Example</title>
               <mediaobject>
                 <imageobject>
-                  <!--<imagedata fileref="figures/PS3.19_A.2.7.5-1.svg"/>-->
-                  <imagedata fileref="part19_fromword_files/image024.png"/>
+                  <imagedata fileref="figures/PS3.19_A.2.7.5-1.svg"/>
+                  <!--<imagedata fileref="part19_fromword_files/image024.png"/>-->
                 </imageobject>
               </mediaobject>
             </figure>

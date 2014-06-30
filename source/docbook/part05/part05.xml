@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.5" label="PS3.5" version="5.0">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2013 - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2014a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -347,6 +347,14 @@
           <date>1995</date>
           <title>JPEG Standard for digital compression and encoding of continuous-tone still images. Part 2 - Testing</title>
         </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC11172-3">
+          <abbrev>ISO/IEC 11172-3</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>1993</date>
+          <title>Information technology -- Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s -- Part 3: Audio</title>
+        </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC13818-1">
           <abbrev>ISO/IEC 13818-1</abbrev>
           <author>
@@ -379,6 +387,14 @@
           <date>1998</date>
           <title>Information technology -- Generic coding of moving pictures and associated audio information - Part 4: Conformance testing</title>
         </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC13818-7">
+          <abbrev>ISO/IEC 13818-7</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>1997</date>
+          <title>Information technology -- Generic coding of moving pictures and associated audio information - Part 7: Advanced Audio Coding (AAC)</title>
+        </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC14495-1">
           <abbrev>ISO/IEC 14495-1</abbrev>
           <author>
@@ -386,6 +402,14 @@
           </author>
           <date>1997</date>
           <title>Lossless and near-lossless coding of continuous tone still images (JPEG-LS)</title>
+        </biblioentry>      
+        <biblioentry xml:id="biblio_ISOIEC14496-3">
+          <abbrev>ISO/IEC 14496-3</abbrev>
+          <author>
+           <orgname>ISO/IEC</orgname>
+          </author>
+          <date>2009</date>
+          <title>Information technology - Coding of audio-visual objects - Part 3: Audio</title>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC14496-10">
           <abbrev>ISO/IEC 14496-10</abbrev>
@@ -394,6 +418,22 @@
           </author>
           <date>2009</date>
           <title>Information technology - Coding of audio-visual objects - Part 10: Advanced Video Coding</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC14496-12">
+          <abbrev>ISO/IEC 14496-12</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>2003</date>
+          <title>Information technology - Coding of audio-visual objects - Part 12: ISO base media file format</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC14496-14">
+          <abbrev>ISO/IEC 14496-14</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>2003</date>
+          <title>Information technology - Coding of audio-visual objects - Part 14: MP4 file format</title>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC15444-1">
           <abbrev>ISO/IEC 15444-1</abbrev>
@@ -3132,6 +3172,7 @@
         <note>
           <para>The Basic Offset Table is not used because MPEG2 contains its own mechanism for describing navigation of frames. To enable decoding of only a part of the sequence, MPEG2 manages a header in any group of pictures (GOP) containing a time_code - a 25-bit integer containing the following: drop_frame_flag, time_code_hours, time_code_minutes, marker_bit, time_code_seconds and time_code_pictures.</para>
         </note>
+        <para>The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
         <para>Any audio components present within the MPEG bit stream shall comply with the following restrictions:</para>
         <itemizedlist>
           <listitem>
@@ -3148,7 +3189,14 @@
           </listitem>
         </itemizedlist>
         <note>
-          <para>Although MPEG describes each channel as including up to 5 signals (e.g., for surround effects), it is recommended to limit each of the two channels to 2 signals each one (stereo).</para>
+          <orderedlist numeration="arabic">
+            <listitem>
+              <para>MPEG-1 Layer III is standardized in Part 3 of the MPEG-1 standard (see <xref linkend="biblio_ISOIEC11172-3"/>).</para>
+            </listitem>
+            <listitem>
+              <para>Although MPEG describes each channel as including up to 5 signals (e.g., for surround effects), it is recommended to limit each of the two channels to 2 signals each one (stereo).</para>
+            </listitem>
+          </orderedlist>
         </note>
       </section>
       <section xml:id="sect_8.2.6" label="8.2.6" status="3">
@@ -3498,6 +3546,7 @@
         <note>
           <para>The Basic Offset Table is not used because MPEG2 contains its own mechanism for describing navigation of frames. To enable decoding of only a part of the sequence, MPEG2 manages a header in any group of pictures (GOP) containing a time_code - a 25-bit integer containing the following: drop_frame_flag, time_code_hours, time_code_minutes, marker_bit, time_code_seconds and time_code_pictures.</para>
         </note>
+        <para>The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
         <para>Any audio components present within the MPEG2 MP@HL bit stream shall comply with the restrictions as for MPEG2 MP@ML as stated in <xref linkend="sect_8.2.5" xrefstyle="select: label"/>.</para>
       </section>
       <section xml:id="sect_8.2.7" label="8.2.7" status="3">
@@ -3845,7 +3894,86 @@
         <note>
           <para>If a video stream exceeds the maximum length of one fragment (approximately 4 GB), it may be sent as multiple SOP Instances, but each SOP Instance will contain an independent and playable bit stream, and not depend on the encoded bit stream in other (previous) instances. The manner in which such separate instances are related is not specified in the standard, but mechanisms such as grouping into the same Series, and references to earlier instances using Referenced Image Sequence may be used.</para>
         </note>
-        <para>The PTS/DTS of the transport stream shall be used in the MPEG coding. Audio components shall be interleaved in either LPCM or AC-3 audio format and shall comply with the following restrictions:</para>
+        <para>The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding. Any audio components present within the bit stream shall be interleaved in either LPCM, AC-3, AAC, MP3 or MPEG-1 Layer II audio format and shall comply with the following restrictions:</para>
+        <table frame="box" rules="all" xml:id="table_8-6" label="8-6">
+          <caption>Allowed Audio Formats</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">Audio Format</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">MPEG-2 TS Container</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">MP4 Container</emphasis>
+                </para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>LPCM</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>-</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>AC3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>-</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>AAC</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>MP3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>MPEG-1 Audio Layer II</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Allowed</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <itemizedlist>
           <listitem>
             <para>LPCM</para>
@@ -3863,6 +3991,7 @@
                 <para>Number of channels: 2 channels</para>
               </listitem>
             </itemizedlist>
+            <note><para>If LPCM is used for Audio components, the container format shall be MPEG-2 TS.</para></note>
           </listitem>
           <listitem>
             <para>AC-3</para>
@@ -3880,11 +4009,86 @@
                 <para>Number of channels: 2 or 5.1 channels</para>
               </listitem>
             </itemizedlist>
+            <note>
+              <orderedlist numeration="arabic">
+                <listitem>
+                  <para>AC-3 is standardized in <xref linkend="biblio_ETSI_TS_102_366"/></para>
+                </listitem>
+                <listitem>
+                  <para>If AC-3 is used for Audio components, the container format shall be MPEG-2 TS.</para>
+                </listitem>
+              </orderedlist>
+            </note>
           </listitem>
+          <listitem>
+            <para>AAC</para>
+            <itemizedlist>
+              <listitem>
+                <para>Maximum bit rate: 640kbps</para>
+              </listitem>
+              <listitem>
+                <para>Sampling frequency: 48kHz</para>
+              </listitem>
+              <listitem>
+                <para>Bits per sample: 16, 20 or 24 bits</para>
+              </listitem>
+              <listitem>
+                <para>Number of channels: 2 or 5.1 channels</para>
+              </listitem>
+            </itemizedlist>
+            <note>
+              <para>AAC is standardized in Part 7 of the MPEG-2 standard (see <xref linkend="biblio_ISOIEC13818-7"/>, and Subpart 4 in Part 3 of the MPEG-4 standard (see <xref linkend="biblio_ISOIEC14496-3"/>).</para>
+            </note>
+          </listitem>
+          <listitem>
+            <para>CBR MPEG-1 LAYER III (MP3) Audio Standard</para>
+            <itemizedlist>
+              <listitem>
+                <para>Maximum bit rate: 320kbps</para>
+              </listitem>
+              <listitem>
+                <para>Sampling frequency: 32 kHz, 44.1 kHz or 48 kHz for the main channel (the complementary channels can be sampled at the half rate, as defined in the Standard)</para>
+              </listitem>
+              <listitem>
+                <para>Bits per sample: up to 24 bits</para>
+              </listitem>
+              <listitem>
+                <para>Number of channels: one main mono or stereo channel, and optionally one or more complementary channel(s)</para>
+              </listitem>
+            </itemizedlist>
+            <note>
+              <orderedlist numeration="arabic">
+                <listitem>
+                  <para>MPEG-1 Layer III is standardized in Part 3 of the MPEG-1 standard (see <xref linkend="biblio_ISOIEC11172-3"/>).</para>
+                </listitem>
+                <listitem>
+                  <para>Although MPEG describes each channel as including up to 5 signals (e.g. for surround effects), it is recommended to limit each of the two channels to 2 signals each one (stereo).</para>
+                </listitem>
+              </orderedlist>
+            </note>
+          </listitem>
+          <listitem>
+            <para>MPEG-1 LAYER II (MP2)</para>
+            <itemizedlist>
+              <listitem>
+                <para>Maximum bit rate: 384kbps</para>
+              </listitem>
+              <listitem>
+                <para>Sampling frequency: 32 kHz, 44.1 kHz or 48 kHz</para>
+              </listitem>
+              <listitem>
+                <para>Bits per sample: up to 24 bits</para>
+              </listitem>
+              <listitem>
+                <para>Number of channels: 2</para>
+              </listitem>
+            </itemizedlist>
+            <note>
+              <para>MPEG-1 Layer II is standardized in Part 3 of the MPEG-1 standard (see <xref linkend="biblio_ISOIEC11172-3"/>).</para>
+            </note>
+          </listitem>
+          
         </itemizedlist>
-        <note>
-          <para>AC-3 is standardized in <xref linkend="biblio_ETSI_TS_102_366"/></para>
-        </note>
       </section>
     </section>
     <section xml:id="sect_8.3" label="8.3" status="2">
@@ -4138,24 +4342,24 @@
             </listitem>
             <listitem>
               <para>For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Data Element (7FE0,0010) Pixel Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                </listitem>
+                <listitem>
+                  <para>Data Element (60xx,3000) Overlay Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                </listitem>
+                <listitem>
+                  <para>Data Element (5400,1010) Waveform Data shall have Value Representation OW and shall be encoded in Little Endian.</para>
+                </listitem>
+                <listitem>
+                  <para>Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <note>
+                    <para>Previous versions of the Standard either did not specify the encoding of Data Elements (0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case.</para>
+                  </note>
+                </listitem>
+              </itemizedlist>
             </listitem>
-            <listitem>
-              <para>Data Element (7FE0,0010) Pixel Data has the Value Representation OW and shall be encoded in Little Endian.</para>
-            </listitem>
-            <listitem>
-              <para>Data Element (60xx,3000) Overlay Data has the Value Representation OW and shall be encoded in Little Endian.</para>
-            </listitem>
-            <listitem>
-              <para>Data Element (5400,1010) Waveform Data shall have Value Representation OW and shall be encoded in Little Endian.</para>
-            </listitem>
-            <listitem>
-              <para>Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
-              <note>
-                <para>Previous versions of the Standard either did not specify the encoding of Data Elements (0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case.</para>
-              </note>
-            </listitem>
-          </itemizedlist>
-          <itemizedlist>
             <listitem>
               <para>Data Elements (0028,1101), (0028,1102),(0028,1103) Red, Green, Blue Palette Lookup Table Descriptor have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
             </listitem>

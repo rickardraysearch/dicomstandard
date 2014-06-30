@@ -6,7 +6,14 @@ dir=`dirname "${supsourcefile}"`
 
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
-xsltproc --nonet -o "${dir}/${sup}.fo" stylesheets/customize-fo-pdf-sup.xsl "${supsourcefile}"
+# specify arbitrary part for current.docid to quieten olinkdb use ...
+xsltproc --nonet \
+	-o "${dir}/${sup}.fo" \
+	--stringparam target.database.document "${HOME}/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/olinkdb_pdf.xml" \
+	--stringparam current.docid "PS3.14" \
+	stylesheets/customize-fo-pdf-sup.xsl \
+	"${supsourcefile}"
+
 XEP/xep -fo "${dir}/${sup}.fo" -pdf "${dir}/${sup}.pdf"
 rm "${dir}/${sup}.fo"
 

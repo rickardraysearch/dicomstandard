@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basefile="releasenotes_2013"
+basefile="releasenotes_2014a"
 
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 

@@ -25,7 +25,7 @@
 	
 		<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="1" x1="192.424" y1="190.966" x2="428.226" y2="190.966"/>
 	<rect x="55.799" y="79.116" fill="none" width="120.825" height="144.248"/>
-	<text transform="matrix(0.9288 0 0 1 82.3042 85.5557)"><tspan x="0" y="0" font-size="9">ASL Pulse Train Duration</tspan><tspan x="31.012" y="10.8" font-size="9">(0018,9258)  [ms]</tspan><tspan x="7.013" y="32.4" font-size="9">Bolus Cut-off Delaytime </tspan><tspan x="30.52" y="43.2" font-size="9">(0018,925F)  [ms]</tspan><tspan x="-6.992" y="64.8" font-size="9">Frame Reference Datetime</tspan><tspan x="53.011" y="75.6" font-size="9">(0018,9151) </tspan><tspan x="57.041" y="86.399" font-size="9">(per frame)</tspan><tspan x="38.03" y="108.001" font-size="9">Inversion Times</tspan><tspan x="33.512" y="118.8" font-size="9">(0018,9079) [ms]</tspan><tspan x="57.041" y="129.601" font-size="9">(per frame)</tspan></text>
+	<text transform="matrix(0.9288 0 0 1 82.3042 85.5557)"><tspan x="0" y="0" font-size="9">ASL Pulse Train Duration</tspan><tspan x="31.012" y="10.8" font-size="9">(0018,9258)  [ms]</tspan><tspan x="7.013" y="32.4" font-size="9">Bolus Cut-off Delaytime </tspan><tspan x="30.52" y="43.2" font-size="9">(0018,925F)  [ms]</tspan><tspan x="-6.992" y="64.8" font-size="9">Frame Reference DateTime</tspan><tspan x="53.011" y="75.6" font-size="9">(0018,9151) </tspan><tspan x="57.041" y="86.399" font-size="9">(per frame)</tspan><tspan x="38.03" y="108.001" font-size="9">Inversion Times</tspan><tspan x="33.512" y="118.8" font-size="9">(0018,9079) [ms]</tspan><tspan x="57.041" y="129.601" font-size="9">(per frame)</tspan></text>
 	<rect x="197.151" y="16" fill="none" width="36.667" height="13.333"/>
 	<text transform="matrix(0.9288 0 0 1 197.1509 21.0078)"><tspan x="0" y="0" font-size="7">Labeling</tspan><tspan x="0" y="7.4" font-size="7">control none</tspan></text>
 	<rect x="256.524" y="24" fill="none" width="39.998" height="5.333"/>
@@ -95,6 +95,6 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(0.9288 0 0 1 52.0107 256.0234)"><tspan x="0" y="0" font-size="7">Bolus Cut-off Delay Time (0018,925F) [ms]</tspan><tspan x="0" y="11.4" font-size="7">Inversion Times (0018,9079) [ms]</tspan><tspan x="0" y="19.8" font-size="7">(from end of Pulse Train to Frame Reference Datetime)</tspan><tspan x="0" y="32.2" font-size="7">ASL Pulse Train Duration (0018,9258 ) [ms]</tspan><tspan x="0" y="43.6" font-size="7">Bolus Cut-off Technique Description (0018,925E) [text]</tspan><tspan x="0" y="55" font-size="7">Frame Reference Datetime (0018,9151)</tspan><tspan x="0" y="63.4" font-size="7">(provides the absolute timing [DT])</tspan></text>
+	<text transform="matrix(0.9288 0 0 1 52.0107 256.0234)"><tspan x="0" y="0" font-size="7">Bolus Cut-off Delay Time (0018,925F) [ms]</tspan><tspan x="0" y="11.4" font-size="7">Inversion Times (0018,9079) [ms]</tspan><tspan x="0" y="19.8" font-size="7">(from end of Pulse Train to Frame Reference DateTime)</tspan><tspan x="0" y="32.2" font-size="7">ASL Pulse Train Duration (0018,9258 ) [ms]</tspan><tspan x="0" y="43.6" font-size="7">Bolus Cut-off Technique Description (0018,925E) [text]</tspan><tspan x="0" y="55" font-size="7">Frame Reference DateTime (0018,9151)</tspan><tspan x="0" y="63.4" font-size="7">(provides the absolute timing [DT])</tspan></text>
 </g>
 </svg>

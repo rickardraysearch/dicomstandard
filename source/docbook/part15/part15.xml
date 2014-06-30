@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2013 - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2014a - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -7334,33 +7334,34 @@ start = message
   <para>The creator of a DICOM SOP Instance may generate signatures using the Creator RSA Digital Signature Profile. The Digital Signature produced by this Profile serves as a lifetime data integrity check that can be used to verify that the pixel data in the SOP instance has not been altered since its initial creation. An implementation that supports the Creator RSA Digital Signature Profile may include a Creator RSA Digital Signature with every SOP Instance that it creates; however, the implementation is not required to do so.</para>
   <para>As a minimum, an implementation shall include the following attributes in generating the Creator RSA Digital Signature:</para>
   <orderedlist numeration="loweralpha">
-<listitem><para>the SOP Class and Instance UIDs</para></listitem>
-<listitem><para>the SOP Creation Date and Time, if present</para></listitem>
-<listitem><para>the Study and Series Instance UIDs</para></listitem>
-<listitem><para>any attributes of the General Equipment module that are present</para></listitem>
-<listitem><para>any attributes of the Overlay Plane, Curve or Graphic Annotation modules that are present</para></listitem>
-<listitem><para>any attributes of the General Image and Image Pixel modules that are present</para></listitem>
-<listitem><para>any attributes of the SR Document General and SR Document Content modules that are present</para></listitem>
-<listitem><para>any attributes of the Waveform and Waveform Annotation modules that are present</para></listitem>
-<listitem><para>any attributes of the Multi-frame Functional Groups module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced MR Image module that are present</para></listitem>
-<listitem><para>any attributes of the MR Spectroscopy modules that are present</para></listitem>
-<listitem><para>any attributes of the Raw Data module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced CT Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced XA/XRF Image module that are present</para></listitem>
-<listitem><para>any attributes of the Segmentation Image module that are present</para></listitem>
-<listitem><para>any attributes of the Encapsulated Document module that are present</para></listitem>
-<listitem><para>any attributes of the X-Ray 3D Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced PET Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced US Image module that are present</para></listitem>
-<listitem><para>any attributes of the Surface Segmentation module that are present</para></listitem>
-<listitem><para>any attributes of the Surface Mesh Module that are present</para></listitem>
-<listitem><para>any attributes of the Structured Display, Structured Display Annotation, and Structured Display Image Box modules that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Template module that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Assembly Template module that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Template Group module that are present</para></listitem>
-<listitem><para>any attributes of the Point Cloud Module that are present</para></listitem>
-</orderedlist>
+    <listitem><para>the SOP Class and Instance UIDs</para></listitem>
+    <listitem><para>the SOP Creation Date and Time, if present</para></listitem>
+    <listitem><para>the Study and Series Instance UIDs</para></listitem>
+    <listitem><para>any attributes of the General Equipment module that are present</para></listitem>
+    <listitem><para>any attributes of the Overlay Plane, Curve or Graphic Annotation modules that are present</para></listitem>
+    <listitem><para>any attributes of the General Image and Image Pixel modules that are present</para></listitem>
+    <listitem><para>any attributes of the SR Document General and SR Document Content modules that are present</para></listitem>
+    <listitem><para>any attributes of the Waveform and Waveform Annotation modules that are present</para></listitem>
+    <listitem><para>any attributes of the Multi-frame Functional Groups module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced MR Image module that are present</para></listitem>
+    <listitem><para>any attributes of the MR Spectroscopy modules that are present</para></listitem>
+    <listitem><para>any attributes of the Raw Data module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced CT Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced XA/XRF Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Segmentation Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Encapsulated Document module that are present</para></listitem>
+    <listitem><para>any attributes of the X-Ray 3D Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced PET Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced US Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Surface Segmentation module that are present</para></listitem>
+    <listitem><para>any attributes of the Surface Mesh Module that are present</para></listitem>
+    <listitem><para>any attributes of the Structured Display, Structured Display Annotation, and Structured Display Image Box modules that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Template module that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Assembly Template module that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Template Group module that are present</para></listitem>
+    <listitem><para>any attributes of the Point Cloud Module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced Mammography Image module that are present</para></listitem>
+  </orderedlist>
   <para/>
   <para>The Digital Signature shall be created using the methodology described in the Base RSA Digital Signature Profile. Typically the certificate and associated private key used to produce Creator RSA Digital Signatures are configuration parameters of the Application Entity set by service or installation engineers.</para>
   <para>Creator RSA Digital Signatures bear no direct relationship to other Digital Signatures. However, other Digital Signatures, such as the Authorization Digital Signature, may be used to collaborate the timestamp of a Creator RSA Digital Signature.</para>
@@ -7371,32 +7372,33 @@ start = message
   <para>The technician or physician who approves a DICOM SOP Instance for use may request the Application Entity to generate a signature using the Authorization RSA Digital Signature Profile. The Digital Signature produced serves as a lifetime data integrity check that can be used to verify that the pixel data in the SOP instance is the same that the technician or physician saw when they made the approval.</para>
   <para>As a minimum, an implementation shall include the following attributes in generating the Authorization RSA Digital Signature:</para>
   <orderedlist numeration="loweralpha">
-<listitem><para>the SOP Class and Instance UIDs</para></listitem>
-<listitem><para>the Study and Series Instance UIDs</para></listitem>
-<listitem><para>any attributes whose Values are verifiable by the technician or physician (e.g., their Values are displayed to the technician or physician)</para></listitem>
-<listitem><para>any attributes of the Overlay Plane, Curve or Graphic Annotation modules that are present</para></listitem>
-<listitem><para>any attributes of the General Image and Image Pixel modules that are present</para></listitem>
-<listitem><para>any attributes of the SR Document General and SR Document Content modules that are present</para></listitem>
-<listitem><para>any attributes of the Waveform and Waveform Annotation modules that are present</para></listitem>
-<listitem><para>any attributes of the Multi-frame Functional Groups module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced MR Image module that are present</para></listitem>
-<listitem><para>any attributes of the MR Spectroscopy modules that are present</para></listitem>
-<listitem><para>any attributes of the Raw Data module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced CT Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced XA/XRF Image module that are present</para></listitem>
-<listitem><para>any attributes of the Segmentation Image module that are present</para></listitem>
-<listitem><para>any attributes of the Encapsulated Document module that are present</para></listitem>
-<listitem><para>any attributes of the X-Ray 3D Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced PET Image module that are present</para></listitem>
-<listitem><para>any attributes of the Enhanced US Image module that are present</para></listitem>
-<listitem><para>any attributes of the Surface Segmentation module that are present</para></listitem>
-<listitem><para>any attributes of the Surface Mesh Module that are present</para></listitem>
-<listitem><para>any attributes of the Structured Display, Structured Display Annotation, and Structured Display Image Box modules that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Template module that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Assembly Template module that are present</para></listitem>
-<listitem><para>any Attributes of the Implant Template Group module that are present</para></listitem>
-<listitem><para>any attributes of the Point Cloud Module that are present</para></listitem>
-</orderedlist>
+    <listitem><para>the SOP Class and Instance UIDs</para></listitem>
+    <listitem><para>the Study and Series Instance UIDs</para></listitem>
+    <listitem><para>any attributes whose Values are verifiable by the technician or physician (e.g., their Values are displayed to the technician or physician)</para></listitem>
+    <listitem><para>any attributes of the Overlay Plane, Curve or Graphic Annotation modules that are present</para></listitem>
+    <listitem><para>any attributes of the General Image and Image Pixel modules that are present</para></listitem>
+    <listitem><para>any attributes of the SR Document General and SR Document Content modules that are present</para></listitem>
+    <listitem><para>any attributes of the Waveform and Waveform Annotation modules that are present</para></listitem>
+    <listitem><para>any attributes of the Multi-frame Functional Groups module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced MR Image module that are present</para></listitem>
+    <listitem><para>any attributes of the MR Spectroscopy modules that are present</para></listitem>
+    <listitem><para>any attributes of the Raw Data module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced CT Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced XA/XRF Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Segmentation Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Encapsulated Document module that are present</para></listitem>
+    <listitem><para>any attributes of the X-Ray 3D Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced PET Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced US Image module that are present</para></listitem>
+    <listitem><para>any attributes of the Surface Segmentation module that are present</para></listitem>
+    <listitem><para>any attributes of the Surface Mesh Module that are present</para></listitem>
+    <listitem><para>any attributes of the Structured Display, Structured Display Annotation, and Structured Display Image Box modules that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Template module that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Assembly Template module that are present</para></listitem>
+    <listitem><para>any Attributes of the Implant Template Group module that are present</para></listitem>
+    <listitem><para>any attributes of the Point Cloud Module that are present</para></listitem>
+    <listitem><para>any attributes of the Enhanced Mammography Image module that are present</para></listitem>
+  </orderedlist>
   <para>The Digital Signature shall be created using the methodology described in the Base RSA Digital Signature Profile. The Application Entity shall determine the identity of the technician or physician and obtain their certificate through a site-specific procedure such as a login mechanism or a smart card.</para>
   <para>Authorization RSA Digital Signatures bear no direct relationship to other Digital Signatures. However, other Digital Signatures, such as the Creator RSA Digital Signature, may be used to collaborate the timestamp of an Authorization RSA Digital Signature.</para>
   </section>
@@ -7983,6 +7985,32 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Address (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A353)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
     <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Admission ID</para>
@@ -8649,7 +8677,33 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Current Observer (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A307)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Current Patient Location</para>
       </td>
@@ -9117,7 +9171,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>End Acquisition DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0018,9517)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X/D</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Ethnic Group</para>
       </td>
@@ -9145,7 +9229,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Expected Completion DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4011)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Failed SOP Instance UID List</para>
       </td>
@@ -9583,7 +9697,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Instance Coercion DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0008,0015)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Instance Creator UID</para>
       </td>
@@ -10407,7 +10551,123 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Observation Date (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A192)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Observation Subject UID (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A402)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>U</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Observation Time (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A193)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Observation UID</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A171)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>U</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Occupation</para>
       </td>
@@ -11415,7 +11675,7 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Performed Procedure Step Description</para>
       </td>
@@ -11473,7 +11733,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Performed Procedure Step End DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4051)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Performed Procedure Step End Time</para>
       </td>
@@ -11559,7 +11849,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Performed Procedure Step Start DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4050)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Performed Procedure Step Start Time</para>
       </td>
@@ -12071,7 +12391,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Procedure Step Cancellation DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4052)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>
           <emphasis role="italic">Private attributes</emphasis>
@@ -12297,7 +12647,35 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Referenced Observation UID (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A172)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>U</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Referenced Patient Alias Sequence</para>
       </td>
@@ -12323,35 +12701,61 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para>Referenced Patient Sequence</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0008,1120)</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>N</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>Y</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>X</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1">
-        <para>X</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-    </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Referenced Patient Photo Sequence</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0010,1100)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Referenced Patient Sequence</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0008,1120)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Referenced Performed Procedure Step Sequence</para>
       </td>
@@ -13269,7 +13673,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Scheduled Procedure Step Modification DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4010)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Scheduled Procedure Step Start Date</para>
       </td>
@@ -13299,7 +13733,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Scheduled Procedure Step Start DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,4005)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Scheduled Procedure Step Start Time</para>
       </td>
@@ -13751,7 +14215,35 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Source Serial Number</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(3008,0105)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Special Needs</para>
       </td>
@@ -13779,7 +14271,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Start Acquisition DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0018,9516)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X/D</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Station Name</para>
       </td>
@@ -14059,7 +14581,61 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Target UID</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0018,2042)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>U</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para>K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Telephone Number (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A354)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Template Extension Creator UID</para>
       </td>
@@ -14355,7 +14931,59 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Verbal Source (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A352)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para>Verbal Source Identifier Code Sequence (Trial)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>(0040,A358)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para>X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para>Verifying Observer Identification Code Sequence</para>
       </td>
@@ -14616,6 +15244,9 @@ start = message
       <listitem>
         <para>Application of this option may render the pixel data unusable for the purpose for which it has been collected, and hence its use may require a compromise between de-identification and utility based on obtaining appropriate ethical approval and informed consent. Consider for example, the case of dental images.</para>
       </listitem>
+      <listitem>
+        <para>Since the Referenced Patient Photo Sequence is removed as part of the Basic Profile, support of the Clean Recognizable Visual Features option does not add requirements for that attribute.</para>
+      </listitem>
     </orderedlist>
   </note>
   </section>
@@ -14767,1475 +15398,1509 @@ start = message
       <listitem>
         <para>A sample list of Private Attributes thought to be safe is provided here. Vendors do not guarantee them to be safe, and do not commit to sending them in any particular software version (including future products).</para>
         <table frame="box" rules="all" xml:id="table_E.3.10-1" label="E.3.10-1">
-    <caption>Safe Private Attributes</caption>
-    <thead>
-      <tr valign="top">
-        <th align="center" colspan="1" rowspan="1">
-          <para>
-            <emphasis role="bold">Data Element</emphasis>
-          </para>
-        </th>
-        <th align="center" colspan="1" rowspan="1">
-          <para>
-            <emphasis role="bold">Private Creator</emphasis>
-          </para>
-        </th>
-        <th align="center" colspan="1" rowspan="1">
-          <para>
-            <emphasis role="bold">VR</emphasis>
-          </para>
-        </th>
-        <th align="center" colspan="1" rowspan="1">
-          <para>
-            <emphasis role="bold">VM</emphasis>
-          </para>
-        </th>
-        <th align="center" colspan="1" rowspan="1">
-          <para>
-            <emphasis role="bold">Meaning</emphasis>
-          </para>
-        </th>
-      </tr>
-      
-    </thead>
-    <tbody>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7053,xx00)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Philips PET Private Group</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>SUV Factor - Multiplying stored pixel values by Rescale Slope then this factor results in SUVbw in g/l</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7053,xx09)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Philips PET Private Group</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Activity Concentration Factor - Multiplying stored pixel values by Rescale Slope then this factor results in MBq/ml.</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(00E1,xx21)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>DLP</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01E1,xx26)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>CS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Phantom Type</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01E1,xx50)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Acquisition Duration</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01F1,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>CS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Acquisition Type</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01F1,xx07)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Table Velocity</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01F1,xx26)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Pitch</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(01F1,xx27)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ELSCINT1</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Rotation Time</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx23)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_ACQU_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Table Speed [mm/rotation]</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx24)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_ACQU_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Mid Scan Time [sec]</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx27)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_ACQU_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Rotation Speed (Gantry Period)</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx9E)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_ACQU_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>LO</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Internal Pulse Sequence Name</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0043,xx27)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_PARM_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SH</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Scan Pitch Ratio in the form "n.nnn:1"</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0045,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_HELIOS_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Number of Macro Rows in Detector</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0045,xx02)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_HELIOS_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Macro width at ISO Center</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0903,xx10)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEIIS PACS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>US</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Reject Image Flag</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0903,xx11)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEIIS PACS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>US</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Significant Flag</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0903,xx12)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEIIS PACS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>US</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Confidential Flag</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(2001,xx03)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Philips Imaging DD 001</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Diffusion B-Factor</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(2001,xx04)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Philips Imaging DD 001</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>CS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Diffusion Direction</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx0C)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>SIEMENS MR HEADER</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>IS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>B Value</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx0D)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>SIEMENS MR HEADER</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>CS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Diffusion Directionality</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx0E)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>SIEMENS MR HEADER</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FD</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>3</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Diffusion Gradient Direction</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0019,xx27)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>SIEMENS MR HEADER</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FD</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>6</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>B Matrix</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0043,xx39)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_PARM_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>IS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>4</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>1<superscript>st</superscript>value is B Value</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0043,xx6F)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_PARM_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>DS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>3-4</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Scanner Table Entry + Gradient Coil Selected</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0025,xx07)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>GEMS_SERS_01</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Images in Series</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7E01,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>HOLOGIC, Inc.</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>LO</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Codec Version</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7E01,xx02)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>HOLOGIC, Inc.</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SH</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Codec Content Type</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7E01,xx10)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>HOLOGIC, Inc.</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SQ</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>High Resolution Data Sequence</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7E01,xx11)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>HOLOGIC, Inc.</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SQ</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Low Resolution Data Sequence</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(7E01,xx12)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>HOLOGIC, Inc.</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>OB</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Codec Content</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>UI</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Version</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx02)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>UI</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Analyzed Series UID</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx04)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SS</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Return Code</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx05)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>LT</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Return Message</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx10)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>MI</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx20)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>SH</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Units</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0099,xx21)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQHeader</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>ICV</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Cortical White Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx02)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Cortical Gray Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx03)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left 3rd Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx04)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left 4th Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx05)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left 5th Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx06)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Lateral Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx07)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Inferior Lateral Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx08)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Inferior CSF</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx09)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Cerebellar White Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0a)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Cerebellar Gray Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0b)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Hippocampus</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0c)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Amygdala</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0d)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Thalamus</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0e)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Caudate</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx0f)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Putamen</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx10)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Pallidum</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx11)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Ventral Diencephalon</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx12)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Nucleus Accumbens</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx13)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Brain Stem</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx14)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Exterior CSF</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx15)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left WM Hypo</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0199,xx16)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQLeft</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Left Other</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx01)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Cortical White Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx02)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Cortical Gray Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx03)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right 3rd Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx04)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right 4th Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx05)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right 5th Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx06)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Lateral Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx07)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Inferior Lateral Ventricle</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx08)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Inferior CSF</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx09)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Cerebellar White Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0a)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Cerebellar Gray Matter</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0b)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Hippocampus</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0c)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Amygdala</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0d)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Thalamus</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0e)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Caudate</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx0f)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Putamen</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx10)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Pallidum</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx11)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Ventral Diencephalon</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx12)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Nucleus Accumbens</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx13)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Brain Stem</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx14)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Exterior CSF</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx15)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right WM Hypo</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1">
-        <para>(0299,xx16)</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>NQRight</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>FL</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para>1</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para>Right Other</para>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-</listitem>
-      <listitem><para>One approach to retaining Private Attributes safely, either when the VR is encoded explicitly or known from a data dictionary (such as may be derived from published DICOM Conformance Statements or previously encountered instances, perhaps by adaptively extending the data dictionary as new explicit VR instances are received), is to retain those Attributes that are numeric only. For example, one might retain US, SS, UL, SS, FL and FD binary values, and IS and DS string values that contain only valid numeric characters. One might assume that other string Value Representations are unsafe in the absence of definite confirmation from the vendor to the contrary; code strings (CS) may be an exception. Bulk binary data in OB Value representations is particularly unsafe, and may often contain entire proprietary format headers in binary or text or XML form that includes the patient's name and other identifying information.</para>
+          <caption>Safe Private Attributes</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">Data Element</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">Private Creator</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">VR</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">VM</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="bold">Meaning</emphasis>
+                </para>
+              </th>
+            </tr>
+            
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7053,xx00)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips PET Private Group</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>SUV Factor - Multiplying stored pixel values by Rescale Slope then this factor results in SUVbw in g/l</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7053,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips PET Private Group</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Activity Concentration Factor - Multiplying stored pixel values by Rescale Slope then this factor results in MBq/ml.</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(00E1,xx21)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>DLP</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01E1,xx26)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>CS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Phantom Type</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01E1,xx50)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Acquisition Duration</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01F1,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>CS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Acquisition Type</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01F1,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Table Velocity</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01F1,xx26)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Pitch</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(01F1,xx27)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ELSCINT1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Rotation Time</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx23)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_ACQU_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Table Speed [mm/rotation]</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx24)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_ACQU_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Mid Scan Time [sec]</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx27)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_ACQU_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Rotation Speed (Gantry Period)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx9E)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_ACQU_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>LO</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Internal Pulse Sequence Name</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0043,xx27)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_PARM_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SH</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Scan Pitch Ratio in the form "n.nnn:1"</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0045,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_HELIOS_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Number of Macro Rows in Detector</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0045,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_HELIOS_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Macro width at ISO Center</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0903,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEIIS PACS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>US</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Reject Image Flag</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0903,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEIIS PACS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>US</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Significant Flag</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0903,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEIIS PACS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>US</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Confidential Flag</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(2001,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips Imaging DD 001</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Diffusion B-Factor</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(2001,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips Imaging DD 001</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>CS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Diffusion Direction</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx0C)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>SIEMENS MR HEADER</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>IS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>B Value</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx0D)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>SIEMENS MR HEADER</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>CS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Diffusion Directionality</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx0E)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>SIEMENS MR HEADER</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FD</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>3</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Diffusion Gradient Direction</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0019,xx27)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>SIEMENS MR HEADER</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FD</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>6</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>B Matrix</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0043,xx39)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_PARM_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>IS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>4</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>1<superscript>st</superscript>value is B Value</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0043,xx6F)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_PARM_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>DS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>3-4</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Scanner Table Entry + Gradient Coil Selected</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0025,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>GEMS_SERS_01</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Images in Series</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7E01,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>HOLOGIC, Inc.</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>LO</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Codec Version</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7E01,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>HOLOGIC, Inc.</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SH</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Codec Content Type</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7E01,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>HOLOGIC, Inc.</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>High Resolution Data Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7E01,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>HOLOGIC, Inc.</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Low Resolution Data Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(7E01,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>HOLOGIC, Inc.</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Codec Content</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Version</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Analyzed Series UID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Return Code</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx05)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>LT</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Return Message</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>MI</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx20)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>SH</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Units</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0099,xx21)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQHeader</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>ICV</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Cortical White Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Cortical Gray Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left 3rd Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left 4th Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx05)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left 5th Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx06)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Lateral Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Inferior Lateral Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx08)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Inferior CSF</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Cerebellar White Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0a)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Cerebellar Gray Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0b)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Hippocampus</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0c)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Amygdala</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0d)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Thalamus</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0e)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Caudate</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx0f)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Putamen</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Pallidum</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Ventral Diencephalon</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Nucleus Accumbens</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx13)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Brain Stem</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx14)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Exterior CSF</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx15)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left WM Hypo</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0199,xx16)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQLeft</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Left Other</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Cortical White Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Cortical Gray Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right 3rd Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right 4th Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx05)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right 5th Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx06)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Lateral Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Inferior Lateral Ventricle</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx08)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Inferior CSF</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Cerebellar White Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0a)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Cerebellar Gray Matter</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0b)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Hippocampus</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0c)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Amygdala</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0d)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Thalamus</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0e)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Caudate</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx0f)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Putamen</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Pallidum</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Ventral Diencephalon</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Nucleus Accumbens</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx13)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Brain Stem</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx14)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Exterior CSF</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx15)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right WM Hypo</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(0299,xx16)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>NQRight</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Right Other</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(2005,xx0D)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips MR Imaging DD 001</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Scale Intercept</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>(2005,xx0E)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Philips MR Imaging DD 001</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>FL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Scale Slope</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </listitem>
+      <listitem>
+        <para>One approach to retaining Private Attributes safely, either when the VR is encoded explicitly or known from a data dictionary (such as may be derived from published DICOM Conformance Statements or previously encountered instances, perhaps by adaptively extending the data dictionary as new explicit VR instances are received), is to retain those Attributes that are numeric only. For example, one might retain US, SS, UL, SS, FL and FD binary values, and IS and DS string values that contain only valid numeric characters. One might assume that other string Value Representations are unsafe in the absence of definite confirmation from the vendor to the contrary; code strings (CS) may be an exception. Bulk binary data in OB Value representations is particularly unsafe, and may often contain entire proprietary format headers in binary or text or XML form that includes the patient's name and other identifying information.</para>
       </listitem>
     </orderedlist>
   </note>
-    <para>The safe private attributes that are retained shall be described in the Conformance Statement.</para>
-  
+  <para>The safe private attributes that are retained shall be described in the Conformance Statement.</para>
   </section>
 </section>
 </chapter>

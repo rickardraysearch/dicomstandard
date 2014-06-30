@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.1" label="PS3.1" version="5.0">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2013 - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2014a - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -53,6 +53,7 @@
   </chapter>
   <chapter label="" status="1" xml:id="chapter_Introduction">
     <title>Introduction</title>
+    <para>Digital Imaging and Communications in Medicine (DICOM) is the standard for the communication and management of medical imaging information and related data.</para>
     <section label="" status="2" xml:id="sect_History">
       <title>History</title>
       <para>With the introduction of computed tomography (CT) followed by other digital diagnostic

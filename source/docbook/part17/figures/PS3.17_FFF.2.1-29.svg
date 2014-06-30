@@ -45,19 +45,19 @@
 		<rect x="472.142" y="67.859" fill="none" width="8.535" height="7.793"/>
 		<text transform="matrix(0.9288 0 0 1 472.792 72.8721)" font-size="7">25</text>
 		<rect x="172.13" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 174.5898 95.0586)" font-size="7">0</text>
+		<text transform="matrix(0.9288 0 0 1 174.5898 95.0576)" font-size="7">0</text>
 		<rect x="222.131" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 224.5908 95.0586)" font-size="7">1</text>
+		<text transform="matrix(0.9288 0 0 1 224.5908 95.0576)" font-size="7">1</text>
 		<rect x="272.133" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 274.5928 95.0586)" font-size="7">2</text>
+		<text transform="matrix(0.9288 0 0 1 274.5928 95.0576)" font-size="7">2</text>
 		<rect x="322.135" y="90.047" fill="none" width="8.536" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 324.5938 95.0586)" font-size="7">3</text>
+		<text transform="matrix(0.9288 0 0 1 324.5938 95.0576)" font-size="7">3</text>
 		<rect x="372.138" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 374.5957 95.0586)" font-size="7">4</text>
+		<text transform="matrix(0.9288 0 0 1 374.5957 95.0576)" font-size="7">4</text>
 		<rect x="422.14" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 424.5977 95.0586)" font-size="7">5</text>
+		<text transform="matrix(0.9288 0 0 1 424.5977 95.0576)" font-size="7">5</text>
 		<rect x="472.142" y="90.047" fill="none" width="8.535" height="7.793"/>
-		<text transform="matrix(0.9288 0 0 1 474.5996 95.0586)" font-size="7">6</text>
+		<text transform="matrix(0.9288 0 0 1 474.5996 95.0576)" font-size="7">6</text>
 		
 			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="1" x1="164.172" y1="125.04" x2="508.11" y2="125.04"/>
 		
@@ -69,17 +69,25 @@
 		
 			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-miterlimit="1" x1="164.172" y1="243.459" x2="508.11" y2="243.459"/>
 		<rect x="549.555" y="75.423" fill="none" width="17.379" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 549.5518 81.8374)" font-size="9">time</text>
+		<text transform="matrix(0.9288 0 0 1 549.5518 81.8335)" font-size="9">time</text>
 		
-			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="176.397" y1="98.319" x2="176.397" y2="252.479"/>
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3,4" x1="176.397" y1="98.319" x2="176.397" y2="252.479"/>
 		
-			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="226.896" y1="98.319" x2="226.896" y2="220.617"/>
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3,4" x1="226.896" y1="98.319" x2="226.896" y2="220.617"/>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" x1="263.737" y1="71.89" x2="263.737" y2="73.39"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="2.9392,3.9189" x1="263.737" y1="77.309" x2="263.737" y2="239.943"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" x1="263.737" y1="241.902" x2="263.737" y2="243.402"/>
+			</g>
+		</g>
 		
-			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="263.737" y1="71.89" x2="263.737" y2="243.402"/>
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3,4" x1="382.397" y1="90.86" x2="382.397" y2="221.791"/>
 		
-			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="382.397" y1="90.86" x2="382.397" y2="221.791"/>
-		
-			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="464.023" y1="71.89" x2="464.023" y2="243.402"/>
+			<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3,4" x1="464.023" y1="71.89" x2="464.023" y2="243.402"/>
 		<g>
 			<g>
 				
@@ -99,7 +107,7 @@
 			<line fill="none" stroke="#005695" stroke-width="6" stroke-linecap="round" stroke-miterlimit="1" x1="226.896" y1="205.559" x2="383.116" y2="205.559"/>
 		
 			<line fill="none" stroke="#005695" stroke-width="6" stroke-linecap="round" stroke-miterlimit="1" x1="263.737" y1="243.459" x2="464.023" y2="243.459"/>
-		<text transform="matrix(0.9288 0 0 1 30.8589 127.4556)"><tspan x="0" y="0" font-size="9">Acquisition DateTime (0008,002A)</tspan><tspan x="-17.002" y="26.8" font-size="9">Contrast/Bolus Start Time (0018,1042)</tspan><tspan x="-16.51" y="53.6" font-size="9">Contrast/Bolus Stop Time (0018,1043)</tspan><tspan x="34.005" y="80.4" font-size="9">Injection of contrast agent</tspan><tspan x="-6.003" y="91.201" font-size="9">Contrast Flow Duration (0018,1047)</tspan><tspan x="-2.509" y="118" font-size="9">Contrast agent visible on the pixels</tspan></text>
+		<text transform="matrix(0.9288 0 0 1 30.8589 127.4517)"><tspan x="0" y="0" font-size="9">Acquisition DateTime (0008,002A)</tspan><tspan x="-17.002" y="26.8" font-size="9">Contrast/Bolus Start Time (0018,1042)</tspan><tspan x="-16.51" y="53.6" font-size="9">Contrast/Bolus Stop Time (0018,1043)</tspan><tspan x="34.005" y="80.4" font-size="9">Injection of contrast agent</tspan><tspan x="-6.003" y="91.201" font-size="9">Contrast Flow Duration (0018,1047)</tspan><tspan x="-2.509" y="118" font-size="9">Contrast agent visible on the pixels</tspan></text>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#ED1C24" d="M252.625,79c1.112-0.422,2.204-0.914,3.342-1.251
 			c2.089-0.62,4.228-1.073,6.301-1.737c1.805-0.577,3.594-1.249,5.304-2.06c1.896-0.898,3.257-2.477,4.184-4.312
 			c1.703-3.374,3.324-6.793,4.842-10.254c0.616-1.406,0.876-2.97,1.294-4.463c0.547-1.951,1.036-3.919,1.649-5.849
@@ -123,15 +131,13 @@
 			<text transform="matrix(0.9288 0 0 1 128.6162 19.5312)"><tspan x="0" y="0" font-size="7">Contrast/bolus intensity </tspan><tspan x="-0.004" y="8.4" font-size="7">visible on the pixel data</tspan></text>
 		</g>
 		<g>
-			<rect x="276.463" y="233.07" fill="none" width="103.562" height="6.916"/>
-			<text transform="matrix(0.9288 0 0 1 277.8271 238.083)" font-size="7">Contrast agent visible on the pixels</text>
+			<rect x="268.183" y="232.35" fill="none" width="103.561" height="6.916"/>
+			<text transform="matrix(0.9288 0 0 1 269.5474 237.3623)" font-size="7">Contrast agent visible on the pixels</text>
 		</g>
+		<rect x="228.396" y="192.796" fill="#F5EED6" width="79.062" height="8.256"/>
 		<g>
-			<rect x="233.986" y="194.318" fill="#F5EED6" width="83" height="8.256"/>
-			<g>
-				<rect x="234.312" y="195.594" fill="none" width="82.352" height="6.98"/>
-				<text transform="matrix(0.9288 0 0 1 238.2598 200.6016)" font-size="7">Injection of contrast agent</text>
-			</g>
+			<rect x="228.396" y="193.432" fill="none" width="79.064" height="6.98"/>
+			<text transform="matrix(0.9288 0 0 1 230.7007 198.4424)" font-size="7">Injection of contrast agent</text>
 		</g>
 		<g>
 			<rect x="496.101" y="67.859" fill="none" width="38.125" height="29.981"/>

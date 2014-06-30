@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.8" version="5.0" xml:id="PS3.8">
   <title>PS3.8</title>
-  <subtitle>DICOM PS3.8 2013 - Network Communication Support for Message Exchange</subtitle>
+  <subtitle>DICOM PS3.8 2014a - Network Communication Support for Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1247,6 +1247,11 @@
 </section>
 </chapter>
 
+  <chapter label="8" status="1" xml:id="chapter_8">
+    <title>DICOM OSI Upper Layer Profile</title>
+    <para>Retired. See PS 3.8 2001.</para>
+  </chapter>
+  
   <chapter label="9" status="1" xml:id="chapter_9">
     <title>DICOM Upper Layer Protocol for TCP/IP</title>
   

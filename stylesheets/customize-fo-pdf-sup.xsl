@@ -389,5 +389,93 @@
   </fo:block>
 </xsl:template>
 
+<!-- DAC. This template from fo/xep.xsl needs to be patched so as not to include both label and title in pdf title metainformation-->
+
+<xsl:template name="xep-document-information">
+  <rx:meta-info>
+    <xsl:variable name="authors" 
+                  select="(//d:author|//d:editor|//d:corpauthor|//d:authorgroup)[1]"/>
+    <xsl:if test="$authors">
+      <xsl:variable name="author">
+        <xsl:choose>
+          <xsl:when test="$authors[self::d:authorgroup]">
+            <xsl:call-template name="person.name.list">
+              <xsl:with-param name="person.list" 
+                        select="$authors/*[self::d:author|self::d:corpauthor|
+                               self::d:othercredit|self::d:editor]"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:when test="$authors[self::d:corpauthor]">
+            <xsl:value-of select="$authors"/>
+          </xsl:when>
+          <xsl:when test="$authors[d:orgname]">
+            <xsl:value-of select="$authors/d:orgname"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="person.name">
+              <xsl:with-param name="node" select="$authors"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:element name="rx:meta-field">
+        <xsl:attribute name="name">author</xsl:attribute>
+        <xsl:attribute name="value">
+          <xsl:value-of select="normalize-space($author)"/>
+        </xsl:attribute>
+      </xsl:element>
+    </xsl:if>
+
+    <xsl:variable name="title">
+      <!--<xsl:apply-templates select="/*[1]" mode="label.markup"/>-->	<!-- DAC. e.g., do not want "PS3.3PS3.3" -->
+      <xsl:apply-templates select="/*[1]" mode="title.markup"/>
+    </xsl:variable>
+
+    <xsl:element name="rx:meta-field">
+      <xsl:attribute name="name">creator</xsl:attribute>
+      <xsl:attribute name="value">
+        <xsl:text>DocBook </xsl:text>
+        <xsl:value-of select="$DistroTitle"/>
+        <xsl:text> V</xsl:text>
+        <xsl:value-of select="$VERSION"/>
+      </xsl:attribute>
+    </xsl:element>
+
+    <xsl:element name="rx:meta-field">
+      <xsl:attribute name="name">title</xsl:attribute>
+      <xsl:attribute name="value">
+        <xsl:value-of select="normalize-space($title)"/>
+      </xsl:attribute>
+    </xsl:element>
+
+    <xsl:if test="//d:keyword">
+      <xsl:element name="rx:meta-field">
+        <xsl:attribute name="name">keywords</xsl:attribute>
+        <xsl:attribute name="value">
+          <xsl:for-each select="//d:keyword">
+            <xsl:value-of select="normalize-space(.)"/>
+            <xsl:if test="position() != last()">
+              <xsl:text>, </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:attribute>
+      </xsl:element>
+    </xsl:if>
+
+    <xsl:if test="//d:subjectterm">
+      <xsl:element name="rx:meta-field">
+        <xsl:attribute name="name">subject</xsl:attribute>
+        <xsl:attribute name="value">
+          <xsl:for-each select="//d:subjectterm">
+            <xsl:value-of select="normalize-space(.)"/>
+            <xsl:if test="position() != last()">
+              <xsl:text>, </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:attribute>
+      </xsl:element>
+    </xsl:if>
+  </rx:meta-info>
+</xsl:template>
 
 </xsl:stylesheet>

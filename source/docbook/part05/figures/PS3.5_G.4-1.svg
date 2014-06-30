@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="495.084px" height="133.883px" viewBox="0 0 495.084 133.883" enable-background="new 0 0 495.084 133.883"
-	 xml:space="preserve">
+	 width="502px" height="137px" viewBox="0 0 502 137" enable-background="new 0 0 502 137" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -16,57 +14,53 @@
 
 <g>
    <desc>
-	PS 3.5-2008 5: Data Structures and Encoding
+	PS3.5 Part 5: Data Structures and Encoding
    </desc>
-   <title>
-	Figure G.4-1 Organization of RLE Compressed Frame
-   </title>
 </g>
 
-<symbol  id="Background_Bounding_Box" viewBox="-247.542 -249.875 495.085 499.749">
-	<polygon fill="#F4EED7" points="247.542,-249.875 -247.542,-249.875 -247.542,249.874 247.542,249.874 	"/>
-</symbol>
-<use xlink:href="#Background_Bounding_Box"  width="495.085" height="499.749" x="-247.542" y="-249.875" transform="matrix(1 0 0 -0.2679 247.5425 66.9414)" overflow="visible"/>
 <g>
-	<rect x="195.153" y="92.952" fill="#CCDFF0" width="104.781" height="13.03"/>
-	<rect x="194.961" y="80.427" fill="#CCDFF0" width="104.973" height="13.03"/>
-	<rect x="194.961" y="106.486" fill="#CCDFF0" width="104.973" height="13.031"/>
-	<rect x="195.153" y="27.396" fill="#CCDFF0" width="104.974" height="13.03"/>
-	<rect x="195.153" y="14.366" fill="#B2CEE7" width="104.781" height="13.03"/>
-	<rect x="195.153" y="53.457" fill="#CCDFF0" width="104.974" height="13.029"/>
-	<rect x="195.153" y="40.427" fill="#CCDFF0" width="104.781" height="13.03"/>
-	<rect x="195.153" y="66.486" fill="#CCDFF0" width="104.781" height="13.031"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="135"/>
 	<g>
-		<text transform="matrix(0.8815 0 0 1 230.4771 25.0664)" font-size="10">HEADER</text>
+		<rect x="198.61" y="94.511" fill="#CCDEF0" width="104.781" height="13.03"/>
+		<rect x="198.417" y="81.985" fill="#CCDEF0" width="104.974" height="13.03"/>
+		<rect x="198.417" y="108.045" fill="#CCDEF0" width="104.974" height="13.031"/>
+		<rect x="198.61" y="28.955" fill="#CCDEF0" width="104.974" height="13.03"/>
+		<rect x="198.61" y="15.925" fill="#B2CEE7" width="104.781" height="13.03"/>
+		<rect x="198.61" y="55.016" fill="#CCDEF0" width="104.974" height="13.029"/>
+		<rect x="198.61" y="41.985" fill="#CCDEF0" width="104.781" height="13.03"/>
+		<rect x="198.61" y="68.045" fill="#CCDEF0" width="104.781" height="13.031"/>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 233.9331 26.625)" font-size="10">HEADER</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 221.186 39.5361)" font-size="10">RLE Segment 1</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 221.186 52.6177)" font-size="10">RLE Segment 2</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 221.186 65.4062)" font-size="10">RLE Segment 3</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 248.6284 78.6777)" font-size="10">...</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 248.6284 91.9512)" font-size="10">...</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 250.3359 103.9922)" font-size="10">...</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 222.1611 117.2637)" font-size="10">RLE Segment N</text>
+		</g>
+		<rect x="198.61" y="15.925" fill="none" stroke="#010101" stroke-miterlimit="1" width="104.781" height="104.782"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="107.609" x2="303.391" y2="107.609"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="94.512" x2="303.391" y2="94.512"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="81.414" x2="303.391" y2="81.414"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="68.316" x2="303.391" y2="68.316"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="55.218" x2="303.391" y2="55.218"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="42.12" x2="303.391" y2="42.12"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="198.61" y1="29.022" x2="303.391" y2="29.022"/>
 	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 217.73 37.9775)" font-size="10">RLE Segment 1</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 217.73 51.0591)" font-size="10">RLE Segment 2</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 217.73 63.8477)" font-size="10">RLE Segment 3</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 245.1724 77.1191)" font-size="10">...</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 245.1724 90.3926)" font-size="10">...</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 246.8799 102.4336)" font-size="10">...</text>
-	</g>
-	<g>
-		<text transform="matrix(0.8815 0 0 1 218.7051 115.7051)" font-size="10">RLE Segment N</text>
-	</g>
-	<rect x="195.153" y="14.366" fill="none" stroke="#010101" stroke-miterlimit="1" width="104.781" height="104.782"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="106.051" x2="299.934" y2="106.051"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="92.953" x2="299.934" y2="92.953"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="79.855" x2="299.934" y2="79.855"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="66.758" x2="299.934" y2="66.758"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="53.659" x2="299.934" y2="53.659"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="40.562" x2="299.934" y2="40.562"/>
-	<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="195.153" y1="27.464" x2="299.934" y2="27.464"/>
 </g>
 </svg>

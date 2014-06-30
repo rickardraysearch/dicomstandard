@@ -16,7 +16,7 @@
 	<xsl:param name="body.font.master" select="9"/>
 
 	<xsl:param name="draft.mode" select="'no'"/>
-	<!-- <xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl/current/images/draft.png'"/> -->	<!-- uses rewrite rule in catalog.xml to find it -->
+	<xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl/current/images/draft.png'"/>	<!-- uses rewrite rule in catalog.xml to find it -->
 	
 	<xsl:param name="xref.with.number.and.title" select="'1'"/>
 	<xsl:param name="glossentry.show.acronym" select="'yes'"/>

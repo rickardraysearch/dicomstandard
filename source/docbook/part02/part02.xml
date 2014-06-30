@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2013 - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2014a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2013</year>
+      <year>2014</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1909,6 +1909,28 @@
             <td align="left" colspan="1" rowspan="1">
               <para>Transfer</para>
             </td>
+          </tr>       
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.4</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Presentation</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.13.1.5</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Breast Projection X-Ray Image Storage - For Processing</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Transfer</para>
+            </td>
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
@@ -2400,6 +2422,17 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>X-Ray Radiation Dose SR</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.88.68</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Radiopharmaceutical Radiation Dose SR</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>Transfer</para>
@@ -3212,56 +3245,159 @@
       <section label="A.3.4" xml:id="sect_A.3.4">
         <title>Terms and Definitions</title>
         <para>Terms and definitions should be listed here. The following example may be used as a template:</para>
-        <para>Informal definitions are provided for the following terms used in this Conformance Statement. The DICOM Standard is the authoritative source for formal definitions of these terms.</para>
-        <para><emphasis role="bold">Abstract Syntax</emphasis>: the information agreed to be exchanged between applications, generally equivalent to a Service/Object Pair (SOP) Class. Examples : Verification SOP Class, Modality Worklist Information Model Find SOP Class, Computed Radiography Image Storage SOP Class.</para>
-        <para><emphasis role="bold">Application Entity (AE)</emphasis>: an end point of a DICOM information exchange, including the DICOM network or media interface software; i.e., the software that sends or receives DICOM information objects or messages. A single device may have multiple Application Entities.</para>
-        <para><emphasis role="bold">Application Entity Title</emphasis>: the externally known name of an
-  <emphasis role="italic">Application Entity</emphasis>, used to identify a DICOM application to other DICOM applications on the network.</para>
-        <para><emphasis role="bold">Application Context</emphasis>: the specification of the type of communication used between
-  <emphasis role="italic">Application Entities</emphasis>. Example: DICOM network protocol.</para>
-        <para><emphasis role="bold">Association</emphasis>: a network communication channel set up between
-  <emphasis role="italic">Application Entities</emphasis>.</para>
-        <para><emphasis role="bold">Attribute</emphasis>: - a unit of information in an object definition; a data element identified by a
-  <emphasis role="italic">tag</emphasis>. The information may be a complex data structure (Sequence), itself composed of lower level data elements. Examples: Patient ID (0010,0020), Accession Number (0008,0050), Photometric Interpretation (0028,0004), Procedure Code Sequence (0008,1032).</para>
-        <para><emphasis role="bold">Information Object Definition (IOD)</emphasis>: the specified set of
-  <emphasis role="italic">Attributes</emphasis>that comprise a type of data object; does not represent a specific instance of the data object, but rather a class of similar data objects that have the same properties. The
-  <emphasis role="italic">Attributes</emphasis>may be specified as Mandatory (Type 1), Required but possibly unknown (Type 2), or Optional (Type 3), and there may be conditions associated with the use of an Attribute (Types 1C and 2C). Examples: MR Image IOD, CT Image IOD, Print Job IOD.</para>
-        <para><emphasis role="bold">Joint Photographic Experts Group (JPEG) -</emphasis>a set of standardized image compression techniques, available for use by DICOM applications.</para>
-        <para><emphasis role="bold">Media Application Profile</emphasis>: the specification of DICOM information objects and encoding exchanged on removable media (e.g., CDs)</para>
-        <para><emphasis role="bold">Module</emphasis>: a set of
-  <emphasis role="italic">Attributes</emphasis>within an
-  <emphasis role="italic">Information Object Definition</emphasis>that are logically related to each other. Example: Patient Module includes Patient Name, Patient ID, Patient Birth Date, and Patient Sex.</para>
-        <para><emphasis role="bold">Negotiation</emphasis>: first phase of
-  <emphasis role="italic">Association</emphasis>establishment that allows
-  <emphasis role="italic">Application Entities</emphasis>to agree on the types of data to be exchanged and how that data will be encoded.</para>
-        <para><emphasis role="bold">Presentation Context</emphasis>: the set of DICOM network services used over an
-  <emphasis role="italic">Association</emphasis>, as negotiated between
-  <emphasis role="italic">Application Entities</emphasis>; includes
-  <emphasis role="italic">Abstract Syntaxes</emphasis>and
-  <emphasis role="italic">Transfer Syntaxes</emphasis>.</para>
-        <para><emphasis role="bold">Protocol Data Unit (PDU)</emphasis>: a packet (piece) of a DICOM message sent across the network. Devices must specify the maximum size packet they can receive for DICOM messages.</para>
-        <para><emphasis role="bold">Security Profile</emphasis>: a set of mechanisms, such as encryption, user authentication, or digital signatures, used by an
-  <emphasis role="italic">Application Entity</emphasis>to ensure confidentiality, integrity, and/or availability of exchanged DICOM data</para>
-        <para><emphasis role="bold">Service Class Provider (SCP)</emphasis>: role of an
-  <emphasis role="italic">Application Entity</emphasis>that provides a DICOM network service; typically, a server that performs operations requested by another
-  <emphasis role="italic">Application Entity</emphasis>(
-  <emphasis role="italic">Service Class User</emphasis>). Examples: Picture Archiving and Communication System (image storage SCP, and image query/retrieve SCP), Radiology Information System (modality worklist SCP).</para>
-        <para><emphasis role="bold">Service Class User (SCU)</emphasis>: role of an
-  <emphasis role="italic">Application Entity</emphasis>that uses a DICOM network service; typically, a client. Examples: imaging modality (image storage SCU, and modality worklist SCU), imaging workstation (image query/retrieve SCU)</para>
-        <para><emphasis role="bold">Service/Object Pair (SOP) Class</emphasis>: the specification of the network or media transfer (service) of a particular type of data (object); the fundamental unit of DICOM interoperability specification. Examples: Ultrasound Image Storage Service, Basic Grayscale Print Management.</para>
-        <para><emphasis role="bold">Service/Object Pair (SOP) Instance</emphasis>: an information object; a specific occurrence of information exchanged in a
-  <emphasis role="italic">SOP Class</emphasis>. Examples: a specific x-ray image.</para>
-        <para><emphasis role="bold">Tag</emphasis>: a 32-bit identifier for a data element, represented as a pair of four digit hexadecimal numbers, the "group" and the "element". If the "group" number is odd, the tag is for a private (manufacturer-specific) data element. Examples: (0010,0020) [Patient ID], (07FE,0010) [Pixel Data], (0019,0210) [private data element]</para>
-        <para><emphasis role="bold">Transfer Syntax</emphasis>: the encoding used for exchange of DICOM information objects and messages. Examples:
-  <emphasis role="italic">JPEG</emphasis>compressed (images), little endian explicit value representation.</para>
-        <para><emphasis role="bold">Unique Identifier (UID)</emphasis>: a globally unique "dotted decimal" string that identifies a specific object or a class of objects; an ISO-8824 Object Identifier. Examples: Study Instance UID, SOP Class UID, SOP Instance UID.</para>
-        <para><emphasis role="bold">Value Representation (VR)</emphasis>: the format type of an individual DICOM data element, such as text, an integer, a person's name, or a code. DICOM information objects can be transmitted with either explicit identification of the type of each data element (Explicit VR), or without explicit identification (Implicit VR); with Implicit VR, the receiving application must use a DICOM data dictionary to look up the format of each data element.</para>
+        <glossary>
+          <title/>
+          <para>Informal definitions are provided for the following terms used in this Conformance Statement. The DICOM Standard is the authoritative source for formal definitions of these terms.</para>
+          <glossentry>
+            <glossterm>Abstract Syntax</glossterm>
+            <glossdef>
+              <para>The information agreed to be exchanged between applications, generally equivalent to a Service/Object Pair (SOP) Class. Examples: Verification SOP Class, Modality Worklist Information Model Find SOP Class, Computed Radiography Image Storage SOP Class.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Application Entity</glossterm>
+            <acronym>AE</acronym>
+            <glossdef>
+              <para>An end point of a DICOM information exchange, including the DICOM network or media interface software; i.e., the software that sends or receives DICOM information objects or messages. A single device may have multiple Application Entities.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Application Entity Title</glossterm>
+            <acronym>AET</acronym>
+            <glossdef>
+              <para>The externally known name of an <emphasis role="italic">Application Entity</emphasis>, used to identify a DICOM application to other DICOM applications on the network.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Application Context</glossterm>
+            <glossdef>
+              <para>The specification of the type of communication used between <emphasis role="italic">Application Entities</emphasis>. Example: DICOM network protocol.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Association</glossterm>
+            <glossdef>
+              <para>A network communication channel set up between <emphasis role="italic">Application Entities</emphasis>.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Attribute</glossterm>
+            <glossdef>
+              <para>A unit of information in an object definition; a data element identified by a <emphasis role="italic">tag</emphasis>. The information may be a complex data structure (Sequence), itself composed of lower level data elements. Examples: Patient ID (0010,0020), Accession Number (0008,0050), Photometric Interpretation (0028,0004), Procedure Code Sequence (0008,1032).</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Information Object Definition </glossterm>
+            <acronym>IOD</acronym>
+            <glossdef>
+              <para>The specified set of <emphasis role="italic">Attributes</emphasis> that comprise a type of data object; does not represent a specific instance of the data object, but rather a class of similar data objects that have the same properties. The <emphasis role="italic">Attributes</emphasis> may be specified as Mandatory (Type 1), Required but possibly unknown (Type 2), or Optional (Type 3), and there may be conditions associated with the use of an Attribute (Types 1C and 2C). Examples: MR Image IOD, CT Image IOD, Print Job IOD.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Joint Photographic Experts Group</glossterm>
+            <acronym>JPEG</acronym>
+            <glossdef>
+              <para>A set of standardized image compression techniques, available for use by DICOM applications.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Media Application Profile</glossterm>
+            <glossdef>
+              <para>The specification of DICOM information objects and encoding exchanged on removable media (e.g., CDs)</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Module</glossterm>
+            <glossdef>
+              <para>A set of <emphasis role="italic">Attributes</emphasis> within an <emphasis role="italic">Information Object Definition</emphasis> that are logically related to each other. Example: Patient Module includes Patient Name, Patient ID, Patient Birth Date, and Patient Sex.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Negotiation</glossterm>
+            <glossdef>
+              <para>First phase of <emphasis role="italic">Association</emphasis> establishment that allows <emphasis role="italic">Application Entities</emphasis> to agree on the types of data to be exchanged and how that data will be encoded.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Presentation Context</glossterm>
+            <glossdef>
+              <para>The set of DICOM network services used over an <emphasis role="italic">Association</emphasis>, as negotiated between <emphasis role="italic">Application Entities</emphasis>; includes <emphasis role="italic">Abstract Syntaxes</emphasis> and <emphasis role="italic">Transfer Syntaxes</emphasis>.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Protocol Data Unit</glossterm>
+            <acronym>PDU</acronym>
+            <glossdef>
+              <para>A packet (piece) of a DICOM message sent across the network. Devices must specify the maximum size packet they can receive for DICOM messages.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Security Profile</glossterm>
+            <glossdef>
+              <para>A set of mechanisms, such as encryption, user authentication, or digital signatures, used by an <emphasis role="italic">Application Entity</emphasis> to ensure confidentiality, integrity, and/or availability of exchanged DICOM data</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Service Class Provider</glossterm>
+            <acronym>SCP</acronym>
+            <glossdef>
+              <para>Role of an <emphasis role="italic">Application Entity</emphasis> that provides a DICOM network service; typically, a server that performs operations requested by another <emphasis role="italic">Application Entity</emphasis> (<emphasis role="italic">Service Class User</emphasis>). Examples: Picture Archiving and Communication System (image storage SCP, and image query/retrieve SCP), Radiology Information System (modality worklist SCP).</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Service Class User</glossterm>
+            <acronym>SCU</acronym>
+            <glossdef>
+              <para>Role of an <emphasis role="italic">Application Entity</emphasis> that uses a DICOM network service; typically, a client. Examples: imaging modality (image storage SCU, and modality worklist SCU), imaging workstation (image query/retrieve SCU)</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Service/Object Pair Class</glossterm>
+            <acronym>SOP Class</acronym>
+            <glossdef>
+              <para>The specification of the network or media transfer (service) of a particular type of data (object); the fundamental unit of DICOM interoperability specification. Examples: Ultrasound Image Storage Service, Basic Grayscale Print Management.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Service/Object Pair Instance</glossterm>
+            <acronym>SOP Instance</acronym>
+            <glossdef>
+              <para>An information object; a specific occurrence of information exchanged in a <emphasis role="italic">SOP Class</emphasis>. Examples: a specific x-ray image.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Tag</glossterm>
+            <glossdef>
+              <para>A 32-bit identifier for a data element, represented as a pair of four digit hexadecimal numbers, the "group" and the "element". If the "group" number is odd, the tag is for a private (manufacturer-specific) data element. Examples: (0010,0020) [Patient ID], (07FE,0010) [Pixel Data], (0019,0210) [private data element]</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Transfer Syntax</glossterm>
+            <glossdef>
+              <para>The encoding used for exchange of DICOM information objects and messages. Examples: <emphasis role="italic">JPEG</emphasis> compressed (images), little endian explicit value representation.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Unique Identifier</glossterm>
+            <acronym>UID</acronym>
+            <glossdef>
+              <para>A globally unique "dotted decimal" string that identifies a specific object or a class of objects; an ISO-8824 Object Identifier. Examples: Study Instance UID, SOP Class UID, SOP Instance UID.</para>
+            </glossdef>
+          </glossentry>
+          <glossentry>
+            <glossterm>Value Representation</glossterm>
+            <acronym>VR</acronym>
+            <glossdef>
+              <para>The format type of an individual DICOM data element, such as text, an integer, a person's name, or a code. DICOM information objects can be transmitted with either explicit identification of the type of each data element (Explicit VR), or without explicit identification (Implicit VR); with Implicit VR, the receiving application must use a DICOM data dictionary to look up the format of each data element.</para>
+            </glossdef>
+          </glossentry>
+        </glossary>
       </section>
       <section label="A.3.5" xml:id="sect_A.3.5">
         <title>Basics of DICOM Communication</title>
         <para>A layman's introduction to DICOM may be included here. The following example may be used as a template:</para>
         <para>This section describes terminology used in this Conformance Statement for the non-specialist. The key terms used in the Conformance Statement are highlighted in
-  <emphasis role="italic">italics</emphasis>below. This section is not a substitute for training about DICOM, and it makes many simplifications about the meanings of DICOM terms.</para>
+  <emphasis role="italic">italics</emphasis> below. This section is not a substitute for training about DICOM, and it makes many simplifications about the meanings of DICOM terms.</para>
         <para>Two
   <emphasis role="italic">Application Entities</emphasis> (devices) that want to communicate with each other over a network using DICOM protocol must first agree on several things during an initial network "handshake". One of the two devices must initiate an
   <emphasis role="italic">Association</emphasis> (a connection to the other device), and ask if specific services, information, and encoding can be supported by the other device (<emphasis role="italic">Negotiation</emphasis>).</para>
