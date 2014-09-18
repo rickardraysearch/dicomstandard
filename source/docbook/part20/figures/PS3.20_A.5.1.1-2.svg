@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="347px" viewBox="0 0 702 347" enable-background="new 0 0 702 347" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="345"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="197.132" y1="84.192" x2="197.132" y2="125.504"/>
+				<g>
+					<polygon points="195.04,124.078 197.132,131.883 199.224,124.078 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="351.363" y1="49.859" x2="351.363" y2="102.099"/>
+				<g>
+					<polygon points="349.271,100.672 351.363,108.478 353.455,100.672 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="173.602" y1="49.859" x2="173.602" y2="125.504"/>
+				<g>
+					<polygon points="171.51,124.078 173.602,131.883 175.694,124.078 					"/>
+				</g>
+			</g>
+		</g>
+		
+			<rect x="161.399" y="23.548" fill="#E2E3E4" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="146.117" height="26.311"/>
+		<rect x="162.991" y="19.971" fill="#FFFFFF" width="131.312" height="5.722"/>
+		
+			<rect x="339.16" y="23.548" fill="#E2E3E4" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="190.969" height="26.311"/>
+		<rect x="340.751" y="19.971" fill="#FFFFFF" width="101.311" height="5.722"/>
+		
+			<rect x="184.929" y="65.147" fill="#E2E3E4" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="133.617" height="19.045"/>
+		<rect x="186.521" y="61.57" fill="#FFFFFF" width="118.812" height="5.722"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M335.867,303.394H169.849l-8.45-8.684l8.45-8.693h166.018V303.394z"/>
+		
+			<path fill="#78FFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M461.604,282.097h113.363l6.316,12.659l-6.316,12.652H461.604V282.097z"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M161.399,209.466h166.212l8.256,8.684l-8.256,8.691H161.399V209.466z"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M161.399,131.883h166.018l8.45,8.684l-8.45,8.692H161.399V131.883z"/>
+		
+			<rect x="14.716" y="109.278" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="146.683" height="217.751"/>
+		
+			<rect x="335.867" y="108.723" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="125.443" height="63.697"/>
+		
+			<rect x="335.867" y="193.493" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="125.443" height="49.32"/>
+		
+			<rect x="335.867" y="262.822" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="125.443" height="63.766"/>
+		
+			<rect x="581.283" y="278.687" fill="#FFFFC8" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="106" height="32.037"/>
+		<rect x="17.216" y="120.729" fill="none" width="137.552" height="88.362"/>
+		<text transform="matrix(1 0 0 1 17.2168 125.022)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DOCCLIN</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: II [1..1]</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= DocumentType</tspan><tspan x="0" y="28.8" font-size="6">title: ST [0..1]</tspan><tspan x="0" y="36" font-size="6">effectiveTime*: TS [1..1]</tspan><tspan x="0" y="43.2" font-size="6">confidentialityCode*: CE CWE [1..1]</tspan><tspan x="0" y="50.4" font-size="6"> &lt;= x_BasicConfidentialityKind</tspan><tspan x="0" y="57.599" font-size="6">languageCode: CS CNE [0..1] &lt;= HumanLanguage</tspan><tspan x="0" y="64.8" font-size="6">setId: II [0..1]</tspan><tspan x="0" y="72" font-size="6">versionNumber: INT [0..1]</tspan><tspan x="0" y="79.201" font-size="6">copyTime: TS [0..1] (Deprecated)</tspan></text>
+		<rect x="163.899" y="20.64" fill="none" width="142.333" height="30.631"/>
+		<text transform="matrix(1 0 0 1 163.8989 24.9331)"><tspan x="0" y="0" font-size="6">Constraint: relatedDocument actRelationship</tspan><tspan x="0" y="7.2" font-size="6">If the CDA document has been transformed from an </tspan><tspan x="0" y="14.4" font-size="6">original DICOM SR document, the relatedDocument </tspan><tspan x="0" y="21.6" font-size="6">ActRelationship shall be mandatory.</tspan></text>
+		<rect x="341.66" y="20.64" fill="none" width="188.469" height="30.631"/>
+		<text transform="matrix(1 0 0 1 341.6597 24.9331)"><tspan x="0" y="0" font-size="6">Constraint: ParentDocument.text</tspan><tspan x="0" y="7.2" font-size="6">ParentDocument.text can be used to indicate the MIME type of the </tspan><tspan x="0" y="14.4" font-size="6">related document. It is not to be used to embed the related document, </tspan><tspan x="0" y="21.6" font-size="6">and thus ParentDocument.text.BIN is precluded from use.</tspan></text>
+		<rect x="187.429" y="62.239" fill="none" width="130.938" height="23.366"/>
+		<text transform="matrix(1 0 0 1 187.4287 66.5322)"><tspan x="0" y="0" font-size="6">Constraint: relatedDocument.typeCode</tspan><tspan x="0" y="7.2" font-size="6">A conformant CDA document can have a single</tspan><tspan x="0" y="14.4" font-size="6">relatedDocument with typeCode &quot;XFRM&quot;.</tspan></text>
+		<rect x="338.367" y="274.272" fill="none" width="122.943" height="52.315"/>
+		<text transform="matrix(1 0 0 1 338.3672 278.5664)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ENC</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id: SET&lt;II&gt; [0..*]</tspan><tspan x="0" y="21.6" font-size="6">code: CE CWE [0..1] &lt;= ActEncounterCode</tspan><tspan x="0" y="28.8" font-size="6">effectiveTime*: IVL&lt;TS&gt; [1..1]</tspan><tspan x="0" y="36" font-size="6">dischargeDispositionCode: CE CWE [0..1]</tspan><tspan x="0" y="43.2" font-size="6"> &lt;= EncounterDischargeDisposition</tspan></text>
+		<rect x="338.367" y="204.943" fill="none" width="122.943" height="37.87"/>
+		<text transform="matrix(1 0 0 1 338.3672 209.2373)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ACT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= RQO</tspan><tspan x="0" y="14.4" font-size="6">id*: SET&lt;II&gt; [1..*]</tspan><tspan x="0" y="21.6" font-size="6">code: CE CWE [0..1] &lt;= ActCode</tspan><tspan x="0" y="28.8" font-size="6">priorityCode: CE CWE [0..1] &lt;= ActPriority</tspan></text>
+		<rect x="338.367" y="120.173" fill="none" width="122.943" height="52.247"/>
+		<text transform="matrix(1 0 0 1 338.3672 124.4668)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DOCCLIN</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: SET&lt;II&gt; [1..*]</tspan><tspan x="0" y="21.6" font-size="6">code*: CD CWE [1..1] &lt;= DocumentType</tspan><tspan x="0" y="28.8" font-size="6">text: ED [0..1]</tspan><tspan x="0" y="36" font-size="6">setId: II [0..1]</tspan><tspan x="0" y="43.2" font-size="6">versionNumber: INT [0..1]</tspan></text>
+		<rect x="464.104" y="293.096" fill="none" width="104.498" height="15.952"/>
+		<text transform="matrix(1 0 0 1 464.1035 297.3887)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= x_EncounterParticipant</tspan><tspan x="0" y="7.201" font-size="6">time: IVL&lt;TS&gt; [0..1]</tspan></text>
+		<rect x="521.322" y="275.591" fill="none" width="50.332" height="8.446"/>
+		<text transform="matrix(1 0 0 1 521.3223 279.8848)" font-size="6">0..* assignedEntity</text>
+		<rect x="266.166" y="125.263" fill="none" width="61.702" height="7.296"/>
+		<text transform="matrix(1 0 0 1 266.1655 129.5566)" font-size="6">1..1 parentDocument  *</text>
+		<rect x="163.899" y="142.567" fill="none" width="118.921" height="8.442"/>
+		<text transform="matrix(1 0 0 1 163.8989 146.8604)" font-size="6">typeCode*: &lt;= x_ActRelationshipDocument</text>
+		<rect x="301.378" y="203.263" fill="none" width="26.489" height="7.296"/>
+		<text transform="matrix(1 0 0 1 301.3784 207.5566)" font-size="6">0..* order</text>
+		<rect x="163.899" y="220.566" fill="none" width="60.152" height="8.442"/>
+		<text transform="matrix(1 0 0 1 163.8989 224.8604)" font-size="6">typeCode*: &lt;= FLFS</text>
+		<rect x="254.628" y="279.388" fill="none" width="80.739" height="7.296"/>
+		<text transform="matrix(1 0 0 1 254.6284 283.6816)" font-size="6">0..1 encompassingEncounter  </text>
+		<rect x="171.399" y="296.691" fill="none" width="60.421" height="8.442"/>
+		<text transform="matrix(1 0 0 1 171.3989 300.9844)" font-size="6">typeCode*: &lt;= COMP</text>
+		<rect x="583.783" y="290.889" fill="none" width="84.631" height="16.035"/>
+		<text transform="matrix(1 0 0 1 583.7832 295.1826)"><tspan x="0" y="0" font-size="6">0..1 representedOrganization</tspan><tspan x="0" y="7.2" font-size="6">0..1 assignedPerson</tspan></text>
+		<g>
+			<rect x="17.216" y="111.778" fill="none" width="137.552" height="7.772"/>
+			<text transform="matrix(1 0 0 1 17.2158 116.7876)" font-size="7">ClinicalDocument</text>
+			<rect x="338.367" y="111.223" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 338.3672 116.2319)" font-size="7">ParentDocument</text>
+			<rect x="338.367" y="265.322" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 338.3672 270.332)" font-size="7">EncompassingEncounter</text>
+			<rect x="338.367" y="195.993" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 338.3672 201.002)" font-size="7">Order</text>
+			<rect x="464.104" y="283.394" fill="none" width="105.055" height="9.589"/>
+			<text transform="matrix(1 0 0 1 464.1035 288.4023)" font-size="7">encounterParticipant</text>
+			<rect x="163.899" y="132.865" fill="none" width="59.853" height="7.639"/>
+			<text transform="matrix(1 0 0 1 163.8989 137.874)" font-size="7">relatedDocument</text>
+			<rect x="163.899" y="210.864" fill="none" width="60.227" height="7.639"/>
+			<text transform="matrix(1 0 0 1 163.8989 215.874)" font-size="7">InFullfillmentOf</text>
+			<rect x="171.399" y="286.989" fill="none" width="51.786" height="7.639"/>
+			<text transform="matrix(1 0 0 1 171.3989 291.998)" font-size="7">componentOf</text>
+			<rect x="583.783" y="281.187" fill="none" width="84.055" height="7.639"/>
+			<text transform="matrix(1 0 0 1 583.7832 286.1953)" font-size="7">AssignedEntity</text>
+		</g>
+	</g>
+</g>
+</svg>

@@ -14,7 +14,7 @@
 
 <g>
    <desc>
-	PS3.5 Part 5: Data Structures and Encoding
+	PS 3.5 Part 5: Data Structures and Encoding
    </desc>
 </g>
 
@@ -26,86 +26,86 @@
 		<rect x="32.5" y="159.634" fill="#B2CEE7" width="437" height="94.776"/>
 		<rect x="32.5" y="17.411" fill="#FFFFFF" width="437" height="15.796"/>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 55.0859 29.5171)" font-size="12">Offset</text>
+			<text transform="matrix(0.8815 0 0 1 55.0859 29.5166)" font-size="12">Offset</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 142.2227 29.5171)" font-size="12">Data</text>
+			<text transform="matrix(0.8815 0 0 1 142.2227 29.5166)" font-size="12">Data</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 255.7822 29.5171)" font-size="12">Description of Data</text>
+			<text transform="matrix(0.8815 0 0 1 255.7822 29.5166)" font-size="12">Description of Data</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 423.1348 174.6514)" font-size="12">(Data)</text>
+			<text transform="matrix(0.8815 0 0 1 423.1348 174.6504)" font-size="12">(Data)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 423.1348 206.6523)" font-size="12">(Data)</text>
+			<text transform="matrix(0.8815 0 0 1 423.1348 206.6514)" font-size="12">(Data)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 423.1348 238.6514)" font-size="12">(Data)</text>
+			<text transform="matrix(0.8815 0 0 1 423.1348 238.6504)" font-size="12">(Data)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 416.9609 45.5171)" font-size="12">(Header)</text>
+			<text transform="matrix(0.8815 0 0 1 416.9609 45.5166)" font-size="12">(Header)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 206.1689 60.5986)" font-size="11">location of RLE Segment 1 (Y component)</text>
+			<text transform="matrix(0.8815 0 0 1 206.1689 60.5981)" font-size="11">location of RLE Segment 1 (Y component)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 206.1689 45.5986)" font-size="11">number of RLE Segments</text>
+			<text transform="matrix(0.8815 0 0 1 206.1689 45.5981)" font-size="11">number of RLE Segments</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 206.1689 76.5986)" font-size="11">location of RLE Segment 2 (CB component)</text>
+			<text transform="matrix(0.8815 0 0 1 206.1689 76.5981)" font-size="11">location of RLE Segment 2 (CB component)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 206.1689 92.5986)" font-size="11">location of RLE Segment 3 (CR component)</text>
-		</g>
-		<g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 126.9751 45.7651)" font-size="11">0000 0003H</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 126.9751 61.7651)" font-size="11">0000 0040H</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 126.9751 77.7651)" font-size="11">0000 0140H</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 126.1694 93.7646)" font-size="11">0000 01C0H</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 126.9751 109.7646)" font-size="11">0000 0000H</text>
-			</g>
+			<text transform="matrix(0.8815 0 0 1 206.1689 92.5981)" font-size="11">location of RLE Segment 3 (CR component)</text>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 42.7744 45.7651)" font-size="11">0000 0000H</text>
+				<text transform="matrix(0.8815 0 0 1 126.9746 45.7646)" font-size="11">0000 0003H</text>
+			</g>
+			<g>
+				<text transform="matrix(0.8815 0 0 1 126.9746 61.7646)" font-size="11">0000 0040H</text>
+			</g>
+			<g>
+				<text transform="matrix(0.8815 0 0 1 126.9746 77.7646)" font-size="11">0000 0140H</text>
+			</g>
+			<g>
+				<text transform="matrix(0.8815 0 0 1 126.1689 93.7642)" font-size="11">0000 01C0H</text>
+			</g>
+			<g>
+				<text transform="matrix(0.8815 0 0 1 126.9746 109.7642)" font-size="11">0000 0000H</text>
 			</g>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 149.354 125.7651)" font-size="11">...</text>
+			<g>
+				<text transform="matrix(0.8815 0 0 1 42.7744 45.7646)" font-size="11">0000 0000H</text>
+			</g>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 149.354 141.7656)" font-size="11">...</text>
+			<text transform="matrix(0.8815 0 0 1 149.3535 125.7646)" font-size="11">...</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 126.9751 157.7646)" font-size="11">0000 0000H</text>
+			<text transform="matrix(0.8815 0 0 1 149.3535 141.7646)" font-size="11">...</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 115.6675 173.7646)"><tspan x="0" y="0" font-size="11">Y - RLE Segment</tspan><tspan x="31.18" y="13.2" font-size="11">Data</tspan></text>
+			<text transform="matrix(0.8815 0 0 1 126.9746 157.7637)" font-size="11">0000 0000H</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 42.7744 173.7646)" font-size="11">0000 0040H</text>
+			<text transform="matrix(0.8815 0 0 1 115.667 173.7637)"><tspan x="0" y="0" font-size="11">Y - RLE Segment</tspan><tspan x="31.18" y="13.201" font-size="11">Data</tspan></text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 112.1665 205.7656)"><tspan x="0" y="0" font-size="11">CB - RLE Segment</tspan><tspan x="35.151" y="13.199" font-size="11">Data</tspan></text>
+			<text transform="matrix(0.8815 0 0 1 42.7744 173.7637)" font-size="11">0000 0040H</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 111.8989 237.7646)"><tspan x="0" y="0" font-size="11">CR - RLE Segment</tspan><tspan x="35.455" y="13.2" font-size="11">Data</tspan></text>
+			<text transform="matrix(0.8815 0 0 1 112.166 205.7646)"><tspan x="0" y="0" font-size="11">CB - RLE Segment</tspan><tspan x="35.151" y="13.2" font-size="11">Data</tspan></text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 42.7744 205.7656)" font-size="11">0000 0140H</text>
+			<text transform="matrix(0.8815 0 0 1 111.8984 237.7637)"><tspan x="0" y="0" font-size="11">CR - RLE Segment</tspan><tspan x="35.455" y="13.201" font-size="11">Data</tspan></text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 41.9688 237.7646)" font-size="11">0000 01C0H</text>
+			<text transform="matrix(0.8815 0 0 1 42.7744 205.7646)" font-size="11">0000 0140H</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 41.9688 237.7637)" font-size="11">0000 01C0H</text>
 		</g>
 		<g>
 			<rect x="32.5" y="17.411" fill="none" stroke="#000000" stroke-miterlimit="1" width="437" height="237"/>

@@ -26,7 +26,7 @@
 	<xsl:param name="force.blank.pages" select="'1'"/>
 	
 	<xsl:param name="header.column.widths">1 8 1</xsl:param>
-
+	
 	<xsl:param name="draft.mode" select="'no'"/>
 	<!-- <xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl-ns/current/images/draft.png'"/> -->	<!-- should use rewrite rule in catalog.xml to find it -->
 	<xsl:param name="draft.watermark.image" select="'file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/docbook-xsl-ns-1.78.1/images/draft.png'"/>	<!-- rewrite rule never seems to get invoked so hard wire it -->
@@ -415,7 +415,7 @@
   <xsl:attribute name="space-after.maximum">0.6em</xsl:attribute>
 </xsl:attribute-set>
 
-<!-- Do note want default bold, etc. for Note title -->
+<!-- Do not want default bold, etc. for Note title -->
 
 <xsl:attribute-set name="admonition.title.properties">
   <!--<xsl:attribute name="font-size">14pt</xsl:attribute>-->
@@ -679,6 +679,5 @@
     </xsl:if>
   </rx:meta-info>
 </xsl:template>
-
 
 </xsl:stylesheet>

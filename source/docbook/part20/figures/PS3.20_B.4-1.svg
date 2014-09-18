@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="222px" viewBox="0 0 702 222" enable-background="new 0 0 702 222" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="220"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="408.697" y1="69.344" x2="408.697" y2="88.051"/>
+				<g>
+					<polygon points="406.605,86.625 408.697,94.43 410.789,86.625 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="73.215" y1="45.719" x2="73.215" y2="64.426"/>
+				<g>
+					<polygon points="71.123,63 73.215,70.805 75.307,63 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M512.74,48.626H394.998v20.025H520.43V57.626L512.74,48.626"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M512.74,48.626v9h7.689"/>
+		</g>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M177.259,17.376H59.516v27.525h125.433V26.376L177.259,17.376"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M177.259,17.376v9h7.689"/>
+		</g>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M629.383,131.347v36.471l-117.135,14l-117.125-14v-36.471H629.383z"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M230.648,99.893h155.35l9,13.698l-9,13.707h-155.35V99.893z"/>
+		
+			<rect x="394.998" y="94.43" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="234.385" height="36.813"/>
+		
+			<rect x="59.516" y="70.805" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="171.037" height="85.399"/>
+		<g>
+			<text transform="matrix(1 0 0 1 633.4785 168.3506)" font-size="6">0..*</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 286.9648 96.0322)" font-size="6">0..* compositeReferenceObservation</text>
+		</g>
+		<rect x="62.016" y="82.255" fill="none" width="166.391" height="73.949"/>
+		<text transform="matrix(1 0 0 1 62.0156 86.5483)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DOCSECT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id: II [0..1]</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= DocumentSectionType</tspan><tspan x="0" y="28.799" font-size="6">title: ST [0..1]</tspan><tspan x="0" y="36" font-size="6">text*: ED [0..1]</tspan><tspan x="0" y="43.2" font-size="6">confidentialityCode: CE CWE [0..1]</tspan><tspan x="0" y="50.401" font-size="6"> &lt;= x_BasicConfidentialityKind</tspan><tspan x="0" y="57.6" font-size="6">languageCode: CS CNE [0..1] &lt;= HumanLanguage</tspan></text>
+		<rect x="233.148" y="111.343" fill="none" width="122.944" height="15.955"/>
+		<text transform="matrix(1 0 0 1 233.1479 115.6377)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="61.954" y="28.817" fill="none" width="101.828" height="15.953"/>
+		<text transform="matrix(1 0 0 1 61.9541 33.1113)"><tspan x="0" y="0" font-size="6">DICOM SR CONTAINER Value Type</tspan><tspan x="0" y="7.2" font-size="6">Concept Name -&gt; Section.code</tspan></text>
+		<rect x="397.436" y="60.071" fill="none" width="101.828" height="6.662"/>
+		<text transform="matrix(1 0 0 1 397.4355 64.3652)" font-size="6">DICOM Value Type COMPOSITE</text>
+		<rect x="397.623" y="142.797" fill="none" width="231.885" height="23.29"/>
+		<text transform="matrix(1 0 0 1 397.623 147.0898)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= SPRT</tspan><tspan x="0" y="7.201" font-size="6">contextControlCode*: CS CNE [1..1] &lt;= ContextControl&quot;AP&quot;</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="397.498" y="105.88" fill="none" width="231.885" height="23.365"/>
+		<text transform="matrix(1 0 0 1 397.498 110.1748)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= OBS</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.399" font-size="6">code*: CE CWE [0..1] &lt;= ActCode (Concept Name Code Sequence)</tspan></text>
+		<g>
+			<rect x="62.016" y="73.305" fill="none" width="137.552" height="7.772"/>
+			<text transform="matrix(1 0 0 1 62.0156 78.314)" font-size="7">Section</text>
+			<rect x="233.148" y="102.393" fill="none" width="123.417" height="7.772"/>
+			<text transform="matrix(1 0 0 1 233.1475 107.4019)" font-size="7">component</text>
+			<rect x="61.954" y="19.866" fill="none" width="123.416" height="7.773"/>
+			<text transform="matrix(1 0 0 1 61.9541 24.876)" font-size="7">Note</text>
+			<rect x="397.498" y="96.93" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 397.498 101.939)" font-size="7">CompositeReferenceObservation</text>
+			<rect x="397.623" y="133.847" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 397.623 138.8555)" font-size="7">support</text>
+			<rect x="397.436" y="51.116" fill="none" width="123.416" height="7.773"/>
+			<text transform="matrix(1 0 0 1 397.4365 56.126)" font-size="7">Note</text>
+			<rect x="445.065" y="187.124" fill="none" width="134.5" height="17.5"/>
+			<text transform="matrix(1 0 0 1 449.4795 192.1348)"><tspan x="0" y="0" font-size="7">SopInstance (Non-image, non-waveform </tspan><tspan x="15.757" y="8.4" font-size="7">reference to composite object)</tspan></text>
+		</g>
+	</g>
+</g>
+</svg>

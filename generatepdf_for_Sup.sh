@@ -14,6 +14,12 @@ xsltproc --nonet \
 	stylesheets/customize-fo-pdf-sup.xsl \
 	"${supsourcefile}"
 
-XEP/xep -fo "${dir}/${sup}.fo" -pdf "${dir}/${sup}.pdf"
-rm "${dir}/${sup}.fo"
+#XEP/xep -fo "${dir}/${sup}.fo" -pdf "${dir}/${sup}.pdf"
 
+XEP/xep -fo "${dir}/${sup}.fo" -xep "${dir}/${sup}.xep"
+java -jar /opt/local/share/java/saxon9he.jar "-xsl:stylesheets/linenumberxep.xsl" "-s:${dir}/${sup}.xep" "-o:${dir}/${sup}_linenumbered.xep"
+XEP/xep -xep "${dir}/${sup}_linenumbered.xep" -pdf "${dir}/${sup}.pdf"
+
+rm "${dir}/${sup}.fo"
+rm "${dir}/${sup}_linenumbered.xep"
+rm "${dir}/${sup}.xep"

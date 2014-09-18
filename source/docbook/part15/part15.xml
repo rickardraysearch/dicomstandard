@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.15" version="5.0" xml:id="PS3.15">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2014a - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2014b - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -108,7 +108,7 @@
     <para>TLS is derived from SSL 3.0, and is largely compatible with it.</para>
   </note>
   <para>RFC 2251 Lightweight Directory Access Protocol (v3)</para>
-  <para>RFC-2313 PKCS #1: RSA Encryption, Version 1.5, March 1998.</para>
+  <para>RFC 2313 PKCS #1: RSA Encryption, Version 1.5, March 1998.</para>
   <para>RFC 2563 DHCP Option to Disable Stateless Auto-Configuration in IPv4 Clients</para>
   <para>RFC 2782 A DNS RR for specifying the location of services (DNS SRV)</para>
   <para>RFC 2849 The LDAP Data Interchange Format (LDIF)</para>
@@ -126,9 +126,9 @@
   <para>SHA-2 National Institute of Standards and Technology, FIPS Pub 180-2: Secure Hash Standard, 1 August 2002</para>
   <para>RFC 3851 Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.1 Message Specification</para>
   <para>RFC 3853 S/MIME Advanced Encryption Standard (AES) Requirement for the Session Initiation Protocol (SIP)</para>
-  <para>RFC5424 The Syslog Protocol</para>
-  <para>RFC5425 Transport Layer Security (TLS) Transport Mapping for Syslog</para>
-  <para>RFC5426 Transmission of Syslog Messages over UDP</para>
+  <para>RFC 5424 The Syslog Protocol</para>
+  <para>RFC 5425 Transport Layer Security (TLS) Transport Mapping for Syslog</para>
+  <para>RFC 5426 Transmission of Syslog Messages over UDP</para>
   <note>
     <para>Normative RFC's are frequently updated by issuance of subsequent RFC's. The original older RFC is not modified to include references to the newer RFC.</para>
   </note>
@@ -722,7 +722,7 @@
   <note>
     <para>This schema can be converted into an equivalent XML schema or other electronic format. It includes some modifications to the RFC 3881 schema that reflect field experience with audit message requirements. It extends the RFC 3881 schema.</para>
   </note>
-    <formalpara xml:id="para_A.5.1-1" label="A.5.1-1">
+    <section xml:id="para_A.5.1-1" label="A.5.1-1">
       <title>Audit Message Schema</title>
     <programlisting><![CDATA[
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
@@ -925,7 +925,7 @@ message =
 start = message
 ]]>
     </programlisting>
-    </formalpara>
+    </section>
   </section>
 <section xml:id="sect_A.5.2" label="A.5.2" status="3">
     <title>General Message Format Conventions</title>
@@ -19947,21 +19947,21 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section xml:id="sect_H.2.3" label="H.2.3" status="3">
     <title>Referenced Standards</title>
   
-  <para>RFC-2181 Clarifications to the DNS Specification</para>
-  <para>RFC-2219 Use of DNS Aliases for Network Services</para>
-  <para>RFC-2782 A DNS RR for specifying the location of services (DNS SRV)</para>
-  <para>RFC 2136 DNS Dynamic Updates &lt;http://www.rfc-editor.org/rfc/rfc2136.txt&gt;</para>
-  <para>RFC 2782 A DNS RR for specifying the location of services (DNS SRV) &lt;http://www.rfc-editor.org/rfc/rfc2136.txt&gt;</para>
-  <para>DNS SRV (RFC 2782) Service Types &lt;http://www.dns-sd.org/ServiceTypes.html&gt;</para>
-  <para>DNS-Based Service Discovery &lt;http://files.dns-sd.org/draft-cheshire-dnsext-dns-sd.txt&gt;</para>
-  <para>DNS Self-Discovery &lt;http://www.dns-sd.org/&gt;</para>
-  <para>Multicast DNS &lt;http://files.multicastdns.org/draft-cheshire-dnsext-multicastdns.txt&gt;</para>
-  <para>Multicast DNS &lt;http://www.multicastdns.org/&gt;</para>
+  <para>RFC 2136 DNS Dynamic Updates <link xl:href="http://tools.ietf.org/html/rfc2136"/></para>
+  <para>RFC 2181 Clarifications to the DNS Specification <link xl:href="http://tools.ietf.org/html/rfc2181"/></para>
+  <para>RFC 2219 Use of DNS Aliases for Network Services <link xl:href="http://tools.ietf.org/html/rfc2219"/></para>
+  <para>RFC 2782 A DNS RR for specifying the location of services (DNS SRV) <link xl:href="http://tools.ietf.org/html/rfc2782"/></para>
+  <para>RFC 6762 Multicast DNS <link xl:href="http://tools.ietf.org/html/rfc6762"/></para>
+  <para>RFC 6763 DNS-Based Service Discovery <link xl:href="http://tools.ietf.org/html/rfc6763"/></para>
+  <para>DNS Self-Discovery  <link xl:href="http://www.dns-sd.org/"/></para>
+  
   <para>The name to be used in the DNS SRV to advertise DICOM Association Acceptors, regardless of the SOP Class(es) supported, shall be</para>
 <itemizedlist>
   <listitem><para>"dicom" for unsecured DICOM communication</para></listitem>
   <listitem><para>"dicom-tls" for the Basic TLS Secure Transport Connection Profile</para></listitem>
   <listitem><para>"dicom-iscl" for ISCL Transport Connection Profile</para></listitem>
+  <listitem><para>"dicomweb" for DICOM web services over unsecured http</para></listitem>
+  <listitem><para>"dicomweb-tls" for DICOM web services over https</para></listitem>
 </itemizedlist>
 <note>
     <para>These choices are consistent with the names registered with IANA to define the mapping of IP ports to services, which is conventional for this usage. The choice "dicom" is used rather than the "acr-nema" alternative for clarity. There is no implied port choice by the usage in the DNS SRV Service Type, since the port is explicitly conveyed.</para>
@@ -19978,12 +19978,39 @@ objectclass ( 1.2.840.10008.15.0.4.8
       <emphasis role="italic">&lt;primary device type&gt;</emphasis>, where the value
       <emphasis role="italic">&lt;primary device type&gt;</emphasis>is as defined <xref linkend="table_H.1-2" xrefstyle="select: label"/> Attributes of Device Object</para>
     </listitem>
+    <listitem>
+      <para>DICOMWebPath=
+        <emphasis role="italic">&lt;service&gt;</emphasis>, where the value
+        <emphasis role="italic">&lt;service&gt;</emphasis> is the
+        <emphasis role="italic">path</emphasis> component of the DICOM Web Service root as defined in <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/></para>
+    </listitem>
   </itemizedlist>
   <para>In the absence of a DNS TXT record, or the AET parameter of the DNS TXT record, then the Instance Name preceding the Service Type in the DNS SRV record used for DICOM service discovery shall be the AET.</para>
   <note>
     <para>Further parameters are not specified, for example to indicate the SOP Classes supported or other information, since the size of DNS records encoded as UDP datagrams is strictly limited, and furthermore, the envisaged multicast usage encourages the exchange of the minimal information necessary. The existing DICOM association negotiation mechanism can be used to explore the SOP Classes offered once the IP address, port number and AET are known. The primary device type is supplied because it is useful to indicate to users the type of device, which is not conveyed during association establishment.</para>
   </note>
 </section>
+  <section xml:id="sect_H.2.4" label="H.2.4" status="3">
+    <title>Examples</title>
+    <para>Example SRV record:</para>
+    <itemizedlist>
+      <listitem>
+        <para>_dicomweb-tls._tcp. examplehospital.org 86400 IN SRV 10 60 443 dicomweb. examplehospital.org.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Example TXT record:</para>
+    <itemizedlist>
+      <listitem>
+        <para>dicomweb. examplehospital.org   IN   TXT   "DICOMWebPath=apps/dicom-rs"</para>
+      </listitem>
+    </itemizedlist>
+    <para>The above examples would combine to define a DICOM web service root of:</para>
+    <itemizedlist>
+      <listitem>
+        <para>"https://dicomweb. examplehospital.org:443/apps/dicom-rs"</para>
+      </listitem>
+    </itemizedlist>
+  </section>
 </section>
 </chapter>
 </book>

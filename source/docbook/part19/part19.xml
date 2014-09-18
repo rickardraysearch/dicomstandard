@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2014a - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2014b - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -109,9 +109,9 @@
   <chapter xml:id="chapter_2" label="2" status="1">
     <title>Normative References</title>
     <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-    <para>IETF RFC 2045,2046,2048MIME Multipurpose Internet Mail Extension</para>
-    <para>IETF RFC 2396Uniform Resource Identifiers (URI) : Generic Syntax</para>
-    <para>IETF RFC 3240application/dicom MIME Sub-type Registration</para>
+    <para>IETF RFC 2045,2046,2048 MIME Multipurpose Internet Mail Extension</para>
+    <para>IETF RFC 3240 application/dicom MIME Sub-type Registration</para>
+    <para>IETF RFC 3986 Uniform Resource Identifiers (URI) : Generic Syntax</para>
     <para>ISO 8822:1988 Information processing systems -- Open Systems Interconnection - Connection oriented presentation service definition</para>
     <para>ISO/IEC 19757 DSDL Document Schema Definition Languages (DSDL)</para>
     <para>ITU-T Recommendation X.667 UUID (also IETF RFC 4122)</para>
@@ -2247,7 +2247,7 @@ Keyword = attribute keyword { xsd:token }
 Tag = attribute tag { xsd:string{ minLength="8" maxLength="8" pattern="[0-9A-F]{8}" } } 
 VR = attribute vr { "AE" | "AS" | "AT"| "CS" | "DA" | "DS" | "DT" | "FL" | "FD" 
                     | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OW" | "PN" | "SH" | "SL" 
-                    | "SQ" | "SS" | "ST" | "TM" | "UI" | "UL" | "UN" | "US" | "UT" }
+                    | "SQ" | "SS" | "ST" | "TM" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" }
 PrivateCreator = attribute privateCreator{ xsd:string }
 UUID = attribute uuid { xsd:string }
 URI = attribute uri { xsd:anyURI }

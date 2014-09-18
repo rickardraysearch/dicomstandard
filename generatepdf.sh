@@ -5,6 +5,7 @@ part="$1"
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
 mkdir -p "output/fo"
+mkdir -p "output/xep"
 mkdir -p "output/pdf"
 
 rm -f "output/fo/part${part}.fo"
@@ -39,6 +40,10 @@ rm output/fo/part${part}_withmml.fo
 #fop -conserve -c lib/fop/fop.xml -fo output/fo/part${part}.fo -pdf "/tmp/part${part}_fop.pdf"
 
 XEP/xep -fo "output/fo/part${part}.fo" -pdf "output/pdf/part${part}.pdf"
+
+#XEP/xep -fo "output/fo/part${part}.fo" -xep "output/xep/part${part}.xep"
+#java -jar /opt/local/share/java/saxon9he.jar "-xsl:stylesheets/linenumberxep.xsl" "-s:output/xep/part${part}.xep" "-o:output/xep/part${part}_linenumbered.xep"
+#XEP/xep -xep "output/xep/part${part}_linenumbered.xep" -pdf "output/pdf/part${part}.pdf"
 
 # embed all fonts and make tagged PDF ...
 #/usr/local/AHFormatterV61/run.sh -tpdf -peb 2 -i lib/ahf/AHFormatter.xml -d "output/fo/part${part}.fo" -o "/tmp/part${part}_ahf.pdf"

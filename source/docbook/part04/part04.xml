@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="5.0" xml:id="PS3.4" label="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2014a - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2014b - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -8611,6 +8611,21 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
+                    <para>&gt;&gt;Coding Scheme Version</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>(0008,0103)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
                     <para>&gt;&gt;Code Meaning</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
@@ -8701,7 +8716,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para>&gt;&gt;Coding Scheme designator</para>
+                    <para>&gt;&gt;Coding Scheme Designator</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para>(0008,0102)</para>
@@ -10602,7 +10617,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para>&gt;&gt;Coding Scheme designator</para>
+                    <para>&gt;&gt;Coding Scheme Designator</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para>(0008,0102)</para>
@@ -22505,8 +22520,8 @@
           <para>This Service Class does not address system security or audit logs that are managed by general system logging applications and may use non-DICOM protocols (e.g., SYSLOG).</para>
         </note>
       </section>
-      <section label="P.1.2Service" status="3" xml:id="sect_P.1.2Service">
-        <title>Definition</title>
+      <section label="P.1.2" status="3" xml:id="sect_P.1.2">
+        <title>Service Definition</title>
         <para>Two peer DICOM AEs implement a SOP Class of the Application Event Logging Service Class with one serving in the SCU role and one serving in the SCP role. SOP Classes of the Application Event Logging Service Class are implemented using the DIMSE-N N-ACTION service as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
         <para>The N-ACTION service conveys the following semantics:</para>
         <itemizedlist>

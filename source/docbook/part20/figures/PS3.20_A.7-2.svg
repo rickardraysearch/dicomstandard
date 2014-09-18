@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="292px" viewBox="0 0 702 292" enable-background="new 0 0 702 292" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="290"/>
+	<g>
+		
+			<rect x="406.454" y="78.649" fill="#FF7D7B" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="181.354" height="49.564"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M241.843,85.736h155.35l9,17.365l-9,17.376h-155.35V85.736z"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M241.843,150.07h155.35l9,17.365l-9,17.375h-155.35V150.07z"/>
+		
+			<rect x="227.307" y="17.113" fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="165.433" height="47.9"/>
+		
+			<rect x="70.747" y="52.069" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="171.037" height="85.399"/>
+		
+			<rect x="70.924" y="52.069" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="171.037" height="132.742"/>
+		
+			<rect x="406.454" y="143.003" fill="#FF7D7B" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="181.354" height="49.321"/>
+		
+			<rect x="406.454" y="225.568" fill="#FF7D7B" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="181.354" height="49.318"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M587.809,192.416v25.16l-90.673,7.99l-90.682-7.99v-25.16H587.809z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 591.2246 214.791)" font-size="6">1..1 boundary  </text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 326.9092 81.875)" font-size="6">0..1 purposeOfReference  </text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 244.3423 71.541)" font-size="6">0..* sopInstance</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 333.5889 146.209)" font-size="6">0..1 referencedFrames  </text>
+		</g>
+		<rect x="229.808" y="28.563" fill="none" width="161.551" height="21.835"/>
+		<text transform="matrix(1 0 0 1 229.8076 32.8569)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= SUBJ</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: CS CNE [1..1] &lt;= ContextControl&quot;AP&quot;</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="73.247" y="63.52" fill="none" width="166.391" height="88.362"/>
+		<text transform="matrix(1 0 0 1 73.2471 67.8135)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DGIMG</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: II [1..1] (SOP Instance UID (0008,0018)</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= ExternallyDefinedActCodes</tspan><tspan x="0" y="28.8" font-size="6"> (SOP Class UID Code (0008,0016)</tspan><tspan x="0" y="36" font-size="6">title*: ST [0..1] (SOP Class UID derived name)</tspan><tspan x="0" y="43.2" font-size="6">text: ED [0..1] (WADO Reference)</tspan><tspan x="0" y="50.4" font-size="6">effectiveTime: TS [0..1]</tspan><tspan x="0" y="57.6" font-size="6"> (Content Date (0008,0023) and Content Time (0008,0033)</tspan><tspan x="0" y="64.8" font-size="6">targetSiteCode: SET&lt;CD&gt; CWE [0..*] &lt;= ActSite</tspan><tspan x="0" y="72" font-size="6">subjectOrientationCode: CE CWE [0..1]</tspan><tspan x="0" y="79.2" font-size="6"> &lt;= ImagingSubjectOrientation</tspan></text>
+		<rect x="244.343" y="97.187" fill="none" width="161.85" height="23.291"/>
+		<text transform="matrix(1 0 0 1 244.3423 101.4805)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= RSON</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: CS CNE [1..1] &lt;= ContextControl&quot;AP&quot;</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="244.343" y="161.521" fill="none" width="162.992" height="23.291"/>
+		<text transform="matrix(1 0 0 1 244.3423 165.8145)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: CS CNE [1..1] &lt;= ContextControl&quot;AP&quot;</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="409.082" y="90.344" fill="none" width="179.098" height="37.87"/>
+		<text transform="matrix(1 0 0 1 409.082 94.6372)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= OBS</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">code*: CD CWE [1..1] &lt;= ObservationType(ASSERTION)</tspan><tspan x="0" y="21.6" font-size="6">value*: CD CWE [1..1] &lt;= ExternallyDefinedActCodes</tspan><tspan x="0" y="28.8" font-size="6"> (PurposeOfReference Code: DICOM CID 7003)</tspan></text>
+		<rect x="408.954" y="203.867" fill="none" width="75.514" height="8.442"/>
+		<text transform="matrix(1 0 0 1 408.9541 208.1621)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COM</tspan><tspan x="54.026" y="0" font-size="6">P</tspan></text>
+		<rect x="408.954" y="237.018" fill="none" width="179.098" height="37.87"/>
+		<text transform="matrix(1 0 0 1 408.9541 241.3105)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= OBS</tspan><tspan x="0" y="7.201" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">code*: CE CNE [1..1] &lt;= ExternallyDefinedActCodes</tspan><tspan x="0" y="21.6" font-size="6"> (DCM 113036 &quot;Group of Frames for Display&quot;)</tspan><tspan x="0" y="28.801" font-size="6">value*: LIST&lt;INT&gt; [1..*] (Referenced Frame Number (0008,1160)</tspan></text>
+		<rect x="408.954" y="154.454" fill="none" width="179.098" height="30.632"/>
+		<text transform="matrix(1 0 0 1 408.9541 158.749)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ROIBND</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">code*: CV CNE [1..1] &lt;= ExternallyDefinedActCodes</tspan><tspan x="0" y="21.6" font-size="6"> (DCM 121190 &quot;Referenced Frames&quot;)</tspan></text>
+		<g>
+			<rect x="244.343" y="88.236" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 244.3418 93.2456)" font-size="7">reason</text>
+			<rect x="244.343" y="152.57" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 244.3418 157.5801)" font-size="7">component</text>
+			<rect x="409.082" y="81.394" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 409.082 86.4028)" font-size="7">PurposeOfReference</text>
+			<rect x="408.954" y="145.504" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 408.9551 150.5137)" font-size="7">ReferencedFrames</text>
+			<rect x="408.954" y="228.067" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 408.9551 233.0762)" font-size="7">Boundary</text>
+			<rect x="408.954" y="194.917" fill="none" width="75.514" height="7.772"/>
+			<text transform="matrix(1 0 0 1 408.9551 199.9277)" font-size="7">component</text>
+			<rect x="229.808" y="19.613" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 229.8076 24.6226)" font-size="7">subject</text>
+			<rect x="73.247" y="54.569" fill="none" width="137.552" height="7.772"/>
+			<text transform="matrix(1 0 0 1 73.2471 59.5786)" font-size="7">SopInstance</text>
+		</g>
+	</g>
+</g>
+</svg>

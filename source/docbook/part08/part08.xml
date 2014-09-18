@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.8" version="5.0" xml:id="PS3.8">
   <title>PS3.8</title>
-  <subtitle>DICOM PS3.8 2014a - Network Communication Support for Message Exchange</subtitle>
+  <subtitle>DICOM PS3.8 2014b - Network Communication Support for Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1576,7 +1576,7 @@
         <para>AE-1</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue TRANSPORT CONNECT request primitive to local transport serviceNext state is Sta4</para>
+        <para>Issue TRANSPORT CONNECT request primitive to local transport service</para><para>Next state is Sta4</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1584,7 +1584,7 @@
         <para>AE-2</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ASSOCIATE-RQ-PDUNext state is Sta5</para>
+        <para>Send A-ASSOCIATE-RQ-PDU</para><para>Next state is Sta5</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1592,7 +1592,7 @@
         <para>AE-3</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-ASSOCIATE confirmation (accept) primitiveNext state is Sta6</para>
+        <para>Issue A-ASSOCIATE confirmation (accept) primitive</para><para>Next state is Sta6</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1600,7 +1600,7 @@
         <para>AE-4</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-ASSOCIATE confirmation (reject) primitive and close transport connectionNext state is Sta1</para>
+        <para>Issue A-ASSOCIATE confirmation (reject) primitive and close transport connection</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1608,7 +1608,7 @@
         <para>AE-5</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue Transport connection response primitive; start ARTIM timerNext state is Sta2</para>
+        <para>Issue Transport connection response primitive; start ARTIM timer</para><para>Next state is Sta2</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1616,8 +1616,14 @@
         <para>AE-6</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Stop ARTIM timer and if A-ASSOCIATE-RQ acceptable by service-provider:- issue A-ASSOCIATE indication primitiveNext state is Sta3</para>
-        <para>otherwise:-issue A-ASSOCIATE-RJ-PDU and start ARTIM timerNext state is Sta13</para>
+        <para>Stop ARTIM timer and if A-ASSOCIATE-RQ acceptable by service-provider:</para>
+        <itemizedlist>
+          <listitem><para>issue A-ASSOCIATE indication primitive</para><para>Next state is Sta3</para></listitem>
+        </itemizedlist>
+        <para>otherwise:</para>
+        <itemizedlist>
+          <listitem><para>issue A-ASSOCIATE-RJ-PDU and start ARTIM timer</para><para>Next state is Sta13</para></listitem>
+        </itemizedlist>
       </td>
     </tr>
     <tr valign="top">
@@ -1625,7 +1631,7 @@
         <para>AE-7</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ASSOCIATE-AC PDUNext state is Sta6</para>
+        <para>Send A-ASSOCIATE-AC PDU</para><para>Next state is Sta6</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1633,7 +1639,7 @@
         <para>AE-8</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ASSOCIATE-RJ PDU and start ARTIM timerNext state is STA13</para>
+        <para>Send A-ASSOCIATE-RJ PDU and start ARTIM timer</para><para>Next state is STA13</para>
       </td>
     </tr>
   </tbody>
@@ -1660,7 +1666,7 @@
         <para>DT-1</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send P-DATA-TF PDUNext state is Sta6</para>
+        <para>Send P-DATA-TF PDU</para><para>Next state is Sta6</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1668,7 +1674,7 @@
         <para>DT-2</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send P-DATA indication primitiveNext state is Sta6</para>
+        <para>Send P-DATA indication primitive</para><para>Next state is Sta6</para>
       </td>
     </tr>
   </tbody>
@@ -1695,7 +1701,7 @@
         <para>AR-1</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-RELEASE-RQ PDUNext state is Sta7</para>
+        <para>Send A-RELEASE-RQ PDU</para><para>Next state is Sta7</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1703,7 +1709,7 @@
         <para>AR-2</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-RELEASE indication primitiveNext state is Sta8</para>
+        <para>Issue A-RELEASE indication primitive</para><para>Next state is Sta8</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1711,7 +1717,7 @@
         <para>AR-3</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-RELEASE confirmation primitive, and close transport connectionNext state is Sta1</para>
+        <para>Issue A-RELEASE confirmation primitive, and close transport connection</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1719,7 +1725,7 @@
         <para>AR-4</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-RELEASE-RP PDU and start ARTIM timerNext state is Sta13</para>
+        <para>Issue A-RELEASE-RP PDU and start ARTIM timer</para><para>Next state is Sta13</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1727,7 +1733,7 @@
         <para>AR-5</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Stop ARTIM timerNext state is Sta1</para>
+        <para>Stop ARTIM timer</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1735,7 +1741,7 @@
         <para>AR-6</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue P-DATA indicationNext state is Sta7</para>
+        <para>Issue P-DATA indication</para><para>Next state is Sta7</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1743,7 +1749,7 @@
         <para>AR-7</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue P-DATA-TF PDUNext state is Sta8</para>
+        <para>Issue P-DATA-TF PDU</para><para>Next state is Sta8</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1751,7 +1757,11 @@
         <para>AR-8</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-RELEASE indication (release collision) :- if association-requestor, next state is Sta9- if not, next state is Sta10</para>
+        <para>Issue A-RELEASE indication (release collision):</para>
+        <itemizedlist>
+          <listitem><para>if association-requestor, next state is Sta9</para></listitem>
+          <listitem><para>if not, next state is Sta10</para></listitem>
+        </itemizedlist>
       </td>
     </tr>
     <tr valign="top">
@@ -1759,7 +1769,7 @@
         <para>AR-9</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-RELEASE-RP PDUNext state is Sta11</para>
+        <para>Send A-RELEASE-RP PDU</para><para>Next state is Sta11</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1767,7 +1777,7 @@
         <para>AR-10</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-RELEASE confirmation primitiveNext state is Sta12</para>
+        <para>Issue A-RELEASE confirmation primitive</para><para>Next state is Sta12</para>
       </td>
     </tr>
   </tbody>
@@ -1794,7 +1804,7 @@
         <para>AA-1</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ABORT PDU (service-user source) and start (or restart if already started) ARTIM timer;Next state is Sta13</para>
+        <para>Send A-ABORT PDU (service-user source) and start (or restart if already started) ARTIM timer</para><para>Next state is Sta13</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1802,7 +1812,7 @@
         <para>AA-2</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Stop ARTIM timer if running. Close transport connectionNext state is Sta1</para>
+        <para>Stop ARTIM timer if running. Close transport connection</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1810,7 +1820,15 @@
         <para>AA-3</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>If (service-user inititated abort)- issue A-ABORT indication and close transport connectionotherwise (service-provider inititated abort) :- issue A-P-ABORT indication and close transport connectionNext state is Sta1</para>
+        <para>If (service-user inititated abort):</para>
+        <itemizedlist>
+          <listitem><para>issue A-ABORT indication and close transport connection</para></listitem>
+        </itemizedlist>
+        <para>otherwise (service-provider inititated abort):</para>
+        <itemizedlist>
+          <listitem><para>issue A-P-ABORT indication and close transport connection</para></listitem>
+        </itemizedlist>
+        <para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1818,7 +1836,7 @@
         <para>AA-4</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Issue A-P-ABORT indication primitive, Next state is Sta1</para>
+        <para>Issue A-P-ABORT indication primitive</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1826,7 +1844,7 @@
         <para>AA-5</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Stop ARTIM timer, Next state is Sta1</para>
+        <para>Stop ARTIM timer</para><para>Next state is Sta1</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1834,7 +1852,7 @@
         <para>AA-6</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Ignore PDU, Next state is Sta13</para>
+        <para>Ignore PDU</para><para>Next state is Sta13</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1842,7 +1860,7 @@
         <para>AA-7</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ABORT PDU, Next state is Sta13</para>
+        <para>Send A-ABORT PDU</para><para>Next state is Sta13</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1850,7 +1868,7 @@
         <para>AA-8</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>Send A-ABORT PDU (service-provider source-), issue an A-P-ABORT indication, and start ARTIM timer;Nest state is Sta13</para>
+        <para>Send A-ABORT PDU (service-provider source-), issue an A-P-ABORT indication, and start ARTIM timer</para><para>Next state is Sta13</para>
       </td>
     </tr>
   </tbody>

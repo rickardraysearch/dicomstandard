@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2014a - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2014b - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -65,14 +65,16 @@
     <para>The following normative documents contain provisions that, through reference in this text, constitute provisions of this part of DICOM. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of DICOM are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies. Members of ISO and IEC maintain registers of currently valid International Standards.</para>
     <para>ebRS ebXML Registry Service</para>
     <para>HL7 CDA Health Level Seven, Clinical Document Architecture (CDA)</para>
-    <para>IETF RFC822 Standard for ARPA Internet Text Messages</para>
-    <para>IETF RFC2045 and followings MIME Multipurpose Internet Mail Extension</para>
-    <para>IETF RFC2396 Uniform Resource Identifiers (URI): Generic Syntax</para>
-    <para>IETF RFC2616 Hypertext Transfer Protocol - HTTP/1.1</para>
-    <para>IETF RFC3240 Application/dicom MIME Sub-type Registration</para>
-    <para>IETF 4627 The application/json Media Type for JavaScript Object Notation (JSON)</para>
+    <para>IETF RFC 822 Standard for ARPA Internet Text Messages <link xl:href="http://tools.ietf.org/html/rfc822"/></para>
+    <para>IETF RFC 2045 and followings MIME Multipurpose Internet Mail Extension <link xl:href="http://tools.ietf.org/html/rfc2045"/></para>
+    <para>IETF RFC 3240 Application/dicom MIME Sub-type Registration <link xl:href="http://tools.ietf.org/html/rfc3240"/></para>
+    <para>IETF RFC 3986 Uniform Resource Identifiers (URI): Generic Syntax <link xl:href="http://tools.ietf.org/html/rfc3986"/></para>
+    <para>IETF RFC 4627 The application/json Media Type for JavaScript Object Notation (JSON) <link xl:href="http://tools.ietf.org/html/rfc4627"/></para>
+    <para>IETF RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing <link xl:href="http://tools.ietf.org/html/rfc7230"/></para>
     <para>ISO/IEC 10918 JPEG Standard for digital compression and encoding of continuous-tone still images</para>
     <para>IHE ITI TF-2x: Appendix V IHE IT Infrastructure Technical Framework, Volume 2x, Appendix V (Web Services for IHE Transactions)</para>
+    <para>SUBM-wadl-20090831 Web Application Description Language (WADL), W3C Member Submission 31 August 2009 <link xl:href="http://www.w3.org/Submission/wadl/"/>)
+    </para>
   </chapter>
   <chapter xml:id="chapter_4" label="4" status="1">
     <title>Terms and Definitions</title>
@@ -81,15 +83,23 @@
       <title>DICOM Persistent Object</title>
       <para>An instance of a data object as defined by <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> that has been allocated an unique identifier in the format specified for SOP Instance UID in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and has been chosen as an object to be saved securely for some period of time. Within the DICOM Standard, a DICOM Persistent Object is referred to as a Composite Service Object Pair (SOP) Instance.</para>
     </section>
-    <section xml:id="sect_4.2" label="4.2" status="2">
+     <section xml:id="sect_4.2" label="4.2" status="2">
+      <title>Origin-Server</title>
+      <para>See IETF RFC-7230 Section 2.1 Client/Server Messaging.</para>
+    </section>
+    <section xml:id="sect_4.3" label="4.3" status="2">
+      <title>User-Agent</title>
+      <para>See IETF RFC-7230 Section 2.1 Client/Server Messaging.</para>
+    </section>
+    <section xml:id="sect_4.4" label="4.4" status="2">
       <title>Web Client System</title>
       <para>A system using Internet technologies (web, e-mail…) interested in retrieving DICOM Persistent Objects from a Web Enabled DICOM Server, through HTTP/HTTPS protocol.</para>
     </section>
-    <section xml:id="sect_4.3" label="4.3" status="2">
+    <section xml:id="sect_4.5" label="4.5" status="2">
       <title>Web Enabled DICOM Server</title>
       <para>A system managing DICOM Persistent Objects and able to transmit them on request to the Web Client System.</para>
     </section>
-    <section xml:id="sect_4.4" label="4.4" status="2">
+    <section xml:id="sect_4.6" label="4.6" status="2">
       <title>Web Access to DICOM Persistent Objects</title>
       <para>A service enabling the Web Client System to retrieve DICOM Persistent Objects managed by a Web Enabled DICOM Server, through HTTP/HTTPS protocol.</para>
     </section>
@@ -191,6 +201,12 @@
         <term>URL/URI</term>
         <listitem>
           <para>Uniform Resource Locator / Identifier</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>WADL</term>
+        <listitem>
+          <para>Web Application Description Language</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -308,14 +324,22 @@
             </listitem>
           </orderedlist>
         </listitem>
+        <listitem>
+          <para>RESTful Services (RS) using HTTP Options: RS Capabilities:</para>
+          <orderedlist numeration="loweralpha">
+            <listitem>
+              <para>Provided information about the capabilities of a DICOM RESTful web service provider)</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
       </itemizedlist>
     </section>
     <section xml:id="sect_6.2" label="6.2" status="2">
       <title>WADO-URI Request</title>
-      <para>The HTTP Request used shall use the GET method as defined in IETF RFC2616.</para>
+      <para>The HTTP Request used shall use the GET method as defined in IETF RFC7230.</para>
       <section xml:id="sect_6.2.1" label="6.2.1" status="3">
         <title>Parameters of the HTTP Request</title>
-        <para>The parameters of the &lt;query&gt; component of the Request-URI to be sent to the web Server through the HTTP GET method request shall be represented as defined in IETF RFC2396.</para>
+        <para>The parameters of the &lt;query&gt; component of the Request-URI to be sent to the web Server through the HTTP GET method request shall be represented as defined in IETF RFC3986.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
@@ -342,7 +366,7 @@
     </section>
     <section xml:id="sect_6.3" label="6.3" status="2">
       <title>WADO-URI Response</title>
-      <para>The response shall be an HTTP Response Message as specified in IETF RFC2616.</para>
+      <para>The response shall be an HTTP Response Message as specified in IETF RFC7230.</para>
       <note>
         <para>The content of the message-body varies according to the Media type as defined below.</para>
       </note>
@@ -2186,7 +2210,7 @@
                   <para>Range</para>
                   <itemizedlist>
                     <listitem>
-                      <para>See RFC 2616 Section 14.35. If omitted in the request the server shall return the entire bulk data object.</para>
+                      <para>See RFC 7230 Section 14.35. If omitted in the request the server shall return the entire bulk data object.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -2238,7 +2262,7 @@
                 </itemizedlist>
               </listitem>
               <listitem>
-                <para>If the Range header is specified in the request, the server shall return only the specified bytes of the bulk data object. See RFC 2616 Section 14.35.</para>
+                <para>If the Range header is specified in the request, the server shall return only the specified bytes of the bulk data object. See RFC 7230 Section 14.35.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2502,7 +2526,7 @@
         </listitem>
       </itemizedlist>
       <para>Compressed pixel data shall be encoded using the Media Types as described in <xref linkend="table_6.5-1" xrefstyle="select: label"/> WADO-RS Media Type Mapping to Transfer Syntax UID. Media Types corresponding to several DICOM Transfer Syntax UIDs may require a transfer-syntax parameter to disambiguate the request.</para>
-      <para>HTTP Request field Content-Type is used in the header lines by the client in an HTTP/1.1 transaction to indicate the type of data being sent to the Service. All lines are RFC822 or RFC2616 format headers. All HTTP header fields whose use is not defined by STOW-RS shall have the meaning defined by the HTTP standard.</para>
+      <para>HTTP Request field Content-Type is used in the header lines by the client in an HTTP/1.1 transaction to indicate the type of data being sent to the Service. All lines are RFC822 or RFC7230 format headers. All HTTP header fields whose use is not defined by STOW-RS shall have the meaning defined by the HTTP standard.</para>
       <para>The Service is required to support uncompressed bulk and pixel data (multipart/related; type= application/octet-stream).</para>
       <section xml:id="sect_6.6.1" label="6.6.1" status="3">
         <title>STOW-RS - Store Instances</title>
@@ -2888,6 +2912,7 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>The URL where the Study is available for retrieval via a WADO-RS Retrieve Study service.</para>
+                    <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -2960,8 +2985,9 @@
                     <para>2</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>The URL where the SOP Instance is available for retrieval via a WADO-URI or WADO-RS service.</para>
+                    <para>The URL where the SOP Instance is available for retrieval via a WADO-RS service.</para>
                     <para>If the study Retrieve URI is specified above, this URI can be constructed if the client knows the series and instance UIDs.</para>
+                    <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -3182,7 +3208,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <Value number="1">
         2.16.124.113543.6003.189642796.63084.16748.2599092903</Value>
       </DicomAttribute>
-      <DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
+      <DicomAttribute tag="00081190" vr="UR" keyword="RetrieveURL">
         <Value number="1">
         https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503430045/
         series/2.16.124.113543.6003.2588828330.45298.17418.2723805630/
@@ -3201,7 +3227,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <DicomAttribute tag="00081196" vr="US" keyword="WarningReason">
         <Value number="1">45056</Value>
       </DicomAttribute>
-      <DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
+      <DicomAttribute tag="00081190" vr="UR" keyword="RetrieveURL">
         <Value number="1">
         https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503430045/
         series/2.16.124.113543.6003.2588828330.45298.17418.2723805630/
@@ -3209,7 +3235,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </DicomAttribute>
     </Item>
   </DicomAttribute>
-  <DicomAttribute tag="00081190" vr="UT" keyword="RetrieveURL">
+  <DicomAttribute tag="00081190" vr="UR" keyword="RetrieveURL">
     <Value number="1">
     https://wadors.hospital.com/studies/2.16.124.113543.6003.1154777499.30246.19789.3503430045</Value>
   </DicomAttribute>
@@ -3446,7 +3472,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <para>If the limit query key is not specified or its value exceeds the total number of matching results then {maximumResults} is the lesser of the number of matching results and the maximum number of results supported by the Server.</para>
           <para>If the offset query key is not specified or its value is less than zero then {skippedResults} is zero.</para>
           <para>The first result returned shall be result number ({skippedResults} + 1). The last result returned shall be result number ({skippedResults} + {maximumResults}). If ({skippedResults} + 1) exceeds {maximumResults} then no results are returned.</para>
-          <para>If the number of results exceeds the maximum supported by the server, the server shall return the maximum supported results and the response shall include the following HTTP/1.1 Warning header (see RFC 2616 Section 14.46):</para>
+          <para>If the number of results exceeds the maximum supported by the server, the server shall return the maximum supported results and the response shall include the following HTTP/1.1 Warning header (see RFC 7230 Section 14.46):</para>
           <para>
             <computeroutput>Warning: 299 {SERVICE}: "The number of results exceeded the maximum supported by the server. Additional results can be requested.</computeroutput>
           </para>
@@ -3465,7 +3491,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </note>
             <para>If the TimezoneOffsetFromUTC / 00080201 query key is included in the request, dates and times in the request are to be interpreted in the specified time zone.</para>
             <para>If the "fuzzymatching=true" query key/value is included in the request and it is supported then additional fuzzy semantic matching of person names shall be performed in the manner specified in the DICOM Conformance Statement for the service provider.</para>
-            <para>If the "fuzzymatching=true" query key/value is included in the request and it is not supported, the response shall include the following HTTP/1.1 Warning header (see RFC 2616 Section 14.46):</para>
+            <para>If the "fuzzymatching=true" query key/value is included in the request and it is not supported, the response shall include the following HTTP/1.1 Warning header (see RFC 7230 Section 14.46):</para>
             <para>Warning: 299 {SERVICE}: "The fuzzymatching parameter is not supported. Only literal matching has been performed."</para>
             <para>where {SERVICE} is the base URL for the QIDO-RS provider. This may be a combination of scheme (http or https), host, port, and application.</para>
             <note>
@@ -3798,6 +3824,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </td>
                     <td align="left" colspan="1" rowspan="1">
                       <para>Shall be empty if the resource cannot be retrieved via WADO-RS</para>
+                      <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                     </td>
                   </tr>
                   <tr valign="top">
@@ -3964,6 +3991,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </td>
                     <td align="left" colspan="1" rowspan="1">
                       <para>Shall be empty if the resource cannot be retrieved via WADO-RS</para>
+                      <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                     </td>
                   </tr>
                   <tr valign="top">
@@ -4148,6 +4176,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </td>
                     <td align="left" colspan="1" rowspan="1">
                       <para>Shall be empty if the resource cannot be retrieved via WADO-RS</para>
+                      <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                     </td>
                   </tr>
                   <tr valign="top">
@@ -4383,6 +4412,858 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para>The query was too broad and a narrower query or paging should be requested. The use of this status code should be documented in the conformance statement.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>503</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Busy</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Service is unavailable.</para>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+    <section xml:id="sect_6.8" label="6.8" status="2">
+      <title>RS Capabilities Service</title>
+      <para>DICOM RS Capabilities Service defines a single transaction type which shall be supported by all implementations</para>
+      <orderedlist numeration="loweralpha">
+        <listitem>
+          <para>RetrieveCapabilities</para>
+          <para>This transaction retrieves the parameters for services supported by the server.</para>
+        </listitem>
+      </orderedlist>
+      <section xml:id="sect_6.8.1" label="6.8.1" status="3">
+        <title>Retrieve Capabilities</title>
+        <section xml:id="sect_6.8.1.1" label="6.8.1.1" status="4">
+          <title>Request Message</title>
+          <para>The Retrieve Server Options transaction can be requested for the following resources:</para>
+          <itemizedlist>
+            <listitem>
+              <para>{SERVICE}[/{InformationEntity}]</para>
+              <itemizedlist>
+                <listitem>
+                  <para>where {SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
+                </listitem>
+                <listitem>
+                  <para>where {InformationEntity} is the path to a defined DICOM RESTful service resource, such as:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>WADO-RS (see
+                        <xref linkend="sect_6.5.1" xrefstyle="select:labelnumber"/>,
+                        <xref linkend="sect_6.5.2" xrefstyle="select:labelnumber"/>,
+                        <xref linkend="sect_6.5.3" xrefstyle="select:labelnumber"/>,
+                        <xref linkend="sect_6.5.4" xrefstyle="select:labelnumber"/>,
+                        <xref linkend="sect_6.5.5" xrefstyle="select:labelnumber"/>,
+                        <xref linkend="sect_6.5.6" xrefstyle="select:labelnumber"/>)</para>
+                    </listitem>
+                    <listitem>
+                      <para>STOW-RS (see <xref linkend="sect_6.6.1" xrefstyle="select:labelnumber"/>)</para>
+                    </listitem>
+                    <listitem>
+                      <para>QIDO-RS (see <xref linkend="sect_6.7.1" xrefstyle="select:labelnumber"/>)</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.8.1.1.1" label="6.8.1.1.1" status="5">
+            <title>Method = OPTIONS</title>
+            <para>The Retrieve Server Options Service request messages use the OPTIONS method.</para>
+          </section>
+          <section xml:id="sect_6.8.1.1.2" label="6.8.1.1.2" status="5">
+            <title>Header Fields</title>
+            <para>The Retrieve Server Options Service request messages can include the following header fields:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Accept:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/vnd.sun.wadl+xml</para>
+                  </listitem>
+                  <listitem>
+                    <para>application/json</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+        <section xml:id="sect_6.8.1.2" label="6.8.1.2" status="4">
+          <title>Response message</title>
+          <para>All responses are http single part messages. A successful response will return a Web Application Description Language (WADL) document encoded in a Media Type consistent with the Accept header of the request.</para>
+          <para>The WADL document shall contain one top-level "application" element.</para>
+          <para>The "application" element shall contain one "resources" element whose "base" attribute value is {SERVICE},
+            where {SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
+          <para>Additionally, the WADL content shall include a "resource" element for the resource specified in the request (see
+            <xref linkend="sect_6.8.1.1" xrefstyle="select:labelnumber"/>) describing all methods (see
+            <xref linkend="sect_6.8.1.2.2.2" xrefstyle="select:labelnumber"/> for description and examples) and child
+              resources (see
+            <xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/> for description and examples) for the specified resource and each of its children.</para>
+          <section xml:id="sect_6.8.1.2.1" label="6.8.1.2.1" status="5">
+            <title>Resources</title>
+            <para>The full WADL resource tree follows directly and unambiguously from the RESTful resource endpoints defined in
+              <xref linkend="sect_6.5" xrefstyle="select:labelnumber"/>,
+              <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/> and
+              <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/>.</para>
+            <para>For informative purposes, the full resource tree and the methods defined for each resource are described in <xref linkend="table_6.8-1" xrefstyle="select:label"/>.</para>
+            <table rules="all" frame="box" xml:id="table_6.8-1" label="6.8-1">
+              <caption>Resources and Methods</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>
+                      <emphasis role="bold">Resource</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>
+                      <emphasis role="bold">Methods supported 
+                        (excluding RetrieveCapabilities)
+                      </emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>
+                      <emphasis role="bold">Reference</emphasis>
+                    </para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>{SERVICE}</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>studies</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForStudies</para>
+                    <para>StoreInstances</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.2" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                         <listitem><para>{StudyInstanceUID}</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveStudy</para>
+                    <para>StoreInstances – specified Study</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>metadata</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveMetadata – Study</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>series</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForSeries</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem><para>{SeriesInstanceUID}</para></listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveSeries</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem><para>metadata</para></listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveMetadata – Series</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem><para>instances</para></listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForInstances</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem>
+                                        <itemizedlist mark="none">
+                                          <listitem><para>{SOPInstanceUID}</para></listitem>
+                                        </itemizedlist>
+                                      </listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveInstance</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem>
+                                        <itemizedlist mark="none">
+                                          <listitem>
+                                            <itemizedlist mark="none">
+                                              <listitem><para>metadata</para></listitem>
+                                            </itemizedlist>
+                                          </listitem>
+                                        </itemizedlist>
+                                      </listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveMetadata – Instance</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem>
+                                        <itemizedlist mark="none">
+                                          <listitem>
+                                            <itemizedlist mark="none">
+                                              <listitem><para>frames</para></listitem>
+                                            </itemizedlist>
+                                          </listitem>
+                                        </itemizedlist>
+                                      </listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem>
+                                        <itemizedlist mark="none">
+                                          <listitem>
+                                            <itemizedlist mark="none">
+                                              <listitem>
+                                                <itemizedlist mark="none">
+                                                  <listitem><para>{framelist}</para></listitem>
+                                                </itemizedlist>
+                                              </listitem>
+                                            </itemizedlist>
+                                          </listitem>
+                                        </itemizedlist>
+                                      </listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveFrames</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>instances</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForInstances – no specified Series</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>series</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForSeries – no specified Study</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>{SeriesInstanceUID}</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>{instances}</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForInstances – no specified Study</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>instances</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForInstances – no specified Study or Series</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>{BulkDataURL}</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveBulkData</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.8.1.2.2" label="6.8.1.2.2" status="5">
+            <title>Methods</title>
+            <section xml:id="sect_6.8.1.2.2.1" label="6.8.1.2.2.1" status="6">
+              <title>Retrieve Methods</title>
+              <para>The Retrieve methods define the capabilities of a WADO-RS resource (see <xref linkend="sect_6.5" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Retrieve methods shall contain the following attributes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>A "name" attribute with a value of "GET"</para>
+                </listitem>
+                <listitem>
+                  <para>An "id" attribute with a value of "RetrieveStudy", "RetrieveSeries", "RetrieveInstance", "RetrieveBulkData", "RetrieveFrames", "RetrieveStudyMetadata", "RetrieveSeriesMetadata" or "RetrieveInstanceMetadata" depending on the full resource path</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Retrieve methods shall contain a "request" element with "param" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Accept header values</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>if the same Media Type is supported with multiple Transfer Syntaxes there should be one entry for each combination of Media Type and Transfer Syntax</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+              <para>The Retrieve methods shall contain one or more "response" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Status Codes</para>
+                </listitem>
+                <listitem>
+                  <para>Media Types returned for each Status Code (if applicable)</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>if the same Media Type is supported with multiple Transfer Syntaxes there should be one entry for each combination of Media Type and Transfer Syntax</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+              <note>
+                <para>More than one Status Code can be described by a single "response" element.</para>
+              </note>
+              <para>Example:</para>
+              <programlisting><![CDATA[
+<method name="GET" id="RetrieveStudies">
+	<request>
+		<param name="Accept" style="header" default="multipart/related; type=application/dicom">
+			<option value="multipart/related; type=application/dicom" />
+			<option value="multipart/related; type=application/dicom";
+			        transfer-syntax=1.2.840.10008.1.2 />
+			<option value="multipart/related; type=application/dicom";
+			        transfer-syntax=1.2.840.10008.1.2.1 />
+			<option value="multipart/related; type=application/octet-stream" />
+			<option value="multipart/related; type=image/dicom+jpx" />
+			<option value="multipart/related; type=image/dicom+jpx;
+			        transfer-syntax=1.2.840.10008.1.2.4.92" />
+			<option value="multipart/related; type= video/mpeg;
+			        transfer-syntax=1.2.840.10008.1.2.4.100" />
+		</param>
+	</request>
+	<response status="200,206">
+		<representation mediaType="multipart/related; type=application/dicom";
+		                transfer-syntax=1.2.840.10008.1.2 />
+		<representation mediaType="multipart/related; type=application/dicom";
+		                transfer-syntax=1.2.840.10008.1.2.1 />
+		<representation mediaType="multipart/related; type=application/octet-stream" />
+		<representation mediaType="multipart/related; type= image/dicom+jpx" />
+		<representation mediaType="multipart/related; type= image/dicom+jpx;
+		                transfer-syntax=1.2.840.10008.1.2.4.92" />
+		<representation mediaType="multipart/related; type= video/mpeg;
+		                transfer-syntax=1.2.840.10008.1.2.4.100" />
+	</response>
+	<response status="400 404 406 410 503" />
+</method>
+]]></programlisting>
+            </section>
+            <section xml:id="sect_6.8.1.2.2.2" label="6.8.1.2.2.2" status="6">
+              <title>Store Methods</title>
+              <para>The Store methods define the capabilities of a STOW-RS resource (see <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Store methods shall contain the following attributes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>A "name" attribute with a value of "POST"</para>
+                </listitem>
+                <listitem>
+                  <para>An "id" attribute with a value of "StoreInstances" or "StoreStudyInstances"</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Store methods shall contain a "request" element with "param" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Accept header values</para>
+                </listitem>
+                <listitem>
+                  <para>supported Representations</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>if the same Media Type is supported with multiple Transfer Syntaxes there should be one entry for each combination of Media Type and Transfer Syntax</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+              <para>The Store methods shall contain one or more "response" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Status Codes</para>
+                </listitem>
+                <listitem>
+                  <para>Media Types returned for each Status Code (if applicable)</para>
+                </listitem>
+                <listitem>
+                  <para>Headers returned for each Status Code</para>
+                </listitem>
+              </itemizedlist>
+              <note>
+                <para>More than one Status Code can be described by a single "response" element.</para>
+              </note>
+              <para>Example:</para>
+              <programlisting><![CDATA[
+<method name="GET" id="StoreInstances">
+	<request>
+		<param name="Accept" style="header" default="application/dicom+xml">
+			<option value="application/dicom+xml" />
+		</param>
+		<representation mediaType="multipart/related; type=application/dicom" />
+		<representation mediaType="multipart/related; type=application/dicom;
+		                transfer-syntax=1.2.840.10008.1.2" />
+		<representation mediaType="multipart/related; type=application/dicom; 
+		                transfer-syntax=1.2.840.10008.1.2.1" />
+		<representation mediaType="multipart/related; type=application/dicom+xml" />
+		<representation mediaType="multipart/related; type=application/dicom+xml;
+		                transfer-syntax=1.2.840.10008.1.2" />
+		<representation mediaType="multipart/related; type=application/dicom+xml;
+						transfer-syntax=1.2.840.10008.1.2.1" />
+		<representation mediaType="multipart/related; type=application/dicom+xml;
+		                transfer-syntax=1.2.840.10008.1.2.4.92" />
+		<representation mediaType="multipart/related; type=application/dicom+xml;
+		                transfer-syntax=1.2.840.10008.1.2.4.100" />
+	</request>
+	<response status="200" />
+	<response status="202,409">
+		<representation mediaType="application/dicom+xml" />
+	</response>
+	<response status="400,401,403,503" />
+</method>
+]]></programlisting>
+            </section>
+            <section xml:id="sect_6.8.1.2.2.3" label="6.8.1.2.2.3" status="6">
+              <title>Search Methods</title>
+              <para>The Search methods define the capabilities of a QIDO-RS resource (see <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Search methods shall contain the following attributes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>A "name" attribute with a value of "GET"</para>
+                </listitem>
+                <listitem>
+                  <para>An "id" attribute with a value of "SearchForStudies", "SearchForStudySeries", "SearchForSeries", "SearchForStudySeriesInstances", "SearchForStudyInstances", "SearchForSeriesInstances" or "SearchForInstances" depending on the level of the parent resource</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Search methods shall contain a "request" element with "param" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Accept header values</para>
+                </listitem>
+                <listitem>
+                  <para>support for the Cache-control header</para>
+                </listitem>
+                <listitem>
+                  <para>support of "limit", "offset" and "fuzzymatching" query parameters</para>
+                </listitem>
+                <listitem>
+                  <para>supported search parameters (both tag and keyword variants shall be listed)</para>
+                </listitem>
+                <listitem>
+                  <para>supported options for the "includefield" parameter (both tag and keyword variants shall be listed)</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Search methods shall contain one or more "response" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Status Codes</para>
+                </listitem>
+                <listitem>
+                  <para>returned "header" parameters, including use of "warning headers"</para>
+                </listitem>
+                <listitem>
+                  <para>Media Types returned for each Status Code (if applicable)</para>
+                </listitem>
+              </itemizedlist>
+              <note>
+                <para>More than one Status Code can be described by a single "response" element.</para>
+              </note>
+              <para>Example:</para>
+              <programlisting><![CDATA[
+<method name="GET" id="SearchForStudies">
+	<request>
+		<param name="Accept" style="header" default="multipart/related; type=application/dicom+xml">
+			<option value="multipart/related; type=application/dicom+xml" />
+			<option value="application/json" />
+		</param>
+		<param name="Cache-control" style="header">
+			<option value="no-cache" />
+		</param>
+		<param name="limit" style="query" />
+		<param name="offset" style="query" />
+		<param name="fuzzymatching" style="query" />
+		<param name="StudyDate" style="query" />
+		<param name="00080020" style="query" />
+		<param name="StudyTime" style="query" />
+		<param name="00080030" style="query" />
+		…
+		<param name="includefield" style="query" repeating="true" />
+		<option value="all" />
+		<option value="00081049" />
+		<option value="PhysiciansOfRecordIdentificationSequence" />
+		<option value="00081060" />
+		<option value="NameOfPhysiciansReadingStudy" />
+		…
+	</param>
+</request>
+<response status="200">
+	<representation mediaType="multipart/related; type=application/dicom+xml" />
+	<representation mediaType="application/json" />
+</response>
+<response status="400 401 403 413 503" />
+</method>
+]]></programlisting>
+            </section>
+          </section>
+        </section>
+        <section xml:id="sect_6.8.1.3" label="6.8.1.3" status="4">
+          <title>Status Codes</title>
+          <para><xref linkend="table_6.8-2" xrefstyle="select:label"/> lists the HTTP/1.1 status codes that shall be used to report any of the associated error and warning situations. Other error codes may be present for other error and warning situations.</para>
+          <table rules="all" frame="box" xml:id="table_6.8-2" label="6.8-2">
+            <caption>Server Options HTTP/1.1 Status Codes</caption>
+            <thead>
+              <tr valign="top">
+                <th align="center" colspan="1" rowspan="1">
+                  <para>
+                    <emphasis role="bold">Code</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para>
+                    <emphasis role="bold">Name</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para>
+                    <emphasis role="bold">Description</emphasis>
+                  </para>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td align="left" colspan="3" rowspan="1">
+                  <para>Success</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>200</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para>OK</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>The query completed and any matching results are returned in the message body.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="3" rowspan="1">
+                  <para>Failure</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>400</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Bad Request</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>The Server Options Provider was unable to perform the query because the Service Provider cannot understand the query component.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>401</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Unauthorized</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>The Server Options Provider refused to perform the query because the client is not authenticated.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para>403</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>Forbidden</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para>The Server Options Provider understood the request, but is refusing to perform the query (e.g. an authenticated user with insufficient privileges).</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -4655,9 +5536,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </section>
       <section xml:id="sect_8.1.5" label="8.1.5" status="3">
         <title>MIME Type of the Response</title>
-        <para>MIME type(s) desired by the Web Client for the response from the Server, as defined in the IETF RFC2616. This parameter is OPTIONAL for URI based mode, it shall be present for the WS mode "Rendered Requester" and shall not be present in the other WS mode transactions.</para>
+        <para>MIME type(s) desired by the Web Client for the response from the Server, as defined in the IETF RFC7230. This parameter is OPTIONAL for URI based mode, it shall be present for the WS mode "Rendered Requester" and shall not be present in the other WS mode transactions.</para>
         <para>The parameter name shall be "contentType" for URI based mode, and, for the WS mode, "ContentTypeList" that contains one or multiple "ContentType".</para>
-        <para>In URI based mode, the value shall be a list of MIME types, separated by a "," character, and potentially associated with relative degree of preference, as specified in IETF RFC2616. In WS mode, it contains one or more "ContentType" elements containing each one MIME type.</para>
+        <para>In URI based mode, the value shall be a list of MIME types, separated by a "," character, and potentially associated with relative degree of preference, as specified in IETF RFC7230. In WS mode, it contains one or more "ContentType" elements containing each one MIME type.</para>
         <para>In URI based mode, the Web Client shall provide list of content types it supports in the "Accept" field of the GET method. The value of the contentType parameter of the request shall be one of the values specified in that field.</para>
         <note>
           <orderedlist numeration="arabic">
@@ -4672,9 +5553,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </section>
       <section xml:id="sect_8.1.6" label="8.1.6" status="3">
         <title>Charset of the Response</title>
-        <para>Character set with which the returned objects are to be encoded, as defined in the IETF RFC2616. This parameter is OPTIONAL for URI based mode, and for the WS mode "Rendered Requester" and shall not be present in the other WS mode transactions.</para>
+        <para>Character set with which the returned objects are to be encoded, as defined in the IETF RFC7230. This parameter is OPTIONAL for URI based mode, and for the WS mode "Rendered Requester" and shall not be present in the other WS mode transactions.</para>
         <para>The parameter name shall be "charset" for URI based mode, and "CharsetList" containing one or more elements "Charset" for the WS mode.</para>
-        <para>For the URI mode, the value shall be a list of character sets, separated by a "," character, and potentially associated with relative degree of preference, as specified in IETF RFC2616.</para>
+        <para>For the URI mode, the value shall be a list of character sets, separated by a "," character, and potentially associated with relative degree of preference, as specified in IETF RFC7230.</para>
         <para>In URI based mode, the Web Client may provide a list of character sets it supports in the "Accept-charset" field of the GET method. If this field is present, the value of the charset parameter of the request shall be one of the values specified in it.</para>
         <para>The Web Server may or may not support character set conversion. If character set conversion is supported:</para>
         <itemizedlist>
@@ -4853,69 +5734,35 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     </section>
   </chapter>
   <chapter xml:id="chapter_A" label="A" status="1">
-    <title>URL/URI Transfer Syntax (Informative)</title>
-    <para>Access to the content of a data object is enabled by specifying a "link" pointing to a specific DICOM Persistent Object by means of its URL/URI and specifying its DICOM object Instance UID and the transfer syntax to be employed.</para>
-    <para>Extension to searching DICOM objects from a Server is out of the scope of the present standard. Differences between "Web Accessing" and "Searching" are mainly:</para>
-    <orderedlist numeration="arabic">
-      <listitem>
-        <para>"Web Accessing" means retrieving an object as a "binary" answer: "I have it, I give it to you" or "I haven't". In fact, the negative answer will be a "Void" object or an error.</para>
-      </listitem>
-      <listitem>
-        <para>"Searching" means querying for objects has a "fuzzy answer": "I have a list of potential candidates to your question - see above the (possible void) list of their reference -".</para>
-      </listitem>
-    </orderedlist>
-    <section xml:id="sect_A.1" label="A.1" status="2">
-      <title>General Syntax</title>
-      <para>The general syntax of the standard respects the URI recommendation IETF RFC2396. It can be expressed as:</para>
-      <para>&lt;scheme&gt;://&lt;authority&gt;&lt;path&gt;?&lt;query&gt;</para>
-      <para>It is structured following BNF syntax. The first definition of this syntax is:</para>
+    <title>URI Query Component Syntax (Normative)</title>
+    <para>This Standard uses the URI syntax as defined in IETF RFC 3986 <emphasis role="italic">Uniform Resource Identifier (URI): Generic Syntax</emphasis> and
+      extends it by specifying the syntax of the query component of DICOM URIs.
+      The grammar for the query component is defined using IETF RFC 5234 <emphasis role="italic">Augmented BNF for Syntax Specifications: ABNF</emphasis>.</para>
+    <para>DICOM URIs may use the query component of the URI to specify request parameters.
+      The following grammar defines the general syntax of parameters contained in the query component of the URI.
+      Specific HTTP transactions defined elsewhere in this standard may further refine the legal &lt;name&gt; and/or &lt;value&gt; rules.</para>
+    <programlisting><![CDATA[
+    query-component = parameter [ *("&" parameter) ]
+    parameter       = name "="" value
+    name            = *qchar
+    value           = *qchar
+    qchar           = unreserved / pct-encoded / qspecial
+    qspecial        = "/" / "?" / ":" / "@" / "!" / "$" / "'" 
+                    / "(" / ")" / "*" / "+" / "," / ";"
+]]></programlisting>
+    <para>The following rules are defined in IETF RFC3986 (Normative). They are reproduced here for convenience.</para>
+    <programlisting><![CDATA[
+    unreserved     = ALPHA / DIGIT / "-" / "." / "_" / "~"
+    pct-encoded    = "%" HEXDIG HEXDIG
+]]></programlisting>
+    <note>
       <orderedlist numeration="arabic">
-        <listitem>
-          <para>URI-reference = [ absoluteURI | relativeURI ] [ "#" fragment ]</para>
-        </listitem>
-        <listitem>
-          <para>absoluteURI = scheme ":" (hier_part | opaque_part)</para>
-        </listitem>
-        <listitem>
-          <para>relativeURI = (net_path | abs_path | rel_path) [ "?" query ]</para>
-        </listitem>
-        <listitem>
-          <para>hier_part = (net_path | abs_path) [ "?" query ]</para>
-        </listitem>
+        <listitem><para>This grammar allows the query component to contain any of the legal characters as defined by RFC 3986.</para></listitem>
+        <listitem><para>No whitespace is permitted in URIs. Whitespace around line breaks and the line breaks themselves should be stripped before parsing the URI (See RFC 3986 Appendix C).</para></listitem>
+        <listitem><para>RFC 3986 does not permit an empty query component, i.e. if the "?" appears in the URI then there must be some legal query parameters in the URI.</para></listitem>
+        <listitem><para>The &lt;qchar&gt; rule defined above is the &lt;pchar&gt; rule of RFC 3986, which defines the legal character for the query component, minus the characters "="" and "&amp;".</para></listitem>
       </orderedlist>
-      <para>The present standard aims only to define the term query, and not the other components of the URL/URI that are defining the path way from the Web Client System to the Web Enabled DICOM System, independent of the DICOM Persistent Object itself. However it is anticipated that, if present, scheme value is HTTP, in order to be compatible with web browsers.</para>
-      <para>This definition of the term query shall respect fully the BNF syntax exposed in the IETF RFC2396. Within a query component, the characters ";", "/", "?", ":", "@", "&amp;", "=", "+", ",", and "$" are reserved. It is only a restriction of it for the unique purpose of retrieving DICOM Persistent Objects through Web Access to DICOM Persistent Objects.</para>
-      <note>
-        <para>Management of the HTTP returns different codes (e.g., "404 Not found") as specified in IETF RFC2616.</para>
-      </note>
-      <para>Control names and values are escaped. Space characters are replaced by "+", and then reserved characters are escaped as described in IETF RFC2396. Non-alphanumeric characters are replaced by "%HH", a percent sign and two hexadecimal digits representing the ASCII code of the character. Line breaks are represented as "CR LF" pairs (i.e., "%0D%0A").</para>
-      <para>The control names/values are listed in the order they appear in the document. The name is separated from the value by "=" and name/value pairs are separated from each other by "&amp;".</para>
-    </section>
-    <section xml:id="sect_A.2" label="A.2" status="2">
-      <title>Syntax of the &lt;query&gt; component</title>
-      <para>The BNF syntax restriction of parameters for the Web Access to DICOM Persistent Objects service is the following:</para>
-      <orderedlist numeration="arabic">
-        <listitem>
-          <para>query = parameter ["&amp;" parameter]</para>
-        </listitem>
-        <listitem>
-          <para>parameter = name "=" value</para>
-        </listitem>
-        <listitem>
-          <para>name = nchars</para>
-        </listitem>
-        <listitem>
-          <para>value = nchars</para>
-        </listitem>
-        <listitem>
-          <para>nchars = *nchar</para>
-        </listitem>
-        <listitem>
-          <para>nchar = unreserved | escaped</para>
-        </listitem>
-      </orderedlist>
-      <para>where unreserved and escaped are defined in IETF RFC2396.</para>
-    </section>
+    </note>
   </chapter>
   <chapter xml:id="chapter_B" label="B" status="1">
     <title>Examples (Informative)</title>
@@ -6170,7 +7017,18 @@ This is the binary JPEG payload for the second image.
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para><emphasis role="italic">Base64</emphasis> encoded
-        <emphasis role="italic">string</emphasis></para>
+                  <emphasis role="italic">string</emphasis></para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para>UR</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>URI</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para><emphasis role="italic">String</emphasis></para>
               </td>
             </tr>
             <tr valign="top">
@@ -7127,7 +7985,7 @@ This is the binary JPEG payload for the second image.
             ]
         },
         "00081190": {
-            "vr": "UT",
+            "vr": "UR",
             "Value": [ "http://wado.nema.org/studies/
             1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873" ]
         },
@@ -7243,7 +8101,7 @@ This is the binary JPEG payload for the second image.
             ]
         },
         "00081190": {
-            "vr": "UT",
+            "vr": "UR",
             "Value": [ "http://wado.nema.org/studies/
             1.2.392.200036.9116.2.2.2.2162893313.1029997326.945876" ]
         },
@@ -7331,6 +8189,110 @@ This is the binary JPEG payload for the second image.
       <para>JSON. <link xl:href="http://www.json.org/"/> (Informative)</para>
       <para>Wikipedia, definition of JSON. <link xl:href="http://en.wikipedia.org/wiki/JSON"/> (Informative)</para>
       <para>JSON in FHIR. <link xl:href="http://www.hl7.org/implement/standards/fhir/formats.htm#json"/> (Informative)</para>
+    </section>
+  </chapter>
+  <chapter xml:id="chapter_G" label="G" status="1">
+    <title>WADL JSON Representation</title>
+    <section xml:id="sect_G.1" label="G.1" status="2">
+      <title>Introduction</title>
+      <para>While the WADL specification only specifies an XML encoding for the WADL payload, the data structure can easily be represented using JSON. Additionally, conversion from XML to JSON and vice-versa can be done in a lossless manner.</para>
+    </section>
+    <section xml:id="sect_G.2" label="G.2" status="2">
+      <title>XML Elements</title>
+      <para>The JSON encoding of WADL XML elements depends on whether the element is:</para>
+      <itemizedlist>
+        <listitem>
+          <para>a "doc" element</para>
+        </listitem>
+        <listitem>
+          <para>an element that is unique within a particular parent element (e.g. "request")</para>
+        </listitem>
+        <listitem>
+          <para>an element that can be repeated within a particular parent element (e.g. "param")</para>
+        </listitem>
+      </itemizedlist>
+      <section xml:id="sect_G.2.1" label="G.2.1" status="3">
+        <title>Doc Elements</title>
+        <para>A "doc" element is represented as an array of objects, where each object may contain:</para>
+        <itemizedlist>
+          <listitem>
+            <para>a "@xml:lang" string</para>
+          </listitem>
+          <listitem>
+            <para>a "@title" string</para>
+          </listitem>
+          <listitem>
+            <para>a "value" string</para>
+          </listitem>
+        </itemizedlist>
+        <para>Example:</para>
+        <programlisting><![CDATA[
+"doc": [ 
+		{
+			"@xml:lang": "en",
+			"value": "Granular cell tumor"
+		},
+		{
+			"@xml:lang": "ja",
+			"value": "顆粒細胞腫"
+		},
+		{
+			"@xml:lang": "fr",
+			"value": "Tumeur à cellules granuleuses"
+		}
+]
+]]></programlisting>
+      </section>
+      <section xml:id="sect_G.2.2" label="G.2.2" status="3">
+        <title>Unique Elements</title>
+        <para>All unique WADL XML elements are represented as an object whose name is the name of the XML element and where each member may contain:</para>
+        <itemizedlist>
+          <listitem>
+            <para>a "@{attribute}" string for each XML attribute of the name {attribute}</para>
+          </listitem>
+          <listitem>
+            <para>a child object for each child element that must be unique</para>
+          </listitem>
+          <listitem>
+            <para>a child array for each child element that may not be unique</para>
+          </listitem>
+        </itemizedlist>
+        <para>Example:</para>
+        <programlisting><![CDATA[
+"request": {
+			"param": [ ... ],
+			"representation": [ ... ]
+}
+]]></programlisting>
+      </section>
+      <section xml:id="sect_G.2.3" label="G.2.3" status="3">
+        <title>Repeatable Elements</title>
+        <para>All repeatable WADL XML elements are represented as an array of objects whose name is the name of the XML element and where each may contain:</para>
+        <itemizedlist>
+          <listitem>
+            <para>a "@{attribute}" string for each XML attribute of the name {attribute}</para>
+          </listitem>
+          <listitem>
+            <para>a child object for each child element that must be unique</para>
+          </listitem>
+          <listitem>
+            <para>a child array for each child element that may not be unique</para>
+          </listitem>
+        </itemizedlist>
+        <para>Example:</para>
+        <programlisting><![CDATA[
+"param": [ 
+		{
+			"@name": "Accept",
+			"@style": "header"
+		},
+		{
+			"@name": "Cache-control",
+			"@style": "header"
+		}
+	]
+]]></programlisting>
+      </section>
     </section>
   </chapter>
 </book>

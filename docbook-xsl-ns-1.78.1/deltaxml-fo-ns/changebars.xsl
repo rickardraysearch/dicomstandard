@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Use subject to the conditions in the included file: LICENSE.bsd -->
-<!-- $Id: changebars.xsl 2984 2007-05-25 10:29:10Z nigelw $ -->
+<!-- $Id: changebars.xsl,v 1.1 2014/09/06 14:49:37 dclunie Exp $ -->
 
 <!-- 
   This stylesheet is used for converting a DocBook document with revisionflags into XSL-FO containing
@@ -37,7 +37,7 @@
   <xsl:param name="added.color">green</xsl:param>
   <xsl:param name="added.background">inherit</xsl:param>
   <xsl:param name="added.decoration">none</xsl:param>
-  <xsl:param name="added.style">italic</xsl:param>
+  <xsl:param name="added.style">normal</xsl:param> <!-- DAC. 2014/09/06 not "italic" -->
   
   <!-- deleted text styling params -->
   <xsl:param name="deleted.color">red</xsl:param>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="157px" viewBox="0 0 702 157" enable-background="new 0 0 702 157" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="155"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="514.941" y1="46.517" x2="514.941" y2="73.756"/>
+				<g>
+					<polygon points="512.85,72.33 514.941,80.135 517.033,72.33 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="319.652" y1="46.517" x2="319.652" y2="73.756"/>
+				<g>
+					<polygon points="317.561,72.33 319.652,80.135 321.744,72.33 					"/>
+				</g>
+			</g>
+		</g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="460.406" y1="101.23" x2="502.406" y2="101.23"/>
+		
+			<rect x="308.406" y="20.206" fill="#E2E3E4" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="152" height="26.312"/>
+		<rect x="309.041" y="16.628" fill="#FFFFFF" width="101.311" height="5.722"/>
+		
+			<rect x="502.656" y="20.206" fill="#E2E3E4" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="152" height="26.312"/>
+		<rect x="504.33" y="16.628" fill="#FFFFFF" width="101.311" height="5.722"/>
+		
+			<rect x="502.738" y="80.447" fill="#79FF77" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="188.42" height="52.424"/>
+		
+			<path fill="#78FFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M152.01,83.447h146.972l8.468,17.789l-8.468,17.779H152.01V83.447z"/>
+		
+			<rect x="10.842" y="61.833" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="141.25" height="78.539"/>
+		
+			<rect x="307.449" y="80.447" fill="#FFFF75" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="152.957" height="42.76"/>
+		<g>
+			<text transform="matrix(1 0 0 1 466.1475 99.1055)" font-size="6">0..1 subject  </text>
+		</g>
+		<rect x="245.814" y="77.102" fill="none" width="50.333" height="8.446"/>
+		<text transform="matrix(1 0 0 1 245.8135 81.3955)" font-size="6">0..1 relatedSubject</text>
+		<rect x="309.949" y="17.298" fill="none" width="147.219" height="30.632"/>
+		<text transform="matrix(1 0 0 1 309.9492 21.5913)"><tspan x="0" y="0" font-size="6">Constraint: RelatedSubject.code</tspan><tspan x="0" y="7.2" font-size="6">A conformant CDA document shall use the DICOM </tspan><tspan x="0" y="14.4" font-size="6">code „Fetus“ (CID 271, PS3.16) as mandatory code </tspan><tspan x="0" y="21.6" font-size="6">value if the subject is a fetus</tspan></text>
+		<rect x="13.342" y="73.283" fill="none" width="138.668" height="67.089"/>
+		<text transform="matrix(1 0 0 1 13.3418 77.5781)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DOCSECT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id: II [0..1]</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= DocumentSectionType</tspan><tspan x="0" y="28.8" font-size="6">title: ST [0..1]</tspan><tspan x="0" y="36" font-size="6">text*: ED [0..1]</tspan><tspan x="0" y="43.2" font-size="6">confidentialityCode: CE CWE [0..1]&lt;= </tspan><tspan x="0" y="50.4" font-size="6">x_BasicConfidentialityKind</tspan><tspan x="0" y="57.6" font-size="6">languageCode: CS CNE [0..1] &lt;= HumanLanguage</tspan></text>
+		<rect x="154.51" y="95.649" fill="none" width="150.832" height="23.366"/>
+		<text transform="matrix(1 0 0 1 154.5098 99.9443)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= SBJ</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: CS CNE [1..1] &lt;= &quot;OP&quot;</tspan><tspan x="0" y="14.4" font-size="6">awarenessCode: CE CWE [0..1] &lt;= TargetAwareness</tspan></text>
+		<rect x="309.949" y="92.649" fill="none" width="153.631" height="30.559"/>
+		<text transform="matrix(1 0 0 1 309.9492 96.9443)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= x_DocumentSubject</tspan><tspan x="0" y="7.2" font-size="6">code: CE CWE [0..1] &lt;= PersonalRelationshipRoleType</tspan><tspan x="0" y="14.4" font-size="6">addr: SET&lt;AD&gt; [0..*]</tspan><tspan x="0" y="21.6" font-size="6">telecom: SET&lt;TEL&gt; [0..*]</tspan></text>
+		<rect x="505.238" y="17.298" fill="none" width="151.469" height="30.632"/>
+		<text transform="matrix(1 0 0 1 505.2383 21.5913)"><tspan x="0" y="0" font-size="6">Constraint: SubjectPerson.name</tspan><tspan x="0" y="7.2" font-size="6">If the subject is a fetus, SubjectPerson.name shall be </tspan><tspan x="0" y="14.4" font-size="6">mandatory. The name attribute shall be used for </tspan><tspan x="0" y="21.6" font-size="6">mapping the DICOM subject or fetus identifier</tspan></text>
+		<rect x="505.238" y="94.496" fill="none" width="185.92" height="36.375"/>
+		<text transform="matrix(1 0 0 1 505.2383 98.791)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= PSN</tspan><tspan x="0" y="7.2" font-size="6">determinerCode*: &lt;= INSTANCE</tspan><tspan x="0" y="14.4" font-size="6">name: SET&lt;PN&gt; [0..*]</tspan><tspan x="0" y="21.6" font-size="6">administrativeGenderCode: CE CWE [0..1] &lt;= AdministrativeGender</tspan><tspan x="0" y="28.8" font-size="6">birthTime: TS [0..1]</tspan></text>
+		<g>
+			<rect x="13.342" y="64.333" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 13.3418 69.3423)" font-size="7">Section</text>
+			<rect x="154.51" y="85.947" fill="none" width="105.055" height="9.589"/>
+			<text transform="matrix(1 0 0 1 154.5093 90.957)" font-size="7">subject</text>
+			<rect x="309.949" y="82.947" fill="none" width="84.055" height="7.639"/>
+			<text transform="matrix(1 0 0 1 309.9497 87.958)" font-size="7">RelatedSubject</text>
+			<rect x="505.238" y="82.947" fill="none" width="101.721" height="9.093"/>
+			<text transform="matrix(1 0 0 1 505.2383 87.958)" font-size="7">SubjectPerson</text>
+		</g>
+	</g>
+</g>
+</svg>

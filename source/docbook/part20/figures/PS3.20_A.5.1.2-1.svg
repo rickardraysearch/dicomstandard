@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="257px" viewBox="0 0 702 257" enable-background="new 0 0 702 257" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="255"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="170.963" y1="65.421" x2="170.963" y2="84.128"/>
+				<g>
+					<polygon points="168.871,82.702 170.963,90.507 173.055,82.702 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="327.968" y1="36.548" x2="327.968" y2="55.255"/>
+				<g>
+					<polygon points="325.876,53.829 327.968,61.634 330.06,53.829 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="342.337" y1="182.11" x2="342.337" y2="200.817"/>
+				<g>
+					<polygon points="340.245,183.537 342.337,175.731 344.429,183.537 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M447.59,200.896H329.597v39.275h125.683v-30.275L447.59,200.896"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M447.59,200.896v9h7.689"/>
+		</g>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M432.066,16.522H314.697v20.025h125.059V25.522L432.066,16.522"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M432.066,16.522v9h7.689"/>
+		</g>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M275.007,37.078H157.264v27.525h125.433V46.078L275.007,37.078"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M275.007,37.078v9h7.689"/>
+		</g>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M328.396,148.326h155.35l9,13.698l-9,13.707h-155.35V148.326z"/>
+		
+			<rect x="314.388" y="62.384" fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="146.683" height="41.65"/>
+		
+			<rect x="157.264" y="90.507" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="171.037" height="85.399"/>
+		<text transform="matrix(1 0 0 1 331.8853 113.9258)" font-size="7">0..*    </text>
+		<text transform="matrix(1 0 0 1 472.2129 144.4648)" font-size="7">0..*</text>
+		<rect x="316.888" y="73.834" fill="none" width="137.551" height="15.955"/>
+		<text transform="matrix(1 0 0 1 316.8882 78.1274)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="159.764" y="101.957" fill="none" width="137.552" height="73.949"/>
+		<text transform="matrix(1 0 0 1 159.7642 106.2505)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DOCSECT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id: II [0..1]</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= DocumentSectionType</tspan><tspan x="0" y="28.8" font-size="6">title: ST [0..1]</tspan><tspan x="0" y="36" font-size="6">text*: ED [0..1]</tspan><tspan x="0" y="43.201" font-size="6">confidentialityCode: CE CWE [0..1]</tspan><tspan x="0" y="50.4" font-size="6"> &lt;= x_BasicConfidentialityKind</tspan><tspan x="0" y="57.599" font-size="6">languageCode: CS CNE [0..1]</tspan><tspan x="0" y="64.8" font-size="6"> &lt;= HumanLanguage</tspan></text>
+		<rect x="330.896" y="159.776" fill="none" width="122.943" height="15.955"/>
+		<text transform="matrix(1 0 0 1 330.8965 164.0703)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= x_ActRelationshipEntry</tspan><tspan x="0" y="7.2" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="332.036" y="212.336" fill="none" width="123.105" height="28.142"/>
+		<text transform="matrix(1 0 0 1 332.0356 216.6289)"><tspan x="0" y="0" font-size="6">Default: COMP (DRIV used only for complete </tspan><tspan x="0" y="7.201" font-size="6">canonical transform). A subset of the entries </tspan><tspan x="0" y="14.4" font-size="6">may originate from a trans-coded DICOM SR </tspan><tspan x="0" y="21.6" font-size="6">document.</tspan></text>
+		<rect x="317.136" y="27.963" fill="none" width="122.465" height="8.442"/>
+		<text transform="matrix(1 0 0 1 317.1362 32.2568)" font-size="6">DICOM SR CONTAINS Relationship Type.</text>
+		<rect x="159.703" y="48.519" fill="none" width="101.828" height="15.954"/>
+		<text transform="matrix(1 0 0 1 159.7026 52.8135)"><tspan x="0" y="0" font-size="6">DICOM SR CONTAINER Value Type</tspan><tspan x="0" y="7.2" font-size="6">Concept Name -&gt; Section.code</tspan></text>
+		<g>
+			<rect x="497.902" y="148.519" fill="none" width="46.834" height="24.377"/>
+			<text transform="matrix(1 0 0 1 510.0371 153.5273)"><tspan x="0" y="0" font-size="7">Clinical </tspan><tspan x="-4.672" y="8.4" font-size="7">Statement </tspan><tspan x="0.389" y="16.801" font-size="7">Entries</tspan></text>
+			<rect x="159.764" y="93.007" fill="none" width="137.552" height="7.772"/>
+			<text transform="matrix(1 0 0 1 159.7646 98.0161)" font-size="7">Section</text>
+			<rect x="316.888" y="64.884" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 316.8882 69.8931)" font-size="7">component</text>
+			<rect x="330.896" y="150.826" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 330.8965 155.8359)" font-size="7">entry</text>
+			<rect x="332.036" y="203.386" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 332.0356 208.3945)" font-size="7">Note</text>
+			<rect x="317.136" y="19.013" fill="none" width="123.417" height="7.772"/>
+			<text transform="matrix(1 0 0 1 317.1362 24.0225)" font-size="7">Note</text>
+			<rect x="159.703" y="39.569" fill="none" width="123.416" height="7.772"/>
+			<text transform="matrix(1 0 0 1 159.7021 44.5781)" font-size="7">Note</text>
+		</g>
+	</g>
+</g>
+</svg>

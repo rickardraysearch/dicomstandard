@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="702px" height="402px" viewBox="0 0 702 402" enable-background="new 0 0 702 402" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.20 - Transformation of DICOM to and from HL7 Standards
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED8" width="700" height="400"/>
+	<g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" x1="46.891" y1="67.045" x2="46.891" y2="85.752"/>
+				<g>
+					<polygon points="44.799,84.326 46.891,92.131 48.982,84.326 					"/>
+				</g>
+			</g>
+		</g>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M620.221,269.936v36.471l-125.778,14l-125.769-14v-36.471H620.221z"/>
+		
+			<rect x="368.674" y="198.769" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="251.547" height="70.979"/>
+		
+			<rect x="368.674" y="320.781" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="251.547" height="63.766"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M620.221,148.048v36.471l-125.778,14l-125.769-14v-36.471H620.221z"/>
+		
+			<path fill="#F8B8B9" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+			M204.324,104.219h155.35l9,13.698l-9,13.707h-155.35V104.219z"/>
+		
+			<rect x="368.674" y="86.381" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="251.547" height="61.784"/>
+		
+			<rect x="33.191" y="92.131" fill="#FF7D7B" stroke="#000000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" width="171.037" height="49.25"/>
+		<g>
+			
+				<path fill="#FFFFFF" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M230.935,17.453H33.191v49.025h205.433V26.453L230.935,17.453"/>
+			
+				<path fill="none" stroke="#000000" stroke-width="0.72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" d="
+				M230.935,17.453v9h7.689"/>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 625.7793 185.0522)" font-size="6">1..* series</text>
+		</g>
+		<g>
+			<text transform="matrix(1.0179 0 0 1 333.4497 100.3589)" font-size="6">1..* study</text>
+		</g>
+		<rect x="206.824" y="115.669" fill="none" width="122.944" height="15.955"/>
+		<text transform="matrix(1 0 0 1 206.8237 119.9644)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="371.174" y="159.499" fill="none" width="231.885" height="23.29"/>
+		<text transform="matrix(1 0 0 1 371.1738 163.792)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: [1..1] &lt;= ContextControl “AP”</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="371.174" y="97.832" fill="none" width="249.047" height="45.097"/>
+		<text transform="matrix(1 0 0 1 371.1738 102.1265)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ACT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: II [1..1] (Study Instance UID (0020,000D)</tspan><tspan x="0" y="21.6" font-size="6">code*: CV CNE [1..1] &lt;= ExternallyDefinedActCodes (”DICOM Study” DICOM Code 113014)</tspan><tspan x="0" y="28.8" font-size="6">text*: ST [0..1] (Study Description (0008,1030)</tspan><tspan x="0" y="36" font-size="6">effectiveTime: TS [0..1] (Study Date (0008,0020) and Study Time (0008,0030)</tspan></text>
+		<g>
+			<text transform="matrix(1 0 0 1 625.7793 306.9395)" font-size="6">1..* sopInstance</text>
+		</g>
+		<rect x="371.174" y="281.387" fill="none" width="231.885" height="23.289"/>
+		<text transform="matrix(1 0 0 1 371.1738 285.6797)"><tspan x="0" y="0" font-size="6">typeCode*: &lt;= COMP</tspan><tspan x="0" y="7.2" font-size="6">contextControlCode*: [1..1] &lt;= ContextControl “AP”</tspan><tspan x="0" y="14.4" font-size="6">contextConductionInd*: BL [1..1] &quot;true&quot;</tspan></text>
+		<rect x="35.691" y="103.582" fill="none" width="166.391" height="37.8"/>
+		<text transform="matrix(1 0 0 1 35.6914 107.8765)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ACT</tspan><tspan x="0" y="7.2" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id: II [0..1]</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= ExternallyDefinedActCodes</tspan><tspan x="0" y="28.8" font-size="6">title: ST [0..1]</tspan></text>
+		<rect x="371.174" y="210.219" fill="none" width="249.047" height="59.529"/>
+		<text transform="matrix(1 0 0 1 371.1738 214.5137)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= ACT</tspan><tspan x="0" y="7.201" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: II [1..1] (Series Instance UID (0020,000E)</tspan><tspan x="0" y="21.6" font-size="6">code*: CD CWE [1..1] &lt;= ExternallyDefinedActCodes (”DICOM Series” DICOM Code</tspan><tspan x="0" y="28.801" font-size="6"> 113015 postcoordinated with qualifier name</tspan><tspan x="0" y="36" font-size="6"> “modality” DICOM Code 121139 and qualifier value modality (0008,0060)</tspan><tspan x="0" y="43.201" font-size="6">text*: ST [0..1] (Series Description (0008,103E)</tspan><tspan x="0" y="50.4" font-size="6">effectiveTime: TS [0..1] (Series Date (0008,0021) and Series Time (0008,0031)</tspan></text>
+		<rect x="371.174" y="332.232" fill="none" width="249.047" height="52.314"/>
+		<text transform="matrix(1 0 0 1 371.1738 336.5273)"><tspan x="0" y="0" font-size="6">classCode*: &lt;= DGIMG</tspan><tspan x="0" y="7.199" font-size="6">moodCode*: &lt;= EVN</tspan><tspan x="0" y="14.4" font-size="6">id*: II [1..1] (SOP Instance UID (0008,0018)</tspan><tspan x="0" y="21.6" font-size="6">code*: CE CWE [1..1] &lt;= ExternallyDefinedActCodes (SOP CLASS UID CODE (0008,0016)</tspan><tspan x="0" y="28.799" font-size="6">title*: ST [0..1] (SOP Class UID derived name)</tspan><tspan x="122.707" y="28.799" font-size="6" letter-spacing="2">	</tspan><tspan x="0" y="36" font-size="6">text*: ED [0..1] (WADO Reference)</tspan><tspan x="0" y="43.199" font-size="6">effectiveTime: TS [0..1] (Content Date (0008,0023) and Content Time (0008,0033)</tspan></text>
+		<rect x="35.63" y="28.894" fill="none" width="202.828" height="37.871"/>
+		<text transform="matrix(1 0 0 1 35.6299 33.189)"><tspan x="0" y="0" font-size="6">(COCT_RM830110UV)</tspan><tspan x="0" y="7.2" font-size="6">The DICOM Objects Sequence contains the identifying information on the </tspan><tspan x="0" y="14.4" font-size="6">full set of referenced DICOM composite objects.</tspan><tspan x="0" y="21.6" font-size="6">Information on one or more referenced DICOM composite objects on the </tspan><tspan x="0" y="28.8" font-size="6">study, series, and instance level can be included in this sequence.</tspan></text>
+		<g>
+			<rect x="35.691" y="94.631" fill="none" width="137.552" height="7.772"/>
+			<text transform="matrix(1 0 0 1 35.6914 99.6406)" font-size="7">Squence</text>
+			<rect x="206.824" y="106.719" fill="none" width="123.417" height="7.772"/>
+			<text transform="matrix(1 0 0 1 206.8232 111.7285)" font-size="7">component</text>
+			<rect x="35.63" y="19.943" fill="none" width="92.452" height="7.773"/>
+			<text transform="matrix(1 0 0 1 35.6299 24.9536)" font-size="7">DICOM Objects Sequence</text>
+			<rect x="371.174" y="88.881" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 371.1738 93.8906)" font-size="7">Study</text>
+			<rect x="371.174" y="201.269" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 371.1738 206.2783)" font-size="7">Series</text>
+			<rect x="371.174" y="274.061" fill="none" width="137.551" height="7.773"/>
+			<text transform="matrix(1 0 0 1 371.1738 279.0703)" font-size="7">component</text>
+			<rect x="371.174" y="150.548" fill="none" width="137.551" height="7.772"/>
+			<text transform="matrix(1 0 0 1 371.1738 155.5576)" font-size="7">component</text>
+			<rect x="371.174" y="323.281" fill="none" width="137.551" height="7.773"/>
+			<text transform="matrix(1 0 0 1 371.1738 328.291)" font-size="7">SopInstance</text>
+		</g>
+	</g>
+</g>
+</svg>

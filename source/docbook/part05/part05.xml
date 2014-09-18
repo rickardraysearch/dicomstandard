@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.5" label="PS3.5" version="5.0">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2014a - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2014b - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -537,16 +537,46 @@
             <link xl:href="http://tools.ietf.org/html/rfc1951"/>
           </bibliosource>
         </biblioentry>
-        <biblioentry xml:id="biblio_RFC_2396">
-          <abbrev>RFC 2396</abbrev>
+      <biblioentry xml:id="biblio_RFC_3986">
+        <abbrev>RFC 3986</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
           <title>Uniform Resource Identifiers (URI) : Generic Syntax</title>
           <bibliosource>
-            <link xl:href="http://tools.ietf.org/html/rfc2396"/>
+            <link xl:href="http://tools.ietf.org/html/rfc3986"/>
           </bibliosource>
         </biblioentry>
+      <biblioentry xml:id="biblio_RFC_3987">
+        <abbrev>RFC 3987</abbrev>
+        <author>
+          <orgname>IETF</orgname>
+        </author>
+        <title>Internationalized Resource Identifiers (IRIs)</title>
+        <bibliosource>
+          <link xl:href="http://tools.ietf.org/html/rfc3987"/>
+        </bibliosource>
+      </biblioentry>
+      <biblioentry xml:id="biblio_RFC_5890">
+        <abbrev>RFC 5890</abbrev>
+        <author>
+          <orgname>IETF</orgname>
+        </author>
+        <title>Internationalized Domain Names for Applications (IDNA): Definitions and Document Framework</title>
+        <bibliosource>
+          <link xl:href="http://tools.ietf.org/html/rfc5890"/>
+        </bibliosource>
+      </biblioentry>
+      <biblioentry xml:id="biblio_RFC_5891">
+        <abbrev>RFC 5891</abbrev>
+        <author>
+          <orgname>IETF</orgname>
+        </author>
+        <title>Internationalized Domain Names in Applications (IDNA): Protocol</title>
+        <bibliosource>
+          <link xl:href="http://tools.ietf.org/html/rfc5891"/>
+        </bibliosource>
+      </biblioentry>
       
     </bibliography>
   </chapter>
@@ -784,6 +814,12 @@
         <term>UTC</term>
         <listitem>
           <para>Coordinated Universal Time</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>URI/URL</term>
+        <listitem>
+          <para>Uniform Resource Identifier/Locator</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -1736,6 +1772,28 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>UR</para>
+              <para>Universal Resource Identifier or Universal Resource Locator (URI/URL)</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>A string of characters that identifies a URI or a URL as defined in <xref linkend="biblio_RFC_3986"/>.
+                Leading spaces are not allowed.
+                Trailing spaces shall be ignored.
+                Data Elements with this VR shall not be multi-valued.</para>
+              <note><para>Both absolute and relative URIs are permitted. If the URI is relative, then it is relative to the base URI of the object within which it is contained.</para></note>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>The subset of the Default Character Repertoire required for the URI as defined in IETF RFC3986 Section 2, plus the space (20H) character permitted only as trailing padding.</para>
+              <para>Characters outside the permitted character set must be "percent encoded".</para>
+              <note><para>The Backslash (5CH) character is among those disallowed in URIs.</para></note>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>2<superscript>32</superscript>-2 bytes maximum.</para>
+              <note><para>The length is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para></note>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>US</para>
               <para>Unsigned Short</para>
             </td>
@@ -1868,6 +1926,13 @@
           </orderedlist>
         </note>
       </section>
+      <section xml:id="sect_6.2.3" label="6.2.3" status="3">
+        <title>URI/URL (UR) Value Representation</title>
+        <para>The URI/URL (UR) VR uses a subset of the Default Character Repertoire as defined in <xref linkend="biblio_RFC_3986"/>, and shall not use any code extension or replacement techniques.
+          URI/URL domain name components that in their original form use characters outside the permitted character set shall use the Internationalized Domain Names for Applications encoding in accordance with IETF RFC5890 and RFC5891.
+          Other URI/URL content that uses characters outside the permitted character set shall use the Internationalized Resource Identifiers encoding mechanism of IETF RFC 3987, representing the content string in UTF-8 and percent encoding characters as required.</para>
+        <note><para>For example, the use of a patient name in a URI/URL string may require use of the <xref linkend="biblio_RFC_3987"/> technique.</para></note>
+      </section>
     </section>
     <section xml:id="sect_6.3" label="6.3" status="2">
       <title>Enumerated Values and Defined Terms</title>
@@ -1922,7 +1987,7 @@
         <para>A padding character may need to be appended to a fixed length character string value in the above case.</para>
       </note>
       <para>Only the last UID Value in a multiple valued Data Element with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to ensure that the entire Value Field (including "\" delimiters) is of even length.</para>
-      <para>Data Elements with a VR of SQ, OF, OW, OB or UN shall always have a Value Multiplicity of one.</para>
+      <para>Data Elements with a VR of SQ, OF, OW, OB, UN or UR shall always have a Value Multiplicity of one.</para>
     </section>
   </chapter>
   <chapter xml:id="chapter_7" label="7" status="1">
@@ -2018,9 +2083,9 @@
             <para>for VRs of OB, OW, OF, SQ and UN the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
           </listitem>
           <listitem>
-            <para>for VRs of UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
+            <para>for VRs of UR and UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
             <note>
-              <para>VRs of UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
+              <para>VRs of UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
             </note>
           </listitem>
           <listitem>
@@ -2028,7 +2093,7 @@
           </listitem>
         </itemizedlist>
         <table frame="box" rules="all" xml:id="table_7.1-1" label="7.1-1">
-          <caption>Data Element with Explicit VR of OB, OW, OF, SQ, UT or UN</caption>
+          <caption>Data Element with Explicit VR of OB, OW, OF, SQ, UR, UT or UN</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -4132,7 +4197,7 @@
           <para>URL Generated by the application = http://server.xxx/multiframeimage.jp2?fsiz=200,200&amp;stream=17</para>
           <para>A valid stream query parameter value is always less than or equal to the value in the Number of Frames (0028,0008).</para>
         </note>
-        <para>The syntax of the Pixel Data Provider URL (0028,7FE0) is defined in ISO/IEC 15444-9 Annex C (Client Request). That standard respects the URI recommendations IETF RFC2396. The transport protocol shall be HTTP or HTTPS.</para>
+        <para>The syntax of the Pixel Data Provider URL (0028,7FE0) is defined in ISO/IEC 15444-9 Annex C (Client Request). That standard respects the URI recommendations <xref linkend="biblio_RFC_3986"/>. The transport protocol shall be HTTP or HTTPS.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
