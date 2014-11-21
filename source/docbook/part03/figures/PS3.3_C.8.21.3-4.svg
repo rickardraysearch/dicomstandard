@@ -2,7 +2,7 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="182px" viewBox="0 0 502 182" enable-background="new 0 0 502 182" xml:space="preserve">
+	 width="502px" height="137px" viewBox="0 0 502 137" enable-background="new 0 0 502 137" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -19,48 +19,40 @@
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500" height="180"/>
+	<rect x="1" y="1" fill="#F5EED8" width="500" height="135"/>
 	<g>
 		
-			<rect x="86.563" y="33.453" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="242.89" height="105.947"/>
+			<rect x="86.562" y="15.526" fill="#CEDFEF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="242.891" height="105.947"/>
+		<rect x="87.847" y="18.355" fill="none" width="205.157" height="8.511"/>
+		<text transform="matrix(0.9288 0 0 1 87.8472 24.7593)" font-size="9">X-Ray 3D Reconstruction Sequence (0018,9530)</text>
+		<rect x="337.4" y="78.612" fill="none" width="78.037" height="20.977"/>
+		<text transform="matrix(0.9288 0 0 1 337.4004 85.0215)"><tspan x="0" y="0" font-size="9">Reconstruction 2</tspan><tspan x="0" y="10.801" font-size="9">= 1\2</tspan></text>
+		<rect x="337.4" y="18.612" fill="none" width="78.037" height="20.978"/>
+		<text transform="matrix(0.9288 0 0 1 337.4004 25.0215)"><tspan x="0" y="0" font-size="9">Reconstruction 1</tspan><tspan x="0" y="10.8" font-size="9">= 1</tspan></text>
 		
-			<line fill="#4F8ABE" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="3" x1="329.453" y1="165.689" x2="329.453" y2="19.561"/>
+			<rect x="104.128" y="29.333" fill="#8AB4D7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="225.325" height="46.07"/>
 		
-			<line fill="#4F8ABE" stroke="#005695" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="3" x1="86.563" y1="162.439" x2="86.563" y2="16.311"/>
-		<rect x="149.352" y="150.221" fill="none" width="117.313" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 178.7378 156.6777)" font-size="9">Other Attributes</text>
-		<rect x="149.352" y="19.886" fill="none" width="117.313" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 178.7378 26.3438)" font-size="9">Other Attributes</text>
-		<rect x="87.847" y="36.282" fill="none" width="205.157" height="8.511"/>
-		<text transform="matrix(0.9288 0 0 1 87.8477 42.707)" font-size="9">X-Ray 3D Reconstruction Sequence (0018,9530)</text>
-		<rect x="337.401" y="96.539" fill="none" width="78.036" height="20.977"/>
-		<text transform="matrix(0.9288 0 0 1 337.4014 102.9688)"><tspan x="0" y="0" font-size="9">Reconstruction 2</tspan><tspan x="0" y="10.801" font-size="9">= 1\2</tspan></text>
-		<rect x="337.401" y="36.539" fill="none" width="78.036" height="20.978"/>
-		<text transform="matrix(0.9288 0 0 1 337.4014 42.9692)"><tspan x="0" y="0" font-size="9">Reconstruction 1</tspan><tspan x="0" y="10.8" font-size="9">= 1</tspan></text>
+			<rect x="120.905" y="44.409" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="208.548" height="30.994"/>
 		
-			<rect x="104.129" y="47.26" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="225.324" height="46.07"/>
+			<line fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="120.905" y1="59.797" x2="329.453" y2="59.797"/>
+		<rect x="108.468" y="32.944" fill="none" width="198.935" height="8.512"/>
+		<text transform="matrix(0.9288 0 0 1 108.4678 39.3491)" font-size="9">Item 1</text>
+		<rect x="129.045" y="49.192" fill="none" width="165.975" height="8.51"/>
+		<text transform="matrix(0.9288 0 0 1 129.0449 55.6016)" font-size="9">&gt;Acquisition Index (0020,9518)</text>
+		<rect x="129.044" y="64.091" fill="none" width="166.28" height="8.509"/>
+		<text transform="matrix(0.9288 0 0 1 129.0449 70.502)" font-size="9">&gt;... (other attributes)</text>
 		
-			<rect x="120.906" y="62.336" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="208.547" height="30.994"/>
+			<rect x="104.128" y="75.403" fill="#8AB4D7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="225.325" height="46.07"/>
 		
-			<line fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="120.906" y1="77.724" x2="329.453" y2="77.724"/>
-		<rect x="108.468" y="50.871" fill="none" width="198.934" height="8.512"/>
-		<text transform="matrix(0.9288 0 0 1 108.4683 57.2969)" font-size="9">Item 1</text>
-		<rect x="129.045" y="67.119" fill="none" width="165.974" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 129.0454 73.5493)" font-size="9">Acquisition Index (0020,9518)</text>
-		<rect x="129.045" y="82.018" fill="none" width="166.28" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 129.0454 88.4497)" font-size="9">other attributes...</text>
+			<rect x="120.905" y="90.479" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="208.548" height="30.995"/>
 		
-			<rect x="104.129" y="93.33" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="225.324" height="46.07"/>
-		
-			<rect x="120.906" y="108.405" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="208.547" height="30.995"/>
-		
-			<line fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="120.906" y1="123.793" x2="329.453" y2="123.793"/>
-		<rect x="108.468" y="96.941" fill="none" width="198.934" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 108.4683 103.3672)" font-size="9">Item 2</text>
-		<rect x="129.045" y="113.188" fill="none" width="165.974" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 129.0454 119.6191)" font-size="9">Acquisition Index (0020,9518)</text>
-		<rect x="129.045" y="128.088" fill="none" width="166.28" height="8.51"/>
-		<text transform="matrix(0.9288 0 0 1 129.0454 134.5195)" font-size="9">other attributes...</text>
+			<line fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" x1="120.905" y1="105.866" x2="329.453" y2="105.866"/>
+		<rect x="108.468" y="79.015" fill="none" width="198.935" height="8.51"/>
+		<text transform="matrix(0.9288 0 0 1 108.4678 85.4189)" font-size="9">Item 2</text>
+		<rect x="129.045" y="95.261" fill="none" width="165.975" height="8.51"/>
+		<text transform="matrix(0.9288 0 0 1 129.0449 101.6719)" font-size="9">&gt;Acquisition Index (0020,9518)</text>
+		<rect x="129.044" y="110.161" fill="none" width="166.28" height="8.51"/>
+		<text transform="matrix(0.9288 0 0 1 129.0449 116.5723)" font-size="9">&gt;... (other attributes)</text>
 	</g>
 </g>
 </svg>

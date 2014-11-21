@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.6" label="PS3.6" version="5.0">
   <title>PS3.6</title>
-  <subtitle>DICOM PS3.6 2014b - Data Dictionary</subtitle>
+  <subtitle>DICOM PS3.6 2014c - Data Dictionary</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -8765,6 +8765,646 @@
           </td>
           <td align="center" colspan="1" rowspan="1">
             <para>IS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>    
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5100)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Active Aperture</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Active&#x200b;Aperture</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>US</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5101)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Total Aperture</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Total&#x200b;Aperture</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5102)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Aperture Elevation</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Aperture&#x200b;Elevation</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5103)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Main Lobe Angle</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Main&#x200b;Lobe&#x200b;Angle</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5104)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Main Roof Angle</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Main&#x200b;Roof&#x200b;Angle</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5105)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Connector Type</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Connector&#x200b;Type</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>CS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5106)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Model Number</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Model&#x200b;Number</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SH</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5107)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Angle Float</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Angle&#x200b;Float</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5108)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Roof Angle</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Roof&#x200b;Angle</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5109)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Element 1 Position</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Element&#x200b;1&#x200b;Position</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>CS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510A)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Material Velocity</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Material&#x200b;Velocity</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510B)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Material</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Material</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SH</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510C)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Offset Z</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Offset&#x200b;Z</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510D)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Origin Offset X</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Origin&#x200b;Offset&#x200b;X</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510E)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Time Delay</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Time&#x200b;Delay</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,510F)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Name</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Name</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SH</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5110)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Manufacturer Name</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Manufacturer&#x200b;Name</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SH</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5111)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Description</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Description</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>LO</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5112)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Nominal Beam Angle</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Nominal&#x200b;Beam&#x200b;Angle</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5113)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Offset X</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Offset&#x200b;X</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5114)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Offset Y</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Offset&#x200b;Y</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5115)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Total Length</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Total&#x200b;Length</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5116)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge In Contact Length</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;In&#x200b;Contact&#x200b;Length</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5117)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Front Gap</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Front&#x200b;Gap</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5118)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Total Height</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Total&#x200b;Height</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,5119)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Front Height</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Front&#x200b;Height</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511A)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Rear Height</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Rear&#x200b;Height</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511B)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Total Width</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Total&#x200b;Width</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511C)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge In Contact Width</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;In&#x200b;Contact&#x200b;Width</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511D)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Chamfer Height</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Chamfer&#x200b;Height</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511E)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge Curve</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Wedge&#x200b;Curve</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>CS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DICONDE</para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0014,511F)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Radius Along the Wedge</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Radius&#x200b;Along&#x200b;Wedge</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
           </td>
           <td align="center" colspan="1" rowspan="1">
             <para>1</para>
@@ -32653,6 +33293,86 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
+            <para>(0028,0122)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float Pixel Padding Value</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float&#x200b;Pixel&#x200b;Padding&#x200b;Value</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>FL</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0028,0123)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double Float Pixel Padding Value</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double&#x200b;Float&#x200b;Pixel&#x200b;Padding&#x200b;Value</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>FD</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0028,0124)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float Pixel Padding Range Limit</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float&#x200b;Pixel&#x200b;Padding&#x200b;Range&#x200b;Limit</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>FL</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0028,0125)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double Float Pixel Padding Range Limit</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double&#x200b;Float&#x200b;Pixel&#x200b;Padding&#x200b;Range&#x200b;Limit</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>FD</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
             <para>
               <emphasis role="italic">(0028,0200)</emphasis>
             </para>
@@ -38181,6 +38901,46 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
+            <para>(0038,0101)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Pertinent Resources Sequence</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Pertinent&#x200b;Resources&#x200b;Sequence</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SQ</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0038,0102)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Resource Description</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Resource&#x200b;Description</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>LO</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
             <para>(0038,0300)</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
@@ -41941,34 +42701,22 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">(0040,4005)</emphasis>
-            </para>
+            <para>(0040,4005)</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">Scheduled Procedure Step Start DateTime</emphasis>
-            </para>
+            <para>Scheduled Procedure Step Start DateTime</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">Scheduled&#x200b;Procedure&#x200b;Step&#x200b;Start&#x200b;Date&#x200b;Time</emphasis>
-            </para>
+            <para>Scheduled&#x200b;Procedure&#x200b;Step&#x200b;Start&#x200b;Date&#x200b;Time</para>
           </td>
           <td align="center" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">DT</emphasis>
-            </para>
+            <para>DT</para>
           </td>
           <td align="center" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">1</emphasis>
-            </para>
+            <para>1</para>
           </td>
           <td align="center" colspan="1" rowspan="1">
-            <para>
-              <emphasis role="italic">RET</emphasis>
-            </para>
+            <para/>
           </td>
         </tr>
         <tr valign="top">
@@ -42697,6 +43445,26 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
+            <para>(0040,9092)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Parametric Map Frame Type Sequence</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Parametric&#x200b;​Map​&#x200b;Frame&#x200b;Type&#x200b;Sequence</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SQ</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
             <para>(0040,9094)</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
@@ -42835,6 +43603,27 @@
             <para/>
           </td>
         </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0040,9220)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Quantity Definition Sequence</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Quantity​&#x200b;Definition​&#x200b;Sequence</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SQ</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
             <para>(0040,9224)</para>
@@ -46124,6 +46913,26 @@
           </td>
           <td align="left" colspan="1" rowspan="1">
             <para>XDS&#x200b;Retrieval&#x200b;Sequence</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>SQ</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(0040,E025)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>WADO-RS Retrieval Sequence</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>WADORS&#x200b;Retrieval&#x200b;Sequence</para>
           </td>
           <td align="center" colspan="1" rowspan="1">
             <para>SQ</para>
@@ -70697,6 +71506,26 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
+            <para>(300A,00DE)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Effective Wedge Angle</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Effective&#x200b;Wedge&#x200b;Angle</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>DS</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
             <para>(300A,00E0)</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
@@ -81257,6 +82086,46 @@
         </tr>
         <tr valign="top">
           <td align="center" colspan="1" rowspan="1">
+            <para>(7FE0,0008)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float Pixel Data</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Float​&#x200b;Pixel&#x200b;​Data</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>OF</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
+            <para>(7FE0,0009)</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double Float Pixel Data</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Double&#x200b;Float&#x200b;Pixel​&#x200b;Data</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>OD</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para>1</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para/>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="center" colspan="1" rowspan="1">
             <para>(7FE0,0010)</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
@@ -85241,6 +86110,20 @@
         </tr>
         <tr valign="top">
           <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.5.1.4.1.&#x200b;1.&#x200b;30</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Parametric Map Storage</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>SOP Class</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
             <para>1.2.840.10008.5.1.4.1.&#x200b;1.&#x200b;66</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
@@ -86848,7 +87731,21 @@
             <para>1.2.840.10008.5.1.4.&#x200b;34.&#x200b;5</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
-            <para>Unified Worklist and Procedure Step SOP Instance</para>
+            <para>UPS Global Subscription SOP Instance</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>Well-known SOP Instance</para>
+          </td>
+          <td align="center" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.5.1.4.&#x200b;34.&#x200b;5.&#x200b;1</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para>UPS Filtered Global Subscription SOP Instance</para>
           </td>
           <td align="left" colspan="1" rowspan="1">
             <para>Well-known SOP Instance</para>
@@ -97866,6 +98763,303 @@
           </td>
           <td align="left" colspan="1" rowspan="1">
             <para><olink targetdoc="PS3.16" targetptr="sect_CID_8303" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.984</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_85" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_85" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.985</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4100" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4100" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.986</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4101" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4101" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.987</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4102" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4102" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.988</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4103" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4103" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.989</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4104" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4104" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.990</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4105" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4105" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.991</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4106" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4106" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.992</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4107" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4107" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.993</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4108" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4108" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.994</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4109" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4109" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.995</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4110" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4110" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.996</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4111" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="table_CID_4111" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.997</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7021" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7021" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.998</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_100" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_100" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.999</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7466" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7466" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1000</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7467" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7467" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1001</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7468" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7468" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1002</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_6146" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_6146" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1003</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7469" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7469" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1004</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_6147" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_6147" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1005</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12020" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12020" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1006</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12021" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12021" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1007</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12022" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12022" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1008</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12023" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_12023" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1009</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7222" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_7222" xrefstyle="select: title"/></para>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td align="left" colspan="1" rowspan="1">
+            <para>1.2.840.10008.6.1.1010</para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_9000" xrefstyle="select: labelnumber"/></para>
+          </td>
+          <td align="left" colspan="1" rowspan="1">
+            <para><olink targetdoc="PS3.16" targetptr="sect_CID_9000" xrefstyle="select: title"/></para>
           </td>
         </tr>
       </tbody>

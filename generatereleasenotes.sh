@@ -1,6 +1,8 @@
 #!/bin/sh
 
-basefile="releasenotes_2014b"
+release=`cat release.txt`
+
+basefile="releasenotes_${release}"
 
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 

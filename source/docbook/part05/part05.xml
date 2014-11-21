@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.5" label="PS3.5" version="5.0">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2014b - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2014c - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -655,8 +655,8 @@
       <para><emphasis role="bold">Item Delimitation Data Element</emphasis>: Used to mark the end of an Item of Undefined Length in a Sequence of Items. This is the last Data Element in an Item of Undefined Length.</para>
       <para><emphasis role="bold">Little Endian</emphasis>: A form of byte ordering where multiple byte binary values are encoded with the least significant byte encoded first; and the remaining bytes encoded in increasing order of significance.</para>
       <para><emphasis role="bold">Nested Data Set</emphasis>: A Data Set contained within a Data Element of another Data Set. Data Sets can be nested recursively. Only Data Elements with Value Representation Sequence of Items may, themselves, contain Data Sets.</para>
-      <para><emphasis role="bold">Pixel Cell</emphasis>: The container for a single Pixel Sample Value that may include unused bits or bits for data other than the Pixel Sample Value (e.g., overlay planes). The size of a Pixel Cell shall be specified by the Bits Allocated (0028, 0100) Data Element.</para>
-      <para><emphasis role="bold">Pixel Data</emphasis>: Graphical data (e.g., images or overlays) of variable pixel-depth encoded in the Pixel Data Element, with Value Representation OW or OB. Additional descriptor Data Elements are often used to describe the contents of the Pixel Data element.</para>
+      <para><emphasis role="bold">Pixel Cell</emphasis>: The container for a single Pixel Sample Value that may include unused bits. The size of a Pixel Cell shall be specified by the Bits Allocated (0028, 0100) Data Element.</para>
+      <para><emphasis role="bold">Pixel Data</emphasis>: Graphical data (e.g., images) of variable pixel-depth encoded in the Pixel Data, Float Pixel Data or Double Float Pixel Data Element.</para>
       <para><emphasis role="bold">Pixel Sample Value</emphasis>: A value associated with an individual pixel. An individual pixel consists of one or more Pixel Sample Values (e.g., color images).</para>
       <para><emphasis role="bold">Private Data Element</emphasis>: Additional Data Element, defined by an implementer, to communicate information that is not contained in Standard Data Elements. Private Data elements have odd Group Numbers.</para>
       <para><emphasis role="bold">Repeating Group</emphasis>: Standard Data Elements within a particular range of Group Numbers where elements that have identical Element Numbers have the same meaning within each Group (and the same VR, VM, and Data Element Type). Repeating Groups shall only exist for Curves and Overlay Planes (Group Numbers (50xx,eeee) and (60xx,eeee), respectively) and are a remnant of versions of this standard prior to V3.0.</para>
@@ -947,7 +947,7 @@
                 <para>Preferred repertoires as defined in ENV 41 503 and ENV 41 508 for the use in Western and Eastern Europe, respectively, are: ISO-IR 100, ISO-IR 101, ISO-IR 144, ISO-IR 126. See <xref linkend="sect_6.1.2.3" xrefstyle="select: label"/>.</para>
               </listitem>
               <listitem>
-                <para>Information Object Definitions using different character sets cannot rely¾per se¾ on lexical ordering or string comparison of data elements represented as character strings. These operations can only be carried out within a given character repertoire and not across repertoire boundaries.</para>
+                <para>Information Object Definitions using different character sets cannot rely per se on lexical ordering or string comparison of data elements represented as character strings. These operations can only be carried out within a given character repertoire and not across repertoire boundaries.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -1387,7 +1387,7 @@
               </note>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>"0"-"9", "+", "-", "E", "e", "." of Default Character Repertoire</para>
+              <para>"0"-"9", "+", "-", "E", "e", "." and the SPACE character of Default Character Repertoire</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>16 bytes maximum</para>
@@ -1479,7 +1479,7 @@
               <para>-2<superscript>31</superscript>&lt;= n &lt;= (2<superscript>31</superscript>-1).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>"0"-"9", "+", "-" of Default Character Repertoire</para>
+              <para>"0"-"9", "+", "-" and the SPACE character of Default Character Repertoire</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>12 bytes maximum</para>
@@ -1720,7 +1720,7 @@
               <para>In the context of a Query with range matching (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), the character "-" is allowed.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>16 bytes maximum</para>
+              <para>14 bytes maximum</para>
               <para>In the context of a Query with range matching (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), the length is 28 bytes maximum.</para>
             </td>
           </tr>
@@ -1789,7 +1789,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>2<superscript>32</superscript>-2 bytes maximum.</para>
-              <note><para>The length is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para></note>
+              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template: Note 2"/></para>
             </td>
           </tr>
           <tr valign="top">
@@ -1832,7 +1832,7 @@
             <para>For attributes that were present in ACR-NEMA 1.0 and 2.0 and that have been retired, the specifications of Value Representation and Value Multiplicity provided are recommendations for the purpose of interpreting their values in objects created in accordance with earlier versions of this standard. These recommendations are suggested as most appropriate for a particular attribute; however, there is no guarantee that historical objects will not violate some requirements or specified VR and/or VM.</para>
           </listitem>
           <listitem>
-            <para xml:id="note_6.2-3-2">The length of the value of the UT VR is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para>
+            <para xml:id="note_6.2-3-2">The length of the value of UR and UT VRs is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -2899,7 +2899,7 @@
         <title>Encoding of Private Elements</title>
         <para>The Value Representations used for Private Data Elements shall be the same as those VRs specified for Standard Data Elements in <xref linkend="sect_6.2" xrefstyle="select: label"/>. The encoding shall conform to the requirements for those VRs and shall be in accordance with the negotiated Transfer Syntax. A Private Data Element with SQ VR (a Private Data Sequence) may include Items with both Standard and Private Data Elements. Standard Data Elements used within a Private Data Sequence shall use the VRs as defined in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> for those data elements.</para>
         <para>The semantics of Standard Data Elements within a Private Data Sequence, and the definition of Attribute Values, are implementation dependent.</para>
-        <para>For a Standard Extended SOP Class the Attributes Pixel Data (07FE,0010), Waveform Data (5400,1010), and Overlay Data (60xx,3000) shall not be included within a Private Sequence Item, nor within a standard Sequence Item nested directly or indirectly within a Private Sequence Item.</para>
+        <para>For a Standard Extended SOP Class the Attributes Pixel Data (07FE,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009), Waveform Data (5400,1010) and Overlay Data (60xx,3000) shall not be included within a Private Sequence Item, nor within a standard Sequence Item nested directly or indirectly within a Private Sequence Item.</para>
       </section>
     </section>
   </chapter>
@@ -2907,8 +2907,20 @@
     <title>Encoding of Pixel, Overlay and Waveform Data</title>
     <section xml:id="sect_8.1" label="8.1" status="2">
       <title>Pixel and Overlay Data, and Related Data Elements</title>
-      <para>The Pixel Data Element (7FE0,0010) and Overlay Data Element (60xx,3000) shall be used for the exchange of encoded graphical image data. These elements along with additional Data Elements, specified as Attributes of the Image Information Entities defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, shall be used to describe the way in which the Pixel Data and Overlay Data are encoded and shall be interpreted. Finally, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/> and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>), Pixel Data may be compressed.</para>
-      <para>The Pixel Data Element (7FE0,0010) and Overlay Data Element (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>). The only difference between OW and OB being that OB, a string of bytes, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+      <para>Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009) and Overlay Data (60xx,3000) shall be used for the exchange of encoded graphical image data. These elements along with additional Data Elements, specified as Attributes of the Image Information Entities defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, shall be used to describe the way in which the Pixel Data and Overlay Data are encoded and shall be interpreted. Finally, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/> and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>), Pixel Data may be compressed.</para>
+      <para>Pixel Data (7FE0,0010) and Overlay Data (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>). The only difference between OW and OB being that OB, a string of bytes, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+      <para>Float Pixel Data (7FE0,0008) has a
+        Value Representation of OF.</para>
+      <para>Double Float Pixel Data (7FE0,0009)
+        has a Value Representation of OD.</para>
+      <para>For Pixel Data values encoded in OF
+        and OD, any value that is permitted by the IEEE 754:1985 may be used, including NaN,
+        +ve Infinity and -ve Infinity. See <xref linkend="table_6.2-1"
+          xrefstyle="select: label"/></para>
+      <note><para>Float and double float pixel data values are
+        not arbitrarily constrained to finite numbers, since it may be important for the
+        application to signal that the result of a calculation that produced a pixel is an
+        infinite value or not a number.</para></note>
       <section xml:id="sect_8.1.1" label="8.1.1" status="3">
         <title>Pixel Data Encoding of Related Data Elements</title>
         <para>Encoded Pixel Data of various bit depths shall be accommodated. The following three Data Elements shall define the Pixel structure:</para>
@@ -2923,11 +2935,22 @@
             <para>High Bit (0028,0102)</para>
           </listitem>
         </itemizedlist>
-        <para>Each Pixel Cell shall contain a single Pixel Sample Value. The size of the Pixel Cell shall be specified by Bits Allocated (0028,0100). Bits Stored (0028,0101) defines the total number of these allocated bits that will be used to represent a Pixel Sample Value. Bits Stored (0028,0101) shall never be larger than Bits Allocated (0028,0100). High Bit (0028,0102) specifies where the high order bit of the Bits Stored (0028,0101) is to be placed with respect to the Bits Allocated (0028,0100) specification. Bits not used for Pixel Sample Values can be used for overlay planes described further in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+        <para>Each Pixel Cell shall contain a single Pixel Sample Value. The size of the Pixel Cell shall be specified by Bits Allocated (0028,0100). Bits Stored (0028,0101) defines the total number of these allocated bits that will be used to represent a Pixel Sample Value. Bits Stored (0028,0101) shall never be larger than Bits Allocated (0028,0100). High Bit (0028,0102) specifies where the high order bit of the Bits Stored (0028,0101) is to be placed with respect to the Bits Allocated (0028,0100) specification.</para>
         <note>
-          <para>For example, in Pixel Data with 16 bits (2 bytes) allocated, 12 bits stored, and bit 15 specified as the high bit, one pixel sample is encoded in each 16-bit word, with the 4 least significant bits of each word not containing Pixel Data. See <xref linkend="chapter_D" xrefstyle="template: Annex %n"/> for other examples of the basic encoding schemes.</para>
+          <orderedlist>
+            <listitem>
+              <para>For example, in Pixel Data with 16 bits (2 bytes) allocated, 12 bits stored, and bit 15 specified as the high bit, one pixel sample is encoded in each 16-bit word, with the 4 least significant bits of each word not containing Pixel Data. See <xref linkend="chapter_D" xrefstyle="template: Annex %n"/> for other examples of the basic encoding schemes.</para>
+            </listitem>
+            <listitem>
+              <para>Formerly, bits not used for Pixel Sample
+              Values were described as being usable for overlay planes, but this usage has
+              been retired. See PS3.5-2004.</para>
+            </listitem>
+          </orderedlist>
         </note>
-        <para>Restrictions are placed on acceptable Values for Bits Allocated (0028,0100), Bits Stored (0028,0101), and High Bit (0028,0102) and are specified in the Information Object Definitions in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Also, the Value Field containing Pixel Data, like all other Value Fields in DICOM, shall be an even number of bytes in length. This means that the Value Field may need to be padded with data that is not part of the image and shall not be considered significant. If needed, the padding bits shall be appended to the end of the Value Field, and shall be used only to extend the data to the next even byte increment of length.</para>
+        <para>Restrictions are placed on acceptable Values for Bits Allocated (0028,0100), Bits Stored (0028,0101), and High Bit (0028,0102) for Pixel Data (7FE0,0010) and are specified in the Information Object Definitions in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+        <para>Restrictions are placed on acceptable Values for Bits Allocated (0028,0100) for Float Pixel Data (7FE0,0008) and Double Float Pixel Data (7FE0,0009), such that only a single Pixel Cell entirely occupies the allocated bits specified by Bits Allocated (0028,0100), hence Bits Stored (0028,0101) and High Bit (0028,0102) are not sent.</para>
+        <para>Also, the Value Field containing Pixel Data, like all other Value Fields in DICOM, shall be an even number of bytes in length. This means that the Value Field may need to be padded with data that is not part of the image and shall not be considered significant. If needed, the padding bits shall be appended to the end of the Value Field, and shall be used only to extend the data to the next even byte increment of length.</para>
         <para>In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field.</para>
         <note>
           <para>Receiving applications should be aware that some older applications may send Pixel Data with excess padding, which was not explicitly prohibited in earlier versions of the Standard. Applications should be prepared to accept such Pixel Data elements, but may delete the excess padding. In no case should a sending application place private data in the padding data.</para>
@@ -2968,19 +2991,48 @@
     <section xml:id="sect_8.2" label="8.2" status="2">
       <title>Native or Encapsulated Format Encoding</title>
       <para>Pixel data conveyed in the Pixel Data Element (7FE0,0010) may be sent either in a Native (uncompressed) Format or in an Encapsulated Format (e.g., compressed) defined outside the DICOM standard.</para>
-      <para>If Pixel Data is sent in a Native Format, the Value Representation OW is most often required. The Value Representation OB may also be used for Pixel Data in cases where Bits Allocated has a value less than or equal to 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+      <para>Pixel Data conveyed in the Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) shall be in a Native (uncompressed) Format if encoded in a Standard Transfer Syntax.</para>
       <note>
-        <para>The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data when using the default Transfer Syntax.</para>
+        <orderedlist>
+          <listitem>
+            <para>In future, if Standard Transfer Syntaxes are defined for compression of Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009), this constraint may be relaxed and Encapsulated Format permitted.</para>
+          </listitem>
+          <listitem>
+            <para>This constraint does not apply to Private Transfer Syntaxes.</para>
+          </listitem>
+        </orderedlist>
       </note>
-      <para>Native format Pixel Cells are encoded as the direct concatenation of the bits of each Pixel Cell, the least significant bit of each Pixel Cell is encoded in the least significant bit of the encoded word or byte, immediately followed by the next most significant bit of each Pixel Cell in the next most significant bit of the encoded word or byte, successively until all bits of the Pixel Cell have been encoded, then immediately followed by the least significant bit of the next Pixel Cell in the next most significant bit of the encoded word or byte. The number of bits of each Pixel Cell is defined by the Bits Allocated (0028,0100) Data Element Value. When a Pixel Cell crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>). For Pixel Data encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is
+      <para>If Pixel Data (7FE0,0010) is sent in a Native Format, the Value Representation OW is most often required. The Value Representation OB may also be used for Pixel Data (7FE0,0010) in cases where Bits Allocated has a value less than or equal to 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+      <note>
+        <para>The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data (7FE0,0010) when using the default Transfer Syntax.</para>
+      </note>
+      <para>Float Pixel Data (7FE0,0008) is sent
+        in Native Format; the Value Representation shall be OF, Bits Allocated (0028,0100)
+        shall be 32, Bits Stored (0028,0101), High Bit (0028,0102) and Pixel Representation
+        (0028,0103) shall not be present.</para>
+      <para>Double Float Pixel Data (7FE0,0009)
+        is sent in Native Format; the Value Representation shall be OD, Bits Allocated
+        (0028,0100) shall be 64, Bits Stored (0028,0101) and High Bit (0028,0102) and Pixel
+        Representation (0028,0103) shall not be present.</para>
+      <para>It is not permitted to have more than
+        one of Pixel Data Provider URL (0028,7FE0), Pixel Data (7FE0,0010), Float Pixel Data
+        (7FE0,0008) or Double Float Pixel Data (7FE0,0009) in the top level Data
+        Set.</para>
+      <note>
+        <para>Pixel Data encoded in Float Pixel
+          Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) can be considered as
+          consisting of Pixel Cells that entirely occupy the allocated bits, and therefore do
+          not cross word boundaries.</para>
+      </note>
+      <para>Native format Pixel Cells are encoded as the direct concatenation of the bits of each Pixel Cell, the least significant bit of each Pixel Cell is encoded in the least significant bit of the encoded word or byte, immediately followed by the next most significant bit of each Pixel Cell in the next most significant bit of the encoded word or byte, successively until all bits of the Pixel Cell have been encoded, then immediately followed by the least significant bit of the next Pixel Cell in the next most significant bit of the encoded word or byte. The number of bits of each Pixel Cell is defined by the Bits Allocated (0028,0100) Data Element Value. When a Pixel Cell crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>). For Pixel Data (7FE0,0010) encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is
   defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para>For Pixel Data encoded with the Value Representation OB, the Pixel Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
+            <para>For Pixel Data (7FE0,0010) encoded with the Value Representation OB, the Pixel Data (7FE0,0010) encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
           </listitem>
           <listitem>
-            <para>If encoding Pixel Data with a Value for Bits Allocated (0028,0100) not equal to 16 be sure to read and understand <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+            <para>If encoding Pixel Data (7FE0,0010) with a Value for Bits Allocated (0028,0100) not equal to 16 be sure to read and understand <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -4179,6 +4231,11 @@
     <section xml:id="sect_8.4" label="8.4" status="2">
       <title>Pixel Data Provider Service</title>
       <para>Specific Transfer Syntaxes allow for the pixel data of the message to be replaced with a reference to a pixel data provider service. The pixel data provider service that is referenced supplies the pixel data using a network protocol that is defined outside DICOM.</para>
+      <note>
+        <para>The Pixel Data Provider Service is
+          not applicable to Pixel Data encoded as Float Pixel Data (7FE0,0008) or Double Float
+          Pixel Data (7FE0,0009).</para>
+      </note>
       <section xml:id="sect_8.4.1" label="8.4.1" status="3">
         <title>JPIP Referenced Pixel Data</title>
         <para>DICOM provides a mechanism for supporting the use of JPEG 2000 Interactive Protocol through the inclusion of a URL reference to a pixel data provider service. <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines two Transfer Syntaxes that utilize URL references to a JPIP pixel data provider service.</para>
@@ -4634,7 +4691,9 @@
     </section>
     <section xml:id="sect_A.4" label="A.4" status="2">
       <title>Transfer Syntaxes For Encapsulation of Encoded Pixel Data</title>
-      <para>These Transfer Syntaxes apply to the encoding of the entire DICOM Data Set, even though the image Pixel Data (7FE0,0010) portion of the DICOM Data Set is the only portion that is encoded by an encapsulated format. This implies that when a DICOM Message is being encoded according to an encapsulation Transfer Syntax the following requirements shall be met:</para>
+      <para>These Transfer Syntaxes apply to the encoding of the entire DICOM Data Set, even though the image Pixel Data (7FE0,0010) portion of the DICOM Data Set is the only portion that is encoded by an encapsulated format.
+        These Transfer Syntaxes shall only be used when Pixel Data (7FE0,0010) is present in the top level Data Set, and hence shall not be used when Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) are present.
+        This implies that when a DICOM Message is being encoded according to an encapsulation Transfer Syntax the following requirements shall be met:</para>
       <orderedlist>
         <listitem>
           <para>The Data Elements contained in the Data Set structure shall be encoded with Explicit VR (with a VR Field) as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
@@ -5447,7 +5506,7 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para>The Pixel Data (7FE0,0010) is not handled in any special manner. The pixel data is first encoded as sequential uncompressed frames without encapsulation, and then is handled as part of the byte stream fed to the "deflate" compressor in the same manner as the value of any other attribute.</para>
+            <para>The Pixel Data in Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) is not handled in any special manner. The pixel data is first encoded as sequential uncompressed frames without encapsulation, and then is handled as part of the byte stream fed to the "deflate" compressor in the same manner as the value of any other attribute.</para>
           </listitem>
           <listitem>
             <para>This transfer syntax is particularly useful for compression of objects without pixel data, such as structured reports. It is not particularly effective at image compression, since any benefit obtained from compressing the non-pixel data is offset by less effective compression of the much larger pixel data.</para>
@@ -5480,7 +5539,9 @@
     </section>
     <section xml:id="sect_A.6" label="A.6" status="2">
       <title>DICOM JPIP Referenced Transfer Syntax (Explicit VR)</title>
-      <para>This Transfer Syntax applies to the encoding of the entire DICOM Data Set. This implies that when a DICOM Data Set is being encoded with the DICOM Little Endian Transfer Syntax the following requirements shall be met:</para>
+      <para>This Transfer Syntax applies to the encoding of the entire DICOM Data Set.
+        This Transfer Syntax shall only be used when Pixel Data (7FE0,0010) is present in the top level Data Set, and hence shall not be used when Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) are present. 
+        This implies that when a DICOM Data Set is being encoded with the DICOM Little Endian Transfer Syntax the following requirements shall be met:</para>
       <orderedlist numeration="loweralpha">
         <listitem>
           <para>The Data Elements contained in the Data Set structure shall be encoded with Explicit VR (with a VR Field) as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
@@ -5818,6 +5879,32 @@
       <note>
         <para>In this example, the Overlay Bits are numbered in the same manner that Pixel Cells are numbered in the other examples in this Annex. That is Overlay Bit 1 is the first bit of the Overlay Plane, encoded from left to right and top to bottom, a row at a time.</para>
       </note>
+    </section>
+    <section xml:id="sect_D.3" label="D.3" status="2">
+      <title>Examples of Float and Double Float Pixel Data</title>
+      
+      <para>Float Pixel Data having the Value Representation OF always has 32 bits allocated; the resulting byte streams pictured in <xref linkend="figure_D.3-1" xrefstyle="select: label"/> are as they would be transmitted across a network and/or stored on media.</para>
+      <para>
+        <figure xml:id="figure_D.3-1" label="D.3-1" pgwide="1">
+          <title>Sample Float Pixel Data Byte Streams for VR = OF</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/PS3.5_D.3-1.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </para>
+      <para>Double Float Pixel Data having the Value Representation OD always has 64 bits allocated; the resulting byte streams pictured in <xref linkend="figure_D.3-2" xrefstyle="select: label"/> are as they would be transmitted across a network and/or stored on media.</para>
+      <para>
+        <figure xml:id="figure_D.3-2" label="D.3-2" pgwide="1">
+          <title>Sample Float Pixel Data Byte Streams for VR = OD</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/PS3.5_D.3-2.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </para>
     </section>
   </chapter>
   <chapter xml:id="chapter_E" label="E" status="1">

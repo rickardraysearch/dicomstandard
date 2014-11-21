@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2014b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2014c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1960,6 +1960,17 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>Nuclear Medicine Image Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.30</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Parametric Map Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>Transfer</para>
@@ -18181,6 +18192,9 @@
               <th align="center" colspan="1" rowspan="1">
                 <para>VM</para>
               </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para>Attribute Description</para>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -18197,6 +18211,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>EXINTMODMAKER</para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18210,6 +18227,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18225,6 +18245,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18238,6 +18261,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>EXINTMODMAKER</para>
               </td>
             </tr>
             <tr valign="top">
@@ -18253,6 +18279,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18266,6 +18295,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18281,6 +18313,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18294,6 +18329,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18309,6 +18347,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>EXINTMODMAKER</para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18322,6 +18363,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18337,6 +18381,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18350,6 +18397,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18365,6 +18415,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18378,6 +18431,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
             <tr valign="top">
@@ -18393,6 +18449,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>8</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18407,6 +18466,9 @@
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
               </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
+              </td>
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
@@ -18420,6 +18482,9 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para>1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para></para>
               </td>
             </tr>
           </tbody>

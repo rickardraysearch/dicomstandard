@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="5.0" xml:id="PS3.4" label="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2014b - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2014c - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -102,6 +102,7 @@
     <para>ISO/IEC Directives, 1989 Part 3 - Drafting and Presentation of International Standards.</para>
     <para>ISO 7498-1 Information Processing Systems-Open Systems Interconnection- Basic Reference Model</para>
     <para>ISO/TR 8509 Information Processing Systems-Open Systems Interconnection- Service Conventions</para>
+    <para>IETF RFC7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</para>
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
@@ -273,6 +274,18 @@
         </listitem>
         <listitem>
           <para>PCS-Value</para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section label="3.11" status="2" xml:id="sect_3.11">
+      <title>HTTP Definitions</title>
+      <para>This Part of the Standard makes use of the following terms defined in IETF RFC7230:</para>
+      <orderedlist numeration="loweralpha">
+        <listitem>
+          <para>Origin-Server</para>
+        </listitem>
+        <listitem>
+          <para>User-Agent</para>
         </listitem>
       </orderedlist>
     </section>
@@ -1301,7 +1314,7 @@
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para>
-                  <emphasis role="bold">Attribute</emphasis>
+                  <emphasis role="bold">Attribute Name</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -2138,6 +2151,19 @@
             <td align="left" colspan="1" rowspan="1">
               <para>
                 <olink targetdoc="PS3.3" targetptr="sect_A.5" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>Parametric Map Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.30</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.75" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -6146,7 +6172,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -6369,7 +6395,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -6703,7 +6729,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -6787,7 +6813,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -7322,7 +7348,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -11570,7 +11596,7 @@
               </th>
               <th align="center" colspan="1" rowspan="1">
                 <para>
-                  <emphasis role="bold">Attribute</emphasis>
+                  <emphasis role="bold">Attribute Name</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -12690,7 +12716,7 @@
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -13641,7 +13667,7 @@
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -14726,7 +14752,7 @@
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute name</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -14857,7 +14883,7 @@
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -15257,7 +15283,7 @@
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -15392,7 +15418,7 @@
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute name</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -15609,7 +15635,7 @@
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para>
-                        <emphasis role="bold">Attribute name</emphasis>
+                        <emphasis role="bold">Attribute Name</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
@@ -17164,6 +17190,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>Parametric Map Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>1.2.840.10008.5.1.4.1.1.30</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>
+                <olink targetdoc="PS3.3" targetptr="sect_A.75" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>Raw Data Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -18260,7 +18299,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -18473,7 +18512,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -21635,7 +21674,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -22601,7 +22640,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -22883,7 +22922,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -23031,7 +23070,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -24202,7 +24241,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -24701,6 +24740,17 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
+                    <para>&gt;&gt;Retrieve URL</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>(0008,1190)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>3/3</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
                     <para>&gt;&gt;Storage Media File-Set ID</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
@@ -24891,7 +24941,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -25345,7 +25395,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -25459,7 +25509,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -30059,7 +30109,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -30098,7 +30148,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -30198,12 +30248,12 @@
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">UID NAME</emphasis>
+                    <emphasis role="bold">SOP Class Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">UID Value</emphasis>
+                    <emphasis role="bold">SOP Class UID</emphasis>
                   </para>
                 </th>
               </tr>
@@ -30253,7 +30303,7 @@
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para>
-                  <emphasis role="bold">Attribute</emphasis>
+                  <emphasis role="bold">Attribute Name</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -30802,7 +30852,7 @@
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Description</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -30858,12 +30908,12 @@
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">UID NAME</emphasis>
+                    <emphasis role="bold">SOP Class Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">UID Value</emphasis>
+                    <emphasis role="bold">SOP Class UID</emphasis>
                   </para>
                 </th>
               </tr>
@@ -32393,6 +32443,36 @@
       <para>The UPS Pull SOP Class allows an SCU to query a Worklist Manager (the SCP) for matching UPS instances, and instruct the SCP to update the status and contents of selected items (UPS instances). The SCU effectively pulls work instructions from the worklist. As work progresses, the SCU records details of the activities performed and the results created in the UPS instance.</para>
       <para>The UPS Watch SOP Class allows an SCU to subscribe for status update events and retrieve the details of work items (UPS instances) managed by the SCP.</para>
       <para>The UPS Event SOP Class allows an SCP to provide the actual status update events for work items it manages to relevant (i.e., subscribed) SCUs.</para>
+      <para>Each of these services has an equivalent HTTP operation defined by the UPS-RS Worklist Service (see <olink targetdoc="PS3.18" targetptr="sect_6.9" xrefstyle="select: docname label quotedtitle"/>).</para>
+      <para>While a Unified Worklist and Procedure Step Service Class SCP is not required to support UPS-RS, an SCP may choose to support one or more of the UPS-RS services as an Origin-Server. In this scenario, an SCP/Origin Server shall follow the same internal behavior for all Workitems irrespective of whether they originated with a DIMSE request or an HTTP request. A DIMSE request and its equivalent HTTP request with the same parameters shall yield the same response.</para>
+      <para>For example:</para>
+      <itemizedlist>
+        <listitem>
+          <para>A Workitem instance created via DIMSE N-CREATE can be retrieved via HTTP requests and vice-versa</para>
+        </listitem>
+        <listitem>
+          <para>A Workitem instance created via DIMSE N-CREATE can be updated, have its state changed or be cancelled via HTTP requests and vice-versa</para>
+        </listitem>
+        <listitem>
+          <para>A C-FIND request and an HTTP SearchForUPS request with the same parameters shall return the same set of results</para>
+        </listitem>
+        <listitem>
+          <para>An N-EVERT-REPORT SCU that also supports HTTP subscriptions will record whether a given subscriber uses DIMSE or WebSockets and send the appropriate form of notification to that subscriber</para>
+        </listitem>
+        <listitem>
+          <para>A change made to a Workitem instance will result in the same event notifications regardless of whether the change was requested via DIMSE or HTTP</para>
+        </listitem>
+        <listitem>
+          <para>A Global Subscription request or a Filtered Global Subscription request will subscribe an SCU (or User-Agent) to instances created both via DIMSE and via HTTP requests</para>
+        </listitem>
+        <listitem>
+          <para>A DIMSE event subscriber will receive notifications for relevant changes made via HTTP requests</para>
+        </listitem>
+        <listitem>
+          <para>An HTTP event subscriber will receive notifications for relevant changes made via DIMSE requests</para>
+        </listitem>
+      </itemizedlist>
+      <para>The mapping between UPS DIMSE operations and UPS-RS services is defined in <olink targetdoc="PS3.18" targetptr="sect_6.9" xrefstyle="select: docname label quotedtitle"/>.</para>
       <section label="CC.1.1" status="3" xml:id="sect_CC.1.1">
         <title>Unified Procedure Step States</title>
         <para><xref linkend="figure_CC.1.1-1" xrefstyle="select: label"/>, <xref linkend="table_CC.1.1-1" xrefstyle="select: label"/> and <xref linkend="table_CC.1.1-2" xrefstyle="select: label"/> specify how changes in the state of a Unified Procedure Step shall be managed.</para>
@@ -32945,7 +33025,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -33027,7 +33107,7 @@
           <para>Upon successfully changing the state of a UPS instance to IN PROGRESS, the SCP shall record the Transaction UID provided by the SCU in the Transaction UID (0008,1195) of the UPS instance.</para>
           <para>Upon completion of the N-ACTION request, the SCP shall return, via the N-ACTION response primitive, the N-ACTION Status Code applicable to the associated request as shown in <xref linkend="table_CC.2.1-2" xrefstyle="select: label"/>.</para>
           <para>The SCP shall only perform legal state changes as described in <xref linkend="table_CC.1.1-2" xrefstyle="select: label"/>.</para>
-          <para>The SCP shall refuse requests to change the state of an IN PROGRESS UPS unless the Transaction UID of the UPS instance is provided in the N-ACTION request.</para>
+          <para>The SCP shall refuse requests to change the state of an IN PROGRESS UPS unless the Transaction UID of the UPS instance is provided in the request.</para>
           <para>The SCP shall refuse requests to change the state of an IN PROGRESS UPS to COMPLETED or CANCELED if the Final State requirements described in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/> have not been met.</para>
           <para>After the state of the UPS instance has been changed to COMPLETED or CANCELED, the SCP shall not delete the instance until all deletion locks have been removed.</para>
           <note>
@@ -33180,7 +33260,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -33425,7 +33505,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -33442,7 +33522,7 @@
             </thead>
             <tbody>
               <tr valign="top">
-                <td align="left" colspan="1" rowspan="2">
+                <td align="left" colspan="1" rowspan="3">
                   <para>Subscribe to Receive UPS Event Reports</para>
                 </td>
                 <td align="center" colspan="1" rowspan="2">
@@ -33464,6 +33544,14 @@
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para>(0074,1230)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para>1/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="2" rowspan="1">
+                  <para>Match Keys (see <xref linkend="sect_CC.2.3.1" xrefstyle="select: labelnum"/>)</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para>1/1</para>
@@ -33803,6 +33891,10 @@
           <note>
             <para>This "global subscription" is useful for SCUs that wish to monitor all activities without having to issue regular C-FINDs to identify new UPS instances.</para>
           </note>
+          <para>To subscribe for events relating to a filtered subset of all current and subsequently created UPS instances (Filtered Global Subscription) managed by the SCP, the SCU shall use Action Type ID 3 (Subscribe to Receive UPS Event Reports) and provide both the well-known UID 1.2.840.10008.5.1.4.34.5.1 and a set of Matching Keys and values in the N-ACTION primitive request (see <xref linkend="sect_CC.2.3.3.1" xrefstyle="select: label"/>). The SCU shall indicate a need for UPS instances to persist after their states have changed to COMPLETED or CANCELED by setting the value of the Deletion Lock to TRUE. Otherwise the SCU shall set the value of the Deletion Lock to FALSE.</para>
+          <note>
+            <para>The well-known UID for a Filtered Global Subscription is distinct from the Global Subscription well-known UID.</para>
+          </note>
           <para>To unsubscribe for events relating to
   all current UPS instances managed by the SCP and also stop being subscribed to subsequently created UPS instances, the SCU shall use Action Type ID 4 (Unsubscribe from Receiving UPS Event Reports) and provide the well-known UID 1.2.840.10008.5.1.4.34.5 in the N-ACTION primitive request.</para>
           <note>
@@ -33815,7 +33907,14 @@
           </note>
           <para>The successful N-ACTION Response Status Code indicates that the SCP has received the N-ACTION request and the Subscription State for the AE has been successfully modified.</para>
           <note>
-            <para>When subscribing to a specific instance, the SCU can also expect to receive an initial N-EVENT-REPORT containing the current state of the UPS instance. When subscribing globally with the Deletion Lock set to TRUE, the SCU can expect to receive initial N-EVENT-REPORTs for every instance currently managed by the SCP. Initial N-EVENT-REPORTs for newly created instances, received as a result of a global subscription, will appear as transitions to the SCHEDULED state.</para>
+            <orderedlist>
+              <listitem>
+                <para>When subscribing to a specific instance, the SCU can also expect to receive an initial N-EVENT-REPORT containing the current state of the UPS instance. When subscribing globally with the Deletion Lock set to TRUE, the SCU can expect to receive initial N-EVENT-REPORTs for every instance currently managed by the SCP. Initial N-EVENT-REPORTs for newly created instances, received as a result of a global subscription, will appear as transitions to the SCHEDULED state.</para>
+              </listitem>
+              <listitem>
+                <para>The UPS-RS User-Agent is responsible for opening the N-EVENT-REPORT communication channel (see <olink targetdoc="PS3.18" targetptr="sect_6.9.10" xrefstyle="select: docname label quotedtitle"/>). The UPS-RS User-Agent is also responsible for re-establishing the N-EVENT-REPORT communication channel if it is disconnected. This differs from the DIMSE approach where the UPS SCP opens an Association for N-EVENT-REPORT messages as necessary.</para>
+              </listitem>
+            </orderedlist>
           </note>
           <para>A warning N-ACTION Response Status Code of "Deletion Lock not granted", indicates that the AE subscription requested by the SCU was successful, but the deletion lock has not been set.</para>
           <para>A failure N-ACTION Response Status Code indicates that the subscription state change requested will not be processed and no subscription states have been changed. The action taken by the SCU upon receiving this status is beyond the scope of this Standard.</para>
@@ -33824,13 +33923,19 @@
         <section label="CC.2.3.3" status="4" xml:id="sect_CC.2.3.3">
           <title>Service Class Provider Behavior</title>
           <para>Upon receipt of the N-ACTION request, the SCP shall attempt to update the Global Subscription State and/or UPS Subscription State of the specified AE with respect to the specified SOP Instance UID as described in <xref linkend="table_CC.2.3-2" xrefstyle="select: label"/> and then return, via the N-ACTION response primitive, the appropriate N-ACTION Response Status Code.</para>
+          <para>The SCP may optionally allow an Application Entity to subscribe globally to a filtered set of UPS Instances. In this case, the Application Entity will only be subscribed to existing and future UPS Instances that match the search criteria specified by the Matching Keys of the N-ACTION request (see <xref linkend="sect_CC.2.3.3.1" xrefstyle="select: label"/>). If the SCP does not support Filtered Global Subscription it will return a Failure response with a Code of C307 (see <xref linkend="table_CC.2.3-3" xrefstyle="select: label"/>).</para>
           <para>A success status conveys that the Global Subscription State and/or UPS Subscription State for the AE specified in Receiving AE (0074,1234) was successfully modified by the SCP. The AE-TITLE in Receiving AE (0074,1234) may be different than the AE-TITLE used by the SCU for the association negotiation. The SCP shall use the AE-TITLE specified in Receiving AE (0074,1234). This allows systems to subscribe other systems they know would be interested in events for a certain UPS.</para>
-          <para>For all UPS instances managed by the SCP, the SCP shall send N-EVENT-REPORTS (as described in <xref linkend="sect_CC.2.4.3" xrefstyle="select: label"/>) to AEs that have a UPS Subscription State of "Subscribed with Lock" or "Subscribed w/o Lock".</para>
+          <para>For all UPS instances managed by the SCP, the SCP shall send N-EVENT-REPORTS (as described in <xref linkend="sect_CC.2.4.3" xrefstyle="select: label"/>) to AEs that have a UPS Subscription State of "Subscribed with Lock" or "Subscribed w/o Lock". If the SCP also supports the HTTP CreateSubscription service as an Origin-Server, the SCP shall also send HTTP SendEventReport messages (see <olink targetdoc="PS3.18" targetptr="sect_6.9.11" xrefstyle="select: docname label quotedtitle"/>).</para>
           <para>Upon successfully processing a subscription action, the SCP shall send initial UPS State Report N-EVENT-REPORTs, as indicated in <xref linkend="table_CC.2.3-2" xrefstyle="select: label"/>, providing the current status of the UPS Instance to the Receiving AE.</para>
           <para>The SCP may also refuse both specific and global Subscription requests by returning a failure N-ACTION Response Status Code for "Refused: Not Authorized" if the refusal depends on permissions related to the tasks or the requestor, or "Refused: SCP does not support Event Reports" if the SCP does not support sending the events. The SCP must document in its conformance statement if it might refuse Subscription requests.</para>
           <para>The SCP may remove existing Deletion Locks by changing the UPS Subscription State for the AE from "Subscribed with Lock" to "Subscribed w/o Lock" and/or by changing the Global Subscription State for an AE from "Global Subscription with Lock" to "Global Subscription w/o Lock". This is intended to allow the SCP to deal with SCU malfunctions. The SCP must document in its conformance statement if it might remove a Deletion Lock.</para>
           <para>The SCP may also refuse the Deletion Lock portion of a specific or global Subscription request. For example, a request to modify the UPS Subscription State for the AE to "Subscribed with Lock" would instead result in a UPS Subscription State of "Subscribed w/o Lock" and a Warning status (see <xref linkend="table_CC.2.3-3" xrefstyle="select: label"/>) returned to the requesting SCU. This is intended to deal with Security and related policy restrictions. The SCP must document in its conformance statement if it might refuse a Deletion Lock.</para>
           <para>Bi-directional Authentication of machines/users/applications is possible at association time (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>). <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> provides a "Refused: Not Authorized" error code. Further requiring or documenting authentication and/or authorization features from the SCU or SCP is beyond the scope of this SOP Class.</para>
+          <section label="CC.2.3.3.1" status="5" xml:id="sect_CC.2.3.3.1">
+            <title>Filtered Global Subscription</title>
+            <para>An SCP that supports Filtered Global Subscription shall create an instance subscription for each UPS Instance that would match a C-FIND request with the Matching Keys provided in the subscription request.</para>
+            <para>The SCP shall support the same matching logic used for C-FIND (see <xref linkend="sect_CC.2.8.3" xrefstyle="select: label"/>).</para>
+          </section>
         </section>
         <section label="CC.2.3.4" status="4" xml:id="sect_CC.2.3.4">
           <title>Status Codes</title>
@@ -33940,7 +34045,7 @@
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para>
-                    <emphasis role="bold">Attribute</emphasis>
+                    <emphasis role="bold">Attribute Name</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -34308,7 +34413,7 @@
           <para>Each time the SCP completes a Subscribe to Receive UPS Event Reports Action (see <xref linkend="sect_CC.2.3.1" xrefstyle="select: label"/>) for a specific UPS instance, the SCP shall send to the Receiving AE a UPS State Report Event and provide the current value of the Procedure Step State (0074,1000) and Input Readiness State (0040,4041) Attributes for the UPS instance.</para>
           <para>Each time the SCP completes a Subscribe to Receive UPS Event Reports Action (see <xref linkend="sect_CC.2.3.1" xrefstyle="select: label"/>) for the well-known UID 1.2.840.10008.5.1.4.34.5 with the value of the Deletion Lock set to TRUE (i.e., a Global Subscription with Lock), the SCP shall send to the Receiving AE a UPS State Report Event for every UPS Instance managed by the SCP and provide the current value of the Procedure Step State (0074,1000) and Input Readiness State (0040,4041) Attributes.</para>
           <para>Each time the SCP creates a new UPS instance, the SCP shall send a UPS State Report Event, indicating a change of status to SCHEDULED and the initial value of and Input Readiness State (0040,4041), to all AEs with a Global Subscription State of "Global Subscription with Lock" or "Global Subscription w/o Lock". (see <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>)</para>
-          <para>In the following text "Subscribed SCUs" means all AEs where the UPS Subscription State of the UPS Instance in question is "Subscribed with Lock" or "Subscribed w/o Lock". (see <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>).</para>
+          <para>In the following text "Subscribed SCUs" means all AEs where the UPS Subscription State of the UPS Instance in question is "Subscribed with Lock" or "Subscribed w/o Lock" (see <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>). If the SCP also supports the HTTP CreateSubscription service as an Origin-Server, "Subscribed SCUs" also includes all CreateSubscription User-Agents where the UPS Subscription State of the UPS Instance in question is "Subscribed with Lock" or "Subscribed w/o Lock" (see <olink targetdoc="PS3.18" targetptr="sect_6.9.7" xrefstyle="select: docname label quotedtitle"/>).</para>
           <para>Each time the SCP changes the Procedure Step State (0074,1000) Attribute for a UPS instance, the SCP shall send a UPS State Report Event to subscribed SCUs.</para>
           <para>Each time the SCP changes the Input Readiness State (0040,4041) Attribute for a UPS instance, the SCP shall send a UPS State Report Event to subscribed SCUs.</para>
           <para>Each time the SCP receives an N-ACTION with an Action Type ID of 2 (Request UPS Cancel), the SCP shall send a UPS Cancel Requested Event to subscribed SCUs. The SCP shall include the AE Title of the triggering N-ACTION SCU in the Requesting AE Attribute. The SCP shall include the Reason For Cancellation, Contact Display Name and Contact URI Attributes if they were provided in the triggering N-ACTION.</para>
@@ -35344,7 +35449,7 @@
                     <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>Required if Media Retrieval Sequence (0040,E022), WADO Retrieval Sequence (0040,E023), and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
+                    <para>Required if Media Retrieval Sequence (0040,E022), WADO Retrieval Sequence (0040,E023), WADO-RS Retrieval Sequence (0040,E025) and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -35396,7 +35501,7 @@
                     <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>Required if DICOM Retrieval Sequence (0040,E021), WADO Retrieval Sequence (0040,E023), and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
+                    <para>Required if DICOM Retrieval Sequence (0040,E021), WADO Retrieval Sequence (0040,E023), WADO-RS Retrieval Sequence (0040,E025) and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -35473,33 +35578,8 @@
                     <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>Required if DICOM Retrieval Sequence (0040,E021), Media Retrieval Sequence (0040,E022), and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
+                    <para>Required if DICOM Retrieval Sequence (0040,E021), Media Retrieval Sequence (0040,E022), WADO-RS Retrieval Sequence (0040,E025) and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
                   </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para>&gt;Retrieve Location UID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>(0040,E011)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>1/1</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>1/1</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>-/1</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>*</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para>1</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1"/>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
@@ -35550,7 +35630,7 @@
                     <para>1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>Required if DICOM Retrieval Sequence (0040,E021), Media Retrieval Sequence (0040,E022), and WADO Retrieval Sequence (0040,E023) are not present. May be present otherwise.</para>
+                    <para>Required if DICOM Retrieval Sequence (0040,E021), Media Retrieval Sequence (0040,E022), WADO-RS Retrieval Sequence (0040,E025) and WADO Retrieval Sequence (0040,E023) are not present. May be present otherwise.</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -35602,6 +35682,60 @@
                     <para>2</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>WADO-RS Retrieval Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>(0040,E025)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Required if DICOM Retrieval Sequence (0040,E021), Media Retrieval Sequence (0040,E022), WADO Retrieval Sequence (0040,E023), and XDS Retrieval Sequence (0040,E024) are not present. May be present otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>&gt;Retrieve URL</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>(0008,1190)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>*</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para>1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para></para>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -37395,7 +37529,7 @@
                     <para>3/2</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para>O</para>
+                    <para>R</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para>2</para>
@@ -38958,9 +39092,9 @@
         </section>
         <section label="CC.2.5.3" status="4" xml:id="sect_CC.2.5.3">
           <title>Service Class Provider Behavior</title>
-          <para>The SCP shall create and maintain UPS instances as instructed by N-CREATE requests and as specified by <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>.</para>
+          <para>The SCP shall create and maintain UPS instances as instructed by creation requests and as specified by <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>.</para>
           <para>The SCP shall return, via the N-CREATE response primitive, the N-CREATE Response Status Code applicable to the associated request.</para>
-          <para>The SCP shall accept N-CREATE request primitives only if the value of the Procedure Step State (0074,1000) Attribute is "SCHEDULED". If the Procedure Step State Attribute has another value, the SCP shall fail the N-CREATE.</para>
+          <para>The SCP shall accept creation requests only if the value of the Procedure Step State (0074,1000) Attribute is "SCHEDULED". If the Procedure Step State Attribute has another value, the SCP shall fail the request.</para>
           <para>The SCP may modify Attributes of a UPS instance, e.g., to correct invalid Attribute values. A description of the modifications the SCP may perform shall be documented in the conformance statement of the SCP.</para>
           <para>The SCP may also create and maintain UPS instances without receiving a UPS instance N-CREATE request, e.g., based on internal logic, operator inputs or HL7 messages. The contents of the instance created by the SCP must still comply with the N-CREATE requirements in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>.</para>
           <para>Upon creating a new UPS Instance, the SCP shall update UPS Subscription Status of the Instance for each AE with a Global Subscription as described in <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>.</para>
@@ -39053,10 +39187,10 @@
         <section label="CC.2.6.3" status="4" xml:id="sect_CC.2.6.3">
           <title>Service Class Provider Behavior</title>
           <para>The SOP Class UID of the specified UPS instance will always be the UPS Push SOP Class UID, which might not match the UPS SOP Class negotiated with the SCU. See <xref linkend="sect_CC.3.1" xrefstyle="select: label"/> for further details.</para>
-          <para>The SCP shall support the Attribute changes to the UPS instance specified by the SCU in the N-SET request primitive as specified in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>.</para>
-          <para>The SCP shall refuse N-SET requests on an IN PROGRESS UPS and not modify the UPS if the N-SET request does not include the Transaction UID (0008,1195) Attribute with the same value as currently recorded in the UPS instance.</para>
-          <para>The SCP shall refuse N-SET requests on a COMPLETED or CANCELED UPS.</para>
-          <para>The SCP shall use the Specific Character Set (0008,0005) value to appropriately modify its internal representation so that subsequent operations reflect the combination of the character sets in use by the Attributes in this N-SET and those used by Attributes that have not been modified.</para>
+          <para>The SCP shall support the Attribute changes to the UPS instance specified by the SCU in the set request as specified in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>.</para>
+          <para>The SCP shall refuse set requests on an IN PROGRESS UPS and not modify the UPS if the set request does not include the Transaction UID (0008,1195) Attribute with the same value as currently recorded in the UPS instance.</para>
+          <para>The SCP shall refuse set requests on a COMPLETED or CANCELED UPS.</para>
+          <para>The SCP shall use the Specific Character Set (0008,0005) value to appropriately modify its internal representation so that subsequent operations reflect the combination of the character sets in use by the Attributes in this request and those used by Attributes that have not been modified.</para>
           <para>The SCP shall return, via the N-SET response primitive, the N-SET Response Status Code applicable to the associated request as specified in <xref linkend="sect_CC.2.6.4" xrefstyle="select: label"/>.</para>
           <para>The SCP may itself modify any Attributes of a UPS instance independently of an N-SET request, e.g., if the SCP is performing the procedure step itself, if it has been determined that the performing SCU has been disabled, or if it is necessary to correct Attribute values after completion of the procedure in order to carry out reconciliation of the data. A description of the coercions the SCP may perform shall be documented in the conformance statement of the SCP.</para>
           <para>Bi-directional Authentication of machines/users/applications is possible at association time (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>). <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> provides a "Refused: Not Authorized" error code. There are no specific requirements to perform authorization.</para>
@@ -43264,7 +43398,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -43396,7 +43530,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para>
-                      <emphasis role="bold">Attribute</emphasis>
+                      <emphasis role="bold">Attribute Name</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">

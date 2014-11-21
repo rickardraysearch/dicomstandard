@@ -11,6 +11,8 @@
 	<xsl:param name="root.filename" select="''"/>
 	<xsl:param name="use.id.as.filename" select="'1'"/>
 	
+	<xsl:param name="chunk.section.depth" select="4"></xsl:param>	<!-- default is 3, which makes PS3.3 sections too large. -->
+	
 	<!-- specify default body font and size -->
 	<xsl:param name="body.font.family" select="'sans-serif'"/>
 	<xsl:param name="body.font.master" select="9"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2014b - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2014c - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -70,7 +70,16 @@
     <para>IETF RFC 3240 Application/dicom MIME Sub-type Registration <link xl:href="http://tools.ietf.org/html/rfc3240"/></para>
     <para>IETF RFC 3986 Uniform Resource Identifiers (URI): Generic Syntax <link xl:href="http://tools.ietf.org/html/rfc3986"/></para>
     <para>IETF RFC 4627 The application/json Media Type for JavaScript Object Notation (JSON) <link xl:href="http://tools.ietf.org/html/rfc4627"/></para>
+    <para>IETF RFC 6455 The WebSocket Protocol <link xl:href="http://tools.ietf.org/html/rfc6455"/></para>
+    <para>IETF RFC 6570 URI Template <link xl:href="http://tools.ietf.org/html/rfc6570"/></para>
     <para>IETF RFC 7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing <link xl:href="http://tools.ietf.org/html/rfc7230"/></para>
+    <para>IETF RFC 7231 Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content <link xl:href="http://tools.ietf.org/html/rfc7231"/></para>
+    <para>IETF RFC 7232 Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests <link xl:href="http://tools.ietf.org/html/rfc7232"/></para>
+    <para>IETF RFC 7233 Hypertext Transfer Protocol (HTTP/1.1): Range Requests <link xl:href="http://tools.ietf.org/html/rfc7233"/></para>
+    <para>IETF RFC 7234 Hypertext Transfer Protocol (HTTP/1.1): Caching <link xl:href="http://tools.ietf.org/html/rfc7234"/></para>
+    <para>IETF RFC 7235 Hypertext Transfer Protocol (HTTP/1.1): Authentication <link xl:href="http://tools.ietf.org/html/rfc7235"/></para>
+    <para>IETF RFC 7236 Initial Hypertext Transfer Protocol (HTTP) Authentication Scheme Registrations <link xl:href="http://tools.ietf.org/html/rfc7236"/></para>
+    <para>IETF RFC 7237 Initial Hypertext Transfer Protocol (HTTP) Method Registrations <link xl:href="http://tools.ietf.org/html/rfc7237"/></para>
     <para>ISO/IEC 10918 JPEG Standard for digital compression and encoding of continuous-tone still images</para>
     <para>IHE ITI TF-2x: Appendix V IHE IT Infrastructure Technical Framework, Volume 2x, Appendix V (Web Services for IHE Transactions)</para>
     <para>SUBM-wadl-20090831 Web Application Description Language (WADL), W3C Member Submission 31 August 2009 <link xl:href="http://www.w3.org/Submission/wadl/"/>)
@@ -198,6 +207,12 @@
         </listitem>
       </varlistentry>
       <varlistentry>
+        <term>UPS-RS</term>
+        <listitem>
+          <para>Unified Procedure Step by RESTful Services</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
         <term>URL/URI</term>
         <listitem>
           <para>Uniform Resource Locator / Identifier</para>
@@ -301,7 +316,7 @@
               <para>Bulk Data Requester (Retrieve Study, Series, Instance Bulk Data)</para>
             </listitem>
             <listitem>
-              <para>Metadata Requester (Retrieve Study Metadata)</para>
+              <para>Metadata Requester (Retrieve Study, Series, Instance Metadata)</para>
             </listitem>
           </orderedlist>
         </listitem>
@@ -400,7 +415,9 @@
         <section xml:id="sect_6.3.2.2" label="6.3.2.2" status="4">
           <title>Content</title>
           <para>The content shall be a single MIME part containing the object to be retrieved.</para>
-          <para>Note: Multiple objects in a response are not supported by this standard. The parameters select only a single object to retrieve. Most current Web Clients are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
+          <note>
+            <para>Multiple objects in a response are not supported by this standard. The parameters select only a single object to retrieve. Most current Web Clients are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
+          </note>
         </section>
       </section>
     </section>
@@ -436,6 +453,9 @@
                 </listitem>
                 <listitem>
                   <para>The baseline XDS.b schema (namespace="urn:ihe:iti:xds-b:2007", schema="XDS.b_DocumentRepository.xsd")</para>
+                </listitem>
+                <listitem>
+                  <para>The baseline DICOM WADO-WS schema (namespace="urn:dicom:wado:ws:2011", schema="dicom.wado.ws.2011.xsd")</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -1037,7 +1057,7 @@
           <tbody>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX1</para>
+                <para>urn:dicom:wado:0001</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Unable to anonymize the requested instance(s).</para>
@@ -1045,7 +1065,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX2</para>
+                <para>urn:dicom:wado:0002</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Web Server does not support anonymization.</para>
@@ -1053,7 +1073,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX3</para>
+                <para>urn:dicom:wado:0003</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>The requested instance(s) are not immediately available, but can be made available by manual request.</para>
@@ -1061,7 +1081,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX4</para>
+                <para>urn:dicom:wado:0004</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Instance is no longer available, e.g., document retention rules have caused it to be removed or relocated.</para>
@@ -1069,7 +1089,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX5</para>
+                <para>urn:dicom:wado:0005</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>The requested instance(s) cannot be returned because the size or count exceeds resource limits.</para>
@@ -1077,7 +1097,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX6</para>
+                <para>urn:dicom:wado:0006</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Web Server does not support the requested format or transfer syntax.</para>
@@ -1085,7 +1105,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX7</para>
+                <para>urn:dicom:wado:0007</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>The requested instance(s) cannot be provided in the requested format or transfer syntax.</para>
@@ -1093,7 +1113,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX8</para>
+                <para>urn:dicom:wado:0008</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Single image format is not available for multi-frame images.</para>
@@ -1101,7 +1121,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XXX9</para>
+                <para>urn:dicom:wado:0009</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Identifier does not match SOP Class (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1109,7 +1129,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX10</para>
+                <para>urn:dicom:wado:0010</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Inconsistent identifiers, e.g., Study and Series are correct but Series is in a different Study (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1117,7 +1137,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX11</para>
+                <para>urn:dicom:wado:0011</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>SOP Class not supported (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1125,7 +1145,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX12</para>
+                <para>urn:dicom:wado:0012</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Invalid parameter value in request (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1133,7 +1153,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX13</para>
+                <para>urn:dicom:wado:0013</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Unsupported parameter in request (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1141,7 +1161,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX14</para>
+                <para>urn:dicom:wado:0014</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Processing Failure (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> C-MOVE)</para>
@@ -1149,7 +1169,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX15</para>
+                <para>urn:dicom:wado:0015</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Study Instance UID not known</para>
@@ -1157,7 +1177,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX16</para>
+                <para>urn:dicom:wado:0016</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Series Instance UID not known</para>
@@ -1165,7 +1185,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX17</para>
+                <para>urn:dicom:wado:0017</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Document UID not known</para>
@@ -1173,7 +1193,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX18</para>
+                <para>urn:dicom:wado:0018</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Out of range Frame number</para>
@@ -1181,7 +1201,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX19</para>
+                <para>urn:dicom:wado:0019</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Presentation UID not known</para>
@@ -1189,7 +1209,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para>urn:dicom:wado:XX20</para>
+                <para>urn:dicom:wado:0020</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>Presentation Series UID not known</para>
@@ -1225,7 +1245,7 @@
         </listitem>
         <listitem>
           <para>RetrieveMetadata</para>
-          <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed.</para>
+          <para>This action retrieves the DICOM instances presented as the study, series, or instance metadata with the bulk data removed.</para>
         </listitem>
       </orderedlist>
       <para>DICOM objects returned shall be <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary objects encoded in a requested Transfer Syntax (Explicit VR Little Endian by default) with one message part per DICOM Instance.</para>
@@ -1747,7 +1767,7 @@
         </section>
         <section xml:id="sect_6.5.2.2" label="6.5.2.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para>The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the data to any of the requested media types/Transfer Syntaxes, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
           <para>The client can compare the SOP Instance UIDs or bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
@@ -1913,7 +1933,7 @@
         </section>
         <section xml:id="sect_6.5.3.2" label="6.5.3.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide either a single DICOM <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> object for the SOP Instance or one or more bulk data items. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
+          <para>The Server shall provide either a single DICOM <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> object for the SOP Instance or one or more bulk data items. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para>The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the bulk data to any of the requested media types, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
           <para>The client can compare the bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
@@ -2075,7 +2095,7 @@
         </section>
         <section xml:id="sect_6.5.4.2" label="6.5.4.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para>The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
           <para>All response formats has a content type of multipart/related with a message boundary separator.</para>
           <section xml:id="sect_6.5.4.2.1" label="6.5.4.2.1" status="5">
@@ -2220,7 +2240,7 @@
         </section>
         <section xml:id="sect_6.5.5.2" label="6.5.5.2" status="4">
           <title>Response</title>
-          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
+          <para>The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para>The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
           <para>All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section xml:id="sect_6.5.5.2.1" label="6.5.5.2.1" status="5">
@@ -2270,8 +2290,8 @@
       </section>
       <section xml:id="sect_6.5.6" label="6.5.6" status="3">
         <title>WADO-RS - RetrieveMetadata</title>
-        <para>This action retrieves the DICOM instances presented as the full study metadata with the bulk data removed. The response is metadata for the DICOM attributes.</para>
-        <para>The full study metadata includes all attributes of the study; however, a RESTful Service is permitted to replace the Value Field of an attribute with a BulkDataURL for attributes with Value Representations (VR) of FL, FD, IS, LT, OB, OD, OF, OW, SL, SS, ST, UL, UN, US, and UT. The client can use the BulkDataURL with the RetrieveBulkData action to retrieve the original Value Field of that attribute.</para>
+        <para>This action retrieves the DICOM instances presented as the study, series, or instance metadata with the bulk data removed. The response is metadata for the DICOM attributes.</para>
+        <para>The study, series, or instance metadata includes all attributes; however, a RESTful Service is permitted to replace the Value Field of an attribute with a BulkDataURL for attributes with Value Representations (VR) of FL, FD, IS, LT, OB, OD, OF, OW, SL, SS, ST, UL, UN, US, and UT. The client can use the BulkDataURL with the RetrieveBulkData action to retrieve the original Value Field of that attribute.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
@@ -2287,21 +2307,34 @@
         </note>
         <section xml:id="sect_6.5.6.1" label="6.5.6.1" status="4">
           <title>Request</title>
-          <para>The specific Services resource to be used for the RetrieveMetadata action shall be as follows:</para>
+          <para>The specific Services resources to be used for the RetrieveMetadata action shall be as follows:</para>
           <itemizedlist>
             <listitem>
-              <para>Resource</para>
+              <para>Resources</para>
               <itemizedlist>
                 <listitem>
-                  <para>{SERVICE}/studies/{StudyInstanceUID}/metadata, where</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para>{SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
-                    </listitem>
-                    <listitem>
-                      <para>{StudyInstanceUID} is the study instance UID for a single study.</para>
-                    </listitem>
-                  </itemizedlist>
+                  <para>{SERVICE}/studies/{StudyInstanceUID}/metadata</para>
+                </listitem>
+                <listitem>
+                  <para>{SERVICE}/studies/{StudyInstanceUID}/series/{SeriesInstanceUID}/metadata</para>
+                </listitem>
+                <listitem>
+                  <para>{SERVICE}/studies/{StudyInstanceUID}/series/{SeriesInstanceUID}/instances/{SOPInstanceUID}/metadata</para>
+                </listitem>
+              </itemizedlist>
+              <para>where</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
+                </listitem>
+                <listitem>
+                  <para>{StudyInstanceUID} is the study instance UID for a single study.</para>
+                </listitem>
+                <listitem>
+                  <para>{SeriesInstanceUID} is the series instance UID for a single series.</para>
+                </listitem>
+                <listitem>
+                  <para>{SOPInstanceUID} is the SOP Instance UID for a single SOP Instance.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -2361,7 +2394,7 @@
                 </itemizedlist>
               </listitem>
               <listitem>
-                <para>The entire multipart response contains all XML metadata for the specified Study.</para>
+                <para>The entire multipart response contains all XML metadata for the specified Study, Series, or Instance.</para>
               </listitem>
               <listitem>
                 <para>Each item in the response is the XML encoded metadata for an Instance with the following http headers:</para>
@@ -2986,7 +3019,6 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>The URL where the SOP Instance is available for retrieval via a WADO-RS service.</para>
-                    <para>If the study Retrieve URI is specified above, this URI can be constructed if the client knows the series and instance UIDs.</para>
                     <note><para>The VR of this attribute has changed from UT to UR.</para></note>
                   </td>
                 </tr>
@@ -3276,7 +3308,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>SearchForStudies</para>
                   <itemizedlist>
                     <listitem>
-                      <para>{SERVICE}/studies[?query]</para>
+                      <para>{+SERVICE}/studies{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -3284,10 +3316,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>SearchForSeries</para>
                   <itemizedlist>
                     <listitem>
-                      <para>{SERVICE}/studies/{StudyInstanceUID}/series[?query]</para>
+                      <para>{+SERVICE}/studies/{StudyInstanceUID}/series{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                     <listitem>
-                      <para>{SERVICE}/series[?query]</para>
+                      <para>{+SERVICE}/series{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -3295,13 +3327,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>SearchForInstances</para>
                   <itemizedlist>
                     <listitem>
-                      <para>{SERVICE}/studies/{StudyInstanceUID}/series/{SeriesInstanceUID}/instances[?query]</para>
+                      <para>{+SERVICE}/studies/{StudyInstanceUID}/series/{SeriesInstanceUID}/instances{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                     <listitem>
-                      <para>{SERVICE}/studies/{StudyInstanceUID}/instances[?query]</para>
+                      <para>{+SERVICE}/studies/{StudyInstanceUID}/instances{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                     <listitem>
-                      <para>{SERVICE}/instances[?query]</para>
+                      <para>{+SERVICE}/instances{?query*,fuzzymatching,limit,offset}</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -3309,7 +3341,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <para>where</para>
               <itemizedlist>
                 <listitem>
-                  <para>{SERVICE} is the base URL for the QIDO RESTful service. This may be a combination of scheme (http or https), host, port, and application.</para>
+                  <para>{+SERVICE} is the base URL for the QIDO RESTful service. This may be a combination of protocol (http or https), authority, and path.</para>
                 </listitem>
                 <listitem>
                   <para>{StudyInstanceUID} is the unique Study Instance UID for a single study.</para>
@@ -3351,7 +3383,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </itemizedlist>
             </listitem>
             <listitem>
-              <para>Query key=value pairs</para>
+              <para>{query}</para>
               <itemizedlist>
                 <listitem>
                   <para>{attributeID}={value}</para>
@@ -3377,94 +3409,96 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>Composite Instance IE attributes (SearchForInstances requests only)</para>
                 </listitem>
                 <listitem>
-                  <para>Additional Query / Retrieve Attributes (<olink targetdoc="PS3.4" targetptr="sect_C.3.4" xrefstyle="select: docname label"/>)</para>
+                  <para>Additional Query/Retrieve Attributes (<olink targetdoc="PS3.4" targetptr="sect_C.3.4" xrefstyle="select: docname label"/>)</para>
                 </listitem>
                 <listitem>
                   <para>Timezone Offset From UTC (0008,0201)</para>
                 </listitem>
               </itemizedlist>
-              <para>Each {attributeID} query value must be unique unless the associated DICOM Attribute allows UID List matching (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.2" xrefstyle="select: docname label"/>), in which case each {value} will be interpreted to be an element of the UID List.</para>
-              <para>The acceptable values for {value} are determined by the types of matching allowed by C-FIND for its associated {attributeID} (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2" xrefstyle="select: docname label"/>). All characters in {value} that are disallowed for URLs must be URL encoded. See IETF RFC 1738 for details.</para>
-              <para>If an {attributeID} is passed as the value of an "includefield" query key this is equivalent to C-FIND Universal matching for the specified attribute (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.3" xrefstyle="select: docname label"/>).</para>
-              <itemizedlist>
-                <listitem>
-                  <para>fuzzymatching=true | false</para>
-                </listitem>
-                <listitem>
-                  <para>limit={maximumResults}</para>
-                </listitem>
-                <listitem>
-                  <para>offset={skippedResults}</para>
-                </listitem>
-              </itemizedlist>
-              <para>{attributeID} can be one of the following:</para>
-              <itemizedlist>
-                <listitem>
-                  <para>{dicomTag}</para>
-                </listitem>
-                <listitem>
-                  <para>{dicomKeyword}</para>
-                </listitem>
-                <listitem>
-                  <para>{dicomTag}.{attributeID}, where {attributeID} is an element of the sequence specified by {dicomTag}</para>
-                </listitem>
-                <listitem>
-                  <para>{dicomKeyword}.{attributeID}, where {attributeID} is an element of the sequence specified by {dicomKeyword}</para>
-                </listitem>
-              </itemizedlist>
-              <para>{dicomTag} is the eight character hexadecimal string corresponding to the Tag of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
-              <para>{dicomKeyword} is the Keyword of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
-              <note>
-                <para>Examples of valid values for {attributeID}:</para>
-                <itemizedlist>
-                  <listitem>
-                    <para>0020000D</para>
-                  </listitem>
-                  <listitem>
-                    <para>StudyInstanceUID</para>
-                  </listitem>
-                  <listitem>
-                    <para>00101002.00100020</para>
-                  </listitem>
-                  <listitem>
-                    <para>OtherPatientIDsSequence.PatientID</para>
-                  </listitem>
-                  <listitem>
-                    <para>00101002.00100024.00400032</para>
-                  </listitem>
-                  <listitem>
-                    <para>OtherPatientIDsSequence.IssuerOfPatientIDQualifiersSequence.UniversalEntityID</para>
-                  </listitem>
-                </itemizedlist>
-              </note>
+              <para>See <xref linkend="sect_6.7.1.1.1" xrefstyle="select: label"/> for {attributeID} and {value} encoding rules</para>
+            </listitem>
+            <listitem>
+              <para>fuzzymatching=true | false</para>
+            </listitem>
+            <listitem>
+              <para>limit={maximumResults}</para>
+            </listitem>
+            <listitem>
+              <para>offset={skippedResults}</para>
             </listitem>
           </itemizedlist>
-          <note>
-            <para>Examples of valid QIDO-RS URLs:</para>
+          <section xml:id="sect_6.7.1.1.1" label="6.7.1.1.1">
+            <title>{attributeID} encoding rules</title>
+            <para>Each {attributeID} query key shall be unique unless the associated DICOM Attribute allows UID List matching (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.2" xrefstyle="select: docname label"/>), in which case each {value} will be interpreted to be an element of the UID List.</para>
+            <para>The acceptable values for {value} are determined by the types of matching allowed by C-FIND for its associated {attributeID} (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2" xrefstyle="select: docname label"/>). All characters in {value} that are disallowed for URIs shall be percent-encoded. See IETF RFC 3986 for details.</para>
+            <para>If an {attributeID} is passed as the value of an "includefield" query key this is equivalent to C-FIND Universal matching for the specified attribute (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.3" xrefstyle="select: docname label"/>).</para>
+            <para>{attributeID} can be one of the following:</para>
             <itemizedlist>
               <listitem>
-                <para>http://dicomrs/studies&#x200B;?PatientID=11235813</para>
+                <para>{dicomTag}</para>
               </listitem>
               <listitem>
-                <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;StudyDate=20130509</para>
+                <para>{dicomKeyword}</para>
               </listitem>
               <listitem>
-                <para>http://dicomrs/studies&#x200B;?00100010=SMITH*&#x200B;&amp;00101002.00100020=11235813&#x200B;&amp;limit=25</para>
+                <para>{dicomTag}.{attributeID}, where {attributeID} is an element of the sequence specified by {dicomTag}</para>
               </listitem>
               <listitem>
-                <para>http://dicomrs/studies&#x200B;?00100010=SMITH*&#x200B;&amp;OtherPatientIDsSequence.00100020=11235813</para>
-              </listitem>
-              <listitem>
-                <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;includefield=00081048&#x200B;&amp;includefield=00081049&#x200B;&amp;includefield=00081060</para>
-              </listitem>
-              <listitem>
-                <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;StudyDate=20130509-20130510</para>
-              </listitem>
-              <listitem>
-                <para>http://dicomrs/studies&#x200B;?StudyInstanceUID=1.2.392.200036.9116.2.2.2.2162893313.1029997326.94587&#x200B;%2c1.2.392.200036.9116.2.2.2.2162893313.1029997326.94583</para>
+                <para>{dicomKeyword}.{attributeID}, where {attributeID} is an element of the sequence specified by {dicomKeyword}</para>
               </listitem>
             </itemizedlist>
-          </note>
+            <para>{dicomTag} is the eight character hexadecimal string corresponding to the Tag of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
+            <para>{dicomKeyword} is the Keyword of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
+            <note>
+              <para>Examples of valid values for {attributeID}:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>0020000D</para>
+                </listitem>
+                <listitem>
+                  <para>StudyInstanceUID</para>
+                </listitem>
+                <listitem>
+                  <para>00101002.00100020</para>
+                </listitem>
+                <listitem>
+                  <para>OtherPatientIDsSequence.PatientID</para>
+                </listitem>
+                <listitem>
+                  <para>00101002.00100024.00400032</para>
+                </listitem>
+                <listitem>
+                  <para>OtherPatientIDsSequence.IssuerOfPatientIDQualifiersSequence.UniversalEntityID</para>
+                </listitem>
+              </itemizedlist>
+            </note>
+            <note>
+              <para>Examples of valid QIDO-RS URLs:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?PatientID=11235813</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;StudyDate=20130509</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?00100010=SMITH*&#x200B;&amp;00101002.00100020=11235813&#x200B;&amp;limit=25</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?00100010=SMITH*&#x200B;&amp;OtherPatientIDsSequence.00100020=11235813</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;includefield=00081048&#x200B;&amp;includefield=00081049&#x200B;&amp;includefield=00081060</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?PatientID=11235813&#x200B;&amp;StudyDate=20130509-20130510</para>
+                </listitem>
+                <listitem>
+                  <para>http://dicomrs/studies&#x200B;?StudyInstanceUID=1.2.392.200036.9116.2.2.2.2162893313.1029997326.94587&#x200B;%2c1.2.392.200036.9116.2.2.2.2162893313.1029997326.94583</para>
+                </listitem>
+              </itemizedlist>
+            </note>
+           </section>
         </section>
         <section xml:id="sect_6.7.1.2" label="6.7.1.2" status="4">
           <title>Response</title>
@@ -4446,10 +4480,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <para>The Retrieve Server Options transaction can be requested for the following resources:</para>
           <itemizedlist>
             <listitem>
-              <para>{SERVICE}[/{InformationEntity}]</para>
+              <para>{+SERVICE}/{InformationEntity*}</para>
               <itemizedlist>
                 <listitem>
-                  <para>where {SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
+                  <para>where {+SERVICE} is the base URL for the service. This may be a combination of protocol (either http or https), host, port, and application.</para>
                 </listitem>
                 <listitem>
                   <para>where {InformationEntity} is the path to a defined DICOM RESTful service resource, such as:</para>
@@ -4468,6 +4502,18 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </listitem>
                     <listitem>
                       <para>QIDO-RS (see <xref linkend="sect_6.7.1" xrefstyle="select:labelnumber"/>)</para>
+                    </listitem>
+                    <listitem>
+                      <para>UPS-RS (see
+                      <xref linkend="sect_6.9.1" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.2" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.3" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.4" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.5" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.6" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.7" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.8" xrefstyle="select:labelnumber"/>,
+                      <xref linkend="sect_6.9.9" xrefstyle="select:labelnumber"/>)</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -4511,8 +4557,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <title>Resources</title>
             <para>The full WADL resource tree follows directly and unambiguously from the RESTful resource endpoints defined in
               <xref linkend="sect_6.5" xrefstyle="select:labelnumber"/>,
-              <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/> and
-              <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/>.</para>
+              <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/>,
+              <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/> and
+              <xref linkend="sect_6.9" xrefstyle="select:labelnumber"/>.</para>
             <para>For informative purposes, the full resource tree and the methods defined for each resource are described in <xref linkend="table_6.8-1" xrefstyle="select:label"/>.</para>
             <table rules="all" frame="box" xml:id="table_6.8-1" label="6.8-1">
               <caption>Resources and Methods</caption>
@@ -4540,7 +4587,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para>{SERVICE}</para>
+                    <para>{+SERVICE}</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>N/A</para>
@@ -4576,7 +4623,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para>RetrieveStudy</para>
-                    <para>StoreInstances – specified Study</para>
+                    <para>StoreStudyInstances</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
@@ -4598,7 +4645,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>RetrieveMetadata – Study</para>
+                    <para>RetrieveStudyMetadata</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
@@ -4619,7 +4666,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForSeries</para>
+                    <para>SearchForStudySeries</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4673,7 +4720,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>RetrieveMetadata – Series</para>
+                    <para>RetrieveSeriesMetadata</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
@@ -4702,7 +4749,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForInstances</para>
+                    <para>SearchForStudySeriesInstances</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4772,7 +4819,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>RetrieveMetadata – Instance</para>
+                    <para>RetrieveInstanceMetadata</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
@@ -4871,7 +4918,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForInstances – no specified Series</para>
+                    <para>SearchForStudyInstances</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4884,7 +4931,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForSeries – no specified Study</para>
+                    <para>SearchForSeries</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4922,7 +4969,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForInstances – no specified Study</para>
+                    <para>SearchForInstances</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4935,7 +4982,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     </itemizedlist>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para>SearchForInstances – no specified Study or Series</para>
+                    <para>SearchForInstances</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
@@ -4954,6 +5001,272 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
                   </td>
                 </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>workitems</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SearchForUPS</para>
+                    <para>CreateUPS</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.3" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.2" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>{UPSInstanceUID}</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RetrieveUPS</para>
+                    <para>UpdateUPS</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.1" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.4" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>state</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>ChangeUPSState</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.4" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>cancelrequest</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>RequestUPSCancel</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.4" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>subscribers</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>{AETitle}</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>CreateSubscription</para>
+                    <para>DeleteSubscription</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>1.2.840.10008.5.1.4.34.5</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>subscribers</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>{AETitle}</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>CreateSubscription</para>
+                    <para>DeleteSubscription</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem><para>suspend</para></listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SuspendGlobalSubscription</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem><para>1.2.840.10008.5.1.4.34.5.1</para></listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem><para>subscribers</para></listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>N/A</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem><para>{AETitle}</para></listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>CreateSubscription</para>
+                    <para>DeleteSubscription</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <itemizedlist mark="none">
+                          <listitem>
+                            <itemizedlist mark="none">
+                              <listitem>
+                                <itemizedlist mark="none">
+                                  <listitem>
+                                    <itemizedlist mark="none">
+                                      <listitem><para>suspend</para></listitem>
+                                    </itemizedlist>
+                                  </listitem>
+                                </itemizedlist>
+                              </listitem>
+                            </itemizedlist>
+                          </listitem>
+                        </itemizedlist>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>SuspendGlobalSubscription</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para><xref linkend="sect_6.8.1.2.2.5" xrefstyle="select:labelnumber"/></para>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </section>
@@ -4961,14 +5274,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <title>Methods</title>
             <section xml:id="sect_6.8.1.2.2.1" label="6.8.1.2.2.1" status="6">
               <title>Retrieve Methods</title>
-              <para>The Retrieve methods define the capabilities of a WADO-RS resource (see <xref linkend="sect_6.5" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Retrieve methods define the capabilities of a WADO-RS resource (see <xref linkend="sect_6.5" xrefstyle="select:labelnumber"/>) or a RetrieveUPS resource (see <xref linkend="sect_6.9.4" xrefstyle="select:labelnumber"/>).</para>
               <para>The Retrieve methods shall contain the following attributes:</para>
               <itemizedlist>
                 <listitem>
                   <para>A "name" attribute with a value of "GET"</para>
                 </listitem>
                 <listitem>
-                  <para>An "id" attribute with a value of "RetrieveStudy", "RetrieveSeries", "RetrieveInstance", "RetrieveBulkData", "RetrieveFrames", "RetrieveStudyMetadata", "RetrieveSeriesMetadata" or "RetrieveInstanceMetadata" depending on the full resource path</para>
+                  <para>An "id" attribute with a value of "RetrieveStudy", "RetrieveSeries", "RetrieveInstance", "RetrieveBulkData", "RetrieveFrames", "RetrieveStudyMetadata", "RetrieveSeriesMetadata", "RetrieveInstanceMetadata" or "RetrieveUPS"</para>
                 </listitem>
               </itemizedlist>
               <para>The Retrieve methods shall contain a "request" element with "param" elements documenting the following:</para>
@@ -5035,14 +5348,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </section>
             <section xml:id="sect_6.8.1.2.2.2" label="6.8.1.2.2.2" status="6">
               <title>Store Methods</title>
-              <para>The Store methods define the capabilities of a STOW-RS resource (see <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Store methods define the capabilities of a STOW-RS resource (see <xref linkend="sect_6.6" xrefstyle="select:labelnumber"/>) or a CreateUPS resource (see <xref linkend="sect_6.9.1" xrefstyle="select:labelnumber"/>).</para>
               <para>The Store methods shall contain the following attributes:</para>
               <itemizedlist>
                 <listitem>
                   <para>A "name" attribute with a value of "POST"</para>
                 </listitem>
                 <listitem>
-                  <para>An "id" attribute with a value of "StoreInstances" or "StoreStudyInstances"</para>
+                  <para>An "id" attribute with a value of "StoreInstances", "StoreStudyInstances" or "CreateUPS"</para>
                 </listitem>
               </itemizedlist>
               <para>The Store methods shall contain a "request" element with "param" elements documenting the following:</para>
@@ -5106,14 +5419,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </section>
             <section xml:id="sect_6.8.1.2.2.3" label="6.8.1.2.2.3" status="6">
               <title>Search Methods</title>
-              <para>The Search methods define the capabilities of a QIDO-RS resource (see <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Search methods define the capabilities of a QIDO-RS resource (see <xref linkend="sect_6.7" xrefstyle="select:labelnumber"/>) or a SearchForUPS resource (see <xref linkend="sect_6.9.3" xrefstyle="select:labelnumber"/>).</para>
               <para>The Search methods shall contain the following attributes:</para>
               <itemizedlist>
                 <listitem>
                   <para>A "name" attribute with a value of "GET"</para>
                 </listitem>
                 <listitem>
-                  <para>An "id" attribute with a value of "SearchForStudies", "SearchForStudySeries", "SearchForSeries", "SearchForStudySeriesInstances", "SearchForStudyInstances", "SearchForSeriesInstances" or "SearchForInstances" depending on the level of the parent resource</para>
+                  <para>An "id" attribute with a value of "SearchForStudies", "SearchForStudySeries", "SearchForSeries", "SearchForStudySeriesInstances", "SearchForStudyInstances", "SearchForSeriesInstances", "SearchForInstances" or "SearchForUPS"</para>
                 </listitem>
               </itemizedlist>
               <para>The Search methods shall contain a "request" element with "param" elements documenting the following:</para>
@@ -5182,6 +5495,111 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<representation mediaType="application/json" />
 </response>
 <response status="400 401 403 413 503" />
+</method>
+]]></programlisting>
+            </section>
+            <section xml:id="sect_6.8.1.2.2.4" label="6.8.1.2.2.4" status="6">
+              <title>Update Methods</title>
+              <para>The Update methods define the capabilities of an UpdateUPS, a ChangeUPSState or a RequestUPSCancellation resource (see <xref linkend="sect_6.9.2" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Update methods shall contain the following attributes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>A "name" attribute with a value of "POST" for UpdateUPS and RequestUPSCancel</para>
+                </listitem>
+                <listitem>
+                  <para>A "name" attribute with a value of "PUT" for ChangeUPSState</para>
+                </listitem>
+                <listitem>
+                  <para>An "id" attribute with a value of "UpdateUPS", "ChangeUPSState" or "RequestUPSCancellation"</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Update methods shall contain a "request" element with "param" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Representations</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Update methods shall contain one or more "response" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Status Codes</para>
+                </listitem>
+                <listitem>
+                  <para>Headers returned for each Status Code</para>
+                </listitem>
+              </itemizedlist>
+              <note>
+                <para>More than one Status Code can be described by a single "response" element.</para>
+              </note>
+              <para>Example:</para>
+              <programlisting><![CDATA[
+<method name="POST" id="UpdateUPS">
+  <request>
+    <representation mediaType="application/dicom+xml" />
+    <representation mediaType="application/json" />
+  </request>
+  <response status="200">
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The UPS was created with modifications." />
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: Requested optional Attributes are not supported." />
+  </response>
+  <response status="409">
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The Transaction UID is missing." />
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The Transaction UID is incorrect." />
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The submitted request is inconsistent with the current state of the UPS Instance." />
+  </response>
+  <response status="400 401 403 404 503" />
+</method>
+]]></programlisting>
+            </section>
+            <section xml:id="sect_6.8.1.2.2.5" label="6.8.1.2.2.5" status="6">
+              <title>Subscribe Methods</title>
+              <para>The Subscribe methods define the capabilities of a CreateSubscription, a SuspendGlobalSubscription or a DeleteSubscription resource (see <xref linkend="sect_6.9.7" xrefstyle="select:labelnumber"/>, <xref linkend="sect_6.9.8" xrefstyle="select:labelnumber"/> and <xref linkend="sect_6.9.9" xrefstyle="select:labelnumber"/>).</para>
+              <para>The Subscribe methods shall contain the following attributes:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>A "name" attribute with a value of "POST" for CreateSubscription and SuspendGlobalSubscription</para>
+                </listitem>
+                <listitem>
+                  <para>A "name" attribute with a value of "DELETE" for DeleteSubscription</para>
+                </listitem>
+                <listitem>
+                  <para>An "id" attribute with a value of "CreateSubscription", "SuspendGlobalSubscription" or "DeleteSubscription"</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Subscribe methods shall contain a "request" element with "param" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Representations</para>
+                </listitem>
+              </itemizedlist>
+              <para>The Subscribe methods shall contain one or more "response" elements documenting the following:</para>
+              <itemizedlist>
+                <listitem>
+                  <para>supported Status Codes</para>
+                </listitem>
+                <listitem>
+                  <para>Headers returned for each Status Code</para>
+                </listitem>
+              </itemizedlist>
+              <note>
+                <para>More than one Status Code can be described by a single "response" element.</para>
+              </note>
+              <para>Example:</para>
+              <programlisting><![CDATA[
+<method name="POST" id="CreateSubscription">
+  <request>
+    <param name="deletionlock" style="query" default="false">
+      <option value="true" />
+      <option value="false" />
+    </param>
+  </request>
+  <response status="201">
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: Deletion Lock not granted." />
+   </response>
+  <response status="403">
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The Origin-Server does not support Global Subscription Filtering." />
+  </response>
+  <response status="400 401 404 409 503" />
 </method>
 ]]></programlisting>
             </section>
@@ -5263,7 +5681,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>Forbidden</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para>The Server Options Provider understood the request, but is refusing to perform the query (e.g. an authenticated user with insufficient privileges).</para>
+                  <para>The Server Options Provider understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -5279,6 +5697,2233 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </tr>
             </tbody>
           </table>
+        </section>
+      </section>
+    </section>
+    <section xml:id="sect_6.9" label="6.9" status="2">
+      <title>UPS-RS Worklist Service</title>   
+      <para>This DICOM Web Service defines a RESTful interface to the UPS SOP Classes (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> &amp; <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>). It consists of the following action types:</para>
+      <orderedlist numeration="arabic">
+        <listitem>
+          <para>CreateUPS</para>
+          <para>This action requests the creation of a UPS Instance on the Origin-Server. It corresponds to the UPS DIMSE N-CREATE operation.</para>
+        </listitem>
+        <listitem>
+          <para>UpdateUPS</para>
+          <para>This action sets the attributes of a UPS Instance managed by the Origin-Server. It corresponds to the UPS DIMSE N-SET operation.</para>
+        </listitem>
+        <listitem>
+          <para>SearchForUPS</para>
+          <para>This action searches for UPS Instances known to the Origin-Server. It corresponds to the UPS DIMSE C-FIND operation.</para>
+        </listitem>
+        <listitem>
+          <para>RetrieveUPS</para>
+          <para>This action retrieves a UPS Instances. It corresponds to the UPS DIMSE N-GET operation.</para>
+        </listitem>
+        <listitem>
+          <para>ChangeUPSState</para>
+          <para>This action sets the state of a UPS Instance managed by the Origin-Server. It corresponds to the UPS DIMSE N-ACTION operation "Change UPS State".</para>
+        </listitem>
+        <listitem>
+          <para>RequestUPSCancellation</para>
+          <para>This action requests the cancellation of a UPS Instance managed by the Origin-Server. It corresponds to the UPS DIMSE N-ACTION operation "Request UPS Cancel".</para>
+        </listitem>
+        <listitem>
+          <para>CreateSubscription</para>
+          <para>This action subscribes to a UPS Instance or the Global Worklist managed by the Origin-Server. It corresponds to the UPS DIMSE N-ACTION operation "Subscribe to Receive UPS Event Reports".</para>
+        </listitem>
+        <listitem>
+          <para>SuspendGlobalSubscription</para>
+          <para>This action suspends an existing subscription to the Global Worklist managed by the Origin-Server. It corresponds to the UPS DIMSE N-ACTION operation "Suspend Global Subscription".</para>
+        </listitem>
+        <listitem>
+          <para>DeleteSubscription</para>
+          <para>This action cancels an existing subscription to a UPS Instance or the Global Worklist managed by the Origin-Server. It corresponds to the UPS DIMSE N-ACTION operation "Unsubscribe from Receiving UPS Event Reports".</para>
+        </listitem>
+        <listitem>
+          <para>OpenEventChannel</para>
+          <para>This action initiates a WebSocket connection to allow the User-Agent to start receiving Event Report messages.</para>
+        </listitem>
+        <listitem>
+          <para>SendEventReport</para>
+          <para>This action sends an Event Report using an open WebSocket connection. It corresponds to the UPS DIMSE N-EVENT-REPORT operation.</para>
+        </listitem>
+      </orderedlist>
+      <para>An Origin-Server shall support all of the above action types.</para>
+      <para>The requirements for a UPS-RS Origin-Server that is also a Unified Worklist and Procedure Step SCP are described in <olink targetdoc="PS3.4" targetptr="sect_CC.1" xrefstyle="select: docname label"/></para>
+       <table frame="box" label="6.9-1" rules="all" xml:id="table_6.9-1">
+        <caption>UPS Interface Mapping</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para>Action Type</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para>Section</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para>Method &amp; Resource</para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>CreateUPS</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.1" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>POST {+SERVICE}/workitems{?AffectedSOPInstanceUID}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>UpdateUPS</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.2" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>POST {+SERVICE}/workitems/{UPSInstanceUID}{?transaction}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>SearchForUPS</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.3" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>GET {+SERVICE}/workitems{?query*}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>RetrieveUPS</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.4" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>GET {+SERVICE}/workitems/{UPSInstanceUID}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>ChangeUPSState</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.5" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>PUT {+SERVICE}/workitems/{UPSInstanceUID}/state</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>RequestUPSCancellation</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.6" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>POST {+SERVICE}/workitems/{UPSInstanceUID}/cancelrequest</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>CreateSubscription</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.7" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>POST {+SERVICE}/workitems/{UPSInstanceUID}/subscribers/{AETitle}{?deletionlock}</para>
+              <para>POST {+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5/</para>
+              <para>subscribers/{AETitle}{?deletionlock}</para>
+              <para>POST {+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5.1/</para>
+              <para>subscribers/{AETitle}{?deletionlock,query*}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>SuspendGlobalSubscription</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.8" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>POST {+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5/</para>
+              <para>subscribers/{AETitle}/suspend</para>
+              <para>POST {+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5.1/</para>
+              <para>subscribers/{AETitle}/suspend</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>DeleteSubscription</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.9" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>DELETE {+SERVICE}/workitems/{UPSInstanceUID}/</para>
+              <para>subscribers/{AETitle}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>OpenEventChannel</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.10" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>GET {+WSSERVICE}/subscribers/{AETitle}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>SendEventReport</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para><xref linkend="sect_6.9.11" xrefstyle="select: labelnumber"/></para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>N/A</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <para>The Origin-Server shall comply with all requirements placed on the SCP for the corresponding services in <olink targetdoc="PS3.4" targetptr="chapter_CC" xrefstyle="template: Annex %n in PS3.4"/>.</para>
+      <section xml:id="sect_6.9.1" label="6.9.1" status="3">
+        <title>CreateUPS</title>
+        <para>This resource allows a User-Agent to instruct an Origin-Server to create a UPS instance.</para>
+        <section xml:id="sect_6.9.1.1" label="6.9.1.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems{?AffectedSOPInstanceUID}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{AffectedSOPInstanceUID} specifies the SOP Instance UID of the UPS Instance to be created</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>POST</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type - The representation scheme being posted to the RESTful service. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: labelnumber"/>.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: labelnumber"/>.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body shall convey a single Unified Procedure Step Instance. The instance shall comply with all requirements in the Req. Type N-CREATE column of <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/>.</para>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.9.1.1.1" label="6.9.1.1.1" status="5">
+            <title>Request Message</title>
+            <para>The Request Message has a single part body.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/dicom+xml</para>
+                  </listitem>
+                  <listitem>
+                    <para>application/json</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>The request body contains all attributes to be stored in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON. Any binary data contained in the message shall be inline.</para>
+              </listitem>
+            </itemizedlist>
+           </section>
+        </section>
+        <section xml:id="sect_6.9.1.2" label="6.9.1.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server shall create and maintain UPS instances as instructed by CreateUPS requests and as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.5.3" xrefstyle="select: docname label"/>.</para>
+          <para>The Origin-Server shall return the HTTP/1.1 Status Line applicable to the associated request.</para>
+        </section>
+        <section xml:id="sect_6.9.1.3" label="6.9.1.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.1.3.1" label="6.9.1.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the Create request is successful, the Origin-Server shall return an HTTP/1.1 "201 - Created" response code.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.1-1" xrefstyle="select: labelnumber"/>.</para>
+            <table frame="box" label="6.9.1-1" rules="all" xml:id="table_6.9.1-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>201</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Created</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS instance was created and the new resource can be retrieved at the Content-Location specified in the response</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UID of the posted UPS Instance corresponds to an existing UPS Instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.1.3.2" label="6.9.1.3.2" status="5">
+            <title>Response Headers</title>
+            <para>If the request is successful, the HTTP/1.1 response message shall include the following HTTP/1.1 header:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Location: {+WorkitemURL}</para>
+                <para>Where {+WorkitemURL} is the URL from which the created UPS Instance can be retrieved (see <xref linkend="sect_6.9.4" xrefstyle="select: labelnumber"/>)</para>
+              </listitem>
+            </itemizedlist>
+            <para>If the UPS instance was created with modifications, the response message shall include the following HTTP/1.1 header:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: The UPS was created with modifications.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.1.3.3" label="6.9.1.3.3" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.2" label="6.9.2" status="3">
+        <title>UpdateUPS</title>
+        <para>This resource supports the modification of attribute values of an existing UPS Instance.</para>
+        <section xml:id="sect_6.9.2.1" label="6.9.2.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}{?transaction}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance</para>
+                    </listitem>
+                    <listitem>
+                      <para>{transaction} specifies the Transaction UID / Locking UID for the specified Unified Procedure Step Instance</para>
+                      <para>If the UPS instance is currently in the SCHEDULED state, {transaction} shall not be specified.</para>
+                      <para>If the UPS instance is currently in the IN PROGRESS state, {transaction} shall be specified.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>             
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>POST</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type - The representation scheme being posted to the RESTful service. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.2.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.2.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body describes changes to a single Unified Procedure Step Instance. It shall include all Attributes for which Attribute Values are to be set. The changes shall comply with all requirements described in <olink targetdoc="PS3.4" targetptr="sect_CC.2.6.2" xrefstyle="select: docname label"/>.</para>
+            </listitem>
+            <listitem>
+              <para>Because the request will be treated as atomic (indivisible) and idempotent (repeat executions have no additional effect), all changes contained in the request shall leave the UPS instance in an internally consistent state.</para>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.9.2.1.1" label="6.9.2.1.1" status="5">
+            <title>Request Message</title>
+            <para>The Request Message has a single part body.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/dicom+xml</para>
+                  </listitem>
+                  <listitem>
+                    <para>application/json</para>
+                  </listitem>
+                </itemizedlist>
+               </listitem>
+              <listitem>
+                <para>The request body contains all the attributes to be updated in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON. Any binary data contained in the message shall be inline.</para>
+              </listitem>
+            </itemizedlist>
+           </section>
+        </section>
+        <section xml:id="sect_6.9.2.2" label="6.9.2.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server shall support the Attribute changes to the UPS instance specified by the User-Agent in the UpdateUPS request and as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.6.3" xrefstyle="select: docname label"/>.</para>
+          <para>The Origin-Server shall return the HTTP/1.1 Status applicable to the associated request.</para>
+        </section>
+        <section xml:id="sect_6.9.2.3" label="6.9.2.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.2.3.1" label="6.9.2.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the Set request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.2-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.2-1" rules="all" xml:id="table_6.9.2-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS instance was updated</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The request cannot be performed for one of the following reasons:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>the submitted request is inconsistent with the current state of the UPS Instance</para>
+                      </listitem>
+                      <listitem>
+                        <para>the Transaction UID is missing</para>
+                      </listitem>
+                      <listitem>
+                        <para>the Transaction UID is incorrect</para>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.2.3.2" label="6.9.2.3.2" status="5">
+            <title>Response Headers</title>
+            <para>If the UPS instance was updated but with modifications made by the Origin-Server, the response message shall include the following HTTP/1.1 header:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: The UPS was created with modifications.</para>
+              </listitem>
+            </itemizedlist>
+            <para>If optional attributes were rejected, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: Requested optional Attributes are not supported.</para>
+              </listitem>
+            </itemizedlist>
+            <para>If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages encoded in an HTTP/1.1 Warning header field describing the nature of the conflict:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:The Transaction UID is missing.</para>
+              </listitem>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:The Transaction UID is incorrect.</para>
+              </listitem>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:The submitted request is inconsistent with the current state of the UPS Instance.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.2.3.3" label="6.9.2.3.3" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.3" label="6.9.3" status="3">
+        <title>SearchForUPS</title>
+        <para>This resource returns a list of UPS Instances that match specified search query parameters along with requested attributes for each Instance.</para>
+        <section xml:id="sect_6.9.3.1" label="6.9.3.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{?query*}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>GET</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Accept - The representation scheme in which the RESTful service is requested to return the results. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>multipart/related; type=application/dicom+xml; boundary={messageBoundary}</para>
+                      <para>Specifies that the results should be DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the results should be DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>Cache-control: no-cache (recommended)</para>
+                  <para>If included, specifies that search results returned should be current and not cached.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>{query}</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{attributeID}={value}</para>
+                  <para>0-n / {attributeID}={value} pairs allowed</para>
+                </listitem>
+                <listitem>
+                  <para>includefield={attributeID} | all</para>
+                  <para>0-n includefield / {attributeID} pairs allowed, where "all" indicates that all attributes with values should be included for each response.</para>
+                  <para>Each {attributeID} shall refer to an attribute of the Unified Procedure Step IOD (see <olink targetdoc="PS3.3" targetptr="sect_B.26.2" xrefstyle="select: docname label"/>).</para>
+                  <para>See <xref linkend="sect_6.7.1.1" xrefstyle="select: label"/> for {attributeID} and {value} encoding rules</para>
+                </listitem>
+                <listitem>
+                  <para>fuzzymatching=true | false</para>
+                </listitem>
+                <listitem>
+                  <para>limit={maximumResults}</para>
+                </listitem>
+                <listitem>
+                  <para>offset={skippedResults}</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.3.2" label="6.9.3.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server shall perform a search according the requirements for the QIDO-RS services (see <xref linkend="sect_6.7.1.2" xrefstyle="select: label"/>).</para>
+          <section xml:id="sect_6.9.3.2.1" label="6.9.3.2.1" status="5">
+            <title>Matching</title>
+            <para>An Origin-Server shall support matching against all Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Match Key Type value of U, R or *.</para>
+            <para>See <xref linkend="sect_6.7.1.2.1" xrefstyle="select: label"/> for matching behavior.</para>
+          </section>
+        </section>
+        <section xml:id="sect_6.9.3.3" label="6.9.3.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.3.3.1" label="6.9.3.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the SearchForUPS request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.3-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.3-1" rules="all" xml:id="table_6.9.3-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The query completed and any matching results are returned in the message body.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>206</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Partial Content</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Only some of the query results were returned and the rest can be requested through the appropriate UPS-RS request.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to perform the query because the Service Provider cannot understand the query component.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to perform the query because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>413</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Request entity too large</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The query was too broad and a narrower query or paging should be requested.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.3.3.2" label="6.9.3.3.2" status="5">
+            <title>Query Result Attribute</title>
+            <para>For each matching UPS Instance, the Origin-Server shall return:</para>
+            <itemizedlist>
+              <listitem>
+                <para>-All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1 and 2.</para>
+              </listitem>
+              <listitem>
+                <para>-All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1C for which the conditional requirements are met.</para>
+              </listitem>
+              <listitem>
+                <para>-All other Unified Procedure Step Instance Attributes passed as {attributeID} query keys that are supported by the Origin-Server as matching or return attributes</para>
+              </listitem>
+              <listitem>
+                <para>-All other Unified Procedure Step Instance Attributes passed as "includefield" query values that are supported by the Origin-Server as return attributes.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.3.3.3" label="6.9.3.3.3" status="5">
+            <title>Response Message</title>
+            <para>The response message body contains the results.</para>
+            <para>The format of the response message body shall contain one of the Media Types specified by the request Accept header field. An Origin-Server shall support all Media-Types allowed in the request.</para>
+            <section xml:id="sect_6.9.3.3.3.1" label="6.9.3.3.3.1" status="6">
+              <title>XML Response Message</title>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>multipart/related; type=application/dicom+xml</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>The response is a multipart message body where each part is a DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML DicomNativeModel element containing the attributes for one matching UPS Instance (see <olink targetdoc="PS3.19" targetptr="sect_A.1" xrefstyle="select: docname label"/>).</para>
+                 </listitem>
+                <listitem>
+                  <para>If there are no matching results, the message body shall be empty.</para>
+                 </listitem>
+                <listitem>
+                  <para>-Each part in the multipart body includes the following HTTP/1.1 headers:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Content-Type: application/dicom+xml</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </section>
+            <section xml:id="sect_6.9.3.3.3.2" label="6.9.3.3.3.2" status="6">
+              <title>JSON Response Message</title>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/json</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>The response is a DICOM JSON message containing a DICOM JSON property for each matching UPS Instance containing sub-properties describing the matching attributes for each UPS Instance (see <xref linkend="sect_F.2" xrefstyle="select: label"/>).</para>
+                </listitem>
+                <listitem>
+                  <para>If there are no matching results, the JSON message shall be empty.</para>
+                </listitem>
+              </itemizedlist>
+             </section>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.4" label="6.9.4" status="3">
+        <title>RetrieveUPS</title>
+         <para>This resource supports the retrieval of a UPS Instance.</para>
+        <section xml:id="sect_6.9.4.1" label="6.9.4.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>GET</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Accept - The representation scheme in which the RESTful service is requested to return the result. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                      <para>Specifies that the result should be DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the result should be DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>Cache-control: no-cache (recommended)</para>
+                  <para>If included, specifies that results returned should be current and not cached.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.4.2" label="6.9.4.2" status="4">
+          <title>Behavior</title>
+           <para>The Origin-Server shall return, via the HTTP/1.1 response, the indicated Unified Procedure Step Instance to the User-Agent.</para>
+          <note>
+            <para>The requirement for the Origin-Server to respond to GET requests for UPS Instances that have moved to the COMPLETED or CANCELED state is limited. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.1.3" xrefstyle="select: docname label"/>.</para>
+          </note>
+          <para>The User-Agent shall not return the Transaction UID (0008,1195) Attribute. This is necessary to preserve this Attribute's role as an access lock.</para>
+          <para>The User-Agent shall return the HTTP/1.1 Response Status Code applicable to the associated request. A Failure Code shall indicate that the Origin-Server has not returned the SOP Instance.</para>
+        </section>
+        <section xml:id="sect_6.9.4.3" label="6.9.4.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.4.3.1" label="6.9.4.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the Retrieve request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.4-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.4-1" rules="all" xml:id="table_6.9.4-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The requested instance is returned.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to perform the query because the Service Provider cannot understand the query component.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to perform the query because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.4.3.2" label="6.9.4.3.2" status="5">
+            <title>Response Message</title>
+            <para>The response message body contains the results.</para>
+            <para>The format of the response message body shall contain one of the Media Types specified by the request Accept header field. An Origin-Server shall support all Media-Types allowed in the request.</para>
+            <section xml:id="sect_6.9.4.3.2.1" label="6.9.4.3.2.1" status="6">
+              <title>XML Response Message</title>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>- The response contains a DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML DicomNativeModel element containing the attributes for the requested UPS Instance (see <olink targetdoc="PS3.19" targetptr="sect_A.1" xrefstyle="select: docname label"/>).</para>
+                </listitem>
+              </itemizedlist>
+            </section>
+            <section xml:id="sect_6.9.4.3.2.2" label="6.9.4.3.2.2" status="6">
+              <title>JSON Response Message</title>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/json</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+                <listitem>
+                  <para>The response is a DICOM JSON array containing a DICOM JSON representation of the requested UPS Instance (see <xref linkend="sect_F.2" xrefstyle="select: label"/>).</para>
+                </listitem>
+              </itemizedlist>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.5" label="6.9.5" status="3">
+        <title>ChangeUPSState</title>
+        <para>This resource supports the modification of the state of an existing UPS Instance.</para>
+        <section xml:id="sect_6.9.5.1" label="6.9.5.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}/state</para>
+                  <para>where:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>PUT</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type - The representation scheme being posted to the RESTful service. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.5.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.5.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body describes a state change to a single Unified Procedure Step Instance. It shall include all Attributes required for an SCU in <olink targetdoc="PS3.4" targetptr="table_CC.2.1-1" xrefstyle="select: docname label"/>.</para>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.9.5.1.1" label="6.9.5.1.1" status="5">
+            <title>Request Message</title>
+            <para>The Request Message has a single part body.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/dicom+xml</para>
+                  </listitem>
+                  <listitem>
+                    <para>application/json</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>The request body contains attributes in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON format.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+        <section xml:id="sect_6.9.5.2" label="6.9.5.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server shall support the state changes to the UPS instance specified in the request as described by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.1.3" xrefstyle="select: docname label"/>.</para>
+          <para>After completing the ChangeUPSState request, the Origin-Server shall return the HTTP/1.1 Response Line applicable to the associated request.</para>
+        </section>
+        <section xml:id="sect_6.9.5.3" label="6.9.5.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.5.3.1" label="6.9.5.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the State Change was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the State Change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.5-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.5-1" rules="all" xml:id="table_6.9.5-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS instance was updated</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The request cannot be performed for one of the following reasons:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>the submitted request is inconsistent with the current state of the UPS Instance</para>
+                      </listitem>
+                      <listitem>
+                        <para>the Transaction UID is missing</para>
+                      </listitem>
+                      <listitem>
+                        <para>the Transaction UID is incorrect</para>
+                      </listitem>
+                    </itemizedlist>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.5.3.2" label="6.9.5.3.2" status="5">
+            <title>Response Headers</title>
+            <para>If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "CANCELED" and the UPS Instance is already in that state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem><para>Warning: 299 {+SERVICE}: The UPS is already in the requested state of CANCELED.</para></listitem>
+            </itemizedlist>
+            <para>If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "COMPLETED" and the UPS Instance is already in that state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: The UPS is already in the requested state of COMPLETED.</para>
+              </listitem>
+            </itemizedlist>
+            <para>If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages in the HTTP/1.1 Warning header field describing the nature of the conflict:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:the Transaction UID is missing.</para>
+              </listitem>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:the Transaction UID is incorrect.</para>
+              </listitem>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}:the submitted request is inconsistent with the current state of the UPS Instance.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.5.3.3" label="6.9.5.3.3" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.6" label="6.9.6" status="3">
+        <title>RequestUPSCancellation</title>
+        <para>This resource records a request that the specified UPS Instance be canceled.</para>
+        <section xml:id="sect_6.9.6.1" label="6.9.6.1" status="4">
+          <title>Request</title>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>-{+SERVICE}/workitems/{UPSInstanceUID}/cancelrequest</para>
+                  <para>where:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>POST</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Type - The representation scheme being posted to the RESTful service. The types allowed for this request header are as follows:</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>application/dicom+xml</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.5.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                    <listitem>
+                      <para>application/json</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.5.1.1" xrefstyle="select: label"/>.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body describes a request to cancel a single Unified Procedure Step Instance. The request body shall comply with all attribute requirements described in <olink targetdoc="PS3.4" targetptr="table_CC.2.2-1" xrefstyle="select: docname label"/>.</para>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.9.6.1.1" label="6.9.6.1.1" status="5">
+            <title>Request Message</title>
+            <para>The Request Message has a single part body.</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Type:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>application/dicom+xml</para>
+                  </listitem>
+                  <listitem>
+                    <para>application/json</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+              <listitem>
+                <para>The request body contains attributes in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON format.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+        </section>
+        <section xml:id="sect_6.9.6.2" label="6.9.6.2" status="4">
+          <title>Behavior</title>
+          <para>RequestUPSCancellation is used to request to the Origin-Server that the state of a UPS Instance be changed to CANCELED as shown in <olink targetdoc="PS3.4" targetptr="figure_CC.1.1-1" xrefstyle="select: docname label"/>. The Origin-Server shall process the request as described by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.2.3" xrefstyle="select: docname label"/>.</para>
+          <para>The request may include a Reason For Cancellation and/or a proposed Procedure Step Discontinuation Reason Code Sequence.</para>
+          <para>The request may also include a Contact Display Name and/or a Contact URI for the person with whom the cancel request may be discussed.</para>
+          <note>
+            <para>An HTTP/1.1 Status Code indicating success means that the Request was accepted, not that the UPS has been canceled. The system performing the UPS is not obliged to honor the request to cancel and in some scenarios, may not even receive notification of the request. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.4" xrefstyle="select: docname label"/>.</para>
+          </note>
+          <para>To cancel an IN PROGRESS UPS that the User-Agent is itself performing, the User-Agent shall instead use the ChangeUPSState action as described in <xref linkend="sect_6.9.5" xrefstyle="label"/>.</para>
+        </section>
+        <section xml:id="sect_6.9.6.3" label="6.9.6.3" status="4">
+          <title>Response</title>
+          <para>The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <section xml:id="sect_6.9.6.2.1" label="6.9.6.2.1" status="5">
+            <title>Response Status Line</title>
+            <para>If the cancel request was accepted, the Service shall return an HTTP/1.1 "202 - Accepted" response code.</para>
+            <para>If the cancel request was rejected, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.6-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.6-1" rules="all" xml:id="table_6.9.6-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>202</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Accepted</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The cancel request was accepted</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The cancellation request is inconsistent with the current state of the UPS Instance</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.2.5.2" label="6.9.2.5.2" status="5">
+            <title>Response Headers</title>
+            <para>If the UPS Instance is already in a canceled state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: The UPS is already in the requested state of CANCELED.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.5.2.3" label="6.9.5.2.3" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.7" label="6.9.7" status="3">
+        <title>CreateSubscription</title>
+        <para>This resource records subscribers to whom future events associated with the specified UPS Instances will be reported.</para>
+        <section xml:id="sect_6.9.7.1" label="6.9.7.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}/subscribers/{AETitle}}{?deletionlock}</para>
+                </listitem>
+                <listitem>
+                  <para>{+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5/subscribers/{AETitle}{?deletionlock}</para>
+                </listitem>
+                <listitem>
+                  <para>{+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5.1/subscribers/{AETitle}{?deletionlock,query*}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance or a well-known UID</para>
+                    </listitem>
+                    <listitem>
+                      <para>{AETitle} is an Application Entity Title that conforms to the "AE" Value Representation (see <olink targetdoc="PS3.5" targetptr="table_6.2-1" xrefstyle="select: docname label"/>) and identifies the Application Entity to be subscribed</para>
+                    </listitem>
+                    <listitem>
+                      <para>{deletionlock}, if present, shall have a value of either "true" or "false", indicating whether or not the User-Agent is requesting a Deletion Lock</para>
+                    </listitem>
+                    <listitem>
+                      <para>{query} specifies the query key/value pairs describing the filter parameters</para>
+                    </listitem>
+                  </itemizedlist>
+               </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>POST</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Headers</para>
+              <itemizedlist>
+                <listitem>
+                  <para>Content-Length: 0</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>{query}</para>
+              <itemizedlist>
+                <listitem>
+                  <para>deletionlock=true | false</para>
+                </listitem>
+                <listitem>
+                  <para>{attributeID}={value}</para>
+                  <para>0-n / {attributeID}={value} pairs allowed</para>
+                  <para>Each {attributeID} shall refer to an attribute of the Unified Procedure Step IOD (see <olink targetdoc="PS3.3" targetptr="sect_B.26.2" xrefstyle="select: docname label"/>).</para>
+                  <para>See <xref linkend="sect_6.7.1.1" xrefstyle="select: label"/> for {attributeID} and {value} encoding rules.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body shall be empty.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.7.2" label="6.9.7.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server shall support the management of UPS instance subscriptions as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.3.3" xrefstyle="select: docname label"/>.</para>
+          <para>Upon receipt of the CreateSubscription, SuspendGlobalSubscription or DeleteSubscription request, the Origin-Server shall attempt to update the Global Subscription State, Filtered Global Subscription and/or UPS Subscription State of the specified Application Entity with respect to the specified SOP Instance UID as described in <olink targetdoc="PS3.4" targetptr="table_CC.2.3-2" xrefstyle="select: docname label"/> and then return the appropriate HTTP/1.1 response.</para>
+        </section>
+        <section xml:id="sect_6.9.7.3" label="6.9.7.3" status="4">
+          <title>Response</title>
+          <section xml:id="sect_6.9.7.3.1" label="6.9.7.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
+            <para>If the CreateSubscription request was successful, the Service shall return an "HTTP/1.1 201 - Created" response code. The response shall contain a "Content-Location" header of the following format:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Content-Location: {WSSERVICE}</para>
+                <para>where:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para>- {WSSERVICE}is the base URL for the WebSocket service. This shall include the WebSocket protocol (either WS or WSS) and may include a combination of authority and path.</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+            </itemizedlist>
+            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.7-2" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.7-2" rules="all" xml:id="table_6.9.7-2">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>201</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Created</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The subscription was created.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., the Origin-Server does not support global subscription filtering or an authenticated user has insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance or well-known UID does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Specified action not appropriate for specified instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.7.3.2" label="6.9.7.3.2" status="5">
+            <title>Response Headers</title>
+            <para>If the CreateSubscriptionrequest was accepted but the deletion lock was not, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: Deletion Lock not granted.</para>
+              </listitem>
+            </itemizedlist>
+            <para>If the request was rejected with an HTTP/1.1 403 status code because Filtered Global Subscription is not supported, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <itemizedlist>
+              <listitem>
+                <para>Warning: 299 {+SERVICE}: The Origin-Server does not support Global Subscription Filtering.</para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section xml:id="sect_6.9.7.3.3" label="6.9.7.3.3" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.8" label="6.9.8" status="3">
+        <title>SuspendGlobalSubscription</title>
+        <para>This resource suspends an existing Global Subscription or Filtered Global Subscription. The Origin-Server will no longer automatically subscribe the User-Agent to newly-created UPS Instances. This does not delete any existing subscriptions to specific UPS Instances.</para>
+        <section xml:id="sect_6.9.8.1" label="6.9.8.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5/subscribers/{AETitle}/suspend</para>
+                </listitem>
+                <listitem>
+                  <para>{+SERVICE}/workitems/1.2.840.10008.5.1.4.34.5.1/subscribers/{AETitle}/suspend</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{AETitle} identifies the subscribed Application Entity.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>POST</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body shall be empty.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.8.2" label="6.9.8.2" status="4">
+          <title>Behavior</title>
+          <para>The SuspendGlobalSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="label"/>.</para>
+        </section>
+        <section xml:id="sect_6.9.8.3" label="6.9.8.3" status="4">
+          <title>Response</title>
+          <section xml:id="sect_6.9.8.3.1" label="6.9.8.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
+            <para>If the SuspendGlobalSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the subscription change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.8-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.8-1" rules="all" xml:id="table_6.9.8-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The subscription was suspended.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance or well-known UID does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Specified action not appropriate for specified instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.8.2.2" label="6.9.8.2.2" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.9" label="6.9.9" status="3">
+        <title>DeleteSubscription</title>
+        <para>This resource removes existing subscriptions from the specified UPS Instances.</para>
+        <section xml:id="sect_6.9.9.1" label="6.9.9.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}/subscribers/{AETitle}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+SERVICE} is the base URL for the service. This may be a combination of protocol (either HTTP or HTTPS), authority and path.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{UPSInstanceUID} is the UID of the Unified Procedure Step Instance or a well-known UID.</para>
+                    </listitem>
+                    <listitem>
+                      <para>{AETitle} identifies the subscribed Application Entity.</para>
+                    </listitem>
+                  </itemizedlist>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>DELETE</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The request body shall be empty.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.9.2" label="6.9.9.2" status="4">
+          <title>Behavior</title>
+          <para>The DeleteSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="label"/>.</para>
+        </section>
+        <section xml:id="sect_6.9.9.3" label="6.9.9.3" status="4">
+          <title>Response</title>
+          <section xml:id="sect_6.9.9.3.1" label="6.9.9.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
+            <para>If the DeleteSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.9-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.7-1" rules="all" xml:id="table_6.9.9-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>200</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>OK</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The subscription was removed.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>404</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Not found</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The specified UPS Instance or well-known UID does not exist or is not managed by this Origin-Server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>409</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Conflict</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Specified action not appropriate for specified instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.9.3.2" label="6.9.9.3.2" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.10" label="6.9.10" status="3">
+        <title>OpenEventChannel</title>
+        <para>This resource opens a WebSocket channel that will be used to send Event Reports to the client.</para>
+        <para>See RFC-6455 for details on the WebSocket protocol.</para>
+        <section xml:id="sect_6.9.10.1" label="6.9.10.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>{+WSSERVICE}/subscribers/{AETitle}</para>
+                  <para>where</para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>{+WSSERVICE} is the base URL for the WebSocket service. This shall include the WebSocket protocol (either WS or WSS) and may include a combination of authority and path</para>
+                    </listitem>
+                    <listitem>
+                      <para>{AETitle} identifies the subscribed Application Entity.</para>
+                    </listitem>
+                  </itemizedlist>                          
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>GET</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section xml:id="sect_6.9.10.2" label="6.9.10.2" status="4">
+          <title>Behavior</title>
+          <para>The Origin-Server maintains the active WebSocket connection and uses it to send Event Report messages for UPS Instances which have subscriptions association with {AETitle} (see <xref linkend="sect_6.9.7.2" xrefstyle="label"/>).</para>
+          <para>If the WebSocket connection is lost at any point the User-Agent can re-establish it by repeating the request.</para>
+          <para>The state of a WebSocket connection does not affect subscriptions and an Origin-Server is not required to queue messages when the connection is down.</para>
+          <note>
+            <para>A User-Agent will only receive the initial state of a newly-subscribed UPS Instance if the WebSocket connection was initiated before creating the subscription</para>
+          </note>
+        </section>
+        <section xml:id="sect_6.9.10.3" label="6.9.10.3" status="4">
+          <title>Response</title>
+          <section xml:id="sect_6.9.10.3.1" label="6.9.10.3.1" status="5">
+            <title>Response Status Line</title>
+            <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
+            <para>If the request was successful, the Service shall return an HTTP/1.1 "101 - Switching Protocols" response code.</para>
+            <para>If the request fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.10-1" xrefstyle="label"/>.</para>
+            <table frame="box" label="6.9.10-1" rules="all" xml:id="table_6.9.10-1">
+              <caption>Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>HTTP/1.1 Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Reason Phrase</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para>Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>101</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Switching Protocols</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The WebSocket connection was established.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>400</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Bad Request</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server was unable to understand the request</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>401</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Unauthorized</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server refused to accept the request because the client is not authenticated.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>403</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Forbidden</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>The UPS-RS Origin-Server understood the request, but is refusing to perform the query (e.g., an authenticated user with insufficient privileges).</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>503</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Busy</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para>Service is unavailable.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section xml:id="sect_6.9.10.3.2" label="6.9.10.3.2" status="5">
+            <title>Response Message Body</title>
+            <para>The response message body shall be empty.</para>
+            <para>The connection remains open and may be used by the server to send Event messages (see <xref linkend="sect_6.9.11" xrefstyle="label"/>).</para>
+          </section>
+        </section>
+      </section>
+      <section xml:id="sect_6.9.11" label="6.9.11" status="3">
+        <title>SendEventReport</title>
+        <para>This operation sends an Event Report over an established WebSocket connection.</para>
+        <section xml:id="sect_6.9.11.1" label="6.9.11.1" status="4">
+          <title>Request</title>
+          <para>The request message shall be formed as follows:</para>
+          <itemizedlist>
+            <listitem>
+              <para>Resource</para>
+              <itemizedlist>
+                <listitem>
+                  <para>N/A</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>Method</para>
+              <itemizedlist>
+                <listitem>
+                  <para>WebSocket Data Frame transmission</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para>The Event Report shall contain all mandatory attributes described indescribed in <olink targetdoc="PS3.4" targetptr="table_CC.2.4-1" xrefstyle="select: docname label"/> and <olink targetdoc="PS3.7" targetptr="table_10.3-1" xrefstyle="select: docname label"/> for the event type.</para>
+            </listitem>
+          </itemizedlist>
+          <section xml:id="sect_6.9.11.1.1" label="6.9.11.1.1" status="5">
+            <title>Request Message Body</title>
+            <para>WebSocket Events are encoded as WebSocket data frames with an opcode of "%x1" (text).</para>
+            <para>The frame payload data shall be a DICOM JSON dataset containing the attributes of the Event Report.</para>
+            <note>
+              <orderedlist>
+                <listitem>
+                  <para>Example WebSocket payload:</para>
+                  <programlisting><![CDATA[
+{
+"00000002": [ "1.2.840.10008.5.1.4.34.​6.​4" ],
+"00000100": [ 256 ],
+"00000110": [ 23 ],
+"00001000": [ "1.2.840.10008.5.1.4.34.​6.​4.2.3.44.22231" ],
+"00001001": [ 1 ],
+"00741238": [ "SCHEDULED" ],
+"00744041": [ "READY" ]
+}
+]]></programlisting>
+                </listitem>
+                <listitem>
+                  <para>The WebSocket protocol does not allow content negotiation so it is not possible to support both XML and JSON encoding of Event Report messages without extending the protocol.</para>
+                </listitem>
+              </orderedlist>
+            </note>
+          </section>
+        </section>
+        <section xml:id="sect_6.9.11.2" label="6.9.11.2" status="4">
+          <title>Behavior</title>
+          <para><olink targetdoc="PS3.4" targetptr="sect_CC.2.4.3" xrefstyle="select: docname label"/> describes the scenarios in which an Origin-Server sends Event Reports to a subscriber and the content of the Event Report messages.</para>
+        </section>
+        <section xml:id="sect_6.9.11.3" label="6.9.11.3" status="4">
+          <title>Response</title>
+          <para>None.</para>
         </section>
       </section>
     </section>
@@ -5513,13 +8158,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </section>
       <section xml:id="sect_8.1.3" label="8.1.3" status="3">
         <title>Unique Identifier of the Series</title>
-        <para>Series Instance UID as defined in the <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. This parameter is REQUIRED.</para>
+        <para>Series Instance UID as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. This parameter is REQUIRED.</para>
         <para>The parameter name shall be "seriesUID" for URI based mode, and, for the WS mode, one or multiple "SeriesRequest" that is included into the above described "StudyRequest" and that contains a required "seriesInstanceUID" attribute.</para>
         <para>The value shall be encoded as a Unique Identifier (UID) string, as specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, except that it shall not be padded to an even length with a NULL character.</para>
       </section>
       <section xml:id="sect_8.1.4" label="8.1.4" status="3">
         <title>Unique Identifier of the Object</title>
-        <para>SOP Instance UID as defined in the <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. This parameter is REQUIRED.</para>
+        <para>SOP Instance UID as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. This parameter is REQUIRED.</para>
         <para>The parameter name shall be "objectUID" for URI based mode, and for the WS mode one or multiple "DocumentRequest" that is included into the above described "SeriesRequest" and that include each one:</para>
         <itemizedlist>
           <listitem>
@@ -5546,7 +8191,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <para>Typically the Accept field will be sent by a Web Client as "*/*", which is compatible with any MIME types.</para>
             </listitem>
             <listitem>
-              <para>When this parameter is absent, the default content type of the response is dictated by the "MIME type constraints" sub-sections of Section 7 (i.e., 7.1.2, 7.2.2, 7.3.2, 7.4.2).</para>
+              <para>When this parameter is absent, the default content type of the response is dictated by the "MIME type constraints" sub-sections of <xref linkend="chapter_7" xrefstyle="template: Section %n"/> (i.e., <xref linkend="sect_7.1.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.2.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.3.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.4.2" xrefstyle="select: labelnumber"/>).</para>
             </listitem>
           </orderedlist>
         </note>
@@ -7096,7 +9741,7 @@ This is the binary JPEG payload for the second image.
         <para>There is a single InlineBinary value representing the entire Value Field, and not one per Value in the case where the Value Multiplicity is greater than one. E.g., a LUT with 4096 16 bit entries that may be encoded in DICOM with a Value Representation of OW, with a VL of 8192 and a VM of 1, or a US VR with a VL of 8192 and a VM of 4096 would both be represented as a single InlineBinary string.</para>
         <para>All rules (e.g., byte ordering and swapping) in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply.</para>
         <note>
-          <para>Implementers should in particular pay attention the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF and OW.</para>
+          <para>Implementers should in particular pay attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF and OW.</para>
         </note>
       </section>
     </section>
@@ -8205,10 +10850,10 @@ This is the binary JPEG payload for the second image.
           <para>a "doc" element</para>
         </listitem>
         <listitem>
-          <para>an element that is unique within a particular parent element (e.g. "request")</para>
+          <para>an element that is unique within a particular parent element (e.g., "request")</para>
         </listitem>
         <listitem>
-          <para>an element that can be repeated within a particular parent element (e.g. "param")</para>
+          <para>an element that can be repeated within a particular parent element (e.g., "param")</para>
         </listitem>
       </itemizedlist>
       <section xml:id="sect_G.2.1" label="G.2.1" status="3">
