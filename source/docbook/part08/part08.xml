@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.8" version="5.0" xml:id="PS3.8">
   <title>PS3.8</title>
-  <subtitle>DICOM PS3.8 2014c - Network Communication Support for Message Exchange</subtitle>
+  <subtitle>DICOM PS3.8 2015a - Network Communication Support for Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -69,10 +69,18 @@
   </chapter>
 <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
-  
+  <bibliography>
+    <biblioentry xml:id="biblio_ISODirectives3">
+      <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <author>
+        <orgname>ISO/IEC</orgname>
+      </author>
+      <date>1989</date>
+      <title>Drafting and presentation of International Standards</title>
+    </biblioentry>
+  </bibliography>
   <section label="2.1" status="2" xml:id="sect_2.1">
     <title>International Standards</title>
-  
   <para>ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model</para>
   <para>ISO 7498-3, OSI Basic Reference Model - Part 3: Naming and Addressing</para>
   <para>ISO 8327:1987, Information Processing Systems - Open Systems Interconnection - Connection Oriented Session Protocol Specification</para>
@@ -711,7 +719,7 @@
 <section label="7.1.1.2" status="4" xml:id="sect_7.1.1.2">
     <title>Application Context Name</title>
   
-  <para>This parameter identifies the application context proposed by the requestor. The acceptor shall return either the same or a different name. The returned name shall specify the application context to be used for this association. Further discussion on Application Context Names can be found in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+  <para>This parameter identifies the application context proposed by the requestor. The acceptor shall return either the same or a different name. The returned name shall specify the application context to be used for this association. Further discussion on Application Context Names can be found in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
   <para>An application context is an explicitly defined set of application service elements, related options, and any other information necessary for the interworking of application entities on an association.</para>
   <note>
     <para>The offer of an alternate application context by the acceptor provides a mechanism for limited negotiation. If the requestor cannot operate in the acceptor's application context, it shall issue an A-Abort request primitive. Application Context Names for the DICOM Application Entity as well as Application Context Names usage rules are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
@@ -720,7 +728,7 @@
 <section label="7.1.1.3" status="4" xml:id="sect_7.1.1.3">
     <title>Calling AE Title</title>
   
-  <para>This parameter identifies the Application Entity (AE) that shall contain the requestor of the A-ASSOCIATE service. It is based on the Source DICOM Application Name. The relationship between DICOM Application Names and AE titles is specified in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>. The Calling AE title may or may not be the same as the Initiator Address present in DICOM Messages exchanged over the association.</para>
+  <para>This parameter identifies the Application Entity (AE) that shall contain the requestor of the A-ASSOCIATE service. It is based on the Source DICOM Application Name. The relationship between DICOM Application Names and AE titles is specified in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>. The Calling AE title may or may not be the same as the Initiator Address present in DICOM Messages exchanged over the association.</para>
   <note>
     <para>It is the responsibility of the UL User that received the A-ASSOCIATE-RQ to verify whether the Calling AE Title is one of its known remote DICOM Application Names.</para>
   </note>
@@ -728,7 +736,7 @@
 <section label="7.1.1.4" status="4" xml:id="sect_7.1.1.4">
     <title>Called AE Title</title>
   
-  <para>This parameter identifies the Application Entity that shall contain the intended acceptor of the A-ASSOCIATE service. It is based on the Destination DICOM Application Name. The relationship between DICOM Application Name and AE titles is specified in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>. The Called AE title may or may not be the same as the Receiver Address present in DICOM Messages exchanged over the association.</para>
+  <para>This parameter identifies the Application Entity that shall contain the intended acceptor of the A-ASSOCIATE service. It is based on the Destination DICOM Application Name. The relationship between DICOM Application Name and AE titles is specified in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>. The Called AE title may or may not be the same as the Receiver Address present in DICOM Messages exchanged over the association.</para>
   <note>
     <para>It is the responsibility of the UL User that received the A-ASSOCIATE-RQ to verify whether the Called AE Title is its (or one of its) DICOM Application Name(s).</para>
   </note>
@@ -741,14 +749,14 @@
 <section label="7.1.1.6" status="4" xml:id="sect_7.1.1.6">
     <title>User Information</title>
   
-  <para>This parameter shall be used by the requestor and the acceptor of the association to include DICOM Application Entity user information. Its meaning shall depend on the application context that accompanies the primitive. The usage of this parameter is specified in <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+  <para>This parameter shall be used by the requestor and the acceptor of the association to include DICOM Application Entity user information. Its meaning shall depend on the application context that accompanies the primitive. The usage of this parameter is specified in <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
   <note>
     <orderedlist numeration="arabic">
       <listitem>
         <para>This parameter is used to carry initialization information for the DICOM Application Entities as defined in the application context specified by the value of the accompanying Application Context Name parameter.</para>
       </listitem>
       <listitem>
-        <para><xref linkend="chapter_D" xrefstyle="template: Annex %n"/> specifies some user information sub-items, and references <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for the specification of additional sub-items. <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>, in turn, references <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> for the specification of Service-class-application-information used in some sub-items.</para>
+        <para><xref linkend="chapter_D" xrefstyle="template:Annex %n"/> specifies some user information sub-items, and references <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for the specification of additional sub-items. <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>, in turn, references <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> for the specification of Service-class-application-information used in some sub-items.</para>
       </listitem>
     </orderedlist>
   </note>
@@ -816,12 +824,12 @@
 <section label="7.1.1.10" status="4" xml:id="sect_7.1.1.10">
     <title>Calling Presentation Address</title>
   
-  <para>This parameter shall contain a structured destination address unambiguous within the global network address structure. This shall be a TCP/IP Address. See <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.</para>
+  <para>This parameter shall contain a structured destination address unambiguous within the global network address structure. This shall be a TCP/IP Address. See <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section label="7.1.1.11" status="4" xml:id="sect_7.1.1.11">
     <title>Called Presentation Address</title>
   
-  <para>This parameter shall contain a structured destination address unambiguous within the global network address structure. This shall be a TCP/IP Address. See <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.</para>
+  <para>This parameter shall contain a structured destination address unambiguous within the global network address structure. This shall be a TCP/IP Address. See <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section label="7.1.1.12" status="4" xml:id="sect_7.1.1.12">
     <title>Responding Presentation Address</title>
@@ -836,7 +844,7 @@
   <note>
     <para>A separate presentation context will be associated with each Abstract Syntax Name in each of the elements of the Presentation Context Definition List parameter. If the same Abstract Syntax Name occurs more than once, a separate and distinctly identified presentation context will be generated for each occurrence (as only one Transfer Syntax per presentation context can be accepted).</para>
   </note>
-  <para>Abstract Syntaxes defined by this standard and used by DICOM Application Entites are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. Transfer Syntaxes defined by this standard and used by DICOM Application Entities are defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Further discussion on Abstract Syntaxes and Transfer Syntaxes can be found in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>.</para>
+  <para>Abstract Syntaxes defined by this standard and used by DICOM Application Entites are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. Transfer Syntaxes defined by this standard and used by DICOM Application Entities are defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Further discussion on Abstract Syntaxes and Transfer Syntaxes can be found in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section label="7.1.1.14" status="4" xml:id="sect_7.1.1.14">
     <title>Presentation Context Definition Result List</title>
@@ -1242,7 +1250,7 @@
     </tr>
   </tbody>
   </table>
-  <para>The Presentation Data Value List parameter shall contain one or more Presentation Data Values (PDV). Each PDV shall consist of two parameters: a Presentation Context ID and User Data values. The User Data values are taken from the Abstract Syntax and encoded in the Transfer Syntax identified by the Presentation Context ID. This referenced Presentation Context ID identifies one of the presentation contexts agreed to at association time. The User Data values format used in each PDV by the DICOM Application Entities is specified in <xref linkend="chapter_E" xrefstyle="template: Annex %n"/>.</para>
+  <para>The Presentation Data Value List parameter shall contain one or more Presentation Data Values (PDV). Each PDV shall consist of two parameters: a Presentation Context ID and User Data values. The User Data values are taken from the Abstract Syntax and encoded in the Transfer Syntax identified by the Presentation Context ID. This referenced Presentation Context ID identifies one of the presentation contexts agreed to at association time. The User Data values format used in each PDV by the DICOM Application Entities is specified in <xref linkend="chapter_E" xrefstyle="template:Annex %n"/>.</para>
   </section>
 </section>
 </chapter>
@@ -2923,7 +2931,7 @@
         <para>Application-context-name</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>A valid Application-context-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.2" xrefstyle="select: label"/>. Application-context-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> for an overview of this concept). DICOM Application-context-names are registered in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+        <para>A valid Application-context-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.2" xrefstyle="select: label"/>. Application-context-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for an overview of this concept). DICOM Application-context-names are registered in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3113,7 +3121,7 @@
         <para>Abstract-syntax-name</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This variable field shall contain the Abstract-syntax-name related to the proposed presentation context. A valid Abstract-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.13" xrefstyle="select: label"/>. Abstract-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> for an overview of this concept). DICOM Abstract-syntax-names are registered in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
+        <para>This variable field shall contain the Abstract-syntax-name related to the proposed presentation context. A valid Abstract-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.13" xrefstyle="select: label"/>. Abstract-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> for an overview of this concept). DICOM Abstract-syntax-names are registered in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3186,7 +3194,7 @@
         <para>Transfer-syntax-name(s)</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This variable field shall contain the Transfer-syntax-name proposed for this presentation context. A valid Transfer-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.13" xrefstyle="select: label"/>. Transfer-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> for an overview of this concept). DICOM Transfer-syntax-names are registered in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
+        <para>This variable field shall contain the Transfer-syntax-name proposed for this presentation context. A valid Transfer-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.13" xrefstyle="select: label"/>. Transfer-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> for an overview of this concept). DICOM Transfer-syntax-names are registered in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3264,7 +3272,7 @@
         <para>User-data</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This variable field shall contain User-data sub-items as defined by the DICOM Application Entity. The structure and content of these sub-items is defined in <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+        <para>This variable field shall contain User-data sub-items as defined by the DICOM Application Entity. The structure and content of these sub-items is defined in <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3593,7 +3601,7 @@
         <para>Transfer-syntax-name</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This variable field shall contain the Transfer-syntax-name proposed for this presentation context. A valid Transfer-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.14" xrefstyle="select: label"/>. Transfer-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> for an overview of this concept). DICOM Transfer-syntax-names are registered in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
+        <para>This variable field shall contain the Transfer-syntax-name proposed for this presentation context. A valid Transfer-syntax-name shall be encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>. For a description of the use of this field see <xref linkend="sect_7.1.1.14" xrefstyle="select: label"/>. Transfer-syntax-names are structured as UIDs as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> (see <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> for an overview of this concept). DICOM Transfer-syntax-names are registered in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3671,7 +3679,7 @@
         <para>User-data</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This variable field shall contain User-data sub-items as defined by the DICOM Application Entity. The structure and content of these sub-items is defined in <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+        <para>This variable field shall contain User-data sub-items as defined by the DICOM Application Entity. The structure and content of these sub-items is defined in <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -3936,7 +3944,7 @@
         <para>Presentation-data-value</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para>This Presentation-data-value field shall contain DICOM message information (command and/or data set) with a message control header. For a complete description of the use of this field see <xref linkend="chapter_E" xrefstyle="template: Annex %n"/>.</para>
+        <para>This Presentation-data-value field shall contain DICOM message information (command and/or data set) with a message control header. For a complete description of the use of this field see <xref linkend="chapter_E" xrefstyle="template:Annex %n"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -4231,7 +4239,7 @@
 <listitem>
   <para>Use registered Application Context Names, Abstract Syntax Names and Transfer Syntax Names as defined for OSI Object Identifiers (ISO 8824 and ISO 9834-1).</para>
   <note>
-    <para><xref linkend="chapter_F" xrefstyle="template: Annex %n"/> defines the DICOM Upper Layer Protocol encoding for the Application Context Names, Abstract Syntax Names, and Transfer Syntax Names. ISO 8825 defined encoding is not used.</para>
+    <para><xref linkend="chapter_F" xrefstyle="template:Annex %n"/> defines the DICOM Upper Layer Protocol encoding for the Application Context Names, Abstract Syntax Names, and Transfer Syntax Names. ISO 8825 defined encoding is not used.</para>
   </note>
 </listitem>
     <listitem><para>Use one of the published and approved RFCs defining the operation of TCP/IP over specific physical networks.</para>
@@ -4258,7 +4266,7 @@
 <section label="A.2" status="2" xml:id="sect_A.2">
     <title>DICOM Application Context Name Encoding and Registration</title>
   
-  <para>The Application Context Name structure is based on the OSI Object Identification (numeric form) as defined by ISO 8824. Application Context Names are registered values as defined by ISO 9834-1 to ensure global uniqueness. They are encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/> when the TCP/IP network communication support is used as defined in Section 9.</para>
+  <para>The Application Context Name structure is based on the OSI Object Identification (numeric form) as defined by ISO 8824. Application Context Names are registered values as defined by ISO 9834-1 to ensure global uniqueness. They are encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> when the TCP/IP network communication support is used as defined in Section 9.</para>
   <section label="A.2.1" status="3" xml:id="sect_A.2.1">
     <title>DICOM Registered Application Context Names</title>
   
@@ -4285,7 +4293,7 @@
 <section label="B.3" status="2" xml:id="sect_B.3">
     <title>DICOM Abstract and Transfer Syntax Names Encoding and Registration</title>
   
-  <para>The Abstract and Transfer Syntax Name structure is based on the OSI Object Identification (numeric form) as defined by ISO 8824. Abstract and Transfer Syntax Names are registered values as defined by ISO 9834-1 to ensure global uniqueness. Abstract and Transfer Syntax Names are encoded as defined in ISO 8825 (Object Identifiers of numeric form) when the OSI network communication support is used as defined in Section 8. They are encoded as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/> when the TCP/IP network communication support is used as defined in Section 9.</para>
+  <para>The Abstract and Transfer Syntax Name structure is based on the OSI Object Identification (numeric form) as defined by ISO 8824. Abstract and Transfer Syntax Names are registered values as defined by ISO 9834-1 to ensure global uniqueness. Abstract and Transfer Syntax Names are encoded as defined in ISO 8825 (Object Identifiers of numeric form) when the OSI network communication support is used as defined in Section 8. They are encoded as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> when the TCP/IP network communication support is used as defined in Section 9.</para>
   <section label="B.3.1" status="3" xml:id="sect_B.3.1">
     <title>DICOM Registered Abstract and Transfer Syntax Names</title>
   
@@ -4550,7 +4558,7 @@
 <section label="E.2" status="2" xml:id="sect_E.2">
     <title>Message Control Header Encoding</title>
   
-  <para>The Message Control Header is located in front of each DICOM message fragment (see <xref linkend="figure_E.2-1" xrefstyle="select: label"/>). Its presence is mandatory for all DICOM Abstract Syntaxes (see <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> for further discussion on Abstract Syntaxes).</para>
+  <para>The Message Control Header is located in front of each DICOM message fragment (see <xref linkend="figure_E.2-1" xrefstyle="select: label"/>). Its presence is mandatory for all DICOM Abstract Syntaxes (see <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> for further discussion on Abstract Syntaxes).</para>
   <para>The Message Control Header shall be made of one byte with the least significant bit (bit 0) taking one of the following values:</para>
   <orderedlist numeration="loweralpha">
 <listitem><para>If bit 0 is set to 1, the following fragment shall contain Message Command information.</para></listitem>

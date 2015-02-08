@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2014c - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2015a - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -63,6 +63,16 @@
   <chapter xml:id="chapter_3" label="3" status="1">
     <title>Normative References</title>
     <para>The following normative documents contain provisions that, through reference in this text, constitute provisions of this part of DICOM. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of DICOM are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies. Members of ISO and IEC maintain registers of currently valid International Standards.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>ebRS ebXML Registry Service</para>
     <para>HL7 CDA Health Level Seven, Clinical Document Architecture (CDA)</para>
     <para>IETF RFC 822 Standard for ARPA Internet Text Messages <link xl:href="http://tools.ietf.org/html/rfc822"/></para>
@@ -368,7 +378,7 @@
       </section>
       <section xml:id="sect_6.2.2" label="6.2.2" status="3">
         <title>List of Media Types Supported in the Response</title>
-        <para>The "Accept" field of the GET method request shall specify the Media type(s) acceptable to the Web Client System. The(se) Media type(s) shall include at least the items of the list of MIME types specified in <xref linkend="chapter_7" xrefstyle="template: Section %n"/> of this standard devoted to the DICOM persistent object types.</para>
+        <para>The "Accept" field of the GET method request shall specify the Media type(s) acceptable to the Web Client System. The(se) Media type(s) shall include at least the items of the list of MIME types specified in <xref linkend="chapter_7" xrefstyle="template:Section %n"/> of this standard devoted to the DICOM persistent object types.</para>
         <note>
           <para>Typically the Accept field will be sent by a Web Client as "*/*". An optional parameter specifies the MIME type(s) preferred by the Web Client, as a subset of those specified in the "Accept" field.</para>
         </note>
@@ -1266,7 +1276,7 @@
           <para>All XML responses shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object.</para>
         </listitem>
         <listitem>
-          <para>All JSON responses shall be encoded as a DICOM JSON Model Object as defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+          <para>All JSON responses shall be encoded as a DICOM JSON Model Object as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
         </listitem>
         <listitem>
           <para>Uncompressed bulk and pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
@@ -2358,7 +2368,7 @@
                     </listitem>
                     <listitem>
                       <para>application/json</para>
-                      <para>Specifies that the results should be DICOM JSON (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>). A WADO-RS provider may optionally support this Media Type</para>
+                      <para>Specifies that the results should be DICOM JSON (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>). A WADO-RS provider may optionally support this Media Type</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -2375,7 +2385,7 @@
               <para>multipart/related; type=application/dicom+xml, as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
             </listitem>
             <listitem>
-              <para>application/json, as described in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+              <para>application/json, as described in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
             </listitem>
           </itemizedlist>
           <para>The response must include the URL attribute for each BulkData element.</para>
@@ -2423,7 +2433,7 @@
                 <para>The response is a JSON array that contains all metadata for the specified Study.</para>
               </listitem>
               <listitem>
-                <para>Each element in the array is the DICOM JSON encoded metadata for an Instance (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>).</para>
+                <para>Each element in the array is the DICOM JSON encoded metadata for an Instance (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>).</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2541,7 +2551,7 @@
           <para>All XML request messages shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object.</para>
         </listitem>
         <listitem>
-          <para>All JSON requests shall be encoded as an array of DICOM JSON Model Objects defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+          <para>All JSON requests shall be encoded as an array of DICOM JSON Model Objects defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
         </listitem>
         <listitem>
           <para>Uncompressed bulk and pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
@@ -2616,7 +2626,7 @@
             </listitem>
           </itemizedlist>
           <note>
-            <para>It is not necessary that the study referenced by the StudyInstanceUID in the resource (and in the provided instances) exists on the server, however it is necessary that it be a valid UID. The client may have obtained an appropriate UID from elsewhere or generated it as described in <olink targetdoc="PS3.5" targetptr="chapter_9" xrefstyle="select: docname labelnumber"/> and <olink targetdoc="PS3.5" targetptr="chapter_B" xrefstyle="select: docname labelnumber"/>.</para>
+            <para>It is not necessary that the study referenced by the StudyInstanceUID in the resource (and in the provided instances) exists on the server, however it is necessary that it be a valid UID. The client may have obtained an appropriate UID from elsewhere or generated it as described in <olink targetdoc="PS3.5" targetptr="chapter_9" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="chapter_B" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.5"/>.</para>
           </note>
           <section xml:id="sect_6.6.1.1.1" label="6.6.1.1.1" status="5">
             <title>DICOM Request Message Body</title>
@@ -2728,7 +2738,7 @@
                 <para>The multipart request body contains all the metadata and bulk data to be stored. If the number of bulk data parts does not correspond to the number of unique BulkDataURIs in the metadata then the entire message is invalid and will generate an error status line.</para>
               </listitem>
               <listitem>
-                <para>The first part in the multipart request will contain a JSON array of DICOM JSON Model Objects (defined in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>). Each array element is the metadata from a SOP Instance sent as part of the Store operation. This message part will have the following headers:</para>
+                <para>The first part in the multipart request will contain a JSON array of DICOM JSON Model Objects (defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>). Each array element is the metadata from a SOP Instance sent as part of the Store operation. This message part will have the following headers:</para>
                 <itemizedlist>
                   <listitem>
                     <para>Content-Type: application/json; transfer-syntax={TransferSyntaxUID}</para>
@@ -2787,7 +2797,7 @@
               <para>an XML object as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
             </listitem>
             <listitem>
-              <para>a DICOM JSON Model Object defined as defined in  <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+              <para>a DICOM JSON Model Object defined as defined in  <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
             </listitem>
           </itemizedlist>
           <section xml:id="sect_6.6.1.3.1" label="6.6.1.3.1" status="5">
@@ -3197,8 +3207,7 @@
             <section xml:id="sect_6.6.1.3.2.2" label="6.6.1.3.2.2" status="6">
               <title>Response Message Body Example</title>
               <para>The following is an example of a PS3.18 XML Store Instances Response Module in the response message body containing 2 failed SOP Instances, 1 successful SOP Instance, and 1 accepted SOP Instance with a warning:</para>
-              <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+              <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <NativeDicomModel xmlns="http://dicom.nema.org/PS3.19/models/NativeDICOM"
 xsi:schemaLocation="http://dicom.nema.org/PS3.19/models/NativeDICOM"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -3447,8 +3456,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>{dicomKeyword}.{attributeID}, where {attributeID} is an element of the sequence specified by {dicomKeyword}</para>
               </listitem>
             </itemizedlist>
-            <para>{dicomTag} is the eight character hexadecimal string corresponding to the Tag of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
-            <para>{dicomKeyword} is the Keyword of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname labelnumber"/>).</para>
+            <para>{dicomTag} is the eight character hexadecimal string corresponding to the Tag of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname label"/>).</para>
+            <para>{dicomKeyword} is the Keyword of a DICOM Attribute (see <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname label"/>).</para>
             <note>
               <para>Examples of valid values for {attributeID}:</para>
               <itemizedlist>
@@ -5313,8 +5322,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>More than one Status Code can be described by a single "response" element.</para>
               </note>
               <para>Example:</para>
-              <programlisting><![CDATA[
-<method name="GET" id="RetrieveStudies">
+              <programlisting><![CDATA[<method name="GET" id="RetrieveStudies">
 	<request>
 		<param name="Accept" style="header" default="multipart/related; type=application/dicom">
 			<option value="multipart/related; type=application/dicom" />
@@ -5388,8 +5396,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>More than one Status Code can be described by a single "response" element.</para>
               </note>
               <para>Example:</para>
-              <programlisting><![CDATA[
-<method name="GET" id="StoreInstances">
+              <programlisting><![CDATA[<method name="GET" id="StoreInstances">
 	<request>
 		<param name="Accept" style="header" default="application/dicom+xml">
 			<option value="application/dicom+xml" />
@@ -5463,8 +5470,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>More than one Status Code can be described by a single "response" element.</para>
               </note>
               <para>Example:</para>
-              <programlisting><![CDATA[
-<method name="GET" id="SearchForStudies">
+              <programlisting><![CDATA[<method name="GET" id="SearchForStudies">
 	<request>
 		<param name="Accept" style="header" default="multipart/related; type=application/dicom+xml">
 			<option value="multipart/related; type=application/dicom+xml" />
@@ -5532,8 +5538,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>More than one Status Code can be described by a single "response" element.</para>
               </note>
               <para>Example:</para>
-              <programlisting><![CDATA[
-<method name="POST" id="UpdateUPS">
+              <programlisting><![CDATA[<method name="POST" id="UpdateUPS">
   <request>
     <representation mediaType="application/dicom+xml" />
     <representation mediaType="application/json" />
@@ -5545,7 +5550,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <response status="409">
     <param name="Warning" style="header" fixed="299 {+SERVICE}: The Transaction UID is missing." />
     <param name="Warning" style="header" fixed="299 {+SERVICE}: The Transaction UID is incorrect." />
-    <param name="Warning" style="header" fixed="299 {+SERVICE}: The submitted request is inconsistent with the current state of the UPS Instance." />
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The submitted request is inconsistent
+                                                                with the current state of the UPS Instance." />
   </response>
   <response status="400 401 403 404 503" />
 </method>
@@ -5585,8 +5591,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>More than one Status Code can be described by a single "response" element.</para>
               </note>
               <para>Example:</para>
-              <programlisting><![CDATA[
-<method name="POST" id="CreateSubscription">
+              <programlisting><![CDATA[<method name="POST" id="CreateSubscription">
   <request>
     <param name="deletionlock" style="query" default="false">
       <option value="true" />
@@ -5597,7 +5602,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <param name="Warning" style="header" fixed="299 {+SERVICE}: Deletion Lock not granted." />
    </response>
   <response status="403">
-    <param name="Warning" style="header" fixed="299 {+SERVICE}: The Origin-Server does not support Global Subscription Filtering." />
+    <param name="Warning" style="header" fixed="299 {+SERVICE}: The Origin-Server does not support
+                                                                Global Subscription Filtering." />
   </response>
   <response status="400 401 404 409 503" />
 </method>
@@ -5702,7 +5708,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     </section>
     <section xml:id="sect_6.9" label="6.9" status="2">
       <title>UPS-RS Worklist Service</title>   
-      <para>This DICOM Web Service defines a RESTful interface to the UPS SOP Classes (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> &amp; <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>). It consists of the following action types:</para>
+      <para>This DICOM Web Service defines a RESTful interface to the UPS SOP Classes (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>). It consists of the following action types:</para>
       <orderedlist numeration="arabic">
         <listitem>
           <para>CreateUPS</para>
@@ -5898,7 +5904,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </tr>
         </tbody>
       </table>
-      <para>The Origin-Server shall comply with all requirements placed on the SCP for the corresponding services in <olink targetdoc="PS3.4" targetptr="chapter_CC" xrefstyle="template: Annex %n in PS3.4"/>.</para>
+      <para>The Origin-Server shall comply with all requirements placed on the SCP for the corresponding services in <olink targetdoc="PS3.4" targetptr="chapter_CC" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.4"/>.</para>
       <section xml:id="sect_6.9.1" label="6.9.1" status="3">
         <title>CreateUPS</title>
         <para>This resource allows a User-Agent to instruct an Origin-Server to create a UPS instance.</para>
@@ -5939,11 +5945,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <itemizedlist>
                     <listitem>
                       <para>application/dicom+xml</para>
-                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: labelnumber"/>.</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: label"/>.</para>
                     </listitem>
                     <listitem>
                       <para>application/json</para>
-                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: labelnumber"/>.</para>
+                      <para>Specifies that the post is DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON metadata. See <xref linkend="sect_6.9.1.1.1" xrefstyle="select: label"/>.</para>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -5969,7 +5975,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 </itemizedlist>
               </listitem>
               <listitem>
-                <para>The request body contains all attributes to be stored in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> JSON. Any binary data contained in the message shall be inline.</para>
+                <para>The request body contains all attributes to be stored in either DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML or DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: label"/> JSON. Any binary data contained in the message shall be inline.</para>
               </listitem>
             </itemizedlist>
            </section>
@@ -5985,7 +5991,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.1.3.1" label="6.9.1.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the Create request is successful, the Origin-Server shall return an HTTP/1.1 "201 - Created" response code.</para>
-            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.1-1" xrefstyle="select: labelnumber"/>.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.1-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.1-1" rules="all" xml:id="table_6.9.1-1">
               <caption>Status Codes</caption>
               <thead>
@@ -6077,7 +6083,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <itemizedlist>
               <listitem>
                 <para>Content-Location: {+WorkitemURL}</para>
-                <para>Where {+WorkitemURL} is the URL from which the created UPS Instance can be retrieved (see <xref linkend="sect_6.9.4" xrefstyle="select: labelnumber"/>)</para>
+                <para>Where {+WorkitemURL} is the URL from which the created UPS Instance can be retrieved (see <xref linkend="sect_6.9.4" xrefstyle="select: label"/>)</para>
               </listitem>
             </itemizedlist>
             <para>If the UPS instance was created with modifications, the response message shall include the following HTTP/1.1 header:</para>
@@ -6187,7 +6193,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.2.3.1" label="6.9.2.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the Set request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.2-1" xrefstyle="label"/>.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.2-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.2-1" rules="all" xml:id="table_6.9.2-1">
               <caption>Status Codes</caption>
               <thead>
@@ -6312,13 +6318,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <para>If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages encoded in an HTTP/1.1 Warning header field describing the nature of the conflict:</para>
             <itemizedlist>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:The Transaction UID is missing.</para>
+                <para>Warning: 299 {+SERVICE}: The Transaction UID is missing.</para>
               </listitem>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:The Transaction UID is incorrect.</para>
+                <para>Warning: 299 {+SERVICE}: The Transaction UID is incorrect.</para>
               </listitem>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:The submitted request is inconsistent with the current state of the UPS Instance.</para>
+                <para>Warning: 299 {+SERVICE}: The submitted request is inconsistent with the current state of the UPS Instance.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6420,7 +6426,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.3.3.1" label="6.9.3.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the SearchForUPS request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.3-1" xrefstyle="label"/>.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.3-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.3-1" rules="all" xml:id="table_6.9.3-1">
               <caption>Status Codes</caption>
               <thead>
@@ -6522,16 +6528,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <para>For each matching UPS Instance, the Origin-Server shall return:</para>
             <itemizedlist>
               <listitem>
-                <para>-All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1 and 2.</para>
+                <para>All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1 and 2.</para>
               </listitem>
               <listitem>
-                <para>-All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1C for which the conditional requirements are met.</para>
+                <para>All Unified Procedure Step Instance Attributes in <olink targetdoc="PS3.4" targetptr="table_CC.2.5-3" xrefstyle="select: docname label"/> with a Return Key value of 1C for which the conditional requirements are met.</para>
               </listitem>
               <listitem>
-                <para>-All other Unified Procedure Step Instance Attributes passed as {attributeID} query keys that are supported by the Origin-Server as matching or return attributes</para>
+                <para>All other Unified Procedure Step Instance Attributes passed as {attributeID} query keys that are supported by the Origin-Server as matching or return attributes</para>
               </listitem>
               <listitem>
-                <para>-All other Unified Procedure Step Instance Attributes passed as "includefield" query values that are supported by the Origin-Server as return attributes.</para>
+                <para>All other Unified Procedure Step Instance Attributes passed as "includefield" query values that are supported by the Origin-Server as return attributes.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -6557,7 +6563,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para>If there are no matching results, the message body shall be empty.</para>
                  </listitem>
                 <listitem>
-                  <para>-Each part in the multipart body includes the following HTTP/1.1 headers:</para>
+                  <para>Each part in the multipart body includes the following HTTP/1.1 headers:</para>
                   <itemizedlist>
                     <listitem>
                       <para>Content-Type: application/dicom+xml</para>
@@ -6659,7 +6665,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.4.3.1" label="6.9.4.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the Retrieve request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.4-1" xrefstyle="label"/>.</para>
+            <para>If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.4-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.4-1" rules="all" xml:id="table_6.9.4-1">
               <caption>Status Codes</caption>
               <thead>
@@ -6761,7 +6767,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   </itemizedlist>
                 </listitem>
                 <listitem>
-                  <para>- The response contains a DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML DicomNativeModel element containing the attributes for the requested UPS Instance (see <olink targetdoc="PS3.19" targetptr="sect_A.1" xrefstyle="select: docname label"/>).</para>
+                  <para>The response contains a DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> XML DicomNativeModel element containing the attributes for the requested UPS Instance (see <olink targetdoc="PS3.19" targetptr="sect_A.1" xrefstyle="select: docname label"/>).</para>
                 </listitem>
               </itemizedlist>
             </section>
@@ -6870,7 +6876,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.5.3.1" label="6.9.5.3.1" status="5">
             <title>Response Status Line</title>
             <para>If the State Change was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the State Change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.5-1" xrefstyle="label"/>.</para>
+            <para>If the State Change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.5-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.5-1" rules="all" xml:id="table_6.9.5-1">
               <caption>Status Codes</caption>
               <thead>
@@ -6993,13 +6999,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <para>If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages in the HTTP/1.1 Warning header field describing the nature of the conflict:</para>
             <itemizedlist>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:the Transaction UID is missing.</para>
+                <para>Warning: 299 {+SERVICE}: The Transaction UID is missing.</para>
               </listitem>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:the Transaction UID is incorrect.</para>
+                <para>Warning: 299 {+SERVICE}: The Transaction UID is incorrect.</para>
               </listitem>
               <listitem>
-                <para>Warning: 299 {+SERVICE}:the submitted request is inconsistent with the current state of the UPS Instance.</para>
+                <para>Warning: 299 {+SERVICE}: The submitted request is inconsistent with the current state of the UPS Instance.</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -7019,7 +7025,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <para>Resource</para>
               <itemizedlist>
                 <listitem>
-                  <para>-{+SERVICE}/workitems/{UPSInstanceUID}/cancelrequest</para>
+                  <para>{+SERVICE}/workitems/{UPSInstanceUID}/cancelrequest</para>
                   <para>where:</para>
                   <itemizedlist>
                     <listitem>
@@ -7091,7 +7097,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <note>
             <para>An HTTP/1.1 Status Code indicating success means that the Request was accepted, not that the UPS has been canceled. The system performing the UPS is not obliged to honor the request to cancel and in some scenarios, may not even receive notification of the request. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.4" xrefstyle="select: docname label"/>.</para>
           </note>
-          <para>To cancel an IN PROGRESS UPS that the User-Agent is itself performing, the User-Agent shall instead use the ChangeUPSState action as described in <xref linkend="sect_6.9.5" xrefstyle="label"/>.</para>
+          <para>To cancel an IN PROGRESS UPS that the User-Agent is itself performing, the User-Agent shall instead use the ChangeUPSState action as described in <xref linkend="sect_6.9.5" xrefstyle="select: label"/>.</para>
         </section>
         <section xml:id="sect_6.9.6.3" label="6.9.6.3" status="4">
           <title>Response</title>
@@ -7099,7 +7105,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.6.2.1" label="6.9.6.2.1" status="5">
             <title>Response Status Line</title>
             <para>If the cancel request was accepted, the Service shall return an HTTP/1.1 "202 - Accepted" response code.</para>
-            <para>If the cancel request was rejected, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.6-1" xrefstyle="label"/>.</para>
+            <para>If the cancel request was rejected, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.6-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.6-1" rules="all" xml:id="table_6.9.6-1">
               <caption>Status Codes</caption>
               <thead>
@@ -7302,12 +7308,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para>where:</para>
                 <itemizedlist>
                   <listitem>
-                    <para>- {WSSERVICE}is the base URL for the WebSocket service. This shall include the WebSocket protocol (either WS or WSS) and may include a combination of authority and path.</para>
+                    <para>{WSSERVICE} is the base URL for the WebSocket service. This shall include the WebSocket protocol (either WS or WSS) and may include a combination of authority and path.</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
             </itemizedlist>
-            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.7-2" xrefstyle="label"/>.</para>
+            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.7-2" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.7-2" rules="all" xml:id="table_6.9.7-2">
               <caption>Status Codes</caption>
               <thead>
@@ -7467,7 +7473,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
         <section xml:id="sect_6.9.8.2" label="6.9.8.2" status="4">
           <title>Behavior</title>
-          <para>The SuspendGlobalSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="label"/>.</para>
+          <para>The SuspendGlobalSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="select: label"/>.</para>
         </section>
         <section xml:id="sect_6.9.8.3" label="6.9.8.3" status="4">
           <title>Response</title>
@@ -7475,7 +7481,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <title>Response Status Line</title>
             <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
             <para>If the SuspendGlobalSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the subscription change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.8-1" xrefstyle="label"/>.</para>
+            <para>If the subscription change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.8-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.8-1" rules="all" xml:id="table_6.9.8-1">
               <caption>Status Codes</caption>
               <thead>
@@ -7620,7 +7626,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
         <section xml:id="sect_6.9.9.2" label="6.9.9.2" status="4">
           <title>Behavior</title>
-          <para>The DeleteSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="label"/>.</para>
+          <para>The DeleteSubscription Origin-Server shall behave as described in <xref linkend="sect_6.9.7.2" xrefstyle="select: label"/>.</para>
         </section>
         <section xml:id="sect_6.9.9.3" label="6.9.9.3" status="4">
           <title>Response</title>
@@ -7628,7 +7634,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <title>Response Status Line</title>
             <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
             <para>If the DeleteSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
-            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.9-1" xrefstyle="label"/>.</para>
+            <para>If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.9-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.7-1" rules="all" xml:id="table_6.9.9-1">
               <caption>Status Codes</caption>
               <thead>
@@ -7768,7 +7774,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
         <section xml:id="sect_6.9.10.2" label="6.9.10.2" status="4">
           <title>Behavior</title>
-          <para>The Origin-Server maintains the active WebSocket connection and uses it to send Event Report messages for UPS Instances which have subscriptions association with {AETitle} (see <xref linkend="sect_6.9.7.2" xrefstyle="label"/>).</para>
+          <para>The Origin-Server maintains the active WebSocket connection and uses it to send Event Report messages for UPS Instances which have subscriptions association with {AETitle} (see <xref linkend="sect_6.9.7.2" xrefstyle="select: label"/>).</para>
           <para>If the WebSocket connection is lost at any point the User-Agent can re-establish it by repeating the request.</para>
           <para>The state of a WebSocket connection does not affect subscriptions and an Origin-Server is not required to queue messages when the connection is down.</para>
           <note>
@@ -7781,7 +7787,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <title>Response Status Line</title>
             <para>The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
             <para>If the request was successful, the Service shall return an HTTP/1.1 "101 - Switching Protocols" response code.</para>
-            <para>If the request fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.10-1" xrefstyle="label"/>.</para>
+            <para>If the request fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.10-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.10-1" rules="all" xml:id="table_6.9.10-1">
               <caption>Status Codes</caption>
               <thead>
@@ -7859,7 +7865,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <section xml:id="sect_6.9.10.3.2" label="6.9.10.3.2" status="5">
             <title>Response Message Body</title>
             <para>The response message body shall be empty.</para>
-            <para>The connection remains open and may be used by the server to send Event messages (see <xref linkend="sect_6.9.11" xrefstyle="label"/>).</para>
+            <para>The connection remains open and may be used by the server to send Event messages (see <xref linkend="sect_6.9.11" xrefstyle="select: label"/>).</para>
           </section>
         </section>
       </section>
@@ -7898,8 +7904,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <orderedlist>
                 <listitem>
                   <para>Example WebSocket payload:</para>
-                  <programlisting><![CDATA[
-{
+                  <programlisting><![CDATA[{
 "00000002": [ "1.2.840.10008.5.1.4.34.​6.​4" ],
 "00000100": [ 256 ],
 "00000110": [ 23 ],
@@ -8191,7 +8196,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <para>Typically the Accept field will be sent by a Web Client as "*/*", which is compatible with any MIME types.</para>
             </listitem>
             <listitem>
-              <para>When this parameter is absent, the default content type of the response is dictated by the "MIME type constraints" sub-sections of <xref linkend="chapter_7" xrefstyle="template: Section %n"/> (i.e., <xref linkend="sect_7.1.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.2.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.3.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.4.2" xrefstyle="select: labelnumber"/>).</para>
+              <para>When this parameter is absent, the default content type of the response is dictated by the "MIME type constraints" sub-sections of <xref linkend="chapter_7" xrefstyle="template:Section %n"/> (i.e., <xref linkend="sect_7.1.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.2.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.3.2" xrefstyle="select: labelnumber"/>, <xref linkend="sect_7.4.2" xrefstyle="select: labelnumber"/>).</para>
             </listitem>
           </orderedlist>
         </note>
@@ -8386,8 +8391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <para>DICOM URIs may use the query component of the URI to specify request parameters.
       The following grammar defines the general syntax of parameters contained in the query component of the URI.
       Specific HTTP transactions defined elsewhere in this standard may further refine the legal &lt;name&gt; and/or &lt;value&gt; rules.</para>
-    <programlisting><![CDATA[
-    query-component = parameter [ *("&" parameter) ]
+    <programlisting><![CDATA[    query-component = parameter [ *("&" parameter) ]
     parameter       = name "="" value
     name            = *qchar
     value           = *qchar
@@ -8396,8 +8400,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     / "(" / ")" / "*" / "+" / "," / ";"
 ]]></programlisting>
     <para>The following rules are defined in IETF RFC3986 (Normative). They are reproduced here for convenience.</para>
-    <programlisting><![CDATA[
-    unreserved     = ALPHA / DIGIT / "-" / "." / "_" / "~"
+    <programlisting><![CDATA[    unreserved     = ALPHA / DIGIT / "-" / "." / "_" / "~"
     pct-encoded    = "%" HEXDIG HEXDIG
 ]]></programlisting>
     <note>
@@ -8413,8 +8416,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <title>Examples (Informative)</title>
     <section xml:id="sect_B.1" label="B.1" status="2">
       <title>Retrieving a Simple DICOM Image in JPEG</title>
-      <programlisting><![CDATA[
-http://www.hospital-stmarco/radiology/wado.php?requestType=WADO
+      <programlisting><![CDATA[http://www.hospital-stmarco/radiology/wado.php?requestType=WADO
   &studyUID=1.2.250.1.59.40211.12345678.678910
   &seriesUID=1.2.250.1.59.40211.789001276.14556172.67789
   &objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2
@@ -8422,8 +8424,7 @@ http://www.hospital-stmarco/radiology/wado.php?requestType=WADO
     </section>
     <section xml:id="sect_B.2" label="B.2" status="2">
       <title>Retrieving a DICOM SR in HTML</title>
-      <programlisting><![CDATA[
-http://server234/script678.asp?requestType=WADO
+      <programlisting><![CDATA[http://server234/script678.asp?requestType=WADO
   &studyUID=1.2.250.1.59.40211.12345678.678910
   &seriesUID=1.2.250.1.59.40211.789001276.14556172.67789
   &objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2
@@ -8433,8 +8434,7 @@ http://server234/script678.asp?requestType=WADO
     <section xml:id="sect_B.3" label="B.3" status="2">
       <title>Retrieving a Region of A DICOM Image</title>
       <para>Retrieving a region of a DICOM image, converted if possible in JPEG2000, with annotations burned into the image containing the patient name and technical information, and mapped into a defined image size:</para>
-      <programlisting><![CDATA[
-https://aspradio/imageaccess.js?requestType=WADO
+      <programlisting><![CDATA[https://aspradio/imageaccess.js?requestType=WADO
   &studyUID=1.2.250.1.59.40211.12345678.678910
   &seriesUID=1.2.250.1.59.40211.789001276.14556172.67789
   &objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2
@@ -8450,8 +8450,7 @@ https://aspradio/imageaccess.js?requestType=WADO
     <section xml:id="sect_B.4" label="B.4" status="2">
       <title>Retrieving As A DICOM MIME Type</title>
       <para>Retrieving a DICOM image object using the baseline 8-bit lossy JPEG transfer syntax, and de-identified:</para>
-      <programlisting><![CDATA[
-http://www.medical-webservice.st/RetrieveDocument?requestType=WADO
+      <programlisting><![CDATA[http://www.medical-webservice.st/RetrieveDocument?requestType=WADO
   &studyUID=1.2.250.1.59.40211.12345678.678910
   &seriesUID=1.2.250.1.59.40211.789001276.14556172.67789
   &objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2
@@ -8684,8 +8683,7 @@ http://www.medical-webservice.st/RetrieveDocument?requestType=WADO
     <section xml:id="sect_E.1" label="E.1" status="2">
       <title>WADO WS XSD Schema (Informative)</title>
       <para>The following XSD schema can be used for the WADO WS implementation:</para>
-      <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+      <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns="urn:ihe:rad:xdsi-b:2009"
 xmlns:xs="http://www.w3.org/2001/XMLSchema"
 targetNamespace="urn:ihe:rad:xdsi-b:2009" elementFormDefault="qualified"
@@ -9027,8 +9025,7 @@ xmlns:tns="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0">
     </section>
     <section xml:id="sect_E.2" label="E.2" status="2">
       <title>WADO WS Request Example (Informative)</title>
-      <programlisting><![CDATA[
-POST /tf6/services/xdsrepositoryb HTTP/1.1
+      <programlisting><![CDATA[POST /tf6/services/xdsrepositoryb HTTP/1.1
 Content-Type: multipart/related; boundary=MIMEBoundaryurn_uuid_DCD262C64C22DB97351256303951323;
    type="application/xop+xml"; start="<0.urn:uuid:DCD262C64C22DB97351256303951324@apache.org>";
    start-info="application/soap+xml";
@@ -9087,8 +9084,7 @@ Content-ID: <0.urn:uuid:DCD262C64C22DB97351256303951324@apache.org>
     <section xml:id="sect_E.3" label="E.3" status="2">
       <title>WADO WS Response Example</title>
       <para>Example of the response corresponding to the above request:</para>
-      <programlisting><![CDATA[
-HTTP/1.1 200 OK
+      <programlisting><![CDATA[HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Content-Type: multipart/related; boundary=MIMEBoundaryurn_uuid_F862C3E04D9E35266C1256303956115;
       type="application/xop+xml"; start="0.urn:uuid:F862C3E04D9E35266C1256303956116@apache.org";
@@ -9185,7 +9181,7 @@ This is the binary JPEG payload for the second image.
     <section xml:id="sect_F.1" label="F.1" status="2">
       <title>Introduction to JavaScript Object Notation (JSON)</title>
       <para>JSON is a text-based open standard, derived from JavaScript, for representing data structures and associated arrays. It is language-independent, and primarily used for serializing and transmitting lightweight structured data over a network connection. It is described in detail by the Internet Engineering Task Force (IETF) in RFC 4627, available at <link xl:href="http://www.ietf.org/rfc/rfc4627.txt"/>.</para>
-      <para>The DICOM JSON Model complements the XML-based Native DICOM Model, by providing a lightweight representation of data returned by DICOM web services. While this representation can be used to encode any type of DICOM Data Set it is expected to be used by client applications, especially mobile clients, such as described in the QIDO-RS use cases (see <olink targetdoc="PS3.17" targetptr="chapter_HHH" xrefstyle="select: docname label"/>).</para>
+      <para>The DICOM JSON Model complements the XML-based Native DICOM Model, by providing a lightweight representation of data returned by DICOM web services. While this representation can be used to encode any type of DICOM Data Set it is expected to be used by client applications, especially mobile clients, such as described in the QIDO-RS use cases (see <olink targetdoc="PS3.17" targetptr="chapter_HHH" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.17"/>).</para>
     </section>
     <section xml:id="sect_F.2" label="F.2" status="2">
       <title>DICOM JSON Model</title>
@@ -9197,8 +9193,7 @@ This is the binary JPEG payload for the second image.
           <title>Examples</title>
           <section xml:id="sect_F.2.1.1.1" label="F.2.1.1.1" status="5">
             <title>Native DICOM Model</title>
-            <programlisting><![CDATA[
-<?xml version="1.0" encoding="UTF-8" xml:space="preserve" ?>
+            <programlisting><![CDATA[<?xml version="1.0" encoding="UTF-8" xml:space="preserve" ?>
 <NativeDicomModel>
   <DicomAttribute tag="0020000D" vr="UI" keyword="StudyInstanceUID">
     <Value number="1">1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873</Value>
@@ -9215,8 +9210,7 @@ This is the binary JPEG payload for the second image.
           </section>
           <section xml:id="sect_F.2.1.1.2" label="F.2.1.1.2" status="5">
             <title>DICOM JSON Model</title>
-            <programlisting><![CDATA[
-[
+            <programlisting><![CDATA[[
   {
      "0020000D": {
       "vr": "UI",
@@ -9304,8 +9298,7 @@ This is the binary JPEG payload for the second image.
       <section xml:id="sect_F.2.3" label="F.2.3" status="3">
         <title>DICOM JSON Value Representation</title>
         <para>The value representation (VR) is included in each DICOM JSON Model attribute object and named "vr". For example:</para>
-        <programlisting><![CDATA[
-"vr": "CS"
+        <programlisting><![CDATA["vr": "CS"
 ]]></programlisting>
         <para>All DICOM Value Representations are mapped to specified JSON Data Types (see <xref linkend="table_F.2.3-1" xrefstyle="select: label"/>). The JSON encodings shall conform to the Definition, Character Repertoire (if applicable) and Length of Value specified for that Value Representation (see <olink targetdoc="PS3.5" targetptr="sect_6.2" xrefstyle="select: docname label quotedtitle"/>) with the following exceptions:</para>
         <itemizedlist>
@@ -9629,6 +9622,19 @@ This is the binary JPEG payload for the second image.
             </tr>
             <tr valign="top">
               <td align="center" colspan="1" rowspan="1">
+                <para>UC</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>Unlimited Characters</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para>
+                  <emphasis role="italic">String</emphasis>
+                </para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
                 <para>UI</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
@@ -9710,24 +9716,20 @@ This is the binary JPEG payload for the second image.
         <title>DICOM JSON Value Multiplicity</title>
         <para>The value or values of a given DICOM attribute are given in the "Value" array. The value multiplicity (VM) is not contained in the DICOM JSON object.</para>
         <para>For example:</para>
-        <programlisting><![CDATA[
-"Value": [ "bar", "foo" ]
+        <programlisting><![CDATA["Value": [ "bar", "foo" ]
 ]]></programlisting>
         <para>or:</para>
-        <programlisting><![CDATA[
-"Value": [ "bar" ]
+        <programlisting><![CDATA["Value": [ "bar" ]
 ]]></programlisting>
       </section>
       <section xml:id="sect_F.2.5" label="F.2.5" status="3">
         <title>DICOM JSON Model Null Values</title>
         <para>If an attribute is present in DICOM but empty (i.e., Value Length is 0), it shall be preserved in the DICOM JSON attribute object containing no "Value", "BulkDataURI" or "InlineBinary".</para>
         <para>If a multi-valued attribute has one or more empty values these are represented as "null" array elements. For example:</para>
-        <programlisting><![CDATA[
-"Value": [ "bar", null, "foo" ]
+        <programlisting><![CDATA["Value": [ "bar", null, "foo" ]
 ]]></programlisting>
         <para>If a sequence contains empty items these are represented as empty JSON object in the array.</para>
-        <programlisting><![CDATA[
-"Value": [ { … }, { }, { … } ]
+        <programlisting><![CDATA["Value": [ { … }, { }, { … } ]
 ]]></programlisting>
       </section>
       <section xml:id="sect_F.2.6" label="F.2.6" status="3">
@@ -9795,7 +9797,9 @@ This is the binary JPEG payload for the second image.
                 <para>The "Phonetic" element maps to "PersonName[<emphasis role="bold"><emphasis role="italic">n</emphasis></emphasis>].Phonetic"</para>
               </listitem>
             </itemizedlist>
-            <para>- "Item" elements map to members of the "Value" child array</para>
+          </listitem>
+          <listitem>
+            <para>"Item" elements map to members of the "Value" child array</para>
             <itemizedlist>
               <listitem>
                 <para>An "Item" element with the attribute "number=n" maps to "Value[n-1]"</para>
@@ -10588,8 +10592,7 @@ This is the binary JPEG payload for the second image.
     </section>
     <section xml:id="sect_F.4" label="F.4" status="2">
       <title>DICOM JSON Model Example</title>
-      <programlisting><![CDATA[
-// The following example is a QIDO-RS SearchForStudies response consisting 
+      <programlisting><![CDATA[// The following example is a QIDO-RS SearchForStudies response consisting 
 // of two matching studies, corresponding to the example QIDO-RS request:
 // GET http://qido.nema.org/studies?PatientID=12345&includefield=all&limit=2
 [
@@ -10871,8 +10874,7 @@ This is the binary JPEG payload for the second image.
           </listitem>
         </itemizedlist>
         <para>Example:</para>
-        <programlisting><![CDATA[
-"doc": [ 
+        <programlisting><![CDATA["doc": [ 
 		{
 			"@xml:lang": "en",
 			"value": "Granular cell tumor"
@@ -10903,8 +10905,7 @@ This is the binary JPEG payload for the second image.
           </listitem>
         </itemizedlist>
         <para>Example:</para>
-        <programlisting><![CDATA[
-"request": {
+        <programlisting><![CDATA["request": {
 			"param": [ ... ],
 			"representation": [ ... ]
 }
@@ -10925,8 +10926,7 @@ This is the binary JPEG payload for the second image.
           </listitem>
         </itemizedlist>
         <para>Example:</para>
-        <programlisting><![CDATA[
-"param": [ 
+        <programlisting><![CDATA["param": [ 
 		{
 			"@name": "Accept",
 			"@style": "header"

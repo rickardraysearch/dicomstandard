@@ -79,6 +79,8 @@
 	</xsl:param>
 
 	<xsl:param name="default.table.width" select="'100%'"/>
+	
+	<xsl:param name="orderedlist.label.width">2em</xsl:param>
 
 	<!-- URLs in PS 3.16 Annex D tables were causing page width overflow, so activate URL "hyphenation"; see "http://www.sagehill.net/docbookxsl/Ulinks.html" -->
 	<xsl:param name="ulink.hyphenate.chars">/&amp;?</xsl:param>
@@ -121,10 +123,21 @@
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 
+	<xsl:attribute-set name="glossentry.list.item.properties">
+		<xsl:attribute name="hyphenate">false</xsl:attribute>
+		<xsl:attribute name="text-align">left</xsl:attribute>
+	</xsl:attribute-set>
+
 	<xsl:attribute-set name="example.properties">
 		<xsl:attribute name="border">0.5pt solid black</xsl:attribute>
 		<xsl:attribute name="padding">0.1in</xsl:attribute>
 	</xsl:attribute-set>
+	
+	<!-- http://www.sagehill.net/docbookxsl/ProgramListings.html -->
+	<!--<xsl:param name="shade.verbatim" select="1"/>-->
+	<!--<xsl:attribute-set name="shade.verbatim.style">-->
+	<!--	<xsl:attribute name="background-color">#E0E0E0</xsl:attribute>-->
+	<!--</xsl:attribute-set>-->
 
 	<!-- Number pages from 1 - see "https://www.sourceware.org/ml/docbook-apps/2004-q4/msg00148.html"-->
 	<!-- This template always returns the string '1', which sets the page number format to 1,2,3,... -->

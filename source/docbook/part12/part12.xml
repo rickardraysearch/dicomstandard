@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.12" version="5.0" xml:id="PS3.12">
   <title>PS3.12</title>
-  <subtitle>DICOM PS3.12 2014c - Media Formats and Physical Media for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.12 2015a - Media Formats and Physical Media for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -67,6 +67,16 @@
   <chapter xml:id="chapter_2" label="2" status="1">
     <title>Normative References</title>
     <para>The following standards contain provisions that, through references in this text, constitute provisions of this standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>ISO/IEC 10090 Continuous Composite Format and Cartridge Standard</para>
     <para>ISO/IEC 10089 Continuous Composite Format and Cartridge Standard</para>
     <para>ECMA-184 and ISO/IEC 13549 Continuous Composite Format and Cartridge Standard</para>
@@ -408,7 +418,7 @@
   </chapter>
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
-    <para>Words are capitalized in this document to help the reader understand that these words have been previously defined in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> of this document and are to be interpreted with that meaning.</para>
+    <para>Words are capitalized in this document to help the reader understand that these words have been previously defined in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> of this document and are to be interpreted with that meaning.</para>
   </chapter>
   <chapter xml:id="chapter_6" label="6" status="1">
     <title>Relationship to the DICOM Media Storage Model</title>
@@ -1348,8 +1358,7 @@
   </chapter>
   <chapter xml:id="chapter_L" label="L" status="1">
     <title>RFC 3240 - Digital Imaging and Communications in Medicine (dicom) - Application/dicom MIME Sub-type Registration (Informative)</title>
-    <programlisting><![CDATA[
-Network Working Group                                          D. Clunie
+    <programlisting><![CDATA[Network Working Group                                          D. Clunie
 Request for Comments: 3240                                 E. Cordonnier
 Category: Informational                                  DICOM Committee
                                                            February 2002
@@ -1577,8 +1586,7 @@ Acknowledgment
 ]]></programlisting>
     <section xml:id="sect_L.2" label="L.2" status="2">
       <title>Example 1: Simple DICOM File MIME Message (Informative)</title>
-      <programlisting><![CDATA[
-From: "Dr Smith" <smith@provider1.com>
+      <programlisting><![CDATA[From: "Dr Smith" <smith@provider1.com>
 To: "Dr Johnson" <johnson@provider2.com>
 Subject: test DICOM Mime Type
 Date: Fri, 5 Nov 1999 15:15:35 +0100
@@ -1639,8 +1647,7 @@ iQAAALeJAAAAAFu3t7e3WwAAAAAAAAAAAAAAABYtDwAAAAAtHgAAAC0eAAAAABYtLS0tFgAAAAA=
     </section>
     <section xml:id="sect_L.3" label="L.3" status="2">
       <title>Example 2: DICOM File Set MIME Message (Informative)</title>
-      <programlisting><![CDATA[
-From: "Dr Johnson" <drjohnson@provider.org>
+      <programlisting><![CDATA[From: "Dr Johnson" <drjohnson@provider.org>
 To: "Dr Smith" <drsmith@provider.org>
 Subject: DICOM MIME sub-type file set example
 Date: Sat, 9 Mar 2002 16:24:27 +0100
@@ -1834,8 +1841,8 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
       </section>
       <section xml:id="sect_M.2.2" label="M.2.2" status="3">
         <title>Logical Format</title>
-        <para>The Logical Format for the 130 mm 4.1GB disk shall be the PC File System (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
-        <para>The boot sector defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> shall have the following values.</para>
+        <para>The Logical Format for the 130 mm 4.1GB disk shall be the PC File System (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
+        <para>The boot sector defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> shall have the following values.</para>
         <table rules="all" frame="box" xml:id="table_M.2-1" label="M.2-1">
           <caption>Boot Parameter Values for 130mm 4.1GB Magneto-Optical Disk</caption>
           <thead>
@@ -2213,8 +2220,8 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
       </section>
       <section xml:id="sect_Q.2.2" label="Q.2.2" status="3">
         <title>Logical Format</title>
-        <para>The Logical Format for the 90mm 2.3GB disk shall be the PC File System (<xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
-        <para>The boot sector defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> shall have the following values.</para>
+        <para>The Logical Format for the 90mm 2.3GB disk shall be the PC File System (<xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
+        <para>The boot sector defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> shall have the following values.</para>
         <table rules="all" frame="box" xml:id="table_Q.2-1" label="Q.2-1">
           <caption>Boot Parameter Values for 90mm 2.3 GB Magneto-Optical Disk</caption>
           <thead>
@@ -2378,7 +2385,7 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
       <para>Only one DICOM file set shall be stored in the first partition of a partitioned device. If the device is not partitioned, only one DICOM file set shall be stored on the device.</para>
       <section xml:id="sect_T.1.1" label="T.1.1" status="3">
         <title>File System</title>
-        <para>The file system employed on these media shall be the FAT16 file system. The cluster, sector, head, and related information obtained from the boot sector of this partition shall be utilized by the file system to determine proper access to this media (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+        <para>The file system employed on these media shall be the FAT16 file system. The cluster, sector, head, and related information obtained from the boot sector of this partition shall be utilized by the file system to determine proper access to this media (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <para>File names shall be further restricted to be in compliance with the File ID rules specified in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>. The File ID shall be the same as the filename.</para>
         <note>
           <orderedlist>
@@ -2422,7 +2429,7 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
       <para>Only one DICOM file set shall be stored in the first partition of a partitioned device. If the device is not partitioned, only one DICOM file set shall be stored on the device.</para>
       <section xml:id="sect_U.1.1" label="U.1.1" status="3">
         <title>File System</title>
-        <para>The file system employed on these media shall be the FAT16 file system. The cluster, sector, head, and related information obtained from the boot sector of this partition shall be utilized by the file system to determine proper access to this media (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+        <para>The file system employed on these media shall be the FAT16 file system. The cluster, sector, head, and related information obtained from the boot sector of this partition shall be utilized by the file system to determine proper access to this media (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <para>File names shall be further restricted to be in compliance with the File ID rules specified in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>. The File ID shall be the same as the filename.</para>
         <note>
           <orderedlist>

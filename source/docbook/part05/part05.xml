@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.5" label="PS3.5" version="5.0">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2014c - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2015a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -838,13 +838,13 @@
   </chapter>
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
-    <para>Word(s) are capitalized in this document (not headings) to help the reader understand that these word(s) have been previously defined in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> of this document and are to be interpreted with that meaning.</para>
+    <para>Word(s) are capitalized in this document (not headings) to help the reader understand that these word(s) have been previously defined in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> of this document and are to be interpreted with that meaning.</para>
     <para>The Data Element Tag is represented as (gggg,eeee), where gggg equates to the Group Number and eeee equates to the Element Number within that Group. The Data Element Tag is represented in hexadecimal notation as specified for each Data Element in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>.</para>
     <para>The notation XXXXH, where XXXX is one or more hexadecimal digits, and "H" is used to signify a hexadecimal number.</para>
   </chapter>
   <chapter xml:id="chapter_6" label="6" status="1">
     <title>Value Encoding</title>
-    <para>A Data Set is constructed by encoding the values of Attributes specified in the Information Object Definition (IOD) of a Real-World Object. The specific content and semantics of these Attributes are specified in Information Object Definitions (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). The range of possible data types of these values and their encoding are specified in this section. The structure of a Data Set, which is composed of Data Elements containing these values, is specified in <xref linkend="chapter_7" xrefstyle="template: Section %n"/>.</para>
+    <para>A Data Set is constructed by encoding the values of Attributes specified in the Information Object Definition (IOD) of a Real-World Object. The specific content and semantics of these Attributes are specified in Information Object Definitions (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). The range of possible data types of these values and their encoding are specified in this section. The structure of a Data Set, which is composed of Data Elements containing these values, is specified in <xref linkend="chapter_7" xrefstyle="template:Section %n"/>.</para>
     <para>Throughout this part, as well as other parts of the DICOM Standard, Tags are used to identify both specific Attributes and their corresponding Data Elements.</para>
     <section xml:id="sect_6.1" label="6.1" status="2">
       <title>Support of Character Repertoires</title>
@@ -929,7 +929,7 @@
         <para>A Character Repertoire, or character set, is a collection of Graphic Characters specified independently of their encoding.</para>
         <section xml:id="sect_6.1.2.1" label="6.1.2.1" status="4">
           <title>Default Character Repertoire</title>
-          <para>The default repertoire for character strings in DICOM shall be the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO-IR 6). See <xref linkend="chapter_E" xrefstyle="template: Annex %n"/> for a table of the DICOM default repertoire and its encoding.</para>
+          <para>The default repertoire for character strings in DICOM shall be the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO-IR 6). See <xref linkend="chapter_E" xrefstyle="template:Annex %n"/> for a table of the DICOM default repertoire and its encoding.</para>
           <note>
             <para>This Basic G0 Set is identical with the common character set of ISO 8859.</para>
           </note>
@@ -940,7 +940,7 @@
           <note>
             <para>The Attribute Specific Character Set (0008,0005) is encoded using a subset of characters from ISO-IR 6. See the definition for the Value Representation (VR) of Code String (CS) in <xref linkend="table_6.2-1" xrefstyle="select: label"/>.</para>
           </note>
-          <para>For Data Elements with Value Representations of SH (Short String), LO (Long String), ST (Short Text), LT (Long Text), PN (Person Name) or UT (Unlimited Text) the default character repertoire may be extended or replaced (these Value Representations are described in more detail in <xref linkend="sect_6.2" xrefstyle="select: label"/>). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005) (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>) and shall be stated in the Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> gives conformance guidelines.</para>
+          <para>For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name) the default character repertoire may be extended or replaced (these Value Representations are described in more detail in <xref linkend="sect_6.2" xrefstyle="select: label"/>). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005) (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>) and shall be stated in the Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> gives conformance guidelines.</para>
           <note>
             <orderedlist numeration="arabic">
               <listitem>
@@ -954,7 +954,7 @@
         </section>
         <section xml:id="sect_6.1.2.3" label="6.1.2.3" status="4">
           <title>Encoding of Character Repertoires</title>
-          <para>The 7-bit default character repertoire can be replaced for use in Value Representations SH, LO, ST, LT, PN and UT with one of the single-byte codes defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+          <para>The 7-bit default character repertoire can be replaced for use in Value Representations SH, LO, ST, LT, PN, UC and UT with one of the single-byte codes defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
           <note>
             <para>This replacement character repertoire does not apply to other textual Value Representations (AE and CS).</para>
           </note>
@@ -1003,7 +1003,7 @@
         </section>
         <section xml:id="sect_6.1.2.4" label="6.1.2.4" status="4">
           <title>Code Extension Techniques</title>
-          <para>For Data Elements with Value Representations of SH (Short String), LO (Long String), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name), the default character repertoire or the character repertoire specified by value 1 of Attribute Specific Character Set (0008,0005), may be extended using the Code Extension techniques specified by ISO/IEC 2022:1994.</para>
+          <para>For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name), the default character repertoire or the character repertoire specified by value 1 of Attribute Specific Character Set (0008,0005), may be extended using the Code Extension techniques specified by ISO/IEC 2022:1994.</para>
           <para>If such Code Extension techniques are used, the related Specific Character Set or Sets shall be specified by value 2 to value n of the Attribute Specific Character Set (0008,0005) of the SOP Common Module (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be stated in the Conformance Statement.</para>
           <note>
             <orderedlist numeration="arabic">
@@ -1317,7 +1317,7 @@
               <para>Ordered pair of 16-bit unsigned integers that is the value of a Data Element Tag.</para>
               <para>Example: A Data Element Tag of (0018,00FF) would be encoded as a series of 4 bytes in a Little-Endian Transfer Syntax as 18H,00H,FFH,00H and in a Big-Endian Transfer Syntax as 00H,18H,00H,FFH.</para>
               <note>
-                <para>The encoding of an AT value is exactly the same as the encoding of a Data Element Tag as defined in <xref linkend="chapter_7" xrefstyle="template: Section %n"/>.</para>
+                <para>The encoding of an AT value is exactly the same as the encoding of a Data Element Tag as defined in <xref linkend="chapter_7" xrefstyle="template:Section %n"/>.</para>
               </note>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -1497,7 +1497,7 @@
               <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>64 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template: Note in Section 6.2"/>)</para>
+              <para>64 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1512,7 +1512,7 @@
               <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>10240 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template: Note in Section 6.2"/>)</para>
+              <para>10240 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1598,7 +1598,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>64 chars maximum per component group</para>
-              <para>(see <xref linkend="note_6.1-2-1" xrefstyle="template: Note in Section 6.2"/>)</para>
+              <para>(see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1613,7 +1613,7 @@
               <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>16 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template: Note in Section 6.2"/>)</para>
+              <para>16 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1676,7 +1676,7 @@
               <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>1024 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template: Note in Section 6.2"/>)</para>
+              <para>1024 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1726,11 +1726,27 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para>UC</para>
+              <para>Unlimited Characters</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string shall not have Control Characters except for ESC.</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para>2<superscript>32</superscript>-2 bytes maximum</para>
+              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template:Note 2"/></para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para>UI</para>
               <para>Unique Identifier (UID)</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>A character string containing a UID that is used to uniquely identify a wide variety of items. The UID is a series of numeric components separated by the period "." character. If a Value Field containing one or more UIDs is an odd number of bytes in length, the Value Field shall be padded with a single trailing NULL (00H) character to ensure that the Value Field is an even number of bytes in length. See <xref linkend="chapter_9" xrefstyle="template: Section %n"/> and <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> for a complete specification and examples.</para>
+              <para>A character string containing a UID that is used to uniquely identify a wide variety of items. The UID is a series of numeric components separated by the period "." character. If a Value Field containing one or more UIDs is an odd number of bytes in length, the Value Field shall be padded with a single trailing NULL (00H) character to ensure that the Value Field is an even number of bytes in length. See <xref linkend="chapter_9" xrefstyle="template:Section %n"/> and <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> for a complete specification and examples.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>"0"-"9", "." of Default Character Repertoire</para>
@@ -1789,7 +1805,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>2<superscript>32</superscript>-2 bytes maximum.</para>
-              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template: Note 2"/></para>
+              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template:Note 2"/></para>
             </td>
           </tr>
           <tr valign="top">
@@ -1821,7 +1837,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>2<superscript>32</superscript>-2 bytes maximum</para>
-              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template: Note 2"/></para>
+              <para>See <xref linkend="note_6.2-3-2" xrefstyle="template:Note 2"/></para>
             </td>
           </tr>
         </tbody>
@@ -1832,7 +1848,7 @@
             <para>For attributes that were present in ACR-NEMA 1.0 and 2.0 and that have been retired, the specifications of Value Representation and Value Multiplicity provided are recommendations for the purpose of interpreting their values in objects created in accordance with earlier versions of this standard. These recommendations are suggested as most appropriate for a particular attribute; however, there is no guarantee that historical objects will not violate some requirements or specified VR and/or VM.</para>
           </listitem>
           <listitem>
-            <para xml:id="note_6.2-3-2">The length of the value of UR and UT VRs is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para>
+            <para xml:id="note_6.2-3-2">The length of the value of UC, UR and UT VRs is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -1858,7 +1874,7 @@
               <para>[One family name; one given name; no middle name, prefix, or suffix. Delimiters have been omitted for the three trailing null components.]</para>
             </listitem>
             <listitem>
-              <para>(for examples of the encoding of Person Names using multi-byte character sets see <xref linkend="chapter_H" xrefstyle="template: Annex %n"/>)</para>
+              <para>(for examples of the encoding of Person Names using multi-byte character sets see <xref linkend="chapter_H" xrefstyle="template:Annex %n"/>)</para>
             </listitem>
             <listitem>
               <para>"Smith^Fluffy"</para>
@@ -1903,7 +1919,7 @@
       </section>
       <section xml:id="sect_6.2.2" label="6.2.2" status="3">
         <title>Unknown (UN) Value Representation</title>
-        <para>The Unknown (UN) VR shall only be used for Private Attribute Data Elements and Standard Data Elements previously encoded as some DICOM VR other than UN using the DICOM Default Transfer Syntax (Implicit VR Little Endian), and whose Value Representation is currently unknown. As long as the VR is unknown the Value Field is insensitive to Little/Big Endian byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> for a discussion of Transfer Syntaxes.</para>
+        <para>The Unknown (UN) VR shall only be used for Private Attribute Data Elements and Standard Data Elements previously encoded as some DICOM VR other than UN using the DICOM Default Transfer Syntax (Implicit VR Little Endian), and whose Value Representation is currently unknown. As long as the VR is unknown the Value Field is insensitive to Little/Big Endian byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for a discussion of Transfer Syntaxes.</para>
         <para>The UN VR shall not be used for Private Creator Data Elements (i.e., the VR is equal to LO, see <xref linkend="sect_7.8.1" xrefstyle="select: label"/>).</para>
         <para>The UN VR shall not be used for File Meta Information Data Elements (any Tag (0002,xxxx), see <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>).</para>
         <note>
@@ -2016,7 +2032,7 @@
         <para>Although similar or related Data Elements often have the same Group Number; a Data Group does not convey any semantic meaning beginning with DICOM Version 3.0.</para>
       </note>
       <para>A Data Element shall have one of three structures. Two of these structures contain the VR of the Data Element (Explicit VR) but differ in the way their lengths are expressed, while the other structure does not contain the VR (Implicit VR). All three structures contain the Data Element Tag, Value Length and Value for the Data Element. See <xref linkend="figure_7.1-1" xrefstyle="select: label"/>.</para>
-      <para>Implicit and Explicit VR Data Elements shall not coexist in a Data Set and Data Sets nested within it (see <xref linkend="sect_7.5" xrefstyle="select: label"/>). Whether a Data Set uses Explicit or Implicit VR, among other characteristics, is determined by the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/> and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+      <para>Implicit and Explicit VR Data Elements shall not coexist in a Data Set and Data Sets nested within it (see <xref linkend="sect_7.5" xrefstyle="select: label"/>). Whether a Data Set uses Explicit or Implicit VR, among other characteristics, is determined by the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/> and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
       <note>
         <para>VRs are not contained in Data Elements when using DICOM Default Transfer Syntax (DICOM Implicit VR Little Endian Transfer Syntax).</para>
       </note>
@@ -2056,7 +2072,7 @@
                   <para>a 16 or 32-bit (dependent on VR and whether VR is explicit or implicit) unsigned integer containing the Explicit Length of the Value Field as the number of bytes (even) that make up the Value. It does not include the length of the Data Element Tag, Value Representation, and Value Length Fields.</para>
                 </listitem>
                 <listitem>
-                  <para>a 32-bit Length Field set to Undefined Length (FFFFFFFFH). Undefined Lengths may be used for Data Elements having the Value Representation (VR) Sequence of Items (SQ) and Unknown (UN). For Data Elements with Value Representation OW or OB Undefined Length may be used depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/> and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+                  <para>a 32-bit Length Field set to Undefined Length (FFFFFFFFH). Undefined Lengths may be used for Data Elements having the Value Representation (VR) Sequence of Items (SQ) and Unknown (UN). For Data Elements with Value Representation OW or OB Undefined Length may be used depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/> and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
                 </listitem>
               </itemizedlist>
               <note>
@@ -2083,9 +2099,9 @@
             <para>for VRs of OB, OW, OF, SQ and UN the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
           </listitem>
           <listitem>
-            <para>for VRs of UR and UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
+            <para>for VRs of UC, UR and UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
             <note>
-              <para>VRs of UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
+              <para>VRs of UC, UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
             </note>
           </listitem>
           <listitem>
@@ -2093,7 +2109,7 @@
           </listitem>
         </itemizedlist>
         <table frame="box" rules="all" xml:id="table_7.1-1" label="7.1-1">
-          <caption>Data Element with Explicit VR of OB, OW, OF, SQ, UR, UT or UN</caption>
+          <caption>Data Element with Explicit VR of OB, OW, OF, SQ, UC, UR, UT or UN</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -2327,9 +2343,9 @@
         </listitem>
       </itemizedlist>
       <note>
-        <para>The packing of bits within values of OB or OW Value representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template: Section %n"/>.</para>
+        <para>The packing of bits within values of OB or OW Value representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>.</para>
       </note>
-      <para>Byte ordering is a component of an agreed upon Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/>). The default DICOM Transfer Syntax, which shall be supported by all AEs, uses Little Endian encoding and is specified in <xref linkend="sect_A.1" xrefstyle="select: label"/>. Alternate Transfer Syntaxes, some of which use Big Endian encoding, are also specified in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+      <para>Byte ordering is a component of an agreed upon Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/>). The default DICOM Transfer Syntax, which shall be supported by all AEs, uses Little Endian encoding and is specified in <xref linkend="sect_A.1" xrefstyle="select: label"/>. Alternate Transfer Syntaxes, some of which use Big Endian encoding, are also specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
       <note>
         <para>The Command Set structure as specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> is encoded using the Little Endian Implicit VR Transfer Syntax.</para>
       </note>
@@ -2907,8 +2923,8 @@
     <title>Encoding of Pixel, Overlay and Waveform Data</title>
     <section xml:id="sect_8.1" label="8.1" status="2">
       <title>Pixel and Overlay Data, and Related Data Elements</title>
-      <para>Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009) and Overlay Data (60xx,3000) shall be used for the exchange of encoded graphical image data. These elements along with additional Data Elements, specified as Attributes of the Image Information Entities defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, shall be used to describe the way in which the Pixel Data and Overlay Data are encoded and shall be interpreted. Finally, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template: Section %n"/> and <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>), Pixel Data may be compressed.</para>
-      <para>Pixel Data (7FE0,0010) and Overlay Data (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>). The only difference between OW and OB being that OB, a string of bytes, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+      <para>Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009) and Overlay Data (60xx,3000) shall be used for the exchange of encoded graphical image data. These elements along with additional Data Elements, specified as Attributes of the Image Information Entities defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, shall be used to describe the way in which the Pixel Data and Overlay Data are encoded and shall be interpreted. Finally, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/> and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>), Pixel Data may be compressed.</para>
+      <para>Pixel Data (7FE0,0010) and Overlay Data (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The only difference between OW and OB being that OB, a string of bytes, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
       <para>Float Pixel Data (7FE0,0008) has a
         Value Representation of OF.</para>
       <para>Double Float Pixel Data (7FE0,0009)
@@ -2935,20 +2951,33 @@
             <para>High Bit (0028,0102)</para>
           </listitem>
         </itemizedlist>
-        <para>Each Pixel Cell shall contain a single Pixel Sample Value. The size of the Pixel Cell shall be specified by Bits Allocated (0028,0100). Bits Stored (0028,0101) defines the total number of these allocated bits that will be used to represent a Pixel Sample Value. Bits Stored (0028,0101) shall never be larger than Bits Allocated (0028,0100). High Bit (0028,0102) specifies where the high order bit of the Bits Stored (0028,0101) is to be placed with respect to the Bits Allocated (0028,0100) specification.</para>
+        <para>Each Pixel Cell shall contain a single Pixel Sample Value. The size of the Pixel Cell shall be specified by Bits Allocated (0028,0100). Bits Stored (0028,0101) defines the total number of these allocated bits that will be used to represent a Pixel Sample Value. Bits Stored (0028,0101) shall never be larger than Bits Allocated (0028,0100). High Bit (0028,0102) specifies where the high order bit of the Bits Stored (0028,0101) is to be placed with respect to the Bits Allocated (0028,0100) specification. Bits Allocated (0028,0100) shall either be 1, or a multiple of 8. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101).</para>
         <note>
           <orderedlist>
             <listitem>
-              <para>For example, in Pixel Data with 16 bits (2 bytes) allocated, 12 bits stored, and bit 15 specified as the high bit, one pixel sample is encoded in each 16-bit word, with the 4 least significant bits of each word not containing Pixel Data. See <xref linkend="chapter_D" xrefstyle="template: Annex %n"/> for other examples of the basic encoding schemes.</para>
+              <para>For example, in Pixel Data with 16 bits (2 bytes) allocated, 12 bits stored, and bit 11 specified as the high bit, one pixel sample is encoded in each 16-bit word, with the 4 most significant bits of each word not containing Pixel Data. See <xref linkend="chapter_D" xrefstyle="template:Annex %n"/> for other examples of the basic encoding schemes.</para>
             </listitem>
             <listitem>
               <para>Formerly, bits not used for Pixel Sample
               Values were described as being usable for overlay planes, but this usage has
               been retired. See PS3.5-2004.</para>
             </listitem>
+            <listitem>
+              <para>Formerly, High Bit
+                (0028,0102) was not restricted to being be one less than Bits Stored (0028,0101)
+                in this Part, or in the general case, though almost all Information Object
+                Definitions in PS3.3 imposed such a restriction. See PS3.5
+                2014c.</para>
+            </listitem>
+            <listitem>
+              <para>Receiving applications may not assume
+                anything about the contents of unused bits, and in particular may not assume
+                that they are zero, or that they contain sign extension
+                bits.</para>
+            </listitem>
           </orderedlist>
         </note>
-        <para>Restrictions are placed on acceptable Values for Bits Allocated (0028,0100), Bits Stored (0028,0101), and High Bit (0028,0102) for Pixel Data (7FE0,0010) and are specified in the Information Object Definitions in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+        <para>Additional restrictions that are placed on acceptable Values for Bits Allocated (0028,0100), Bits Stored (0028,0101), and High Bit (0028,0102) for Pixel Data (7FE0,0010) are specified in the Information Object Definitions in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
         <para>Restrictions are placed on acceptable Values for Bits Allocated (0028,0100) for Float Pixel Data (7FE0,0008) and Double Float Pixel Data (7FE0,0009), such that only a single Pixel Cell entirely occupies the allocated bits specified by Bits Allocated (0028,0100), hence Bits Stored (0028,0101) and High Bit (0028,0102) are not sent.</para>
         <para>Also, the Value Field containing Pixel Data, like all other Value Fields in DICOM, shall be an even number of bytes in length. This means that the Value Field may need to be padded with data that is not part of the image and shall not be considered significant. If needed, the padding bits shall be appended to the end of the Value Field, and shall be used only to extend the data to the next even byte increment of length.</para>
         <para>In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field.</para>
@@ -2978,11 +3007,11 @@
             </listitem>
           </orderedlist>
         </note>
-        <para>For Overlay Data Element (60xx,3000), the Value Representation OW is most often required. The Value Representation OB may also be used for Overlay Data in cases where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+        <para>For Overlay Data Element (60xx,3000), the Value Representation OW is most often required. The Value Representation OB may also be used for Overlay Data in cases where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <note>
           <para>The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data when using the default Transfer Syntax.</para>
         </note>
-        <para>Overlay Data is encoded as the direct concatenation of the bits of a single Overlay Plane, where the first bit of an Overlay Plane is encoded in the least significant bit, immediately followed by the next bit of the Overlay Plane in the next most significant bit. When the Overlay Data crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>). For Overlay Data encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+        <para>Overlay Data is encoded as the direct concatenation of the bits of a single Overlay Plane, where the first bit of an Overlay Plane is encoded in the least significant bit, immediately followed by the next bit of the Overlay Plane in the next most significant bit. When the Overlay Data crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). For Overlay Data encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <note>
           <para>For Overlay Data encoded with the Value Representation OB, the Overlay Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
         </note>
@@ -3002,7 +3031,7 @@
           </listitem>
         </orderedlist>
       </note>
-      <para>If Pixel Data (7FE0,0010) is sent in a Native Format, the Value Representation OW is most often required. The Value Representation OB may also be used for Pixel Data (7FE0,0010) in cases where Bits Allocated has a value less than or equal to 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+      <para>If Pixel Data (7FE0,0010) is sent in a Native Format, the Value Representation OW is most often required. The Value Representation OB may also be used for Pixel Data (7FE0,0010) in cases where Bits Allocated has a value less than or equal to 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
       <note>
         <para>The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data (7FE0,0010) when using the default Transfer Syntax.</para>
       </note>
@@ -3024,32 +3053,32 @@
           consisting of Pixel Cells that entirely occupy the allocated bits, and therefore do
           not cross word boundaries.</para>
       </note>
-      <para>Native format Pixel Cells are encoded as the direct concatenation of the bits of each Pixel Cell, the least significant bit of each Pixel Cell is encoded in the least significant bit of the encoded word or byte, immediately followed by the next most significant bit of each Pixel Cell in the next most significant bit of the encoded word or byte, successively until all bits of the Pixel Cell have been encoded, then immediately followed by the least significant bit of the next Pixel Cell in the next most significant bit of the encoded word or byte. The number of bits of each Pixel Cell is defined by the Bits Allocated (0028,0100) Data Element Value. When a Pixel Cell crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>). For Pixel Data (7FE0,0010) encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is
-  defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+      <para>Native format Pixel Cells are encoded as the direct concatenation of the bits of each Pixel Cell, the least significant bit of each Pixel Cell is encoded in the least significant bit of the encoded word or byte, immediately followed by the next most significant bit of each Pixel Cell in the next most significant bit of the encoded word or byte, successively until all bits of the Pixel Cell have been encoded, then immediately followed by the least significant bit of the next Pixel Cell in the next most significant bit of the encoded word or byte. The number of bits of each Pixel Cell is defined by the Bits Allocated (0028,0100) Data Element Value. When a Pixel Cell crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). For Pixel Data (7FE0,0010) encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is
+  defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
       <note>
         <orderedlist numeration="arabic">
           <listitem>
             <para>For Pixel Data (7FE0,0010) encoded with the Value Representation OB, the Pixel Data (7FE0,0010) encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
           </listitem>
           <listitem>
-            <para>If encoding Pixel Data (7FE0,0010) with a Value for Bits Allocated (0028,0100) not equal to 16 be sure to read and understand <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+            <para>If encoding Pixel Data (7FE0,0010) with a Value for Bits Allocated (0028,0100) not equal to 16 be sure to read and understand <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
           </listitem>
         </orderedlist>
       </note>
-      <para>If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
+      <para>If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
       <note>
         <para>Depending on the transfer syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Frame Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
       </note>
       <section xml:id="sect_8.2.1" label="8.2.1" status="3">
         <title>JPEG Image Compression</title>
-        <para>DICOM provides a mechanism for supporting the use of JPEG Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG Standard and provide a number of lossless (bit preserving) and lossy compression schemes.</para>
+        <para>DICOM provides a mechanism for supporting the use of JPEG Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG Standard and provide a number of lossless (bit preserving) and lossy compression schemes.</para>
         <note>
           <para>The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for JPEG lossy compression is also beyond the scope of this standard.</para>
         </note>
         <para>In order to facilitate interoperability of implementations conforming to the DICOM Standard that elect to use one or more of the Transfer Syntaxes for JPEG Image Compression, the following policy is specified:</para>
         <itemizedlist>
           <listitem>
-            <para>Any implementation that conforms to the DICOM Standard and has elected to support any one of the Transfer Syntaxes for lossless JPEG Image Compression, shall support the following lossless compression: The subset (first-order horizontal prediction [Selection Value 1) of JPEG Process 14 (DPCM, non-hierarchical with Huffman coding) (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>).</para>
+            <para>Any implementation that conforms to the DICOM Standard and has elected to support any one of the Transfer Syntaxes for lossless JPEG Image Compression, shall support the following lossless compression: The subset (first-order horizontal prediction [Selection Value 1) of JPEG Process 14 (DPCM, non-hierarchical with Huffman coding) (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>).</para>
           </listitem>
           <listitem>
             <para>Any implementation that conforms to the DICOM Standard and has elected to support any one of the Transfer Syntaxes for 8-bit lossy JPEG Image Compression, shall support the JPEG Baseline Compression (coding Process 1).</para>
@@ -3085,9 +3114,9 @@
       </section>
       <section xml:id="sect_8.2.2" label="8.2.2" status="3">
         <title>Run Length Encoding Compression</title>
-        <para>DICOM provides a mechanism for supporting the use of Run Length Encoding (RLE) Compression, which is a byte oriented lossless compression scheme through the encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of this Standard). <xref linkend="chapter_G" xrefstyle="template: Annex %n"/> defines RLE Compression and its Transfer Syntax.</para>
+        <para>DICOM provides a mechanism for supporting the use of Run Length Encoding (RLE) Compression, which is a byte oriented lossless compression scheme through the encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of this Standard). <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines RLE Compression and its Transfer Syntax.</para>
         <note>
-          <para>The RLE Compression algorithm described in <xref linkend="chapter_G" xrefstyle="template: Annex %n"/> is the compression used in the TIFF 6.0 specification known as the "PackBits" scheme.</para>
+          <para>The RLE Compression algorithm described in <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> is the compression used in the TIFF 6.0 specification known as the "PackBits" scheme.</para>
         </note>
         <para>The use of the DICOM Encapsulated Format to support RLE Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the compressed data.</para>
         <note>
@@ -3106,7 +3135,7 @@
       </section>
       <section xml:id="sect_8.2.3" label="8.2.3" status="3">
         <title>JPEG-LS Image Compression</title>
-        <para>DICOM provides a mechanism for supporting the use of JPEG-LS Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG-LS Standard and provide a number of lossless (bit preserving) and lossy (near-lossless) compression schemes.</para>
+        <para>DICOM provides a mechanism for supporting the use of JPEG-LS Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG-LS Standard and provide a number of lossless (bit preserving) and lossy (near-lossless) compression schemes.</para>
         <note>
           <para>The context where the usage of lossy (near-lossless) compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for JPEG-LS lossy (near-lossless) compression is also beyond the scope of this standard.</para>
         </note>
@@ -3117,7 +3146,7 @@
       </section>
       <section xml:id="sect_8.2.4" label="8.2.4" status="3">
         <title>JPEG 2000 Image Compression</title>
-        <para>DICOM provides a mechanism for supporting the use of JPEG 2000 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG 2000 Standard and provide lossless (bit preserving) and lossy compression schemes.</para>
+        <para>DICOM provides a mechanism for supporting the use of JPEG 2000 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a number of Transfer Syntaxes that reference the JPEG 2000 Standard and provide lossless (bit preserving) and lossy compression schemes.</para>
         <note>
           <para>The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for JPEG 2000 lossy compression are also beyond the scope of this standard.</para>
         </note>
@@ -3145,7 +3174,7 @@
       </section>
       <section xml:id="sect_8.2.5" label="8.2.5" status="3">
         <title>MPEG2 MP@ML Image Compression</title>
-        <para>DICOM provides a mechanism for supporting the use of MPEG2 MP@ML Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a Transfer Syntax that references the MPEG2 MP@ML Standard.</para>
+        <para>DICOM provides a mechanism for supporting the use of MPEG2 MP@ML Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 MP@ML Standard.</para>
         <note>
           <para>MPEG2 compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG2 MP@ML are also beyond the scope of this standard.</para>
         </note>
@@ -3318,7 +3347,7 @@
       </section>
       <section xml:id="sect_8.2.6" label="8.2.6" status="3">
         <title>MPEG2 MP@HL Image Compression</title>
-        <para>MPEG2 Main Profile at High Level (MP@HL) corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG2 MP@HL Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a Transfer Syntax that references the MPEG2 MP@HL Standard.</para>
+        <para>MPEG2 Main Profile at High Level (MP@HL) corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG2 MP@HL Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 MP@HL Standard.</para>
         <note>
           <para>MPEG2 compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG2 MP@HL are also beyond the scope of this standard.</para>
         </note>
@@ -3668,7 +3697,7 @@
       </section>
       <section xml:id="sect_8.2.7" label="8.2.7" status="3">
         <title>MPEG-4 AVC/H.264 High Profile / Level 4.1 Video Compression</title>
-        <para>MPEG-4 AVC/H.264 High Profile / Level 4.1 corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG-4 AVC/H.264 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines a Transfer Syntax that references the MPEG-4 AVC/H.264 Standard.</para>
+        <para>MPEG-4 AVC/H.264 High Profile / Level 4.1 corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG-4 AVC/H.264 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG-4 AVC/H.264 Standard.</para>
         <note>
           <para>MPEG-4 AVC/H.264 compression @ High Profile compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG-4 AVC/H.264 HiP@Level4.1 are also beyond the scope of this standard.</para>
         </note>
@@ -4238,7 +4267,7 @@
       </note>
       <section xml:id="sect_8.4.1" label="8.4.1" status="3">
         <title>JPIP Referenced Pixel Data</title>
-        <para>DICOM provides a mechanism for supporting the use of JPEG 2000 Interactive Protocol through the inclusion of a URL reference to a pixel data provider service. <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> defines two Transfer Syntaxes that utilize URL references to a JPIP pixel data provider service.</para>
+        <para>DICOM provides a mechanism for supporting the use of JPEG 2000 Interactive Protocol through the inclusion of a URL reference to a pixel data provider service. <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines two Transfer Syntaxes that utilize URL references to a JPIP pixel data provider service.</para>
         <para>The use of the these Transfer Syntaxes requires that the Pixel Data Provider URL specify a URL that will represent the JPIP request including the specific target information. Additional parameters required by the application may be appended to the URL when accessing the pixel data provider.</para>
         <note>
           <para>For example, a JPIP request for a 200 by 200 pixel rendition of the entire image can be constructed from the Pixel Data Provider URL as follows:</para>
@@ -4285,7 +4314,7 @@
     <para>The &lt;org root&gt; portion of the UID uniquely identifies an organization, (i.e., manufacturer, research organization, NEMA, etc.), and is composed of a number of numeric components as defined by ISO 8824. The &lt;suffix&gt; portion of the UID is also composed of a number of numeric components, and shall be unique within the scope of the &lt;org root&gt;. This implies that the organization identified in the &lt;org root&gt; is responsible for guaranteeing &lt;suffix&gt; uniqueness by providing registration policies. These policies shall guarantee &lt;suffix&gt; uniqueness for all UIDs created by that organization. Unlike the &lt;org root&gt;, which may be common for UIDs in an organization, the &lt;suffix&gt; shall take different unique values between different UIDs that identify different objects.</para>
     <para>The &lt;org root&gt; "1.2.840.10008" is reserved for DICOM defined items (such as DICOM Transfer Syntaxes) and shall not be used for privately defined items (such as an Image Instance).</para>
     <para>Although a specific implementation may choose some particular structure for its generated UIDs, it should never assume that a UID carries any semantics. Thus, a UID shall not be "parsed" to find a particular value or component. Component definition (for the suffix) is implementation specific and may change as long as uniqueness is maintained. Parsing UIDs may jeopardize the ability to inter-operate as implementations evolve.</para>
-    <para>Example of UID structure is given in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.</para>
+    <para>Example of UID structure is given in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
     <section xml:id="sect_9.1" label="9.1" status="2">
       <title>UID Encoding Rules</title>
       <para>The DICOM UID encoding rules are defined as follows:</para>
@@ -4321,7 +4350,7 @@
           <para>Privately defined and registered UIDs</para>
         </listitem>
       </itemizedlist>
-      <para>Both UIDs use the same encoding rules as defined in <xref linkend="sect_9.1" xrefstyle="select: label"/>. See <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> for a more detailed description of the UID registration process.</para>
+      <para>Both UIDs use the same encoding rules as defined in <xref linkend="sect_9.1" xrefstyle="select: label"/>. See <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> for a more detailed description of the UID registration process.</para>
       <section xml:id="sect_9.2.1" label="9.2.1" status="3">
         <title>DICOM Defined and Registered Unique Identifiers</title>
         <para>A limited number of registered DICOM Defined UIDs are used within the DICOM Standard. The organization responsible for the definition and registration of such DICOM UIDs is NEMA.</para>
@@ -4337,7 +4366,7 @@
     <title>Transfer Syntax</title>
     <para>A Transfer Syntax is a set of encoding rules able to unambiguously represent one or more Abstract Syntaxes. In particular, it allows communicating Application Entities to negotiate common encoding techniques they both support (e.g., byte ordering, compression, etc.). A Transfer Syntax is an attribute of a Presentation Context, one or more of which are negotiated at the establishment of an Association between DICOM Application Entities. This Association negotiation is specified in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> and discussed in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
     <para>The selection of a Transfer Syntax applies to the encoding rules for the Data Set portion of a DICOM Message only. All DICOM Standard and Private Transfer Syntaxes implicitly specify a fixed encoding for the Command Set portion of a DICOM Message as Specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
-    <para>This part of the DICOM Standard defines standard DICOM Transfer Syntaxes and assigns a unique Transfer Syntax Name to each one. The standard DICOM Transfer Syntaxes are specified in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>. The DICOM notation for Transfer Syntax names is the notation used for UIDs (see <xref linkend="chapter_9" xrefstyle="template: Section %n"/>).</para>
+    <para>This part of the DICOM Standard defines standard DICOM Transfer Syntaxes and assigns a unique Transfer Syntax Name to each one. The standard DICOM Transfer Syntaxes are specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. The DICOM notation for Transfer Syntax names is the notation used for UIDs (see <xref linkend="chapter_9" xrefstyle="template:Section %n"/>).</para>
     <para>The organization responsible for the definition and registration of DICOM Transfer Syntaxes is NEMA. NEMA guarantees uniqueness for all DICOM Transfer Syntax Names.</para>
     <para>Privately defined Transfer Syntax Names may also be used; however, they will not be registered by NEMA. Organizations that define private Transfer Syntax Names shall follow the registration process defined in <xref linkend="sect_9.2" xrefstyle="select: label"/>.</para>
     <section xml:id="sect_10.1" label="10.1" status="2">
@@ -4393,7 +4422,7 @@
     </section>
     <section xml:id="sect_10.4" label="10.4" status="2">
       <title>Transfer Syntax For DICOM RLE Compression</title>
-      <para>DICOM defines the RLE Compression (see <xref linkend="chapter_G" xrefstyle="template: Annex %n"/>). This implies that:</para>
+      <para>DICOM defines the RLE Compression (see <xref linkend="chapter_G" xrefstyle="template:Annex %n"/>). This implies that:</para>
       <orderedlist numeration="loweralpha">
         <listitem>
           <para>If an Application Entity issues an A-ASSOCIATE request where any offered Abstract Syntaxes is associated in one or more Presentation Contexts(s) with RLE compression Transfer Syntax, at least one of the Presentation Contexts that include this Abstract Syntax, shall include the DICOM Default Transfer Syntax (uncompressed).</para>
@@ -5272,7 +5301,7 @@
       </table>
       <section xml:id="sect_A.4.1" label="A.4.1" status="3">
         <title>JPEG Image Compression</title>
-        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-10918-1 (JPEG Part 1) and an International Draft Standard, ISO/IS-10918-2 (JPEG Part 2), known as the JPEG Standard, for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/> for further details).</para>
+        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-10918-1 (JPEG Part 1) and an International Draft Standard, ISO/IS-10918-2 (JPEG Part 2), known as the JPEG Standard, for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para>A DICOM Transfer Syntax for JPEG Image Compression shall be identified by a UID value, appropriate to its JPEG coding process, chosen from <xref linkend="table_A.4-3" xrefstyle="select: label"/>.</para>
         <table frame="box" rules="all" xml:id="table_A.4-3" label="A.4-3">
           <caption>DICOM Transfer Syntax UIDs for JPEG</caption>
@@ -5344,7 +5373,7 @@
           </tbody>
         </table>
         <note>
-          <para>DICOM identifies, to increase the likelihood of successful association, three Transfer Syntaxes for Default JPEG Compression Image processes (see <xref linkend="sect_8.2.1" xrefstyle="select: label"/> and <xref linkend="chapter_10" xrefstyle="template: Section %n"/>).</para>
+          <para>DICOM identifies, to increase the likelihood of successful association, three Transfer Syntaxes for Default JPEG Compression Image processes (see <xref linkend="sect_8.2.1" xrefstyle="select: label"/> and <xref linkend="chapter_10" xrefstyle="template:Section %n"/>).</para>
         </note>
         <para>If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each fragment shall contain encoded data from a single-frame image.</para>
         <note>
@@ -5358,11 +5387,11 @@
       </section>
       <section xml:id="sect_A.4.2" label="A.4.2" status="3">
         <title>RLE Compression</title>
-        <para><xref linkend="chapter_G" xrefstyle="template: Annex %n"/> defines a RLE Compression Transfer Syntax. This transfer Syntax is identified by the UID value "1.2.840.10008.1.2.5". If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each frame shall be encoded in one and only one Fragment (see <xref linkend="sect_8.2" xrefstyle="select: label"/>).</para>
+        <para><xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines a RLE Compression Transfer Syntax. This transfer Syntax is identified by the UID value "1.2.840.10008.1.2.5". If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each frame shall be encoded in one and only one Fragment (see <xref linkend="sect_8.2" xrefstyle="select: label"/>).</para>
       </section>
       <section xml:id="sect_A.4.3" label="A.4.3" status="3">
         <title>JPEG-LS Image Compression</title>
-        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-14495-1 (JPEG-LS Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/> for further details).</para>
+        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-14495-1 (JPEG-LS Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para>A DICOM Transfer Syntax for JPEG-LS Image Compression shall be identified by a UID value, appropriate to its JPEG-LS coding process.</para>
         <para>Two Transfer Syntaxes are specified for JPEG-LS:</para>
         <orderedlist>
@@ -5381,7 +5410,7 @@
       </section>
       <section xml:id="sect_A.4.4" label="A.4.4" status="3">
         <title>JPEG 2000 Image Compression</title>
-        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS 15444-1 (JPEG 2000 Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template: Annex %n"/> for further details).</para>
+        <para>The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS 15444-1 (JPEG 2000 Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para>A DICOM Transfer Syntax for JPEG 2000 Image Compression shall be identified by a UID value, appropriate to the choice of JPEG 2000 coding process.</para>
         <para>Two Transfer Syntaxes are specified for JPEG 2000 Part 1:</para>
         <orderedlist numeration="arabic">
@@ -5587,10 +5616,9 @@
     <para>Privately defined Unique Identifiers (UIDs) are used in DICOM to uniquely identify items such as Specialized or Private SOP Classes, Image SOP Instances, Study SOP Instances, etc.</para>
     <section xml:id="sect_B.1" label="B.1" status="2">
       <title>Organizationally Derived UID</title>
-      <para>A UID may be formed using a registered root (see <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>) and an organization specific suffix. The manner in which the suffix of such an organizationally derived UID is defined is not constrained by the DICOM Standard. Only the guarantee of its uniqueness by the defining organization is required by DICOM.</para>
+      <para>A UID may be formed using a registered root (see <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>) and an organization specific suffix. The manner in which the suffix of such an organizationally derived UID is defined is not constrained by the DICOM Standard. Only the guarantee of its uniqueness by the defining organization is required by DICOM.</para>
       <para>The following example presents a particular choice made by a specific organization in defining its suffix to guarantee uniqueness of a SOP Instance UID.</para>
-      <programlisting><![CDATA[
-  "1.2.840.xxxxx.3.152.235.2.12.187636473"
+      <programlisting><![CDATA[  "1.2.840.xxxxx.3.152.235.2.12.187636473"
    \___________/ \______________________/
        root     .         suffix
 ]]></programlisting>
@@ -5656,7 +5684,7 @@
         <para>The DICOM Abstract Syntaxes Names. Abstract Syntax Names are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       </listitem>
       <listitem>
-        <para>The DICOM Transfer Syntax Names. Transfer Syntax Names are defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+        <para>The DICOM Transfer Syntax Names. Transfer Syntax Names are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
       </listitem>
       <listitem>
         <para>The DICOM Application Context Names. Application Context Names are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/></para>
@@ -5737,10 +5765,10 @@
         </figure>
       </para>
       <para>An individual pixel may consist of one or more Pixel Sample Values (e.g., color or multi-planar images). Each Pixel Sample Value can be expressed as either a binary 2's complement integer or a binary unsigned integer, as specified by the Pixel Representation Data Element (0028, 0103). The number of bits in each Pixel Sample Value is specified by Bits Stored (0028,0101). For 2's complement integer Pixel Samples the sign bit is the most significant bit of the Pixel Sample Value.</para>
-      <para>A Pixel Cell is the container for a Pixel Sample Value and optionally additional bits. These additional bits can be used for overlay planes, or to place Pixels on certain boundaries (byte, word, etc.). A Pixel Cell exists for every individual Pixel Sample Value in the Pixel Data. The size of the Pixel Cells is specified by Bits Allocated (0028,0100) and is greater than or equal to the Bits Stored (0028,0101). The placement of the Pixel Sample Values within the Pixel Cells is specified by High Bit (0028,0102).</para>
+      <para>A Pixel Cell is the container for a Pixel Sample Value and optionally additional bits. These additional bits are used to place Pixels on certain boundaries (byte, word, etc.). A Pixel Cell exists for every individual Pixel Sample Value in the Pixel Data. The size of the Pixel Cells is specified by Bits Allocated (0028,0100) and is greater than or equal to the Bits Stored (0028,0101). The placement of the Pixel Sample Values within the Pixel Cells is specified by High Bit (0028,0102).</para>
       <para>Any restrictions on the characteristics of a Pixel Cell and the Pixel Sample Value contained therein are specific to the Information Object Definition (e.g., Image Object) containing the Pixel Data Element (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
-      <para>The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word String). The Pixel Data in DICOM 3.0, as it was in ACR-NEMA 2.0, is packed (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
-      <para>All other (non-default) DICOM Transfer Syntaxes make use of explicit VR encoding. For these Transfer Syntaxes, all Pixel Data where Bits Allocated is less than or equal to 8 may be encoded with an explicit VR of OB (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>). As in the OW case, Pixel Cells are packed together, but in this case the Pixel Data is broken up into a stream of physical 8-bit words.</para>
+      <para>The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word String). The Pixel Data in DICOM 3.0, as it was in ACR-NEMA 2.0, is packed, except that Bits Allocated is always either 1, or a multiple of 8 (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
+      <para>All other (non-default) DICOM Transfer Syntaxes make use of explicit VR encoding. For these Transfer Syntaxes, all Pixel Data where Bits Allocated is less than or equal to 8 may be encoded with an explicit VR of OB (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). As in the OW case, Pixel Cells are packed together, but in this case the Pixel Data is broken up into a stream of physical 8-bit words.</para>
       <note>
         <para>For Pixel Data encoded with an explicit VR of OB, the encoding of the Pixel Data is unaffected by Little Endian or Big Endian byte ordering.</para>
       </note>
@@ -5755,8 +5783,8 @@
           </mediaobject>
         </figure>
       </para>
-      <para>IODs tend to specify Pixel Cells so that they begin and end on byte or word boundaries and such that the Pixel Sample Value contained within also fits 'neatly' within a cell. However, this does not have to be the case.</para>
-      <para>We now carry forward two examples of Pixel Data encoding using the Value representation of OW for the purposes of clarification. Example 1 will be a valid example for a CT Image Information Object, while Example 2 will be for a hypothetical information object (see Figure <xref linkend="figure_D-3" xrefstyle="select: labelnumber"/>).</para>
+      <para>With the exception of single bit images, Pixel Cells begin and end on byte or word boundaries and such that the Pixel Sample Value contained within also fits 'neatly' within a cell.</para>
+      <para>Figure <xref linkend="figure_D-3" xrefstyle="select: labelnumber"/> is an example of Pixel Data encoding using the Value representation of OW for the purposes of clarification. The Example is a valid example for a CT Image Information Object.</para>
       <para>
         <figure xml:id="figure_D-3" label="D-3" pgwide="1">
           <title>Example Pixel Cells</title>
@@ -5843,17 +5871,7 @@
           </mediaobject>
         </figure>
       </para>
-      <para>
-        <figure xml:id="figure_D.2-2" label="D.2-2" pgwide="1">
-          <title>Example 2 of Pixel and Overlay Data Cells</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="figures/PS3.5_D.2-2.svg"/>
-              <!--<imagedata fileref="part05_fromword_files/image022.png"/>-->
-            </imageobject>
-          </mediaobject>
-        </figure>
-      </para>
+      <para>Figure D.2-2 Example 2 of Pixel and Overlay Data Cells has been retired. See PS3.3 2014c.</para>
       <para>
         <figure xml:id="figure_D.2-3" label="D.2-3" pgwide="1">
           <title>Example 3 of Pixel and Overlay Data Cells</title>
@@ -5879,6 +5897,16 @@
       <note>
         <para>In this example, the Overlay Bits are numbered in the same manner that Pixel Cells are numbered in the other examples in this Annex. That is Overlay Bit 1 is the first bit of the Overlay Plane, encoded from left to right and top to bottom, a row at a time.</para>
       </note>
+      <para>
+        <figure xml:id="figure_D.2-5" label="D.2-5" pgwide="1">
+          <title>Example 5 of Single Bit Pixel Data Cells (VR=OW)</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/PS3.5_D.2-5.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </para>
     </section>
     <section xml:id="sect_D.3" label="D.3" status="2">
       <title>Examples of Float and Double Float Pixel Data</title>
@@ -6877,7 +6905,7 @@
         </tbody>
       </table>
       <para>The different coding processes specified in the JPEG Standard are closely related. By extending the capability of an implementation, increasingly more 'lower level' processes can also be executed by the implementation. This is shown in <xref linkend="table_F.1-2" xrefstyle="select: label"/> for Huffman Coding.</para>
-      <para>Inclusion of a JPEG-coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>. Independent of the JPEG coding processes, the same syntax applies. The only distinction for different processes in the syntax is the UID value. <xref linkend="table_F.1-5" xrefstyle="select: label"/> lists the UID values in the Transfer Syntax for the various JPEG coding processes for reference.</para>
+      <para>Inclusion of a JPEG-coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. Independent of the JPEG coding processes, the same syntax applies. The only distinction for different processes in the syntax is the UID value. <xref linkend="table_F.1-5" xrefstyle="select: label"/> lists the UID values in the Transfer Syntax for the various JPEG coding processes for reference.</para>
       <table frame="box" rules="all" xml:id="table_F.1-2" label="F.1-2">
         <caption>Relationship Between the Lossy JPEG Huffman Coding Processes</caption>
         <thead>
@@ -7042,7 +7070,7 @@
       <para>The JPEG-LS Standard specifies a single lossy (near-lossless) code process that can achieve lossless compression by constraining the absolute error value during encoding to zero. The lossless and lossy (near-lossless) coding is based on a predictive scheme with statistical modeling, in which differences between pixels and their surround are computed and their context modeled prior to coding, with a run-length escape mechanism. This scheme achieves consistently better compression in lossless mode than the lossless processes of JPEG defined in ISO 10918-1, with less complexity.</para>
       <para>Though a different coding process from those specified in ISO 10918-1 is used, the syntax of the encoded bit stream is closely related.</para>
       <para>A single JPEG-LS process is used for bit depths up to 16 bits.</para>
-      <para>Inclusion of a JPEG-LS coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+      <para>Inclusion of a JPEG-LS coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
     </section>
     <section xml:id="sect_F.3" label="F.3" status="2">
       <title>Encapsulated JPEG 2000 Encoded Images</title>
@@ -7050,7 +7078,7 @@
       <para>The JPEG 2000 Standard sets out requirements and implementation guidelines for the coded representation of compressed image data to be interchanged between applications. The processes and representations are intended to be generic in order to support the broad range of applications for color and grayscale still images for the purpose of communications and storage within computer systems.</para>
       <para>Though a different coding process from those specified in ISO 10918-1 is used, the syntax of the encoded bit stream is closely related.</para>
       <para>A single JPEG 2000 process is used for bit depths up to 16 bits.</para>
-      <para>Inclusion of a JPEG 2000 coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+      <para>Inclusion of a JPEG 2000 coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
     </section>
   </chapter>
   <chapter xml:id="chapter_G" label="G" status="1">

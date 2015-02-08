@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2014c - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2015a - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -78,12 +78,21 @@
     <title>Normative References</title>
   
   <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+  <bibliography>
+    <biblioentry xml:id="biblio_ISODirectives3">
+      <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <author>
+        <orgname>ISO/IEC</orgname>
+      </author>
+      <date>1989</date>
+      <title>Drafting and presentation of International Standards</title>
+    </biblioentry>
+  </bibliography>
   <para>ANSI X9.52 American National Standards Institute. ANSI X9.52-1998, Triple Data Encryption Algorithm Modes of Operation. 1998.</para>
   <para>ECMA 235, The ECMA GSS-API Mechanism</para>
   <para>FIPS PUB 46 Data Encryption Standard</para>
   <para>FIPS PUB 81 DES Modes of Operation</para>
   <para>IETF Internet X.509 Public Key Infrastructure; Time Stamp Protocols; March 2000</para>
-  <para>ISO/IEC Directives, 1989 Part 3 - Drafting and Presentation of International Standards</para>
   <para>ISO/IEC 10118-:1998 Information technology - Security techniques - Hash-functions - Part 3: Dedicated hash-functions (RIPEMD-160 reference)</para>
   <para>Note: The draft RIPEMD-160 specification and sample code are also available at ftp://ftp.esat.kuleuven.ac.be/pub/bosselae/ripemd</para>
   <para>ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model</para>
@@ -117,7 +126,7 @@
   <para>RFC 3268 Advanced Encryption Standard (AES) Ciphersuites for Transport Layer Security (TLS), June 2002.</para>
   <para>RFC 3447 PKCS #1 RSA Cryptography Specifications Version 2.1, February 2003</para>
   <note>
-    <para>The RSA Encryption Standard is also defined in informative annex A of ISO/IEC 9796, and in Normative <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> of the CEN/TC251 European Prestandard prENV 12388:1996.</para>
+    <para>The RSA Encryption Standard is also defined in informative annex A of ISO/IEC 9796, and in Normative <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> of the CEN/TC251 European Prestandard prENV 12388:1996.</para>
   </note>
   <para>RFC 3852 Cryptographic Message Syntax,July 2004</para>
   <para>RFC 3370 Cryptographic Message Syntax (CMS) Algorithms, August 2002</para>
@@ -325,7 +334,7 @@
     <title>Secure Use Profiles</title>
   
   <para>An implementation may claim conformance to one or more Secure Use Profiles. Such profiles outline the use of attributes and other Security Profiles in a specific fashion.</para>
-  <para>Secure Use Profiles are specified in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+  <para>Secure Use Profiles are specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.2" label="6.2" status="2">
     <title>Secure Transport Connection Profiles</title>
@@ -356,7 +365,7 @@
     </listitem>
     <listitem><para>Description of the integrity check mechanism an implementation shall support</para></listitem>
   </orderedlist>
-  <para>Secure Transport Connection Profiles are specified in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>.</para>
+  <para>Secure Transport Connection Profiles are specified in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.3" label="6.3" status="2">
     <title>Digital Signature Profile</title>
@@ -385,7 +394,7 @@
     <listitem><para>Any other factors needed to create, verify, or interpret the Digital Signature</para></listitem>
   </orderedlist>
   
-  <para>Digital Signature Profiles are specified in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.</para>
+  <para>Digital Signature Profiles are specified in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.4" label="6.4" status="2">
     <title>Media Storage Security Profiles</title>
@@ -400,31 +409,31 @@
 <listitem><para>The restrictions on the types of DICOM Files that can be secured, if any.</para></listitem>
 <listitem><para>How the DICOM Files will be encapsulated and secured.</para></listitem>
 </orderedlist>
-  <para>Media Storage Security Profiles are specified in <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+  <para>Media Storage Security Profiles are specified in <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.5" label="6.5" status="2">
     <title>Network Address Management Profiles</title>
   
   <para>An implementation may claim conformance to one or more Network Address Management Profiles. Such profiles outline the use of non-DICOM network protocols to obtain the network addresses for the implementation.</para>
-  <para>Network Address Management Profiles are specified in <xref linkend="chapter_F" xrefstyle="template: Annex %n"/>.</para>
+  <para>Network Address Management Profiles are specified in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.6" label="6.6" status="2">
     <title>Time Synchronization Profiles</title>
   
   <para>An implementation may claim conformance to one or more Time Synchronization Profiles. Such profiles outline the use of non-DICOM protocols to set the current time for the implementation.</para>
-  <para>Time Synchronization Profiles are specified in <xref linkend="chapter_G" xrefstyle="template: Annex %n"/>.</para>
+  <para>Time Synchronization Profiles are specified in <xref linkend="chapter_G" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.7" label="6.7" status="2">
     <title>Application Configuration Management Profiles</title>
   
   <para>An implementation may claim conformance to one or more Application Configuration Management Profiles. Such profiles outline the use of non-DICOM network protocols to obtain the descriptions, addresses and capabilities of other devices with which the implementation may communicate using the DICOM Protocol. They also specify the use of those non-DICOM protocols for the implementation to publish or announce its description, addresses and capabilities. They also specify how implementation specific configuration information can be obtained by devices.</para>
-  <para>Application Configuration Management Profiles are specified in <xref linkend="chapter_H" xrefstyle="template: Annex %n"/>.</para>
+  <para>Application Configuration Management Profiles are specified in <xref linkend="chapter_H" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section xml:id="sect_6.8" label="6.8" status="2">
     <title>Audit Trail Profiles</title>
   
   <para>An implementation may claim conformance to one or more Audit Trail Profiles. Such profiles outline the generation and transport of audit messages for security and privacy policy enforcement.</para>
-  <para>Audit Trail Profiles are specified in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+  <para>Audit Trail Profiles are specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
   </section>
 </chapter>
 <chapter xml:id="chapter_7" label="7" status="1">
@@ -724,8 +733,7 @@
   </note>
     <section xml:id="para_A.5.1-1" label="A.5.1-1">
       <title>Audit Message Schema</title>
-    <programlisting><![CDATA[
-datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+    <programlisting><![CDATA[datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 # This defines the coded value type. The comment shows a pattern that can be used to further
 # constrain the token to limit it to the format of an OID.  Not all schema software 
@@ -18783,8 +18791,7 @@ start = message
   
   <para>The individual LDAP attribute information is summarized in the comments at the beginning of the schema below. The formal definition of the objects and the attributes is in the schema below. This schema may be extended by defining an additional schema that defines auxiliary classes, sub-classes derived from this schema, or both.</para>
   <para>The formal LDAP schema for the Application Configuration Data Model and the DICOM Configuration Hierarchy is:</para>
-  <programlisting><![CDATA[
-# 3 Attribute Type Definitions
+  <programlisting><![CDATA[# 3 Attribute Type Definitions
 # 
 #    The following attribute types are defined in this document:
 # 

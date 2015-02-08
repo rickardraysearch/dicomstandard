@@ -19,79 +19,111 @@
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED8" width="500" height="565.002"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="565.002"/>
 	<g>
 		<g>
+			<text transform="matrix(0.8815 0 0 1 85.667 20.4272)" font-size="12">Physical Area</text>
+		</g>
+		<rect x="85.668" y="27.434" fill="#86B2D8" stroke="#000000" stroke-miterlimit="1" width="330.666" height="243.167"/>
+		<rect x="85.668" y="27.434" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
+		<text transform="matrix(1 0 0 1 94.2666 45.5322)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="30" font-size="10">(0018,7028)</tspan><tspan x="0" y="74" font-size="10">(0018,7030)</tspan></text>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 160.8638 69.7603)" font-size="12">Active Area</text>
+		</g>
+		<rect x="160.855" y="74.899" fill="#B2CEE7" stroke="#000000" stroke-miterlimit="1" width="234.129" height="174.367"/>
+		<rect x="160.855" y="74.899" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
+		<rect x="184.2" y="118.765" fill="#CCDEF0" stroke="#000000" stroke-miterlimit="1" width="184.118" height="105.836"/>
+		
+			<rect x="184.2" y="118.765" fill="#FFFFFF" stroke="#000000" stroke-width="0.8333" stroke-miterlimit="1" width="15" height="15"/>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 184.2002 115.0933)" font-size="12">Field of View</text>
+		</g>
+		<text transform="matrix(1 0 0 1 201.917 144.8135)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="12" font-size="10">(before rotation/ flip)</tspan></text>
+		<text transform="matrix(1 0 0 1 172.333 92.5635)" font-size="10">TLHC</text>
+		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 85.667 20.4307)" font-size="12">Physical Area</text>
-			</g>
-			<rect x="85.668" y="27.434" fill="#8AB4D7" stroke="#000000" stroke-miterlimit="1" width="330.666" height="243.167"/>
-			<rect x="85.668" y="27.434" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
-			<text transform="matrix(1 0 0 1 94.2666 45.5322)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="30" font-size="10">(0018,7028)</tspan><tspan x="0" y="74" font-size="10">(0018,7030)</tspan></text>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 160.8638 69.7637)" font-size="12">Active Area</text>
-			</g>
-			<rect x="160.855" y="74.899" fill="#B4CFE6" stroke="#000000" stroke-miterlimit="1" width="234.129" height="174.367"/>
-			<rect x="160.855" y="74.899" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
-			<rect x="184.2" y="118.765" fill="#CEDFEF" stroke="#000000" stroke-miterlimit="1" width="184.118" height="105.836"/>
-			<rect x="184.2" y="118.765" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="15" height="15"/>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 184.2002 115.0967)" font-size="12">Field of View</text>
-			</g>
-			<text transform="matrix(1 0 0 1 201.917 144.8169)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="12" font-size="10">(before rotation/ flip)</tspan></text>
-			<text transform="matrix(1 0 0 1 172.333 92.5669)" font-size="10">TLHC</text>
-			<g>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,31.934 90.168,79.892 159.625,79.892 				"/>
 				<g>
-					<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,31.934 90.168,79.892 159.625,79.892 					"/>
-					<g>
-						<polygon points="158.436,81.635 164.94,79.892 158.436,78.148 						"/>
-					</g>
-				</g>
-			</g>
-			<g>
-				<g>
-					<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,75.934 90.168,127.017 186.854,127.017 					"/>
-					<g>
-						<polygon points="185.666,128.76 192.17,127.017 185.666,125.273 						"/>
-					</g>
+					<polygon points="158.436,81.635 164.94,79.892 158.436,78.148 					"/>
 				</g>
 			</g>
 		</g>
 		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 85.667 296.2119)" font-size="12">Physical Area</text>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="193.23,126.774 193.23,127.774 192.23,127.774 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="191.23" y1="127.774" x2="185.73" y2="127.774"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="185.23,127.774 184.23,127.774 184.23,126.774 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="184.23" y1="125.774" x2="184.23" y2="120.274"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="184.23,119.774 184.23,118.774 185.23,118.774 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="186.23" y1="118.774" x2="191.73" y2="118.774"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="192.23,118.774 193.23,118.774 193.23,119.774 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="193.23" y1="120.774" x2="193.23" y2="126.274"/>
 			</g>
-			<rect x="85.668" y="303.216" fill="#8AB4D7" stroke="#000000" stroke-miterlimit="1" width="330.666" height="243.168"/>
-			<rect x="85.668" y="303.216" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
-			<text transform="matrix(1 0 0 1 94.2666 321.2822)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="30" font-size="10">(0018,7028)</tspan><tspan x="0" y="74" font-size="10">(0018,7030)</tspan></text>
+		</g>
+		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 160.8638 345.5459)" font-size="12">Active Area</text>
-			</g>
-			<rect x="160.855" y="350.683" fill="#B4CFE6" stroke="#000000" stroke-miterlimit="1" width="234.129" height="140.533"/>
-			<rect x="160.855" y="350.683" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
-			<rect x="184.201" y="394.548" fill="#CEDFEF" stroke="#000000" stroke-miterlimit="1" width="184.117" height="130.668"/>
-			<rect x="184.201" y="394.548" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="15" height="15"/>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 184.2002 390.8779)" font-size="12">Field of View</text>
-			</g>
-			<text transform="matrix(1 0 0 1 201.917 420.5986)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="12" font-size="10">(before 270 degree rotation)</tspan></text>
-			<rect x="184.201" y="510.216" fill="#538DBE" stroke="#000000" stroke-miterlimit="1" width="15" height="15"/>
-			<text transform="matrix(1 0 0 1 201.917 494.5791)"><tspan x="0" y="0" font-size="10">TLHC of (7FE0,0010)</tspan><tspan x="0" y="12" font-size="10">after 270 degree rotation</tspan></text>
-			<text transform="matrix(1 0 0 1 172.333 368.3486)" font-size="10">TLHC</text>
-			<g>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,75.934 90.168,123.392 183.354,123.392 				"/>
 				<g>
-					<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,307.716 90.168,355.675 159.625,355.675 					"/>
-					<g>
-						<polygon points="158.436,357.418 164.94,355.675 158.436,353.932 						"/>
-					</g>
+					<polygon points="182.166,125.135 188.67,123.392 182.166,121.648 					"/>
 				</g>
 			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 85.667 296.209)" font-size="12">Physical Area</text>
+		</g>
+		<rect x="85.668" y="303.216" fill="#86B2D8" stroke="#000000" stroke-miterlimit="1" width="330.666" height="243.168"/>
+		<rect x="85.668" y="303.216" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
+		<text transform="matrix(1 0 0 1 94.2666 321.2783)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="30" font-size="10">(0018,7028)</tspan><tspan x="0" y="74" font-size="10">(0018,7030)</tspan></text>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 160.8638 345.542)" font-size="12">Active Area</text>
+		</g>
+		<rect x="160.855" y="350.683" fill="#B2CEE7" stroke="#000000" stroke-miterlimit="1" width="234.129" height="140.533"/>
+		<rect x="160.855" y="350.683" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="1" width="9" height="9"/>
+		<rect x="184.201" y="394.548" fill="#CCDEF0" stroke="#000000" stroke-miterlimit="1" width="184.117" height="130.668"/>
+		<g>
+			<text transform="matrix(0.8815 0 0 1 184.2002 390.875)" font-size="12">Field of View</text>
+		</g>
+		<text transform="matrix(1 0 0 1 201.917 420.5947)"><tspan x="0" y="0" font-size="10">TLHC</tspan><tspan x="0" y="12" font-size="10">(before 270 degree rotation)</tspan></text>
+		<rect x="184.201" y="510.216" fill="#4F8ABE" stroke="#000000" stroke-miterlimit="1" width="15" height="15"/>
+		<text transform="matrix(1 0 0 1 201.917 494.5762)"><tspan x="0" y="0" font-size="10">TLHC of (7FE0,0010)</tspan><tspan x="0" y="12" font-size="10">after 270 degree rotation</tspan></text>
+		<text transform="matrix(1 0 0 1 172.333 368.3447)" font-size="10">TLHC</text>
+		<g>
 			<g>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,307.716 90.168,355.675 159.625,355.675 				"/>
 				<g>
-					<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,351.716 90.168,402.8 186.854,402.8 					"/>
-					<g>
-						<polygon points="185.666,404.543 192.17,402.8 185.666,401.057 						"/>
-					</g>
+					<polygon points="158.436,357.418 164.94,355.675 158.436,353.932 					"/>
+				</g>
+			</g>
+		</g>
+		
+			<rect x="184.201" y="394.548" fill="#FFFFFF" stroke="#000000" stroke-width="0.8333" stroke-miterlimit="1" width="15" height="15"/>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="193.201,402.548 193.201,403.548 192.201,403.548 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="191.201" y1="403.548" x2="185.701" y2="403.548"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="185.201,403.548 184.201,403.548 184.201,402.548 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="184.201" y1="401.548" x2="184.201" y2="396.048"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="184.201,395.548 184.201,394.548 185.201,394.548 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="186.201" y1="394.548" x2="191.701" y2="394.548"/>
+				<polyline fill="none" stroke="#ED1C24" stroke-miterlimit="1" points="192.201,394.548 193.201,394.548 193.201,395.548 				"/>
+				
+					<line fill="none" stroke="#ED1C24" stroke-miterlimit="1" stroke-dasharray="2,1" x1="193.201" y1="396.548" x2="193.201" y2="402.048"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-miterlimit="1" points="90.168,351.716 90.168,399.05 183.104,399.05 				"/>
+				<g>
+					<polygon points="181.916,400.793 188.42,399.05 181.916,397.307 					"/>
 				</g>
 			</g>
 		</g>

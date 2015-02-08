@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2014c - Transformation of DICOM to and from HL7 Standards</subtitle>
+  <subtitle>DICOM PS3.20 2015a - Transformation of DICOM to and from HL7 Standards</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -58,6 +58,16 @@
   <chapter xml:id="chapter_2" label="2" status="1">
     <title>Normative and Informative References</title>
     <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>HL7 CDA R2 DIR IG, R1-2009 Health Level Seven Implementation Guide for CDA Release 2: Imaging Integration, Basic Imaging Reports in CDA and DICOM, Diagnostic Imaging Reports (DIR) Release 1.0, 2009.</para>
     <para>ANSI/HL7 CDA, R2-2005 Health Level Seven Version 3 Standard: Clinical Document Architecture (CDA) Release 2, 2005.</para>
     <para>ANSI/HL7 V3 CMET, R2-2009 Health Level Seven Version 3 Standard: Common Message Element Types, Release 2, 2009.</para>
@@ -205,7 +215,7 @@
   </chapter>
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
-    <para>Terms listed in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> Definitions are capitalized throughout the document.</para>
+    <para>Terms listed in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> Definitions are capitalized throughout the document.</para>
   </chapter>
   <chapter xml:id="chapter_A" label="A" status="1">
     <title>SR Diagnostic Imaging Report Transformation Guide</title>
@@ -3106,8 +3116,7 @@
           <para>Structured CDA entries may be referenced within the narrative section text of the CDA document (refer to the CDA Release 2 Standard, Section 4.3.5.1 on &lt;content&gt;). Parts of the structured body of the CDA document that are part of the attested content of the document shall be included in the narrative section text. To that end corresponding CDA entries are extended by originalText elements and reference values that can be derived from the entry act class code displayName.</para>
           <example xml:id="example_A.5.1.2-1" label="A.5.1.2-1">
             <title>CDA Sample Document Excerpt 1: CODE OBSERVATION REFERENCE</title>
-            <programlisting><![CDATA[
-<observation classCode="OBS" moodCode="EVN">
+            <programlisting><![CDATA[<observation classCode="OBS" moodCode="EVN">
 	<templateId root="2.16.840.1.113883.10.20.6.2.9"/>
 	<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"/>
 	<value xsi:type="CD" code="121112" codeSystem="1.2.840.10008.2.16.4"
@@ -3121,8 +3130,7 @@
           </example>
           <example xml:id="example_A.5.1.2-2" label="A.5.1.2-2">
             <title>CDA Sample Document Excerpt 2: TEXT OBSERVATION REFERENCE</title>
-            <programlisting><![CDATA[
-<observation classCode="OBS" moodCode="EVN">
+            <programlisting><![CDATA[<observation classCode="OBS" moodCode="EVN">
 	<templateId root="2.16.840.1.113883.10.20.6.2.12"/>
 	<code code="121073" codeSystem="1.2.840.10008.2.16.4"
 	      codeSystemName="DCM" displayName="Impression"/>
@@ -3135,8 +3143,7 @@
           <para>Within section text a new paragraph may be used for CDA entries that are inserted as part of the attested content. The caption value may be derived from the code displayName value. The attribute value of the reference value shall be used for the content ID attribute.</para>
           <example xml:id="example_A.5.1.2-3" label="A.5.1.2-3">
             <title>CDA Sample Document Excerpt 3: SECTION TEXT PARAGRAPH</title>
-            <programlisting><![CDATA[
-<paragraph>
+            <programlisting><![CDATA[<paragraph>
   <caption>Source of Measurement</caption>
   <content ID=" SrceOfMeas2"/>
 …
@@ -3153,8 +3160,7 @@ further evaluation with CT is recommended as underlying malignancy is not exclud
           <para>For CDA entries (structured part) WADO references are included in observation text as reference value.</para>
           <example xml:id="example_A.5.1.2-4" label="A.5.1.2-4">
             <title>CDA Sample Document Excerpt 4: OBSERVATION TEXT WADO REFERENCE</title>
-            <programlisting><![CDATA[
-<observation classCode="DGIMG" moodCode="EVN">
+            <programlisting><![CDATA[<observation classCode="DGIMG" moodCode="EVN">
 …
   <text  mediaType="application/DICOM">
     <!--reference to CR DICOM image (PA view) -->
@@ -3172,8 +3178,7 @@ further evaluation with CT is recommended as underlying malignancy is not exclud
           <para>Within section text the same WADO reference may be included as the linkHtml href attribute value and the element value can be derived from the DICOM Study Description attribute value.</para>
           <example xml:id="example_A.5.1.2-5" label="A.5.1.2-5">
             <title>CDA Sample Document Excerpt 5: SECTION TEXT WADO REFERENCE</title>
-            <programlisting><![CDATA[
-<linkHtml href="http://www.example.org/wado?requestType=WADO
+            <programlisting><![CDATA[<linkHtml href="http://www.example.org/wado?requestType=WADO
    &amp;studyUID=1.2.840.113619.2.62.994044785528.114289542805
    &amp;seriesUID=1.2.840.113619.2.62.994044785528.20060823223142485051
    &amp;objectUID=1.2.840.113619.2.62.994044785528.20060823.200608232232322.3
@@ -10715,8 +10720,7 @@ further evaluation with CT is recommended as underlying malignancy is not exclud
       </section>
       <section xml:id="sect_A.6.2" label="A.6.2" status="3">
         <title>Transcoded HL7 CDA Release 2 "Diagnostic Imaging Report"</title>
-        <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+        <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="CDA-DIR.xsl"?>
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12635,8 +12639,7 @@ and included by the legal authenticator.
               <example xml:id="example_A.8-1" label="A.8-1">
                 <title>Person Name Example</title>
                 <para>John Robert Morrison, Ph.D. "Morrison^John Robert^^^Ph.D." [One family name; two given names; no middle name; no prefix; one suffix] can be represented as a HL7 V3 Person Name (PN) in the following way:</para>
-                <programlisting><![CDATA[
-<name>
+                <programlisting><![CDATA[<name>
    		<given>John</given>
    		<given>Robert</given>
 		<family>Morrison</family>
@@ -12649,8 +12652,7 @@ and included by the legal authenticator.
               <para>The following HL7V3 PN use codes may be used to represent multi-part DICOM person names: ABC (Alphabetic), IDE (Ideographic), SYL (Phonetic).</para>
               <example xml:id="example_A.8-2" label="A.8-2">
                 <title>HL7 V3 Multi-Part Person Name Example</title>
-                <programlisting><![CDATA[
-<name use="ABC">
+                <programlisting><![CDATA[<name use="ABC">
    		<family>KIMURA</family>
    		<given>MICHIO</given>
 	</name>
@@ -12769,14 +12771,14 @@ and included by the legal authenticator.
     </section>
     <section xml:id="sect_B.3" label="B.3" status="2">
       <title>HL7 CDA Release 2 Diagnostic Imaging Report Target Structure</title>
-      <para>The structure of DICOM SR Template <olink targetdoc="PS3.16" targetptr="sect_TID_2006" xrefstyle="select: labelnumber"/> is similar to DICOM SR <olink targetdoc="PS3.16" targetptr="sect_TID_2000" xrefstyle="select: labelnumber title"/>. References to the SR Diagnostic Imaging Report Transformation Guide (PS 3.20, <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>) are used where the transformation of <olink targetdoc="PS3.16" targetptr="sect_TID_2006" xrefstyle="select: labelnumber"/> based reports is identical to that of basic diagnostic imaging reports. Details are outlined where new specific mapping requirements exist.</para>
-      <para>"Imaging Reports With Conditional Radiation Exposure and Protection Information"transformations that are identical to the "Diagnostic Imaging Report Transformation Guide" specification (PS 3.20, <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>):</para>
+      <para>The structure of DICOM SR Template <olink targetdoc="PS3.16" targetptr="sect_TID_2006" xrefstyle="select: labelnumber"/> is similar to DICOM SR <olink targetdoc="PS3.16" targetptr="sect_TID_2000" xrefstyle="select: labelnumber title"/>. References to the SR Diagnostic Imaging Report Transformation Guide (PS 3.20, <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>) are used where the transformation of <olink targetdoc="PS3.16" targetptr="sect_TID_2006" xrefstyle="select: labelnumber"/> based reports is identical to that of basic diagnostic imaging reports. Details are outlined where new specific mapping requirements exist.</para>
+      <para>"Imaging Reports With Conditional Radiation Exposure and Protection Information"transformations that are identical to the "Diagnostic Imaging Report Transformation Guide" specification (PS 3.20, <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>):</para>
       <itemizedlist>
         <listitem>
-          <para>Transformation of DICOM header module attributes as specified in <xref linkend="sect_A.5.1.1" xrefstyle="select: label title"/>  of PS 3.20, <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+          <para>Transformation of DICOM header module attributes as specified in <xref linkend="sect_A.5.1.1" xrefstyle="select: label title"/>  of PS 3.20, <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
         </listitem>
         <listitem>
-          <para>General transformation of DICOM sections as specified in <xref linkend="sect_A.5.1.2" xrefstyle="select: label title"/> of PS 3.20, <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+          <para>General transformation of DICOM sections as specified in <xref linkend="sect_A.5.1.2" xrefstyle="select: label title"/> of PS 3.20, <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
         </listitem>
         <listitem>
           <para>Transformation of "Structured Body (Level 3) " artifacts as specified in <xref linkend="sect_A.5.1.3" xrefstyle="select: label"/> of PS 3.20) for: "Coded Observations", "Text Observations", "Image References and Measurements within Section", "Quantity Measurement + DICOM Composite Object References" (Use the linear measurement SNOMED code mapping as specified in <xref linkend="table_A.5.1.3-4" xrefstyle="select: label"/>. Information on relevant DICOM objects referenced within the CDA target document's body and on the original DICOM SR document shall be included in the CDA DICOM object catalog section.).</para>
@@ -12785,7 +12787,7 @@ and included by the legal authenticator.
           <para>Transformation of "DICOM SR Observation Context" as specified in <xref linkend="sect_A.5.1.4" xrefstyle="select: label"/> of PS 3.20 and the following subsections of this document: "Subject Context" (<xref linkend="sect_A.5.1.4.1" xrefstyle="select: label"/>), "Procedure Context" (<xref linkend="sect_A.5.1.4.2" xrefstyle="select: label"/>) and "Observer Context" (<xref linkend="sect_A.5.1.4.3" xrefstyle="select: label"/>).</para>
         </listitem>
       </itemizedlist>
-      <para>PS 3.20, <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> also contains information on HL7 data types mapping in <xref linkend="sect_A.8" xrefstyle="select: label"/>.</para>
+      <para>PS 3.20, <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> also contains information on HL7 data types mapping in <xref linkend="sect_A.8" xrefstyle="select: label"/>.</para>
     </section>
     <section xml:id="sect_B.4" label="B.4" status="2">
       <title>TID 2006 "Imaging Report with Conditional Radiation Exposure and Protection Information" Specific Mapping Requirements</title>
@@ -12903,7 +12905,7 @@ and included by the legal authenticator.
       <para>
         <emphasis role="bold">Reference to Composite Objects in <olink targetdoc="PS3.16" targetptr="sect_TID_2007" xrefstyle="select: labelnumber title"/>:</emphasis>
       </para>
-      <para>References to Composite Objects are used for DICOM objects that are not DICOM Images or Waveforms, for instance to SR Documents or to HL7 Structured Documents. Composite object reference observations are modeled as CDA section components and shall be encoded as section entries. The mapping of SopInstance references for composite objects is identical to image SopInstance references (please refer to PS 3.20 <xref linkend="chapter_A" xrefstyle="template: Annex %n %t"/> for detailed information).</para>
+      <para>References to Composite Objects are used for DICOM objects that are not DICOM Images or Waveforms, for instance to SR Documents or to HL7 Structured Documents. Composite object reference observations are modeled as CDA section components and shall be encoded as section entries. The mapping of SopInstance references for composite objects is identical to image SopInstance references (please refer to PS 3.20 <xref linkend="chapter_A" xrefstyle="template:Annex %n %t"/> for detailed information).</para>
       <para>
         <figure xml:id="figure_B.4-1" label="B.4-1" pgwide="1">
           <title>Composite Object References</title>

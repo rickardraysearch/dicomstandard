@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.1" label="PS3.1" version="5.0">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2014c - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2015a - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1114,7 +1114,7 @@
       standard). Conformance requirements and conformance claims are therefore referenced to the
       name and/or identifier of the feature, and never referenced to an edition of the Standard.
       Generally, the only appropriate reference to a particular edition of the Standard is to
-      identify a retired feature (see Introduction to this Part).</para>
+      identify a retired feature (see <xref linkend="sect_Retirement" xrefstyle="template:%t"/> in the Introduction to this Part).</para>
     <para>The following citation form is preferred for general references to the Standard, without
       specification of date of edition, when specific conformance requirements are not
       invoked:</para>
@@ -1126,26 +1126,25 @@
       <itemizedlist>
         <listitem>
           <para>
-            <quote>… conformant to the DICOM &lt;name&gt; SOP Class, as specified in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:
-              DICOM Service Class Specifications.</quote>
+            <quote>… conformant to the DICOM &lt;name&gt; SOP Class, as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:
+              Service Class Specifications.</quote>
           </para>
         </listitem>
         <listitem>
           <para>
-            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile, as specified in <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>:
-          DICOM Media Storage Application Profiles.</quote>
+            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile, as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>:
+          Media Storage Application Profiles.</quote>
           </para>
         </listitem>
         <listitem>
           <para>
-            <quote>… conformant to the DICOM &lt;name&gt; Profile, as specified in <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>: DICOM Security and
+            <quote>… conformant to the DICOM &lt;name&gt; Profile, as specified in DICOM <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>: Security and
             System Management Profiles.</quote>
           </para>
         </listitem>
         <listitem>
           <para>
-            <quote>… conformant to WADO, as specified in <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Access to DICOM Persistent
-              Objects.</quote>
+            <quote>… conformant to WADO, as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
           </para>
         </listitem>
       </itemizedlist>
@@ -1157,18 +1156,18 @@
       <listitem>
         <para>
           <quote>… SOP Instances in accordance with the &lt;name&gt; Information Object Definition, as
-        specified in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>: DICOM Information Object Definitions.</quote>
+            specified in DICOM <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>: Information Object Definitions.</quote>
         </para>
       </listitem>
       <listitem>
         <para>
           <quote>… Structured Reporting SOP Instances using DICOM Template ID &lt;number and name&gt;, as
-        specified in <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>: DICOM Content Mapping Resource.</quote>
+            specified in DICOM <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>: Content Mapping Resource.</quote>
         </para>
       </listitem>
       <listitem>
         <para>
-          <quote>… using the &lt;name&gt; Transfer Syntax, as specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>: DICOM Data Structure and
+          <quote>… using the &lt;name&gt; Transfer Syntax, as specified in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>: Data Structure and
         Semantics.</quote>
         </para>
       </listitem>

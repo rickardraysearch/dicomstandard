@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2014c - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2015a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -79,7 +79,16 @@
   <chapter label="2" xml:id="chapter_2">
     <title>Normative References</title>
     <para>The following standards contain provisions, which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-    <para>ISO/IEC Directives 1989 Part 3 - Drafting and presentation of International Standards.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>ISO 7498-1 Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
     <para>ISO 8649:1988 Information Processing Systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE).</para>
     <para>ISO 8822:1988 Information Processing Systems - Open Systems Interconnection - Connection oriented presentation service definition.</para>
@@ -818,7 +827,7 @@
           <para>conform to the minimum conformance requirements defined in this section;</para>
         </listitem>
         <listitem>
-          <para>provide with the implementation a Conformance Statement structured according to the rules and policies in this Part including <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>;</para>
+          <para>provide with the implementation a Conformance Statement structured according to the rules and policies in this Part including <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>;</para>
         </listitem>
         <listitem>
           <para>conform to at least one Standard Application Profile as defined in <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>;</para>
@@ -3135,7 +3144,7 @@
           </tr>
         </tbody>
       </table>
-      <para>A table of Supported Media Storage Application Profiles (with roles) is provided, organized in 3 categories:</para>
+      <para>A table of Supported Media Storage Application Profiles (with roles) is provided, organized in categories:</para>
       <itemizedlist>
         <listitem>
           <para>Compact Disk - Recordable</para>
@@ -3145,6 +3154,18 @@
         </listitem>
         <listitem>
           <para>DVD</para>
+        </listitem>
+        <listitem>
+          <para>BD</para>
+        </listitem>
+        <listitem>
+          <para>USB and Flash Memory</para>
+        </listitem>
+        <listitem>
+          <para>Email</para>
+        </listitem>
+        <listitem>
+          <para>Other Media</para>
         </listitem>
       </itemizedlist>
       <table frame="box" label="A.1-3" rules="all" xml:id="table_A.1-3">
@@ -3164,11 +3185,9 @@
         </thead>
         <tbody>
           <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
+            <td align="left" colspan="3" rowspan="1">
               <para><emphasis role="bold">Compact Disk - Recordable</emphasis></para>
             </td>
-            <td align="center" colspan="1" rowspan="1"/>
-            <td align="center" colspan="1" rowspan="1"/>
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
@@ -3182,11 +3201,9 @@
             </td>
           </tr>
           <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
+            <td align="left" colspan="3" rowspan="1">
               <para><emphasis role="bold">Magneto-Optical Disk</emphasis></para>
             </td>
-            <td align="center" colspan="1" rowspan="1"/>
-            <td align="center" colspan="1" rowspan="1"/>
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
@@ -3200,11 +3217,9 @@
             </td>
           </tr>
           <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
+            <td align="left" colspan="3" rowspan="1">
               <para><emphasis role="bold">DVD</emphasis></para>
             </td>
-            <td align="center" colspan="1" rowspan="1"/>
-            <td align="center" colspan="1" rowspan="1"/>
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
@@ -3215,6 +3230,65 @@
             </td>
             <td align="center" colspan="1" rowspan="1">
               <para>Yes</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="3" rowspan="1">
+              <para><emphasis role="bold">BD</emphasis></para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>General Purpose BD Interchange with MPEG-4 AVC/H.264 BD-Compatible HiP@Level4.1</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="3" rowspan="1">
+              <para><emphasis role="bold">USB and Flash Memory</emphasis></para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>General Purpose USB Media Interchange with JPEG</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="3" rowspan="1">
+              <para><emphasis role="bold">Email</emphasis></para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>General Purpose MIME Interchange</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>No</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para>General Purpose ZIP Email</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>Yes</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para>No</para>
             </td>
           </tr>
         </tbody>
@@ -48881,7 +48955,7 @@
               </thead>
               <tbody>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">STUDY Level</emphasis>
                     </para>
@@ -49064,7 +49138,7 @@
                   </td>
                 </tr>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">Common to all query levels</emphasis>
                     </para>
@@ -49198,7 +49272,7 @@
               </thead>
               <tbody>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">SERIES Level</emphasis>
                     </para>
@@ -49315,7 +49389,7 @@
                   </td>
                 </tr>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">Common to all query levels</emphasis>
                     </para>
@@ -49438,7 +49512,7 @@
               </thead>
               <tbody>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">SERIES Level</emphasis>
                     </para>
@@ -49555,7 +49629,7 @@
                   </td>
                 </tr>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">COMPOSITE INSTANCE Level</emphasis>
                     </para>
@@ -49639,7 +49713,7 @@
                   </td>
                 </tr>
                 <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
+                  <td align="left" colspan="3" rowspan="1">
                     <para>
                       <emphasis role="bold">Common to all query levels</emphasis>
                     </para>

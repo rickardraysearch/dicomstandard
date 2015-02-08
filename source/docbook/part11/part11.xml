@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.11" version="5.0" xml:id="PS3.11">
   <title>PS3.11</title>
-  <subtitle>DICOM PS3.11 2014c - Media Storage Application Profiles</subtitle>
+  <subtitle>DICOM PS3.11 2015a - Media Storage Application Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -85,7 +85,16 @@
   <chapter xml:id="chapter_2" label="2" status="1">
     <title>Normative References</title>
     <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-    <para>ISO/IEC Directives, 1989 part 3 - Drafting and presentation of international standards.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
     <para>ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
     <para>ISO 8859, Information Processing - 8-bit single-byte coded graphic character sets - part 1: Latin Alphabet No. 1.</para>
@@ -490,7 +499,7 @@
   </chapter>
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
-    <para>Words are capitalized in this document to help the reader understand that these words have been previously defined in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> of this document and are to be interpreted with that meaning.</para>
+    <para>Words are capitalized in this document to help the reader understand that these words have been previously defined in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> of this document and are to be interpreted with that meaning.</para>
   </chapter>
   <chapter xml:id="chapter_6" label="6" status="1">
     <title>Purpose of An Application Profile</title>
@@ -1165,7 +1174,7 @@
     <title>1024 X-Ray Angiographic Application Profile (Normative)</title>
     <section xml:id="sect_B.1" label="B.1" status="2">
       <title>Class and Profile Identification</title>
-      <para>This Annex defines a class of Application Profiles for 1024 X-Ray Angiographic clinical applications. The identifier for this class shall be STD-XA1K. It is the intent of these profiles to be backward compatible with the Basic Cardiac X-Ray Angiographic Application Profile (STD-XABC-CD) in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+      <para>This Annex defines a class of Application Profiles for 1024 X-Ray Angiographic clinical applications. The identifier for this class shall be STD-XA1K. It is the intent of these profiles to be backward compatible with the Basic Cardiac X-Ray Angiographic Application Profile (STD-XABC-CD) in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
       <para>The specific Application Profiles in this class are shown in the <xref linkend="table_B.1-1" xrefstyle="select: label"/>.</para>
       <table frame="box" rules="all" xml:id="table_B.1-1" label="B.1-1">
         <caption>1024 X-Ray Angiographic Profiles</caption>
@@ -1689,7 +1698,7 @@
           <note>
             <orderedlist>
               <listitem>
-                <para>It is recommended that the Icon Images be encoding using VR OB encoding. The use of OW, allowed by the STD-XABC-CD Basic Cardiac profile defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>, is deprecated, and may be retired in future versions of the standard.</para>
+                <para>It is recommended that the Icon Images be encoding using VR OB encoding. The use of OW, allowed by the STD-XABC-CD Basic Cardiac profile defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, is deprecated, and may be retired in future versions of the standard.</para>
               </listitem>
               <listitem>
                 <para>This icon size is larger than that recommended in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> because the 64x64 icon would not be clinically useful for identifying and selecting X-Ray angiographic images.</para>
@@ -2301,7 +2310,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>
-                  <olink targetdoc="PS3.12" targetptr="chapter_Q" xrefstyle="template: Annex %n “%t”"/>
+                  <olink targetdoc="PS3.12" targetptr="chapter_Q" xrefstyle="template:Annex %n &#8220;%t&#8221;"/>
                 </para>
               </td>
             </tr>
@@ -2317,7 +2326,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>
-                  <olink targetdoc="PS3.12" targetptr="chapter_F" xrefstyle="template: Annex %n “%t”"/>
+                  <olink targetdoc="PS3.12" targetptr="chapter_F" xrefstyle="template:Annex %n &#8220;%t&#8221;"/>
                 </para>
               </td>
             </tr>
@@ -2333,7 +2342,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>
-                  <olink targetdoc="PS3.12" targetptr="chapter_J" xrefstyle="template: Annex %n “%t”"/>
+                  <olink targetdoc="PS3.12" targetptr="chapter_J" xrefstyle="template:Annex %n &#8220;%t&#8221;"/>
                 </para>
               </td>
             </tr>
@@ -2349,7 +2358,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para>
-                  <olink targetdoc="PS3.12" targetptr="chapter_P" xrefstyle="template: Annex %n “%t”"/>
+                  <olink targetdoc="PS3.12" targetptr="chapter_P" xrefstyle="template:Annex %n &#8220;%t&#8221;"/>
                 </para>
               </td>
             </tr>
@@ -3184,7 +3193,7 @@
         </note>
         <section xml:id="sect_E.3.3.1" label="E.3.3.1" status="4">
           <title>Additional Keys</title>
-          <para>File Set Creators and Updaters are required to generate the mandatory elements specified in <olink targetdoc="PS3.3" targetptr="chapter_F" xrefstyle="select: docname label"/>. <xref linkend="table_E.3-2" xrefstyle="select: label"/> specifies the additional associated keys. At each directory record level other additional data elements can be added, but it is not required that File Set Readers be able to use them as keys. Refer to the Basic Directory IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+          <para>File Set Creators and Updaters are required to generate the mandatory elements specified in <olink targetdoc="PS3.3" targetptr="chapter_F" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.3"/>.</para>
         </section>
         <section xml:id="sect_E.3.3.2" label="E.3.3.2" status="4">
           <title>Localizer Related Attributes</title>

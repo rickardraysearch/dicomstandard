@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2014c - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2015a - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -109,6 +109,16 @@
   <chapter xml:id="chapter_2" label="2" status="1">
     <title>Normative References</title>
     <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>IETF RFC 2045,2046,2048 MIME Multipurpose Internet Mail Extension</para>
     <para>IETF RFC 3240 application/dicom MIME Sub-type Registration</para>
     <para>IETF RFC 3986 Uniform Resource Identifiers (URI) : Generic Syntax</para>
@@ -469,7 +479,7 @@
   </chapter>
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
-    <para>Terms listed in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> Definitions are capitalized throughout the document.</para>
+    <para>Terms listed in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> Definitions are capitalized throughout the document.</para>
   </chapter>
   <chapter xml:id="chapter_6" label="6" status="1">
     <title>Application Hosting Overview</title>
@@ -524,16 +534,16 @@
         <para>When the Hosting System no longer needs the Hosted Application, it may use the API to request that the Hosted Application exit.</para>
       </listitem>
     </orderedlist>
-    <para><xref linkend="chapter_7" xrefstyle="template: Section %n"/> describes in greater detail the Hosted Application Life Cycle.</para>
-    <para><xref linkend="chapter_8" xrefstyle="template: Section %n"/> describes the base interfaces between the Hosting System and the Hosted Application.</para>
-    <para><xref linkend="chapter_9" xrefstyle="template: Section %n"/> describes the custom data types and data structures used by the interfaces.</para>
-    <para><xref linkend="chapter_10" xrefstyle="template: Section %n"/> describes the general form of models used by the model-based interfaces, and the conventions used in defining those models. The models defined by this Standard are described in the Annexes.</para>
+    <para><xref linkend="chapter_7" xrefstyle="template:Section %n"/> describes in greater detail the Hosted Application Life Cycle.</para>
+    <para><xref linkend="chapter_8" xrefstyle="template:Section %n"/> describes the base interfaces between the Hosting System and the Hosted Application.</para>
+    <para><xref linkend="chapter_9" xrefstyle="template:Section %n"/> describes the custom data types and data structures used by the interfaces.</para>
+    <para><xref linkend="chapter_10" xrefstyle="template:Section %n"/> describes the general form of models used by the model-based interfaces, and the conventions used in defining those models. The models defined by this Standard are described in the Annexes.</para>
   </chapter>
   <chapter xml:id="chapter_7" label="7" status="1">
     <title>Hosted Application Life Cycle</title>
     <section xml:id="sect_7.1" label="7.1" status="2">
       <title>Initialization</title>
-      <para>The Hosting System initializes a Hosted Application by issuing a run command or its equivalent (e.g exec function in the C language) with command line parameters to specify the end point references (URLs) to be used for the interfaces. One end point reference is used by the Hosted Application to access the Host interface provided by the Hosting System. The second end point reference is where the Hosting System will look for the Application interface provided by the Hosted Application. The Host and Application interfaces are described in <xref linkend="chapter_8" xrefstyle="template: Section %n"/>. If issued from a command prompt or shell, the run command may appear as:</para>
+      <para>The Hosting System initializes a Hosted Application by issuing a run command or its equivalent (e.g exec function in the C language) with command line parameters to specify the end point references (URLs) to be used for the interfaces. One end point reference is used by the Hosted Application to access the Host interface provided by the Hosting System. The second end point reference is where the Hosting System will look for the Application interface provided by the Hosted Application. The Host and Application interfaces are described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>. If issued from a command prompt or shell, the run command may appear as:</para>
       <para><emphasis role="italic">app</emphasis>--hostURL
   <emphasis role="italic">url1</emphasis>--applicationURL
   <emphasis role="italic">url2</emphasis></para>
@@ -803,7 +813,7 @@
     </note>
     <para>Minor (backward compatible) versions of the interfaces may be reflected in the values of the "targetNamespace" XML Attribute of any new "schema" XML Element where new input or output data types are defined in the WSDL specifications, and/or in the values of the "name" XML Attributes of the "portType" and "service" XML Elements where new messages and operations are associated as new services in the WSDL specifications of the interfaces. To maintain backward compatibility, the names of existing elements, messages, and operations in the WSDL specification of the interfaces remain the same.</para>
     <para>These methods utilize a set of basic data types and more complex data structures to communicate parameters, which are defined using XML Schemas. Later sections of this document provide more detailed descriptions of the interfaces and data structures, along with sequence diagrams illustrating how the interfaces are used.</para>
-    <para>The actual WSDL code and XML Schemas that specify this interface are defined in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>.</para>
+    <para>The actual WSDL code and XML Schemas that specify this interface are defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
     <note>
       <orderedlist>
         <listitem>
@@ -927,7 +937,7 @@
         </figure>
       </para>
       <para>The advantage of using the model-based methods is that the recipient need not know how to parse the data formats, but instead can use commonly available tools for manipulating XML Infosets to extract data from the models.</para>
-      <para>The model-based interfaces can work with a variety of models. Particular models are identified by a UID. The models can either be an abstraction of the data, or can be a model of some native format. Models defined by the DICOM Standard are described in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>. Models are described as XML Infosets, even though the original data might never be actually represented in XML form. The source providing the data handles the mapping from the models back to the original data format.</para>
+      <para>The model-based interfaces can work with a variety of models. Particular models are identified by a UID. The models can either be an abstraction of the data, or can be a model of some native format. Models defined by the DICOM Standard are described in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. Models are described as XML Infosets, even though the original data might never be actually represented in XML form. The source providing the data handles the mapping from the models back to the original data format.</para>
       <para>Abstract models allow a recipient to work with data without regard to what its native form is. For example, data from a variety of image formats, such as DICOM, TIFF, JPEG, NIfTI, or Analyze, could be included in an abstract image model. The recipient can then work with the data even though the recipient has no knowledge of how the data was natively represented. Abstract models may have been derived from data referenced in multiple ObjectDescriptors (e.g., multiple CT slices combined into a single volume).</para>
       <para>Abstract models generally do not include the full richness of data that is available in native representations. For example, an abstract image model derived from DICOM data normally would include references to 'cooked' pixel data and its spatial organization, but might not include many of the modality-specific Attributes. To allow recipients to access such details the supplier of an abstract model can provide references to the ObjectDescriptors, in the form of UUIDs, from which that abstract model was derived. The recipient may gain access to any attribute of the original data formats through the source ObjectDescriptors.</para>
       <para>The sequence diagram in <xref linkend="figure_8.3-2" xrefstyle="select: label"/> illustrates one potential exchange using the model-based methods. It also illustrates the Hosted Application returning partial outputs, one potential way a Hosted Application might use the getOutputLocation() method, and potential uses of the releaseModel() and releaseData() methods.</para>
@@ -954,7 +964,7 @@
         </figure>
       </para>
       <para>Hosting Systems shall support both the file-based and model-based interfaces, both as a data source as well as a data recipient.</para>
-      <para>Hosted Applications shall support at least one of the file-based or model-based interfaces, as either a data source or as a data recipient, as needed by the Hosted Application. If a Hosted Application supports the model-based interfaces, it shall support at least one of the models defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>. Hosted Applications may choose to implement only those portions of those interfaces that the Hosted Application actually uses; however, all interface methods that a Hosting System may call must be available for the Hosting System to call, even if the Hosted Application does not do anything but return appropriately.</para>
+      <para>Hosted Applications shall support at least one of the file-based or model-based interfaces, as either a data source or as a data recipient, as needed by the Hosted Application. If a Hosted Application supports the model-based interfaces, it shall support at least one of the models defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. Hosted Applications may choose to implement only those portions of those interfaces that the Hosted Application actually uses; however, all interface methods that a Hosting System may call must be available for the Hosting System to call, even if the Hosted Application does not do anything but return appropriately.</para>
       <para>The following sections describe the methods of the DataExchange interface.</para>
       <section xml:id="sect_8.3.1" label="8.3.1" status="3">
         <title>notifyDataAvailable(data : AvailableData, lastData : boolean) : boolean</title>
@@ -1016,7 +1026,7 @@
         <para>The UUIDs passed in the model array shall be chosen from those returned by one or more getAsModels() method calls.</para>
         <para>The results of the query are returned by the method as XML Infosets, encoded in XML, returned as a byte array encoded in the form negotiated during the getAsModel() call.. Each result from a particular model UUID is returned as a QueryResultInfoset element in the returned array for each xpath string. In other words, the number of QueryResultInfoset structures returned is the number of UUIDs in the model array times the number of XPath queries strings in the xpath array.</para>
         <note>
-          <para>This method is principally used when the infoset type is not string based, for example a "application\fastinfoset". If called on a model using the "text/xml" infoset type, a conversion from a byte array to a string would be needed.</para>
+          <para>This method is principally used when the infoset type is not string based, for example a "application/fastinfoset". If called on a model using the "text/xml" infoset type, a conversion from a byte array to a string would be needed.</para>
         </note>
         <para>This method shall only be called if the Hosted Application is at the INPROGRESS or COMPLETED states. A Hosting System may also call this method when the Hosted Application is in the SUSPENDED state.</para>
       </section>
@@ -1061,7 +1071,7 @@
             <para>MimeType : MimeType - the MIME content type of this particular data object, in its most natural form available from the source. The most natural form is typically the form in which the source maintains the data in its database, for example a DICOM file.</para>
           </listitem>
           <listitem>
-            <para>ClassUID : UID - the UID that represents the class of this data object in the form described by mimeType. For objects whose mimeType refers to a data exchange model such as those defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>, this is the UID of that model. For objects whose mimeType is application:dicom, this is the SOP Class UID of the DICOM object. This may be empty for those objects whose MIME content types have no additional classes.</para>
+            <para>ClassUID : UID - the UID that represents the class of this data object in the form described by mimeType. For objects whose mimeType refers to a data exchange model such as those defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, this is the UID of that model. For objects whose mimeType is application:dicom, this is the SOP Class UID of the DICOM object. This may be empty for those objects whose MIME content types have no additional classes.</para>
           </listitem>
           <listitem>
             <para>TransferSyntaxUID : UID - the UID that represents the Transfer Syntax of this data object in the form described by mimeType. This may be empty for those objects of a MIME content type where Transfer Syntax has no meaning.</para>
@@ -1366,11 +1376,11 @@
   </chapter>
   <chapter xml:id="chapter_10" label="10" status="1">
     <title>Data Exchange Model Conventions</title>
-    <para>Models that can be used by the model-based DataExchange interface methods are defined in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>. These models are defined in the form of XML Schemas written in Relax NG Compact form of DSDL as specified by ISO/IEC 19757.</para>
+    <para>Models that can be used by the model-based DataExchange interface methods are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. These models are defined in the form of XML Schemas written in Relax NG Compact form of DSDL as specified by ISO/IEC 19757.</para>
     <note>
       <para>An implementer may translate the Relax NG Compact form to other forms for use within their implementation as long as the exchanged XML Infosets will validate against the schema specified by the standard. For example, a particular implementation may internally utilize a schema with stronger validation rules (e.g., using Schematron rules as specified in ISO/IEC 19757, or using XSDL with assertion rules) as long as the XML produced for exchange over the interface can be parsed with the schema specified in the standard, and that XML from well-formed DICOM objects produced by the schema specified in the standard can still be utilized by the implementation's internal schema.</para>
     </note>
-    <para>Actual instances of the models are XML Infosets. <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> follows the following conventions in describing models.</para>
+    <para>Actual instances of the models are XML Infosets. <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> follows the following conventions in describing models.</para>
     <note>
       <orderedlist>
         <listitem>
@@ -2192,8 +2202,7 @@
       <section xml:id="sect_A.1.6" label="A.1.6" status="3">
         <title>Schema</title>
         <para>The Normative version of the XML Schema for the Native DICOM Model follows:</para>
-        <programlisting><![CDATA[
-default namespace="http://dicom.nema.org/PS3.19/models/NativeDICOM"
+        <programlisting><![CDATA[default namespace="http://dicom.nema.org/PS3.19/models/NativeDICOM"
 
 # This schema was created as an intermediary, a means of describing
 # native binary encoded DICOM objects as XML Infosets, thus allowing  
@@ -2247,7 +2256,7 @@ Keyword = attribute keyword { xsd:token }
 Tag = attribute tag { xsd:string{ minLength="8" maxLength="8" pattern="[0-9A-F]{8}" } } 
 VR = attribute vr { "AE" | "AS" | "AT"| "CS" | "DA" | "DS" | "DT" | "FL" | "FD" 
                     | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OW" | "PN" | "SH" | "SL" 
-                    | "SQ" | "SS" | "ST" | "TM" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" }
+                    | "SQ" | "SS" | "ST" | "TM" | "UC" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" }
 PrivateCreator = attribute privateCreator{ xsd:string }
 UUID = attribute uuid { xsd:string }
 URI = attribute uri { xsd:anyURI }
@@ -2257,7 +2266,7 @@ Number = attribute number { xsd:positiveInteger }
       <section xml:id="sect_A.1.7" label="A.1.7" status="3">
         <title>Examples</title>
         <para>Here is an example XPath query to extract the code meaning of the first item in the View Code Sequence:</para>
-        <para>/NativeDicomModel/DicomAttribute[@keyword="ViewCodeSequence"]/Item[@number=1]//DicomAttribute[@keyword="CodeMeaning"]/Value[@number=1]</para>
+        <para>/NativeDicomModel/DicomAttribute[@keyword="ViewCodeSequence"]/Item[@number=1]/&#x200b;DicomAttribute[@keyword="CodeMeaning"]/Value[@number=1]</para>
       </section>
     </section>
     <section xml:id="sect_A.2" label="A.2" status="2">
@@ -3219,8 +3228,7 @@ Number = attribute number { xsd:positiveInteger }
       <section xml:id="sect_A.2.6" label="A.2.6" status="3">
         <title>Schema</title>
         <para>The Relax NG Compact schema for the Abstract Multi-Dimensional Image Model follows:</para>
-        <programlisting><![CDATA[
-default namespace = "http://dicom.nema.org/PS3.19/models/AbstractImage"
+        <programlisting><![CDATA[default namespace = "http://dicom.nema.org/PS3.19/models/AbstractImage"
 
 start = AbstractImageDataSet
 AbstractImageDataSet = 
@@ -3428,8 +3436,7 @@ CodedTerm =
       <section xml:id="sect_B.1.1" label="B.1.1" status="3">
         <title>WSDL Definition of the Interface</title>
         <para>The following is the content of ApplicationService-20100825.wsdl:</para>
-        <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+        <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions name="ApplicationService-20100825"
 targetNamespace="http://dicom.nema.org/PS3.19/ApplicationService-20100825"
 xmlns:tns="http://dicom.nema.org/PS3.19/ApplicationService-20100825"
@@ -3720,8 +3727,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
         <section xml:id="sect_B.1.2.1" label="B.1.2.1" status="4">
           <title>Primary Definitions</title>
           <para>The following is the content of ApplicationService-20100825.xsd</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://dicom.nema.org/PS3.19/ApplicationService-20100825"
 elementFormDefault="qualified"
 targetNamespace="http://dicom.nema.org/PS3.19/ApplicationService-20100825"
@@ -4161,8 +4167,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
         <section xml:id="sect_B.1.2.2" label="B.1.2.2" status="4">
           <title>Referenced Definitions</title>
           <para>The following is the content of XPathNodeType.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Xml.XPath"
 elementFormDefault="qualified"
 targetNamespace="http://schemas.datacontract.org/2004/07/System.Xml.XPath"
@@ -4185,8 +4190,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>
 ]]></programlisting>
           <para>The following is the content of Types.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/"
 attributeFormDefault="qualified" elementFormDefault="qualified"
 targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"
@@ -4233,8 +4237,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>
 ]]></programlisting>
           <para>The following is the content of ArrayOfString.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
 elementFormDefault="qualified"
 targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
@@ -4256,8 +4259,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <section xml:id="sect_B.2.1" label="B.2.1" status="3">
         <title>WSDL Definition of the Interface</title>
         <para>The following is the content of HostService-20100825.wsdl:</para>
-        <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+        <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions name="HostService-20100825"
 targetNamespace="http://dicom.nema.org/PS3.19/HostService-20100825"
 xmlns:tns="http://dicom.nema.org/PS3.19/HostService-20100825"
@@ -4596,8 +4598,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
         <section xml:id="sect_B.2.2.1" label="B.2.2.1" status="4">
           <title>Primary Definitions</title>
           <para>The following is the the contents of HostService-20100825.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://dicom.nema.org/PS3.19/HostService-20100825"
 elementFormDefault="qualified"
 targetNamespace="http://dicom.nema.org/PS3.19/HostService-20100825"
@@ -5098,8 +5099,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
         <section xml:id="sect_B.2.2.2" label="B.2.2.2" status="4">
           <title>Referenced Definitions</title>
           <para>The following is the content of XPathNodeType.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Xml.XPath"
 elementFormDefault="qualified"
 targetNamespace="http://schemas.datacontract.org/2004/07/System.Xml.XPath"
@@ -5122,8 +5122,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>
 ]]></programlisting>
           <para>The following is the content of Types.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/"
 attributeFormDefault="qualified" elementFormDefault="qualified"
 targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"
@@ -5170,8 +5169,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>
 ]]></programlisting>
           <para>The following is the content of ArrayOfString.xsd:</para>
-          <programlisting><![CDATA[
-<?xml version="1.0" encoding="utf-8"?>
+          <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
 elementFormDefault="qualified"
 targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"

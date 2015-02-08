@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2014c - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2015a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -107,7 +107,16 @@
     <section xml:id="sect_2.1" label="2.1" status="2">
       <title>Normative References</title>
       <para>The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-      <para>ISO/IEC Directives, 1989 Part 3 - Drafting and presentation of International Standards.</para>
+      <bibliography>
+        <biblioentry xml:id="biblio_ISODirectives3">
+          <abbrev>ISO/IEC Directives, Part 3</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>1989</date>
+          <title>Drafting and presentation of International Standards</title>
+        </biblioentry>
+      </bibliography>
       <para>ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
       <para>ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
       <para>ISO/TR 8509, Information Processing Systems - Open Systems Interconnection - Service Conventions</para>
@@ -1392,7 +1401,7 @@
       <note>
         <orderedlist>
           <listitem>
-            <para>An example of the content of the DICOMDIR File may be found in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
+            <para>An example of the content of the DICOMDIR File may be found in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
           </listitem>
           <listitem>
             <para>If one chooses to map the origin of a File-set to a specific directory node in a specific Media Format, the File IDs, including the DICOMDIR File IDs, would be relative to this directory node path name.</para>
@@ -1428,10 +1437,10 @@
         <para>have a Conformance Statement based on a <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> Application Profile in accordance with the framework defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>;</para>
       </listitem>
       <listitem>
-        <para>meet the requirements of the DICOM File Format as specified in <xref linkend="chapter_7" xrefstyle="template: Section %n"/>;</para>
+        <para>meet the requirements of the DICOM File Format as specified in <xref linkend="chapter_7" xrefstyle="template:Section %n"/>;</para>
       </listitem>
       <listitem>
-        <para>support the DICOM File Service as specified in <xref linkend="chapter_8" xrefstyle="template: Section %n"/>, in one or more of the roles identified in <xref linkend="sect_8.3" xrefstyle="select: label"/>;</para>
+        <para>support the DICOM File Service as specified in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>, in one or more of the roles identified in <xref linkend="sect_8.3" xrefstyle="select: label"/>;</para>
       </listitem>
       <listitem>
         <para>perform the Media Operations defined in <xref linkend="table_8.3-1" xrefstyle="select: label"/> according to the role supported;</para>

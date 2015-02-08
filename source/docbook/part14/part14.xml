@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="5.0" xml:id="PS3.14" label="PS3.14">
   <title>PS3.14</title>
-  <subtitle>DICOM PS3.14 2014c - Grayscale Standard Display Function</subtitle>
+  <subtitle>DICOM PS3.14 2015a - Grayscale Standard Display Function</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -255,7 +255,7 @@
   <chapter xml:id="chapter_5" label="5" status="1">
     <title>Conventions</title>
     <para>The following conventions are used in PS3.14:</para>
-    <para>The terminology defined in <xref linkend="chapter_3" xrefstyle="template: Section %n"/> above is capitalized throughout PS3.14.</para>
+    <para>The terminology defined in <xref linkend="chapter_3" xrefstyle="template:Section %n"/> above is capitalized throughout PS3.14.</para>
   </chapter>
   <chapter xml:id="chapter_6" label="6" status="1">
     <title>Overview</title>
@@ -292,20 +292,20 @@
   <emphasis role="italic">a priori</emphasis>how P-Values are transformed to viewed Luminance values by a Standardized Display System. In essence, defining the Grayscale Standard Display Function fixes the "units" for the P-Values output from the Presentation LUT and used as Digital Driving Levels to Standardized Display Systems.</para>
     <para>A second objective of PS3.14 is to select a Display Function that provides some level of similarity in grayscale perception or basic appearance for a given image between Display Systems of different Luminance and that facilitates good use of the available Digital Driving Levels of a Display System. While many different functions could serve the primary objective, this Grayscale Standard Display Function was chosen to meet the second objective. With such a function, P-Values are approximately linearly related to human perceptual response. Similarity does not guarantee equal information content. Display Systems with a wider Luminance Range and/or higher Luminance will be capable of presenting more just-noticeable Luminance differences to an observer. Similarity also does not imply strict perceptual linearity, since perception is dependent on image content and on the viewer. In order to achieve strict perceptual linearity, applications would need to adjust the presentation of
   images to match user expectations through the other constructs defined in the DICOM Standard (e.g., VOI and Presentation LUT). Without a defined Display Function, such adjustments on the wide variety of Display Systems encountered on a network would be difficult.</para>
-    <para>The choice of the function is based on several ideas that are discussed further in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>.</para>
-    <para><xref linkend="chapter_B" xrefstyle="template: Annex %n"/> contains the Grayscale Standard Display Function in tabular form.</para>
-    <para>Informative <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> provides an example procedure for comparing mathematically the shape of the actual Display Function with the Grayscale Standard Display Function and for quantifying how well the actual discrete Luminance intervals match those of the Grayscale Standard Display Function.</para>
+    <para>The choice of the function is based on several ideas that are discussed further in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
+    <para><xref linkend="chapter_B" xrefstyle="template:Annex %n"/> contains the Grayscale Standard Display Function in tabular form.</para>
+    <para>Informative <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> provides an example procedure for comparing mathematically the shape of the actual Display Function with the Grayscale Standard Display Function and for quantifying how well the actual discrete Luminance intervals match those of the Grayscale Standard Display Function.</para>
     <para>Display Systems often will have Characteristic Curves different from the Grayscale Standard Display Function. These devices may contain means for incorporating externally defined transformations that make the devices conform with the Grayscale Standard Display Function. PS3.14 provides examples of test patterns for Display Systems with which their behavior can be measured and the approximation to the Grayscale Standard Display Function evaluated (see Informative <xref linkend="sect_D.1" xrefstyle="select: label"/>, <xref linkend="sect_D.2" xrefstyle="select: label"/> and <xref linkend="sect_D.3" xrefstyle="select: label"/>).</para>
   </chapter>
   <chapter xml:id="chapter_7" label="7" status="1">
     <title>The Grayscale Standard Display Function</title>
-    <para>As explained in greater detail in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>, the Grayscale Standard Display Function is based on human Contrast Sensitivity. Human Contrast Sensitivity is distinctly non-linear within the Luminance Range of the Grayscale Standard Display Function . The human eye is relatively less sensitive in the dark areas of an image than it is in the bright areas of an image. This variation in sensitivity makes it much easier to see small relative changes in Luminance in the bright areas of the image than in the dark areas of the image. A Display Function that adjusts the brightness such that equal changes in P-Values will result in the same level of perceptibility at all driving levels is "perceptually linearized". The Grayscale Standard Display Function incorporates the notion of perceptual linearization without making it an explicit objective of PS3.14.</para>
-    <para>The employed data for Contrast Sensitivity are derived from Barten's model of the human visual system (Ref. 1, 2 and <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>). Specifically, the Grayscale Standard Display Function refers to Contrast Sensitivity for the Standard Target consisting of a 2-deg x 2-deg square filled with a horizontal or vertical grating with sinusoidal modulation of 4 cycles per degree. The square is placed in a uniform background of Luminance equal to the mean Luminance L of the Target. The Contrast Sensitivity is defined by the Threshold Modulation at which the grating becomes just visible to the average human observer. The Luminance modulation represents the Just-Noticeable Difference (JND) for the Target at the Luminance L.</para>
+    <para>As explained in greater detail in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, the Grayscale Standard Display Function is based on human Contrast Sensitivity. Human Contrast Sensitivity is distinctly non-linear within the Luminance Range of the Grayscale Standard Display Function . The human eye is relatively less sensitive in the dark areas of an image than it is in the bright areas of an image. This variation in sensitivity makes it much easier to see small relative changes in Luminance in the bright areas of the image than in the dark areas of the image. A Display Function that adjusts the brightness such that equal changes in P-Values will result in the same level of perceptibility at all driving levels is "perceptually linearized". The Grayscale Standard Display Function incorporates the notion of perceptual linearization without making it an explicit objective of PS3.14.</para>
+    <para>The employed data for Contrast Sensitivity are derived from Barten's model of the human visual system (Ref. 1, 2 and <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>). Specifically, the Grayscale Standard Display Function refers to Contrast Sensitivity for the Standard Target consisting of a 2-deg x 2-deg square filled with a horizontal or vertical grating with sinusoidal modulation of 4 cycles per degree. The square is placed in a uniform background of Luminance equal to the mean Luminance L of the Target. The Contrast Sensitivity is defined by the Threshold Modulation at which the grating becomes just visible to the average human observer. The Luminance modulation represents the Just-Noticeable Difference (JND) for the Target at the Luminance L.</para>
     <note>
       <para>The academic nature of the Standard Target is recognized. With the simple target, the essential objectives of PS3.14 appear to be realizable. Only spurious results with more realistic targets in complex surroundings were known at the time of writing PS3.14 and these were not assessed.</para>
     </note>
     <para>The Grayscale Standard Display Function is defined for the Luminance Range from 0.05 to 4000 cd/m<superscript>2</superscript>. The minimum Luminance corresponds to the lowest practically useful Luminance of cathode-ray-tube (CRT) monitors and the maximum exceeds the unattenuated Luminance of very bright light-boxes used for interpreting X-Ray mammography. The Grayscale Standard Display Function explicitly includes the effects of the diffused ambient Illuminance.</para>
-    <para>Within the Luminance Range happen to fall 1023 JNDs (see <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>).</para>
+    <para>Within the Luminance Range happen to fall 1023 JNDs (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
     <section xml:id="sect_7.1" label="7.1" status="2">
       <title>General Formulas</title>
       <para>The Grayscale Standard Display Function is defined by a mathematical interpolation of the 1023 Luminance levels derived from Barten's model. The Grayscale Standard Display Function allows us to calculate luminance, L, in candelas per square meter, as a function of the Just-Noticeable Difference (JND) Index, j:</para>
@@ -975,9 +975,9 @@
           </listitem>
         </orderedlist>
       </note>
-      <para><xref linkend="chapter_B" xrefstyle="template: Annex %n"/> lists the Luminance levels computed with this equation for the 1023 integer JND Indices and <xref linkend="figure_7-1" xrefstyle="select: label"/> shows a plot of the Grayscale Standard Display Function. The exact value of the Luminance levels, of course, depends on the start level of 0.05 cd/m
+      <para><xref linkend="chapter_B" xrefstyle="template:Annex %n"/> lists the Luminance levels computed with this equation for the 1023 integer JND Indices and <xref linkend="figure_7-1" xrefstyle="select: label"/> shows a plot of the Grayscale Standard Display Function. The exact value of the Luminance levels, of course, depends on the start level of 0.05 cd/m
   <superscript>2</superscript>.</para>
-      <para>The Characteristic Curve of a Display System represents the Luminance produced by a Display System as a function of DDL and the effect of ambient Illuminance. The Characteristic Curve is measured with Standard Test Patterns (see <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>). In general, the Display Function describes, for example,</para>
+      <para>The Characteristic Curve of a Display System represents the Luminance produced by a Display System as a function of DDL and the effect of ambient Illuminance. The Characteristic Curve is measured with Standard Test Patterns (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). In general, the Display Function describes, for example,</para>
       <orderedlist numeration="loweralpha">
         <listitem>
           <para>the Luminance (including ambient Illuminance) measured as a function of DDL for emissive displays such as a CRT-monitor/digital display controller system,</para>
@@ -1612,7 +1612,7 @@
           <mathphrase>I = I<subscript>0</subscript> + N<subscript>JND</subscript> / DR . D<subscript>input</subscript></mathphrase>
         </equation>
       </para>
-      <para>A detailed example for executing such a transformation is given in <xref linkend="chapter_D" xrefstyle="template: Annex %n"/>.</para>
+      <para>A detailed example for executing such a transformation is given in <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
     </section>
     <section xml:id="sect_A.3" label="A.3" status="2">
       <title>References</title>
@@ -1662,7 +1662,7 @@
   </chapter>
   <chapter xml:id="chapter_B" label="B" status="1">
     <title>Table of the Grayscale Standard Display Function (Informative)</title>
-    <para>The Grayscale Standard Display Function based on the Barten model was introduced in <xref linkend="chapter_7" xrefstyle="template: Section %n"/> and details are presented in <xref linkend="chapter_A" xrefstyle="template: Annex %n"/> above. This annex presents the Grayscale Standard Display Function as a table of values for Luminance as a function of the Just-Noticeable Difference Index for integer values of the Just-Noticeable Difference Index.</para>
+    <para>The Grayscale Standard Display Function based on the Barten model was introduced in <xref linkend="chapter_7" xrefstyle="template:Section %n"/> and details are presented in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> above. This annex presents the Grayscale Standard Display Function as a table of values for Luminance as a function of the Just-Noticeable Difference Index for integer values of the Just-Noticeable Difference Index.</para>
     <table frame="box" rules="all" xml:id="table_B-1" label="B-1">
       <caption>Grayscale Standard Display Function: Luminance versus JND Index</caption>
       <thead>
@@ -9215,7 +9215,7 @@
   </chapter>
   <chapter xml:id="chapter_D" label="D" status="1">
     <title>Illustrations for Achieving Conformance with the Grayscale Standard Display Function (Informative)</title>
-    <para>The following sections illustrate how conformance with the Grayscale Standard Display Function may be achieved for emissive (soft-copy) Display Systems as well as systems producing image presentations (hard-copies) on transmissive and reflective media. Each section contains four sub-sections on 1) a procedure for measuring the system Characteristic Curve, 2) the application of the Grayscale Standard Display Function to the Luminance Range of the Display System, 3) the implementation of the Grayscale Standard Display Function, and 4) the application of the conformance metrics as proposed in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.</para>
+    <para>The following sections illustrate how conformance with the Grayscale Standard Display Function may be achieved for emissive (soft-copy) Display Systems as well as systems producing image presentations (hard-copies) on transmissive and reflective media. Each section contains four sub-sections on 1) a procedure for measuring the system Characteristic Curve, 2) the application of the Grayscale Standard Display Function to the Luminance Range of the Display System, 3) the implementation of the Grayscale Standard Display Function, and 4) the application of the conformance metrics as proposed in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
     <para>It is emphasized that there are different ways to configure a Display System or to change its performance so that it conforms to the Grayscale Standard Display Function. In fact, conceivably, a Display System may calibrate itself automatically to maintain conformance with the Standard. Hence, the following three illustrations are truly only examples.</para>
     <para>Luminance of any Display System, hard-copy or softcopy, may be measured with a photometer. The photometer should have the following characteristics:</para>
     <itemizedlist>
@@ -9292,7 +9292,7 @@
             <para>using a photometer to measure and record the Luminance of the measurement field at each command value.</para>
           </listitem>
         </itemizedlist>
-        <para>As discussed in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>, the number and distribution of DDLs at which measurements are taken must be sufficient to accurately model the Characteristic Curve of the Display System over the entire Luminance Range.</para>
+        <para>As discussed in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>, the number and distribution of DDLs at which measurements are taken must be sufficient to accurately model the Characteristic Curve of the Display System over the entire Luminance Range.</para>
         <note>
           <orderedlist>
             <listitem>
@@ -11248,7 +11248,7 @@
       <section xml:id="sect_D.1.2" label="D.1.2" status="3">
         <title>Application of the Standard Formula</title>
         <para>The section of the Grayscale Standard Display Function for the Luminance Range of the CRT monitor Display System is shown in <xref linkend="figure_D.1-3" xrefstyle="select: label"/>. Minimum and maximum Luminance levels correspond to JND indices of
-  JND<subscript>min</subscript> = 32.54 and JND<subscript>max</subscript> = 453.85, respectively. Thus, there are theoretically about 420 just-noticeable Luminance differences for the Standard Target (see Normative <xref linkend="chapter_6" xrefstyle="template: Section %n"/>). Obviously, with 8-bit input digitization resolution, at best 256 noticeable Luminance increments can be realized.</para>
+  JND<subscript>min</subscript> = 32.54 and JND<subscript>max</subscript> = 453.85, respectively. Thus, there are theoretically about 420 just-noticeable Luminance differences for the Standard Target (see Normative <xref linkend="chapter_6" xrefstyle="template:Section %n"/>). Obviously, with 8-bit input digitization resolution, at best 256 noticeable Luminance increments can be realized.</para>
       </section>
       <section xml:id="sect_D.1.3" label="D.1.3" status="3">
         <title>Implementation of the Standard</title>
@@ -13165,7 +13165,7 @@
       </section>
       <section xml:id="sect_D.1.4" label="D.1.4" status="3">
         <title>Measures of Conformance</title>
-        <para>The FIT and the LUM metrics proposed in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> are applied to determine the macroscopic and microscopic approximation of the L
+        <para>The FIT and the LUM metrics proposed in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> are applied to determine the macroscopic and microscopic approximation of the L
   <subscript>J,m</subscript>to the L
   <subscript>I,STD</subscript>. <xref linkend="figure_D.1-3" xrefstyle="select: label"/> shows the perceptually linearized Display Function superimposed on the Grayscale Standard Display Function and <xref linkend="figure_D.1-4" xrefstyle="select: label"/> summarizes the results of the two metrics. A good global fit was achieved as demonstrated by the nearly horizontal-line fit as best fit obtained with the FIT metric. The RMSE is acceptable. All 255 P-Value intervals lead to JNDs on the transformed Display Function for the Standard Target.</para>
         <para>
@@ -17242,7 +17242,7 @@
       </section>
       <section xml:id="sect_D.3.4" label="D.3.4" status="3">
         <title>Measures of Conformance</title>
-        <para>The FIT and LUM metrics as proposed in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> are applied to determine the macroscopic and microscopic approximation of the
+        <para>The FIT and LUM metrics as proposed in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> are applied to determine the macroscopic and microscopic approximation of the
   L<subscript>J,m</subscript> to the L<subscript>I,STD</subscript>. <xref linkend="figure_D.3-3" xrefstyle="select: label"/> shows the perceptually linearized Display Function superimposed on the Grayscale Standard Display Function and <xref linkend="figure_D.3-4" xrefstyle="select: label"/> summarizes the results of the two metrics. FIT provides as best fit of the JNDs/Luminance interval a straight line almost perfectly parallel to the horizontal axis indicating good global fit of the transformed Display Function with the Grayscale Standard Display Function. The RMSE computed by LUM is relatively large indicating more pronounced local deviations from the Grayscale Standard Display Function as, for example, with the soft-copy Display System illustrated in <xref linkend="sect_D.1" xrefstyle="select: label"/>. At least in part, the larger RMSE is due to the fact that the input and output digitization resolution for the transform are equal. The transformation table (<xref linkend="table_D.3-1" xrefstyle="select: label"/>) and <xref linkend="figure_D.3-2" xrefstyle="select: label"/> show that several P-Values lead to the same Luminance levels on the transformed Display Function. In fact, only 205 of the 255 Luminance intervals lead to JNDs for the Standard Target.</para>
         <para>
           <figure xml:id="figure_D.3-3" label="D.3-3" pgwide="1">

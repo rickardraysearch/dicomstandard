@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="5.0" xml:id="PS3.4" label="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2014c - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2015a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2014</year>
+      <year>2015</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -83,23 +83,32 @@
     <para>This Part is related to other parts of the DICOM Standard in that:</para>
     <itemizedlist>
       <listitem>
-        <para><olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="template: %n Information Object Definitions"/> specifies the set of Information Object Definitions to which the services defined in this Part may be applied</para>
+        <para><olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="template:%n Information Object Definitions"/> specifies the set of Information Object Definitions to which the services defined in this Part may be applied</para>
       </listitem>
       <listitem>
-        <para><olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="template: %n Data Structure and Semantics"/> defines the data encoding used in the DIMSE Protocol when applied to IODs defined in this Part</para>
+        <para><olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="template:%n Data Structure and Semantics"/> defines the data encoding used in the DIMSE Protocol when applied to IODs defined in this Part</para>
       </listitem>
       <listitem>
-        <para><olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="template: %n Data Dictionary"/> contains an index by Tag of all IOD Attributes defined in this Part. This index includes the Value Representation and Value Multiplicity for each Attribute</para>
+        <para><olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="template:%n Data Dictionary"/> contains an index by Tag of all IOD Attributes defined in this Part. This index includes the Value Representation and Value Multiplicity for each Attribute</para>
       </listitem>
       <listitem>
-        <para><olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="template: %n Message Exchange Protocol"/> defines the DIMSE Services and Protocol that may be applied to IODs defined in this Part.</para>
+        <para><olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="template:%n Message Exchange Protocol"/> defines the DIMSE Services and Protocol that may be applied to IODs defined in this Part.</para>
       </listitem>
     </itemizedlist>
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
     <para>The following standards contain provisions which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-    <para>ISO/IEC Directives, 1989 Part 3 - Drafting and Presentation of International Standards.</para>
+    <bibliography>
+      <biblioentry xml:id="biblio_ISODirectives3">
+        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>1989</date>
+        <title>Drafting and presentation of International Standards</title>
+      </biblioentry>
+    </bibliography>
     <para>ISO 7498-1 Information Processing Systems-Open Systems Interconnection- Basic Reference Model</para>
     <para>ISO/TR 8509 Information Processing Systems-Open Systems Interconnection- Service Conventions</para>
     <para>IETF RFC7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</para>
@@ -384,7 +393,7 @@
     <section label="5.2" status="2" xml:id="sect_5.2">
       <title>Sequences</title>
       <para>Certain tables in this Part of the DICOM Standard denote a Sequence of Items by using the symbol: '&gt;.'</para>
-      <para>In <xref linkend="chapter_A" xrefstyle="template: Annex %n"/>, '&gt;' is used to identify a 'Sequence of Modules.' Nested Sequences of Modules are identified by '&gt;&gt;'. In <xref linkend="chapter_B" xrefstyle="template: Annex %n"/> and <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>, '&gt;' is used to identify a 'Sequence of Attributes'. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> for the complete specification of how Sequences of Items shall be encoded.</para>
+      <para>In <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Modules.' Nested Sequences of Modules are identified by '&gt;&gt;'. In <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> and <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Attributes'. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> for the complete specification of how Sequences of Items shall be encoded.</para>
       <note>
         <para>Information Object Definitions (IODs) that include the Sequence of Module construct are often called folders. The use of 'Sequences of Attributes' is not limited to 'Folders.'</para>
       </note>
@@ -3037,11 +3046,11 @@
         </section>
         <section label="B.5.1.4" status="4" xml:id="sect_B.5.1.4">
           <title>Softcopy Presentation State Storage SOP Classes</title>
-          <para>See <xref linkend="chapter_N" xrefstyle="template: Annex %n"/>.</para>
+          <para>See <xref linkend="chapter_N" xrefstyle="template:Annex %n"/>.</para>
         </section>
         <section label="B.5.1.5" status="4" xml:id="sect_B.5.1.5">
           <title>Structured Reporting Storage SOP Classes</title>
-          <para>The requirements of <xref linkend="chapter_O" xrefstyle="template: Annex %n"/> apply to the following SOP Classes:</para>
+          <para>The requirements of <xref linkend="chapter_O" xrefstyle="template:Annex %n"/> apply to the following SOP Classes:</para>
           <itemizedlist>
             <listitem>
               <para>Basic Text SR</para>
@@ -3080,7 +3089,7 @@
               <para>Implantation Plan SR Document</para>
             </listitem>
           </itemizedlist>
-          <para><xref linkend="chapter_O" xrefstyle="template: Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
+          <para><xref linkend="chapter_O" xrefstyle="template:Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
         </section>
         <section label="B.5.1.6" status="4" xml:id="sect_B.5.1.6">
           <title>Enhanced MR Image Storage and Legacy Converted Enhanced MR Image Storage SOP Class</title>
@@ -3329,7 +3338,7 @@
         <note>
           <orderedlist>
             <listitem>
-              <para>The Classic single-frame view is not intended as an alternative to the Frame Level Retrieve SOP Classes defined in <xref linkend="chapter_Y" xrefstyle="template: Annex %n"/>. Enhanced Image Storage SOP Classes and Frame Level Retrieve SOP Classes should be used together since they support a unified view of the relationships between instances through a common set of UIDs.</para>
+              <para>The Classic single-frame view is not intended as an alternative to the Frame Level Retrieve SOP Classes defined in <xref linkend="chapter_Y" xrefstyle="template:Annex %n"/>. Enhanced Image Storage SOP Classes and Frame Level Retrieve SOP Classes should be used together since they support a unified view of the relationships between instances through a common set of UIDs.</para>
             </listitem>
             <listitem>
               <para>In the Enhanced view, Instances that have no Enhanced equivalent will be returned in their original form but with referential integrity related changes.</para>
@@ -6073,7 +6082,7 @@
             </figure>
           </para>
           <para>Extended negotiation for SOP Classes based on the retrieval services that include C-GET operations is identical to the negotiation defined for C-MOVE, which is defined in <xref linkend="sect_C.5.2.1" xrefstyle="select: label"/> of this Annex.</para>
-          <para>Extended negotiation for the SOP Classes of the Storage Service Class (for the C-STORE sub-operation) is defined in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>.</para>
+          <para>Extended negotiation for the SOP Classes of the Storage Service Class (for the C-STORE sub-operation) is defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
         </section>
       </section>
     </section>
@@ -11512,13 +11521,13 @@
       <section label="F.8.4" status="3" xml:id="sect_F.8.4">
         <title>Conformance Requirements</title>
         <para>Implementations providing conformance to the Modality Performed Procedure Step Retrieve SOP Class shall be conformant as described in the following sections and shall include within their Conformance Statement information as described below.</para>
-        <para>An implementation may conform to this SOP Class as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+        <para>An implementation may conform to this SOP Class as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
         <section label="F.8.4.1" status="4" xml:id="sect_F.8.4.1">
           <title>SCU Conformance</title>
           <para>An implementation that is conformant to this SOP Class as an SCU shall meet conformance requirements for the operations that it invokes.</para>
           <section label="F.8.4.1.1" status="5" xml:id="sect_F.8.4.1.1">
             <title>Operations</title>
-            <para>Any Attributes for which Attribute Values may be requested (using the N-GET Service) by the SCU shall be enumerated in the SCU Operations Statement. The SCU Operations Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+            <para>Any Attributes for which Attribute Values may be requested (using the N-GET Service) by the SCU shall be enumerated in the SCU Operations Statement. The SCU Operations Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
           </section>
         </section>
         <section label="F.8.4.2" status="4" xml:id="sect_F.8.4.2">
@@ -11526,7 +11535,7 @@
           <para>An implementation that is conformant to this SOP Class as an SCP shall meet conformance requirements for the operations that it performs.</para>
           <section label="F.8.4.2.1" status="5" xml:id="sect_F.8.4.2.1">
             <title>Operations</title>
-            <para>Any Attributes for which Attribute Values may be requested (using the N-GET Service) by the SCU shall be enumerated in the SCP Operations Statement. The SCP Operations Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+            <para>Any Attributes for which Attribute Values may be requested (using the N-GET Service) by the SCU shall be enumerated in the SCP Operations Statement. The SCP Operations Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
           </section>
         </section>
       </section>
@@ -18078,11 +18087,11 @@
         <title>Specialization for Standard SOP Classes</title>
         <section label="I.4.1.1" status="4" xml:id="sect_I.4.1.1">
           <title>Softcopy Presentation State Storage SOP Classes</title>
-          <para>See <xref linkend="chapter_N" xrefstyle="template: Annex %n"/>.</para>
+          <para>See <xref linkend="chapter_N" xrefstyle="template:Annex %n"/>.</para>
         </section>
         <section label="I.4.1.2" status="4" xml:id="sect_I.4.1.2">
           <title>Structured Reporting Storage SOP Classes</title>
-          <para>The requirements of <xref linkend="chapter_O" xrefstyle="template: Annex %n"/> apply to the following SOP Classes:</para>
+          <para>The requirements of <xref linkend="chapter_O" xrefstyle="template:Annex %n"/> apply to the following SOP Classes:</para>
           <itemizedlist>
             <listitem>
               <para>Basic Text SR</para>
@@ -18124,7 +18133,7 @@
               <para>Implantation Plan SR Document</para>
             </listitem>
           </itemizedlist>
-          <para><xref linkend="chapter_O" xrefstyle="template: Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
+          <para><xref linkend="chapter_O" xrefstyle="template:Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
         </section>
       </section>
     </section>
@@ -19182,7 +19191,7 @@
         </section>
         <section label="K.2.2.2" status="4" xml:id="sect_K.2.2.2">
           <title>Attribute Matching</title>
-          <para>The following types of matching, which are defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> may be performed on Matching Key Attributes in the Basic Worklist Service Class. Different Matching Key Attributes may be subject for different matching types. The Worklist Information Model defines the type of matching for each Required Matching Key Attribute. The Conformance Statement of the SCP shall define the type of matching for each Optional Matching Key Attribute. The types of matching are:</para>
+          <para>The following types of matching, which are defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> may be performed on Matching Key Attributes in the Basic Worklist Service Class. Different Matching Key Attributes may be subject for different matching types. The Worklist Information Model defines the type of matching for each Required Matching Key Attribute. The Conformance Statement of the SCP shall define the type of matching for each Optional Matching Key Attribute. The types of matching are:</para>
           <itemizedlist>
             <listitem>
               <para>Single Value Matching</para>
@@ -19200,7 +19209,7 @@
               <para>Sequence Matching</para>
             </listitem>
           </itemizedlist>
-          <para>The following type of matching, which is defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> of this Part shall be performed on Return Key Attributes in the Basic Worklist Service Class.</para>
+          <para>The following type of matching, which is defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> of this Part shall be performed on Return Key Attributes in the Basic Worklist Service Class.</para>
           <itemizedlist>
             <listitem>
               <para>Universal Matching</para>
@@ -21895,7 +21904,7 @@
       <title>Overview</title>
       <section label="N.1.1" status="3" xml:id="sect_N.1.1">
         <title>Scope</title>
-        <para>The Softcopy Presentation State Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>) to add the ability to convey an intended presentation state or record an existing presentation state. The SOP Classes specify the information and behavior that may be used to present (display) images that are referenced from within the SOP Classes.</para>
+        <para>The Softcopy Presentation State Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>) to add the ability to convey an intended presentation state or record an existing presentation state. The SOP Classes specify the information and behavior that may be used to present (display) images that are referenced from within the SOP Classes.</para>
         <para>They include capabilities for specifying:</para>
         <orderedlist numeration="loweralpha">
           <listitem>
@@ -21920,7 +21929,7 @@
             <para>the blending of two image sets into a single presentation</para>
           </listitem>
         </orderedlist>
-        <para>The grayscale softcopy presentation state refers to the grayscale image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to presentation values (P-Values) when an image is displayed on a softcopy device. The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template: %n Grayscale Standard Display Function"/>.</para>
+        <para>The grayscale softcopy presentation state refers to the grayscale image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to presentation values (P-Values) when an image is displayed on a softcopy device. The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>.</para>
         <para>The color and pseudo-color softcopy presentation states refer to the color image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
         <para>The blending presentation states specify two sets of images, an underlying set, and a superimposed set, and the manner in which their pixel values are blended. The underlying set is rendered as grayscale and the superimposed set is rendered as color. The blending is not defined in a pair wise image-by-image or frame-by-frame manner, but rather the manner in which the two sets are combined is left to the discretion of the implementation. Specifically, matters of spatial registration, and any re-sampling and the mechanism of interpolation are not specified.</para>
         <para>The Softcopy Presentation State Storage SOP Classes may be used to store a single state per image, or a common state to be shared by multiple selected images. All images to which the Grayscale, Color and Pseudo-Color Presentation States apply must be a part of the same study that the stored state is a part of, and be of a single Composite Image Storage SOP Class.</para>
@@ -21936,7 +21945,7 @@
               <para>For example, an acquisition device may automatically store appropriate presentation states for series of images as they are reconstructed that represent adequate defaults. A user or algorithm may subsequently determine a more appropriate presentation state that more effectively displays the contents of an image, or record some annotation related directly to the image, and record that as another presentation state for an image. An application subsequently may display the image by automatically choosing to use the more recently saved or more specific presentation state, or may use the more general default presentation state for all images but notify the user that alternative presentation states are available.</para>
             </listitem>
             <listitem>
-              <para>Choice of the same presentation state to display a grayscale image on two devices claiming conformance to these SOP Classes implies through the definition of the P-Value space that the displayed image on both devices will be perceptually similar within the limits defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template: %n Grayscale Standard Display Function"/>, regardless of the actual capabilities of the display systems.</para>
+              <para>Choice of the same presentation state to display a grayscale image on two devices claiming conformance to these SOP Classes implies through the definition of the P-Value space that the displayed image on both devices will be perceptually similar within the limits defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>, regardless of the actual capabilities of the display systems.</para>
             </listitem>
             <listitem>
               <para>Choice of the same presentation state to display a color image on two devices claiming conformance to these SOP Classes implies through the definition of the PCS-Value space that the displayed image on both devices will appear similar in color regardless of the actual capabilities of the display systems.</para>
@@ -22057,7 +22066,7 @@
         <section label="N.2.1.4" status="4" xml:id="sect_N.2.1.4">
           <title>Presentation LUT</title>
           <para>The Presentation LUT operation applies only to grayscale values.</para>
-          <para>The Presentation LUT transformation transforms the pixel values into P-Values, a device independent perceptually linear space as defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template: %n Grayscale Standard Display Function"/>. It may be an identity function if the output of the VOI LUT transformation is in P-Values.</para>
+          <para>The Presentation LUT transformation transforms the pixel values into P-Values, a device independent perceptually linear space as defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. It may be an identity function if the output of the VOI LUT transformation is in P-Values.</para>
           <note>
             <para>If the Presentation LUT and VOI LUT step are identity transformations, and the Mask Module is absent, then the output of the Modality LUT must be, by definition, P-Values.</para>
           </note>
@@ -22386,7 +22395,7 @@
     <title>Structured Reporting Storage SOP Classes(Normative)</title>
     <section label="O.1" status="2" xml:id="sect_O.1">
       <title>Overview</title>
-      <para>The Structured Reporting Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template: Annex %n"/>) to extend the SCP behavior and conformance requirements.</para>
+      <para>The Structured Reporting Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>) to extend the SCP behavior and conformance requirements.</para>
     </section>
     <section label="O.2" status="2" xml:id="sect_O.2">
       <title>Structured Reporting Storage SOP Class SCU and SCP Behavior</title>
@@ -24803,13 +24812,13 @@
       <section label="R.3.4" status="3" xml:id="sect_R.3.4">
         <title>Conformance Requirements</title>
         <para>Implementations shall include within their Conformance Statement information as described below.</para>
-        <para>An implementation may conform to this SOP Class as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+        <para>An implementation may conform to this SOP Class as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
         <section label="R.3.4.1" status="4" xml:id="sect_R.3.4.1">
           <title>SCU Conformance</title>
           <para>An implementation that is conformant to this SOP Class as an SCU shall meet conformance requirements for the operations that it invokes.</para>
           <section label="R.3.4.1.1" status="5" xml:id="sect_R.3.4.1.1">
             <title>Operations</title>
-            <para>Any Attributes for which Attribute Values may be provided (using the N-CREATE) by the SCU shall be enumerated in the SCU Conformance Statement. The SCU Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+            <para>Any Attributes for which Attribute Values may be provided (using the N-CREATE) by the SCU shall be enumerated in the SCU Conformance Statement. The SCU Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
             <para>An implementation that conforms to this SOP Class as an SCU shall specify under which conditions during the performance of real-world activities it will create the SOP Class Instance.</para>
             <para>The SCU Conformance Statement shall specify what is meant by each reported value of Instance Availability (0008,0056).</para>
             <para>The SCU Conformance Statement shall describe the relationship between the Instance Availability Notification and the Performed Procedure Step SOP Classes, if the latter are supported.</para>
@@ -24820,7 +24829,7 @@
           <para>An implementation that is conformant to this SOP Class as an SCP shall meet conformance requirements for the operations that it performs.</para>
           <section label="R.3.4.2.1" status="5" xml:id="sect_R.3.4.2.1">
             <title>Operations</title>
-            <para>The SCP Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+            <para>The SCP Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
             <para>The SCP Conformance Statement shall provide information on the behavior of the SCP (in terms of real world activities) for each reported value of Instance Availability (0008,0056).</para>
             <para>The SCP Conformance Statement shall describe the behavioral relationship between the Instance Availability Notification and the Performed Procedure Step SOP Classes, if the latter are supported.</para>
           </section>
@@ -27108,7 +27117,7 @@
         </section>
         <section label="V.2.2.2" status="4" xml:id="sect_V.2.2.2">
           <title>Attribute Matching</title>
-          <para>The following types of matching, which are defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>, may be performed on Matching Key Attributes in the Substance Administration Query Service Class. Different Matching Key Attributes may be subject for different matching types. The Substance Administration Query Information Model defines the type of matching for each Required Matching Key Attribute. The Conformance Statement of the SCP shall define the type of matching for each Optional Matching Key Attribute. The types of matching are:</para>
+          <para>The following types of matching, which are defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>, may be performed on Matching Key Attributes in the Substance Administration Query Service Class. Different Matching Key Attributes may be subject for different matching types. The Substance Administration Query Information Model defines the type of matching for each Required Matching Key Attribute. The Conformance Statement of the SCP shall define the type of matching for each Optional Matching Key Attribute. The types of matching are:</para>
           <itemizedlist>
             <listitem>
               <para>Single Value Matching</para>
@@ -27117,7 +27126,7 @@
               <para>Sequence Matching</para>
             </listitem>
           </itemizedlist>
-          <para>The following type of matching, which is defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> of this Part, shall be performed on Return Key Attributes in the Substance Administration Query Service Class.</para>
+          <para>The following type of matching, which is defined by the Query/Retrieve Service Class in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> of this Part, shall be performed on Return Key Attributes in the Substance Administration Query Service Class.</para>
           <itemizedlist>
             <listitem>
               <para>Universal Matching</para>
@@ -28923,8 +28932,8 @@
       <title>Overview</title>
       <section label="Y.1.1" status="3" xml:id="sect_Y.1.1">
         <title>Scope</title>
-        <para>Composite Instance Root Retrieve Service is a service within the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.The retrieve capability of this service allows a DICOM AE to retrieve Composite Instances or selected frames from a remote DICOM AE over a single Association or request the remote DICOM AE to initiate a transfer of Composite Object Instances or selected frames from image objects to another DICOM AE.</para>
-        <para>The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> is also supported for the Composite Instance Root Retrieve Service.</para>
+        <para>Composite Instance Root Retrieve Service is a service within the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.The retrieve capability of this service allows a DICOM AE to retrieve Composite Instances or selected frames from a remote DICOM AE over a single Association or request the remote DICOM AE to initiate a transfer of Composite Object Instances or selected frames from image objects to another DICOM AE.</para>
+        <para>The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> is also supported for the Composite Instance Root Retrieve Service.</para>
       </section>
       <section label="Y.1.2" status="3" xml:id="sect_Y.1.2">
         <title>Composite Instance Root Retrieve Information Model</title>
@@ -29133,7 +29142,7 @@
           </listitem>
         </itemizedlist>
         <note>
-          <para>In most cases private Attributes should not be copied unless their full significance is known. See <olink targetdoc="PS3.17" targetptr="chapter_ZZ" xrefstyle="template: Annex %n “%t”"/>for more guidance.</para>
+          <para>In most cases private Attributes should not be copied unless their full significance is known. See <olink targetdoc="PS3.17" targetptr="chapter_ZZ" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.17"/> for more guidance.</para>
         </note>
         <itemizedlist>
           <listitem>
@@ -30287,8 +30296,8 @@
       <title>Overview</title>
       <section label="Z.1.1" status="3" xml:id="sect_Z.1.1">
         <title>Scope</title>
-        <para>Composite Instance Retrieve Without Bulk Data Service is a service within the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/>.The retrieve capability of this service allows a DICOM AE to retrieve Composite Instances without retrieving their pixel data or other potentially large Attributes as defined in <xref linkend="sect_Z.1.3" xrefstyle="select: label"/>.</para>
-        <para>The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template: Annex %n"/> is also supported for the Composite Instance Root Retrieve Service.</para>
+        <para>Composite Instance Retrieve Without Bulk Data Service is a service within the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.The retrieve capability of this service allows a DICOM AE to retrieve Composite Instances without retrieving their pixel data or other potentially large Attributes as defined in <xref linkend="sect_Z.1.3" xrefstyle="select: label"/>.</para>
+        <para>The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> is also supported for the Composite Instance Root Retrieve Service.</para>
       </section>
       <section label="Z.1.2" status="3" xml:id="sect_Z.1.2">
         <title>Composite Instance Retrieve Without Bulk Data Information Model</title>
@@ -38508,7 +38517,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para>Procedure Step Cancellation DateTime</para>
+                    <para>&gt;Procedure Step Cancellation DateTime</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para>(0040,4052)</para>
@@ -39769,13 +39778,13 @@
     <section label="CC.4" status="2" xml:id="sect_CC.4">
       <title>Conformance Requirements</title>
       <para>Implementations providing conformance to any of the UPS SOP Classes (UPS Pull, UPS Push, UPS Watch and UPS Event) shall be conformant as described in the following sections and shall include within their Conformance Statement information as described below.</para>
-      <para>An implementation may conform to any of the UPS SOP Classes as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+      <para>An implementation may conform to any of the UPS SOP Classes as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
       <section label="CC.4.1" status="3" xml:id="sect_CC.4.1">
         <title>SCU Conformance</title>
         <para>An implementation, which is conformant to any of the UPS SOP Classes as an SCU, shall meet conformance requirements for the operations that it invokes.</para>
         <section label="CC.4.1.1" status="4" xml:id="sect_CC.4.1.1">
           <title>Operations</title>
-          <para>The SCU Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+          <para>The SCU Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
           <para>An implementation, that conforms to any of the UPS Push, UPS Pull or UPS Watch SOP Classes as an SCU, shall specify under which conditions it will request the modification of the value of the Procedure Step State (0074,1000) Attribute to "IN PROGRESS", "COMPLETED", and "CANCELED".</para>
           <para>An implementation that conforms to the UPS Pull or UPS Watch SOP Classes as an SCU shall state in its Conformance Statement</para>
           <itemizedlist>
@@ -39802,7 +39811,7 @@
         <para>An implementation that is conformant to any of the UPS SOP Classes as an SCP shall meet conformance requirements for the operations that it performs.</para>
         <section label="CC.4.2.1" status="4" xml:id="sect_CC.4.2.1">
           <title>Operations</title>
-          <para>The SCP Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template: Annex %n “%t”"/>.</para>
+          <para>The SCP Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.2"/>.</para>
           <para>The SCP Conformance Statement shall provide information on the behavior of the SCP at the following occurrences:</para>
           <itemizedlist>
             <listitem>
@@ -43504,7 +43513,7 @@
             <title>Behavior</title>
             <para>The SCU uses the N-DELETE to request the SCP to delete an applicable Machine Verification SOP Instance. The SCU shall specify in the N-DELETE request primitive the SOP Instance UID of the applicable Machine Verification instance.</para>
             <para>The SCP shall delete the specified SOP Instance, such that subsequent operations of the same SOP Instance will fail.</para>
-            <para>The SCP shall return the status code of the requested SOP Instance deletion. The meanings of success, warning, and failure status classes are defined in <olink targetdoc="PS3.7" targetptr="chapter_C" xrefstyle="template: Annex %n “%t”"/>.</para>
+            <para>The SCP shall return the status code of the requested SOP Instance deletion. The meanings of success, warning, and failure status classes are defined in <olink targetdoc="PS3.7" targetptr="chapter_C" xrefstyle="template:Annex %n &#8220;%t&#8221; in PS3.7"/>.</para>
             <para>If an N-DELETE is not issued, the SOP Class instance may be deleted on the SCP by a manual or automatic operation. This behavior is beyond the scope of the standard.</para>
           </section>
         </section>

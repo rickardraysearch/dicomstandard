@@ -78,6 +78,8 @@
 	</xsl:param>
 
 	<xsl:param name="default.table.width" select="'100%'"/>
+	
+	<xsl:param name="orderedlist.label.width">2em</xsl:param>
 
 	<!-- URLs in PS 3.16 Annex D tables were causing page width overflow, so activate URL "hyphenation"; see "http://www.sagehill.net/docbookxsl/Ulinks.html" -->
 	<xsl:param name="ulink.hyphenate.chars">/&amp;?</xsl:param>
@@ -117,6 +119,11 @@
 	<xsl:attribute-set name="variablelist.term.properties">
 		<xsl:attribute name="hyphenate">false</xsl:attribute>
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
+	</xsl:attribute-set>
+
+	<xsl:attribute-set name="glossentry.list.item.properties">
+		<xsl:attribute name="hyphenate">false</xsl:attribute>
+		<xsl:attribute name="text-align">left</xsl:attribute>
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="example.properties">
