@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.1" label="PS3.1" version="5.0">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2015a - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2015b - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -606,7 +606,7 @@
           <para><olink targetdoc="PS3.19" targetptr="PS3.19">PS3.19: Application Hosting</olink></para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.20" targetptr="PS3.20">PS3.20: Transformation of DICOM to and from HL7 Standards</olink></para>
+          <para><olink targetdoc="PS3.20" targetptr="PS3.20">PS3.20: Imaging Reports using HL7 Clinical Document Architecture</olink></para>
         </listitem>
       </itemizedlist>
       <para>These parts of the Standard are related but independent documents. A brief description
@@ -1088,15 +1088,10 @@
         are used by the API.</para>
     </section>
     <section xml:id="sect_6.20" label="6.20" status="2">
-      <title>PS3.20: Transformation of DICOM to and From HL7 Standards</title>
-      <para><olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies:</para>
-      <para>
-        <itemizedlist>
-          <listitem>
-            <para>Transformations of DICOM data to and from HL7 standards.</para>
-          </listitem>
-        </itemizedlist>
-      </para>
+      <title>PS3.20: Imaging Reports using HL7 Clinical Document Architecture</title>
+      <para><olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies templates for the encoding of imaging reports using the HL7 Clinical Document Architecture Release 2 (CDA R2, or simply CDA) Standard. Within this scope are clinical procedure reports for specialties that use imaging for screening, diagnostic, or therapeutic purposes.</para>
+      <para><olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> constitutes an implementation guide for CDA, and is harmonized with the approach to standardized templates for CDA implementation guides developed by HL7. It also provides Business Names for data elements that link data in user terminology, e.g., collected by a report authoring application, to specific CDA encoded elements.</para>
+      <para>As an implementation guide for imaging reports, particular attention is given to the use and reference of data collected in imaging procedures as explicit evidence within reports. This data includes images, waveforms, measurements, annotations, and other analytic results managed as DICOM SOP Instances. Specifically, this Part includes a specification for transformation into CDA documents of DICOM Structured Report instances that represent imaging reports.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.5" label="PS3.5" version="5.0">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2015a - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2015b - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1059,6 +1059,9 @@
                 <para>before the end of a page (i.e., before the FF)</para>
               </listitem>
               <listitem>
+                <para>before any other Control Character other than ESC (e.g., before any TAB)</para>
+              </listitem>
+              <listitem>
                 <para>before the end of a Data Element value (e.g., before the 05/12 character code that separates multiple textual Data Element Values - 05/12 corresponds to "\" (BACKSLASH) in the case of default repertoire IR-6 or "¥" (YEN SIGN) in the case of IR-14).</para>
               </listitem>
               <listitem>
@@ -1161,7 +1164,7 @@
       </section>
       <section xml:id="sect_6.1.3" label="6.1.3" status="3">
         <title>Control Characters</title>
-        <para>Textual data that is interchanged may require some formatting information. Control Characters are used to indicate formatting, but their use in DICOM is kept to a minimum since some machines may handle them inappropriately. ISO 646:1990 and ISO 6429:1990 define Control Characters. As shown in <xref linkend="table_6.1-1" xrefstyle="select: label"/> below, only a subset of four Control Characters from the C0 set shall be used in DICOM for the encoding of Control Characters in text strings.</para>
+        <para>Textual data that is interchanged may require some formatting information. Control Characters are used to indicate formatting, but their use in DICOM is kept to a minimum since some machines may handle them inappropriately. ISO 646:1990 and ISO 6429:1990 define Control Characters. As shown in <xref linkend="table_6.1-1" xrefstyle="select: label"/> below, only a subset of five Control Characters from the C0 set shall be used in DICOM for the encoding of Control Characters in text strings.</para>
         <table frame="box" rules="all" xml:id="table_6.1-1" label="6.1-1">
           <caption>DICOM Control Characters and Their Encoding</caption>
           <thead>
@@ -1228,12 +1231,30 @@
                 <para>01/11</para>
               </td>
             </tr>
+            <tr>
+              <td align="center" colspan="1" rowspan="1">
+                <para>TAB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>Horizontal Tab</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para>00/09</para>
+              </td>
+            </tr>
           </tbody>
         </table>
         <para>The ESC character shall be used only for ISO 2022 character set control sequences, in accordance with <xref linkend="sect_6.1.2.5" xrefstyle="select: label"/>.</para>
         <para>In text strings (value representation ST, LT, or UT) a new line shall be represented as CR LF.</para>
         <note>
-          <para>Some machines (such as UNIX based machines) may interpret LF (00/10) as a new line. In such cases, it is expected that the DICOM format is converted to the correct internal representation for that machine.</para>
+          <orderedlist numeration="arabic">
+            <listitem>
+              <para>Some machines (such as UNIX based machines) may interpret LF (00/10) as a new line. In such cases, it is expected that the DICOM format is converted to the correct internal representation for that machine.</para>
+            </listitem>
+            <listitem>
+              <para>In previous editions of the standard (see PS3.5 2015a), the TAB character was not listed as a Control Character.</para>
+            </listitem>
+          </orderedlist>
         </note>
       </section>
     </section>
@@ -1286,7 +1307,7 @@
               <para>A string of characters that identifies an Application Entity with leading and trailing spaces (20H) being non-significant. A value consisting solely of spaces shall not be used.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and control characters LF, FF, CR and ESC.</para>
+              <para>Default Character Repertoire excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and all control characters.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>16 bytes maximum</para>
@@ -1494,7 +1515,7 @@
               <para>A character string that may be padded with leading and/or trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string shall not have Control Characters except for ESC.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>64 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
@@ -1509,7 +1530,7 @@
               <para>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH "\" in ISO-IR 6) may be used.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escape sequences).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>10240 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
@@ -1594,7 +1615,7 @@
               <para>For examples and notes, see <xref linkend="sect_6.2.1.1" xrefstyle="select: label"/>.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters LF, FF, and CR but allowing Control Character ESC.</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6) and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>64 chars maximum per component group</para>
@@ -1610,7 +1631,7 @@
               <para>A character string that may be padded with leading and/or trailing spaces. The character code 05CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values for multiple data elements. The string shall not have Control Characters except ESC.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6) and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>16 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
@@ -1673,7 +1694,7 @@
               <para>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH "\" in ISO-IR 6) may be used.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escape sequences).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>1024 chars maximum (see <xref linkend="note_6.1-2-1" xrefstyle="template:Note in Section 6.2"/>)</para>
@@ -1733,7 +1754,7 @@
               <para>A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string shall not have Control Characters except for ESC.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>2<superscript>32</superscript>-2 bytes maximum</para>
@@ -1833,7 +1854,7 @@
               <para>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH "\" in ISO-IR 6) may be used.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para>Default Character Repertoire and/or as defined by (0008,0005).</para>
+              <para>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escape sequences).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para>2<superscript>32</superscript>-2 bytes maximum</para>
@@ -1849,6 +1870,9 @@
           </listitem>
           <listitem>
             <para xml:id="note_6.2-3-2">The length of the value of UC, UR and UT VRs is limited only by the size of the maximum unsigned integer representable in a 32 bit VL field minus one, since FFFFFFFFH is reserved.</para>
+          </listitem>
+          <listitem>
+            <para>In previous editions of the standard (see PS3.5 2015a), the TAB character was not listed as permitted for the ST, LT and UT VRs. It has been added for the convenience of formatting and the encoding of XML text.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -3067,7 +3091,7 @@
       </note>
       <para>If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
       <note>
-        <para>Depending on the transfer syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Frame Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
+        <para>Depending on the transfer syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Basic Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
       </note>
       <section xml:id="sect_8.2.1" label="8.2.1" status="3">
         <title>JPEG Image Compression</title>
@@ -5937,194 +5961,186 @@
   </chapter>
   <chapter xml:id="chapter_E" label="E" status="1">
     <title>DICOM Default Character Repertoire (Normative)</title>
-    <para>The default repertoire for character strings in DICOM is the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO IR-6). In addition, the four Control Characters LF, FF, CR, and ESC are supported. These control characters are a subset of the C0 set defined in ISO 646:1990 and ISO 6429:1990.</para>
+    <para>The default repertoire for character strings in DICOM is the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO IR-6). In addition, the Control Characters LF, FF, CR, TAB and ESC are supported. These control characters are a subset of the C0 set defined in ISO 646:1990 and ISO 6429:1990.</para>
     <para>The byte encoding of the default character repertoire is pictured in Table E-1. This table can be used to derive both ISO column/row byte values and hex values for encoded representations (see <xref linkend="sect_6.1.1" xrefstyle="select: label"/>).</para>
     <table frame="box" rules="all" xml:id="table_E-1" label="E-1">
       <caption>DICOM Default Character Repertoire Encoding</caption>
       <thead>
         <tr valign="top">
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>8</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>8</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
+          </th>
         </tr>
         <tr valign="top">
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>7</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>7</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
+          </th>
         </tr>
         <tr valign="top">
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>6</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>6</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
+          </th>
         </tr>
         <tr valign="top">
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>5</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>5</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>0</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>1</para>
-          </td>
+          </th>
         </tr>
         <tr valign="top">
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>4</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>3</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>2</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
-            <para>b<subscript>1</subscript>
-      </para>
-          </td>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1">
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>4</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>3</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>2</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1">
+            <para>b<subscript>1</subscript></para>
+          </th>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1"/>
+          <th align="center" colspan="1" rowspan="1">
             <para>00</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>01</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>02</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>03</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>04</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>05</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>06</para>
-          </td>
-          <td align="center" colspan="1" rowspan="1">
+          </th>
+          <th align="center" colspan="1" rowspan="1">
             <para>07</para>
-          </td>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -6487,7 +6503,9 @@
             <para>09</para>
           </td>
           <td align="center" colspan="1" rowspan="1"/>
-          <td align="center" colspan="1" rowspan="1"/>
+          <td align="center" colspan="1" rowspan="1">
+            <para>TAB</para>
+          </td>
           <td align="center" colspan="1" rowspan="1"/>
           <td align="center" colspan="1" rowspan="1">
             <para>)</para>

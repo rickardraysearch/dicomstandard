@@ -67,7 +67,7 @@
 	<xsl:param name="generate.toc">
 	appendix	nop
 	article		nop
-	book		toc,title,figure,table
+	book		toc,title,figure,table,example
 	chapter		nop
 	part		nop
 	preface		nop
