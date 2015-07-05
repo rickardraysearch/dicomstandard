@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-/* $Id: TTFReader.java 679326 2008-07-24 09:35:34Z vhennebert $ */
+/* $Id: TTFReaderBBox.java,v 1.1 2015/07/01 15:31:42 dclunie Exp $ */
 
 package org.apache.fop.fonts.apps;
 

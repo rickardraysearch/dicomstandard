@@ -184,7 +184,7 @@
 			<rect x="100.51" y="125.87" fill="none" width="70.253" height="8.883"/>
 			<text transform="matrix(1 0 0 1 114.9561 131.5952)" font-size="8">Component</text>
 			<rect x="95.126" y="142.062" fill="none" width="37.348" height="57.728"/>
-			<text transform="matrix(1 0 0 1 95.125 147.7871)"><tspan x="0" y="0" font-size="8">idNumber</tspan><tspan x="0" y="9.6" font-size="8">dataType</tspan><tspan x="0" y="19.2" font-size="8">minValue</tspan><tspan x="0" y="28.8" font-size="8">maxValue</tspan><tspan x="0" y="38.4" font-size="8">Semantics</tspan><tspan x="0" y="48" font-size="8">Unit</tspan></text>
+			<text transform="matrix(1 0 0 1 95.125 147.7871)"><tspan x="0" y="0" font-size="8">idNumber</tspan><tspan x="0" y="9.6" font-size="8">datatype</tspan><tspan x="0" y="19.2" font-size="8">minValue</tspan><tspan x="0" y="28.8" font-size="8">maxValue</tspan><tspan x="0" y="38.4" font-size="8">Semantics</tspan><tspan x="0" y="48" font-size="8">Unit</tspan></text>
 		</g>
 		<g>
 			<rect x="240.077" y="137.679" fill="#FFFFFF" stroke="#1C3766" width="90" height="32.504"/>
@@ -192,7 +192,7 @@
 			<rect x="249.95" y="125.871" fill="none" width="70.254" height="8.883"/>
 			<text transform="matrix(1 0 0 1 266.1792 131.5991)" font-size="8">Dimension</text>
 			<rect x="243.657" y="141.252" fill="none" width="59.578" height="28.929"/>
-			<text transform="matrix(1 0 0 1 243.6548 146.9785)"><tspan x="0" y="0" font-size="8">id_number</tspan><tspan x="0" y="9.6" font-size="8">number()Sample</tspan><tspan x="0" y="19.2" font-size="8">Semantics</tspan></text>
+			<text transform="matrix(1 0 0 1 243.6548 146.9785)"><tspan x="0" y="0" font-size="8">idNumber</tspan><tspan x="0" y="9.6" font-size="8">numberOfSamples</tspan><tspan x="0" y="19.2" font-size="8">Semantics</tspan></text>
 		</g>
 		<g>
 			<rect x="390.956" y="137.679" fill="#FFFFFF" stroke="#1C3766" width="90" height="32.228"/>
@@ -203,12 +203,12 @@
 			<text transform="matrix(1 0 0 1 394.6055 146.4609)"><tspan x="0" y="0" font-size="8">datatype</tspan><tspan x="0" y="9.6" font-size="8">inValue</tspan><tspan x="0" y="19.2" font-size="8">outValue</tspan></text>
 		</g>
 		<g>
-			<rect x="501.88" y="331.183" fill="#FFFFFF" stroke="#1C3766" width="90" height="23.463"/>
+			<rect x="501.88" y="331.183" fill="#FFFFFF" stroke="#1C3766" width="90" height="33.463"/>
 			<rect x="501.88" y="314.923" fill="#B2CEE7" stroke="#1C3766" width="90" height="16.26"/>
 			<rect x="518.193" y="319.776" fill="none" width="57.371" height="9.729"/>
 			<text transform="matrix(1 0 0 1 534.6455 325.498)" font-size="8">DataAt</text>
 			<rect x="505.963" y="335.075" fill="none" width="62.691" height="19.328"/>
-			<text transform="matrix(1 0 0 1 505.959 340.7969)"><tspan x="0" y="0" font-size="8">sampleNumber</tspan><tspan x="0" y="9.6" font-size="8">nativeModelUUID</tspan></text>
+			<text transform="matrix(1 0 0 1 505.959 340.7969)"><tspan x="0" y="0" font-size="8">indexWithinDimension</tspan><tspan x="0" y="9.6" font-size="8">descriptorUUID</tspan><tspan x="0" y="19.2" font-size="8">bulkDataUUID</tspan></text>
 		</g>
 		<g>
 			<rect x="90.637" y="256.05" fill="#FFFFFF" stroke="#1C3766" width="90" height="42.113"/>
@@ -224,7 +224,7 @@
 			<rect x="260.681" y="253.856" fill="none" width="44.892" height="9.727"/>
 			<text transform="matrix(1 0 0 1 272.4585 259.5811)" font-size="8">Origin</text>
 			<rect x="257.187" y="270.53" fill="none" width="54.251" height="38.527"/>
-			<text transform="matrix(1 0 0 1 257.186 276.2588)"><tspan x="0" y="0" font-size="8">index</tspan><tspan x="0" y="9.6" font-size="8">X_coord</tspan><tspan x="0" y="19.2" font-size="8">Y_coord</tspan><tspan x="0" y="28.8" font-size="8">Z_coord</tspan></text>
+			<text transform="matrix(1 0 0 1 257.186 276.2588)"><tspan x="0" y="0" font-size="8">index</tspan><tspan x="0" y="9.6" font-size="8">xCoord</tspan><tspan x="0" y="19.2" font-size="8">yCoord</tspan><tspan x="0" y="28.8" font-size="8">zCoord</tspan></text>
 		</g>
 		<g>
 			<rect x="501.877" y="256.05" fill="#FFFFFF" stroke="#1C3766" width="90" height="18"/>
@@ -238,7 +238,7 @@
 			<rect x="338.403" y="273.589" fill="#FFFFFF" stroke="#1C3766" width="107.995" height="51.729"/>
 			<rect x="338.403" y="250.591" fill="#B2CEE7" stroke="#1C3766" width="107.995" height="22.998"/>
 			<rect x="358.151" y="254.259" fill="none" width="68.923" height="19.326"/>
-			<text transform="matrix(1 0 0 1 362.3867 259.9878)"><tspan x="0" y="0" font-size="8">DirectionCosines</tspan><tspan x="-4.23" y="9.6" font-size="8">of space dimension</tspan></text>
+			<text transform="matrix(1 0 0 1 362.3867 259.9878)"><tspan x="0" y="0" font-size="8">DirectionCosines</tspan></text>
 			<rect x="342.43" y="277.188" fill="none" width="99.607" height="48.129"/>
 			<text transform="matrix(1 0 0 1 342.4346 282.916)"><tspan x="0" y="0" font-size="8">concernedSpatialDimension</tspan><tspan x="0" y="9.6" font-size="8">index</tspan><tspan x="0" y="19.2" font-size="8">cosAlongX</tspan><tspan x="0" y="28.8" font-size="8">cosAlongY</tspan><tspan x="0" y="38.4" font-size="8">cosAlongZ</tspan></text>
 		</g>
@@ -374,10 +374,10 @@
 			<g>
 				<g opacity="0.8">
 					<rect x="549.23" y="357.76" fill="none" width="16.895" height="8.574"/>
-					<text transform="matrix(1 0 0 1 549.2295 364.1992)" font-size="9">1</text>
+					<text transform="matrix(1 0 0 1 549.2295 374.1992)" font-size="9">1</text>
 				</g>
 				<rect x="549.23" y="357.76" fill="none" width="16.895" height="8.574"/>
-				<text transform="matrix(1 0 0 1 549.2295 364.1992)" font-size="9">1</text>
+				<text transform="matrix(1 0 0 1 549.2295 374.1992)" font-size="9">1</text>
 			</g>
 			<rect x="537.859" y="389.245" fill="none" width="35.238" height="35.479"/>
 			<text transform="matrix(1 0 0 1 537.9121 394.9707)"><tspan x="0" y="0" font-size="8">has either</tspan><tspan x="12.674" y="25.201" font-size="8">1.*</tspan></text>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-$Id: fontMetrics.xsl 1 2008-12-17 13:24:36Z piater $
+$Id: fontMetrics.xsl,v 1.1 2015/07/01 15:31:42 dclunie Exp $
 
 Copyright (C) 2008 by Alexandre Stevens and Justus H. Piater.
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" xml:id="PS3.1" label="PS3.1" version="5.0">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2015b - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2015c - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -13,18 +13,18 @@
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>
-    <para>The information in this publication was considered technically sound by the consensus of
+    <para xml:id="para_4bd261d3-b1d8-4e07-bc19-025147cdf31e">The information in this publication was considered technically sound by the consensus of
       persons engaged in the development and approval of the document at the time it was developed.
       Consensus does not necessarily mean that there is unanimous agreement among every person
       participating in the development of this document.</para>
-    <para>NEMA standards and guideline publications, of which the document contained herein is one,
+    <para xml:id="para_77b285e6-9884-456a-a8fe-fcb3ad5626f5">NEMA standards and guideline publications, of which the document contained herein is one,
       are developed through a voluntary consensus standards development process. This process brings
       together volunteers and/or seeks out the views of persons who have an interest in the topic
       covered by this publication. While NEMA administers the process and establishes rules to
       promote fairness in the development of consensus, it does not write the document and it does
       not independently test, evaluate, or verify the accuracy or completeness of any information or
       the soundness of any judgments contained in its standards and guideline publications.</para>
-    <para>NEMA disclaims liability for any personal injury, property, or other damages of any nature
+    <para xml:id="para_e483c01f-c2ff-459b-a444-20d802b817a2">NEMA disclaims liability for any personal injury, property, or other damages of any nature
       whatsoever, whether special, indirect, consequential, or compensatory, directly or indirectly
       resulting from the publication, use of, application, or reliance on this document. NEMA
       disclaims and makes no guaranty or warranty, expressed or implied, as to the accuracy or
@@ -32,7 +32,7 @@
       information in this document will fulfill any of your particular purposes or needs. NEMA does
       not undertake to guarantee the performance of any individual manufacturer or seller's products
       or services by virtue of this standard or guide.</para>
-    <para>In publishing and making this document available, NEMA is not undertaking to render
+    <para xml:id="para_a70658ab-726d-41a7-be6c-e10f1d9cca4a">In publishing and making this document available, NEMA is not undertaking to render
       professional or other services for or on behalf of any person or entity, nor is NEMA
       undertaking to perform any duty owed by any person or entity to someone else. Anyone using
       this document should rely on his or her own independent judgment or, as appropriate, seek the
@@ -40,7 +40,7 @@
       circumstances. Information and other standards on the topic covered by this publication may be
       available from other sources, which the user may wish to consult for additional views or
       information not covered by this publication.</para>
-    <para>NEMA has no power, nor does it undertake to police or enforce compliance with the contents
+    <para xml:id="para_ae4d3d9d-7556-4876-a4cc-de365dc0a6c6">NEMA has no power, nor does it undertake to police or enforce compliance with the contents
       of this document. NEMA does not certify, test, or inspect products, designs, or installations
       for safety or health purposes. Any certification or other statement of compliance with any
       health or safety-related information in this document shall not be attributable to NEMA and is
@@ -48,93 +48,93 @@
   </chapter>
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
-    <para>This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para>The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_d38dcd6e-56f5-4548-b1d6-3118ac63fa9b">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
+    <para xml:id="para_882e39f2-e05f-4512-9679-77d6a2fa6cd2">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
   </chapter>
   <chapter label="" status="1" xml:id="chapter_Introduction">
     <title>Introduction</title>
-    <para>Digital Imaging and Communications in Medicine (DICOM) is the standard for the communication and management of medical imaging information and related data.</para>
+    <para xml:id="para_c197d1ed-d971-43fa-9740-59df271129e5">Digital Imaging and Communications in Medicine (DICOM) is the standard for the communication and management of medical imaging information and related data.</para>
     <section label="" status="2" xml:id="sect_History">
       <title>History</title>
-      <para>With the introduction of computed tomography (CT) followed by other digital diagnostic
+      <para xml:id="para_0f07e136-3ada-463c-8073-19dae3b76a69">With the introduction of computed tomography (CT) followed by other digital diagnostic
         imaging modalities in the 1970's, and the increasing use of computers in clinical
         applications, the American College of Radiology (ACR) and the National Electrical
         Manufacturers Association (NEMA) recognized the emerging need for a standard method for
         transferring images and associated information between devices manufactured by various
         vendors. These devices produce a variety of digital image formats.</para>
-      <para>The American College of Radiology (ACR) and the National Electrical Manufacturers
+      <para xml:id="para_b3b697a6-f1cc-4145-8b63-71ee23f3084e">The American College of Radiology (ACR) and the National Electrical Manufacturers
         Association (NEMA) formed a joint committee in 1983 to develop a standard to:</para>
-      <para>
+      <para xml:id="para_be25197e-2e12-4a83-908c-3ee729088495">
         <itemizedlist>
           <listitem>
-            <para>Promote communication of digital image information, regardless of device
+            <para xml:id="para_d29090b2-888d-4947-b102-d50b660d285d">Promote communication of digital image information, regardless of device
               manufacturer</para>
           </listitem>
           <listitem>
-            <para>Facilitate the development and expansion of picture archiving and communication
+            <para xml:id="para_66b53335-cd6e-467e-9245-b9634cf11a78">Facilitate the development and expansion of picture archiving and communication
               systems (PACS) that can also interface with other systems of hospital
               information</para>
           </listitem>
           <listitem>
-            <para>Allow the creation of diagnostic information data bases that can be interrogated
+            <para xml:id="para_c947e565-ab1c-4cd5-97ba-a2b85ddbeeb8">Allow the creation of diagnostic information data bases that can be interrogated
               by a wide variety of devices distributed geographically.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para>ACR-NEMA Standards Publication No. 300-1985, published in 1985 was designated version
+      <para xml:id="para_ff76949a-0981-40dd-a0a8-826f7cc55188">ACR-NEMA Standards Publication No. 300-1985, published in 1985 was designated version
         1.0. The Standard was followed by two revisions: No. 1, dated October 1986 and No. 2, dated
         January 1988.</para>
-      <para>ACR-NEMA Standards Publication No. 300-1988, published in 1988 was designated version
+      <para xml:id="para_ab30fa0a-8642-4195-a5ba-c0701fc684c5">ACR-NEMA Standards Publication No. 300-1988, published in 1988 was designated version
         2.0. It included version 1.0, the published revisions, and additional revisions. It also
         included new material to provide command support for display devices, to introduce a new
         hierarchy scheme to identify an image, and to add data elements for increased specificity
         when describing an image.</para>
-      <para>These Standards Publications specified a hardware interface, a minimum set of software
+      <para xml:id="para_1a13d6c5-8bc2-4554-84ae-e2b3a8faa779">These Standards Publications specified a hardware interface, a minimum set of software
         commands, and a consistent set of data formats.</para>
     </section>
     <section label="" status="2" xml:id="sect_DICOMStandard">
       <title>The DICOM Standard</title>
-      <para>This Standard, which is currently designated Digital Imaging and Communications in
+      <para xml:id="para_f31f883a-165b-4fdd-b57f-0d5253aa4ac2">This Standard, which is currently designated Digital Imaging and Communications in
         Medicine (DICOM), embodies a number of major enhancements to previous versions of the
         ACR-NEMA Standard:</para>
-      <para>
+      <para xml:id="para_f251abd6-c0ba-4337-8044-e35386baa3a7">
         <itemizedlist>
           <listitem>
-            <para>It is applicable to a networked environment. The ACR-NEMA Standard was applicable
+            <para xml:id="para_8dc4f1ea-d6c9-479c-9d06-6aa317e18cb4">It is applicable to a networked environment. The ACR-NEMA Standard was applicable
               in a point-to-point environment only; for operation in a networked environment a
               Network Interface Unit (NIU) was required. DICOM supports operation in a networked
               environment using the industry standard networking protocol TCP/IP.</para>
           </listitem>
           <listitem>
-            <para>It is applicable to an off-line media environment. The ACR-NEMA Standard did not
+            <para xml:id="para_cd7615a9-a1ce-48e5-8794-c54d9650a966">It is applicable to an off-line media environment. The ACR-NEMA Standard did not
               specify a file format or choice of physical media or logical filesystem. DICOM
               supports operation in an off-line media environment using industry standard media such
               as CD-R and MOD and logical filesystems such as ISO 9660 and PC File System
               (FAT16).</para>
           </listitem>
           <listitem>
-            <para>It specifies how devices claiming conformance to the Standard react to commands
+            <para xml:id="para_daa65848-d128-471d-aaeb-c20161536e9f">It specifies how devices claiming conformance to the Standard react to commands
               and data being exchanged. The ACR-NEMA Standard was confined to the transfer of data,
               but DICOM specifies, through the concept of Service Classes, the semantics of commands
               and associated data.</para>
           </listitem>
           <listitem>
-            <para>It specifies levels of conformance. The ACR-NEMA Standard specified a minimum
+            <para xml:id="para_d2a0ba35-3fc1-4b61-a779-05311005737a">It specifies levels of conformance. The ACR-NEMA Standard specified a minimum
               level of conformance. DICOM explicitly describes how an implementor must structure a
               Conformance Statement to select specific options.</para>
           </listitem>
           <listitem>
-            <para>It is structured as a multi-part document. This facilitates evolution of the
+            <para xml:id="para_4fb98b8e-e2b8-47d4-a2e3-e8cbc476c205">It is structured as a multi-part document. This facilitates evolution of the
               Standard in a rapidly evolving environment by simplifying the addition of new
               features. ISO directives that define how to structure multi-part documents have been
               followed in the construction of the DICOM Standard.</para>
           </listitem>
           <listitem>
-            <para> It introduces explicit Information Objects not only for images and graphics but
+            <para xml:id="para_cceb855c-648d-45b2-bcd3-0c20c258a0b9"> It introduces explicit Information Objects not only for images and graphics but
               also for waveforms, reports, printing, etc.</para>
           </listitem>
           <listitem>
-            <para>It specifies an established technique for uniquely identifying any Information
+            <para xml:id="para_ed5b9ea4-0f90-4a87-af56-3ada86b43246">It specifies an established technique for uniquely identifying any Information
               Object. This facilitates unambiguous definitions of relationships between Information
               Objects as they are acted upon across the network.</para>
           </listitem>
@@ -143,7 +143,7 @@
     </section>
     <section label="" status="2" xml:id="sect_CurrentDirection">
       <title>Current Direction</title>
-      <para>The DICOM Standard is an evolving standard and it is maintained in accordance with the
+      <para xml:id="para_92d8fc17-e16c-4f3f-aa59-4a363e85e5ea">The DICOM Standard is an evolving standard and it is maintained in accordance with the
         Procedures of the DICOM Standards Committee. Proposals for enhancements are forthcoming from
         the DICOM Committee member organizations based on input from users of the Standard. These
         proposals are considered for inclusion in future editions of the Standard. A requirement in
@@ -151,65 +151,65 @@
     </section>
     <section label="" status="2" xml:id="sect_Retirement">
       <title>Retirement</title>
-      <para>Part of the maintenance process involves retirement of sections of the Standard,
+      <para xml:id="para_38486599-c754-4f17-87ad-987c1542a50f">Part of the maintenance process involves retirement of sections of the Standard,
         including but not limited to, IODs, Attributes, Service Classes, SOP Classes, Transfer
         Syntaxes and Protocols.</para>
-      <para>Retirement does not imply that these features cannot be used. However, the DICOM
+      <para xml:id="para_0eae6a18-2317-4baf-8bc9-c7d9db9f8eb1">Retirement does not imply that these features cannot be used. However, the DICOM
         Standards Committee will not maintain the documentation of retired features. The reader is
         referred to earlier editions of the Standard.</para>
-      <para>The use of the retired features is deprecated in new implementations, in favor of those
+      <para xml:id="para_d3113d8d-92c2-466a-9caa-fdeb11436b1f">The use of the retired features is deprecated in new implementations, in favor of those
         alternatives remaining in the standard.</para>
     </section>
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
-    <para>PS3.1 provides an overview of the entire Digital Imaging and Communications in Medicine
+    <para xml:id="para_2017ee20-1d0a-4e65-ad76-eb8b297cda3a">PS3.1 provides an overview of the entire Digital Imaging and Communications in Medicine
       (DICOM) Standard. It describes the history, scope, goals, and structure of the Standard. In
       particular, it contains a brief description of the contents of each part of the
       Standard.</para>
-    <para>The DICOM Standard facilitates interoperability of medical imaging equipment by
+    <para xml:id="para_d255c7c7-c0dc-46ff-8c21-43e1546688de">The DICOM Standard facilitates interoperability of medical imaging equipment by
       specifying:</para>
-    <para>
+    <para xml:id="para_c4aee28b-f6c1-49a7-a2b8-585665d3ccfc">
       <itemizedlist>
         <listitem>
-          <para>For network communications, a set of protocols to be followed by devices claiming
+          <para xml:id="para_3e2dd910-26a3-40b6-9be8-34339e7e458e">For network communications, a set of protocols to be followed by devices claiming
               conformance to the Standard.</para>
         </listitem>
         <listitem>
-          <para>The syntax and semantics of Commands and associated information that can be
+          <para xml:id="para_2d012715-a95a-4b23-94cf-2fc870c25884">The syntax and semantics of Commands and associated information that can be
             exchanged using these protocols.</para>
         </listitem>
         <listitem>
-          <para>For media communication, a set of media storage services to be followed by devices
+          <para xml:id="para_de5b591c-3858-47d4-af37-0da3de7ce937">For media communication, a set of media storage services to be followed by devices
             claiming conformance to the Standard, as well as a File Format and a medical directory
             structure to facilitate access to the images and related information stored on
             interchange media.</para>
         </listitem>
         <listitem>
-          <para>Information that must be supplied with an implementation for which conformance to
+          <para xml:id="para_16e42287-7940-4186-8381-1bc32f4d1ef9">Information that must be supplied with an implementation for which conformance to
             the Standard is claimed.</para>
         </listitem>
       </itemizedlist>
     </para>
-    <para>The DICOM Standard does not specify:</para>
-    <para>
+    <para xml:id="para_82b08f72-8223-4fff-b824-7e26b3f4429f">The DICOM Standard does not specify:</para>
+    <para xml:id="para_b02ecb93-bede-426f-a448-eb62c5375019">
       <itemizedlist>
         <listitem>
-          <para>The implementation details of any features of the Standard on a device claiming
+          <para xml:id="para_e25fbe43-5c0b-4db3-ae07-6256f0e18ae4">The implementation details of any features of the Standard on a device claiming
               conformance.
           </para>
         </listitem>
         <listitem>
-          <para>The overall set of features and functions to be expected from a system implemented
+          <para xml:id="para_bbd0115f-12ab-4665-870d-43420ba9bf3e">The overall set of features and functions to be expected from a system implemented
             by integrating a group of devices each claiming DICOM conformance.</para>
         </listitem>
         <listitem>
-          <para>A testing/validation procedure to assess an implementation's conformance to the
+          <para xml:id="para_6605eae4-88a5-4ab1-af9e-955832deeaa8">A testing/validation procedure to assess an implementation's conformance to the
             Standard.</para>
         </listitem>
       </itemizedlist>
     </para>
-    <para>The DICOM Standard pertains to the field of Medical Informatics. Within that field, it
+    <para xml:id="para_34ba4ab2-828c-4305-a704-930c077376ee">The DICOM Standard pertains to the field of Medical Informatics. Within that field, it
       addresses the exchange of digital information between medical imaging equipment and other
       systems. Because such equipment may interoperate with other medical devices, the scope of this
       Standard needs to overlap with other areas of medical informatics. However, the DICOM Standard
@@ -217,7 +217,7 @@
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
-    <para/>
+    <para xml:id="para_d480ea5b-96f8-4a78-a381-909c8600ec4b"/>
     <bibliography>
       <title/>
       <biblioentry xml:id="biblio_ISODirectives3">
@@ -256,38 +256,38 @@
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
-    <para/>
+    <para xml:id="para_892f86ea-a08b-43d4-92b2-fb556ab0774d"/>
     <glossary>
       <title/>
       <glossentry>
         <glossterm>Attribute</glossterm>
         <glossdef>
-          <para>A property of an Information Object. An Attribute
+          <para xml:id="para_6918bd83-fed4-4a97-882a-3e200b3c2878">A property of an Information Object. An Attribute
         has a name and a value that are independent of any encoding scheme.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>Command</glossterm>
         <glossdef>
-          <para>A request to operate on information across a network.</para>
+          <para xml:id="para_19044bbb-225f-450f-bfc7-bb06da9c810a">A request to operate on information across a network.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>Command Element</glossterm>
         <glossdef>
-          <para>An encoding of a parameter of a command that conveys this parameter's value.</para>
+          <para xml:id="para_006b42b8-8b45-4b5f-9871-cab6b7163466">An encoding of a parameter of a command that conveys this parameter's value.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>Command Stream</glossterm>
         <glossdef>
-          <para>The result of encoding a set of DICOM Command Elements using the DICOM encoding scheme.</para>
+          <para xml:id="para_6acc4490-c493-4b9c-bc27-a359b4453727">The result of encoding a set of DICOM Command Elements using the DICOM encoding scheme.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>Conformance Statement</glossterm>
         <glossdef>
-          <para>A formal statement that describes a
+          <para xml:id="para_c43f5184-0342-4a51-9b07-7b5fd5545993">A formal statement that describes a
       specific product implementation that uses the DICOM Standard. It specifies the Service
       Classes, Information Objects, and Communication Protocols supported by the implementation.</para>
         </glossdef>
@@ -295,7 +295,7 @@
       <glossentry>
         <glossterm>Data Dictionary</glossterm>
         <glossdef>
-          <para>A registry of DICOM Data Elements that assigns a unique tag, a name,
+          <para xml:id="para_f0a61682-18f1-4d68-a613-9361e05b0d17">A registry of DICOM Data Elements that assigns a unique tag, a name,
         value characteristics, and semantics to each Data
       Element.</para>
         </glossdef>
@@ -303,13 +303,13 @@
       <glossentry>
         <glossterm>Data Element</glossterm>
         <glossdef>
-          <para>A unit of information as defined by a single entry in the data dictionary.</para>
+          <para xml:id="para_fb6c4bfb-93ea-4500-8c94-2ea10f3a26a6">A unit of information as defined by a single entry in the data dictionary.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>Data Set</glossterm>
         <glossdef>
-          <para>Exchanged information consisting of a structured
+          <para xml:id="para_ad8cecfa-d44a-49b4-ae75-801f0cf960ef">Exchanged information consisting of a structured
       set of Attributes. The value of each Attribute in a Data Set is expressed as a Data
       Element.</para>
         </glossdef>
@@ -317,7 +317,7 @@
       <glossentry>
         <glossterm>Data Stream</glossterm>
         <glossdef>
-          <para>The result of encoding a Data Set using the
+          <para xml:id="para_5e3c3316-1066-4125-9cc0-e5869ac21f0f">The result of encoding a Data Set using the
       DICOM encoding scheme (Data Element Numbers and representations as specified by the Data
       Dictionary).</para>
         </glossdef>
@@ -325,11 +325,11 @@
       <glossentry>
         <glossterm>Information Object</glossterm>
         <glossdef>
-          <para>An abstraction of a real information
+          <para xml:id="para_34d8edce-dea8-4043-9d4a-653d4f228634">An abstraction of a real information
       entity (e.g., CT Image, Structured Report, etc.) that is acted upon by one or more DICOM
       Commands.</para>
           <note>
-            <para>This term is primarily used in PS3.1, with a few references in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. It is an
+            <para xml:id="para_8de67f41-9f1d-48bb-afd0-238392f3b865">This term is primarily used in PS3.1, with a few references in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. It is an
             informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. In all other
             parts of the DICOM Standard this formal term is known as an Information Object
             Definition.</para>
@@ -339,10 +339,10 @@
       <glossentry>
         <glossterm>Information Object Class</glossterm>
         <glossdef>
-          <para>A formal description of an Information Object, which includes a description of its purpose and
+          <para xml:id="para_0612db04-d94d-4220-bb9f-20c044587a15">A formal description of an Information Object, which includes a description of its purpose and
           the Attributes it possesses. It does not include values for these attributes.</para>
           <note>
-            <para>This term is only used in PS3.1. It is an informal term corresponding to a formal
+            <para xml:id="para_544fcd11-963a-484e-bb96-8e4a4409235d">This term is only used in PS3.1. It is an informal term corresponding to a formal
             term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair Class
             or more commonly as a SOP Class.</para>
           </note>
@@ -351,10 +351,10 @@
       <glossentry>
         <glossterm>Information Object Instance</glossterm>
         <glossdef>
-          <para>A representation of an occurence of an real-world entity, which includes values for the
+          <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurence of an real-world entity, which includes values for the
           Attributes of the Information Object Class to which the entity belongs.</para>
           <note>
-            <para>This term is only used in PS3.1. It is an informal term corresponding to a formal
+            <para xml:id="para_f46795a4-3588-4be5-8d4a-1e2e9bbed96e">This term is only used in PS3.1. It is an informal term corresponding to a formal
             term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair
             Instance or more commonly as a SOP Instance.</para>
           </note>
@@ -363,7 +363,7 @@
       <glossentry>
         <glossterm>Message</glossterm>
         <glossdef>
-          <para>A data unit of the Message Exchange Protocol
+          <para xml:id="para_bda3f417-dad1-4296-abed-8288c235ccfd">A data unit of the Message Exchange Protocol
       exchanged between two cooperating DICOM Applications. A Message is composed of a Command
       Stream followed by an optional Data Stream.</para>
         </glossdef>
@@ -371,7 +371,7 @@
       <glossentry>
         <glossterm>Service Class</glossterm>
         <glossdef>
-          <para>A structured description of a service that is
+          <para xml:id="para_e938b4ab-8346-47e4-90f7-0116eaad38c2">A structured description of a service that is
       supported by cooperating DICOM Applications using specific DICOM Commands acting on a specific
       class of Information Object.</para>
         </glossdef>
@@ -384,155 +384,156 @@
       <varlistentry>
         <term>ACSE</term>
         <listitem>
-          <para>Association Control Service Element</para>
+          <para xml:id="para_2ff05edb-de2d-43f1-bf22-6d495ca774b6">Association Control Service Element</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>CT</term>
         <listitem>
-          <para>Computed Tomography</para>
+          <para xml:id="para_57c9b597-effe-4b96-a052-f0dd3d804821">Computed Tomography</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>DICOM</term>
         <listitem>
-          <para>Digital Imaging and Communications in Medicine</para>
+          <para xml:id="para_27c4717c-7201-4038-a14a-61876e7b84d0">Digital Imaging and Communications in Medicine</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>HIS</term>
         <listitem>
-          <para>Hospital Information System</para>
+          <para xml:id="para_ad7613ba-5318-47a2-965e-dfd59408ec7d">Hospital Information System</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>JIRA</term>
         <listitem>
-          <para>Japan Medical Imaging and Radiological Systems Industries Association</para>
+          <para xml:id="para_462513c9-1938-41f7-b776-241aa1cf4180">Japan Medical Imaging and Radiological Systems Industries Association</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>OSI</term>
         <listitem>
-          <para>Open Systems Interconnection</para>
+          <para xml:id="para_a612b68e-7b33-4cce-b4a4-602fca9c1549">Open Systems Interconnection</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>PACS</term>
         <listitem>
-          <para>Picture Archiving and Communication Systems</para>
+          <para xml:id="para_e61ca775-dc6e-4acb-b816-3d6f3c4079b2">Picture Archiving and Communication Systems</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>REST</term>
         <listitem>
-          <para>Representational State Transfer</para>
+          <para xml:id="para_c60e17b8-4a34-4258-a37f-594861a74336">Representational State Transfer</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>RESTful</term>
         <listitem>
-          <para>A RESTful Web service is a Web service implemented using REST architecture and HTTP (see
+          <para xml:id="para_3ddd07b0-6bfb-4865-98ab-e3781dbb1db3">A RESTful Web service is a Web service implemented using REST architecture and HTTP (see
         <link xl:href="http://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"/>)</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>RIS</term>
         <listitem>
-          <para>Radiology Information System</para>
+          <para xml:id="para_012920c3-044d-4405-b48a-cbab3d18a8b9">Radiology Information System</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>STOW-RS</term>
         <listitem>
-          <para>STore Over the Web by RESTful Services</para>
+          <para xml:id="para_15a0a882-025a-4d4d-84e7-f161bd4cda7b">STore Over the Web by RESTful Services</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>TCP/IP</term>
         <listitem>
-          <para>Transmission Control Protocol/Internet Protocol</para>
+          <para xml:id="para_bbb5cf73-2e31-46d1-8836-568754128804">Transmission Control Protocol/Internet Protocol</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>WADO-RS</term>
         <listitem>
-          <para>Web Access to DICOM Objects by RESTful Services</para>
+          <para xml:id="para_04685d69-3464-4e35-ae01-a4c6c0a4775a">Web Access to DICOM Objects by RESTful Services</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>WADO-URI</term>
         <listitem>
-          <para>Web Access to DICOM Objects by URI</para>
+          <para xml:id="para_065d1572-aceb-41c8-b52c-72bce2a4850f">Web Access to DICOM Objects by URI</para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>WADO-WS</term>
         <listitem>
-          <para>Web Access to DICOM Objects by Web Services (WS*)</para>
+          <para xml:id="para_14cc1188-89d9-4e20-a03f-98d0b117d043">Web Access to DICOM Objects by Web Services (WS*)</para>
         </listitem>
       </varlistentry>
     </variablelist>
   </chapter>
   <chapter label="5" status="1" xml:id="chapter_5">
     <title>Goals of The DICOM Standard</title>
-    <para>The DICOM Standard facilitates interoperability of devices claiming conformance. In
+    <para xml:id="para_41d06a43-df74-4eb7-92d5-a88a6bafc255">The DICOM Standard facilitates interoperability of devices claiming conformance. In
       particular, it:</para>
-    <para>
+    <para xml:id="para_076a5f1e-abc7-44fa-b811-746b1ce9ca9c">
       <itemizedlist>
         <listitem>
-          <para>Addresses the semantics of Commands and associated data. For devices to interact,
+          <para xml:id="para_940bb802-a2d9-4fae-aa1d-e66583762ef7">Addresses the semantics of Commands and associated data. For devices to interact,
             there must be standards on how devices are expected to react to Commands and associated
             data, not just the information that is to be moved between devices.</para>
         </listitem>
         <listitem>
-          <para>Addresses the semantics of file services, file formats and information directories
+          <para xml:id="para_fda94652-6cd0-4eb5-9fc4-cda920b0bcc3">Addresses the semantics of file services, file formats and information directories
             necessary for off-line communication.</para>
         </listitem>
         <listitem>
-          <para>Is explicit in defining the conformance requirements of implementations of the
+          <para xml:id="para_f50732ca-fb95-4139-9118-24ab620709f3">Is explicit in defining the conformance requirements of implementations of the
             Standard. In particular, a conformance statement must specify enough information to
             determine the functions for which interoperability can be expected with another device
             claiming conformance.</para>
         </listitem>
         <listitem>
-          <para>Facilitates operation in a networked environment.</para>
+          <para xml:id="para_4cf7aeab-2161-465c-8306-4d2cddcac199">Facilitates operation in a networked environment.</para>
         </listitem>
         <listitem>
-          <para>Is structured to accommodate the introduction of new services, thus facilitating
+          <para xml:id="para_a74745a5-2250-484c-9dee-9be441736bd6">Is structured to accommodate the introduction of new services, thus facilitating
             support for future medical imaging applications.</para>
         </listitem>
         <listitem>
-          <para>Makes use of existing international standards wherever applicable, and itself
+          <para xml:id="para_91d71d4c-082a-412a-b8a3-b73d57f6d290">Makes use of existing international standards wherever applicable, and itself
             conforms to established documentation guidelines for international standards.</para>
         </listitem>
       </itemizedlist>
     </para>
-    <para>Even though the DICOM Standard has the potential to facilitate implementations of PACS
+    <para xml:id="para_ddc54868-d6d5-40ba-96ea-35cf2af9acbf">Even though the DICOM Standard has the potential to facilitate implementations of PACS
       solutions, use of the Standard alone does not guarantee that all the goals of a PACS will be
       met. This Standard facilitates interoperability of systems claiming conformance in a
       multi-vendor environment, but does not, by itself, guarantee interoperability.</para>
-    <para>This Standard has been developed with an emphasis on diagnostic medical imaging as
+    <para xml:id="para_29f3fde2-b2ec-4298-895c-c17751096664">This Standard has been developed with an emphasis on diagnostic medical imaging as
       practiced in radiology, cardiology and related disciplines; however, it is also applicable to
       a wide range of image and non-image related information exchanged in clinical and other
       medical environments.</para>
-    <para><xref linkend="figure_5-1" xrefstyle="select: label"/> presents the general communication model of the Standard, which spans both
+    <para xml:id="para_7514f59e-066a-4fc9-8297-695395626c95">
+<xref linkend="figure_5-1" xrefstyle="select: label"/> presents the general communication model of the Standard, which spans both
       network (on-line) and media storage interchange (off-line) communication. Applications may
       relay on either on of the following boundaries:</para>
-    <para>
+    <para xml:id="para_3adcc852-71e5-4e56-b59e-4c46e4133c04">
       <itemizedlist>
         <listitem>
-          <para>the Upper Layer Service, which provides independence from specific physical
+          <para xml:id="para_eb67ee46-3400-44ec-ae0c-d5af8e2011ea">the Upper Layer Service, which provides independence from specific physical
             networking communication support and protocols such as TCP/IP. </para>
         </listitem>
         <listitem>
-          <para>The Basic DICOM File Service, which provides access to Storage Media independently
+          <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">The Basic DICOM File Service, which provides access to Storage Media independently
             from specific media storage formats and file structures.</para>
         </listitem>
       </itemizedlist>
     </para>
-    <para>
-      <figure xml:id="figure_5-1" label="5-1" pgwide="1">
+    <para xml:id="para_ea38162d-7112-496c-b343-ee5e48f366d4">
+      <figure label="5-1" pgwide="1" xml:id="figure_5-1">
         <title>General Communication Model</title>
         <mediaobject>
           <imageobject>
@@ -544,116 +545,153 @@
   </chapter>
   <chapter label="6" status="1" xml:id="chapter_6">
     <title>Overview of The Content of The DICOM Standard</title>
-    <section xml:id="sect_6.1" label="6.1" status="2">
+    <section label="6.1" status="2" xml:id="sect_6.1">
       <title>Document Structure</title>
-      <para>DICOM consists of the following parts:</para>
+      <para xml:id="para_97e20a36-ae4e-4c38-8257-72a58ab88c9d">DICOM consists of the following parts:</para>
       <itemizedlist>
         <listitem>
-          <para>PS3.1: Introduction and Overview (this document)</para>
+          <para xml:id="para_e199e49c-e2f1-413e-9e58-65ad92df4ede">PS3.1: Introduction and Overview (this document)</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.2" targetptr="PS3.2">PS3.2: Conformance</olink></para>
+          <para xml:id="para_b6e49d56-c4d5-4986-bf41-cb9bd0a3dd80">
+<olink targetdoc="PS3.2" targetptr="PS3.2">PS3.2: Conformance</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.3" targetptr="PS3.3">PS3.3: Information Object Definitions</olink></para>
+          <para xml:id="para_c441bb8b-d6fb-4752-b1ef-aeb3306c6f29">
+<olink targetdoc="PS3.3" targetptr="PS3.3">PS3.3: Information Object Definitions</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.4" targetptr="PS3.4">PS3.4: Service Class Specifications</olink></para>
+          <para xml:id="para_c0f85f60-6899-4a5b-9724-ab2804d62e05">
+<olink targetdoc="PS3.4" targetptr="PS3.4">PS3.4: Service Class Specifications</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.5" targetptr="PS3.5">PS3.5: Data Structures and Encoding</olink></para>
+          <para xml:id="para_e55c4ca7-c163-4a70-a12a-4823913b561f">
+<olink targetdoc="PS3.5" targetptr="PS3.5">PS3.5: Data Structures and Encoding</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.6" targetptr="PS3.6">PS3.6: Data Dictionary</olink></para>
+          <para xml:id="para_f63cb4a4-af61-4294-b1ea-4e555c2108d8">
+<olink targetdoc="PS3.6" targetptr="PS3.6">PS3.6: Data Dictionary</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.7" targetptr="PS3.7">PS3.7: Message Exchange</olink></para>
+          <para xml:id="para_326cf503-6f35-4e7f-a690-f2c0d02ad7e6">
+<olink targetdoc="PS3.7" targetptr="PS3.7">PS3.7: Message Exchange</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.8" targetptr="PS3.8">PS3.8: Network Communication Support for Message Exchange</olink></para>
+          <para xml:id="para_cdca89c7-fed6-4cc8-a4e6-b14f3b6cd9a3">
+<olink targetdoc="PS3.8" targetptr="PS3.8">PS3.8: Network Communication Support for Message Exchange</olink>
+</para>
         </listitem>
         <listitem>
-          <para>PS3.9: Retired</para>
+          <para xml:id="para_faf7f297-d093-4cc3-9065-5277160c315b">PS3.9: Retired</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.10" targetptr="PS3.10">PS3.10: Media Storage and File Format for Media Interchange</olink></para>
+          <para xml:id="para_d5e4e97f-6eed-4470-9f04-32fb1f9d4fda">
+<olink targetdoc="PS3.10" targetptr="PS3.10">PS3.10: Media Storage and File Format for Media Interchange</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.11" targetptr="PS3.11">PS3.11: Media Storage Application Profiles</olink></para>
+          <para xml:id="para_2dc49567-84f4-461e-aff8-e4ae9a456137">
+<olink targetdoc="PS3.11" targetptr="PS3.11">PS3.11: Media Storage Application Profiles</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.12" targetptr="PS3.12">PS3.12: Formats and Physical Media</olink></para>
+          <para xml:id="para_520a7854-3e35-4146-8d2a-1b5b64efd0dc">
+<olink targetdoc="PS3.12" targetptr="PS3.12">PS3.12: Formats and Physical Media</olink>
+</para>
         </listitem>
         <listitem>
-          <para>PS3.13: Retired</para>
+          <para xml:id="para_e3dc69bc-48a1-4d04-85a0-47c144ef750a">PS3.13: Retired</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.14" targetptr="PS3.14">PS3.14: Grayscale Standard Display Function</olink></para>
+          <para xml:id="para_4df1cddf-2ff2-41d4-bb30-86dbbd8875d9">
+<olink targetdoc="PS3.14" targetptr="PS3.14">PS3.14: Grayscale Standard Display Function</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.15" targetptr="PS3.15">PS3.15: Security and System Management Profiles</olink></para>
+          <para xml:id="para_10c2f72c-9d8f-4dfe-a22f-7aba2418a22b">
+<olink targetdoc="PS3.15" targetptr="PS3.15">PS3.15: Security and System Management Profiles</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.16" targetptr="PS3.16">PS3.16: Content Mapping Resource</olink></para>
+          <para xml:id="para_9fb4a8ca-5f8f-4dbb-bde8-e63bd32bd333">
+<olink targetdoc="PS3.16" targetptr="PS3.16">PS3.16: Content Mapping Resource</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.17" targetptr="PS3.17">PS3.17: Explanatory Information</olink></para>
+          <para xml:id="para_eb960f58-1a05-4bc1-9757-2f2ec361007e">
+<olink targetdoc="PS3.17" targetptr="PS3.17">PS3.17: Explanatory Information</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.18" targetptr="PS3.18">PS3.18: Web Services</olink></para>
+          <para xml:id="para_cb5b5ebc-7272-479b-ae25-d1a05e2665e5">
+<olink targetdoc="PS3.18" targetptr="PS3.18">PS3.18: Web Services</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.19" targetptr="PS3.19">PS3.19: Application Hosting</olink></para>
+          <para xml:id="para_c87daed3-6a01-4975-b2a2-965295526782">
+<olink targetdoc="PS3.19" targetptr="PS3.19">PS3.19: Application Hosting</olink>
+</para>
         </listitem>
         <listitem>
-          <para><olink targetdoc="PS3.20" targetptr="PS3.20">PS3.20: Imaging Reports using HL7 Clinical Document Architecture</olink></para>
+          <para xml:id="para_cc76adf4-9f76-463e-bd77-d82bffe77394">
+<olink targetdoc="PS3.20" targetptr="PS3.20">PS3.20: Imaging Reports using HL7 Clinical Document Architecture</olink>
+</para>
         </listitem>
       </itemizedlist>
-      <para>These parts of the Standard are related but independent documents. A brief description
+      <para xml:id="para_559273ae-baec-40c4-9f4d-b5182bb599db">These parts of the Standard are related but independent documents. A brief description
         of each Part is provided in this section.</para>
     </section>
-    <section xml:id="sect_6.2" label="6.2" status="2">
+    <section label="6.2" status="2" xml:id="sect_6.2">
       <title>PS3.2: Conformance</title>
-      <para><olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> of the DICOM Standard defines principles that implementations claiming
+      <para xml:id="para_bd45173f-bbab-4aed-94ae-b5d8f4dacd5a">
+<olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> of the DICOM Standard defines principles that implementations claiming
         conformance to the Standard shall follow:</para>
-      <para>
+      <para xml:id="para_85f43bc4-16be-492e-a8e3-4b9252161180">
         <itemizedlist>
           <listitem>
-            <para>Conformance requirements. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> specifies the general requirements that must be
+            <para xml:id="para_26d27b1d-ad3d-405e-8703-90fb681ddefb">Conformance requirements. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> specifies the general requirements that must be
               met by any implementation claiming conformance. It references the conformance sections
               of other parts of the Standard.</para>
           </listitem>
           <listitem>
-            <para>Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> defines the structure of a Conformance Statement. It
+            <para xml:id="para_a58ee982-9bc5-4719-bd8a-2063225d3812">Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> defines the structure of a Conformance Statement. It
               specifies the information that must be present in a Conformance Statement. It
               references the Conformance Statement sections of other parts of the Standard.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para><olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> does not specify a testing/validation procedure to assess an implementation's
+      <para xml:id="para_8971f950-0d5c-47f3-9e80-05515bdfca6c">
+<olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> does not specify a testing/validation procedure to assess an implementation's
         conformance to the Standard.</para>
-      <para><xref linkend="figure_6.2-1" xrefstyle="select: label"/> and <xref linkend="figure_6.2-2" xrefstyle="select: label"/> depict the construction process for a Conformance Statement for
+      <para xml:id="para_74f8cb8b-024d-4740-b122-66a91a059437">
+<xref linkend="figure_6.2-1" xrefstyle="select: label"/> and <xref linkend="figure_6.2-2" xrefstyle="select: label"/> depict the construction process for a Conformance Statement for
         both network communication and media exchange. A Conformance Statement consists of the
         following parts:</para>
-      <para>
+      <para xml:id="para_4165e61d-2015-4fa8-b11f-cf4373de0f86">
         <itemizedlist>
           <listitem>
-            <para>Set of Information Objects that is recognized by this implementation</para>
+            <para xml:id="para_62593999-27cf-445b-aef8-5cfe8e1286e9">Set of Information Objects that is recognized by this implementation</para>
           </listitem>
           <listitem>
-            <para>Set of Service Classes that this implementation supports</para>
+            <para xml:id="para_e702c702-30fb-4c86-98aa-7371909b6b6d">Set of Service Classes that this implementation supports</para>
           </listitem>
           <listitem>
-            <para>Set of communications protocols or physical media that this implementation
+            <para xml:id="para_3b632bdc-7851-40c0-9f3a-f4b69dae0b3f">Set of communications protocols or physical media that this implementation
               supports</para>
           </listitem>
           <listitem>
-            <para>Set of security measures that this implementation supports.</para>
+            <para xml:id="para_5ce334c8-0a7b-4b71-8d97-bc782e6a30e4">Set of security measures that this implementation supports.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para>
-        <figure xml:id="figure_6.2-1" label="6.2-1" pgwide="1">
+      <para xml:id="para_f45708d6-0234-4517-87ab-6160fc2f7ccb">
+        <figure label="6.2-1" pgwide="1" xml:id="figure_6.2-1">
           <title>Construction Process for a Network Conformance Claim</title>
           <mediaobject>
             <imageobject>
@@ -662,8 +700,8 @@
           </mediaobject>
         </figure>
       </para>
-      <para>
-        <figure xml:id="figure_6.2-2" label="6.2-2" pgwide="1">
+      <para xml:id="para_0113578c-2ed3-4952-812a-a66cee891759">
+        <figure label="6.2-2" pgwide="1" xml:id="figure_6.2-2">
           <title>Construction Process for a Media Conformance Claim</title>
           <mediaobject>
             <imageobject>
@@ -673,226 +711,241 @@
         </figure>
       </para>
     </section>
-    <section xml:id="sect_6.3" label="6.3" status="2">
+    <section label="6.3" status="2" xml:id="sect_6.3">
       <title>PS3.3: Information Object Definitions</title>
-      <para><olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies a number of Information Object Classes that
+      <para xml:id="para_aba0d24b-4d90-4f20-860b-592fe71e6d9d">
+<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies a number of Information Object Classes that
         provide an abstract definition of real-world entities applicable to communication of digital
         medical images and related information (e.g., waveforms, structured reports, radiation
         therapy dose, etc.). Each Information Object Class definition consists of a description of
         its purpose and the Attributes that define it. An Information Object Class does not include
         the values for the Attributes that comprise its definition.</para>
-      <para>Two types of Information Object Classes are defined: normalized and composite.</para>
-      <para>Normalized Information Object Classes include only those Attributes inherent in the
+      <para xml:id="para_3b8c193d-2046-4259-b756-4145f0e7a11b">Two types of Information Object Classes are defined: normalized and composite.</para>
+      <para xml:id="para_c4dbba5f-1bea-48b5-85fe-8df5ac34b0fb">Normalized Information Object Classes include only those Attributes inherent in the
         real-world entity represented. For example the study Information Object Class, which is
         defined as normalized, contains study date and study time Attributes because they are
         inherent in an actual study. Patient name, however, is not an Attribute of the study
         Information Object Class because it is inherent in the patient on which the study was
         performed and not the study itself.</para>
-      <para>Composite Information Object Classes may additionally include Attributes that are
+      <para xml:id="para_d488d879-a222-4058-91ed-507c0471cab6">Composite Information Object Classes may additionally include Attributes that are
         related to but not inherent in the real-world entity. For example, the Computed Tomography
         Image Information Object Class, which is defined as composite, contains both Attributes that are inherent in the image (e.g., image date) and Attributes that are related to but
         not inherent in the image (e.g., patient name). Composite Information Object Classes provide
         a structured framework for expressing the communication requirements of images where image
         data and related data needs to be closely associated.</para>
-      <para>To simplify the Information Object Class definitions, the Attributes of each Information
+      <para xml:id="para_251d843c-5f76-4eaa-9375-16ed4bdbe249">To simplify the Information Object Class definitions, the Attributes of each Information
         Object Class are partitioned with similar Attributes being grouped together. These groupings
         of Attributes are specified as independent modules and may be reused by other Composite
         Information Object Classes.</para>
-      <para><olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> defines a model of the Real World along with the corresponding Information Model
+      <para xml:id="para_6a598c99-6715-48f8-bf2d-d140796b59a5">
+<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> defines a model of the Real World along with the corresponding Information Model
         that is reflected in the Information Object Definitions. Future editions of this Standard
         may extend this set of Information Objects to support new functionality.</para>
-      <para>To represent an occurrence of a real-world entity, an Information Object Instance is
+      <para xml:id="para_375ff34b-067b-4c72-b35c-537dc146100d">To represent an occurrence of a real-world entity, an Information Object Instance is
         created, which includes values for the Attributes of the Information Object Class. The
         Attribute values of this Information Object Instance may change over time to accurately
         reflect the changing state of the entity that it represents. This is accomplished by
         performing different basic operations upon the Information Object Instance to render a
         specific set of services defined as a Service Class. These Service Classes are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the Standard.</para>
     </section>
-    <section xml:id="sect_6.4" label="6.4" status="2">
+    <section label="6.4" status="2" xml:id="sect_6.4">
       <title>PS3.4: Service Class Specifications</title>
-      <para><olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard defines a number of Service Classes. A Service Class
+      <para xml:id="para_dd16f025-0039-4d38-bd01-ec611d2d4d63">
+<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard defines a number of Service Classes. A Service Class
         associates one or more Information Objects with one or more Commands to be performed upon
         these objects. Service Class Specifications state requirements for Command Elements and how
         resulting Commands are applied to Information Objects. Service Class Specifications state
         requirements for both providers and users of communications services.</para>
-      <para><olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard defines the characteristics shared by all Service Classes,
+      <para xml:id="para_b497c5c3-c439-4e6d-8f27-8c424326d331">
+<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard defines the characteristics shared by all Service Classes,
         and how a Conformance Statement to an individual Service Class is structured. It contains a
         number of normative annexes that describe individual Service Classes in detail.</para>
-      <para>Examples of Service Classes include the following:</para>
-      <para>
+      <para xml:id="para_2d372b66-d4d2-4408-973f-43642eee4ad9">Examples of Service Classes include the following:</para>
+      <para xml:id="para_74745882-eb53-4b2d-b1d3-bf60b3d169fe">
         <itemizedlist>
           <listitem>
-            <para>Storage Service Class</para>
+            <para xml:id="para_82b75555-dafe-47b5-a659-3e93562b01cc">Storage Service Class</para>
           </listitem>
           <listitem>
-            <para>Query/Retrieve Service Class</para>
+            <para xml:id="para_d80ba4d7-e030-4d2e-8d32-ad875590347c">Query/Retrieve Service Class</para>
           </listitem>
           <listitem>
-            <para>Basic Worklist Management Service Class</para>
+            <para xml:id="para_06085b4d-578f-4cae-87dc-b38228873518">Basic Worklist Management Service Class</para>
           </listitem>
           <listitem>
-            <para>Print Management Service Class.</para>
+            <para xml:id="para_2a885f6a-92d2-492b-8ed3-f760d41f6980">Print Management Service Class.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para><olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> defines the operations performed upon the Information Objects defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.
+      <para xml:id="para_9c8c9db8-d849-4be7-945b-eafa58fcea42">
+<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> defines the operations performed upon the Information Objects defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.
         <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> defines the Commands and protocols for using the Commands to accomplish the
         operations and notifications described in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
     </section>
-    <section xml:id="sect_6.5" label="6.5" status="2">
+    <section label="6.5" status="2" xml:id="sect_6.5">
       <title>PS3.5: Data Structure and Semantics</title>
-      <para><olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies how DICOM applications construct and encode the
+      <para xml:id="para_cb506be7-ebeb-4d38-b84e-7cc334623813">
+<olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies how DICOM applications construct and encode the
         Data Set information resulting from the use of the Information Objects and Services Classes
         defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard. The support of a number of standard
         image compression techniques (e.g., JPEG lossless and lossy) is specified.</para>
-      <para><olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> addresses the encoding rules necessary to construct a Data Stream to be conveyed
+      <para xml:id="para_67a9844a-0dc6-4ada-93e9-42338a3d3d0d">
+<olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> addresses the encoding rules necessary to construct a Data Stream to be conveyed
         in a Message as specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> of the DICOM Standard. This Data Stream is produced from
         the collection of Data Elements making up the Data Set.</para>
-      <para><olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> also defines the semantics of a number of generic functions that are common to
+      <para xml:id="para_9dc1f3d0-4a2c-49c2-9039-d2301bfd3632">
+<olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> also defines the semantics of a number of generic functions that are common to
         many Information Objects. <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> defines the encoding rules for international character sets
         used within DICOM.</para>
     </section>
-    <section xml:id="sect_6.6" label="6.6" status="2">
+    <section label="6.6" status="2" xml:id="sect_6.6">
       <title>PS3.6: Data Dictionary</title>
-      <para><olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> of the DICOM Standard is the centralized registry that defines the collection of
+      <para xml:id="para_988fef22-c88d-473c-a339-a5e5f782ec7a">
+<olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> of the DICOM Standard is the centralized registry that defines the collection of
         all DICOM Data Elements available to represent information, along with elements utilized for
         interchangeable media encoding and a list of uniquely identified items that are assigned by
         DICOM.</para>
-      <para>For each element, <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> specifies:</para>
-      <para>
+      <para xml:id="para_0dde5b6f-37f4-43a1-8c8a-1afc74d7e4f9">For each element, <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> specifies:</para>
+      <para xml:id="para_4b99e13f-f095-4f34-84d6-4ba05d5fcc3e">
         <itemizedlist>
           <listitem>
-            <para>its unique tag, which consists of a group and element number,</para>
+            <para xml:id="para_a3fbcde3-9eff-4c4c-adc3-e3fbdb71ddd1">its unique tag, which consists of a group and element number,</para>
           </listitem>
           <listitem>
-            <para>its name,</para>
+            <para xml:id="para_b9725eaf-e3ee-4cd7-a96d-aed15e4714c4">its name,</para>
           </listitem>
           <listitem>
-            <para>its value representation (character string, integer, etc),</para>
+            <para xml:id="para_fa843b1f-b5e8-4a0d-a234-a0cb5773defb">its value representation (character string, integer, etc),</para>
           </listitem>
           <listitem>
-            <para>its value multiplicity (how many values per attribute),</para>
+            <para xml:id="para_dd9c9d81-d6ef-41a4-ae93-bd11139e8a86">its value multiplicity (how many values per attribute),</para>
           </listitem>
           <listitem>
-            <para>whether it is retired.</para>
+            <para xml:id="para_dcd587ef-d93c-4f21-82ce-eb3364f8e0ad">whether it is retired.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para>For each uniquely identified item, <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> specifies:</para>
-      <para>
+      <para xml:id="para_4d9666e1-ea20-4da7-9b0d-6f8c7ebd85c8">For each uniquely identified item, <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> specifies:</para>
+      <para xml:id="para_27583f25-acf1-4e8a-8dd7-f83bc7085b44">
         <itemizedlist>
           <listitem>
-            <para>its unique value, which is numeric with multiple components separated by decimal
+            <para xml:id="para_f9213c23-7500-4dff-9e68-40742f50f32d">its unique value, which is numeric with multiple components separated by decimal
               points and limited to 64 characters,</para>
           </listitem>
           <listitem>
-            <para>its name,</para>
+            <para xml:id="para_f080c9df-7e6a-4362-9886-a773f01e1053">its name,</para>
           </listitem>
           <listitem>
-            <para>its type, either Information Object Class, definition of encoding for data
+            <para xml:id="para_0656f3c9-0289-4348-b78a-8fec556ae542">its type, either Information Object Class, definition of encoding for data
               transfer, or certain well known Information Object Instances,</para>
           </listitem>
           <listitem>
-            <para>in which part of the DICOM Standard it is defined.</para>
+            <para xml:id="para_87f4cf8c-5f81-47cd-8bd8-2a530364fcee">in which part of the DICOM Standard it is defined.</para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
-    <section xml:id="sect_6.7" label="6.7" status="2">
+    <section label="6.7" status="2" xml:id="sect_6.7">
       <title>PS3.7: Message Exchange</title>
-      <para><olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies both the service and protocol used by an
+      <para xml:id="para_929ca60e-13b9-4406-9118-095527359720">
+<olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies both the service and protocol used by an
         application in a medical imaging environment to exchange Messages over the communications
         support services defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>. A Message is composed of a Command Stream defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> followed by an optional Data Stream as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
-      <para><olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> specifies:</para>
-      <para>
+      <para xml:id="para_a763806a-d766-4099-b6cd-86bd7df67fd1">
+<olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> specifies:</para>
+      <para xml:id="para_c62c98f8-1461-4746-818b-08af9e1e87ae">
         <itemizedlist>
           <listitem>
-            <para>the operations and notifications (DIMSE Services) made available to Service
+            <para xml:id="para_d8b6d4a1-b4ca-452d-a80a-c5e212fb27ac">the operations and notifications (DIMSE Services) made available to Service
               Classes defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>,</para>
           </listitem>
           <listitem>
-            <para>rules to establish and terminate associations provided by the communications
+            <para xml:id="para_7b4613a1-66d1-439f-9ee1-e321067f8f93">rules to establish and terminate associations provided by the communications
               support specified in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>, and the impact on outstanding transactions,</para>
           </listitem>
           <listitem>
-            <para>rules that govern the exchange of Command requests and responses,</para>
+            <para xml:id="para_091fbd17-7076-408c-ac9d-76924a3337d5">rules that govern the exchange of Command requests and responses,</para>
           </listitem>
           <listitem>
-            <para>encoding rules necessary to construct Command Streams and Messages.</para>
+            <para xml:id="para_176b0403-53d5-4a29-ba89-e0cdf6116925">encoding rules necessary to construct Command Streams and Messages.</para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
-    <section xml:id="sect_6.8" label="6.8" status="2">
+    <section label="6.8" status="2" xml:id="sect_6.8">
       <title>PS3.8: Network Communication Support For Message Exchange</title>
-      <para><olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the communication services and the upper layer
+      <para xml:id="para_4309f366-c769-4cb9-9e76-22a9f411edd5">
+<olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the communication services and the upper layer
         protocols necessary to support, in a networked environment, communication between DICOM
         applications as specified in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>, <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, and <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. These communication
         services and protocols ensure that communication between DICOM applications is performed in
         an efficient and coordinated manner across the network.</para>
-      <para>The communication services specified in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> are a proper subset of the services
+      <para xml:id="para_6b56fe55-502d-417d-9c24-ce083b2872fe">The communication services specified in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> are a proper subset of the services
         offered by the OSI Presentation Service (ISO 8822) and of the OSI Association Control
         Service Element (ACSE) (ISO 8649). They are referred to as the Upper Layer Service, which
         allows peer applications to establish associations, transfer messages and terminate
         associations.</para>
-      <para>This definition of the Upper Layer Service specifies the use of the DICOM Upper Layer
+      <para xml:id="para_88e5fb7a-5f03-4faf-ac2e-f4fbf5129d3f">This definition of the Upper Layer Service specifies the use of the DICOM Upper Layer
         Protocol in conjunction with TCP/IP transport protocols.</para>
-      <para>The TCP/IP communication protocol specified by <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> is a general purpose communication
+      <para xml:id="para_ce41ff30-24ca-4c12-ab97-957fb5797f3a">The TCP/IP communication protocol specified by <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> is a general purpose communication
         protocol not specific to the DICOM Standard. <xref linkend="figure_5-1" xrefstyle="select: label"/> shows this protocol stack.</para>
     </section>
-    <section xml:id="sect_6.9" label="6.9" status="2">
+    <section label="6.9" status="2" xml:id="sect_6.9">
       <title>PS3.9: Retired (formerly Point-to-point Communication Support For Message
         Exchange)</title>
-      <para>PS3.9 of the DICOM Standard previously specified the services and protocols used for
+      <para xml:id="para_f7d10194-0bbc-45e2-84db-d64cf1e0eb93">PS3.9 of the DICOM Standard previously specified the services and protocols used for
         point-to-point communications in a manner compatible with ACR-NEMA 2.0. It has been
         retired.</para>
     </section>
-    <section xml:id="sect_6.10" label="6.10" status="2">
+    <section label="6.10" status="2" xml:id="sect_6.10">
       <title>PS3.10 Media Storage and File Format</title>
-      <para><olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies a general model for the storage of medical
+      <para xml:id="para_32d11e4e-6d3f-4b68-a7f0-fb466b3314bd">
+<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies a general model for the storage of medical
         imaging information on removable media (see <xref linkend="figure_6.10-1" xrefstyle="select: label"/>). The purpose of this Part is to
         provide a framework allowing the interchange of various types of medical images and related
         information on a broad range of physical storage media.</para>
       <note>
-        <para>See <xref linkend="figure_5-1" xrefstyle="select: label"/> for understanding how the media interchange model compares to the
+        <para xml:id="para_8e0c48db-da50-49e1-b13a-a6cac22cd9a9">See <xref linkend="figure_5-1" xrefstyle="select: label"/> for understanding how the media interchange model compares to the
           network model.</para>
       </note>
-      <para><olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Specifies:</para>
-      <para>
+      <para xml:id="para_2f9d8305-4758-4efb-aba7-d23368de9543">
+<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Specifies:</para>
+      <para xml:id="para_1d0a0a1c-48b2-4899-ac2c-b0a9572c4fda">
         <itemizedlist>
           <listitem>
-            <para>a layered model for the storage of medical images and related information on
+            <para xml:id="para_566ce5a4-469c-4a58-bd7e-702d7c4775f4">a layered model for the storage of medical images and related information on
               storage media. This model introduces the concept of media storage application
               profiles, which specify application specific subsets of the DICOM Standard to which a
               media storage implementation may claim conformance. Such a conformance applies only to
               the writing, reading and updating of the content of storage media.</para>
           </listitem>
           <listitem>
-            <para>a DICOM file format supporting the encapsulation of any Information Object;</para>
+            <para xml:id="para_436bde1b-7b6a-4e43-8003-9c86d64731bc">a DICOM file format supporting the encapsulation of any Information Object;</para>
           </listitem>
           <listitem>
-            <para>a secure DICOM file format supporting the encapsulation of a DICOM file format in
+            <para xml:id="para_7cabdd29-c973-426a-8d11-d86125cfc556">a secure DICOM file format supporting the encapsulation of a DICOM file format in
               a cryptographic envelope;</para>
           </listitem>
           <listitem>
-            <para>a DICOM file service providing independence from the underlying media format and
+            <para xml:id="para_bdf5f8d1-e71c-4e1d-83b9-9456c05b887e">a DICOM file service providing independence from the underlying media format and
               physical media.</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para><olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> defines various media storage concepts:</para>
-      <para>
+      <para xml:id="para_a1601c9a-cb33-47e3-b14a-7cf21f9f18c9">
+<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> defines various media storage concepts:</para>
+      <para xml:id="para_abc792a9-3bfb-42c4-a9c1-bbfaaf5616fc">
         <itemizedlist>
           <listitem>
-            <para>the method to identify a set of files on a single medium</para>
+            <para xml:id="para_1eb4109f-4fa8-4d46-acfe-5bb012214621">the method to identify a set of files on a single medium</para>
           </listitem>
           <listitem>
-            <para>the method for naming a DICOM file within a specific file system</para>
+            <para xml:id="para_7507dfdf-2352-4307-a121-392871095d83">the method for naming a DICOM file within a specific file system</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para>
-        <figure xml:id="figure_6.10-1" label="6.10-1" pgwide="1">
+      <para xml:id="para_e81ea5d2-4863-42be-8734-20570f7095f0">
+        <figure label="6.10-1" pgwide="1" xml:id="figure_6.10-1">
           <title>DICOM Media Communication Model</title>
           <mediaobject>
             <imageobject>
@@ -902,58 +955,60 @@
         </figure>
       </para>
     </section>
-    <section xml:id="sect_6.11" label="6.11" status="2">
+    <section label="6.11" status="2" xml:id="sect_6.11">
       <title>PS3.11: Media Storage Application Profiles</title>
-      <para><olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies application specific subsets of the DICOM
+      <para xml:id="para_a62432f7-30dd-4cd5-a79a-dbc2473dea91">
+<olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies application specific subsets of the DICOM
         Standard to which an implementation may claim conformance. These application specific
         subsets will be referred to as Application Profiles in this section. Such a conformance
         statement applies to the interoperable interchange of medical images and related information
         on storage media for specific clinical uses. It follows the framework, defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>,
         for the interchange of various types of information on storage media.</para>
-      <para>An Application Profile annex is organized into the following major parts:</para>
-      <para>
+      <para xml:id="para_78b512e3-0119-4a43-a4aa-926f96090ac0">An Application Profile annex is organized into the following major parts:</para>
+      <para xml:id="para_166da13d-8ed3-447d-87a6-24dd9be5a685">
         <itemizedlist>
           <listitem>
-            <para>The name of the Application Profile, or the list of Application Profiles grouped
+            <para xml:id="para_4b3ddf9c-73bd-425b-b2b4-fd0985f89130">The name of the Application Profile, or the list of Application Profiles grouped
               in a related class</para>
           </listitem>
           <listitem>
-            <para>A description of the clinical context of the Application Profile</para>
+            <para xml:id="para_899f02dc-86f4-457e-b334-2c4a25ad0f3a">A description of the clinical context of the Application Profile</para>
           </listitem>
           <listitem>
-            <para>The definition of the media storage Service Class with the device roles for the
+            <para xml:id="para_afdcf75f-19f0-43ad-90d2-a027b3b995d3">The definition of the media storage Service Class with the device roles for the
               Application Profile and associated options</para>
           </listitem>
           <listitem>
-            <para>Informative section describing the operational requirements of the Application
+            <para xml:id="para_c25ae8a8-e0f5-43e0-966b-43904768341d">Informative section describing the operational requirements of the Application
               Profile</para>
           </listitem>
           <listitem>
-            <para>Specification of the Information Object Classes and associated Information Objects
+            <para xml:id="para_caccab6f-655d-4a2f-aa59-3b584a7b305e">Specification of the Information Object Classes and associated Information Objects
               supported and the encoding to be used for the data transfer</para>
           </listitem>
           <listitem>
-            <para>The selection of media formats and physical media to be used</para>
+            <para xml:id="para_81652156-d1ed-40ba-b064-0b2034d26116">The selection of media formats and physical media to be used</para>
           </listitem>
           <listitem>
-            <para>Other parameters that need to be specified to ensure interoperable media
+            <para xml:id="para_46399d8f-120b-4d84-b334-0b19e2f863d3">Other parameters that need to be specified to ensure interoperable media
               interchange</para>
           </listitem>
           <listitem>
-            <para>Security parameters that select the cryptographic techniques to be used with
+            <para xml:id="para_5745eccf-a2a4-4412-84e0-2d936abaa76b">Security parameters that select the cryptographic techniques to be used with
               secure media storage Application Profiles</para>
           </listitem>
         </itemizedlist>
       </para>
-      <para>The structure of DICOM and the design of the Application Profile mechanism is such that
+      <para xml:id="para_98c0fc1b-48b8-489e-9296-5958a2336909">The structure of DICOM and the design of the Application Profile mechanism is such that
         extension to additional Information Object Classes and the new exchange media is
         straightforward.</para>
       <note>
-        <para><xref linkend="figure_6.11-1" xrefstyle="select: label"/> shows how individual aspects of an Application profile map to the
+        <para xml:id="para_8a5f467e-6821-4eb1-9c02-2280c19605d0">
+<xref linkend="figure_6.11-1" xrefstyle="select: label"/> shows how individual aspects of an Application profile map to the
           various parts of the DICOM Standard.</para>
       </note>
-      <para>
-        <figure xml:id="figure_6.11-1" label="6.11-1" pgwide="1">
+      <para xml:id="para_b5618d9a-e12f-4b59-8b9a-7df08c02512e">
+        <figure label="6.11-1" pgwide="1" xml:id="figure_6.11-1">
           <title>Relationship Between an Application Profile and Parts of DICOM</title>
           <mediaobject>
             <imageobject>
@@ -963,101 +1018,108 @@
         </figure>
       </para>
     </section>
-    <section xml:id="sect_6.12" label="6.12" status="2">
+    <section label="6.12" status="2" xml:id="sect_6.12">
       <title>PS3.12: Storage Functions and Media Formats For Data Interchange</title>
-      <para><olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> of the DICOM Standard facilitates the interchange of information between
+      <para xml:id="para_af72fe20-124f-485b-b042-5260c4f34f0a">
+<olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> of the DICOM Standard facilitates the interchange of information between
         applications in medical environments by specifying:</para>
-      <para>
+      <para xml:id="para_b1b30cdc-f3e4-4ed3-a562-2729bf831d22">
         <itemizedlist>
           <listitem>
-            <para>A structure for describing the relationship between the media storage model and a
+            <para xml:id="para_31c3837c-b48e-45f7-885f-28a3e72e6c23">A structure for describing the relationship between the media storage model and a
               specific physical media and media format.</para>
           </listitem>
           <listitem>
-            <para>Specific physical media characteristics and associated media formats.</para>
+            <para xml:id="para_73bb8a05-ba8c-46d9-bad3-74a58ddc4d26">Specific physical media characteristics and associated media formats.</para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
-    <section xml:id="sect_6.13" label="6.13" status="2">
+    <section label="6.13" status="2" xml:id="sect_6.13">
       <title>PS3.13: Retired (formerly Print Management Point-to-point Communication
         Support)</title>
-      <para>PS3.13 previously specified the services and protocols used for point-to-point
+      <para xml:id="para_45a56daf-6deb-461b-a172-efeeefb207a4">PS3.13 previously specified the services and protocols used for point-to-point
         communication of print management services. It has been retired.</para>
     </section>
-    <section xml:id="sect_6.14" label="6.14" status="2">
+    <section label="6.14" status="2" xml:id="sect_6.14">
       <title>PS3.14: Grayscale Standard Display Function</title>
-      <para><olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/> specifies a standardized display function for consistent display of grayscale
+      <para xml:id="para_3a21ac02-2d73-4d25-9535-05ea129120a1">
+<olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/> specifies a standardized display function for consistent display of grayscale
         images. This function provides methods for calibrating a particular display system for the
         purpose of presenting images consistently on different display media (e.g., monitors and
         printers).</para>
-      <para>The chosen display function is based on human visual perception. Human eye contrast
+      <para xml:id="para_0bbae57d-d76c-4147-9346-5812f86c72dc">The chosen display function is based on human visual perception. Human eye contrast
         sensitivity is distinctly non-linear within the luminance range of display devices. This
         standard uses Barten's model of the human visual system.</para>
     </section>
-    <section xml:id="sect_6.15" label="6.15" status="2">
+    <section label="6.15" status="2" xml:id="sect_6.15">
       <title>PS3.15: Security and System Management Profiles</title>
-      <para><olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies security and system management profiles to which
+      <para xml:id="para_429a2f8d-ccae-47fb-8cc6-17d821b25037">
+<olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies security and system management profiles to which
         implementations may claim conformance. Security and system management profiles are defined
         by referencing externally developed standard protocols, such as DHCP, LDAP, TLS and ISCL.
         Security protocols may use security techniques like public keys and "smart cards". Data
         encryption can use various standardized data encryption schemes.</para>
-      <para>This part does not address issues of security policies. The standard only provides
+      <para xml:id="para_6fd02b6d-c186-480a-9989-3abc33488a8c">This part does not address issues of security policies. The standard only provides
         mechanisms that can be used to implement security policies with regard to the interchange of
         DICOM objects. It is the local administrator's responsibility to establish appropriate
         security policies.</para>
     </section>
-    <section xml:id="sect_6.16" label="6.16" status="2">
+    <section label="6.16" status="2" xml:id="sect_6.16">
       <title>PS3.16: Content Mapping Resource</title>
-      <para><olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies:</para>
-      <para>
+      <para xml:id="para_615ffc16-e560-4246-8d19-bfc59ef047cc">
+<olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies:</para>
+      <para xml:id="para_87e7d86c-f1dd-42bd-8bbe-cddece4ecf51">
         <itemizedlist>
           <listitem>
-            <para>templates for structuring documents as DICOM Information Objects</para>
+            <para xml:id="para_74b14a70-9d77-41cc-92af-58bab13be4bd">templates for structuring documents as DICOM Information Objects</para>
           </listitem>
           <listitem>
-            <para>sets of coded terms for use in Information Objects</para>
+            <para xml:id="para_406a8a15-d6e7-40bb-8d07-07c63d5e18be">sets of coded terms for use in Information Objects</para>
           </listitem>
           <listitem>
-            <para>a lexicon of terms defined and maintained by DICOM</para>
+            <para xml:id="para_b7bee21b-203d-4c1e-aa1e-1375c493f6c5">a lexicon of terms defined and maintained by DICOM</para>
           </listitem>
           <listitem>
-            <para>country specific translations of coded terms</para>
+            <para xml:id="para_f4d6ed16-490c-4436-884e-e3103c55e7ca">country specific translations of coded terms</para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
-    <section xml:id="sect_6.17" label="6.17" status="2">
+    <section label="6.17" status="2" xml:id="sect_6.17">
       <title>PS3.17: Explanatory Information</title>
-      <para><olink targetdoc="PS3.17" targetptr="PS3.17">PS3.17</olink> of the DICOM Standard specifies:</para>
-      <para>
+      <para xml:id="para_7c092949-e655-425f-b758-77667295d255">
+<olink targetdoc="PS3.17" targetptr="PS3.17">PS3.17</olink> of the DICOM Standard specifies:</para>
+      <para xml:id="para_9aed0d4d-6ed0-4153-b21b-7a5e9b0c135a">
         <itemizedlist>
           <listitem>
-            <para>informative and normative annexes containing explanatory information</para>
+            <para xml:id="para_22758d51-f886-48a2-a71a-51dc506ddff9">informative and normative annexes containing explanatory information</para>
           </listitem>
         </itemizedlist>
       </para>
     </section>
-    <section xml:id="sect_6.18" label="6.18" status="2">
+    <section label="6.18" status="2" xml:id="sect_6.18">
       <title>PS3.18: Web Services</title>
-      <para><olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the means whereby Web Services can be used for
+      <para xml:id="para_4a2bda40-4c5d-480f-ab83-c3a4b7185ea5">
+<olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the means whereby Web Services can be used for
         retrieving or storing a DICOM object.</para>
-      <para>Requests that retrieve data specify the media type (format) of the response body.
+      <para xml:id="para_d04c0a56-b7d8-442f-9e8f-68d769ba7283">Requests that retrieve data specify the media type (format) of the response body.
         Requests that store data specify the media type of the request body.</para>
-      <para>The HTTP requests as defined within this standard are sufficient for the HTTP server to
+      <para xml:id="para_a9148c09-134b-4974-90fc-bd6ca55e6fcb">The HTTP requests as defined within this standard are sufficient for the HTTP server to
         act as a DICOM SCU (Service Class User) to retrieve or store the requested objects from an
         appropriate DICOM SCP (Service Class Provider) using baseline DICOM functionality as defined
         in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>, which is to say that the HTTP server can act as a proxy for the DICOM
         SCP.</para>
     </section>
-    <section xml:id="sect_6.19" label="6.19" status="2">
+    <section label="6.19" status="2" xml:id="sect_6.19">
       <title>PS3.19: Application Hosting</title>
-      <para><olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies an Application Programming Interface (API) to a
+      <para xml:id="para_e583b063-0635-434a-adaf-2f94304038ea">
+<olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies an Application Programming Interface (API) to a
         DICOM based medical computing system into which programs written to that standardized
         interface can "plug-in" (see <xref linkend="figure_6.19-1" xrefstyle="select: label"/>). A Hosting System implementer only needs to create the standardized API once to support
         a wide variety of add-on Hosted Applications.</para>
-      <para>
-        <figure xml:id="figure_6.19-1" label="6.19-1" pgwide="1">
+      <para xml:id="para_ff88e04c-9747-4f6c-aa9b-70920e3eec27">
+        <figure label="6.19-1" pgwide="1" xml:id="figure_6.19-1">
           <title>Interface Between a Hosted Application and a Hosting System</title>
           <mediaobject>
             <imageobject>
@@ -1067,13 +1129,13 @@
           </mediaobject>
         </figure>
       </para>
-      <para>In the traditional "plug-in" model, the "plug-in" is dedicated to a particular host
+      <para xml:id="para_e271987e-22d0-48f6-bba8-79342087b685">In the traditional "plug-in" model, the "plug-in" is dedicated to a particular host
         system (e.g., a web browsing program), and might not run under other host systems (e.g.,
         other web browsing programs). <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> defines an API that may be implemented by any Hosting
         System. A "plug-in" Hosted Application written to the API would be able run in any
         environment provided by a Hosting System that implements that API (see <xref linkend="figure_6.19-2" xrefstyle="select: label"/>).</para>
-      <para>
-        <figure xml:id="figure_6.19-2" label="6.19-2" pgwide="1">
+      <para xml:id="para_0b44cd72-f5aa-46c9-af83-f6cb159b8fd3">
+        <figure label="6.19-2" pgwide="1" xml:id="figure_6.19-2">
           <title>Illustration of Platform Independence via the Hosted Application</title>
           <mediaobject>
             <imageobject>
@@ -1083,26 +1145,29 @@
           </mediaobject>
         </figure>
       </para>
-      <para><olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> specifies both the interactions and the Application Programming Interfaces (API)
+      <para xml:id="para_d544f8fd-c62d-4a4c-a383-39bc8fc05a18">
+<olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> specifies both the interactions and the Application Programming Interfaces (API)
         between Hosting Systems and Hosted Applications. <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> also defines the data models that
         are used by the API.</para>
     </section>
-    <section xml:id="sect_6.20" label="6.20" status="2">
+    <section label="6.20" status="2" xml:id="sect_6.20">
       <title>PS3.20: Imaging Reports using HL7 Clinical Document Architecture</title>
-      <para><olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies templates for the encoding of imaging reports using the HL7 Clinical Document Architecture Release 2 (CDA R2, or simply CDA) Standard. Within this scope are clinical procedure reports for specialties that use imaging for screening, diagnostic, or therapeutic purposes.</para>
-      <para><olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> constitutes an implementation guide for CDA, and is harmonized with the approach to standardized templates for CDA implementation guides developed by HL7. It also provides Business Names for data elements that link data in user terminology, e.g., collected by a report authoring application, to specific CDA encoded elements.</para>
-      <para>As an implementation guide for imaging reports, particular attention is given to the use and reference of data collected in imaging procedures as explicit evidence within reports. This data includes images, waveforms, measurements, annotations, and other analytic results managed as DICOM SOP Instances. Specifically, this Part includes a specification for transformation into CDA documents of DICOM Structured Report instances that represent imaging reports.</para>
+      <para xml:id="para_ec628c68-d210-4339-a802-52ac4b4be8ac">
+<olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies templates for the encoding of imaging reports using the HL7 Clinical Document Architecture Release 2 (CDA R2, or simply CDA) Standard. Within this scope are clinical procedure reports for specialties that use imaging for screening, diagnostic, or therapeutic purposes.</para>
+      <para xml:id="para_90f8ff36-6cea-439e-a990-f0162666407c">
+<olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> constitutes an implementation guide for CDA, and is harmonized with the approach to standardized templates for CDA implementation guides developed by HL7. It also provides Business Names for data elements that link data in user terminology, e.g., collected by a report authoring application, to specific CDA encoded elements.</para>
+      <para xml:id="para_ca4c111a-bd4e-4649-9f2c-08d64075e8af">As an implementation guide for imaging reports, particular attention is given to the use and reference of data collected in imaging procedures as explicit evidence within reports. This data includes images, waveforms, measurements, annotations, and other analytic results managed as DICOM SOP Instances. Specifically, this Part includes a specification for transformation into CDA documents of DICOM Structured Report instances that represent imaging reports.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
     <title>Referencing The DICOM Standard</title>
-    <para>Under the procedures of the DICOM Standards Committee, the Standard is in constant
+    <para xml:id="para_0a7c601c-1749-44bd-b8e5-516a60750a02">Under the procedures of the DICOM Standards Committee, the Standard is in constant
       revision. Supplements and corrections to the Standard are balloted and approved several times
       a year. Each change when approved as Final Text immediately goes into effect. At intervals,
       all of the approved Final Text changes are consolidated into a published edition of the
       Standard, identified by year of publication, but such publication is only a convenience to the
       user; the Standard is officially changed when each change is approved.</para>
-    <para>Conformance to the DICOM Standard is through specified SOP Classes (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), Profiles
+    <para xml:id="para_dfc3171c-6c12-4b9f-afdd-cb3ec45e94d1">Conformance to the DICOM Standard is through specified SOP Classes (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), Profiles
       (see <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>), and Web Services (see <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>). Once such a unit of conformance is
       specified in the Standard, all changes thereto are forward and backward compatible (except in
       rare cases where the original specification was non-interoperable, or conflicted with another
@@ -1110,64 +1175,64 @@
       name and/or identifier of the feature, and never referenced to an edition of the Standard.
       Generally, the only appropriate reference to a particular edition of the Standard is to
       identify a retired feature (see <xref linkend="sect_Retirement" xrefstyle="template:%t"/> in the Introduction to this Part).</para>
-    <para>The following citation form is preferred for general references to the Standard, without
+    <para xml:id="para_9b0cee4f-2d62-41a2-9cb1-f6f7fe9a40cd">The following citation form is preferred for general references to the Standard, without
       specification of date of edition, when specific conformance requirements are not
       invoked:</para>
-    <para>NEMA PS3 / ISO 12052, Digital Imaging and Communications in Medicine (DICOM) Standard,
+    <para xml:id="para_803149b0-2dba-41e7-a472-4a25b1c89d71">NEMA PS3 / ISO 12052, Digital Imaging and Communications in Medicine (DICOM) Standard,
       National Electrical Manufacturers Association, Rosslyn, VA, USA (available free at <link xl:href="http://medical.nema.org/"/>)</para>
-    <para>The following forms are preferred for references to units of conformance to the
+    <para xml:id="para_ac213f23-6621-4a16-b519-c5846ef26809">The following forms are preferred for references to units of conformance to the
       Standard:</para>
-    <para>
+    <para xml:id="para_75989daf-c499-4f83-bf67-5ef4e16f85ed">
       <itemizedlist>
         <listitem>
-          <para>
+          <para xml:id="para_523cf9cf-8e9f-4abb-a2e1-8eccb00854cc">
             <quote>… conformant to the DICOM &lt;name&gt; SOP Class, as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:
               Service Class Specifications.</quote>
           </para>
         </listitem>
         <listitem>
-          <para>
+          <para xml:id="para_5ed5702a-47bb-4ed7-a952-85d0a757bef1">
             <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile, as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>:
           Media Storage Application Profiles.</quote>
           </para>
         </listitem>
         <listitem>
-          <para>
+          <para xml:id="para_f6633f45-7c5f-4ee0-974a-17ef5d94ace8">
             <quote>… conformant to the DICOM &lt;name&gt; Profile, as specified in DICOM <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>: Security and
             System Management Profiles.</quote>
           </para>
         </listitem>
         <listitem>
-          <para>
+          <para xml:id="para_0da85449-f995-46bf-8f21-05e694a2fce2">
             <quote>… conformant to WADO, as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
           </para>
         </listitem>
       </itemizedlist>
     </para>
-    <para>Reference may be made to other features of the Standard, but these shall not be construed
+    <para xml:id="para_c9e802a6-27c9-4dea-9de0-1bcdda57a7ef">Reference may be made to other features of the Standard, but these shall not be construed
       as DICOM conformance requirements (although they may be conformance requirements for non-DICOM
       implementation guides or regulations). Following are some examples:</para>
     <itemizedlist>
       <listitem>
-        <para>
+        <para xml:id="para_48fabc2e-e5c0-4777-9155-27f1b401f294">
           <quote>… SOP Instances in accordance with the &lt;name&gt; Information Object Definition, as
             specified in DICOM <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>: Information Object Definitions.</quote>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para xml:id="para_d76ee814-eae9-4cba-90d0-27ee15dfd64a">
           <quote>… Structured Reporting SOP Instances using DICOM Template ID &lt;number and name&gt;, as
             specified in DICOM <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>: Content Mapping Resource.</quote>
         </para>
       </listitem>
       <listitem>
-        <para>
+        <para xml:id="para_69afa62e-a8cc-433f-a899-16e9fcf16d7b">
           <quote>… using the &lt;name&gt; Transfer Syntax, as specified in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>: Data Structure and
         Semantics.</quote>
         </para>
       </listitem>
     </itemizedlist>
-    <para>Since changes to the Standard shall not be cited prior to adoption as Final Text, and
+    <para xml:id="para_c8fca69e-e2f5-4ebe-8acb-3eb5d88ac3cd">Since changes to the Standard shall not be cited prior to adoption as Final Text, and
       since after adoption they are formally part of the Standard, there should be no citations to
       supplements or correction items for the purpose of describing conformance. Reference to such
       change documents may be made for describing the historical development of the DICOM

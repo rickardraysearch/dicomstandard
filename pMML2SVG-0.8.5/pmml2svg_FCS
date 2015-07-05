@@ -1,0 +1,52 @@
+#!/bin/sh
+path=${0%/*}
+xslt=$path/XSLT2/pmml2svg.xsl
+sxx=pmml2svg.sxx
+validate="xmllint --noout --loaddtd"
+classpath=/etc/xml/resolver:/usr/share/java/xml-resolver.jar:/usr/share/java/saxonb.jar
+compileopts="-y org.apache.xml.resolver.tools.ResolvingXMLReader
+             -r org.apache.xml.resolver.tools.CatalogResolver"
+trafoopts="$compileopts -x org.apache.xml.resolver.tools.ResolvingXMLReader"
+transform="java -cp $classpath net.sf.saxon.Transform $trafoopts -xsl:$xslt -o:"
+compile="java -cp $classpath net.sf.saxon.Compile $compileopts $xslt "
+
+while [ "$#" -gt "0" ]
+do
+    case $1 in
+	*=*)
+	    opts="$opts $1"
+	    ;;
+	-compile)
+	    $compile$sxx $opts
+	    exit 0
+	    ;;
+	-c)
+	    transform="java -cp $classpath net.sf.saxon.Transform $trafoopts
+                            -c:$sxx -o:"
+	    ;;
+	*)
+	    break
+	    ;;
+    esac
+    shift
+done
+
+if [ "$#" -eq "0" ]; then
+    echo "Usage:"
+    echo "$0 [params] [-c] math.xml ..."
+    echo "  Transform math.xml MathML files to corresponding math.svg files."
+    echo "  With -c, use precompiled transform (see below)."
+    echo "$0 [params] -compile"
+    echo "  Create precompiled transform for use with -c."
+    echo "params are stylesheet parameter=value pairs."
+fi
+
+for mmlfile in $*; do
+    file=${mmlfile%.*}
+    svgfile=$file.svg
+
+    echo $file
+    $validate  $mmlfile && \
+    $transform$svgfile $mmlfile $opts && \
+    $validate  $svgfile
+done

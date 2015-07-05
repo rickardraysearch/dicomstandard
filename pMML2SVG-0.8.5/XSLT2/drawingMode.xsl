@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- 
 ###############################################################################
-$Id: drawingMode.xsl 154 2009-05-12 14:59:29Z jjoslet $
+$Id: drawingMode.xsl,v 1.1 2015/07/01 15:31:42 dclunie Exp $
 
 CREATED: JUNE 2005
 

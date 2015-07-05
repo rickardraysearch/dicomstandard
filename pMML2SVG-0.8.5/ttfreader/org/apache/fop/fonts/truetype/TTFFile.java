@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-/* $Id: TTFFile.java 719038 2008-11-19 19:46:45Z jeremias $ */
+/* $Id: TTFFile.java,v 1.1 2015/07/01 15:31:42 dclunie Exp $ */
 
 package org.apache.fop.fonts.truetype;
 

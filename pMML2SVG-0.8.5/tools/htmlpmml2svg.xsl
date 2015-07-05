@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- 
 ###############################################################################
-$Id: pmml2svg.xsl 46 2009-03-09 15:54:24Z jjoslet $
+$Id: htmlpmml2svg.xsl,v 1.2 2015/07/01 19:29:19 dclunie Exp $
 
 CREATED: MARCH 2009
 
@@ -106,7 +106,7 @@ Software Foundation, 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
     <!-- Retrieve doc name -->
     <xsl:variable name="doc" select="tokenize(base-uri(), '/')"/>
-    <xsl:variable name="docName" select="substring-before($doc[count($doc)], '.')"/>
+    <xsl:variable name="docName" select="substring-before($doc[count($doc)], '.html')"/>
 
     <xsl:result-document format="svg" href="{$docName}_image_{$position}.svg">
       <xsl:copy-of select="$svgOutput"/>

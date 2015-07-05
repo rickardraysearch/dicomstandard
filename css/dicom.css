@@ -199,6 +199,10 @@ span[class=italic] {
 	font-style: italic;
 }
 
+span[class=underline] {
+	text-decoration: underline;
+}
+
 div[class=figure-contents] {
     text-align: center;
 }
