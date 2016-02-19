@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2015c - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2016a - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2015</year>
+      <year>2016</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -50,6 +50,10 @@
     <title>Foreword</title>
     <para xml:id="para_d38dcd6e-56f5-4548-b1d6-3118ac63fa9b">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
     <para xml:id="para_882e39f2-e05f-4512-9679-77d6a2fa6cd2">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_5e7cf400-834e-4621-95a9-9a8d003b44e0">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
+    <para xml:id="para_f3031d7d-3e6e-47f0-9cb5-d70056284b2b">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
+    <para xml:id="para_a9231a05-4bc8-4615-827c-8829b34ed019">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
+    <para xml:id="para_2ea4fb45-5b3b-491c-a032-4b464156d42a">LOINC® is the registered trademark of Regenstrief Institute, Inc, all rights reserved.</para>
   </chapter>
   <chapter label="" status="1" xml:id="chapter_Introduction">
     <title>Introduction</title>
@@ -351,7 +355,7 @@
       <glossentry>
         <glossterm>Information Object Instance</glossterm>
         <glossdef>
-          <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurence of an real-world entity, which includes values for the
+          <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurrence of an real-world entity, which includes values for the
           Attributes of the Information Object Class to which the entity belongs.</para>
           <note>
             <para xml:id="para_f46795a4-3588-4be5-8d4a-1e2e9bbed96e">This term is only used in PS3.1. It is an informal term corresponding to a formal
@@ -519,12 +523,15 @@
     <para xml:id="para_7514f59e-066a-4fc9-8297-695395626c95">
 <xref linkend="figure_5-1" xrefstyle="select: label"/> presents the general communication model of the Standard, which spans both
       network (on-line) and media storage interchange (off-line) communication. Applications may
-      relay on either on of the following boundaries:</para>
+      utilize any of the following transport mechanisms:</para>
     <para xml:id="para_3adcc852-71e5-4e56-b59e-4c46e4133c04">
       <itemizedlist>
         <listitem>
-          <para xml:id="para_eb67ee46-3400-44ec-ae0c-d5af8e2011ea">the Upper Layer Service, which provides independence from specific physical
+          <para xml:id="para_eb67ee46-3400-44ec-ae0c-d5af8e2011ea">the DICOM Message Service and Upper Layer Service, which provides independence from specific physical
             networking communication support and protocols such as TCP/IP. </para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_bc812d57-953f-4c9e-8864-e275dea08784">the DICOM Web Service API and HTTP Service, which allows use of common hypertext and associated protocols for transport of DICOM services</para>
         </listitem>
         <listitem>
           <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">The Basic DICOM File Service, which provides access to Storage Media independently

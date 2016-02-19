@@ -693,4 +693,10 @@
   </rx:meta-info>
 </xsl:template>
 
+<!-- do not italicize foreignphrase -->
+<xsl:template match="d:foreignphrase">
+  <!--<xsl:call-template name="inline.italicseq"/>-->
+  <xsl:call-template name="inline.charseq"/>
+</xsl:template>
+
 </xsl:stylesheet>

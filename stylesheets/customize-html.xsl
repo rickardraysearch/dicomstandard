@@ -114,4 +114,13 @@ body { background-image: url('</xsl:text>
 	</xsl:call-template>
 </xsl:template>
 
+<!-- do not italicize foreignphrase -->
+<xsl:template match="d:foreignphrase">
+  <span>
+    <xsl:apply-templates select="." mode="common.html.attributes"/>
+    <!--<xsl:call-template name="inline.italicseq"/>-->
+    <xsl:call-template name="inline.charseq"/>
+  </span>
+</xsl:template>
+
 </xsl:stylesheet>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2015c - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2016a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2015</year>
+      <year>2016</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -50,6 +50,10 @@
     <title>Foreword</title>
     <para xml:id="para_8394fd0e-eba6-4271-bb9b-4730c7a13b2a">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
     <para xml:id="para_92db2498-5673-4c45-af9c-8962ed4495cc">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_005795b6-0a9d-454b-ba8e-f9469d55b855">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
+    <para xml:id="para_70a8d5d4-cba5-46a7-a60d-932cb142d3ce">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
+    <para xml:id="para_55456d93-fdf2-43f6-85ce-45e09f526232">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
+    <para xml:id="para_70967ed8-05cb-4743-b1f6-22412fe6a1e6">LOINC® is the registered trademark of Regenstrief Institute, Inc, all rights reserved.</para>
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
@@ -337,7 +341,7 @@
     <para xml:id="para_4f184fe3-933e-4c62-bebd-48c63227700d">
 <emphasis role="bold">CDS</emphasis> Clinical Decision Support</para>
     <para xml:id="para_f75e7063-ce49-49dc-91b9-d68c536009c5">
-<emphasis role="bold">CEN TC251</emphasis> Comité Européen de Normalisation -Technical Committee 251 - Medical Informatics</para>
+      <emphasis role="bold">CEN TC251</emphasis> <foreignphrase xml:lang="fr-FR">Comité Européen de Normalisation</foreignphrase> - Technical Committee 251 - Medical Informatics</para>
     <para xml:id="para_cc7b36a5-ad65-4ae0-9241-e52a529f9357">
 <emphasis role="bold">Chest CAD</emphasis> Computer-Aided Detection and/or Computer-Aided Diagnosis for chest radiography</para>
     <para xml:id="para_7a1d2071-5763-459f-a69c-a20bbb5abcf6">
@@ -1325,6 +1329,29 @@
                 </td>
               </tr>
               <tr valign="top">
+                <td align="left" colspan="1" rowspan="4">
+                  <para xml:id="para_da59d18a-e2a9-4f86-b899-9bed49f88d16">Acquisition Context SR</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_81d1a09b-70b5-4890-a255-5eb9cfdc39b4">Enhanced SR (see note)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_e9e591a5-a3ea-4c55-9394-386abe1a0f2c">Comprehensive SR (see note)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_23e7c3b5-3920-4ee2-89be-9fb25ae4bc87">Comprehensive 3D SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_b3c1f8a9-d457-4811-92d9-e832c3f1dd5f">Extensible SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_e6ae9b3d-9548-46fa-a1b2-c64c991efe68">Spectacle Prescription Report</para>
                 </td>
@@ -1366,6 +1393,9 @@
               </tr>
             </tbody>
           </table>
+          <note>
+            <para xml:id="para_ed1025c0-0b2c-4a27-8cee-07c393879879">The Acquisition Context SR may be encoded as Enhanced or Comprehensive only if it does not contain stereotactic coordinates (SCOORD3D).</para>
+          </note>
         </section>
       </section>
     </section>
@@ -2110,6 +2140,32 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_dcc1cd6b-ebde-4cad-acd9-aee1b11e379c">Grayscale Planar MPR Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6dbf92a9-c9ff-4faf-ac26-1fea7e440ff0">1.2.840.10008.​5.​1.​4.​1.​1.​11.​6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0a9d2383-e314-46a4-b6d4-d2e1b66a9580">
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.1.1" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_10b19427-6b9e-4d28-bd9b-f03a97fd2dc5">Compositing Planar MPR Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_bfded53f-1712-4170-bc1d-9f097c78c1fd">1.2.840.10008.​5.​1.​4.​1.​1.​11.​7</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3f472819-5ae7-456d-bb15-cbfb25d84219">
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.1.1" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_90667a84-4fcd-4558-8786-b4f4cc4e2c05">X-Ray Angiographic Image Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2354,6 +2410,19 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_20721dc2-9a42-401a-80a6-b877599f0d0d">
                 <olink targetdoc="PS3.3" targetptr="sect_A.57" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b6716a26-4671-407a-9728-874f38baf19b">Tractography Results Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_51931e76-63c8-4888-9ada-1adcd1348b43">1.2.840.10008.5.1.4.1.1.66.6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8d05dce3-6e60-44d0-9f18-a07be241eaa9">
+                <olink targetdoc="PS3.3" targetptr="sect_A.78" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -2905,6 +2974,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0a860f0b-a2c5-4ed5-a368-ced9e1c34db0">Acquisition Context SR Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cb00d7ee-50c4-4745-8836-99e8f9fa513c">1.2.840.10008.5.​1.​4.​1.​1.​88.​71</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_853e8ca2-6d93-4711-bfa9-670c4f547a4f">
+<olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_64485da5-b2e4-49be-9d67-90361eae3a5b">Encapsulated PDF Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -3114,6 +3196,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_af1ec68e-ece0-4d30-b0ef-f8dd63f4caa2">RT Brachy Application Setup Delivery Instruction Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2a37e4b7-d4cc-4518-9fc8-bf0614878a1c">1.2.840.10008.5.1.4.34.10</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_04406f2b-e522-4900-b15e-24ece7d0fc5d">
+                <olink targetdoc="PS3.3" targetptr="sect_A.79" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_22e95292-b440-4acc-973c-0149a69002cd">Generic Implant Template Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -3229,6 +3324,9 @@
             </listitem>
             <listitem>
               <para xml:id="para_8edca806-45e2-4de4-8da1-8c50068ccaa8">Implantation Plan SR Document</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_3e7cd545-565b-47be-8438-a2e211e59858">Acquisition Context SR</para>
             </listitem>
           </itemizedlist>
           <para xml:id="para_3e34ef19-9a11-4d20-be2d-662df3ffcc21">
@@ -3392,6 +3490,20 @@
           <para xml:id="para_91fde1c4-5143-4b88-9efd-b31904ca79cb">The Breast Projection X-Ray Image Storage - For Presentation SOP Class shall use the Breast Projection X-Ray Image IOD with an Enumerated Value of FOR PRESENTATION for Presentation Intent Type (0008,0068).</para>
           <para xml:id="para_46575588-1b69-4eff-a4a6-19979d02f673">The Breast Projection X-Ray Image Storage - For Processing SOP Class shall use the Breast Projection X-Ray Image IOD with an Enumerated Value of FOR PROCESSING for Presentation Intent Type (0008,0068).</para>
           <para xml:id="para_c3c52ca7-3ce6-4c33-b6a0-30026c485a33">An SCU or SCP of the Breast Projection X-Ray Image Storage - For Processing SOP Class shall also support the Breast Projection X-Ray Image Storage - For Presentation SOP Class.</para>
+        </section>
+        <section label="B.5.1.19" status="4" xml:id="sect_B.5.1.19">
+          <title>Planar MPR Volumetric Presentation State Storage SOP Classes</title>
+          <para xml:id="para_a746b5d5-88a7-41c7-b2c5-440fa11dbf1f">The requirements of <xref linkend="chapter_FF" xrefstyle="template:Annex %n"/> apply to the following SOP Classes:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_5fa20001-fd81-48a4-832a-6c869e05b371">Grayscale Planar MPR Volumetric Presentation State Storage</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_f99e78a2-e249-4180-903c-83ee777b78b2">Compositing Planar MPR Volumetric Presentation State Storage</para>
+            </listitem>
+          </itemizedlist>
+          <para xml:id="para_20032327-9a10-4066-8a27-7c03a04ba0a8">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of MONOCHROME for Pixel Presentation (0008,9205) and shall have only a single item in the Volumetric Presentation State Input Sequence (0070,1201).</para>
+          <para xml:id="para_a2912829-bba5-4739-a9e4-4b35b636aafc">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of TRUE COLOR for Pixel Presentation (0008,9205).</para>
         </section>
       </section>
     </section>
@@ -8347,7 +8459,9 @@
         <section label="F.7.2.1" status="4" xml:id="sect_F.7.2.1">
           <title>Create Modality Performed Procedure Step SOP Instance</title>
           <para xml:id="para_b98fcb77-5b2d-4e40-aa72-d154b1207398">This operation allows an SCU to create an instance of the Modality Performed Procedure Step SOP Class and provide information about a specific real-world Performed Procedure Step that is under control of the SCU. This operation shall be invoked through the DIMSE N-CREATE Service.</para>
-          <para xml:id="para_bda51125-d990-4ce3-8e3d-9bb61037f134">Note : The modality should inform the Information System as soon as possible that the performance of the Procedure Step has been started by sending the N-CREATE Service Request. This allows an SCP of the Modality Worklist SOP Class (if supported) to update the Modality Worklist. Some of the Attribute values are already known at the beginning of the Procedure Step, they are required to be sent in the N-CREATE command. Other mandatory Attributes are known only at the end of the Performed Procedure Step, they are assigned a value in the N-SET command.</para>
+          <note>
+            <para xml:id="para_bda51125-d990-4ce3-8e3d-9bb61037f134">The modality should inform the Information System as soon as possible that the performance of the Procedure Step has been started by sending the N-CREATE Service Request. This allows an SCP of the Modality Worklist SOP Class (if supported) to update the Modality Worklist. Some of the Attribute values are already known at the beginning of the Procedure Step, they are required to be sent in the N-CREATE command. Other mandatory Attributes are known only at the end of the Performed Procedure Step, they are assigned a value in the N-SET command.</para>
+          </note>
           <para xml:id="para_a6ffad30-a722-4898-ac80-3fc3920e2ece">The same SOP Instance UID is shared by all three Modality Performed Procedure Step SOP Classes. This means that the SOP Instance created and set using the services of the Modality Performed Procedure Step SOP Class can be retrieved using its SOP Instance UID within the service of the Modality Performed Procedure Step Retrieve SOP Class. Changes in its state can be notified by using its SOP Instance UID within the service of the Modality Performed Procedure Step Notification SOP Class. The SOP Class UID specified in the DIMSE N-CREATE and N-SET request primitives shall be the UID of the Modality Performed Procedure Step SOP Class.</para>
           <para xml:id="para_34e45545-9bdc-41b2-b244-73833cb94599">The Modality Performed Procedure Step SOP Instance UID shall not be used to identify a SOP Instance of the Study Component Service Class.</para>
           <section label="F.7.2.1.1" status="5" xml:id="sect_F.7.2.1.1">
@@ -12527,7 +12641,7 @@
             <para xml:id="para_ce3bddfe-5ad1-49f5-b053-b5774e1348ee">list of supported optional SOP Class Attributes and DIMSE Service Elements</para>
           </listitem>
           <listitem>
-            <para xml:id="para_3ad248aa-2d71-41c8-9398-1be1dfc54150">for each supported Attribute (mandatory and optional Attribute) :</para>
+            <para xml:id="para_3ad248aa-2d71-41c8-9398-1be1dfc54150">for each supported Attribute (mandatory and optional Attribute):</para>
           </listitem>
           <listitem>
             <para xml:id="para_55124a3e-dd4d-4b37-b600-3cf5aa008bdf">valid range of values</para>
@@ -15745,7 +15859,7 @@
         <title>Presentation LUT SOP Class</title>
         <section label="H.4.9.1" status="4" xml:id="sect_H.4.9.1">
           <title>Information Object Description</title>
-          <para xml:id="para_221c2496-8191-48b7-8a07-d244977d4f67">The Presentation LUT Information Object is an abstraction of a Presentation LUT (see <xref linkend="sect_H.2.1.1" xrefstyle="select: label"/>). The objective of the Presentation LUT is to realize image display tailored for specific modalities, applications, and user preferences. It is used to prepare image pixel data for display on devices that conform to the Grayscale Standard Display Function defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>.</para>
+          <para xml:id="para_221c2496-8191-48b7-8a07-d244977d4f67">The Presentation LUT Information Object is an abstraction of a Presentation LUT (see <xref linkend="sect_H.2.1.1" xrefstyle="select: label"/>). The objective of the Presentation LUT is to realize image display tailored for specific modalities, applications, and user preferences. It is used to prepare image pixel data for display on devices that conform to the Grayscale Standard Display Function defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>.</para>
           <note>
             <para xml:id="para_8ced1bfc-47af-4a8b-97bd-b3485902fba4">The density range to be printed, Min Density to Max Density, is specified at either the Film Box or the Image Box. As follows from the definition for Min Density and Max Density in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, if the requested minimum density is lower than the minimum printer density, or the requested maximum density is greater than the maximum printer density, the printer will use its minimum or maximum density, respectively, when computing the standard response.</para>
           </note>
@@ -15755,7 +15869,7 @@
           <para xml:id="para_90bb8571-0295-4beb-8798-72cb4f251a94">If the Configuration Information Attribute (2010,0150) of the Basic Film Box IOD contains information similar to the Presentation LUT, then the Presentation LUT Attributes shall take precedence.</para>
           <section label="H.4.9.1.1" status="5" xml:id="sect_H.4.9.1.1">
             <title>Mapping of P-Values to Optical Density</title>
-            <para xml:id="para_68b8d358-7e6c-446b-8b21-0f006378d911">The mathematical definition of the Grayscale Standard Display Function and mapping of P-Values to optical density for reflective and transmissive printers is contained in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>.</para>
+            <para xml:id="para_68b8d358-7e6c-446b-8b21-0f006378d911">The mathematical definition of the Grayscale Standard Display Function and mapping of P-Values to optical density for reflective and transmissive printers is contained in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>.</para>
           </section>
         </section>
         <section label="H.4.9.2" status="4" xml:id="sect_H.4.9.2">
@@ -15961,7 +16075,7 @@
               <para xml:id="para_e99a0899-c884-4b2d-adc6-943a1b8c7493">The SCU shall create the Presentation LUT prior to referencing it from the Film Box or the Image Box.</para>
               <para xml:id="para_bafa0723-a5fe-4fa6-9dfe-a8f7d0dce47e">The Presentation LUT persists in the SCP as long as the Association in which it was created is open or an explicit N-DELETE is issued by the SCU.</para>
               <para xml:id="para_28955e25-e41e-4a99-9064-a200d9a6d9e7">The SCP shall return the status code of the requested SOP Instance creation. The meaning of success, warning, and failure status codes is defined in <xref linkend="sect_H.2.5" xrefstyle="select: label"/>.</para>
-              <para xml:id="para_05a9870c-07e6-49d1-b135-105ef18b8bb0">The SCP shall use the Grayscale Standard Display Function as specified in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/> to convert the output of the Presentation LUT to density for printing. If the SCU specifies values for Illumination (2010,015E) and/or Reflected Ambient Light (2010,0160), these values shall be used instead of the default or configured values of the SCP. If these values are not supplied, the SCP shall use its default or configured values. (see <xref linkend="sect_H.4.2.2.1.1" xrefstyle="select: label"/> for suggested defaults).</para>
+              <para xml:id="para_05a9870c-07e6-49d1-b135-105ef18b8bb0">The SCP shall use the Grayscale Standard Display Function as specified in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/> to convert the output of the Presentation LUT to density for printing. If the SCU specifies values for Illumination (2010,015E) and/or Reflected Ambient Light (2010,0160), these values shall be used instead of the default or configured values of the SCP. If these values are not supplied, the SCP shall use its default or configured values. (see <xref linkend="sect_H.4.2.2.1.1" xrefstyle="select: label"/> for suggested defaults).</para>
             </section>
           </section>
           <section label="H.4.9.2.2" status="5" xml:id="sect_H.4.9.2.2">
@@ -17210,6 +17324,28 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b9bab2be-8662-47ca-8219-9bf5805a5baf">Grayscale Planar MPR Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_40be88cf-bd31-4303-b10d-83e61f644216">1.2.840.10008.​5.​1.​4.​1.​1.​11.​6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d6bdd16d-a26a-4de5-9434-52285e175a74">Planar MPR Volumetric Presentation State</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0d10d1cf-d436-4262-86c2-f732560fd498">Compositing Planar MPR Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3f39f633-79b5-483b-a0ed-6b584ee0dac3">1.2.840.10008.​5.​1.​4.​1.​1.​11.​7</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e10094a8-bb27-40e9-89a7-019b92e42a90">Planar MPR Volumetric Presentation State</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0fc095a5-da72-483d-8b39-f13a7d955692">X-Ray Angiographic Image Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -17456,6 +17592,18 @@
             </td>
           </tr>
           <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9f355ade-eb9e-4e4d-abdd-cead579344a1">Tractography Results Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0760736a-5d32-4280-901c-8ddf63bc8429">1.2.840.10008.5.1.4.1.1.66.6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ec40b8a1-97e0-4455-ba9e-e91e89e9c54f">
+                <olink targetdoc="PS3.3" targetptr="sect_A.78" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>          <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0d571b03-ca1f-45b6-8efb-a21079c550d9">Real World Value Mapping Storage</para>
             </td>
@@ -18003,6 +18151,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eca82c91-6762-4754-ac60-5a372ab2e12d">Acquisition Context SR Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_95d5fd1e-04fd-47aa-a582-667ea4909392">1.2.840.10008.5.​1.​4.​1.​1.​88.​71</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9f22748f-a7b9-485c-8776-d1b848e36b65">
+<olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_70c44193-e32e-4f39-b09a-5dbe4b954b75">Encapsulated PDF Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -18211,6 +18372,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_33a30224-46e7-4039-a53a-284cfa525efb">RT Brachy Application Setup Delivery Instruction Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8b73f6b8-36d9-4ffa-b9dc-38eb7ae29d82">1.2.840.10008.5.1.4.34.10</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_23276968-7ade-43e5-baa8-c9f17e7b9b0d">
+                <olink targetdoc="PS3.3" targetptr="sect_A.79" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7414b4df-4494-400c-9669-ab1cd4662535">Hanging Protocol Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -18340,6 +18514,9 @@
             </listitem>
             <listitem>
               <para xml:id="para_e348770f-0add-4a3e-8a6c-7bfc5b554302">Implantation Plan SR Document</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_2e4e2fcc-a139-480c-b758-4e4645f5a63c">Acquisition Context SR</para>
             </listitem>
           </itemizedlist>
           <para xml:id="para_366d36b9-e401-4d48-b76e-21172cc5c638">
@@ -19276,7 +19453,7 @@
       </section>
       <section label="K.1.2" status="3" xml:id="sect_K.1.2">
         <title>Conventions</title>
-        <para xml:id="para_2aed0a3c-3b99-4e7a-b818-f267c4db49cb">Key Attributes serve two purposes, they may be used as : Matching Key Attributes and Return Key Attributes. Matching Key Attributes may be used for matching (criteria to be used in the C-FIND request to determine whether an entity matches the query). Return Key Attributes may be used to specify desired return Attributes (what elements in addition to the Matching Key Attributes have to be returned in the C-FIND response).</para>
+        <para xml:id="para_2aed0a3c-3b99-4e7a-b818-f267c4db49cb">Key Attributes serve two purposes, they may be used as: Matching Key Attributes and Return Key Attributes. Matching Key Attributes may be used for matching (criteria to be used in the C-FIND request to determine whether an entity matches the query). Return Key Attributes may be used to specify desired return Attributes (what elements in addition to the Matching Key Attributes have to be returned in the C-FIND response).</para>
         <note>
           <para xml:id="para_08c7b67b-31e1-4740-9028-03473cfbaea2">Matching Keys are typically used in an SQL 'where' clause. Return Keys are typically used in an SQL 'select' clause to convey the Attribute values.</para>
         </note>
@@ -22645,7 +22822,7 @@
     </section>
   </chapter>
   <chapter label="O" status="1" xml:id="chapter_O">
-    <title>Structured Reporting Storage SOP Classes(Normative)</title>
+    <title>Structured Reporting Storage SOP Classes (Normative)</title>
     <section label="O.1" status="2" xml:id="sect_O.1">
       <title>Overview</title>
       <para xml:id="para_90926829-367d-48b8-bd71-490cb3cdc69e">The Structured Reporting Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>) to extend the SCP behavior and conformance requirements.</para>
@@ -26160,7 +26337,7 @@
             </listitem>
           </itemizedlist>
           <para xml:id="para_8c4ef3c2-bad4-4044-8763-0fba4868dea9">The SCP shall describe its use of expanded or replacement character sets, both in the N-CREATE, the N-GET and in its extraction of information from the Composite Instances for incorporation in the DICOMDIR and on the media label. The SCP shall describe its use of the Attributes both in the N-CREATE, and N-ACTION and the Composite Instances to create the media label.</para>
-          <para xml:id="para_bee495ba-def8-4f89-b045-fb1ae2b2f3b0">The SCP shall specify if and how it supports the following optional Attributes in the N-CREATE and N-ACTION :</para>
+          <para xml:id="para_bee495ba-def8-4f89-b045-fb1ae2b2f3b0">The SCP shall specify if and how it supports the following optional Attributes in the N-CREATE and N-ACTION:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_6756a91a-59f1-4feb-819f-cece61504610">Storage Media File-Set ID (0088,0130) &amp; Storage Media File-Set UID (0088,0140)</para>
@@ -30660,6 +30837,22 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_3a92847c-026c-4725-9168-0364c8f51598">(7FE0,0010)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_00e2938f-de16-45b4-b66f-4335fe237855">Float Pixel Data</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7b756f40-bbb0-4315-b86e-c9cca7c2d17e">(7FE0,0008)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3372b55f-4932-44ee-9085-6585ed9dc2ab">Double Float Pixel Data</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b2c013fc-e37d-46e9-bd77-a9715ef168cd">(7FE0,0009)</para>
               </td>
             </tr>
             <tr valign="top">
@@ -36695,6 +36888,276 @@
                 </tr>
               </tbody>
             </table>
+            <table frame="box" label="CC.2.5-2g" rules="all" xml:id="table_CC.2.5-2g">
+              <caption>Storage Macro</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ed54cf8b-cfa6-4e95-afed-29ea3a3501b7">
+                      <emphasis role="bold">Attribute Name</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_72f47004-eb8c-4609-a475-a50ad8c020bb">
+                      <emphasis role="bold">Tag</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f96c5e88-947b-48bf-825e-ed19e27a88c9">
+                      <emphasis role="bold">Req. Type N-CREATE (SCU/SCP)</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_792233bd-b1f8-48c1-a15d-a3b8d8969595">
+                      <emphasis role="bold">Req. Type N-SET (SCU/SCP)</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ac5a5274-c1c3-473d-9162-e028961b3b08">
+                      <emphasis role="bold">Final State</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8c8114b9-319a-43d8-bd93-3f03e89ac015">
+                      <emphasis role="bold">Req. Type N-GET (SCU/SCP)</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5c022e7a-d039-4a30-a5c8-95153549c852">
+                      <emphasis role="bold">Match Key Type</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_55e37dbc-1f47-4957-8e01-ff3ebed19bd6">
+                      <emphasis role="bold">Return Key Type</emphasis>
+                    </para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_638691a0-b24a-4371-ac90-fe9ec8186f5a">
+                      <emphasis role="bold">Remark/Matching Type</emphasis>
+                    </para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_9f1afa8f-116a-47a0-a236-73429d99993a">Referenced SOP Class UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b37212af-4c1d-4481-bd96-7d489277861b">(0008,1150)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9a74c386-1da5-4049-a34f-a62996ad55ae">1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_36bbf057-dfad-4496-97d6-d80ea8500ae9">1C/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0dfa0fa1-2671-4775-a000-445c31d699f4">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ac37e3eb-1179-4930-ad26-80e1d1ed3c39">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_a4058a1d-dfff-4d9a-9e26-e4292c08ccdd">1C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d40bfc68-b5eb-483c-b5e2-bf3a62636323">Required if the storage request only applies to a specific SOP Class.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8a515aef-de5f-4128-835c-96dc3ab32cda">DICOM Storage Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ef1afeaa-6b1f-4fe2-bc9f-a4a7275d3172">(0040,4071)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9dd6f8a7-47fa-43b6-80f6-58d39aeea0b0">1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7b2ec508-0049-4372-8c8f-6547c43018a1">1C/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c9fba267-4def-48af-93de-511e68e726d0">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_40fc51e3-a38d-48f2-b0e4-3f6e36152c04">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_90b0b0e2-8c7b-426e-a5d1-d784377bc46c">1C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_daf0b035-ce11-4294-b261-c3e53b47d961">Required if STOW-RS Storage Sequence (0040,4072) and XDS Storage Sequence (0040,4074) are not present. May be present otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_cb3e4b1f-dcbf-48a2-b8bf-ae24e65c4729">&gt;Destination AE</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_90f4cf0f-eef9-4296-b816-01376326da2c">(0040,4071)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_3b307ca0-0327-467a-bbe4-55b4e9f153d6">1/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_eb778889-de87-49c3-a534-60d61ae4c8d0">1/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4ee189db-c43a-40f5-8383-4338c06910b0">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7366fefa-1c0b-4375-8e07-9abaf324acb7">*</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_aef7849b-518a-417e-bfe2-b25cabcce1bd">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6f2a9f03-df45-498c-9292-d0d6d34d5cfe"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_64f74336-7d61-4b69-9705-a202c630980b">STOW-RS Storage Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4d569668-157d-4c01-91f0-3867e07da2c4">(0040,4072)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4e6b7134-9e3e-4348-85a7-3fde49204022">1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_368e5f0c-c0ae-4c46-a4e1-3bc82ca91fab">1C/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_dba159b1-679f-4deb-8873-38f1aac174c6">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d8e654a2-0ed2-43ac-ba83-489e1d47a80b">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ca059176-dfbb-449b-a1de-afebaf26caed">1C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8141ceee-a804-4bd0-ae18-f26bdce2fc07">Required if DICOM Storage Sequence (0040,4071) and XDS Storage Sequence (0040,4074) are not present. May be present otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c2d053bd-2a3b-41f4-9009-d4749342e853">&gt;Storage URL</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5aa5bac9-88ee-4838-a9f5-da328bdcbf9e">(0040,4073)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_669f0594-9aad-4ce7-b250-b9c4635086ed">1/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_80877d5b-758e-4be6-bee7-2184d28663d8">1/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8b4708f4-c81d-4588-8ccb-5c1753bd66ac">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_212d915b-a725-4f77-b202-ff91c71fb954">*</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d9a70490-0e96-42e5-9bec-8ef2c9997994">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ce5004d2-0073-43d8-ba81-8a23b4a00547"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_17217027-3c1f-49d7-ae3f-691e56ba1fc3">XDS Storage Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_db4d3512-8c78-4de7-8362-b6b29223c773">(0040,4074)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2e5c6c82-7f7f-4b7b-8657-4b03f6a52b7e">1C/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_605eaba6-9aa6-4fb1-be01-c6fc05bad52e">1C/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ddb66682-6d4a-452e-ab1e-6d47c7ac87e4">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_254a1f76-c5ed-46ed-b029-555c49ecc6bd">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_37387186-03a9-47a8-9cc2-883894320838">1C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_03cefadb-e849-46a7-9b0c-87b348eda59d">Required if DICOM Storage Sequence (0040,4071) and STOW-RS Storage Sequence (0040,4072) are not present. May be present otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_9aa29864-dbe8-44f5-a8f1-52a1142796ca">&gt;Repository Unique ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_707d51f4-a193-4224-9565-d3421a56b353">(0040,E030)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b584392d-4cb1-4281-a19b-ef8263f99e54">1/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_669c09cf-e9ef-40c1-9318-d52d31e3c4ba">1/1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_597571cc-8950-4400-9f79-4ed053547645">-/1</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_595186a4-7e85-4487-bf16-35983349369d">*</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4b7d189b-8b72-441e-9217-0c4d6d3fa405">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_40cfba06-2ffd-4e11-b59f-e1b36ba3b3ae"/>
+                  </td>
+                </tr>                
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c02251a8-6e13-4173-b6b6-710f9499bf95">&gt;Home Community ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9f0d1186-3677-4d57-8c6f-0f769a73d2f9">(0040,E031)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f17b588a-d863-4637-8d79-9f326707f209">3/2</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_947d8aeb-08aa-441b-b932-4649e28be529">3/2</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2c628127-57a8-4373-b36c-927aa956ffad">3/2</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c55ea95e-59e7-47ee-9ef2-2ce4b341f99f">*</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_de9b5e5d-09c2-4a18-8bd1-b52552eba941">2</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_69c328ec-787f-4d5c-ac10-1a0751bea0d8"/>
+                  </td>
+                </tr>                
+               </tbody>
+            </table>
           </section>
           <section label="CC.2.5.1.3" status="5" xml:id="sect_CC.2.5.1.3">
             <title>UPS Attribute Service Requirements</title>
@@ -37520,6 +37983,43 @@
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_644819ef-5298-4d8f-a0a6-633d1d5bc5e4">Required if the Workitem is expected to result in the creation of any DICOM Composite Instances whose IOD contains the Study IE.</para>
                     <para xml:id="para_37c95c64-4290-42f5-b709-e695b7ae3101">There may be situations where the performer does not use the Study Instance UID suggested by the Scheduler.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a7c2a878-31c3-46b8-b75c-9e62522a66f9">Output Destination Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2a436bc8-9ebc-427f-b143-3f6ada4d06fb">(0040,4070)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2d901d94-d0e9-401a-9885-e2b7538cf7c2">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f356cffb-4ab1-479b-bf70-48145a558e55">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_fadefead-5e6a-4c92-abff-0aa2b7ca0e55">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_39ec2a0f-d9b6-4ab6-9ecd-e9fe9fda876a">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_00f1ae85-94cb-42d7-b64a-61cbcde9e3f1">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_31bed5f2-371d-4e27-9bca-069c8184ed93">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a32d4f01-e089-4c5f-b93c-fe0c4b1bbe6a">The Attributes of the Output Destination Sequence shall only be retrieved with Sequence Matching.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="9" rowspan="1">
+                    <para xml:id="para_d4abfa39-2683-4e6b-9ff9-1cee7c28ac17">
+                      <emphasis role="italic">&gt;Include <xref linkend="table_CC.2.5-2g" xrefstyle="select: label quotedtitle"/>
+                      </emphasis>
+                    </para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -39264,7 +39764,7 @@
                     <para xml:id="para_03ce645e-c1d8-4f51-aa2b-b54d5fbcf25a">&gt;Performed Procedure Step Start DateTime</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_4c219ac8-211a-4ba6-b095-e6ffa6e7b8a2">(0040,0244)</para>
+                    <para xml:id="para_4c219ac8-211a-4ba6-b095-e6ffa6e7b8a2">(0040,4050)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_66edf812-4785-4367-b05a-1be2d97279fc">Not Allowed</para>
@@ -39415,7 +39915,7 @@
                     <para xml:id="para_9e7a497a-d4be-43da-8242-66f78fd03289">&gt;Performed Procedure Step End DateTime</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_20214698-bc7e-4b65-b371-37acdff7f81f">(0040,0250)</para>
+                    <para xml:id="para_20214698-bc7e-4b65-b371-37acdff7f81f">(0040,4051)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_71285430-facb-45ef-91c7-85d20ab06ad0">Not Allowed</para>
@@ -45511,5 +46011,405 @@
       </section>
     </section>
   </chapter>
-  
+
+  <chapter label="FF" status="1" xml:id="chapter_FF">
+    <title>Volumetric Presentation State Storage SOP Classes (Normative)</title>
+    <section label="FF.1" status="2" xml:id="sect_FF.1">
+      <title>Overview</title>
+      <section label="FF.1.1" status="3" xml:id="sect_FF.1.1">
+        <title>Scope</title>
+        <para xml:id="para_f920237a-7aff-43cf-a82b-877bde99c5a6">The Volumetric Presentation State Storage SOP Classes extend the functionality of the Storage Service class (defined in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>) to add the ability to convey an intended Volumetric Presentation State or record an existing Volumetric Presentation State. The SOP Classes specify the information and behavior that may be used to present (display) images that are referenced from within the SOP Classes.</para>
+        <para xml:id="para_b414f65d-518b-4778-9977-564c2c052a13">They include capabilities for specifying:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_16279edd-0948-4079-aa12-03bd7d4c9222">spatial registration on the input datasets</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_cf263ecf-69b4-4545-a0ec-22dceb256503">cropping of the volume datasets by a bounding box, oblique planes and segmentation objects</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_b14c5741-38e1-474d-a393-abf3bebacda0">the generation geometry of volumetric views</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_ec2d9938-3cea-4492-93de-6c38b85bf388">scalar to P-Value or RGB Value conversions</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_9685bce6-5303-47a7-bea4-abadb31a7810">compositing of multiple renderings</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_56ca4076-7201-4cf1-b151-ecb7dfd2aeb0">clinical description of the specified view</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_165dadf1-46e0-4276-8ff2-32a0fe138071">volume and display relative annotations, including graphics, text and overlays</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_13ae785d-c308-4335-ae0c-dcd9120eafdd">membership to a collection of related Volumetric Presentation States intended to be processed or displayed together</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_9126b1e6-185a-4fef-93ca-e7e6f974c527">the position within a set of related Volumetric Presentation States</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_a4d95270-ba95-4c56-989c-de5cf29b111a">animation of the view</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6ffeba06-2180-4d14-8e6a-4b257e9a2bda">reference to an image depicting the view described by the Presentation State</para>
+          </listitem>
+        </itemizedlist>
+        <para xml:id="para_e8bff42f-c6fb-4dd4-8f22-4fea9be1e778">Each Volumetric Presentation State corresponds to a single view (equivalent to an Image Box in a Hanging Protocol or Structured Display). If multiple Volumetric Presentation States are intended to be displayed together (e.g. a set of orthogonal MPR views) these Presentation States can be grouped by assigning them to a Display Collection. However, any detailed information about how a set of views should be presented can only be described by a Structured Display instance or a Hanging Protocol.</para>
+        <para xml:id="para_1db16453-e7eb-43fb-8528-42082550a0e6">The Planar MPR Volumetric Presentation State refers to the multi-planar geometry and grayscale or color image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to presentation values (P-Values) or Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device.</para>
+        <para xml:id="para_8744e9d6-d61a-48c5-804e-0ab0c83e150e">The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
+        <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this standard.</para>
+        <para xml:id="para_c597b301-390b-4b3c-9edc-6feb96d94abd">A claim of conformance as an SCP of the SOP Class implies that the SCP shall make the Presentation State available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the standard.</para>
+        <para xml:id="para_81d4a14f-a48b-40bb-b995-e431fe6603f6">How an SCP of these SOP Classes chooses to display multiple states that are part of a Display Collection is beyond the scope of this standard.</para>
+        <note>
+          <para xml:id="para_361a7bcd-8bfb-42da-a057-30dae7b0da00">For example, if a user selects a state that is part of a four state Spatial Collection, an SCP may choose to display all four together, to display the single state selected by the user or to display two of the four states deemed appropriate by the SCP.</para>
+        </note>
+      </section>
+    </section>
+    <section label="FF.2" status="2" xml:id="sect_FF.2">
+      <title>Volume Transformation Processes</title>
+      <section label="FF.2.1" status="3" xml:id="sect_FF.2.1">
+        <title>Planar MPR Volumetric Transformation Process</title>
+        <para xml:id="para_1ada99dc-255a-4f0d-a727-40012b303653">The Planar MPR Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data.</para>
+        <para xml:id="para_d8a7631d-50f3-4ad2-9591-eb088fd0e415">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class defines a grayscale volumetric view from a single volume input. The sequence of transformations from volumetric inputs into P-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-1" xrefstyle="select: label"/>.</para>
+        <para xml:id="para_4f310dda-39cf-43b6-bd75-2c553f151d82">
+              <figure label="FF.2-1" pgwide="1" xml:id="figure_FF.2-1">
+                <title>Grayscale Planar MPR Volumetric Pipeline</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-1.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/image013_sup156.png"/>-->
+                    <!--<imagedata fileref="sup156_fromword_files/image013.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+        <para xml:id="para_2c53f26d-bc7c-42ed-bae6-807d398a3db5">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class defines a true color volumetric view from one or more volume inputs. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-2" xrefstyle="select: label"/>. The actual sequence implemented may differ (such as classifying and compositing prior to creating the MPR view) but must result in similar appearance.</para>
+        <para xml:id="para_5e4e77d6-fa68-453d-8ed4-5a37eb5d08b7">
+          <figure label="FF.2-2" pgwide="1" xml:id="figure_FF.2-2">
+                <title>Compositing Planar MPR Volumetric Pipeline</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-2.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image015.png"/>-->
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </para>
+        <para xml:id="para_108110ec-84f7-4d8f-b004-f7a3aa5bced9">The transformations defined in the Planar MPR Volumetric Presentation State Storage SOP Classes replace those that may be defined in the Referenced Image SOP Instances. If a particular transformation is absent in a Planar MPR Volumetric Presentation State Storage SOP Classes then it shall be assumed to be an identity transformation, and any equivalent transformation, if present, in the Referenced Image SOP Instances shall NOT be used instead.</para>
+        <para xml:id="para_60484cfc-9b04-4695-8344-de12b9a58cc6">The presentation-related Attributes of the Planar MPR Volumetric Presentation State Storage SOP Classes are immutable. They shall never be modified or updated; only a derived SOP Instance with a new SOP Instance UID may be created to represent a different presentation.</para>
+        <section label="FF.2.1.1" status="4" xml:id="sect_FF.2.1.1">
+          <title>Volumetric Inputs, Registration and Cropping</title>
+          <para xml:id="para_445bff8d-3f58-416a-86ff-4346ef7aca72">A Volumetric Presentation State can take multiple volumes as input. A volume is defined in <olink targetdoc="PS3.3" targetptr="sect_C.11.23.1" xrefstyle="template:Section %n “%t” in PS3.3"/>. The same source data can be referenced in more than one input.</para>
+          <para xml:id="para_9e8c5c40-c6a5-46ef-8a0e-156d6a126b5d">The VOI LUT is applied to the input data.</para>
+          <para xml:id="para_e9a3446f-7a84-4d76-8ab8-f573e8b18829">The input volumes may or may not be in the Volumetric Presentation State Reference Coordinate System (VPS-RCS). If they are not, they shall be registered into the VPS-RCS.</para>
+          <para xml:id="para_997a435d-6e74-46fa-801e-d06af80e918f">The input volumes shall be cropped as specified by the value of Crop (0070,1204) and items in the Volume Cropping Sequence (0070,1301).</para>
+        </section>
+        <section label="FF.2.1.2" status="4" xml:id="sect_FF.2.1.2">
+          <title>Volumetric Transformations</title>
+          <section label="FF.2.1.2.1" status="5" xml:id="sect_FF.2.1.2.1">
+            <title>Planar MPR Volumetric Presentation State</title>
+            <para xml:id="para_896d3c23-b0ff-4768-8c67-9ad60fb22ed6">The planar MPR transformation requires a volume that is in the Volumetric Presentation State Reference Coordinate System (VPS-RCS).</para>
+            <para xml:id="para_8a69b7a0-93d8-4658-aa36-32481f3a2b72">MPR generation is based on the attributes of the Multi-Planar Reconstruction Geometry Module (see <olink targetdoc="PS3.3" targetptr="sect_C.11.26.1.1" xrefstyle="template:Section %n “%t” in PS3.3"/>). If the MPR Thickness Type (0070,1502) is SLAB then the Compositing Method (0070,1206) is also used.</para>
+          </section>
+        </section>
+        <section label="FF.2.1.3Volumetric" status="4" xml:id="sect_FF.2.1.3Volumetric">
+          <title>Presentation State Display</title>
+          <section label="FF.2.1.3.1" status="5" xml:id="sect_FF.2.1.3.1">
+            <title>Volumetric Presentation State Display Foundation</title>
+            <para xml:id="para_93f511c6-77d8-4721-91b7-d85a5597bdd2">The Volumetric Presentation State Display Module defines the algorithms used to transform the result of the volumetric processing on the input data into an output of P-Values or PCS-Values for display.</para>
+            <para xml:id="para_fbde1ebf-ec2b-45fb-9e91-0669b78d84b2">If Pixel Presentation (0008,9205) is MONOCHROME, then Presentation LUT Shape (2050,0020) provides the transform to output P-Values.</para>
+            <para xml:id="para_0c187e48-749c-4e83-813b-3bd6a7e08a04">If Pixel Presentation (0008,9205) is TRUE_COLOR, then Presentation State Classification Component Sequence (0070,1801) describes the conversion of each processed input into an RGB data stream, and Presentation State Compositor Component Sequence (0070,1805) describes the compositing of these separate RGBA data streams into a single RGB data stream. This single RGB data stream is then processed as described by ICC Profile (0028,2000) to produce output PCS-Values.</para>
+            <section label="FF.2.1.3.1.1" status="6" xml:id="sect_FF.2.1.3.1.1">
+              <title>Classification Component Components</title>
+              <para xml:id="para_c5fff68c-8a43-41e6-952b-6a8c89159ad5">There are two classification component types currently defined for conversion from scalar input data to RGBA. The defined components are:</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_4c932e3f-fe9a-462a-b408-3e98b9007252">One Input -&gt; RGBA: This component accepts reconstructed data from one input in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
+                  <para xml:id="para_41bbe203-d4c6-4441-bfb1-801812e49b05">
+                    <figure label="FF.2-3" pgwide="1" xml:id="figure_FF.2-3">
+                <title>One Input -&gt; RGBA Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-3.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image017.png"/>-->
+                        </imageobject>
+                      </mediaobject>
+                    </figure>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_ab17c54a-6cb9-445f-bf8d-86d81b3d8c93">Two Inputs -&gt; RGBA: This component accepts reconstructed data from two inputs in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This component is used in the case where a two-dimensional color mapping needs to be performed. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
+                  <para xml:id="para_bbecc0e7-e1a2-41d9-a245-0b76e4e7d46e">
+                    <figure label="FF.2-4" pgwide="1" xml:id="figure_FF.2-4">
+                <title>Two Inputs -&gt;RGBA Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-4.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image019.png"/>-->
+                        </imageobject>
+                      </mediaobject>
+                    </figure>
+                  </para>
+                  <note>
+                    <para xml:id="para_6ccf2208-3593-47a6-9c9d-8a2406327b6a">An example for the use of this component is to combine Ultrasound Flow Velocity and Ultrasound Flow Variance to produce a color range from red-blue based on flow velocity and adding a yellow-green tinge based on flow variance)</para>
+                  </note>
+                </listitem>
+              </itemizedlist>
+            </section>
+            <section label="FF.2.1.3.1.2" status="6" xml:id="sect_FF.2.1.3.1.2">
+              <title>Compositor Components</title>
+              <para xml:id="para_b14173b6-d2d5-40f9-aad8-43f8f78784d4">There is one compositor component type defined for compositing of two input RGBA (or one RGBA and one RGB) data sources into an RGB output. The defined component is:</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_a9bf8cbc-f6ef-4048-850b-d92f1bfb65f3">RGB Compositor: This component accepts two RGBA inputs (with one Alpha input optional) and composites the data into a single RGB output. Each item of Presentation State Compositor Component Sequence (0070,1805) specifies one RGB Compositor component:</para>
+                  <para xml:id="para_a80a7224-bae3-4a38-b254-f5845acc6032">
+                    <figure label="FF.2-5" pgwide="1" xml:id="figure_FF.2-5">
+                <title>RGB Compositor Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-5.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image021.png"/>-->
+                        </imageobject>
+                      </mediaobject>
+                    </figure>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para xml:id="para_1a457c88-9271-45fa-884a-75eb891ed21e">The ICC Profile Connection Space Transform operation is performed after classification and compositing to generate output PCS-values using the specified ICC Color Profile (0028,2000)</para>
+            </section>
+          </section>
+          <section label="FF.2.1.3.2" status="5" xml:id="sect_FF.2.1.3.2">
+            <title>Internal Structure of Components</title>
+            <section label="FF.2.1.3.2.1" status="6" xml:id="sect_FF.2.1.3.2.1">
+              <title>Internal Structure of Classification Components</title>
+              <para xml:id="para_7dbc0369-0c04-4c24-8212-283b115ed81b">Component Type (0070,1802) specifies the component defined in each item of Presentation State Classification Component Sequence (0070,1801), which in turn controls by conditions the rest of the content of the item to provide the necessary specification of the component. The internal structure of each component in block diagram form is as follows:</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_16960b32-7b0b-46b5-8b3c-cf19aaf77423">One Input -&gt; RGBA: Specified by Component Type (0070,1802) = ONE_TO_RGBA:</para>
+                  <para xml:id="para_98ae46c4-d0bc-45a4-af36-a6375499db9b">
+                    <figure label="FF.2-6" pgwide="1" xml:id="figure_FF.2-6">
+                <title>Internal Structure of One Input -&gt; RGBA Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-6.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image023.png"/>-->
+                        </imageobject>
+                      </mediaobject>
+                    </figure>
+                  </para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_94af36e3-46b3-465f-876f-72ae168a7c10">Two Inputs -&gt; RGBA: If Component Type (0070,1802) = TWO_TO_RGBA:</para>
+                  <para xml:id="para_e8ac0fc4-172e-4726-a119-1ec085edd749">
+                    <figure label="FF.2-7" pgwide="1" xml:id="figure_FF.2-7">
+                <title>Internal Structure of Two Input -&gt; RGBA Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-7.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image025.png"/>-->
+                        </imageobject>
+                      </mediaobject>
+                    </figure>
+                  </para>
+                </listitem>
+              </itemizedlist>
+              <para xml:id="para_29f6136e-1b81-455d-8ee4-8329412deab3">The number of most significant bits extracted from each input is specified by the value of Bits Mapped to Color Lookup Table (0028,1403) in the Component Input Sequence (0070,1803) item for that input.</para>
+              <para xml:id="para_871754b6-7c27-4530-9a73-80289b470114">If Component Type (0070,1802) = TWO_TO_RGBA, there shall be two items in Component Input Sequence (0070,1803) with the first item defining the source of the most significant bits of the Palette Color Lookup Table input and the second item defining the source of the least significant bits of the Palette Color Lookup Table input</para>
+            </section>
+            <section label="FF.2.1.3.2.2" status="6" xml:id="sect_FF.2.1.3.2.2">
+              <title>Internal Structure of RGB Compositor Component</title>
+              <para xml:id="para_c62ad18a-ffd4-4206-8635-c2d210be2e86">Weighting transfer functions that compute the weighting factors used by the Compositor Function as a function of Alpha<subscript>1</subscript> and Alpha<subscript>2</subscript> values are specified as weighting look-up tables (LUTs) in the RGB Compositor component:</para>
+              <para xml:id="para_43944385-b63a-47cf-9834-1f7c023dd3bd">
+                <figure label="FF.2-8" pgwide="1" xml:id="figure_FF.2-8">
+                <title>Internal Structure of RGB Compositor Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-8.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image027.png"/>-->
+                    </imageobject>
+                  </mediaobject>
+                </figure>
+              </para>
+              <para xml:id="para_c4a76718-0e22-4950-9202-546202654424">Because each Weighting LUT uses both Alpha values in determining a weighting factor, they allow compositing functions that would not be possible if each weighting factor were based only on that input's Alpha value. See <olink targetdoc="PS3.17" targetptr="sect_XXX.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for typical usage of the Weighting LUTs.</para>
+              <para xml:id="para_0ec8bfca-73ca-4878-a1f5-8e0191d693cc">The input bits to the Weighting LUTs are obtained by combining the two Alpha inputs, with half the input bits obtained from each Alpha input:</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_70944b16-f81f-4229-8821-034d037a0a99">In the case of the first compositor component corresponding to the first item in Presentation State Compositor Component Sequence (0070,1805), the Alpha from the classification component corresponding to the first item in the Presentation State Classification Component Sequence (0070,1805) provides the most significant bits of the Weighting LUT inputs, while the Alpha from the classification component corresponding to the second item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs.</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_4650508a-9e27-49e4-8f92-24ea3914d224">In the case of subsequent compositor components, the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs, while the most significant bits of the Weighting LUT inputs are computed as one minus the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805).</para>
+                </listitem>
+              </itemizedlist>
+               <para xml:id="para_616b9c87-c089-41df-895c-c1e6d63ce8fd">The integer outputs of the Weighting LUTs are normalized to the range 0.0 to 1.0, and the Compositor Function combines the normalized R, G, and B (each component called "Color" = C<subscript>x</subscript>) input values as follows:</para>
+              <para xml:id="para_1e5f21ad-8756-4e71-878e-ea0ff1165b6b">
+<emphasis role="italic">C<subscript>out</subscript> = (C<subscript>1</subscript>*Weight<subscript>1</subscript>) + (C<subscript>2</subscript>*Weight<subscript>2</subscript>)</emphasis>
+</para>
+              <para xml:id="para_951aa3dd-5b2c-4145-b72b-af5c58902aa5">The sum of the normalized Weight<subscript>1</subscript> and Weight<subscript>2</subscript> shall be no greater than 1.0.</para>
+              <para xml:id="para_d1adcc2f-52de-4dd8-90d8-73c5a99534bd">The color input values are normalized because the number of output bits from the RGB Palette Color Lookup Tables may be different in each classification component.</para>
+              <para xml:id="para_0c74d115-7d32-4f7f-87fb-55e8d4ab8a0a">The output of the compositor shall be range-limited ("clamped") to ensure that the outputs are guaranteed to be within a valid range of color values regardless of the validity of the weighting transfer functions. This isolates subsequent compositor components and the Profile Connection Space Transform from overflow errors.</para>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section label="FF.3" status="2" xml:id="sect_FF.3">
+      <title>Additional Volumetric Considerations</title>
+      <section label="FF.3.1" status="3" xml:id="sect_FF.3.1">
+        <title>Annotations in Volumetric Presentations States</title>
+        <para xml:id="para_95d96339-603e-4f03-a93e-0f60864dfc15">The Volumetric Presentation States provide two ways for annotating views:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_cb0e5bb7-f5bc-40ff-a53b-57ca67a6b952">Annotations on the Volumetric Presentation View</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_edaebfdb-967c-4ad3-b0d5-973e55d9d087">Annotations described by coordinates in the Volumetric Presentation State Reference Coordinate System (VPS-RCS) with optional references to Structured Reports providing context.</para>
+          </listitem>
+        </itemizedlist>
+        <para xml:id="para_be977d10-84d8-4a5f-99dd-05bec3c49931">Annotations on the view provide the application of free unformatted text or vector graphics as described in the <olink targetdoc="PS3.3" targetptr="sect_C.10.5" xrefstyle="template:Section %n “%t” in PS3.3"/>. Since the Graphic Annotation Module allows only the addition of graphics to the 2D view defined by the Presentation State without attached clinical meaning, Volumetric Graphic Annotations provide a mechanism to create annotations in the VPS-RCS with optional references to other objects which can have structured context attached.</para>
+        <para xml:id="para_1d0a9b68-2b4e-4881-922b-21dde929bada">Volumetric Graphic Annotations can be specified in two variants: either via Graphic Types with 3D coordinates, as defined in <olink targetdoc="PS3.3" targetptr="sect_C.18.9.1.2" xrefstyle="template:Section %n “%t” in PS3.3"/>, or via a reference to inputs of the Presentation State. The latter is intended to be used to display annotation labels for segmentations of the volume data set; for example, when a lesion has been marked via a Segmentation IOD and this segmentation is rendered together with the anatomical data.</para>
+        <para xml:id="para_0a278312-566d-43f8-9310-cd77471c0c08">Since annotations which are added via the Graphics Annotation Module are defined within the display space, they should not be used to point to clinical relevant structures which would be positioned on a different anatomy after manipulation.</para>
+        <para xml:id="para_762121c1-56cf-4e75-94e5-cb1dd3d72f4c">In contrast since Volumetric Graphic Annotations have coordinates in the VPS-RCS, applications can still show them after a user has manipulated the initial view which has been defined by the Presentation State.</para>
+        <para xml:id="para_23d038d2-08ac-4689-abdd-520b2159c151">The exact visual representation of the annotations is at the discretion of the display application, as well as the mechanisms which may be employed to ensure that Volumetric Graphic Annotations are sufficiently visible, even if the location in the volume is not visible in the current view. E.g. for a Graphic Type POINT a display application might render a crosshair at the specified position in the volume or a sphere with an arrow pointing to it instead of rendering Volumetric Graphic Annotations directly within the volume a projection of the annotations may be rendered as an overlay on top of the view.</para>
+        <para xml:id="para_1dee8bbb-a82b-470f-93dd-66c87bd84df6">However, annotations can be grouped into Graphics Layers and it is suggested that applications provide mechanisms to define rendering styles per Graphics Layer.</para>
+        <para xml:id="para_9eaae412-dd41-44c4-8e48-7531a6f87112">See <olink targetdoc="PS3.17" targetptr="sect_XXX.3.4" xrefstyle="template:Section %n “%t” in PS3.17"/> and <olink targetdoc="PS3.17" targetptr="sect_XXX.3.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for examples of Volumetric Graphic Annotations.</para>
+      </section>
+      <section label="FF.3.2" status="3" xml:id="sect_FF.3.2">
+        <title>Volumetric Animation</title>
+        <para xml:id="para_202725da-ee5b-4a44-aae0-6fc09173f584">Several different styles of animation are defined in Volumetric Presentation States. In general, an animation style will vary either the input, processing, or view geometry in order to produce a varying presentation view. This section describes each of the animation styles and how it produces an animated view.</para>
+        <section label="FF.3.2.1" status="4" xml:id="sect_FF.3.2.1">
+          <title>Input Sequence Animation</title>
+          <para xml:id="para_fa00340e-64b8-4d9d-8d24-4d0ebb8dc7c0">A Presentation Animation Style (0070,1A01) value of INPUT_SEQ indicates that Input Sequence Animation is being specified. In this animation style, a single Volumetric Presentation State is defined which includes input items in the Volumetric Presentation State Input Sequence (0070,1201) with different values of Input Sequence Position Index (0070,1203). The animated presentation view is produced by sequencing through values of Input Sequence Position Index (0070,1203) at a specified animation rate Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view from inputs that have that value of Input Sequence Position Index (0070,1203). See <xref linkend="figure_FF.3.2-1" xrefstyle="select: label"/>.</para>
+          <note>
+            <para xml:id="para_20e56749-3709-4319-b2f0-52c29edd6e70">For example, a set of inputs could be temporally related volumes of a moving anatomical structure like the heart.</para>
+          </note>
+          <para xml:id="para_54af3fea-542d-4153-83e9-8c3de03081cb">There may be more than one input item in Volumetric Presentation State Input Sequence (0070,1201) with the same value of Input Sequence Position Index (0070,1203), in which case the inputs are processed together to produce the frame of the animated view.</para>
+          <note>
+            <para xml:id="para_4191cb0b-9c1b-4f90-8ef0-db90fa0fc63d">For example, pairs of input items could represent the same volume input at a point in time with two different segmentation croppings (representing different organ structures) that are blended together into a single view.</para>
+          </note>
+          <para xml:id="para_6002b364-ca59-480d-9e89-11c54ac7023a">
+            <figure label="FF.3.2-1" pgwide="1" xml:id="figure_FF.3.2-1">
+                <title>Input Sequence Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-1.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image029.png"/>-->
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+        </section>
+        <section label="FF.3.2.2" status="4" xml:id="sect_FF.3.2.2">
+          <title>Presentation Sequence Animation</title>
+          <para xml:id="para_c91c7521-2009-4ab5-8fc6-c95b5345c756">A Presentation Animation Style (0070,1A01) value of PRESENTATION_SEQ indicates that Presentation Sequence Animation is being specified. In this animation style, a set of Volumetric Presentation States are applied sequentially. See <xref linkend="figure_FF.3.2-2" xrefstyle="select: label"/>.</para>
+          <note>
+            <para xml:id="para_ae01ec26-e3c9-46c2-b0fa-23c5df23565f">One example of the use of presentation sequence animation is a view of a moving heart wherein a stent is at a stationary position at the center of the view. Because the geometry of each view frame is slightly different, separate Volumetric Presentation State instances are required for each view frame.</para>
+          </note>
+          <para xml:id="para_c1c1158d-2a10-47d6-aaa0-9efd3f7252bb">Each Volumetric Presentation State of the set is identified by having the same value of Presentation Sequence Collection UID (0070,1102). The order of application of these Presentation States is determined by the value of Presentation Sequence Position Index (0070,1103) defined in the Presentation State. The animated presentation view is produced by sequencing through values of presentation sequence position index at a specified animation rate Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view produced by that Volumetric Presentation State.</para>
+          <para xml:id="para_3aa19d9a-b8ff-4963-a469-8c651cf23e4f">
+            <figure label="FF.3.2-2" pgwide="1" xml:id="figure_FF.3.2-2">
+                <title>Presentation Sequence Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-2.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image031.png"/>-->
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+        </section>
+        <section label="FF.3.2.3" status="4" xml:id="sect_FF.3.2.3">
+          <title>Crosscurve Animation</title>
+          <para xml:id="para_e7981aa3-6582-408a-a5a3-c758c3557a87">A Presentation Animation Style (0070,1A01) value of CROSSCURVE indicates that Crosscurve Animation is being specified. In this animation style, a Presentation State defines a Planar MPR view at the beginning of a curve defined in Animation Curve Sequence (0070,1A04). The Planar MPR view is stepped a distance Animation Step Size (0070,1A05) along the curve defined in Animation Curve Sequence (0070,1A04) at the rate specified by Recommended Animation Rate (0070,1A03) in steps per second. See <xref linkend="figure_FF.3.2-3" xrefstyle="select: label"/>.</para>
+          <note>
+            <para xml:id="para_5702e7ec-a691-4492-9436-5703d5e4b8a2">A typical application of this animation style is motion along a curve centered within the colon or a blood vessel.</para>
+          </note>
+          <para xml:id="para_92d6d9eb-9608-463f-9e8a-54519202b881">
+            <figure label="FF.3.2-3" pgwide="1" xml:id="figure_FF.3.2-3">
+                <title>Crosscurve Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-3.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image033.png"/>-->
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+        </section>
+      </section>
+      <section label="FF.3.3" status="3" xml:id="sect_FF.3.3">
+        <title>Display Layout</title>
+        <para xml:id="para_db3f7078-2214-412d-bab0-6beee44b8bb3">The layout of multiple Volumetric Presentation States is not specified by the Planar MPR Volumetric Transformation Process. However, there are attributes within Volumetric Presentation States that can influence the overall display layout.</para>
+        <para xml:id="para_23978c1d-b8d8-427f-b67e-e7df4f8d33f0">For instance:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_7a4e8492-2a4e-4b15-9dc8-e0e2694ba521">Anatomic Region Sequence (0008,2218) specifies the anatomic region covered by the Volumetric Presentation State</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_237f880a-b16a-43a8-9258-3085647efabc">View Code Sequence (0054,0220) describes the view of the anatomic region of interest (e.g. Coronal, Oblique transverse, etc.)</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_8cc93141-1d5a-4483-af50-f33ba0356397">Presentation Display Collection UID (0070,1101) identifies the Presentation State as one of a set of views intended to be displayed together</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_812bafeb-9518-4be2-a85d-e000436b5f1b">SOP Class UID (0008,0016) identifies that the Presentation State describes a Planar MPR view</para>
+          </listitem>
+        </itemizedlist>
+        <para xml:id="para_fb7c8a5d-650b-445f-88cb-66c96ec4855e">The use of these attributes allows a display application to create an appropriate presentation of multiple Volumetric Presentation States, whether through the application of a Hanging Protocol instance, a Structured Display instance or by means of an application-specific algorithm.</para>
+        <para xml:id="para_c5d51a92-229c-4c6d-a9b4-3df940aa40cb">For an example of their use, see <olink targetdoc="PS3.17" targetptr="chapter_XXX" xrefstyle="template:Annex %n “%t” in PS3.17"/>.</para>
+      </section>
+    </section>
+    <section label="FF.4" status="2" xml:id="sect_FF.4">
+      <title>Behavior of An SCP</title>
+      <para xml:id="para_ed0eec63-75a4-4cac-99a3-53be87add250">In addition to the behavior for the Storage Service Class specified in <xref linkend="sect_B.2.2" xrefstyle="select: label quotedtitle"/>, the following additional requirements are specified for the Volumetric Presentation State Storage SOP Classes:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_79f73572-2eb1-4b29-aa5f-89ae9f70ff75">a display device acting as an SCP of these SOP Classes shall make all mandatory presentation attributes available for application to the referenced volumetric data at the discretion of the display device user, for all Image Storage SOP Classes defined in the Conformance Statement for which the Volumetric Presentation State Storage SOP Class is supported.</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_6e5cc12a-1712-4ce6-8255-c6f7f749dbb4">a display device acting as an SCP of the Volumetric Presentation State Storage SOP Classes shall support the Segmentation SOP Class for cropping and the Spatial Registration SOP Class for registration.</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_9359e91e-10bd-4261-86b8-e6621f81b3c3">a display device acting as an SCP of the Volumetric Presentation State Storage SOP Classes is not required to support the Presentation Animation Module.</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_f17c5067-9f88-4c63-b5d3-d2a660f82050">a display device acting as an SCP of any of the Volumetric Presentation State Storage SOP Classes is not required to support Structured Reporting Storage SOP Classes.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section label="FF.5" status="2" xml:id="sect_FF.5">
+      <title>Conformance</title>
+      <para xml:id="para_67d7ff44-deda-41b3-ac71-46fb8b21a0d4">In addition to the Conformance Statement requirements for the Storage Service Class specified in <xref linkend="sect_B.4.3" xrefstyle="select: label quotedtitle"/>, the following additional requirements are specified for the Volumetric Presentation State Storage SOP Classes:</para>
+      <section label="FF.5.1" status="3" xml:id="sect_FF.5.1">
+        <title>Conformance Statement For An SCU</title>
+        <para xml:id="para_b932157d-feac-4714-8db7-d5aa346847f3">The following behavior shall be documented in the Conformance Statement of any implementation claiming conformance to a Volumetric Presentation State Storage SOP Class as an SCU:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_8c0546fb-0274-4e44-8a8c-8e58fdad4924">For an SCU of a Volumetric Presentation State Storage SOP Class that is creating a SOP Instance of the Class, the manner in which presentation related attributes are derived from a displayed image, operator intervention or defaults, and how they are included in the IOD.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_ae7c6955-cdab-4cfd-b6d8-8d1034cc81a3">For an SCU of a Volumetric Presentation State Storage SOP Class, the Image Storage SOP Classes that are also supported by the SCU and which may be referenced by instances of the Volumetric Presentation State Storage SOP Class.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+      <section label="FF.5.2" status="3" xml:id="sect_FF.5.2">
+        <title>Conformance Statement For An SCP</title>
+        <para xml:id="para_81ef11e5-0fc3-4934-9480-04f7e74551c5">The following behavior shall be documented in the Conformance Statement of any implementation claiming conformance to a Volumetric Presentation State Storage SOP Class as an SCP:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_1ac5e31b-1818-4f93-82b6-7ded42c29913">For an SCP of a Volumetric Presentation State Storage SOP Class that is displaying an image referred to by a SOP Instance of the Class, the manner in which presentation related attributes are used to influence the display of an image.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_e6802ecd-33e7-4dfc-b797-92bbf76162ec">For an SCP of a Volumetric Presentation State Storage SOP Class, the Image Storage SOP Classes that are also supported by the SCP and which may be referenced by instances of the Volumetric Presentation State Storage SOP Class.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_9a4e90ed-4ba1-444d-8f0b-889822b13a98">For an SCP of a Volumetric Presentation State Storage SOP Class, whether the Presentation Animation Module is supported, and if not supported, any notifications or lack of notifications to the user that the context information is not displayed.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_cdd713dd-0f5a-42e1-a89a-8f6356145f4d">For an SCP of a Volumetric Presentation State Storage SOP Class, whether references to Structured Report instances are supported, and if not supported, any notifications or lack of notifications to the user that the context information is not displayed.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+  </chapter>
 </book>

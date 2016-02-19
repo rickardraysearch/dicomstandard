@@ -120,4 +120,69 @@ body { background-image: url('</xsl:text>
 	</xsl:call-template>
 </xsl:template>
 
+<!-- per example in "http://www.sagehill.net/docbookxsl/HTMLHeaders.html", include breadcrumbs in header -->
+
+<xsl:template name="breadcrumbs">
+  <xsl:param name="this.node" select="."/>
+  <div class="breadcrumbs">
+    <xsl:for-each select="$this.node/ancestor::*">
+      <span class="breadcrumb-link">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:call-template name="href.target">
+              <xsl:with-param name="object" select="."/>
+              <xsl:with-param name="context" select="$this.node"/>
+            </xsl:call-template>
+          </xsl:attribute>
+          <xsl:apply-templates select="." mode="title.markup"/>
+        </a>
+      </span>
+      <xsl:text> &gt; </xsl:text>
+    </xsl:for-each>
+    <!-- And display the current node, but not as a link -->
+    <span class="breadcrumb-node">
+      <xsl:apply-templates select="$this.node" mode="title.markup"/>
+    </span>
+  </div>
+</xsl:template>
+
+<xsl:template name="user.header.content">
+  <xsl:call-template name="breadcrumbs"/>
+</xsl:template>
+
+<!-- include full name and release of part on every page before the navigation headers and after the navigation footers -->
+
+<xsl:template name="user.header.navigation">
+	<table width="100%">
+		<tr>
+			<th colspan="1" align="center" rowspan="1">
+				<span class="documentreleaseinformation">
+					<xsl:value-of select="/d:book/d:subtitle"/>
+				</span>
+			</th>
+		</tr>
+	</table>
+</xsl:template>
+
+<xsl:template name="user.footer.navigation">
+	<table width="100%">
+		<tr>
+			<th colspan="1" align="center" rowspan="1">
+				<span class="documentreleaseinformation">
+					<xsl:value-of select="/d:book/d:subtitle"/>
+				</span>
+			</th>
+		</tr>
+	</table>
+</xsl:template>
+
+<!-- do not italicize foreignphrase -->
+<xsl:template match="d:foreignphrase">
+  <span>
+    <xsl:apply-templates select="." mode="common.html.attributes"/>
+    <!--<xsl:call-template name="inline.italicseq"/>-->
+    <xsl:call-template name="inline.charseq"/>
+  </span>
+</xsl:template>
+
 </xsl:stylesheet>

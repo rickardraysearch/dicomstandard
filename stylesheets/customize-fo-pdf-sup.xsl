@@ -28,7 +28,8 @@
 	<xsl:param name="header.column.widths">1 8 1</xsl:param>
 
 	<xsl:param name="draft.mode" select="'yes'"/>
-	<xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl-ns/current/images/draft.png'"/>	<!-- uses rewrite rule in catalog.xml to find it -->
+	<!-- <xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl-ns/current/images/draft.png'"/> -->	<!-- should use rewrite rule in catalog.xml to find it -->
+	<xsl:param name="draft.watermark.image" select="'file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/docbook-xsl-ns-1.78.1/images/draft.png'"/>	<!-- rewrite rule never seems to get invoked so hard wire it -->
 	
 	<xsl:param name="xref.with.number.and.title" select="'1'"/>
 	<xsl:param name="glossentry.show.acronym" select="'yes'"/>
@@ -483,6 +484,12 @@
       </xsl:element>
     </xsl:if>
   </rx:meta-info>
+</xsl:template>
+
+<!-- do not italicize foreignphrase -->
+<xsl:template match="d:foreignphrase">
+  <!--<xsl:call-template name="inline.italicseq"/>-->
+  <xsl:call-template name="inline.charseq"/>
 </xsl:template>
 
 </xsl:stylesheet>

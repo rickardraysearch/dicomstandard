@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2015c - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2016a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2015</year>
+      <year>2016</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -50,6 +50,10 @@
     <title>Foreword</title>
     <para xml:id="para_385974e1-07ac-467d-a77c-8d5d6c475f0e">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
     <para xml:id="para_4b7125b5-1f6d-47c1-804d-4b2966ff615e">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_b8a51be3-28ef-4aaa-a74c-7f1f242aecd2">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
+    <para xml:id="para_33a14e20-b561-4536-bc71-8b95a09fade2">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
+    <para xml:id="para_85f467fb-c08b-40c4-9358-accb2a3ab790">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
+    <para xml:id="para_41dd6d91-05b1-48bc-8525-fd03d5c995f2">LOINC® is the registered trademark of Regenstrief Institute, Inc, all rights reserved.</para>
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
@@ -1295,7 +1299,7 @@
       <title>Value Representation (VR)</title>
       <para xml:id="para_3f79e255-1c8e-48b1-811f-97aa468ea546">The Value Representation of a Data Element describes the data type and format of that Data Element's Value(s). <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> lists the VR of each Data Element by Data Element Tag.</para>
       <para xml:id="para_5365717b-21d7-4c05-853c-9ab38004b2bb">Values with VRs constructed of character strings, except in the case of the VR UI, shall be padded with SPACE characters (20H, in the Default Character Repertoire) when necessary to achieve even length. Values with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to achieve even length. Values with a VR of OB shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
-      <para xml:id="para_32d49290-4ed4-45ef-bced-0524398a84c1">All new VRs defined in future versions of DICOM shall be of the same Data Element Structure as defined in <xref linkend="sect_7.1.2" xrefstyle="select: label"/> (i.e., following the format for VRs such as OB, OW, SQ and UN).</para>
+      <para xml:id="para_32d49290-4ed4-45ef-bced-0524398a84c1">All new VRs defined in future versions of DICOM shall be of the same Data Element Structure as defined in <xref linkend="sect_7.1.2" xrefstyle="select: label"/> (i.e., following the format for VRs such as OB, OD, OF, OL, OW, SQ and UN).</para>
       <note>
         <para xml:id="para_cfdc9e96-676d-40a7-9db2-a0d88179d889">Since all new VRs will be defined as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>, an implementation may choose to ignore VRs not recognized by applying the rules stated in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
       </note>
@@ -1572,7 +1576,7 @@
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_973d1f90-6cb4-4966-86e4-68f32946b6e9">OB</para>
-              <para xml:id="para_bd2d566b-6196-4dfa-b40b-2ed6214162f6">Other Byte String</para>
+              <para xml:id="para_bd2d566b-6196-4dfa-b40b-2ed6214162f6">Other Byte</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_63ef9d65-10d9-445d-b7b3-93cb6d31e218">A string of bytes where the encoding of the contents is specified by the negotiated Transfer Syntax. OB is a VR that is insensitive to Little/Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). The string of bytes shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
@@ -1587,7 +1591,7 @@
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f21f3196-96be-4c5a-a5a9-b014a18c3c13">OD</para>
-              <para xml:id="para_3ff0e461-16ef-4035-afbe-d2be9b209fdd">Other Double String</para>
+              <para xml:id="para_3ff0e461-16ef-4035-afbe-d2be9b209fdd">Other Double</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c00ad319-fe87-41ad-83b5-ac20a1a70afe">A string of 64-bit IEEE 754:1985 floating point words. OD is a VR that requires byte swapping within each 64-bit word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
@@ -1602,7 +1606,7 @@
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_51c4e4f2-2811-4828-9a06-db1c5711c874">OF</para>
-              <para xml:id="para_62319e8c-b6d8-4e69-99ef-22b57db8b33e">Other Float String</para>
+              <para xml:id="para_62319e8c-b6d8-4e69-99ef-22b57db8b33e">Other Float</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_411d45f9-2aae-46c4-af81-60d4205f25c2">A string of 32-bit IEEE 754:1985 floating point words. OF is a VR that requires byte swapping within each 32-bit word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
@@ -1616,8 +1620,23 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_91e98d31-b095-450d-a731-03d130783da7">OL</para>
+              <para xml:id="para_199bed09-5450-4a6b-86ce-0bc9ab308cb8">Other Long</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_42969a8a-2079-410d-bcda-972786062dc9">A string of 32-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OL is a VR that requires byte swapping within each word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b4817f91-53e7-4054-b7f8-d99e3019b848">not applicable</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0e7d76ca-1dc3-4940-a9e6-a3e1e8f82b39">see Transfer Syntax definition</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b548f29c-2871-4ad6-91ce-5f0ba6bd294f">OW</para>
-              <para xml:id="para_b8371695-2729-4b85-8c99-12c64e4d3aaf">Other Word String</para>
+              <para xml:id="para_b8371695-2729-4b85-8c99-12c64e4d3aaf">Other Word</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_29d49676-964d-48ea-81bc-8551eddc026e">A string of 16-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OW is a VR that requires byte swapping within each word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
@@ -1972,7 +1991,16 @@
           <para xml:id="para_daf538f1-2517-4ec7-b8c9-aa3d6dd33712">Character strings representing person names are encoded using a convention for PN value representations based on component groups with 5 components.</para>
           <para xml:id="para_7d144c51-7fae-47f0-8e50-a8252e08bbe0">For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 component groups may be used. The delimiter of the component group shall be the equals character "=" (3DH). The three component groups in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.</para>
           <para xml:id="para_facb498f-6a71-48ba-b2e1-7e53564054d3">Any component group may be absent, including the first component group. In this case, the person name may start with one or more "=" delimiters. Delimiters are also required for interior null component groups. Trailing null component groups and their delimiters may be omitted.</para>
-          <para xml:id="para_4c6c02a7-227b-4b36-81b2-6a19a14b5d94">The first component group (identified by DICOM as "alphabetic") shall be encoded using the character set specified by the Attribute Specific Character Set (0008,0005), value 1. If Attribute Specific Character Set (0008,0005) is not present, the default Character Repertoire ISO-IR 6 shall be used. ISO 2022 escapes for Code Extension shall not be used in this component group. When Specific Character Set (0008,0005) value 1 specifies a multi-byte character set without Code Extension (i.e., Unicode in UTF-8, GB18030 or GBK), the characters of this component group may be encoded with multiple bytes, but shall be drawn from the code points U+0000 through U+1FFF of ISO/IEC 10646.</para>
+          <para xml:id="para_4c6c02a7-227b-4b36-81b2-6a19a14b5d94">The first component group (identified by DICOM as "alphabetic") shall be encoded using the character set specified by the Attribute Specific Character Set (0008,0005), value 1.
+            If Attribute Specific Character Set (0008,0005) is not present, the default Character Repertoire ISO-IR 6 shall be used.
+            ISO 2022 escapes for Code Extension shall not be used in this component group.
+            When Specific Character Set (0008,0005) value 1 specifies a multi-byte character set without Code Extension (i.e., Unicode in UTF-8, GB18030 or GBK), the characters of this component group may be encoded with multiple bytes,
+            but shall be drawn from the code points U+0020 through U+1FFF of ISO/IEC 10646, or the following ISO/IEC 10646 code points:</para>
+          <itemizedlist mark="none">
+            <listitem>
+              <para xml:id="para_dfd1419c-0406-4635-83f3-98dff63bd0bc">U+3001, U+3002, U+300C, U+300D, U+3099 through U+309C, and U+30A0 through U+30FF</para>
+            </listitem>
+          </itemizedlist>
           <para xml:id="para_30152420-8f82-4b81-8257-adfb51b7068d">The second group shall be used for ideographic characters. The character sets used will usually be those from Attribute Specific Character Set (0008,0005), value 2 through n, and may use ISO 2022 escapes.</para>
           <para xml:id="para_c0a7f528-096f-45e3-9c89-ff069bb9c265">The third group shall be used for phonetic characters. The character sets used shall be those from Attribute Specific Character Set (0008,0005), value 1 through n, and may use ISO 2022 escapes.</para>
           <para xml:id="para_62b5c323-852d-46e0-955b-80db36d4714c">Delimiter characters "^" and "=" are taken from the character set specified by value 1 of the Attribute Specific Character Set (0008,0005). If Attribute Specific Character Set (0008,0005), value 1 is not present, the default Character Repertoire ISO-IR 6 shall be used.</para>
@@ -1983,7 +2011,9 @@
       </section>
       <section label="6.2.2" status="3" xml:id="sect_6.2.2">
         <title>Unknown (UN) Value Representation</title>
-        <para xml:id="para_768f8d76-226d-44f6-a9ee-44cf0ef649af">The Unknown (UN) VR shall only be used for Private Attribute Data Elements and Standard Data Elements previously encoded as some DICOM VR other than UN using the DICOM Default Transfer Syntax (Implicit VR Little Endian), and whose Value Representation is currently unknown. As long as the VR is unknown the Value Field is insensitive to Little/Big Endian byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for a discussion of Transfer Syntaxes.</para>
+        <para xml:id="para_768f8d76-226d-44f6-a9ee-44cf0ef649af">The Unknown (UN) VR shall only be used for Private Attribute Data Elements and Standard Data Elements previously encoded as some DICOM VR other than UN using the DICOM Default Transfer Syntax (Implicit VR Little Endian), and whose Value Representation is currently unknown,
+          or whose known Value Representation is none of OB, OD, OF, OL, OW, SQ, UC, UR or UT and whose value length exceeds 65534 (2<superscript>16</superscript>-2) and therefore cannot be encoded as a 16-bit unsigned integer in the Value Length Field defined for the known Value Representation (see <xref linkend="sect_6.2.1" xrefstyle="select: label"/>).
+          As long as the VR is unknown the Value Field is insensitive to Little/Big Endian byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for a discussion of Transfer Syntaxes.</para>
         <para xml:id="para_49556031-2a34-4a00-b3e4-a8ab70495c94">The UN VR shall not be used for Private Creator Data Elements (i.e., the VR is equal to LO, see <xref linkend="sect_7.8.1" xrefstyle="select: label"/>).</para>
         <para xml:id="para_98977780-9f84-458f-97d1-1703e7007afb">The UN VR shall not be used for File Meta Information Data Elements (any Tag (0002,xxxx), see <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>).</para>
         <note>
@@ -1995,10 +2025,13 @@
               <para xml:id="para_c03ba4d0-2094-43e3-9ad1-fb039671675f">If at some point an application knows the actual VR for an Attribute of VR UN (e.g., has its own applicable data dictionary), it can assume that the Value Field of the Attribute is encoded in Little Endian byte ordering with implicit VR encoding, irrespective of the current Transfer Syntax.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_006582d8-2b07-4e53-8ea5-c3e0c288bcf6">This VR of UN is needed when an explicit VR must be given to a Data Element whose Value Representation is unknown (e.g., store and forward). UN is a means to explicitly indicate that the Value Representation of a Data Element is unknown.</para>
+              <para xml:id="para_006582d8-2b07-4e53-8ea5-c3e0c288bcf6">This VR of UN is needed when an explicit VR must be given to a Data Element whose Value Representation is unknown (e.g., store and forward).</para>
             </listitem>
             <listitem>
-              <para xml:id="para_18b93a0e-0976-42e9-a2d8-3013f1c2b67f">The length field of the Value Representation of UN may contain the value of "unknown length", in which case the contents can be assumed to be encoded with implicit VR. See <xref linkend="sect_7.5.1" xrefstyle="select: label"/> to determine how to parse Data Elements with an unknown length.</para>
+              <para xml:id="para_b9f84edf-c9c6-45d0-acc7-c470309a0ddb">This VR of UN is also needed for the encoding of Data Elements with explicit VR whose value length exceeds 65534 (2<superscript>16</superscript>-2) (FFFEH, the largest even length unsigned 16 bit number) but which are defined to have a 16 bit explicit VR length field.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_18b93a0e-0976-42e9-a2d8-3013f1c2b67f">The length field of the Value Representation of UN may contain the value of Undefined Length, in which case the contents can be assumed to be encoded with implicit VR. See <xref linkend="sect_7.5.1" xrefstyle="select: label"/> to determine how to parse Data Elements with an Undefined Length.</para>
             </listitem>
             <listitem>
               <para xml:id="para_6444418e-4684-4afe-a7bb-6eae989fd63b">An example of a Standard Data Element using a UN VR is a Type 3 or Type U Standard Attribute added to an SOP Class definition. An existing application that does not support that new Attribute (and encounters it) could convert the VR to UN.</para>
@@ -2069,7 +2102,7 @@
         <para xml:id="para_40ec77dd-aa29-4df9-b2fd-3b8546b1bee7">A padding character may need to be appended to a fixed length character string value in the above case.</para>
       </note>
       <para xml:id="para_d7569de7-8e63-45e4-a4de-3817073593dd">Only the last UID Value in a multiple valued Data Element with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to ensure that the entire Value Field (including "\" delimiters) is of even length.</para>
-      <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of SQ, OF, OD, OW, OB, UN or UR shall always have a Value Multiplicity of one.</para>
+      <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of OB, OD, OF, OL, OW, OB, SQ, UN or UR shall always have a Value Multiplicity of one.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
@@ -2162,7 +2195,7 @@
         <para xml:id="para_fdb2bf98-c448-4d0b-bea4-d41171c8b883">When using the Explicit VR structures, the Data Element shall be constructed of four consecutive fields: Data Element Tag, VR, Value Length, and Value. Depending on the VR of the Data Element, the Data Element will be structured in one of two ways:</para>
         <itemizedlist>
           <listitem>
-            <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OW, OF, OD, SQ and UN the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
+            <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OD, OF, OL, OW, SQ and UN the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
           </listitem>
           <listitem>
             <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of UC, UR and UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
@@ -2175,7 +2208,7 @@
           </listitem>
         </itemizedlist>
         <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
-          <caption>Data Element with Explicit VR of OB, OW, OF, OD, SQ, UC, UR, UT or UN</caption>
+          <caption>Data Element with Explicit VR of OB, OD, OF, OL, OW, SQ, UC, UR, UT or UN</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -2212,7 +2245,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_5e67423f-26ad-4664-888a-d5a4cf4c53d9">VR</para>
-                <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 byte character string) of "OB", "OW", "OF", "OD", "SQ", "UC", "UR", "UT" or "UN"</para>
+                <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 byte character string) of "OB", "OD", "OF", "OL", "OW", "SQ", "UC", "UR", "UT" or "UN"</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_354dbd6a-0245-4914-97b9-2225646113ce">Reserved (2 bytes) set to a value of 0000H</para>
@@ -2410,7 +2443,7 @@
         </listitem>
       </itemizedlist>
       <note>
-        <para xml:id="para_b20f2fbd-617f-4233-8f28-ceacdcab0ffd">The packing of bits within values of OB or OW Value representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>.</para>
+        <para xml:id="para_b20f2fbd-617f-4233-8f28-ceacdcab0ffd">The packing of bits within values of OB, OL or OW Value representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>.</para>
       </note>
       <para xml:id="para_01d35885-9117-4583-a818-eb9468e2e9c3">Byte ordering is a component of an agreed upon Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/>). The default DICOM Transfer Syntax, which shall be supported by all AEs, uses Little Endian encoding and is specified in <xref linkend="sect_A.1" xrefstyle="select: label"/>. Alternate Transfer Syntaxes, some of which use Big Endian encoding, are also specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
       <note>
@@ -2422,7 +2455,7 @@
           <para xml:id="para_8350f735-1f76-4828-93c4-18bb424b95b6">2-byte US, SS, OW and each component of AT</para>
         </listitem>
         <listitem>
-          <para xml:id="para_613a62a3-6098-4d7a-9a68-7e621eeaabd1">4-byte OF, UL, SL, and FL</para>
+          <para xml:id="para_613a62a3-6098-4d7a-9a68-7e621eeaabd1">4-byte OF, OL, UL, SL, and FL</para>
         </listitem>
         <listitem>
           <para xml:id="para_c9ceb71a-081c-4e72-b3a1-cf1831cb963f">8 byte OD, FD</para>
@@ -3198,7 +3231,7 @@
               <para xml:id="para_6f9c3153-4628-4f7e-a842-a7d81a6845ab">These requirements were formerly specified in terms of the "uncompressed pixel data from which the compressed data was derived". However, since the form of the "original" uncompressed data stream could vary between different implementations, this requirement is now specified in terms of consistency with what is encapsulated.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_d1bb8f9b-f160-4538-b2db-6717374398e2">Those characteristics not implied by the definition of the compression scheme (e.g., always color-by-plane in RLE), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR FULL" would describe the color space that is commonly used to losslessly compress images using RLE. It is unusual to use an RGB color space for RLE compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved (note however that the conversion from RGB to YBR FULL is itself lossy. A new photometric interpretation may be proposed in the future that allows lossless conversion from RGB and also results in better RLE compression ratios).</para>
+              <para xml:id="para_d1bb8f9b-f160-4538-b2db-6717374398e2">Those characteristics not implied by the definition of the compression scheme (e.g., always color-by-plane in RLE), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR_FULL" would describe the color space that is commonly used to losslessly compress images using RLE. It is unusual to use an RGB color space for RLE compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved (note however that the conversion from RGB to YBR_FULL is itself lossy. A new photometric interpretation may be proposed in the future that allows lossless conversion from RGB and also results in better RLE compression ratios).</para>
             </listitem>
             <listitem>
               <para xml:id="para_7844c3d7-4b28-4f14-bcf3-19476a836b6b">DICOM Data Elements should not describe characteristics that are beyond the capability of the compression scheme used. For example, RLE compressed data streams (using the algorithm mandated in the DICOM Standard) are always color-by-plane.</para>
@@ -3776,15 +3809,9 @@
         </note>
         <para xml:id="para_382fd973-3a0c-4bca-9be2-a12b55d74976">The use of the DICOM Encapsulated Format to support MPEG-4 AVC/H.264 compressed pixel data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream, with some specific exceptions noted here. The Pixel Data characteristics included in the MPEG-4 AVC/H.264 bit stream shall be used to decode the compressed data stream.</para>
         <note>
-          <orderedlist numeration="arabic">
-            <listitem>
-              <para xml:id="para_189b7ade-5a0e-4b48-a83c-a2735266ee5a">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_1e5e3340-6432-49d9-8cdf-21c44d306380">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
-            </listitem>
-          </orderedlist>
+           <para xml:id="para_189b7ade-5a0e-4b48-a83c-a2735266ee5a">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
+        <para xml:id="para_1e5e3340-6432-49d9-8cdf-21c44d306380">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
         <para xml:id="para_475237f7-b060-4238-a2ea-c4194c317a0a">The requirements are:</para>
         <itemizedlist>
           <listitem>
@@ -4319,15 +4346,9 @@
         </note>
         <para xml:id="para_1cd0da6b-94af-4eda-9f4e-3a4b71727169">The use of the DICOM Encapsulated Format to support MPEG-4 AVC/H.264 compressed pixel data requires that the Data Elements that are related to the Pixel Data encoding (e.g. Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream, with some specific exceptions noted here. The Pixel Data characteristics included in the MPEG-4 AVC/H.264 bit stream shall be used to decode the compressed data stream.</para>
         <note>
-          <orderedlist>
-            <listitem>
-              <para xml:id="para_a11f89e6-4849-4d7e-a930-62ab9e4fb12c">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_ec946e84-eec7-4e63-91e3-4ab0581cda27">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed data set might be encoded.</para>
-            </listitem>
-          </orderedlist>
+           <para xml:id="para_a11f89e6-4849-4d7e-a930-62ab9e4fb12c">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
+        <para xml:id="para_ec946e84-eec7-4e63-91e3-4ab0581cda27">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed data set might be encoded.</para>
         <para xml:id="para_f88bec93-d7a1-4443-a09b-d7b40a577317">The requirements are:</para>
         <itemizedlist>
           <listitem>
@@ -4682,6 +4703,9 @@
           <para xml:id="para_3501751b-7b1c-4a64-802a-8005ab70a176">If an Application Entity that supports one or more Lossy JPEG Transfer Syntaxes receives an A-ASSOCIATE indication corresponding to a request that follows the requirements specified in <xref linkend="sect_10.3" xrefstyle="select: label"/> (a), every Presentation Context related to a given Abstract Syntax cannot be rejected in an A-ASSOCIATE response for the reason that the DICOM Default lossy JPEG Transfer Syntax is not supported.</para>
         </listitem>
       </orderedlist>
+      <note>
+        <para xml:id="para_c4b3f464-bbce-42fa-8459-137177bae395">The 12 bit default Transfer Syntax 1.2.840.10008.1.2.4.51 can also be used to encode 8 bit images, but the bit stream required is not identical to that used in the 8 bit default Transfer Syntax 1.2.840.10008.1.2.4.50 (see <xref linkend="sect_A.4.1" xrefstyle="select: labelnumber"/>).</para>
+      </note>
     </section>
     <section label="10.4" status="2" xml:id="sect_10.4">
       <title>Transfer Syntax For DICOM RLE Compression</title>
@@ -4767,10 +4791,13 @@
               <para xml:id="para_c9f80f00-edbd-4acf-8885-580927ec93e8">For all Value Representations defined in this part, except for the Value Representations OB and OW, the encoding shall be in Little Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_688311f0-474b-4810-9731-36820df76692">For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
+              <para xml:id="para_688311f0-474b-4810-9731-36820df76692">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
                   <para xml:id="para_721bde46-66b0-4def-83d6-422e845a8abe">Data Element (7FE0,0010) Pixel Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <note>
+                    <para xml:id="para_8e5a1a29-830f-4e34-9849-19d37640200b">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
+                  </note>
                 </listitem>
                 <listitem>
                   <para xml:id="para_d9f0b53d-3be8-48c3-979d-1ce5fb85c94e">Data Element (60xx,3000) Overlay Data has the Value Representation OW and shall be encoded in Little Endian.</para>
@@ -4807,14 +4834,26 @@
               <para xml:id="para_8a78e3c0-ca2d-4dfa-b576-9a7475db0300">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_05e7fe48-9fc9-4793-8873-244f244ccda0">Data Elements (0066,0025) Vertex Point Index List, (0066,0024) Edge Point Index List, (0066,0023) Triangle Point Index List and (0066,0029) Primitive Point Index List have the Value Representation OW and shall be encoded in Little Endian and are always interpreted as unsigned.</para>
+              <para xml:id="para_53a9c036-b024-4810-a64e-2bc50f960aaa">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
             </listitem>
           </itemizedlist>
         </listitem>
       </orderedlist>
       <note>
-        <para xml:id="para_0eda2c64-2a68-4d83-9bad-efc3dd351975">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
-      </note>
+        <orderedlist>
+          <listitem>
+            <para xml:id="para_0eda2c64-2a68-4d83-9bad-efc3dd351975">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_eff0e39c-c05f-4dd6-9a15-a0908b853244">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
+              List (0066,0023) and Primitive Point Index List (0066,0029) were previously defined with a
+              value representation of OW and always interpreted as unsigned, but have been retired.
+              These have been replaced by corresponding OL data elements, which allow values larger
+              than 65535 to index the full range of points that can be encoded in Point Coordinates Data
+              (0066,0016). See PS3.5-2015c.</para>
+          </listitem>
+        </orderedlist>
+       </note>
       <para xml:id="para_44a1cbfc-e69e-473e-a929-0babc90e57c0">This DICOM Implicit VR Little Endian Transfer Syntax shall be identified by a UID of Value "1.2.840.10008.1.2".</para>
     </section>
     <section label="A.2" status="2" xml:id="sect_A.2">
@@ -4834,7 +4873,7 @@
               <para xml:id="para_6750c877-48d8-4029-bf9b-630ca83f702b">For all Value Representations defined in this part, except for the Value Representations OB and OW, the encoding shall be in Little Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_466ae3fe-4657-400a-9e7e-611c7f919c02">For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
+              <para xml:id="para_466ae3fe-4657-400a-9e7e-611c7f919c02">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
                   <para xml:id="para_71b223ac-9494-40f1-b318-092f590fdf9f">Data Element (7FE0,0010) Pixel Data</para>
@@ -4846,6 +4885,9 @@
                       <para xml:id="para_ff9fd5bf-1ac3-4481-a118-1852d8035e59">where Bits Allocated (0028,0100) has a value less than or equal to 8 shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
                     </listitem>
                   </itemizedlist>
+                  <note>
+                    <para xml:id="para_b6daae19-f7e3-4a49-b3c0-b45e8b812a99">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
+                  </note>
                 </listitem>
                 <listitem>
                   <para xml:id="para_958a0550-6886-4177-9070-39bf5c2f43db">Data Element (60xx,3000) Overlay Data</para>
@@ -4886,7 +4928,7 @@
                   <para xml:id="para_ffeae2ab-07b1-41e8-91c8-88d0bce05fa1">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_6edd6535-f865-4866-9704-688e05e788f7">Data Elements (0066,0025) Vertex Point Index List, (0066,0024) Edge Point Index List, (0066,0023) Triangle Point Index List and (0066,0029) Primitive Point Index List have the Value Representation OW and shall be encoded in Little Endian and are always interpreted as unsigned.</para>
+                  <para xml:id="para_d0eac346-4f90-4d02-a474-237341665eef">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -4900,6 +4942,14 @@
           </listitem>
           <listitem>
             <para xml:id="para_f42dffda-b5a3-4d1d-91b8-8c7aa0209397">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_44ba6501-93c6-4415-9b42-60b35060b6c4">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
+              List (0066,0023) and Primitive Point Index List (0066,0029) were previously defined with a
+              value representation of OW and always interpreted as unsigned, but have been retired.
+              These have been replaced by corresponding OL data elements, which allow values larger
+              than 65535 to index the full range of points that can be encoded in Point Coordinates Data
+              (0066,0016). See PS3.5-2015c.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -4922,7 +4972,7 @@
               <para xml:id="para_4fe7cb96-897a-4e59-bfdd-0ed4526c72ca">For all Value Representations defined in this part, except for the Value Representations OB and OW, the encoding shall be in Big Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_6572b746-02d8-43f9-8193-ab875b2eab4a">For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
+              <para xml:id="para_6572b746-02d8-43f9-8193-ab875b2eab4a">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
                   <para xml:id="para_bf5c33ac-dd30-41ea-9b23-7643205cad3a">Data Element (7FE0,0010) Pixel Data</para>
@@ -4934,6 +4984,9 @@
                       <para xml:id="para_4d1cadc6-627f-4b03-a541-4dd8ad6070d0">where Bits Allocated (0028,0100) has a value less than or equal to 8 shall have the Value Representation OB or OW and shall be encoded in Big Endian.</para>
                     </listitem>
                   </itemizedlist>
+                  <note>
+                    <para xml:id="para_6f36770e-6aae-491e-a4e5-620e48a55fe8">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
+                  </note>
                 </listitem>
                 <listitem>
                   <para xml:id="para_b9594f10-3fa3-41fa-a6ae-a76e799e7506">Data Element (60xx,3000) Overlay Data</para>
@@ -4974,7 +5027,7 @@
                   <para xml:id="para_487d95eb-7b12-4728-9a69-c9f2e8692388">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Big Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_d7343588-4b14-453e-9b3a-a72463dabe50">Data Elements (0066,0025) Vertex Point Index List, (0066,0024) Edge Point Index List, (0066,0023) Triangle Point Index List and (0066,0029) Primitive Point Index List have the Value Representation OW and shall be encoded in Little Endian and are always interpreted as unsigned.</para>
+                  <para xml:id="para_471cec77-673b-413a-b42e-764871630f15">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Big Endian and is always interpreted as unsigned.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -4988,6 +5041,14 @@
           </listitem>
           <listitem>
             <para xml:id="para_1e9f75ce-7ed6-4353-83a0-0dc95728b534">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_cb1ee900-3774-4159-823a-6aca3544697a">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
+              List (0066,0023) and Primitive Point Index List (0066,0029) were previously defined with a
+              value representation of OW and always interpreted as unsigned, but have been retired.
+              These have been replaced by corresponding OL data elements, which allow values larger
+              than 65535 to index the full range of points that can be encoded in Point Coordinates Data
+              (0066,0016). See PS3.5-2015c.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -5012,7 +5073,7 @@
               <para xml:id="para_2f69630f-745c-44ad-8013-d58d1e40abc4">For all Value Representations defined in this part of the DICOM Standard, except for the Value Representations OB and OW, the encoding shall be in Little Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_428d2f48-a706-43e0-bb3d-2bc775291d51">For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
+              <para xml:id="para_428d2f48-a706-43e0-bb3d-2bc775291d51">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
                   <para xml:id="para_d11882a9-2d96-4239-8809-1d7343f9f6f6">Data Element (7FE0,0010) Pixel Data may be encapsulated or native.</para>
@@ -5030,7 +5091,14 @@
                     </listitem>
                   </itemizedlist>
                   <note>
-                    <para xml:id="para_a1684f41-b0ab-48c9-aed1-50999a8181fd">That is, as if the transfer syntax were Explicit VR Little Endian.</para>
+                    <orderedlist>
+                      <listitem>
+                        <para xml:id="para_5ccae5c0-f6b7-40a9-8094-e645485c04ce">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_a1684f41-b0ab-48c9-aed1-50999a8181fd">That is, as if the transfer syntax were Explicit VR Little Endian.</para>
+                      </listitem>
+                    </orderedlist>
                   </note>
                   <para xml:id="para_5755baf8-0054-4d4e-a46b-0d8c389d2cf5">If encapsulated, it has the Value Representation OB and is a sequence of bytes resulting from one of the encoding processes. It contains the encoded pixel data stream fragmented into one or more Item(s). This Pixel Data Stream may represent a Single or Multi-frame Image. See <xref linkend="table_A.4-1" xrefstyle="select: label"/> and <xref linkend="table_A.4-2" xrefstyle="select: label"/>.</para>
                   <itemizedlist>
@@ -5118,7 +5186,7 @@
                   <para xml:id="para_391721fb-9b59-45ba-ab5e-08a67765d79a">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_294898d5-72d6-40b3-9575-55285bc3c45a">Data Elements (0066,0025) Vertex Point Index List, (0066,0024) Edge Point Index List, (0066,0023) Triangle Point Index List and (0066,0029) Primitive Point Index List have the Value Representation OW and shall be encoded in Little Endian and are always interpreted as unsigned.</para>
+                  <para xml:id="para_17cb1fef-118b-4963-86e6-f11568da99d7">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5132,6 +5200,14 @@
           </listitem>
           <listitem>
             <para xml:id="para_3a981bba-6fe4-437c-aa0f-8dae5173363b">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_b67b16c4-c714-4aa1-a32f-00d92ff74e7b">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
+              List (0066,0023) and Primitive Point Index List (0066,0029) were previously defined with a
+              value representation of OW and always interpreted as unsigned, but have been retired.
+              These have been replaced by corresponding OL data elements, which allow values larger
+              than 65535 to index the full range of points that can be encoded in Point Coordinates Data
+              (0066,0016). See PS3.5-2015c.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -5650,7 +5726,7 @@
       </table>
       <section label="A.4.1" status="3" xml:id="sect_A.4.1">
         <title>JPEG Image Compression</title>
-        <para xml:id="para_1d105a31-528c-40e5-9872-b0852ffb6548">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-10918-1 (JPEG Part 1) and an International Draft Standard, ISO/IS-10918-2 (JPEG Part 2), known as the JPEG Standard, for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
+        <para xml:id="para_1d105a31-528c-40e5-9872-b0852ffb6548">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO 10918-1 (JPEG Part 1) and an International Standard, ISO 10918-2 (JPEG Part 2), known as the JPEG Standard, for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para xml:id="para_50e5756a-84bc-43b9-9def-60847d29e2f0">A DICOM Transfer Syntax for JPEG Image Compression shall be identified by a UID value, appropriate to its JPEG coding process, chosen from <xref linkend="table_A.4-3" xrefstyle="select: label"/>.</para>
         <table frame="box" label="A.4-3" rules="all" xml:id="table_A.4-3">
           <caption>DICOM Transfer Syntax UIDs for JPEG</caption>
@@ -5722,15 +5798,26 @@
           </tbody>
         </table>
         <note>
-          <para xml:id="para_00ab89fb-06d9-4835-a863-b3f35e1ae27c">DICOM identifies, to increase the likelihood of successful association, three Transfer Syntaxes for Default JPEG Compression Image processes (see <xref linkend="sect_8.2.1" xrefstyle="select: label"/> and <xref linkend="chapter_10" xrefstyle="template:Section %n"/>).</para>
-        </note>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_00ab89fb-06d9-4835-a863-b3f35e1ae27c">DICOM identifies, to increase the likelihood of successful association, three Transfer Syntaxes for Default JPEG Compression Image processes (see <xref linkend="sect_8.2.1" xrefstyle="select: label"/> and <xref linkend="chapter_10" xrefstyle="template:Section %n"/>).</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_38e67967-2754-41fe-9100-946f1a9b329b">Different JPEG processes may use different SOF marker segments. E.g., the baseline JPEG process 1 used with the 1.2.840.10008.1.2.4.50 Transfer Syntax uses the SOF0 marker, whereas the extended process 2 used with the 1.2.840.10008.1.2.4.51 Transfer Syntax uses the SOF1 marker. Accordingly, even though both bit streams encode 8 bit images using DCT and Huffman coding, the bit streams are not identical. Further, the extended process 2 may (but is not required to) use more AC and DC tables (up to 4 of each, rather than 2, per ISO 10918-1 Section F.1.3).</para>
+              <para xml:id="para_98c18195-612e-4698-bc65-bc370730e227">It is not compliant to send bit streams with the SOF0 marker using the 1.2.840.10008.1.2.4.51 Transfer Syntax, but it is recommended that receivers of the 1.2.840.10008.1.2.4.51 Transfer Syntax be able to decode bit streams with the SOF0 marker (this asymmetry is consistent with ISO 10918-2 requirements; see <xref linkend="sect_A.4.1" xrefstyle="select: labelnumber"/>).</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_bb9bb8f3-c89e-4032-8eaa-6fa560460ff0">It is recommended that lossy compressed 8 bit images be encoded with the 1.2.840.10008.1.2.4.50 Transfer Syntax rather than the 1.2.840.10008.1.2.4.51 Transfer Syntax, unless the additional features of the extended process are required. Support of the 1.2.840.10008.1.2.4.50 Transfer Syntax is required for 8 bit images anyway (as described in <xref linkend="sect_8.2.1" xrefstyle="select: labelnumber"/>) and to avoid confusion with the use of 12 bit images encoded with Process 4 in the 1.2.840.10008.1.2.4.51 Transfer Syntax (defined as a DICOM Default Transfer Syntax for 12 bit images in <xref linkend="sect_10.3" xrefstyle="select: labelnumber"/>).</para>
+            </listitem>
+          </orderedlist>
+         </note>
         <para xml:id="para_e5359a25-4c4f-47df-8c46-c54ba1882f10">If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each fragment shall contain encoded data from a single-frame image.</para>
         <note>
           <para xml:id="para_dd8c4e91-11bf-428c-a004-f48d04eb8f60">Though a fragment may not contain encoded data from more than one frame, the encoded data from one frame may span multiple fragments. See note in <xref linkend="sect_8.2" xrefstyle="select: label"/>.</para>
         </note>
         <para xml:id="para_b4c579fd-5d9f-4c45-a18e-a7e377e6ee57">For all images, including all frames of a multi-frame image, the JPEG Interchange Format shall be used (the table specification shall be included).</para>
         <note>
-          <para xml:id="para_7e177ec0-1d10-4178-9781-10569107c160">This refers to the ISO 10918-1 "interchange format", not the DIS 10918-5 JPEG File Interchange Format (JFIF).</para>
+          <para xml:id="para_7e177ec0-1d10-4178-9781-10569107c160">This refers to the ISO 10918-1 "interchange format", not the ISO 10918-5 JPEG File Interchange Format (JFIF).</para>
         </note>
         <para xml:id="para_822bfd5b-306d-43cf-95fe-9123126b697d">If images with Photometric Interpretation (0028,0004) YBR_FULL_422 or YBR_PARTIAL_422, are encoded with JPEG coding Process 1 (non hierarchical with Huffman coding), identified by DICOM Transfer Syntax UID "1.2.840.10008.1.2.4.50"the minimum compressible unit is YYCBCR, where Y, CB, and CR are 8 by 8 blocks of pixel values. The data stream encodes two Y blocks followed by the corresponding CB and CR blocks.</para>
       </section>
@@ -7142,10 +7229,10 @@
     <para xml:id="para_6247970c-42d1-4899-a2bc-6b97c8b48cba">d) The byte order specification of an encoded file is not altered in the course of encapsulating it in a DICOM message.</para>
     <section label="F.1" status="2" xml:id="sect_F.1">
       <title>Encapsulated JPEG Encoded Images</title>
-      <para xml:id="para_43a4b4d4-b1fb-435b-b73c-c2f42edfe2e1">The International Standards Organization (ISO/IEC JTC1/SC2/WG10) has prepared an International Standard, ISO/IS-10918-1 (JPEG Part 1) and International Draft Standard ISO/IS-10918-2 (JPEG Part 2), for the digital compression and coding of continuous-tone still images. This standard is collectively known as the JPEG Standard.</para>
+      <para xml:id="para_43a4b4d4-b1fb-435b-b73c-c2f42edfe2e1">The International Standards Organization (ISO/IEC JTC1/SC2/WG10) has prepared an International Standard, ISO 10918-1 (JPEG Part 1) and International Draft Standard ISO 10918-2 (JPEG Part 2), for the digital compression and coding of continuous-tone still images. This standard is collectively known as the JPEG Standard.</para>
       <para xml:id="para_202b5b07-3d7e-46ee-b33a-833861af066f">Part 1 of the JPEG Standard sets out requirements and implementation guidelines for the coded representation of compressed image data to be interchanged between applications. The processes and representations are intended to be generic in order to support the broad range of applications for color and grayscale still images for the purpose of communications and storage within computer systems. Part 2 of the JPEG Standard defines tests for determining whether implementations comply with the requirements of the various encoding and decoding processes specified in Part 1 of the JPEG Standard.</para>
       <para xml:id="para_f6e03c91-36e0-41d3-8bc8-c1102eb07593">The JPEG Standard specifies lossy and lossless code processes. The lossy coding is based on the discrete cosine transform (DCT), permitting data compression with an adjustable compression ratio. The lossless coding employs differential pulse code modulation (DPCM).</para>
-      <para xml:id="para_954a00bb-cda2-4978-a99a-7aa8ea14a217">The JPEG Standard permits a variety of coding processes for the coder and decoder. These processes differ in coding schemes for the quantified data and in sample precision. The coding processes are consecutively numbered as defined in the International Draft Standard ISO/IS-10918-2 (JPEG Part 2), and are summarized in <xref linkend="table_F.1-1" xrefstyle="select: label"/>. The simplest DCT-based coding process is referred to as Baseline Sequential with Huffman Coding for 8-bit Samples.</para>
+      <para xml:id="para_954a00bb-cda2-4978-a99a-7aa8ea14a217">The JPEG Standard permits a variety of coding processes for the coder and decoder. These processes differ in coding schemes for the quantified data and in sample precision. The coding processes are consecutively numbered as defined in the International Draft Standard ISO 10918-2 (JPEG Part 2), and are summarized in <xref linkend="table_F.1-1" xrefstyle="select: label"/>. The simplest DCT-based coding process is referred to as Baseline Sequential with Huffman Coding for 8-bit Samples.</para>
       <table frame="box" label="F.1-1" rules="all" xml:id="table_F.1-1">
         <caption>JPEG Modes of Image Coding</caption>
         <thead>
@@ -7291,7 +7378,7 @@
         </tbody>
       </table>
       <para xml:id="para_6197c34b-c718-41c8-b8d7-785f6dbece82">The different coding processes specified in the JPEG Standard are closely related. By extending the capability of an implementation, increasingly more 'lower level' processes can also be executed by the implementation. This is shown in <xref linkend="table_F.1-2" xrefstyle="select: label"/> for Huffman Coding.</para>
-      <para xml:id="para_10e3b78f-4b7c-41ee-901c-25e766bb97bc">Inclusion of a JPEG-coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. Independent of the JPEG coding processes, the same syntax applies. The only distinction for different processes in the syntax is the UID value. <xref linkend="table_F.1-5" xrefstyle="select: label"/> lists the UID values in the Transfer Syntax for the various JPEG coding processes for reference.</para>
+      <para xml:id="para_10e3b78f-4b7c-41ee-901c-25e766bb97bc">Inclusion of a JPEG-coded image in a DICOM message is facilitated by the use of specific Transfer Syntaxes that are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. Independent of the JPEG coding processes, the same syntax applies. The only distinction for different processes in the syntax (apart from different SOF marker segments in the JPEG bit stream) is the UID value. <xref linkend="table_F.1-5" xrefstyle="select: label"/> lists the UID values in the Transfer Syntax for the various JPEG coding processes for reference.</para>
       <table frame="box" label="F.1-2" rules="all" xml:id="table_F.1-2">
         <caption>Relationship Between the Lossy JPEG Huffman Coding Processes</caption>
         <thead>
@@ -7385,7 +7472,7 @@
             </th>
             <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_0f7bd46d-57e9-4b3f-b0fe-5dcb3b023e0f">
-                <emphasis role="bold">capable of performing</emphasis>
+                <emphasis role="bold">capable of decoding</emphasis>
               </para>
             </th>
           </tr>
@@ -7416,7 +7503,7 @@
               <para xml:id="para_04be04f3-ac97-472b-976b-b88c2b26eb89">extended</para>
             </td>
             <td align="center" colspan="1" rowspan="1">
-              <para xml:id="para_fddb86c0-d50b-4c23-a0b5-b87c7a0bde7c">1,2,4</para>
+              <para xml:id="para_fddb86c0-d50b-4c23-a0b5-b87c7a0bde7c">1,2,4 (see <xref linkend="note_F.1-1" xrefstyle="template:Note"/>)</para>
             </td>
           </tr>
           <tr valign="top">
@@ -7448,6 +7535,18 @@
           </tr>
         </tbody>
       </table>
+      <note xml:id="note_F.1-1">
+        <para xml:id="para_2ea5e06b-6b16-4d87-bea4-815102de5569">Though the coding processes (2, 4) described in ISO 10918-1 are capable of decoding the other listed process (1), the bit stream uses different SOF marker segments. I.e., the baseline JPEG process 1 used with the 1.2.840.10008.1.2.4.50 Transfer Syntax uses the SOF0 marker, whereas the extended process 2 used with the 1.2.840.10008.1.2.4.51 Transfer Syntax uses the SOF1 marker. Accordingly, even though both bit streams encode 8 bit images using DCT and Huffman coding, the bit streams are not identical.</para>
+        <para xml:id="para_6ac4d57b-3b91-446a-afa6-685e479b7017">ISO 10918-2 describes compliance
+          tests for decoders, and requires that implementations of specific extended processes
+          (such as 2 and 4) be capable of decoding bit streams of related baseline processes
+          (such as 1) (ISO 10918-2 Section 7.4 Compliance tests for DCT-based sequential mode
+          decoding processes). The converse is not true for encoders however, and the presence
+          of SOF marker segments not defined by the specific process is not compliant (ISO
+          10918-2 Section 5.1.1 Non-hierarchical coding processes syntax compliance test
+          Tables 1 and 2).</para>
+      </note>
+      
     </section>
     <section label="F.2" status="2" xml:id="sect_F.2">
       <title>Encapsulated JPEG-LS Encoded Images</title>
@@ -9067,7 +9166,7 @@
     </section>
   </chapter>
   <chapter label="J" status="1" xml:id="chapter_J">
-    <title>Character Sets and Person Name Value Representationusing Unicode UTF-8, GB18030 and GBK (Informative)</title>
+    <title>Character Sets and Person Name Value Representation using Unicode UTF-8, GB18030 and GBK (Informative)</title>
     <para xml:id="para_35aebb24-6954-4714-9fff-b59baee9160b">The Unicode UTF-8 character set and the GB18030 character set may be used for multiple languages. Some of these languages may also be encoded using other character sets that are defined elsewhere in the DICOM standard. As Unicode UTF-8 and GB18030 encodings do not allow ISO 2022 character set replacement, these must be used for all strings in a single SOP Instance. This may have implications for the character set selected for the encoding of the SOP Instance.</para>
     <para xml:id="para_0185c0db-57bf-43ab-8659-27e011560f0a">Since the GBK character set is fully code point compatible to the larger character set of GB 18030, and the specific examples of GB 18030 encoding this in Annex (J.3 and J.4) include only the Chinese characters falling in the common coding area between the two standards, these examples are used to demonstrate the person name and text encoding in both standards. Examples specific to GBK are not necessary.</para>
     <section label="J.1" status="2" xml:id="sect_J.1">
@@ -9348,7 +9447,8 @@
       <title>Example of Person Name Value Representation in the Chinese Language</title>
       <example label="K.2-1" xml:id="sect_K.2-1">
         <title>Example of Person Name Value Representation in the Chinese Language</title>
-        <para xml:id="para_55cc39d0-3ed0-4bbf-8715-c8626c13489d">Person names in the Chinese language may be written in Pinyin (phonetic characters), Hanzi(ideographic characters), or English Name (alphabetic characters). The three component groups should be written in the order of phonetic, ideographic, and alphabetic (English name).</para>
+        <para xml:id="para_55cc39d0-3ed0-4bbf-8715-c8626c13489d">Person names in the Chinese language may be written in Pinyin (phonetic characters), Hanzi (ideographic characters), or English Name (alphabetic characters).
+          The three component groups should be written in the order of alphabetic (English name), ideographic, and phonetic.</para>
         <para xml:id="para_2e3a695a-84a5-4626-9c1f-2458382e73d2">Specific Character Set:</para>
         <itemizedlist mark="none">
           <listitem>
@@ -9358,52 +9458,69 @@
         <para xml:id="para_4d8df0ad-eb60-471e-8cf8-44f4e5816636">Character String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_12d3cdfe-2449-4d7e-9d5f-fb29a2f2b008">Zhang^XiaoDong=张小东=</para>
+            <para xml:id="para_12d3cdfe-2449-4d7e-9d5f-fb29a2f2b008">Zhang^XiaoDong=张^小东=</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_91f9f489-6c00-4085-a9fe-d9d1e2ba077e">Encoded String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_37322db2-8520-42a1-ac49-53c07efeab37">Zhang^XiaoDong= ESC 02/04 02/09 04/01 张小东 ESC 02/08 04/02 =</para>
+            <para xml:id="para_37322db2-8520-42a1-ac49-53c07efeab37">Zhang^XiaoDong= ESC 02/04 02/09 04/01 张^ESC 02/04 02/09 04/01小东 =</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_cf80d3d8-4618-418e-8cb4-d73f080e2b50">Character encoded representation (GB2312) is:</para>
         <itemizedlist mark="none">
           <listitem>
+            <!-- keep emphasis and computeroutput on same line to avoid extra spaces in output -->
             <para xml:id="para_184d379a-a9fe-45ff-85c9-a0559069b211">
-              <computeroutput>0x5A 0x68 0x61 0x6E 0x67 0x5E 0x58 0x69 0x61 0x6F 0x44 0x6F 0x6E 0x67 0x3D </computeroutput>
+              <computeroutput>0x5A 0x68 0x61 0x6E 0x67 0x5E 0x58 0x69 0x61 0x6F 0x44 0x6F 0x6E 0x67 0x3D</computeroutput>
               <emphasis role="bold">
-                <computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
+<computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
+</emphasis>
               <emphasis role="underline">
-                <computeroutput>0xD5 0xC5 0xD0 0xA1 0xB6 0xAB</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
+<computeroutput>0xD5 0xC5</computeroutput>
+</emphasis>
+              <computeroutput>0x5E</computeroutput>
               <emphasis role="bold">
-                <computeroutput>0x1B 0x28 0x42</computeroutput>
-              </emphasis>
-              <computeroutput> 0x3D 0x20</computeroutput>
+<computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
+</emphasis>
+              <emphasis role="underline">
+<computeroutput>0xD0 0xA1 0xB6 0xAB</computeroutput>
+</emphasis>
+              <computeroutput>0x3D 0x20</computeroutput>
             </para>
           </listitem>
         </itemizedlist>
         <note>
-          <para xml:id="para_b54adb92-fb94-4a6a-832c-c9023819f55d">The underlined byte codes correspond to double byte characters, the bold byte codes to escape sequences.</para>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_b54adb92-fb94-4a6a-832c-c9023819f55d">The underlined byte codes correspond to double byte characters, the bold byte codes to escape sequences.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_512ac64e-7b7f-4c4c-a37a-534cbed6d328">The multi-byte character set (ISO-IR 58) and single-byte character set (ISO 646) can be used intermixed without any explicit escape sequence after the initial escape sequence, up to the next delimiter (^ or =) or the end of the value field.
+                Once ISO 646 has been designated to G0 and ISO-IR 58 to G1, each character set has a different code area, thus can be used intermixed.
+                The decoder will check the most significant bit of a character to know whether it is a two byte character in the G1 area (high bit one) or a one byte character in the G0 area (high bit zero).
+                There does not need to be an explicit escape to invoke ISO 646 into G0 at the end of the string prior to a delimiter (^ or =) or the end of the value field.
+                However, there does need to be a new invocation of ISO-IR 58 in each name component in which it is used.</para>
+            </listitem>
+          </orderedlist>
         </note>
       </example>
     </section>
     <section label="K.3" status="2" xml:id="sect_K.3">
-      <title>Example of Long Text Value Representation in the Chinese Language with Explicit Escape Sequences Between GB2312 G0 and GB2312 G1</title>
+      <title>Example of Long Text Value Representation in the Chinese Language with GB2312 G1</title>
       <example label="K.3-1" xml:id="sect_K.3-1">
-        <title>Example of Long Text Value Representation in the Chinese Language with Explicit Escape Sequences Between GB2312 G0 and GB2312 G1</title>
-        <para xml:id="para_4d095367-987e-4628-9ecc-e3cd0e6a3685">Chinese (ISO 2022 IR 58) and ASCII (ISO 646) character sets can be used intermingled with explicit escape sequences between them. The Chinese character set ISO IR 58 is invoked to the G1 area, and the ASCII character set is invoked the G0 area. The following is an example of a Long Text value representation that includes ASCII and Chinese character set. Every line must start in ASCII, end in ASCII.</para>
+        <title>Example of Long Text Value Representation in the Chinese Language with GB2312 G1</title>
+        <para xml:id="para_4d095367-987e-4628-9ecc-e3cd0e6a3685">Chinese (ISO 2022 IR 58) and ASCII (ISO 646) character sets can be used intermingled without explicit escape sequences between them.
+          The Chinese character set ISO IR 58 is invoked to the G1 area, and the ASCII character set is invoked to the G0 area.
+          The following is an example of a Long Text value representation that includes ASCII and Chinese character set.
+          Every line is presumed to start in the default character set and requires an explicit invocation of GB 2312 into G1, but does not require re-invocation of the default ASCII character set into G0.</para>
         <para xml:id="para_e49bc0f6-369e-4c57-a7b2-0147a08f4c08">Specific Character Set:</para>
         <itemizedlist mark="none">
           <listitem>
             <para xml:id="para_ae422079-86ed-44b6-9c78-ff849a9d34b5">(0008,0005) \ISO 2022 IR 58</para>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_22887d49-14b6-493c-96c0-615b6a6a3b79">Character String:</para>
+        <para xml:id="para_22887d49-14b6-493c-96c0-615b6a6a3b79">Character String (with CR LF after each line):</para>
         <itemizedlist mark="none">
           <listitem>
             <para xml:id="para_3ef651db-a3e2-4045-809c-733b65db6ca0">1) 第一行文字。</para>
@@ -9414,58 +9531,44 @@
         <para xml:id="para_abd7a025-0425-4a88-83b3-52788d893595">Encoded String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_0120425a-79cb-43d3-9b18-415af249c4ea">1) ESC 02/04 02/09 04/01 第一行文字。ESC 02/08 04/02</para>
-            <para xml:id="para_a5470955-b418-4b83-b83b-b8f288672f78">2) ESC 02/04 02/09 04/01 第二行文字。ESC 02/08 04/02</para>
-            <para xml:id="para_bda5d5c8-cf95-4120-9c04-fed7a6117f3c">3) ESC 02/04 02/09 04/01 第三行文字。ESC 02/08 04/02</para>
+            <para xml:id="para_0120425a-79cb-43d3-9b18-415af249c4ea">1) ESC 02/04 02/09 04/01 第一行文字。</para>
+            <para xml:id="para_a5470955-b418-4b83-b83b-b8f288672f78">2) ESC 02/04 02/09 04/01 第二行文字。</para>
+            <para xml:id="para_bda5d5c8-cf95-4120-9c04-fed7a6117f3c">3) ESC 02/04 02/09 04/01 第三行文字。</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_57ba7e94-d23b-4de4-917d-2832fd11a8e3">Character encoded representation (GB2312):</para>
         <itemizedlist mark="none">
           <listitem>
+            <!-- keep emphasis and computeroutput on same line to avoid extra spaces in output -->
             <para xml:id="para_1f35ecf1-af65-486e-bd24-18b934a27d88">
-              <computeroutput>0x31 0x2e </computeroutput>
+              <computeroutput>0x31 0x2e</computeroutput>
               <emphasis role="bold">
-                <computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
+<computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
+</emphasis>
               <emphasis role="underline">
-                <computeroutput>0xB5 0xDA 0xD2 0xBB 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
-              <emphasis role="bold">
-                <computeroutput>0x1B 0x28 0x42</computeroutput>
-              </emphasis>
-              <computeroutput> 0x0D 0x0A</computeroutput>
+<computeroutput>0xB5 0xDA 0xD2 0xBB 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
+</emphasis>
+               <computeroutput>0x0D 0x0A</computeroutput>
             </para>
             <para xml:id="para_9576be8c-2e9b-44e8-b93d-3d84811b8578">
-              <computeroutput>0x32 0x2e </computeroutput>
+              <computeroutput>0x32 0x2e</computeroutput>
               <emphasis role="bold">
-                <computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
+<computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
+</emphasis>
               <emphasis role="underline">
-                <computeroutput>0xB5 0xDA 0xB6 0xFE 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
-              <emphasis role="bold">
-                <computeroutput>0x1B 0x28 0x42</computeroutput>
-              </emphasis>
-              <computeroutput> 0x0D 0x0A</computeroutput>
+<computeroutput>0xB5 0xDA 0xB6 0xFE 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
+</emphasis>
+              <computeroutput>0x0D 0x0A</computeroutput>
             </para>
             <para xml:id="para_9894563f-45fa-4f7c-a5b3-9bb9236aedaa">
-              <computeroutput>0x33 0x2e </computeroutput>
+              <computeroutput>0x33 0x2e</computeroutput>
               <emphasis role="bold">
-                <computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
+<computeroutput>0x1B 0x24 0x29 0x41</computeroutput>
+</emphasis>
               <emphasis role="underline">
-                <computeroutput>0xB5 0xDA 0xC8 0xFD 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
-              </emphasis>
-              <computeroutput> </computeroutput>
-              <emphasis role="bold">
-                <computeroutput>0x1B 0x28 0x42</computeroutput>
-              </emphasis>
-              <computeroutput> 0x0D 0x0A 0x20</computeroutput>
+<computeroutput>0xB5 0xDA 0xC8 0xFD 0xD0 0xD0 0xCE 0xC4 0xD7 0xD6 0xA1 0xA3</computeroutput>
+</emphasis>
+              <computeroutput>0x0D 0x0A</computeroutput>
             </para>
           </listitem>
         </itemizedlist>
@@ -9526,7 +9629,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_86dcccd6-8ab2-4ec4-8098-e58ce4c5a176">First:</para>
-              <para xml:id="para_d78febc5-b723-4adc-8363-e5a0dba29d00">Phonetic</para>
+              <para xml:id="para_d78febc5-b723-4adc-8363-e5a0dba29d00">Alphabetic (English name)</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_3e6667ef-6979-4aa0-b577-3ff8f7b0addd">Value 1:</para>
@@ -9573,7 +9676,7 @@
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_14105ea5-36b9-4dc5-b530-71e96ae5e0f4">Third:</para>
-              <para xml:id="para_65c31be9-0d7d-4efe-8896-d14aea7d8a39">Alphabetic (English name)</para>
+              <para xml:id="para_65c31be9-0d7d-4efe-8896-d14aea7d8a39">Phonetic</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c27b17af-23c8-42b2-bfcf-8d50eb712dda">Value 1:</para>

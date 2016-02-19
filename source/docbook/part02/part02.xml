@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2015c - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2016a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2015</year>
+      <year>2016</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -50,6 +50,10 @@
     <title>Foreword</title>
     <para xml:id="para_f6b752e0-d9ac-4380-a8f4-cb7c8b590e30">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
     <para xml:id="para_b7bb9a5a-8369-4de2-9487-78006db40c35">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_92fd192b-1756-49de-a95a-6ce56be26c7d">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
+    <para xml:id="para_0c4b7c64-4ff1-43b5-8978-2d71fa426a2e">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
+    <para xml:id="para_125708f7-725b-41b0-9e3b-bf2ea16eb6b4">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
+    <para xml:id="para_59a05c95-e876-4f13-ba65-2671f2b2d9dc">LOINC® is the registered trademark of Regenstrief Institute, Inc, all rights reserved.</para>
   </chapter>
   <chapter label="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
@@ -1866,6 +1870,28 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a85daad7-e933-4341-b390-16145a8f1dbc">1.2.840.10008.​5.​1.​4.​1.​1.​11.​6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_920d6a8f-f614-43b5-80c6-ca1525388c25">Grayscale Planar MPR Volumetric Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_342c9a5b-1939-44ff-b3c6-99fc2f72d656">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_fd4d33ac-70b4-426e-9984-ab7123cebe4a">1.2.840.10008.​5.​1.​4.​1.​1.​11.​7</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3007e72c-ce7f-410f-a0a2-551e10ad055c">Compositing Planar MPR Volumetric Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_87924229-2a39-4b76-8c97-6d94b962254f">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7527ea11-c5da-4de7-be6a-42bac9e7ec38">1.2.840.10008.5.1.4.1.1.12.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2074,6 +2100,16 @@
             </td>
           </tr>
           <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d6c34cbe-e159-4a6f-a890-814610d48481">1.2.840.10008.5.1.4.1.1.66.6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0f3410f3-8df0-49cd-bdd5-d9633d8cf192">Tractography Results Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_413e1be5-bf87-415e-9b38-cc82bbd27e72">Transfer</para>
+            </td>
+          </tr>          <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_77cf7085-3f08-454e-bf40-c6b35e315b8d">1.2.840.10008.5.1.4.1.1.67</para>
             </td>
@@ -2526,6 +2562,17 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2db94aa4-6945-4bc4-9e4e-d90fb5fb22d1">1.2.840.10008.5.​1.​4.​1.​1.​88.​71</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_34b16c2a-916b-4f12-ad00-e76f23f574d4">Acquisition Context SR Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a753a5c3-c3a4-4e5f-a78f-ee1bea75b496">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_399d73c3-89e6-49b0-b524-d5864623e653">1.2.840.10008.5.1.4.1.1.104.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2922,6 +2969,17 @@
               <para xml:id="para_00710475-745f-4a8f-af89-980b3f12f8fd">Workflow Management</para>
             </td>
           </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a4c1a2fa-8286-4c0e-b46c-74f528b0a040">1.2.840.10008.5.1.4.34.10</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_92908ac0-6177-426a-b16c-b2ba3966c1d2">RT Brachy Application Setup Delivery Instruction Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_13c8ccf8-0312-4691-a0cb-5b19b5355808">Transfer</para>
+            </td>
+          </tr>          
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1b7dfdf6-4af5-4d45-912f-dc2600641787">1.2.840.10008.5.1.4.37.1</para>
@@ -3957,7 +4015,8 @@
       <section label="A.3.7" xml:id="sect_A.3.7">
         <title>References</title>
         <para xml:id="para_b5b5bb55-1dff-4100-aa70-dab9b9c96952">Referenced documents should be listed here, including appropriate product manuals (such as service manuals that specify how to set DICOM communication parameters). References to the DICOM Standard should provide the URL for the free published version of the Standard, but should not specify a date of publication:</para>
-        <para xml:id="para_c2887d04-53c9-44c0-82dc-f6c5a9488257">NEMA PS3 Digital Imaging and Communications in Medicine (DICOM) Standard, available free at http://medical.nema.org/</para>
+        <para xml:id="para_c2887d04-53c9-44c0-82dc-f6c5a9488257">NEMA PS3 Digital Imaging and Communications in Medicine (DICOM) Standard, available free at <link xl:href="http://medical.nema.org/"/>
+</para>
       </section>
     </section>
     <section label="A.4" status="2" xml:id="sect_A.4">
@@ -49528,7 +49587,7 @@
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_b60fbbf0-24ff-400a-8918-ca8924d87fed">Key Word</para>
+                    <para xml:id="para_b60fbbf0-24ff-400a-8918-ca8924d87fed">Keyword</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_f17e6643-f6d7-4ea2-98bf-9784e49447e6">Tag</para>
@@ -49845,7 +49904,7 @@
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_e4577e71-4872-4eed-b0e5-50194c25b96c">Key Word</para>
+                    <para xml:id="para_e4577e71-4872-4eed-b0e5-50194c25b96c">Keyword</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_39ed8c23-bc92-4a47-923e-0e47d49932f4">Tag</para>
@@ -50085,7 +50144,7 @@
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_a366777a-45a2-4b68-b271-41d5c47328b4">Key Word</para>
+                    <para xml:id="para_a366777a-45a2-4b68-b271-41d5c47328b4">Keyword</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_15011f34-1964-4db6-b5b4-c06d73b32413">Tag</para>
