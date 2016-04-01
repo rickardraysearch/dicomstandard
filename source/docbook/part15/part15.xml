@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2016a - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2016b - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_787a0f0f-1ad1-4e1e-bd29-39c19a428361">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_7020e657-a0d8-4ced-9e73-8ac40006290b">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_7020e657-a0d8-4ced-9e73-8ac40006290b">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_f6076693-75ac-494a-a73f-30aeea24887d">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_279e1a9a-b87a-4ef9-b7d4-5b780de8b1d8">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_ba30052f-5c1d-4bb1-b29a-5e65913ce9d1">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -83,13 +83,17 @@
   
   <para xml:id="para_895753cc-c1f5-4189-9900-0d1305e63828">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
   <bibliography>
-    <biblioentry xml:id="biblio_ISODirectives3">
-      <abbrev>ISO/IEC Directives, Part 3</abbrev>
+    <biblioentry xml:id="biblio_ISODirectives2">
+      <abbrev>ISO/IEC Directives, Part 2</abbrev>
       <author>
         <orgname>ISO/IEC</orgname>
       </author>
-      <date>1989</date>
-      <title>Drafting and presentation of International Standards</title>
+      <date>2011/04</date>
+      <edition>6.0</edition>
+      <title>Rules for the structure and drafting of International Standards</title>
+      <bibliosource>
+        <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+      </bibliosource>
     </biblioentry>
   </bibliography>
   <para xml:id="para_8c39a0c9-d6c4-4484-8e22-0e0813fc4082">ANSI X9.52 American National Standards Institute. ANSI X9.52-1998, Triple Data Encryption Algorithm Modes of Operation. 1998.</para>
@@ -108,40 +112,40 @@
   <note>
     <para xml:id="para_bebf2bef-2eab-4a16-8c4a-bd86912014b3">ITU-T Recommendation X.509 is similar to ISO/IEC 9594-8 1990. However, the ITU-T recommendation is the more familiar form, and was revised in 1993 and 2000, with two sets of corrections in 2001. ITU-T was formerly known as CCITT.</para>
   </note>
-  <para xml:id="para_a307429a-b9f9-42d9-9935-ca30255b973f">RFC 1035 Domain Name System (DNS)</para>
-  <para xml:id="para_9442448a-d900-4a12-ad76-baa616decfc5">RFC 1305 Network Time Protocol (Version 3) Specification, Implementation</para>
-  <para xml:id="para_52c85fd5-b150-4f39-ad7e-31f5e50a1ec9">RFC 2030 Simple Network Time Protocol (SNTP) Version 4</para>
-  <para xml:id="para_9fa00c8f-0924-4a04-8723-67d4dcdf327c">RFC 2131 Dynamic Host Configuration Protocol</para>
-  <para xml:id="para_71176b65-35bd-411c-be77-7f9d1b12a7f1">RFC 2132 Dynamic Host Configuration Protocol Options</para>
-  <para xml:id="para_4feeed62-d1f9-4b7f-9fb3-8f75d21064f7">RFC 2136 Dynamic Updates in the Domain Name System (DNS UPDATE)</para>
-  <para xml:id="para_a429532b-d551-4009-892b-4705df324ef8">RFC 2181 Clarifications to the DNS Specification</para>
-  <para xml:id="para_ca479fa2-01fa-402f-a0cf-0df05098022b">RFC 2219 Use of DNS Aliases for Network Services</para>
-  <para xml:id="para_df41b6fa-3e95-41f6-9c20-5969dc8e8b8d">RFC 2246, Transport Layer Security (TLS) 1.0 Internet Engineering Task Force</para>
+  <para xml:id="para_a307429a-b9f9-42d9-9935-ca30255b973f">RFC1035 Domain Name System (DNS)</para>
+  <para xml:id="para_9442448a-d900-4a12-ad76-baa616decfc5">RFC1305 Network Time Protocol (Version 3) Specification, Implementation</para>
+  <para xml:id="para_52c85fd5-b150-4f39-ad7e-31f5e50a1ec9">RFC2030 Simple Network Time Protocol (SNTP) Version 4</para>
+  <para xml:id="para_9fa00c8f-0924-4a04-8723-67d4dcdf327c">RFC2131 Dynamic Host Configuration Protocol</para>
+  <para xml:id="para_71176b65-35bd-411c-be77-7f9d1b12a7f1">RFC2132 Dynamic Host Configuration Protocol Options</para>
+  <para xml:id="para_4feeed62-d1f9-4b7f-9fb3-8f75d21064f7">RFC2136 Dynamic Updates in the Domain Name System (DNS UPDATE)</para>
+  <para xml:id="para_a429532b-d551-4009-892b-4705df324ef8">RFC2181 Clarifications to the DNS Specification</para>
+  <para xml:id="para_ca479fa2-01fa-402f-a0cf-0df05098022b">RFC2219 Use of DNS Aliases for Network Services</para>
+  <para xml:id="para_df41b6fa-3e95-41f6-9c20-5969dc8e8b8d">RFC2246, Transport Layer Security (TLS) 1.0 Internet Engineering Task Force</para>
   <note>
     <para xml:id="para_8154650b-9c08-4a44-b7d6-eee4165a9b00">TLS is derived from SSL 3.0, and is largely compatible with it.</para>
   </note>
-  <para xml:id="para_28a9a7ac-e1cd-47f1-838b-7834a9c601ad">RFC 2251 Lightweight Directory Access Protocol (v3)</para>
-  <para xml:id="para_78681dd4-6460-45f7-ba0b-e993f5dedc31">RFC 2313 PKCS #1: RSA Encryption, Version 1.5, March 1998.</para>
-  <para xml:id="para_ef82b8a4-5309-4d1a-b791-eb5bdeee9a7d">RFC 2563 DHCP Option to Disable Stateless Auto-Configuration in IPv4 Clients</para>
-  <para xml:id="para_5d9dccd0-1251-4fd3-883f-77376777f3e6">RFC 2782 A DNS RR for specifying the location of services (DNS SRV)</para>
-  <para xml:id="para_49bee952-6612-4d22-9da2-f6fa5bacc159">RFC 2849 The LDAP Data Interchange Format (LDIF)</para>
-  <para xml:id="para_0a01fb06-d7b9-4bdb-a393-f3fcee0d6410">RFC 2898 PKCS #5: Password-Based Cryptography Specification Version 2.0, September 2000</para>
-  <para xml:id="para_2732d351-1cba-4e4b-8014-123a9d05b6f3">RFC 3211 Password-based Encryption for CMS, December 2001</para>
-  <para xml:id="para_74af3b3c-56a6-4f9b-9eb9-ed43bbf0ac5e">RFC 3268 Advanced Encryption Standard (AES) Ciphersuites for Transport Layer Security (TLS), June 2002.</para>
-  <para xml:id="para_a74b52cc-64c3-4837-a248-adfdc5c09de5">RFC 3447 PKCS #1 RSA Cryptography Specifications Version 2.1, February 2003</para>
+  <para xml:id="para_28a9a7ac-e1cd-47f1-838b-7834a9c601ad">RFC2251 Lightweight Directory Access Protocol (v3)</para>
+  <para xml:id="para_78681dd4-6460-45f7-ba0b-e993f5dedc31">RFC2313 PKCS #1: RSA Encryption, Version 1.5, March 1998.</para>
+  <para xml:id="para_ef82b8a4-5309-4d1a-b791-eb5bdeee9a7d">RFC2563 DHCP Option to Disable Stateless Auto-Configuration in IPv4 Clients</para>
+  <para xml:id="para_5d9dccd0-1251-4fd3-883f-77376777f3e6">RFC2782 A DNS RR for specifying the location of services (DNS SRV)</para>
+  <para xml:id="para_49bee952-6612-4d22-9da2-f6fa5bacc159">RFC2849 The LDAP Data Interchange Format (LDIF)</para>
+  <para xml:id="para_0a01fb06-d7b9-4bdb-a393-f3fcee0d6410">RFC2898 PKCS #5: Password-Based Cryptography Specification Version 2.0, September 2000</para>
+  <para xml:id="para_2732d351-1cba-4e4b-8014-123a9d05b6f3">RFC3211 Password-based Encryption for CMS, December 2001</para>
+  <para xml:id="para_74af3b3c-56a6-4f9b-9eb9-ed43bbf0ac5e">RFC3268 Advanced Encryption Standard (AES) Ciphersuites for Transport Layer Security (TLS), June 2002.</para>
+  <para xml:id="para_a74b52cc-64c3-4837-a248-adfdc5c09de5">RFC3447 PKCS #1 RSA Cryptography Specifications Version 2.1, February 2003</para>
   <note>
     <para xml:id="para_ae025c6e-5d72-469c-90c0-2adfd18ec86a">The RSA Encryption Standard is also defined in informative annex A of ISO/IEC 9796, and in Normative <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> of the CEN/TC251 European Prestandard prENV 12388:1996.</para>
   </note>
-  <para xml:id="para_82cba187-b0f8-4eba-adcb-a8316be3220c">RFC 3852 Cryptographic Message Syntax,July 2004</para>
-  <para xml:id="para_0f7b6088-494b-4b04-9009-90166298c0f1">RFC 3370 Cryptographic Message Syntax (CMS) Algorithms, August 2002</para>
-  <para xml:id="para_b604763d-9eb8-4741-ae1f-5c3e9013a1c7">RFC 3565 Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS), July 2003</para>
+  <para xml:id="para_82cba187-b0f8-4eba-adcb-a8316be3220c">RFC3852 Cryptographic Message Syntax,July 2004</para>
+  <para xml:id="para_0f7b6088-494b-4b04-9009-90166298c0f1">RFC3370 Cryptographic Message Syntax (CMS) Algorithms, August 2002</para>
+  <para xml:id="para_b604763d-9eb8-4741-ae1f-5c3e9013a1c7">RFC3565 Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS), July 2003</para>
   <para xml:id="para_02a8371f-8866-453a-8833-231f409f01b9">SHA-1 National Institute of Standards and Technology, FIPS Pub 180-1: Secure Hash Standard, 17 April 1995</para>
   <para xml:id="para_f817acf5-eb30-4b5d-8e37-f43bb918fd2a">SHA-2 National Institute of Standards and Technology, FIPS Pub 180-2: Secure Hash Standard, 1 August 2002</para>
-  <para xml:id="para_5b3324fb-21a2-4973-9710-813ff62af632">RFC 3851 Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.1 Message Specification</para>
-  <para xml:id="para_73ade592-b669-4091-8c74-48740230ff34">RFC 3853 S/MIME Advanced Encryption Standard (AES) Requirement for the Session Initiation Protocol (SIP)</para>
-  <para xml:id="para_41985c34-c780-4420-9621-22a686fd7e0a">RFC 5424 The Syslog Protocol</para>
-  <para xml:id="para_51a1c04a-bcaa-42db-8654-01dcb5240952">RFC 5425 Transport Layer Security (TLS) Transport Mapping for Syslog</para>
-  <para xml:id="para_d89cf1fa-937e-4248-86a9-2168b1cec25d">RFC 5426 Transmission of Syslog Messages over UDP</para>
+  <para xml:id="para_5b3324fb-21a2-4973-9710-813ff62af632">RFC3851 Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.1 Message Specification</para>
+  <para xml:id="para_73ade592-b669-4091-8c74-48740230ff34">RFC3853 S/MIME Advanced Encryption Standard (AES) Requirement for the Session Initiation Protocol (SIP)</para>
+  <para xml:id="para_41985c34-c780-4420-9621-22a686fd7e0a">RFC5424 The Syslog Protocol</para>
+  <para xml:id="para_51a1c04a-bcaa-42db-8654-01dcb5240952">RFC5425 Transport Layer Security (TLS) Transport Mapping for Syslog</para>
+  <para xml:id="para_d89cf1fa-937e-4248-86a9-2168b1cec25d">RFC5426 Transmission of Syslog Messages over UDP</para>
   <note>
     <para xml:id="para_7a3fb8ed-7510-486c-b790-d36c06e0b0b9">Normative RFC's are frequently updated by issuance of subsequent RFC's. The original older RFC is not modified to include references to the newer RFC.</para>
   </note>
@@ -1130,10 +1134,10 @@
   <section label="A.5.1" status="3" xml:id="sect_A.5.1">
     <title>DICOM Audit Message Schema</title>
   
-  <para xml:id="para_ab1c570c-b825-4c01-8cc7-2f5991feb846">Implementations claiming conformance to this profile shall use the following XML schema to format audit trail messages. This schema is derived from the schema specified in RFC 3881 IETF draft internet standard "Security Audit and Access Accountability XML Message Data Definitions for Healthcare Applications", according to W3C Recommendation "XML Schema Part 1: Structures," version 1.0, May 2001, and incorporates the DICOM extensions and restrictions outlined in <xref linkend="sect_A.5.2" xrefstyle="select: label"/>.</para>
+  <para xml:id="para_ab1c570c-b825-4c01-8cc7-2f5991feb846">Implementations claiming conformance to this profile shall use the following XML schema to format audit trail messages. This schema is derived from the schema specified in RFC3881 IETF draft internet standard "Security Audit and Access Accountability XML Message Data Definitions for Healthcare Applications", according to W3C Recommendation "XML Schema Part 1: Structures," version 1.0, May 2001, and incorporates the DICOM extensions and restrictions outlined in <xref linkend="sect_A.5.2" xrefstyle="select: label"/>.</para>
   <para xml:id="para_5fad4d2b-2b02-40d1-8aa9-6b5013d39042">This schema is provided in Relax NG Compact format.</para>
   <note>
-    <para xml:id="para_f7aec1d3-858b-4a0b-af2c-d497a108517a">This schema can be converted into an equivalent XML schema or other electronic format. It includes some modifications to the RFC 3881 schema that reflect field experience with audit message requirements. It extends the RFC 3881 schema.</para>
+    <para xml:id="para_f7aec1d3-858b-4a0b-af2c-d497a108517a">This schema can be converted into an equivalent XML schema or other electronic format. It includes some modifications to the RFC3881 schema that reflect field experience with audit message requirements. It extends the RFC3881 schema.</para>
   </note>
     <section label="A.5.1-1" xml:id="para_A.5.1-1">
       <title>Audit Message Schema</title>
@@ -1342,7 +1346,7 @@ start = message
 <section label="A.5.2" status="3" xml:id="sect_A.5.2">
     <title>General Message Format Conventions</title>
   
-  <para xml:id="para_4764a4fc-01bc-48ba-921b-fd7eb84abf41">The following table lists the primary fields from the message schema specified in A.5.1, with additional instructions, conventions, and restrictions on how DICOM applications shall fill in the field values. Please refer to RFC 3881 for the complete definition and specification of fields taken from the schema specified therein. In addition, the following table lists the additional fields that are part of DICOM-specific extensions in the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>). The fields names are only those leaf elements and attributes that are specialized or extended for this profile. Note that these fields may be enclosed in other XML elements, as specified by the schema.</para>
+  <para xml:id="para_4764a4fc-01bc-48ba-921b-fd7eb84abf41">The following table lists the primary fields from the message schema specified in A.5.1, with additional instructions, conventions, and restrictions on how DICOM applications shall fill in the field values. Please refer to RFC3881 for the complete definition and specification of fields taken from the schema specified therein. In addition, the following table lists the additional fields that are part of DICOM-specific extensions in the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>). The fields names are only those leaf elements and attributes that are specialized or extended for this profile. Note that these fields may be enclosed in other XML elements, as specified by the schema.</para>
     <table frame="box" label="A.5.2-1" rules="all" xml:id="table_A.5.2-1">
     <caption>General Message Format</caption>
     <thead>
@@ -1355,7 +1359,7 @@ start = message
           <para xml:id="para_7b784edc-c9ff-4321-a2fd-3dc819196755">Opt.</para>
         </th>
         <th align="center" colspan="1" rowspan="1">
-          <para xml:id="para_0a3d7c06-c980-4040-b2cf-3fb4a82d1b19">Description from RFC 3881</para>
+          <para xml:id="para_0a3d7c06-c980-4040-b2cf-3fb4a82d1b19">Description from RFC3881</para>
         </th>
         <th align="center" colspan="1" rowspan="1">
           <para xml:id="para_84ced2d9-55b1-4047-b30f-d18bd104c3d5">Additional Conditions on Field Format/Value</para>
@@ -1586,7 +1590,7 @@ start = message
         <para xml:id="para_3af1282e-57c5-47c8-a6b6-6825fb5dbe80">"Code specifying the type of source …"</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1c9733d9-8d2b-4ca6-8e68-aa9be47e2866">Used as defined in RFC 3881.</para>
+        <para xml:id="para_1c9733d9-8d2b-4ca6-8e68-aa9be47e2866">Used as defined in RFC3881.</para>
         <para xml:id="para_2531abb4-bd0a-4350-bfd4-f6e82c1c1ccf">E.g., an acquisition device might use "2" (data acquisition device), a PACS/RIS system might use "4 "(application server process).</para>
       </td>
     </tr>
@@ -1604,7 +1608,7 @@ start = message
         <para xml:id="para_453d51b5-f6f2-4d08-a97a-f152e9694f50">"Code for the participant object type being audited. This value is distinct from the user's role or any user relationship to the participant object."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_0081a151-58a8-45b9-a863-b18aa11c0403">Used as defined in RFC 3881</para>
+        <para xml:id="para_0081a151-58a8-45b9-a863-b18aa11c0403">Used as defined in RFC3881</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1618,7 +1622,7 @@ start = message
         <para xml:id="para_36cd0006-1dd5-4380-9bea-6f62a8757134">"Code representing the functional application role of Participant Object being audited."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_a0de1edf-ad90-444e-b5df-26331e013397">Used as defined in RFC 3881</para>
+        <para xml:id="para_a0de1edf-ad90-444e-b5df-26331e013397">Used as defined in RFC3881</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1632,7 +1636,7 @@ start = message
         <para xml:id="para_5330b033-3791-4ad1-a449-daf348c2e1f1">"Identifier for the data life-cycle stage for the participant object. This can be used to provide an audit trail for data, over time, as it passes through the system."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3116a5d7-6ad1-4639-b205-59608a8f9ed1">Used as defined in RFC 3881.</para>
+        <para xml:id="para_3116a5d7-6ad1-4639-b205-59608a8f9ed1">Used as defined in RFC3881.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1646,7 +1650,7 @@ start = message
         <para xml:id="para_29d33046-fed7-44a6-bb40-acb07a3ff8da">"Describes the identifier that is contained in Participant Object ID."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3084b452-694e-4830-b803-1e22f4b7704f">Values may be drawn from those listed in RFC 3881 and DCID (404), as specified in the individual message descriptions.</para>
+        <para xml:id="para_3084b452-694e-4830-b803-1e22f4b7704f">Values may be drawn from those listed in RFC3881 and DCID (404), as specified in the individual message descriptions.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1660,7 +1664,7 @@ start = message
         <para xml:id="para_e5a40829-24e6-4064-9026-2d88eb8a503c">"Denotes policy-defined sensitivity for the Participant Object ID such as VIP, HIV status, mental health status, or similar topics."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_e36acc7d-1062-42f7-a1d0-5cafa1898f07">Used as defined in RFC 3881.</para>
+        <para xml:id="para_e36acc7d-1062-42f7-a1d0-5cafa1898f07">Used as defined in RFC3881.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1716,7 +1720,7 @@ start = message
         <para xml:id="para_a5ee031c-014a-41e8-83d0-cb2e32c218a6">"Implementation-defined data about specific details of the object accessed or used."</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_fd2ecc89-3bf7-47ef-8479-43e18d375ca8">Used as defined in RFC 3881.</para>
+        <para xml:id="para_fd2ecc89-3bf7-47ef-8479-43e18d375ca8">Used as defined in RFC3881.</para>
         <note>
 <para xml:id="para_41e8307b-f970-4e0b-9821-a76559d28c42">The value field is xs:base64Binary encoded, making this attribute suitable for conveying binary data.</para>
 </note>
@@ -4056,7 +4060,7 @@ start = message
         <para xml:id="para_ffda41da-6f8d-496b-bf31-0c1d3463fc57">MC</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_94a796cf-1399-4f36-bc5e-e40293e342a6">Shall be present if Net Access Point Type Code is present. Shall use fields as specified in RFC 3881.</para>
+        <para xml:id="para_94a796cf-1399-4f36-bc5e-e40293e342a6">Shall be present if Net Access Point Type Code is present. Shall use fields as specified in RFC3881.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -7412,36 +7416,36 @@ start = message
 <section label="A.6" status="2" xml:id="sect_A.6">
     <title>Audit Trail Message Transmission Profile - SYSLOG-TLS</title>
   
-  <para xml:id="para_09d57897-eca4-4316-bb9d-d5c890d65d2a">This profile defines the transmission of audit trail messages. Transport Layer Security (TLS) Transport Mapping for Syslog (RFC 5425) provides the mechanisms for reliable transport, buffering, acknowledgement, authentication, identification, and encryption. The RFC5424 states that the TLS used MUST be TLS version 1.2. For this DICOM profile TLS MUST be used, and version 1.2 or later is RECOMMENDED.</para>
+  <para xml:id="para_09d57897-eca4-4316-bb9d-d5c890d65d2a">This profile defines the transmission of audit trail messages. Transport Layer Security (TLS) Transport Mapping for Syslog (RFC5425) provides the mechanisms for reliable transport, buffering, acknowledgement, authentication, identification, and encryption. The RFC5424 states that the TLS used MUST be TLS version 1.2. For this DICOM profile TLS MUST be used, and version 1.2 or later is RECOMMENDED.</para>
   <note>
     <para xml:id="para_5664cfde-d7c4-423e-84e0-afdd7ae8f847">The words MUST and RECOMMENDED are used in accordance with the IETF specification for normative requirements.</para>
   </note>
-  <para xml:id="para_23569c75-5e1a-49fb-845a-2fba1ee28d70">Any implementation that claims conformance to this profile shall also conform to the Audit Trail Message Format Profile. XML audit trail messages created using the format defined in Audit Trail Message Format Profile shall be transmitted to a collection point using the syslog over TLS mechanism, defined in RFC 5425. Systems that comply with this profile shall support message sizes of at least 32768 octets.</para>
+  <para xml:id="para_23569c75-5e1a-49fb-845a-2fba1ee28d70">Any implementation that claims conformance to this profile shall also conform to the Audit Trail Message Format Profile. XML audit trail messages created using the format defined in Audit Trail Message Format Profile shall be transmitted to a collection point using the syslog over TLS mechanism, defined in RFC5425. Systems that comply with this profile shall support message sizes of at least 32768 octets.</para>
   <note>
     <orderedlist numeration="arabic">
       <listitem>
         <para xml:id="para_71175f35-37fd-4df9-a4ed-08d61d0974fb">Audit messages for other purposes may also be transferred on the same syslog connection. These messages might not conform to the Audit Trail Message Format.</para>
       </listitem>
       <listitem>
-        <para xml:id="para_2fe61cfa-7825-4df4-909e-172e4b910c48">RFC 5425 specifies mandatory support for 2KB messages, strongly recommends support for at least 8KB, and does not restrict the maximum size.</para>
+        <para xml:id="para_2fe61cfa-7825-4df4-909e-172e4b910c48">RFC5425 specifies mandatory support for 2KB messages, strongly recommends support for at least 8KB, and does not restrict the maximum size.</para>
       </listitem>
       <listitem>
         <para xml:id="para_d03b0acf-8981-429b-b204-e841212a65a2">When a received message is longer than the receiving application supports, the message might be discarded or truncated. The sending application will not be notified.</para>
       </listitem>
     </orderedlist>
   </note>
-  <para xml:id="para_d275117b-0794-4395-a866-eaf0b27c4a02">The XML audit trail message shall be inserted into the MSG portion of the SYSLOG-MSG element of the syslog message as defined in RFC 5424 "The Syslog Protocol".The XML audit message may contain Unicode characters that are encoded using the UTF-8 encoding rules.</para>
+  <para xml:id="para_d275117b-0794-4395-a866-eaf0b27c4a02">The XML audit trail message shall be inserted into the MSG portion of the SYSLOG-MSG element of the syslog message as defined in RFC5424 "The Syslog Protocol".The XML audit message may contain Unicode characters that are encoded using the UTF-8 encoding rules.</para>
   <note>
     <para xml:id="para_1e01796a-916c-4065-ae3b-adbb746612c9">UTF-8 avoids utilizing the control characters that are reserved by the syslog protocol, but a system that is not prepared for UTF-8 may not be able to display these messages correctly.</para>
   </note>
   <para xml:id="para_e9fb7e42-c64e-45bc-b8e5-efee041fbb22">The PRI field shall be set using the facility value of 10 (security/authorization messages). Most messages should have the severity value of 5 (normal but significant), although applications may choose other values if that is appropriate to the more detailed information in the audit message. This means that for most audit messages the PRI field will contain the value "&lt;85&gt;".</para>
   <para xml:id="para_6d32aeb9-7ff0-416e-ab17-1a0afd1816a1">The MSGID field in the HEADER of the SYSLOG-MSG shall be set. The value "DICOM+RFC3881" may be used for messages that comply with this profile.</para>
-  <para xml:id="para_b8a55fdd-0a95-423f-addc-ed02a0e661f5">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC 3881 format, as extended in the audit trail message format profile.</para>
-  <para xml:id="para_7c3c0f0e-b0c1-4cff-9eef-09368f73b3ae">The syslog message shall be created and transmitted as described in RFC 5424.</para>
+  <para xml:id="para_b8a55fdd-0a95-423f-addc-ed02a0e661f5">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC3881 format, as extended in the audit trail message format profile.</para>
+  <para xml:id="para_7c3c0f0e-b0c1-4cff-9eef-09368f73b3ae">The syslog message shall be created and transmitted as described in RFC5424.</para>
   <para xml:id="para_682c6207-727e-46af-8fb6-94cc1fc9bc26">Any implementation that claims conformance to this Security Profile shall describe in its conformance statement:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
-<para xml:id="para_ca8c0157-48f9-4e56-9d31-c273de126ea8">any configuration parameters relevant to RFC 5424 and RFC 5425.</para>
+<para xml:id="para_ca8c0157-48f9-4e56-9d31-c273de126ea8">any configuration parameters relevant to RFC5424 and RFC5425.</para>
 </listitem>
 <listitem>
 <para xml:id="para_fd6e8ac2-e309-4405-83fd-45cb819770da">Any STRUCTURED-DATA that is generated or processed.</para>
@@ -7462,12 +7466,12 @@ start = message
   <para xml:id="para_e8649e42-cad6-4f90-9ab4-d07e8384a694">The underlying UDP transport might not accept messages longer than the MTU size minus the UDP header length. This may result in longer syslog messages being truncated. When these messages are truncated the resulting XML may be incorrect. Because of this potential for truncated messages and other security concerns, the transmission of syslog messages over TLS may be preferred (see <xref linkend="sect_A.6" xrefstyle="select: label"/>).</para>
   <para xml:id="para_f235e963-dfeb-4e2e-8e44-f73980f0187b">The PRI field shall be set using the facility value of 10 (security/authorization messages). Most messages should have the severity value of 5 (normal but significant), although applications may choose values of 4 (warning condition) if that is appropriate to the more detailed information in the audit message. This means that for most audit messages the PRI field will contain the value "&lt;85&gt;". Audit repositories shall be prepared to deal appropriately with any incoming PRI value.</para>
   <para xml:id="para_e5faa060-4af1-41ea-923e-e3ceed479b2d">The MSGID field in the HEADER of the SYSLOG-MSG shall be set. The value "DICOM+RFC3881" may be used for messages that comply with this profile.</para>
-  <para xml:id="para_a89bdb4b-efcb-4bc0-8532-ffcec32cd8b9">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC 3881 format, as extended in this profile.</para>
-  <para xml:id="para_826f25d8-71f8-4f3d-9784-2d5081ff2706">The syslog message shall be created and transmitted as described in RFC 5424.</para>
+  <para xml:id="para_a89bdb4b-efcb-4bc0-8532-ffcec32cd8b9">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC3881 format, as extended in this profile.</para>
+  <para xml:id="para_826f25d8-71f8-4f3d-9784-2d5081ff2706">The syslog message shall be created and transmitted as described in RFC5424.</para>
   <para xml:id="para_e22f58f0-913f-4f9d-bdfb-97e437aa6701">Any implementation that claims conformance to this Security Profile shall describe in its conformance statement:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
-<para xml:id="para_ce3f1478-37c8-41db-8853-f4a42e397ca6">any configuration parameters relevant to RFC 5424 and RFC 5426.</para>
+<para xml:id="para_ce3f1478-37c8-41db-8853-f4a42e397ca6">any configuration parameters relevant to RFC5424 and RFC5426.</para>
 </listitem>
 <listitem>
 <para xml:id="para_b7ea17c4-6ed5-4494-950f-9c3252743e68">Any STRUCTURED-DATA that is generated or processed.</para>
@@ -7780,10 +7784,10 @@ start = message
 <para xml:id="para_d7346797-e5dd-4135-8ecd-bbcd13c240e1">The File Set shall be an attachment to the email body.</para>
 </listitem>
 <listitem>
-<para xml:id="para_6ee85f8b-41a3-4efc-9198-e151efac339d">The entire email (body, File Set attachment, and any other attachments) shall be encrypted using AES, in accordance with RFC 3851 and RFC 3853.</para>
+<para xml:id="para_6ee85f8b-41a3-4efc-9198-e151efac339d">The entire email (body, File Set attachment, and any other attachments) shall be encrypted using AES, in accordance with RFC3851 and RFC3853.</para>
 </listitem>
 <listitem>
-<para xml:id="para_d62c79c1-5eaf-4fd3-b21a-55dada0a3d7d">The email body and attachments may be compressed in accordance with RFC 3851.</para>
+<para xml:id="para_d62c79c1-5eaf-4fd3-b21a-55dada0a3d7d">The email body and attachments may be compressed in accordance with RFC3851.</para>
 </listitem>
 <listitem>
 <para xml:id="para_ffeabc55-9352-4347-95de-f1aba4c6e378">The email shall be digitally signed by the sender. The signing may be applied before or after encryption. This digital signature shall be interpreted to mean that the sender is attesting to his authorization to disclose the information in this email to the recipient.</para>
@@ -7814,7 +7818,7 @@ start = message
       <note>
         <para xml:id="para_a679419f-e24d-431e-8206-feadd996f817">The use of MD5 is not recommended by its inventors, RSA. See:ftp://ftp.rsasecurity.com/pub/pdfs/bulletn4.pdf</para>
       </note>
-      <para xml:id="para_68a93cf3-a67a-4e55-8043-254be06350b8">The MAC to be signed shall be padded to a block size matching the RSA key size, as directed in RFC 2437 (PKCS #1). The Value of MAC Algorithm (0400,0015) shall be set to either "RIPEMD160", "MD5", "SHA1", "SHA256", "SHA384" or "SHA512". The public key associated with the private key as well as the identity of the Application Entity or equipment manufacturer that owns the RSA key pair shall be transmitted in an X.509 (1993) signature certificate. The Value of the Certificate Type (0400,0110) Attribute shall be set to "X509_1993_SIG". A site-specific policy determines how the X.509 certificates are generated, authenticated, and distributed. A site may issue and distribute X.509 certificates directly, may utilize the services of a Certificate Authority, or use any reasonable method for certificate generation and verification.</para>
+      <para xml:id="para_68a93cf3-a67a-4e55-8043-254be06350b8">The MAC to be signed shall be padded to a block size matching the RSA key size, as directed in RFC2437 (PKCS #1). The Value of MAC Algorithm (0400,0015) shall be set to either "RIPEMD160", "MD5", "SHA1", "SHA256", "SHA384" or "SHA512". The public key associated with the private key as well as the identity of the Application Entity or equipment manufacturer that owns the RSA key pair shall be transmitted in an X.509 (1993) signature certificate. The Value of the Certificate Type (0400,0110) Attribute shall be set to "X509_1993_SIG". A site-specific policy determines how the X.509 certificates are generated, authenticated, and distributed. A site may issue and distribute X.509 certificates directly, may utilize the services of a Certificate Authority, or use any reasonable method for certificate generation and verification.</para>
       <para xml:id="para_73404a12-dfab-4acb-a939-c348f2211709">If an implementation utilizes timestamps, it shall use a Certified Timestamp Type (0400,0305) of "CMS_TSP". The Certified Timestamp (0400,0310) shall be generated as described in "Internet X.509 Public Key Infrastructure; Time Stamp Protocols; March 2000".</para>
     </section>
     <section label="C.2" status="2" xml:id="sect_C.2">
@@ -8097,7 +8101,7 @@ start = message
   <section label="D.1.1" status="3" xml:id="sect_D.1.1">
     <title>Encapsulation of A DICOM File in a Secure DICOM File</title>
   
-  <para xml:id="para_cb472c66-70ca-45fd-9a45-4889f167ed7e">A Secure DICOM File conforming to this security profile shall contain an Enveloped-data content type of the Cryptographic Message Syntax defined in RFC 3852, 3370 and 3565. The enveloped data shall use RSA [RFC 3447], or password-based encryption using PBKDF2 [RFC 2898] for the key derivation algorithm and either AES or Triple-DES [RFC 3211], for the key transport of the content-encryption keys. Creators of a Secure DICOM File conforming to this security profile may use either AES or Triple-DES for content-encryption. Readers claiming conformance to this profile shall be capable of decrypting Secure DICOM Files using either AES or Triple-DES. The AES key length may be any length allowed by the RFCs. The Triple-DES key length is 168 bits as defined by ANSI X9.52. Encoding shall be performed according to the specifications for RSA Key Transport and Triple DES Content Encryption in RFC-3370, and for AES Content Encryption in RFC-3565.</para>
+  <para xml:id="para_cb472c66-70ca-45fd-9a45-4889f167ed7e">A Secure DICOM File conforming to this security profile shall contain an Enveloped-data content type of the Cryptographic Message Syntax defined in RFC3852, RFC3370 and RFC3565. The enveloped data shall use RSA [RFC3447], or password-based encryption using PBKDF2 [RFC2898] for the key derivation algorithm and either AES or Triple-DES [RFC3211], for the key transport of the content-encryption keys. Creators of a Secure DICOM File conforming to this security profile may use either AES or Triple-DES for content-encryption. Readers claiming conformance to this profile shall be capable of decrypting Secure DICOM Files using either AES or Triple-DES. The AES key length may be any length allowed by the RFCs. The Triple-DES key length is 168 bits as defined by ANSI X9.52. Encoding shall be performed according to the specifications for RSA Key Transport and Triple DES Content Encryption in RFC3370, and for AES Content Encryption in RFC3565.</para>
   <para xml:id="para_53d860aa-cd3d-4599-8f5a-054c01596339">The encrypted content of the Enveloped-data content type shall be of the following choices:</para>
 <itemizedlist>
   <listitem>
@@ -8107,7 +8111,7 @@ start = message
 <para xml:id="para_957e38f9-56d3-457a-a641-987f80ecd8d3">Digested-data content type.</para>
 </listitem>
 </itemizedlist>
-<para xml:id="para_7cc1bbb8-fcb0-4e52-aac1-7f0c14c323d5">In both cases, SHA-1 [SHA-1], SHA256, SHA384, or SHA512 [SHA-2] shall be used as the digest algorithm. In case of the Signed-data content type, RSA [RFC 2313] shall be used as the signature algorithm.</para>
+<para xml:id="para_7cc1bbb8-fcb0-4e52-aac1-7f0c14c323d5">In both cases, SHA-1 [SHA-1], SHA256, SHA384, or SHA512 [SHA-2] shall be used as the digest algorithm. In case of the Signed-data content type, RSA [RFC2313] shall be used as the signature algorithm.</para>
   <para xml:id="para_ecf84ba0-c931-42e0-b377-47629228e291">In the case of password-based encryption using PBKDF2, the octet string that contains the password used to generate the key shall be limited to the encoding and the graphic character representation defined by the Default Character Repertoire.</para>
   <note>
     <orderedlist numeration="arabic">
@@ -8121,10 +8125,10 @@ start = message
         <para xml:id="para_17adc060-ae93-47e4-a98c-ab2c72286ec6">No requirements or restrictions on the use of the SignedAttributes element of the Signed-data content type's SignerInfo structure are defined in this profile. SignedAttributes might for example be used to specify the signing time or SMIME capabilities, as required by ENV 13608-2.</para>
       </listitem>
       <listitem>
-        <para xml:id="para_fc6e1360-6f44-40f3-8f86-3e3232275d79">The use of password-based encryption for key transport of content encryption keys is potentially less secure than certificate-based encryption, but may be useful when the list of recipients is not known a priori or when there is no public key infrastructure deployed. The security depends on the entropy of the password, which if user-selected can be quite low. RFC 3211 strongly recommends the use of a pass "phrase" rather than a single word, and RFC 2898 does not impose any practical length limit. Also, the method used to exchange the password or pass phrase also could have a significant impact on the level of security.</para>
+        <para xml:id="para_fc6e1360-6f44-40f3-8f86-3e3232275d79">The use of password-based encryption for key transport of content encryption keys is potentially less secure than certificate-based encryption, but may be useful when the list of recipients is not known a priori or when there is no public key infrastructure deployed. The security depends on the entropy of the password, which if user-selected can be quite low. RFC3211 strongly recommends the use of a pass "phrase" rather than a single word, and RFC2898 does not impose any practical length limit. Also, the method used to exchange the password or pass phrase also could have a significant impact on the level of security.</para>
       </listitem>
       <listitem>
-        <para xml:id="para_19ec7036-7683-41df-8d08-740b9fc8c014">PBKDF2 as defined in RFC 2898 specifies the password to be "an octet string of arbitrary length whose interpretation as a text string is unspecified". For interoperability between the sender and recipient, both a character encoding scheme and a graphic character representation needs to be defined. ISO IR6 (US-ASCII), being the Default Character Repertoire for DICOM (see <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>), is specified in order to avoid any potential ambiguity caused by the use of other character sets (such as UTF-8) that do not necessarily result in the same binary values for particular graphic character representation.</para>
+        <para xml:id="para_19ec7036-7683-41df-8d08-740b9fc8c014">PBKDF2 as defined in RFC2898 specifies the password to be "an octet string of arbitrary length whose interpretation as a text string is unspecified". For interoperability between the sender and recipient, both a character encoding scheme and a graphic character representation needs to be defined. ISO IR6 (US-ASCII), being the Default Character Repertoire for DICOM (see <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>), is specified in order to avoid any potential ambiguity caused by the use of other character sets (such as UTF-8) that do not necessarily result in the same binary values for particular graphic character representation.</para>
       </listitem>
     </orderedlist>
   </note>
@@ -8211,7 +8215,7 @@ start = message
 </note>
     </listitem>
     <listitem>
-      <para xml:id="para_1c3d937e-b42b-4cd7-80db-092f09622605">If used, all instances of the Encrypted Attributes Data Set shall be encoded with a DICOM Transfer Syntax, encrypted, and stored in the dataset to be protected as an Item of the Encrypted Attributes Sequence (0400,0500). The encryption shall be done using RSA [RFC 2313] for the key transport of the content-encryption keys. A de-identifier conforming to this security profile may use either AES or Triple-DES for content-encryption. The AES key length may be any length allowed by the RFCs. The Triple-DES key length is 168 bits as defined by ANSI X9.52. Encoding shall be performed according to the specifications for RSA Key Transport and Triple DES Content Encryption in RFC-3370 and for AES Content Encryption in RFC-3565.</para>
+      <para xml:id="para_1c3d937e-b42b-4cd7-80db-092f09622605">If used, all instances of the Encrypted Attributes Data Set shall be encoded with a DICOM Transfer Syntax, encrypted, and stored in the dataset to be protected as an Item of the Encrypted Attributes Sequence (0400,0500). The encryption shall be done using RSA [RFC2313] for the key transport of the content-encryption keys. A de-identifier conforming to this security profile may use either AES or Triple-DES for content-encryption. The AES key length may be any length allowed by the RFCs. The Triple-DES key length is 168 bits as defined by ANSI X9.52. Encoding shall be performed according to the specifications for RSA Key Transport and Triple DES Content Encryption in RFC3370 and for AES Content Encryption in RFC3565.</para>
     <note>
       <orderedlist numeration="arabic">
         <listitem>
@@ -18306,9 +18310,9 @@ start = message
 <section label="F.1.3.3" status="4" xml:id="sect_F.1.3.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_6b738506-a7ea-4629-bcee-f9a3e25a4287">RFC-2131 DHCP Protocol</para>
-  <para xml:id="para_3f5e16cd-a076-4e88-bd2e-fba21eed0084">RFC-2132 DHCP Options</para>
-  <para xml:id="para_f909057c-d781-46b0-b499-c2cb5a305647">RFC-2563 Auto Configuration control</para>
+  <para xml:id="para_6b738506-a7ea-4629-bcee-f9a3e25a4287">RFC2131 DHCP Protocol</para>
+  <para xml:id="para_3f5e16cd-a076-4e88-bd2e-fba21eed0084">RFC2132 DHCP Options</para>
+  <para xml:id="para_f909057c-d781-46b0-b499-c2cb5a305647">RFC2563 Auto Configuration control</para>
   </section>
 <section label="F.1.3.4" status="4" xml:id="sect_F.1.3.4">
     <title>Interaction Diagram</title>
@@ -18324,7 +18328,7 @@ start = message
     </mediaobject>
   </figure>
 </para>
-  <para xml:id="para_cdcfd115-d2ac-4c7e-a777-14aff4db98b5">The DHCP client shall comply with RFC-2131 (DHCP Protocol), RFC-2132 (DHCP Options), RFC-2563 (Auto Configuration Control), and their referenced RFCs.</para>
+  <para xml:id="para_cdcfd115-d2ac-4c7e-a777-14aff4db98b5">The DHCP client shall comply with RFC2131 (DHCP Protocol), RFC2132 (DHCP Options), RFC2563 (Auto Configuration Control), and their referenced RFCs.</para>
   <para xml:id="para_7014e8c8-c024-49e7-9ce3-b38358e21ca7">The DHCP client shall query for available DHCP servers. It shall select the DHCP server to use.</para>
   <para xml:id="para_6dc42b56-361f-4268-8966-057d2510bf7e">The DHCP client shall query for an IP assignment. The DHCP Server shall determine the IP parameters in accordance with the current DHCP configuration, establish a lease for these parameters, and respond with this information. (See below for lease maintenance and expiration.) The DHCP client shall apply these parameters to the TCP/IP stack. The DHCP client shall establish internal lease maintenance activities.</para>
   <para xml:id="para_27145fe0-f084-4b94-b0d9-54ca7df272f7">The DHCP client shall query for the optional information listed in <xref linkend="table_F.1-2" xrefstyle="select: label"/> when required by additional profiles used by the client system. If the DHCP server does not provide this information, the default values shall be used by the DHCP client.</para>
@@ -18515,13 +18519,13 @@ start = message
 <section label="F.1.4.3" status="4" xml:id="sect_F.1.4.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_ffa844a4-0b19-445d-ba3c-69e0251e36ae">RFC-2131 DHCP Protocol</para>
-  <para xml:id="para_ebee716b-d0a9-4ded-846b-e9eaddf5da54">RFC-2132 DHCP Options</para>
+  <para xml:id="para_ffa844a4-0b19-445d-ba3c-69e0251e36ae">RFC2131 DHCP Protocol</para>
+  <para xml:id="para_ebee716b-d0a9-4ded-846b-e9eaddf5da54">RFC2132 DHCP Options</para>
   </section>
 <section label="F.1.4.4" status="4" xml:id="sect_F.1.4.4">
     <title>Normal Interaction</title>
   
-  <para xml:id="para_e4678ad5-b5e0-4b0c-aa73-384a3905914f">The DHCP client shall maintain a lease on the IP address in accordance with the DHCP protocol as specified in RFC-2131 and RFC-2132. There is a possibility that the DHCP Server may fail, or may choose not to renew the lease.</para>
+  <para xml:id="para_e4678ad5-b5e0-4b0c-aa73-384a3905914f">The DHCP client shall maintain a lease on the IP address in accordance with the DHCP protocol as specified in RFC2131 and RFC2132. There is a possibility that the DHCP Server may fail, or may choose not to renew the lease.</para>
   <para xml:id="para_df165db7-dbc9-4e5b-89af-73007dea833d">In the event that the DHCP lease expires without being renewed, any still active DICOM connections may be aborted (AP-Abort).</para>
   <note>
     <para xml:id="para_2be61abd-b08b-4a3f-9f7a-42ebf40e9f75">There is usually a period (typically between several minutes and several days) between the request for lease extension and actual expiration of the lease. The application might take advantage of this to perform a graceful association release rather than the abrupt shutdown of an AP-Abort.</para>
@@ -18581,7 +18585,7 @@ start = message
 <section label="F.1.5.3" status="4" xml:id="sect_F.1.5.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_958fff00-ae68-4da0-886b-472c7ec16c2b">RFC-2136 Dynamic Updates in the Domain Name System</para>
+  <para xml:id="para_958fff00-ae68-4da0-886b-472c7ec16c2b">RFC2136 Dynamic Updates in the Domain Name System</para>
   </section>
 <section label="F.1.5.4" status="4" xml:id="sect_F.1.5.4">
     <title>Basic Course of Events</title>
@@ -18816,13 +18820,13 @@ start = message
 <section label="G.1.1.3" status="4" xml:id="sect_G.1.1.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_aa1a8df0-22e8-4b64-a236-b999d74a57ed">RFC-1305 Network Time Protocol (NTP) standard specification</para>
-  <para xml:id="para_372e551e-8da1-4d2b-b42f-6baffb829f8a">RFC-2030 Simple NTP</para>
+  <para xml:id="para_aa1a8df0-22e8-4b64-a236-b999d74a57ed">RFC1305 Network Time Protocol (NTP) standard specification</para>
+  <para xml:id="para_372e551e-8da1-4d2b-b42f-6baffb829f8a">RFC2030 Simple NTP</para>
   </section>
 <section label="G.1.1.4" status="4" xml:id="sect_G.1.1.4">
     <title>Basic Course of Events.</title>
   
-  <para xml:id="para_03d27d8a-246d-477f-b694-bc64144615b0">The DHCP server may have provided a list of NTP servers or one may be obtained through optional NTP discovery mechanisms. If this list is empty and no manually configured NTP server address is present, the client shall select its internal clock as the time source (see below). If the list is not empty, the client shall attempt to maintain time synchronization with all those NTP servers. The client may attempt to use the multi-cast, manycast, and broadcast options as defined in RFC-1305. It shall utilize the point to point synchronization option if these are not available. The synchronization shall be in compliance with either RFC-1305 (NTP) or RFC-2030 (SNTP).</para>
+  <para xml:id="para_03d27d8a-246d-477f-b694-bc64144615b0">The DHCP server may have provided a list of NTP servers or one may be obtained through optional NTP discovery mechanisms. If this list is empty and no manually configured NTP server address is present, the client shall select its internal clock as the time source (see below). If the list is not empty, the client shall attempt to maintain time synchronization with all those NTP servers. The client may attempt to use the multi-cast, manycast, and broadcast options as defined in RFC1305. It shall utilize the point to point synchronization option if these are not available. The synchronization shall be in compliance with either RFC1305 (NTP) or RFC2030 (SNTP).</para>
   <para xml:id="para_951a0deb-40b1-47a3-8792-7510dccca8fd">If the application requires time synchronization of better than 1s mean error, the client should use NTP. SNTP cannot ensure a more accurate time synchronization.</para>
   <para xml:id="para_fab75851-df8a-4c2d-a25a-9ca747d8ddc8">The DHCP server may have provided a UTC offset between the local time at the machine and UTC. If this is missing, the UTC offset will be obtained in a device specific manner (e.g., service, CMOS). If the UTC offset is provided, the client shall use this offset for converting between UTC and local time.</para>
   </section>
@@ -18883,13 +18887,13 @@ start = message
 <section label="G.1.2.3" status="4" xml:id="sect_G.1.2.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_3cedce94-3713-4ac5-a03a-aac08697a067">RFC-1305 Network Time Protocol (NTP) standard specification</para>
-  <para xml:id="para_e5646722-26ef-46b7-8d77-b7c0fff25aa2">RFC-2030 Simple NTP</para>
+  <para xml:id="para_3cedce94-3713-4ac5-a03a-aac08697a067">RFC1305 Network Time Protocol (NTP) standard specification</para>
+  <para xml:id="para_e5646722-26ef-46b7-8d77-b7c0fff25aa2">RFC2030 Simple NTP</para>
   </section>
 <section label="G.1.2.4" status="4" xml:id="sect_G.1.2.4">
     <title>Basic Course of Events.</title>
   
-  <para xml:id="para_a4409ba6-9707-4fb3-b790-0dda3f158551">All the full detail is in RFC-1305 and RFC-2030. The most common and mandatory minimum mode for NTP operation establishes a ping pong of messages between client and servers. The client sends requests to the servers, which fill in time related fields in a response, and the client performs optimal estimation of the present time. The RFCs deal with issues of lost messages, estimation formulae, etc. Once the clocks are in synchronization these ping pong exchanges typically stabilize at roughly 1000 second intervals.</para>
+  <para xml:id="para_a4409ba6-9707-4fb3-b790-0dda3f158551">All the full detail is in RFC1305 and RFC2030. The most common and mandatory minimum mode for NTP operation establishes a ping pong of messages between client and servers. The client sends requests to the servers, which fill in time related fields in a response, and the client performs optimal estimation of the present time. The RFCs deal with issues of lost messages, estimation formulae, etc. Once the clocks are in synchronization these ping pong exchanges typically stabilize at roughly 1000 second intervals.</para>
   <para xml:id="para_483906c6-fd0d-4bfc-8d5c-bbb986cf8163">The client machine typically uses the time estimate to maintain the internal operating system clock. This clock is then used by applications that need time information. This approach eliminates the application visible difference between synchronized and unsynchronized time. The RFCs provide guidance on proper implementations.</para>
   </section>
 </section>
@@ -18912,7 +18916,7 @@ start = message
     <title>NTP Implementation Considerations (Informative)</title>
   
   <para xml:id="para_72aa46a6-0514-45b6-8ceb-2bdb644b4b9d">NTP servers always support both NTP and SNTP clients. The difference is one of synchronization accuracy, not communications compatibility. Although in theory both NTP and SNTP clients could run at the same time on a client this is not recommended. The SNTP updates will simply degrade the time accuracy. When other time protocol clients, such as IRIG, are also being used these clients must be coordinated with the NTP client to avoid synchronization problems.</para>
-  <para xml:id="para_680f2382-0521-437b-a53a-f81a30806f43">RFC-1305 includes specifications for management of intermittent access to the NTP servers, broken servers, etc. The NTP servers do not need to be present and operational when the NTP process begins. NTP supports the use of multiple servers to provide backup and better accuracy. RFC-1305 specifies the mechanisms used by the NTP client. The site www.ntp.org provides extensive guidance and references regarding the most effective configurations for backups and multiple server configurations.</para>
+  <para xml:id="para_680f2382-0521-437b-a53a-f81a30806f43">RFC1305 includes specifications for management of intermittent access to the NTP servers, broken servers, etc. The NTP servers do not need to be present and operational when the NTP process begins. NTP supports the use of multiple servers to provide backup and better accuracy. RFC1305 specifies the mechanisms used by the NTP client. The site www.ntp.org provides extensive guidance and references regarding the most effective configurations for backups and multiple server configurations.</para>
   <para xml:id="para_ecc586e7-0f09-413b-b17d-ea56d66865d9">The local battery clock and client operating system must be properly UTC aware. NTP synchronization is in UTC. This can be a source of confusion because some computers are configured with their hardware clocks set to local time and the operating system set (incorrectly) to UTC. This is a common error that only becomes apparent when the devices attempt to synchronize clocks.</para>
   </section>
 <section label="G.1.5" status="3" xml:id="sect_G.1.5">
@@ -19610,7 +19614,7 @@ start = message
                   <para xml:id="para_6ec005cd-d61a-41df-ab63-9541120e0103">0..N</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_1de9c436-4d82-460c-851a-6fc443420032">The TLS CipherSuites that are supported on this particular connection. TLS CipherSuites shall be described using an RFC-2246 string representation (e.g., "TLS_RSA_WITH_RC4_128_SHA")</para>
+                  <para xml:id="para_1de9c436-4d82-460c-851a-6fc443420032">The TLS CipherSuites that are supported on this particular connection. TLS CipherSuites shall be described using an RFC2246 string representation (e.g., "TLS_RSA_WITH_RC4_128_SHA")</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -20720,7 +20724,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
   <section label="H.1.4.1.1" status="5" xml:id="sect_H.1.4.1.1">
     <title>Scope</title>
   
-  <para xml:id="para_43a6bd97-ebe9-4467-977d-9545c4190e6f">The RFC-2782
+  <para xml:id="para_43a6bd97-ebe9-4467-977d-9545c4190e6f">The RFC2782
   <emphasis role="italic">A DNS RR for specifying the location of services (DNS SRV)</emphasis>specifies a mechanism for requesting the names and rudimentary descriptions for machines that provide network services. The DNS client requests the descriptions for all machines that are registered as offering a particular service name. In this case the service name requested will be "LDAP". The DNS server may respond with multiple names for a single request.</para>
   </section>
 <section label="H.1.4.1.2" status="5" xml:id="sect_H.1.4.1.2">
@@ -20755,10 +20759,10 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section label="H.1.4.1.3" status="5" xml:id="sect_H.1.4.1.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_21519421-9bbd-43c4-8a9d-7e77acdf3fed">RFC-2181 Clarifications to the DNS Specification</para>
-  <para xml:id="para_c87570e3-9cb4-419f-9777-f86fa994c119">RFC-2219 Use of DNS Aliases for Network Services</para>
-  <para xml:id="para_00f1248d-93f5-4f70-a269-a1b64eeef77a">RFC-2782 A DNS RR for specifying the location of services (DNS SRV)</para>
-  <para xml:id="para_482df8e0-6222-4ddf-82df-1ee6ff74d8d5">other RFC's are included by reference from RFC-2181, RFC-2219, and RFC-2782.</para>
+  <para xml:id="para_21519421-9bbd-43c4-8a9d-7e77acdf3fed">RFC2181 Clarifications to the DNS Specification</para>
+  <para xml:id="para_c87570e3-9cb4-419f-9777-f86fa994c119">RFC2219 Use of DNS Aliases for Network Services</para>
+  <para xml:id="para_00f1248d-93f5-4f70-a269-a1b64eeef77a">RFC2782 A DNS RR for specifying the location of services (DNS SRV)</para>
+  <para xml:id="para_482df8e0-6222-4ddf-82df-1ee6ff74d8d5">other RFC's are included by reference from RFC2181, RFC2219, and RFC2782.</para>
   </section>
 <section label="H.1.4.1.4" status="5" xml:id="sect_H.1.4.1.4">
     <title>Interaction Diagram</title>
@@ -20774,7 +20778,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
     </mediaobject>
   </figure>
 </para>
-  <para xml:id="para_27f13bd9-56d6-4e79-8a83-e0bc1dbd34eb">The DNS client shall request a list of all the LDAP servers available. It will use the priority, capacity, and location information provided by DNS to select a server. (RFC-2782 recommends the proper use of these parameters.) It is possible that there is no LDAP server, or that the DNS server does not support the SRV RR request.</para>
+  <para xml:id="para_27f13bd9-56d6-4e79-8a83-e0bc1dbd34eb">The DNS client shall request a list of all the LDAP servers available. It will use the priority, capacity, and location information provided by DNS to select a server. (RFC2782 recommends the proper use of these parameters.) It is possible that there is no LDAP server, or that the DNS server does not support the SRV RR request.</para>
   <note>
     <orderedlist numeration="arabic">
       <listitem>
@@ -20798,7 +20802,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
   <section label="H.1.4.2.1" status="5" xml:id="sect_H.1.4.2.1">
     <title>Scope</title>
   
-  <para xml:id="para_6c144d7a-eacb-4830-b1ea-b4b06ac9c8e3">The RFC-2251 "Lightweight Directory Access Protocol (v3) " specifies a mechanism for making queries of a database corresponding to an LDAP schema. The LDAP client can compose requests in the LDAP query language, and the LDAP server will respond with the results for a single request.</para>
+  <para xml:id="para_6c144d7a-eacb-4830-b1ea-b4b06ac9c8e3">The RFC2251 "Lightweight Directory Access Protocol (v3) " specifies a mechanism for making queries of a database corresponding to an LDAP schema. The LDAP client can compose requests in the LDAP query language, and the LDAP server will respond with the results for a single request.</para>
   </section>
 <section label="H.1.4.2.2" status="5" xml:id="sect_H.1.4.2.2">
     <title>Use Case Roles</title>
@@ -20832,7 +20836,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section label="H.1.4.2.3" status="5" xml:id="sect_H.1.4.2.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_3b5fe4d3-ea86-49af-8b3b-2cf960bc1959">RFC-2251 Lightweight Directory Access Protocol (v3). LDAP support requires compliance with other RFC's invoked by reference.</para>
+  <para xml:id="para_3b5fe4d3-ea86-49af-8b3b-2cf960bc1959">RFC2251 Lightweight Directory Access Protocol (v3). LDAP support requires compliance with other RFC's invoked by reference.</para>
   </section>
 <section label="H.1.4.2.4" status="5" xml:id="sect_H.1.4.2.4">
     <title>Interaction Description</title>
@@ -20849,7 +20853,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
   <section label="H.1.4.3.1" status="5" xml:id="sect_H.1.4.3.1">
     <title>Scope</title>
   
-  <para xml:id="para_1f53eca9-d8c8-4116-bff0-86c83b772b4d">The RFC-2251 "Lightweight Directory Access Protocol (v3) " specifies a mechanism for making updates to a database corresponding to an LDAP schema. The LDAP client can compose updates in the LDAP query language, and the LDAP server will respond with the results for a single request. Update requests may be refused for security reasons.</para>
+  <para xml:id="para_1f53eca9-d8c8-4116-bff0-86c83b772b4d">The RFC2251 "Lightweight Directory Access Protocol (v3) " specifies a mechanism for making updates to a database corresponding to an LDAP schema. The LDAP client can compose updates in the LDAP query language, and the LDAP server will respond with the results for a single request. Update requests may be refused for security reasons.</para>
   </section>
 <section label="H.1.4.3.2" status="5" xml:id="sect_H.1.4.3.2">
     <title>Use Case Roles</title>
@@ -20883,7 +20887,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section label="H.1.4.3.3" status="5" xml:id="sect_H.1.4.3.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_14e48267-aa30-4bcd-8d58-36e0368ae692">RFC-2251 Lightweight Directory Access Protocol (v3). LDAP support requires compliance with other RFC's invoked by reference.</para>
+  <para xml:id="para_14e48267-aa30-4bcd-8d58-36e0368ae692">RFC2251 Lightweight Directory Access Protocol (v3). LDAP support requires compliance with other RFC's invoked by reference.</para>
   </section>
 <section label="H.1.4.3.4" status="5" xml:id="sect_H.1.4.3.4">
     <title>Interaction Description</title>
@@ -20916,8 +20920,8 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section label="H.1.4.4" status="4" xml:id="sect_H.1.4.4">
     <title>Maintain LDAP Server</title>
   
-  <para xml:id="para_bb119c87-43bb-4ad5-bce8-288ad9ac8014">The LDAP server shall support a separate manual or automated means of maintaining the LDAP database contents. The LDAP server shall support the RFC-2849 file format mechanism for updating the LDAP database. The LDAP Client or service installation tools shall provide RFC-2849 formatted files to update LDAP server databases manually. The LDAP server may refuse client network updates for security reasons. If this is the case, then the maintenance process will be used to maintain the LDAP database.</para>
-  <para xml:id="para_0bcdca24-d4b0-4656-8382-4f72e5055d4a">The manual update procedures are not specified other than the requirement above that at least the minimal LDAP information exchange file format from RFC 2849 be supported. The exact mechanisms for transferring this information remain vendor and site specific. In some situations, for example the creation of AE-titles, a purely manual update mechanism may be easier than exchanging files.</para>
+  <para xml:id="para_bb119c87-43bb-4ad5-bce8-288ad9ac8014">The LDAP server shall support a separate manual or automated means of maintaining the LDAP database contents. The LDAP server shall support the RFC2849 file format mechanism for updating the LDAP database. The LDAP Client or service installation tools shall provide RFC2849 formatted files to update LDAP server databases manually. The LDAP server may refuse client network updates for security reasons. If this is the case, then the maintenance process will be used to maintain the LDAP database.</para>
+  <para xml:id="para_0bcdca24-d4b0-4656-8382-4f72e5055d4a">The manual update procedures are not specified other than the requirement above that at least the minimal LDAP information exchange file format from RFC2849 be supported. The exact mechanisms for transferring this information remain vendor and site specific. In some situations, for example the creation of AE-titles, a purely manual update mechanism may be easier than exchanging files.</para>
   <para xml:id="para_419e1fa2-9f50-4eca-b428-a7532f48496a">The conformance statement shall document the mechanisms available for transferring this information. Typical mechanisms include:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
@@ -20945,7 +20949,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
   <note>
     <orderedlist numeration="arabic">
       <listitem>
-        <para xml:id="para_241fba00-1fd8-4d78-9809-f2959badcc26">There are many automated and semi-automatic tools for maintaining LDAP databases. Many LDAP servers provide GUI interfaces and updating tools. The specifics of these tools are outside the scope of DICOM. The LDAP RFC-2849 requires at least a minimal data exchange capability. There are also XML based tools for creating and maintaining these files.</para>
+        <para xml:id="para_241fba00-1fd8-4d78-9809-f2959badcc26">There are many automated and semi-automatic tools for maintaining LDAP databases. Many LDAP servers provide GUI interfaces and updating tools. The specifics of these tools are outside the scope of DICOM. The LDAP RFC2849 requires at least a minimal data exchange capability. There are also XML based tools for creating and maintaining these files.</para>
       </listitem>
       <listitem>
         <para xml:id="para_90e6e85f-66ca-4b3c-978c-21b5d363960f">This mechanism may also be highly effective for preparing a new network installation by means of a single pre-planned network configuration setup rather than individual machine updates.</para>
@@ -21310,17 +21314,17 @@ objectclass ( 1.2.840.10008.15.0.4.8
 <section label="H.2.3" status="3" xml:id="sect_H.2.3">
     <title>Referenced Standards</title>
   
-  <para xml:id="para_34b6e767-ea16-4db3-af31-8a5c2cd1aabf">RFC 2136 DNS Dynamic Updates <link xl:href="http://tools.ietf.org/html/rfc2136"/>
+  <para xml:id="para_34b6e767-ea16-4db3-af31-8a5c2cd1aabf">RFC2136 DNS Dynamic Updates <link xl:href="http://tools.ietf.org/html/rfc2136"/>
 </para>
-  <para xml:id="para_a620f0d5-02c5-4543-a057-7299af7b010c">RFC 2181 Clarifications to the DNS Specification <link xl:href="http://tools.ietf.org/html/rfc2181"/>
+  <para xml:id="para_a620f0d5-02c5-4543-a057-7299af7b010c">RFC2181 Clarifications to the DNS Specification <link xl:href="http://tools.ietf.org/html/rfc2181"/>
 </para>
-  <para xml:id="para_08fa6e11-8bc2-4bbc-a788-29ce47262885">RFC 2219 Use of DNS Aliases for Network Services <link xl:href="http://tools.ietf.org/html/rfc2219"/>
+  <para xml:id="para_08fa6e11-8bc2-4bbc-a788-29ce47262885">RFC2219 Use of DNS Aliases for Network Services <link xl:href="http://tools.ietf.org/html/rfc2219"/>
 </para>
-  <para xml:id="para_a3bd3b28-8e2c-4918-bfbd-da44226ec0f5">RFC 2782 A DNS RR for specifying the location of services (DNS SRV) <link xl:href="http://tools.ietf.org/html/rfc2782"/>
+  <para xml:id="para_a3bd3b28-8e2c-4918-bfbd-da44226ec0f5">RFC2782 A DNS RR for specifying the location of services (DNS SRV) <link xl:href="http://tools.ietf.org/html/rfc2782"/>
 </para>
-  <para xml:id="para_4176f1ce-179f-4920-9df5-317b294f09be">RFC 6762 Multicast DNS <link xl:href="http://tools.ietf.org/html/rfc6762"/>
+  <para xml:id="para_4176f1ce-179f-4920-9df5-317b294f09be">RFC6762 Multicast DNS <link xl:href="http://tools.ietf.org/html/rfc6762"/>
 </para>
-  <para xml:id="para_1bc7caba-1c2b-4509-87bc-3ca1cdbaed1a">RFC 6763 DNS-Based Service Discovery <link xl:href="http://tools.ietf.org/html/rfc6763"/>
+  <para xml:id="para_1bc7caba-1c2b-4509-87bc-3ca1cdbaed1a">RFC6763 DNS-Based Service Discovery <link xl:href="http://tools.ietf.org/html/rfc6763"/>
 </para>
   <para xml:id="para_0ed85e47-1f58-4f0c-83bf-5a330a6f521f">DNS Self-Discovery  <link xl:href="http://www.dns-sd.org/"/>
 </para>

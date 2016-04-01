@@ -147,6 +147,13 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	support/stylesheets/extractselectedcontextgroupsforXDSeventcodelist.xsl \
 	support/stylesheets/extractsrtemplatesforpixelmed.xsl \
 	support/stylesheets/extractsrtemplatesrelationshipusage.xsl \
+	support/stylesheets/findcodesinannexj.xsl \
+	support/stylesheets/findcodesinannexj_replacement.xsl \
+	support/stylesheets/findcodesinannexj_retired.xsl \
+	support/stylesheets/findcodesinannexl.xsl \
+	support/stylesheets/findcodesincontextgroups.xsl \
+	support/stylesheets/findcodetuples.xsl \
+	support/stylesheets/finddcmconceptswithoutdefinition.xsl \
 	XEP_trial \
 	pMML2SVG-0.8.5 \
 	svg2emf \

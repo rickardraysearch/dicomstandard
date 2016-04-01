@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.11" version="5.0" xml:id="PS3.11">
   <title>PS3.11</title>
-  <subtitle>DICOM PS3.11 2016a - Media Storage Application Profiles</subtitle>
+  <subtitle>DICOM PS3.11 2016b - Media Storage Application Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_39a6589e-0057-4104-b9ee-89305eadf0c6">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_88191668-1fda-4579-99f8-db3e2066e6d5">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_88191668-1fda-4579-99f8-db3e2066e6d5">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_5f344613-2a66-4421-9370-f9473347b1db">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_035b5274-515f-4944-b557-d88be0e41620">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_8dc2dae4-491b-4b08-8aa7-78f5118edb8b">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -99,19 +99,23 @@
     <title>Normative References</title>
     <para xml:id="para_6d91cbb8-091e-4e71-b7fe-6b216808f328">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
     <para xml:id="para_569e15c8-01bf-42c2-9339-640142b4f7cf">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
     <para xml:id="para_53727856-78b5-415c-839f-f71eb2660cd1">ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
     <para xml:id="para_05360441-3cb1-4014-a3a7-2fa2fd6ee0cd">ISO 8859, Information Processing - 8-bit single-byte coded graphic character sets - part 1: Latin Alphabet No. 1.</para>
-    <para xml:id="para_7f06f16b-b192-4d08-a71e-bd3486962d17">RFC-2630, Cryptographic Message Syntax, June 1999</para>
+    <para xml:id="para_7f06f16b-b192-4d08-a71e-bd3486962d17">RFC2630, Cryptographic Message Syntax, June 1999</para>
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
@@ -3928,7 +3932,7 @@
     <title>General Purpose DVD With Compression Interchange Profiles (Normative)</title>
     <section label="H.1" status="2" xml:id="sect_H.1">
       <title>Profile Identification</title>
-      <para xml:id="para_b243be97-da4a-49aa-a742-9124ee54d055">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via DVD media for general purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000; all readers shall support compression.</para>
+      <para xml:id="para_b243be97-da4a-49aa-a742-9124ee54d055">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via DVD media for general purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000; all File Set Readers are required to support decompression of all of the compressed Transfer Syntaxes defined for each Profile.</para>
       <para xml:id="para_abe3b8dc-8fb3-4153-9e35-0aac1b21aaee">A detailed list of the Media Storage SOP Classes that may be supported is defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       <table frame="box" label="H.1-1" rules="all" xml:id="table_H.1-1">
         <caption>STD-GEN-DVD and STD-GEN-SEC-DVD Profiles</caption>
@@ -5006,7 +5010,7 @@
     <title>General Purpose USB and Flash Memory With Compression Interchange Profiles (Normative)</title>
     <section label="J.1" status="2" xml:id="sect_J.1">
       <title>Profile Identification</title>
-      <para xml:id="para_0555070f-5b6d-4367-a56e-3d2f68adc061">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via USB, CF, MMC or SD media for general-purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000; all readers shall support compression.</para>
+      <para xml:id="para_0555070f-5b6d-4367-a56e-3d2f68adc061">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via USB, CF, MMC or SD media for general-purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000; all File Set Readers are required to support decompression of all of the compressed Transfer Syntaxes defined for each Profile.</para>
       <para xml:id="para_178da986-ae88-4512-8eb6-7b8f3245e03f">A detailed list of the Media Storage SOP Classes that may be supported is defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       <table frame="box" label="J.1-1" rules="all" xml:id="table_J.1-1">
         <caption>STD-GEN-USB, STD-GEN-SEC-USB STD-GEN-MMC, STD-GEN-SEC-MMC, STD-GEN-CF, STD-GEN-SEC-CF, STD-GEN-SD and STD-GEN-SEC-SD Profiles</caption>
@@ -6350,7 +6354,7 @@
     <title>General Purpose BD With Compression Interchange Profiles (Normative)</title>
     <section label="M.1" status="2" xml:id="sect_M.1">
       <title>Profile Identification</title>
-      <para xml:id="para_2d731529-d9eb-46be-8544-bc22cd241bb0">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via BD media for general-purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000. And multi-frame images and video may be compressed with MPEG2 Main Profile / Main Level or MPEG2 Main Profile / High Level or MPEG-4 AVC/H.264 High Profile / Level 4.1 or MPEG-4 AVC/H.264 BD-compatible High Profile / Level 4.1.</para>
+      <para xml:id="para_2d731529-d9eb-46be-8544-bc22cd241bb0">This Annex defines an Application Profile Class potentially inclusive of all defined Media Storage SOP Classes. This class is intended to be used for the interchange of Composite SOP Instances via BD media for general-purpose applications. Objects from multiple modalities may be included on the same media. Images may be compressed with or without loss using either JPEG or JPEG 2000. And multi-frame images and video may be compressed with MPEG2 Main Profile / Main Level or MPEG2 Main Profile / High Level or MPEG-4 AVC/H.264 High Profile / Level 4.1 or MPEG-4 AVC/H.264 BD-compatible High Profile / Level 4.1; all File Set Readers are required to support decompression of all of the compressed Transfer Syntaxes defined for each Profile.</para>
       <para xml:id="para_3fbe8961-da40-49ce-817a-0f9315ce7088">A detailed list of the Media Storage SOP Classes that may be supported is defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       <table frame="box" label="M.1-1" rules="all" xml:id="table_M.1-1">
         <caption>STD-GEN-BD and STD-GEN-SEC-BD Profiles</caption>

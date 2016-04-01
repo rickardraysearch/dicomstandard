@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2016a - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2016b - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_c321918f-5f16-42f7-8fbb-f9de51e87c39">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_864d808c-2320-4d75-92f1-3e85f1fe7e69">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_864d808c-2320-4d75-92f1-3e85f1fe7e69">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_f6543a39-57f7-42e4-b3ad-f5556fc85386">
 <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/> should be used as the base reference for the current parts of this standard.</para>
     <para xml:id="para_4ee78e2b-66c7-460c-ba9a-b47d6a7b980b">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
@@ -59,7 +59,7 @@
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope</title>
-    <para xml:id="para_13c3b33e-9bc4-46ee-9a40-1e8232a2889f">This standard specifies a web-based service for accessing and presenting DICOM (Digital Imaging and Communications in Medicine) persistent objects (e.g., images, medical imaging reports). This is intended for distribution of results and images to healthcare professionals. It provides a simple mechanism for accessing a DICOM persistent object, through HTTP/HTTPS protocol, using DICOM UIDs (Unique Identifiers). Data may be retrieved either in a presentation-ready form as specified by the requester (e.g., JPEG or GIF) or in a native DICOM format. It does not support facilities for web searching of DICOM images. This standard relates only to DICOM persistent objects (not to other DICOM objects or to non-DICOM objects). Access control beyond the security mechanisms generally available to web applications is outside the scope of this standard.</para>
+    <para xml:id="para_13c3b33e-9bc4-46ee-9a40-1e8232a2889f">This standard specifies a web-based service for accessing and presenting DICOM (Digital Imaging and Communications in Medicine) objects (e.g., images, medical imaging reports). This is intended for distribution of results and images to healthcare professionals. It provides a simple mechanism for accessing a DICOM object, through HTTP/HTTPS protocol, using DICOM UIDs (Unique Identifiers). Data may be retrieved either in a presentation-ready form as specified by the requester (e.g., JPEG or GIF) or in a native DICOM format. It does not support facilities for web searching of DICOM images. This standard relates only to DICOM Objects (not to non-DICOM objects). Access control beyond the security mechanisms generally available to web applications is outside the scope of this standard.</para>
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Conformance</title>
@@ -71,13 +71,17 @@
     <bibliography>
       <bibliodiv label="3.1" status="2" xml:id="sect_3.1">
         <title>International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC)</title>
-        <biblioentry xml:id="biblio_ISODirectives3">
-          <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <biblioentry xml:id="biblio_ISODirectives2">
+          <abbrev>ISO/IEC Directives, Part 2</abbrev>
           <author>
             <orgname>ISO/IEC</orgname>
           </author>
-          <date>1989</date>
-          <title>Drafting and presentation of International Standards</title>
+          <date>2011/04</date>
+          <edition>6.0</edition>
+          <title>Rules for the structure and drafting of International Standards</title>
+          <bibliosource>
+            <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+          </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC2022">
           <abbrev>ISO/IEC 2022</abbrev>
@@ -121,7 +125,7 @@
       <bibliodiv label="3.2" status="2" xml:id="sect_3.2">
         <title>Internet Engineering Task Force (IETF)</title>
         <biblioentry xml:id="biblio_RFC_822">
-          <abbrev>RFC 822</abbrev>
+          <abbrev>RFC822</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -131,8 +135,19 @@
             <link xl:href="http://tools.ietf.org/html/rfc822"/>
           </bibliosource>
         </biblioentry>
+        <biblioentry xml:id="biblio_RFC_1945">
+          <abbrev>RFC1945</abbrev>
+          <author>
+            <orgname>IETF</orgname>
+          </author>
+          <date>May 1996</date>
+          <title>Hypertext Transfer Protocol Version 1.0 (HTTP/1.0) </title>
+          <bibliosource>
+            <link xl:href="http://tools.ietf.org/html/rfc1945"/>
+          </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_2045">
-          <abbrev>RFC 2045</abbrev>
+          <abbrev>RFC2045</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -143,7 +158,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_2046">
-          <abbrev>RFC 2046</abbrev>
+          <abbrev>RFC2046</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -154,7 +169,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_2387">
-          <abbrev>RFC 2387</abbrev>
+          <abbrev>RFC2387</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -164,8 +179,19 @@
             <link xl:href="http://tools.ietf.org/html/rfc2387"/>
           </bibliosource>
         </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2818">
+          <abbrev>RFC2818</abbrev>
+          <author>
+            <orgname>IETF</orgname>
+          </author>
+          <date>May 2000</date>
+          <title>HTTP Over TLS</title>
+          <bibliosource>
+            <link xl:href="http://tools.ietf.org/html/rfc2818"/>
+          </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_2978">
-          <abbrev>RFC 2978</abbrev>
+          <abbrev>RFC2978</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -176,7 +202,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_3240">
-          <abbrev>RFC 3240</abbrev>
+          <abbrev>RFC3240</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -187,7 +213,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_3986">
-          <abbrev>RFC 3986</abbrev>
+          <abbrev>RFC3986</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -197,7 +223,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_4627">
-          <abbrev>RFC 4627</abbrev>
+          <abbrev>RFC4627</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -208,7 +234,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_5234">
-          <abbrev>RFC 5234</abbrev>
+          <abbrev>RFC5234</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -219,7 +245,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_6365">
-          <abbrev>RFC 6365</abbrev>
+          <abbrev>RFC6365</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -230,7 +256,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_6455">
-          <abbrev>RFC 6455</abbrev>
+          <abbrev>RFC6455</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -241,7 +267,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_6570">
-          <abbrev>RFC 6570</abbrev>
+          <abbrev>RFC6570</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -252,7 +278,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_6838">
-          <abbrev>RFC 6838</abbrev>
+          <abbrev>RFC6838</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -263,7 +289,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7230">
-          <abbrev>RFC 7230</abbrev>
+          <abbrev>RFC7230</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -274,7 +300,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7231">
-          <abbrev>RFC 7231</abbrev>
+          <abbrev>RFC7231</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -285,7 +311,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7232">
-          <abbrev>RFC 7232</abbrev>
+          <abbrev>RFC7232</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -296,7 +322,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7233">
-          <abbrev>RFC 7233</abbrev>
+          <abbrev>RFC7233</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -307,7 +333,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7234">
-          <abbrev>RFC 7234</abbrev>
+          <abbrev>RFC7234</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -318,7 +344,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7235">
-          <abbrev>RFC 7235</abbrev>
+          <abbrev>RFC7235</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -329,7 +355,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7236">
-          <abbrev>RFC 7236</abbrev>
+          <abbrev>RFC7236</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -340,7 +366,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7237">
-          <abbrev>RFC 7237</abbrev>
+          <abbrev>RFC7237</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -351,7 +377,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_7405">
-          <abbrev>RFC 7405</abbrev>
+          <abbrev>RFC7405</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -359,6 +385,17 @@
           <title>Case-Sensitive String Support in ABNF</title>
           <bibliosource>
             <link xl:href="http://tools.ietf.org/html/rfc7405"/>
+          </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_7540">
+          <abbrev>RFC7540</abbrev>
+          <author>
+            <orgname>IETF</orgname>
+          </author>
+          <date>May 2015</date>
+          <title>Hypertext Transfer Protocol Version 2 (HTTP/2)</title>
+          <bibliosource>
+            <link xl:href="http://tools.ietf.org/html/rfc7540"/>
           </bibliosource>
         </biblioentry>
       </bibliodiv>
@@ -440,21 +477,43 @@
         </glossdef>
       </glossentry>
       <glossentry>
+        <glossterm>BulkDataURI</glossterm>
+        <glossdef>
+          <para xml:id="para_50a5c0a7-9b46-4461-8aef-47b7c50a31fc">A Uniform Resource Identifier in accordance with RFC3986 that identifies an octet-stream representing the value of a DICOM attribute.</para>
+          <note>
+            <para xml:id="para_fd2ed224-f2a1-4e16-b9c0-4533fc4b2d91">The octet-stream does not include the Attribute Tag, Value Representation, or Attribute Length.
+              In a Pixel Data attribute under a compressed Transfer Syntax, it does include the Basic Offset Table and Data Stream Fragment Item tags and lengths.</para>
+          </note>
+        </glossdef>
+      </glossentry>
+      <glossentry>
         <glossterm>Charset Query Parameter</glossterm>
         <glossdef>
           <para xml:id="para_dee8882a-e1f6-41e2-b03f-d2919488c012">A query parameter that specifies one or more character sets for the representation(s) contained in the response. See <xref linkend="sect_6.1.2.2" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
       <glossentry>
-        <glossterm>DICOM Persistent Object</glossterm>
+        <glossterm>DICOM Object</glossterm>
         <glossdef>
-          <para xml:id="para_b283705d-e698-450f-8079-55f2272b27fa">An instance of a data object as defined by <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> that has been allocated an unique identifier in the format specified for SOP Instance UID in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and has been chosen as an object to be saved securely for some period of time. Within the DICOM Standard, a DICOM Persistent Object is referred to as a Composite Service Object Pair (SOP) Instance.</para>
+          <para xml:id="para_b283705d-e698-450f-8079-55f2272b27fa">An instance of a data object as defined by <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> that has been allocated an unique identifier in the format specified for SOP Instance UID in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and has been chosen as an object to be saved securely for some period of time. Within the DICOM Standard, a DICOM Object is referred to as a Composite Service Object Pair (SOP) Instance.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>DICOM Resource Categories</glossterm>
         <glossdef>
           <para xml:id="para_ebbe42e1-7c66-4054-8747-3450676b01ea">A set of categories for the content of DICOM SOP Instances. Examples include images, video, and text. See <xref linkend="sect_6.1.1.2" xrefstyle="select: label"/>.</para>
+        </glossdef>
+      </glossentry>
+      <glossentry>
+        <glossterm>HTTP</glossterm>
+        <glossdef>
+          <para xml:id="para_124a28d9-d408-496c-b36a-248eaf4da200">The term HTTP as used in this Standard means the Hypertext Transport Protocol versions 1.0, 1.1 or 2. See <xref linkend="biblio_RFC_1945"/>, <xref linkend="biblio_RFC_7230"/> and <xref linkend="biblio_RFC_7540"/>.</para>
+        </glossdef>
+      </glossentry>
+      <glossentry>
+        <glossterm>HTTPS</glossterm>
+        <glossdef>
+          <para xml:id="para_f830a0b2-f001-4718-b6eb-5c2b2ff4e421">The term HTTPS as used in this Standard means the Hypertext Transport Protocol Secure versions 1.0, 1.1 or 2. See <xref linkend="biblio_RFC_2818"/> and <xref linkend="biblio_RFC_7230"/>.</para>
         </glossdef>
       </glossentry>
       <glossentry>
@@ -488,21 +547,9 @@
         </glossdef>
       </glossentry>
       <glossentry>
-        <glossterm>Web Access to DICOM Persistent Objects</glossterm>
+        <glossterm>Web Access to DICOM Objects</glossterm>
         <glossdef>
-          <para xml:id="para_abac5cef-d9f4-4155-a4a2-d7da46cf4650">A service enabling the Web Client System to retrieve DICOM Persistent Objects managed by a Web Enabled DICOM Server, through HTTP/HTTPS protocol.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Web Client System</glossterm>
-        <glossdef>
-          <para xml:id="para_360c542f-d61d-4374-9df4-c42e8e489ccc">A system using Internet technologies (web, e-mail…) interested in retrieving DICOM Persistent Objects from a Web Enabled DICOM Server, through HTTP/HTTPS protocol.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Web Enabled DICOM Server</glossterm>
-        <glossdef>
-          <para xml:id="para_e1d7b483-a2d7-4e10-856e-05657f1bab25">A system managing DICOM Persistent Objects and able to transmit them on request to the Web Client System.</para>
+          <para xml:id="para_abac5cef-d9f4-4155-a4a2-d7da46cf4650">A service enabling the user agent to retrieve DICOM Objects managed by an origin serven, through HTTP/HTTPS protocol.</para>
         </glossdef>
       </glossentry>
     </glossary>
@@ -535,9 +582,9 @@
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>HTTPs</term>
+        <term>HTTPS</term>
         <listitem>
-          <para xml:id="para_e26bae93-c79b-48f1-8f4d-a889188af361">HyperText Transfer Protocol, secured</para>
+          <para xml:id="para_e26bae93-c79b-48f1-8f4d-a889188af361">HyperText Transfer Protocol Secure</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -676,6 +723,13 @@
   </chapter>
   <chapter label="6" status="1" xml:id="chapter_6">
     <title>Data Communication Requirements</title>
+    <para xml:id="para_2cb3d9ae-bc78-4fc1-8b79-549190b54cad">DICOM Web Services use the HTTP and HTTPS protocols as its transport medium.
+      Web Services supports versions 1.0, 1.1 and 2 of the protocol.
+      If an origin server supports version 2, it shall also support version 1.1.
+      If an origin server supports version 1.1, it shall also support version 1.0.</para>
+    <para xml:id="para_3071ea48-dd56-48d6-acc6-28ee40380238">It is recommended that user agents that want to use HTTP/2 first initiate an HTTP/1.1 connection to the origin server and then upgrade to HTTP/2.
+      If the upgrade fails then the user agent can still use the HTTP/1.1 connection.
+      <xref linkend="biblio_RFC_7540"/> <link xl:href="https://tools.ietf.org/html/rfc7540#section-3">Section 3</link> explains how to initiate HTTP/2 connections.</para>
     <section label="6.1" status="2" xml:id="sect_6.1">
       <title>Interaction</title>
       <para xml:id="para_a6f53f7e-db61-41e1-93f0-656052b4da5f">
@@ -1556,7 +1610,7 @@
               <para xml:id="para_ac280fd7-6102-43c9-b670-9bfac3055303">Otherwise, select UTF-8.</para>
             </listitem>
           </orderedlist>
-          <para xml:id="para_a8821df8-1863-45cd-84db-3c2beadd75ee">Rendered representations returned in the responseshallhave all contained strings returned in the Selected Character Sets.</para>
+          <para xml:id="para_a8821df8-1863-45cd-84db-3c2beadd75ee">Rendered representations returned in the response shall have all contained strings returned in the Selected Character Sets.</para>
           <para xml:id="para_ace7a62d-118d-4258-9e65-fec1e9380e06">If the character set in which the target resource is encoded is not the Selected CharacterSet:</para>
           <itemizedlist>
             <listitem>
@@ -1602,10 +1656,10 @@
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_f6945020-11e7-424d-97c1-c67af09948ac">Other components of the Request-URI depend on the configuration, e.g., location and script language of the Web Enabled DICOM Server.</para>
+              <para xml:id="para_f6945020-11e7-424d-97c1-c67af09948ac">Other components of the Request-URI depend on the configuration, e.g., location and script language of the origin server.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_75c12509-9257-4c01-b297-bf7ce2b63545">The means by which the Web Client System obtains the value of the necessary parameters for web accessing of DICOM objects is out of the scope of the standard.</para>
+              <para xml:id="para_75c12509-9257-4c01-b297-bf7ce2b63545">The means by which the user agent obtains the value of the necessary parameters for web accessing of DICOM Objects is out of the scope of the standard.</para>
             </listitem>
           </orderedlist>
         </note>
@@ -1643,8 +1697,10 @@
       </section>
       <section label="6.2.3" status="3" xml:id="sect_6.2.3">
         <title>List of Character Sets Supported in the Response</title>
-        <para xml:id="para_2ecd5f25-4bc3-497e-bd2a-781830e20be3">The "Accept-charset" field of the GET method request shall specify the character set of the object to be retrieved. If the "Accept-charset" field of the GET method is not present, or the Web Enabled DICOM Server does not support the specified character set, the character set of the response will be at the discretion of the Web Enabled DICOM Server.</para>
-        <para xml:id="para_0d764d4e-bef4-4286-82e2-5edfdd8e6e6c">Note Typically the user of a Web Client does not have control over the "Accept-charset" field. An optional parameter specifies the character set to be used in the returned object.</para>
+        <para xml:id="para_2ecd5f25-4bc3-497e-bd2a-781830e20be3">The Accept-Charset header field of the GET method request shall specify the character set of the object to be retrieved. If the Accept-Charset header field of the GET method is not present, or the origin server does not support the specified character set, the character set of the response will be at the discretion of the origin server.</para>
+        <note>
+          <para xml:id="para_0d764d4e-bef4-4286-82e2-5edfdd8e6e6c">Typically the user of a user agent does not have control over the Accept-Charset header field. An optional parameter specifies the character set to be used in the returned object.</para>
+        </note>
       </section>
     </section>
     <section label="6.3" status="2" xml:id="sect_6.3">
@@ -1654,10 +1710,10 @@
         <para xml:id="para_5234f433-269c-4e24-b042-3baaa30a566e">The content of the message-body varies according to the Media type as defined below.</para>
       </note>
       <section label="6.3.1" status="3" xml:id="sect_6.3.1">
-        <title>Body of Single DICOM MIME Sub-type Part Response</title>
+        <title>Body of Single DICOM MIME Subtype Part Response</title>
         <section label="6.3.1.1" status="4" xml:id="sect_6.3.1.1">
-          <title>MIME Type</title>
-          <para xml:id="para_9af733e6-53a5-4ae5-85b2-75b60ff6b2e4">The MIME type shall be 'application/dicom', as specified in <xref linkend="biblio_RFC_3240"/>.</para>
+          <title>Media Type</title>
+          <para xml:id="para_9af733e6-53a5-4ae5-85b2-75b60ff6b2e4">The media type shall be 'application/dicom', as specified in <xref linkend="biblio_RFC_3240"/>.</para>
         </section>
         <section label="6.3.1.2" status="4" xml:id="sect_6.3.1.2">
           <title>Content</title>
@@ -1672,19 +1728,19 @@
         </section>
       </section>
       <section label="6.3.2" status="3" xml:id="sect_6.3.2">
-        <title>Body of Non-DICOM MIME Type Response</title>
+        <title>Body of Non-DICOM Media Type Response</title>
         <section label="6.3.2.1" status="4" xml:id="sect_6.3.2.1">
-          <title>MIME Type</title>
-          <para xml:id="para_7bcfb81f-919b-4f2f-b5dd-3c8f2434e6e5">The MIME type shall be one on the MIME types defined in the contentType parameter, preferably the most desired by the Web Client, and shall be in any case compatible with the 'Accept' field of the GET method.</para>
+          <title>Media Type</title>
+          <para xml:id="para_7bcfb81f-919b-4f2f-b5dd-3c8f2434e6e5">The media type shall be one on the media types defined in the contentType parameter, preferably the most desired by the user agent, and shall be in any case compatible with the Accept header field of the GET method.</para>
           <note>
-            <para xml:id="para_46257028-caa4-41df-bd1f-672dbb1e9ff6">The HTTP behavior is that an error (406 - Not Acceptable) is returned if the required content type cannot be served.</para>
+            <para xml:id="para_46257028-caa4-41df-bd1f-672dbb1e9ff6">The HTTP behavior is that an error (406 - Not Acceptable) is returned if the required media type cannot be served.</para>
           </note>
         </section>
         <section label="6.3.2.2" status="4" xml:id="sect_6.3.2.2">
           <title>Content</title>
           <para xml:id="para_f3df4ac2-db9e-4130-a129-3a0ffed037f1">The content shall be a single MIME part containing the object to be retrieved.</para>
           <note>
-            <para xml:id="para_eecc47e4-b2d5-45a5-9c94-2ec01a1a55ee">Multiple objects in a response are not supported by this standard. The parameters select only a single object to retrieve. Most current Web Clients are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
+            <para xml:id="para_eecc47e4-b2d5-45a5-9c94-2ec01a1a55ee">Multiple objects in a response are not supported by this standard. The parameters select only a single object to retrieve. Most current user agents are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
           </note>
         </section>
       </section>
@@ -1699,7 +1755,7 @@
         </listitem>
         <listitem>
           <para xml:id="para_f347621b-0973-4f68-a455-10424fa589f7">RetrieveRenderedImagingDocumentSet</para>
-          <para xml:id="para_06f2ae07-aead-469b-91f7-0ebff0b9eda4">This action retrieves a set of DICOM instances that have been rendered into the requested format. For example, if rendering into JPEG was requested, these will be the JPEG renderings of the requested set of DICOM objects.</para>
+          <para xml:id="para_06f2ae07-aead-469b-91f7-0ebff0b9eda4">This action retrieves a set of DICOM instances that have been rendered into the requested format. For example, if rendering into JPEG was requested, these will be the JPEG renderings of the requested set of DICOM Objects.</para>
         </listitem>
         <listitem>
           <para xml:id="para_8eb973e5-d468-4e1c-8848-f580c1e8b994">RetrieveImagingDocumentSetMetadata</para>
@@ -1809,7 +1865,7 @@
                     <para xml:id="para_76ebdbde-d9d7-4183-831c-6672f92e8c3a">A required &lt;ihe:Document/&gt; element that contains the retrieved document as an XOP Infoset.</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_a79155e3-bbfc-4638-a3ce-f1ff6f3abc00">A required &lt;ihe:mimeType/&gt; element that indicates the MIME type of the retrieved document.</para>
+                    <para xml:id="para_a79155e3-bbfc-4638-a3ce-f1ff6f3abc00">A required &lt;ihe:mimeType/&gt; element that indicates the media type of the retrieved document.</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1877,7 +1933,7 @@
           </section>
           <section label="6.4.1.2.2" status="5" xml:id="sect_6.4.1.2.2">
             <title>JPIP</title>
-            <para xml:id="para_ecc0353c-82f9-4127-b7e9-eb6e4eeadd28">If the Web Client specifies a transfer syntax field of 1.2.840.10008.1.2.4.94 (DICOM JPIP Referenced Transfer Syntax) or 1.2.840.10008.1.2.4.95 (DICOM JPIP Referenced Deflate Transfer Syntax), and the Web Server supports the requested transfer syntax the following behavior is expected:</para>
+            <para xml:id="para_ecc0353c-82f9-4127-b7e9-eb6e4eeadd28">If the user agent specifies a transfer syntax field of 1.2.840.10008.1.2.4.94 (DICOM JPIP Referenced Transfer Syntax) or 1.2.840.10008.1.2.4.95 (DICOM JPIP Referenced Deflate Transfer Syntax), and the Web Server supports the requested transfer syntax the following behavior is expected:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_c8b5d962-e5fe-43c7-8e84-79398f93bee3">If the DICOM Image Object(s) already have the same JPIP transfer syntax as the one indicated in the request, the Retrieve Imaging Document Set Response shall include the DICOM Image Objects unchanged.</para>
@@ -2063,7 +2119,7 @@
                   <para xml:id="para_826970f6-91a4-48bd-a9f2-bf53eb799cb0">A required &lt;ihe:Document/&gt; element that contains the rendered document encoded as an XOP Infoset.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_b041ecf5-e12c-40ac-b6c1-3fff7f14b2ba">A required &lt;ihe:mimeType/&gt; element that indicates the MIME type of the retrieved document.</para>
+                  <para xml:id="para_b041ecf5-e12c-40ac-b6c1-3fff7f14b2ba">A required &lt;ihe:mimeType/&gt; element that indicates the media type of the retrieved document.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -2509,7 +2565,7 @@
         </listitem>
         <listitem>
           <para xml:id="para_026e2557-2245-44e2-a23b-49910b5d3d79">RetrieveBulkdata</para>
-          <para xml:id="para_1e25b112-9bbc-4ab5-b3e1-f17a8d547f16">This action retrieves the bulk data for a given bulk data URL. The response is a single bulk data item.</para>
+          <para xml:id="para_1e25b112-9bbc-4ab5-b3e1-f17a8d547f16">This action retrieves the bulk data for a given BulkDataURI. The response is a single bulk data item.</para>
         </listitem>
         <listitem>
           <para xml:id="para_fa0393da-e72b-4590-8d84-cd8045b9496a">RetrieveMetadata</para>
@@ -2535,7 +2591,7 @@
       <para xml:id="para_b02b4966-779f-47fa-92bf-9b9c86c00ba6">WADO-RS requests shall include an "Accept" header field (see <xref linkend="sect_6.1.1.6" xrefstyle="select: label"/>) specifying the Acceptable Media Types.</para>
       <para xml:id="para_3c021890-5c23-46db-98df-aea74700b380">WADO-RS requests may optionally support the "Accept-Charset" header field. See <xref linkend="sect_6.1.2.3" xrefstyle="select: label"/>.</para>
 
-      <para xml:id="para_60c3b57f-cc2b-4057-ab07-f5a03cec6ec6">DICOM objects returned shall be <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary objects encoded in a requested Transfer Syntax (Explicit VR Little Endian by default) with one message part per DICOM Instance.</para>
+      <para xml:id="para_60c3b57f-cc2b-4057-ab07-f5a03cec6ec6">DICOM Objects returned shall be <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary objects encoded in a requested Transfer Syntax (Explicit VR Little Endian by default) with one message part per DICOM Instance.</para>
       <para xml:id="para_3c36de3f-5ea3-4aa8-8d0d-c884db3b6ac7">
         <figure label="6.5-1" pgwide="1" xml:id="figure_6.5-1">
           <title>Mapping between IOD and HTTP message parts</title>
@@ -2890,8 +2946,8 @@
           <title>Response</title>
           <para xml:id="para_799420b5-043d-4f6f-8533-77ef6d640717">The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the metadata for the Study.</para>
           <para xml:id="para_91d95a83-b2a4-43c4-920d-8d8e1f06a479">The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the data to any of the requested media types/Transfer Syntaxes, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
-          <para xml:id="para_2fbf396e-95a2-47f5-9e2b-03b2f81c61b3">The client can compare the SOP Instance UIDs or bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
-          <para xml:id="para_05efc00c-752a-4053-9af9-503d161552dd">All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
+          <para xml:id="para_2fbf396e-95a2-47f5-9e2b-03b2f81c61b3">The client can compare the SOP Instance UIDs or BulkDataURIs in the metadata and the message response to determine which bulk data elements have been returned.</para>
+          <para xml:id="para_05efc00c-752a-4053-9af9-503d161552dd">All response formats have a media type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section label="6.5.1.2.1" status="5" xml:id="sect_6.5.1.2.1">
             <title>DICOM Response</title>
             <itemizedlist>
@@ -2943,7 +2999,7 @@
                         <para xml:id="para_6cdcafe9-d41b-4169-af93-632913dff9df">Content-Type: application/octet-stream</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_8cf96a13-896e-4edf-8403-50296144ed65">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_8cf96a13-896e-4edf-8403-50296144ed65">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -2954,7 +3010,7 @@
                         <para xml:id="para_7c019759-4d6e-4599-bfdb-bee889868187">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_a1a9c1ad-27c9-442a-8f39-aad1c14acc2f">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_a1a9c1ad-27c9-442a-8f39-aad1c14acc2f">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -2965,7 +3021,7 @@
                         <para xml:id="para_87568e93-5178-4576-840b-3f536c8f6c9b">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_a7a1f207-a0f3-4966-9582-1f37786d5818">Content-Location: {BulkDataURL}/frames/{FrameNumber}</para>
+                        <para xml:id="para_a7a1f207-a0f3-4966-9582-1f37786d5818">Content-Location: {BulkDataURI}/frames/{FrameNumber}</para>
                         <note>
                           <para xml:id="para_2992af6e-6380-4a80-8c3c-f5cd2e9f08ea">Each frame will come in a separate part.</para>
                         </note>
@@ -2979,7 +3035,7 @@
                         <para xml:id="para_c7220057-c756-499e-a3c8-db82e9a456f9">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_89e587a8-2d81-48de-b8af-bad95637c685">Content-Location: {BulkDataURL}[/frames/{FrameList}]</para>
+                        <para xml:id="para_89e587a8-2d81-48de-b8af-bad95637c685">Content-Location: {BulkDataURI}[/frames/{FrameList}]</para>
                         <itemizedlist>
                           <listitem>
                             <para xml:id="para_ec708362-9b4f-436c-809f-280bc3e0583f">{FrameList} is a list of frames separated by %2C (comma). It may be omitted if the message part includes all frames for the specified bulk pixel data object.</para>
@@ -3056,8 +3112,8 @@
           <title>Response</title>
           <para xml:id="para_8ea2bd78-772e-4886-bfb2-b9512823f07a">The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para xml:id="para_426f3e1e-0f0e-41f6-a43a-d10306482ce0">The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the data to any of the requested media types/Transfer Syntaxes, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
-          <para xml:id="para_5204e010-64df-48e0-82c4-0f682d70e818">The client can compare the SOP Instance UIDs or bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
-          <para xml:id="para_893a4b56-3096-4a37-8143-0f9f63b897c0">All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
+          <para xml:id="para_5204e010-64df-48e0-82c4-0f682d70e818">The client can compare the SOP Instance UIDs or BulkDataURIs in the metadata and the message response to determine which bulk data elements have been returned.</para>
+          <para xml:id="para_893a4b56-3096-4a37-8143-0f9f63b897c0">All response formats have a media type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section label="6.5.2.2.1" status="5" xml:id="sect_6.5.2.2.1">
             <title>DICOM Response</title>
             <itemizedlist>
@@ -3109,7 +3165,7 @@
                         <para xml:id="para_71483e32-f2d9-4af3-9db6-0717e0914a39">Content-Type: application/octet-stream</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_d2aebfbf-3190-4dca-a6cd-24d5f8047411">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_d2aebfbf-3190-4dca-a6cd-24d5f8047411">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3120,7 +3176,7 @@
                         <para xml:id="para_cde77699-67d8-43e7-8783-4526bc10a12e">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_0597ec4a-c783-4007-81a1-d4242bbad83c">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_0597ec4a-c783-4007-81a1-d4242bbad83c">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3131,7 +3187,7 @@
                         <para xml:id="para_051bdabf-5504-44a4-83b4-8e747966413d">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_629d476e-7cf8-4906-bb1d-1b826e287c87">Content-Location: {BulkDataURL}/frames/{FrameNumber}</para>
+                        <para xml:id="para_629d476e-7cf8-4906-bb1d-1b826e287c87">Content-Location: {BulkDataURI}/frames/{FrameNumber}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3142,7 +3198,7 @@
                         <para xml:id="para_112b6caf-917d-4ac5-98be-fd14cff2d6e3">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_337c4a2f-be52-4b05-ba48-864837806aae">Content-Location: {BulkDataURL}[/frames/{FrameList}]</para>
+                        <para xml:id="para_337c4a2f-be52-4b05-ba48-864837806aae">Content-Location: {BulkDataURI}[/frames/{FrameList}]</para>
                         <itemizedlist>
                           <listitem>
                             <para xml:id="para_b80bc219-15bc-40ee-87a9-587e4f1979ec">{FrameList} is a list of frames separated by %2C (comma). It may be omitted if the message part includes all frames for the specified bulk pixel data object.</para>
@@ -3222,8 +3278,8 @@
           <title>Response</title>
           <para xml:id="para_aa94e701-80d4-4550-bdb6-693e32b75c99">The Server shall provide either a single DICOM <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> object for the SOP Instance or one or more bulk data items. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para xml:id="para_0cf8d056-d08d-41c6-bf83-e887a0d52b75">The Server shall return the document(s), or an error code when the document(s) cannot be returned. If the server cannot convert all of the bulk data to any of the requested media types, then an error code shall be returned, either a "Not Acceptable" response if no data is returned or a "Partial Content" response if only some data is returned.</para>
-          <para xml:id="para_486eeb1e-a589-4950-9dd4-e75f5c861b09">The client can compare the bulk data URLs in the metadata and the message response to determine which bulk data elements have been returned.</para>
-          <para xml:id="para_683dd0fd-eb0e-4519-8d63-53dc099c97d6">All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
+          <para xml:id="para_486eeb1e-a589-4950-9dd4-e75f5c861b09">The client can compare the BulkDataURIs in the metadata and the message response to determine which bulk data elements have been returned.</para>
+          <para xml:id="para_683dd0fd-eb0e-4519-8d63-53dc099c97d6">All response formats have a media type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section label="6.5.3.2.1" status="5" xml:id="sect_6.5.3.2.1">
             <title>DICOM Response</title>
             <itemizedlist>
@@ -3272,7 +3328,7 @@
                         <para xml:id="para_65d201d9-6be3-4849-901d-514bcb489911">Content-Type: application/octet-stream</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_de616dfc-21c1-4dc1-ae43-682a91960b29">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_de616dfc-21c1-4dc1-ae43-682a91960b29">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3283,7 +3339,7 @@
                         <para xml:id="para_96fb8aff-a484-44f3-8129-97c919d2f4bf">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_7e9d8d80-294d-47b3-b84e-6f1ad4ea9bed">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_7e9d8d80-294d-47b3-b84e-6f1ad4ea9bed">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3294,7 +3350,7 @@
                         <para xml:id="para_7cbaf002-3136-45e3-9f16-a263d3df3831">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_d41ce7a5-df8e-4d8b-ad44-b611477ba357">Content-Location: {BulkDataURL}/frames/{FrameNumber}</para>
+                        <para xml:id="para_d41ce7a5-df8e-4d8b-ad44-b611477ba357">Content-Location: {BulkDataURI}/frames/{FrameNumber}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3305,7 +3361,7 @@
                         <para xml:id="para_3b1ab85d-13af-46bf-b4ed-4f0216fb004a">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_115b9ceb-7232-4083-a171-4809e5655b36">Content-Location: {BulkDataURL}[/frames/{FrameList}]</para>
+                        <para xml:id="para_115b9ceb-7232-4083-a171-4809e5655b36">Content-Location: {BulkDataURI}[/frames/{FrameList}]</para>
                         <itemizedlist>
                           <listitem>
                             <para xml:id="para_392fbb2c-3be8-4b98-83d5-3a09e6f47d33">{FrameList} is a list of frames separated by %2C (comma). It may be omitted if the message part includes all frames for the specified bulk pixel data object.</para>
@@ -3384,7 +3440,7 @@
           <title>Response</title>
           <para xml:id="para_34f9519b-d7d7-4ecf-8d7e-728ab553ba48">The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para xml:id="para_d2640b95-c2bc-4d45-9e6f-8fa9aed09055">The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
-          <para xml:id="para_09ff4378-e3d3-403d-a61c-9174d34b59e4">All response formats has a content type of multipart/related with a message boundary separator.</para>
+          <para xml:id="para_09ff4378-e3d3-403d-a61c-9174d34b59e4">All response formats has a media type of multipart/related with a message boundary separator.</para>
           <section label="6.5.4.2.1" status="5" xml:id="sect_6.5.4.2.1">
             <title>Pixel Data Response</title>
             <itemizedlist>
@@ -3412,7 +3468,7 @@
                         <para xml:id="para_290a03bd-7918-4487-9bd6-9c1337ffe55d">Content-Type: application/octet-stream</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_2d35e8ed-4513-436e-a5d1-89e878956290">Content-Location: {BulkDataURL}[/frames/{FrameNumber}]</para>
+                        <para xml:id="para_2d35e8ed-4513-436e-a5d1-89e878956290">Content-Location: {BulkDataURI}[/frames/{FrameNumber}]</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3423,7 +3479,7 @@
                         <para xml:id="para_6541eda3-01b9-4344-8e28-69c679df1a59">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_1fec1975-ced1-4939-9e1f-5ed25b05821d">Content-Location: {BulkDataURL}/frames/{FrameNumber}</para>
+                        <para xml:id="para_1fec1975-ced1-4939-9e1f-5ed25b05821d">Content-Location: {BulkDataURI}/frames/{FrameNumber}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3434,7 +3490,7 @@
                         <para xml:id="para_31822308-4775-4cd0-bc7f-2b532e043c7e">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_1133586c-79d2-4050-a24a-9d6de47e050e">Content-Location: {BulkDataURL}[/frames/{FrameList}]</para>
+                        <para xml:id="para_1133586c-79d2-4050-a24a-9d6de47e050e">Content-Location: {BulkDataURI}[/frames/{FrameList}]</para>
                         <itemizedlist>
                           <listitem>
                             <para xml:id="para_7b044657-9d5d-433c-9a6b-ea9d5ceaed40">{FrameList} is a list of frames separated by %2C (comma). It may be omitted if the message part includes all frames for the specified bulk pixel data object.</para>
@@ -3454,7 +3510,7 @@
       </section>
       <section label="6.5.5" status="3" xml:id="sect_6.5.5">
         <title>WADO-RS - RetrieveBulkdata</title>
-        <para xml:id="para_c2130274-82fe-4c4f-811a-79c606547c72">This action retrieves the bulk data for a given bulk data URL. The response is a single bulk data item.</para>
+        <para xml:id="para_c2130274-82fe-4c4f-811a-79c606547c72">This action retrieves the bulk data for a given BulkDataURI. The response is a single bulk data item.</para>
         <section label="6.5.5.1" status="4" xml:id="sect_6.5.5.1">
           <title>Request</title>
           <para xml:id="para_5e9a8b18-d1cd-4d35-9db0-5c6498f4169d">The specific Services resource to be used for the RetrieveBulkdata action shall be as follows:</para>
@@ -3463,10 +3519,10 @@
               <para xml:id="para_9952a457-0ca0-49c9-94a3-a4b95092ec5e">Resource</para>
               <itemizedlist>
                 <listitem>
-                  <para xml:id="para_193b1d78-5cc1-45b4-b349-7024edc35e21">{BulkDataURL}, where</para>
+                  <para xml:id="para_193b1d78-5cc1-45b4-b349-7024edc35e21">{BulkDataURI}, where</para>
                   <itemizedlist>
                     <listitem>
-                      <para xml:id="para_07e1fa32-09c4-4abf-9b51-f4c161af8840">{BulkDataURL} is the URL of a bulk data element. This may be the URL attribute of a BulkData element received in response to a WADO-RS RetrieveMetadataRequest.</para>
+                      <para xml:id="para_07e1fa32-09c4-4abf-9b51-f4c161af8840">{BulkDataURI} is the URL of a bulk data element. This may be the URI attribute of a BulkData element received in response to a WADO-RS RetrieveMetadataRequest.</para>
                     </listitem>
                     <listitem>
                       <para xml:id="para_f04db915-d8da-487a-aed9-dd28774f91d0">The server shall always return the same bulk data for a specified BulkData URL if the data is available.</para>
@@ -3529,7 +3585,7 @@
           <title>Response</title>
           <para xml:id="para_d3495b38-fc01-454a-bf88-b7c6270c44f7">The Server shall provide the document(s) indicated in the request. In order to parse the bulk data items it is necessary to also retrieve the corresponding metadata for the specified Study, Series, or Instance.</para>
           <para xml:id="para_ed349d77-bb3b-4a5a-b7b8-ef30e81fb139">The Server shall return the document(s) or an error code when the document(s) cannot be returned. If the server cannot encode the pixel data using any of the requested media types, then an error status shall be returned.</para>
-          <para xml:id="para_2386d594-1dc7-44f2-986a-a1c96ca393b9">All response formats have a content type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
+          <para xml:id="para_2386d594-1dc7-44f2-986a-a1c96ca393b9">All response formats have a media type of multipart/related with a message boundary separator. The response format depends on the Accept header specified in the request.</para>
           <section label="6.5.5.2.1" status="5" xml:id="sect_6.5.5.2.1">
             <title>Bulk Data Response</title>
             <itemizedlist>
@@ -3551,7 +3607,7 @@
                         <para xml:id="para_ec1a2fd2-ce8c-49a1-8632-b399825e7923">Content-Type: application/octet-stream</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_dfc45f84-0e7a-486c-b74b-0829298e93a8">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_dfc45f84-0e7a-486c-b74b-0829298e93a8">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3562,7 +3618,7 @@
                         <para xml:id="para_a521b07d-38dc-4923-8a9b-b17023b7fc6a">Content-Type: {MediaType}</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_fd62ebbc-01da-402e-b6bf-d7fc821db0bb">Content-Location: {BulkDataURL}</para>
+                        <para xml:id="para_fd62ebbc-01da-402e-b6bf-d7fc821db0bb">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -3578,11 +3634,11 @@
       <section label="6.5.6" status="3" xml:id="sect_6.5.6">
         <title>WADO-RS - RetrieveMetadata</title>
         <para xml:id="para_9f5f23bc-1dbc-4e8d-aee2-01d373a3f86b">This action retrieves the DICOM instances presented as the study, series, or instance metadata with the bulk data removed. The response is metadata for the DICOM attributes.</para>
-        <para xml:id="para_ce9fe9f5-8e59-4659-baf0-3bf8665eb5e2">The study, series, or instance metadata includes all attributes; however, a RESTful Service is permitted to replace the Value Field of an attribute with a BulkDataURL for attributes with Value Representations (VR) of DS, FL, FD, IS, LT, OB, OD, OF, OW, SL, SS, ST, UL, UN, US, and UT. The client can use the BulkDataURL with the RetrieveBulkData action to retrieve the original Value Field of that attribute.</para>
+        <para xml:id="para_ce9fe9f5-8e59-4659-baf0-3bf8665eb5e2">The study, series, or instance metadata includes all attributes; however, a RESTful Service is permitted to replace the Value Field of an attribute with a BulkDataURI for attributes with Value Representations (VR) of DS, FL, FD, IS, LT, OB, OD, OF, OW, SL, SS, ST, UL, UN, US, and UT. The client can use the BulkDataURI with the RetrieveBulkData action to retrieve the original Value Field of that attribute.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_ea59e86c-2a89-4f48-b4d1-d20443b8b2f1">The server is not required to replace any attribute with a BulkDataURL; this is intended to allow the server to provide clients with metadata of a reasonably small size by leaving out large data Value Fields.</para>
+              <para xml:id="para_ea59e86c-2a89-4f48-b4d1-d20443b8b2f1">The server is not required to replace any attribute with a BulkDataURI; this is intended to allow the server to provide clients with metadata of a reasonably small size by leaving out large data Value Fields.</para>
             </listitem>
             <listitem>
               <para xml:id="para_390bb950-6ea8-4883-9685-8d880da4e64b">Attributes with binary Value Fields are encoded as XML Base64 binary values.</para>
@@ -3656,7 +3712,7 @@
         <section label="6.5.6.2" status="4" xml:id="sect_6.5.6.2">
           <title>Response</title>
           <para xml:id="para_07252b92-2ea2-4cb7-b135-e6f7bea5e185">The Server shall provide the document(s) indicated in the request. The Server shall return the document(s) or an error code when the document(s) could not be returned.</para>
-          <para xml:id="para_edceea03-3ad1-4a84-80b9-339fa1beb531">The response has a content type of either:</para>
+          <para xml:id="para_edceea03-3ad1-4a84-80b9-339fa1beb531">The response has a media type of either:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_5bb2794d-2597-46eb-aa32-1da9938c87d0">multipart/related; type=application/dicom+xml, as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
@@ -4387,7 +4443,7 @@
           <para xml:id="para_b4d87f8c-dd3b-4fb3-8ea5-74e732a93b98">This action creates new resources for the given SOP Instances on the Server or appends to existing resources on the Server.</para>
         </listitem>
       </orderedlist>
-      <para xml:id="para_7e4aaa2d-cfb2-408f-9e42-5c7ce788a59b">All request messages are HTTP/1.1 multipart messages. The organization of SOP Instances into message parts depends on whether the SOP Instances are structured as <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances, or metadata and bulk data.</para>
+      <para xml:id="para_7e4aaa2d-cfb2-408f-9e42-5c7ce788a59b">All request messages are HTTP multipart messages. The organization of SOP Instances into message parts depends on whether the SOP Instances are structured as <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances, or metadata and bulk data.</para>
       <para xml:id="para_adaea576-b5b9-4377-9f1f-e12e4026cab8">
 <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances shall be encoded with one message part per DICOM Instance.</para>
       <para xml:id="para_83722061-3e3a-49ab-afc8-a2dcdcd9f68f">Metadata and bulk data requests will be encoded in the following manner:(see <xref linkend="figure_6.5-1" xrefstyle="select: label title"/>):</para>
@@ -4414,11 +4470,11 @@
         </listitem>
       </itemizedlist>
       <para xml:id="para_71331b45-0125-498b-ac95-ba01864baf15">Compressed pixel data shall be encoded using the Media Types as described in <xref linkend="table_6.5-1" xrefstyle="select: label"/> WADO-RS Media Type Mapping to Transfer Syntax UID. Media Types corresponding to several DICOM Transfer Syntax UIDs may require a transfer-syntax parameter to disambiguate the request.</para>
-      <para xml:id="para_39aec49c-a59d-4ccf-8098-e348e63c1788">HTTP Request field Content-Type is used in the header lines by the client in an HTTP/1.1 transaction to indicate the type of data being sent to the Service. All lines are <xref linkend="biblio_RFC_822"/> or <xref linkend="biblio_RFC_7230"/> format headers. All HTTP header fields whose use is not defined by STOW-RS shall have the meaning defined by the HTTP standard.</para>
+      <para xml:id="para_39aec49c-a59d-4ccf-8098-e348e63c1788">HTTP Request field Content-Type is used in the header lines by the client in an HTTP transaction to indicate the type of data being sent to the Service. All lines are <xref linkend="biblio_RFC_822"/> or <xref linkend="biblio_RFC_7230"/> format headers. All HTTP header fields whose use is not defined by STOW-RS shall have the meaning defined by the HTTP standard.</para>
       <para xml:id="para_ec81376a-b54b-45e5-800d-0ef06613c805">The Service is required to support uncompressed bulk and pixel data (multipart/related; type= application/octet-stream).</para>
       <section label="6.6.1" status="3" xml:id="sect_6.6.1">
         <title>STOW-RS - Store Instances</title>
-        <para xml:id="para_aa62421c-c3dd-4361-9900-197c356ce486">This action stores one or more DICOM instances associated with one or more study instance unique identifiers (SUID). The request message can be DICOM or metadata and bulk data depending on the"Content-Type", and is encapsulated in a multipart request body.</para>
+        <para xml:id="para_aa62421c-c3dd-4361-9900-197c356ce486">This action stores one or more DICOM instances associated with one or more study instance unique identifiers (SUID). The request message can be DICOM or metadata and bulk data depending on the "Content-Type", and is encapsulated in a multipart request body.</para>
         <section label="6.6.1.1" status="4" xml:id="sect_6.6.1.1">
           <title>Request</title>
           <para xml:id="para_ae31de42-f1bf-404d-aca3-b3fab25001f5">The specific Service resource to be used for the Store Instances action shall be as follows:</para>
@@ -4660,14 +4716,14 @@
             <para xml:id="para_7f03f4ef-8160-417d-a8a0-b3056a53c394">If the status for all instances included in the POST request is Failure, the RESTful Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.6.1-1" xrefstyle="select: label"/>. If there are instance specific errors, the response code shall be a 409 and the response payload shall contain the Store Instances Response Module, which contains additional information regarding instance errors.</para>
             <para xml:id="para_761a3691-f6bb-43d6-bc93-dc19e33c7f24">In all other conditions, the RESTful Service shall return an "HTTP 202 - Accepted" response code. The response payload may contain a Store Instances Response Module, which specifies additional information regarding instance warnings or failures.</para>
             <table frame="box" label="6.6.1-1" rules="all" xml:id="table_6.6.1-1">
-              <caption>HTTP/1.1 Standard Response Code</caption>
+              <caption>HTTP Standard Response Code</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_2ddaf295-1e9f-404d-817f-35ff1e6cb48b">Service Status</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_d2d41aba-ed3a-4970-b607-b09e3b42a03c">HTTP/1.1 Status Codes</para>
+                    <para xml:id="para_d2d41aba-ed3a-4970-b607-b09e3b42a03c">HTTP Status Codes</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_aabb5a09-a6a4-49cd-8be5-c4e2cf601da7">STOW-RS Description</para>
@@ -5027,72 +5083,200 @@
             <section label="6.6.1.3.2.1" status="6" xml:id="sect_6.6.1.3.2.1">
               <title>Store Instances Response Attribute Description</title>
               <section label="6.6.1.3.2.1.1" status="7" xml:id="sect_6.6.1.3.2.1.1">
-                <title> Warning Reason</title>
-                <para xml:id="para_72dac4bd-0502-41cf-9665-5aa8f552a190">For the following semantics the associated value shall be used for the Warning Reason (0008,1196):</para>
-                <variablelist>
-                  <varlistentry>
-                    <term>B000 - Coercion of Data Elements</term>
-                    <listitem>
-                      <para xml:id="para_2c0958a2-2569-416d-ba8a-2056e90d2b9f">The STOW-RS Service modified one or more data elements during storage of the instance. See <xref linkend="sect_6.6.1.3" xrefstyle="select: label"/>.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>B006 - Elements Discarded</term>
-                    <listitem>
-                      <para xml:id="para_c09912da-0aa1-4e73-8f01-fbede7a1a8e6">The STOW-RS Service discarded some data elements during storage of the instance. See <xref linkend="sect_6.6.1.3" xrefstyle="select: label"/>.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>B007 - Data Set does not match SOP Class</term>
-                    <listitem>
-                      <para xml:id="para_eaf99b32-e15c-4b98-b1ab-10fb5150c9d7">The STOW-RS Service observed that the Data Set did not match the constraints of the SOP Class during storage of the instance.</para>
-                    </listitem>
-                  </varlistentry>
-                </variablelist>
+                <title>Warning Reason</title>
+                <para xml:id="para_72dac4bd-0502-41cf-9665-5aa8f552a190">
+<xref linkend="table_6.6.1-3" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Warning Reason (0008,1196):</para>
+                <table frame="box" label="6.6.1-3" rules="all" xml:id="table_6.6.1-3">
+                  <caption>Store Instances Response Warning Reason Values</caption>
+                  <thead>
+                    <tr valign="top">
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_8953826e-e85e-4c91-9b90-a271ac093904">
+                          <emphasis role="bold">Status Code (hexadecimal)</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_115dcf44-3821-4da7-91eb-1f1a0340ce59">
+                          <emphasis role="bold">Status Code (decimal)</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_1f838393-06ad-4e5b-9342-caf14f4b7b2c">
+                          <emphasis role="bold">Meaning</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_5fafd0ad-6a91-4d19-811c-7544516963f2">
+                          <emphasis role="bold">Explanation</emphasis>
+                        </para>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_eee5c649-9437-46fc-8280-3d6e01c4bd8f">B000</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_cbb8f452-3146-4a3d-9c9e-c437a94b32a3">45056</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_1775b7f6-27ec-49c5-bdf0-ed9ebc786e98">Coercion of Data Elements</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_2c0958a2-2569-416d-ba8a-2056e90d2b9f">The STOW-RS Service modified one or more data elements during storage of the instance. See <xref linkend="sect_6.6.1.3" xrefstyle="select: label"/>.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_3d94e323-9132-436f-9399-bcd163c0b6b1">B006</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_16e7a71f-1c1b-48a0-9cd8-e287b694931c">45062</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_0df517b7-b98f-4499-b247-8a085270a52d">Elements Discarded</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_c09912da-0aa1-4e73-8f01-fbede7a1a8e6">The STOW-RS Service discarded some data elements during storage of the instance. See <xref linkend="sect_6.6.1.3" xrefstyle="select: label"/>.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_5de806fb-de60-416a-8472-155b62d61e5b">B007</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_18ffa823-4df3-484f-8e47-dbd18945d1ec">45063</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_7aa00253-6953-4012-8e5e-5f323910a75b">Data Set does not match SOP Class</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_eaf99b32-e15c-4b98-b1ab-10fb5150c9d7">The STOW-RS Service observed that the Data Set did not match the constraints of the SOP Class during storage of the instance.</para>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
                 <para xml:id="para_32cfb01d-8dcc-4451-80d8-a051c256ecc8">Additional codes may be used for the Warning Reason (0008,1196) to address the semantics of other issues.</para>
                 <para xml:id="para_a64bd9b0-9327-4f70-b963-fd65e9574022">In the event that multiple codes may apply, the single most appropriate code shall be used.</para>
               </section>
               <section label="6.6.1.3.2.1.2" status="7" xml:id="sect_6.6.1.3.2.1.2">
                 <title>Failure Reason</title>
-                <para xml:id="para_bffa65be-8a0b-4d67-ba52-d24660eca54e">For the following semantics the associated value shall be used for the Failure Reason (0008,1197). Implementation specific warning and error codes shall be defined in the conformance statement:</para>
-                <variablelist>
-                  <varlistentry>
-                    <term>A7xx - Refused out of Resources</term>
-                    <listitem>
-                      <para xml:id="para_a77fda45-53b8-4b9c-b646-b6e63224e780">The STOW-RS Service did not store the instance because it was out of resources.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>A9xx - Error: Data Set does not match SOP Class</term>
-                    <listitem>
-                      <para xml:id="para_eefa0312-8d77-4534-be2a-756f07e2d53d">The STOW-RS Service did not store the instance because the instance does not conform to its specified SOP Class.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>Cxxx - Error: Cannot understand</term>
-                    <listitem>
-                      <para xml:id="para_0c99bf76-16fc-4aa7-a974-33529cc190f4">The STOW-RS Service did not store the instance because it cannot understand certain Data Elements.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>C122 - Referenced Transfer Syntax not supported</term>
-                    <listitem>
-                      <para xml:id="para_1c0e9e21-0064-43c2-87de-dbce76148334">The STOW-RS Service did not store the instance because it does not support the requested Transfer Syntax for the instance.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>0110 - Processing failure</term>
-                    <listitem>
-                      <para xml:id="para_01ac8dd9-b814-48c9-911b-d8d740be8495">The STOW-RS Service did not store the instance because of a general failure in processing the operation.</para>
-                    </listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>0122 - Referenced SOP Class not supported</term>
-                    <listitem>
-                      <para xml:id="para_50987c76-f847-46ed-9c0f-db69378319b2">The STOW-RS Service did not store the instance because it does not support the requested SOP Class.</para>
-                    </listitem>
-                  </varlistentry>
-                </variablelist>
+                <para xml:id="para_bffa65be-8a0b-4d67-ba52-d24660eca54e">
+<xref linkend="table_6.6.1-4" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Failure Reason (0008,1197). Implementation specific warning and error codes shall be defined in the conformance statement:</para>
+                <table frame="box" label="6.6.1-4" rules="all" xml:id="table_6.6.1-4">
+                  <caption>Store Instances Response Failure Reason Values</caption>
+                  <thead>
+                    <tr valign="top">
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_612441fc-ba4b-4055-be42-0c57d060f4ee">
+                          <emphasis role="bold">Status Code (hexadecimal)</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_1ab8b3da-6670-46c5-a987-6a756963fa29">
+                          <emphasis role="bold">Status Code (decimal)</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_8c359862-5f4c-419d-aa5b-cf363da80776">
+                          <emphasis role="bold">Meaning</emphasis>
+                        </para>
+                      </th>
+                      <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_822b75ff-1687-4bfa-b90e-8605bb148cd4">
+                          <emphasis role="bold">Explanation</emphasis>
+                        </para>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_13906f19-81a8-4d0d-9e81-c6dde91fa615">A7xx</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_8c762531-ff0d-431e-813d-d8640156b04e">42752 - 43007</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_8bfe8ab4-c4ca-42b1-b8c7-9b85ce710585">Refused out of Resources</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_a77fda45-53b8-4b9c-b646-b6e63224e780">The STOW-RS Service did not store the instance because it was out of resources.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_731d1d92-263d-4e85-9b56-9a0008b6d8b8">A9xx</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_74a8a92f-9cea-44a5-a0da-1ce1047f5dd9">43264 - 43519</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_b0be1f3e-3cce-4df1-981f-d37974faee3b">Error: Data Set does not match SOP Class</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_eefa0312-8d77-4534-be2a-756f07e2d53d">The STOW-RS Service did not store the instance because the instance does not conform to its specified SOP Class.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_8fb1f44a-fcfd-43bd-91d0-84cb867d40d0">Cxxx</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_91ee52af-8b0a-4b24-a398-c5dd106ae22c">49152 - 53247</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_455bf080-2eb1-44e6-bbfa-0c946dc73ba7">Error: Cannot understand</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_0c99bf76-16fc-4aa7-a974-33529cc190f4">The STOW-RS Service did not store the instance because it cannot understand certain Data Elements.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_d404cf05-6fce-48ca-b92d-87b7973f46fd">C122</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_bfdec14c-bf08-4f48-846b-b72ee0deb1ea">49442</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_09340523-6919-42aa-94f7-8516a9bf54f1">Referenced Transfer Syntax not supported</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_1c0e9e21-0064-43c2-87de-dbce76148334">The STOW-RS Service did not store the instance because it does not support the requested Transfer Syntax for the instance.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_a321e0df-cb5c-407f-90b0-dc9fee3365f7">0110</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_7d11a40a-910f-425f-ba4b-ba5126cf4c08">272</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_2dc93e43-8a17-4a2a-93cd-62ac780fb978">Processing failure</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_01ac8dd9-b814-48c9-911b-d8d740be8495">The STOW-RS Service did not store the instance because of a general failure in processing the operation.</para>
+                      </td>
+                    </tr>
+                    <tr valign="top">
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_2c4a795a-3cf1-4100-a377-ad7f8ad1d3d3">0122</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_ba7503d0-ab6a-403b-8bdd-0ddab083bd86">290</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_2d39ca80-6d34-437f-a978-852455d5b6fd">Referenced SOP Class not supported</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_50987c76-f847-46ed-9c0f-db69378319b2">The STOW-RS Service did not store the instance because it does not support the requested SOP Class.</para>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
                 <para xml:id="para_69e5c43f-5057-4d92-85b0-4ead1adf6f99">Additional codes may be used for the Failure Reason (0008,1197) to address the semantics of other issues.</para>
                 <para xml:id="para_56798204-dc85-4ec1-953d-1a15f7f94ffe">In the event that multiple codes may apply, the single most appropriate code shall be used.</para>
               </section>
@@ -5492,7 +5676,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </note>
             <para xml:id="para_1260d71e-c9a1-4cdf-bb63-86742c3f140f">If the TimezoneOffsetFromUTC / 00080201 query key is included in the request, dates and times in the request are to be interpreted in the specified time zone.</para>
             <para xml:id="para_b9f12be3-2aba-4f10-86f5-b6e65bbefbec">If the "fuzzymatching=true" query key/value is included in the request and it is supported then additional fuzzy semantic matching of person names shall be performed in the manner specified in the DICOM Conformance Statement for the service provider.</para>
-            <para xml:id="para_de39c48f-d86e-451f-8312-4395c4172d57">If the "fuzzymatching=true" query key/value is included in the request and it is not supported, the response shall include the following HTTP/1.1 Warning header (see <xref linkend="biblio_RFC_7234"/> <link xl:href="http://tools.ietf.org/html/rfc7234#section-5.5">Section 5.5</link>):</para>
+            <para xml:id="para_de39c48f-d86e-451f-8312-4395c4172d57">If the "fuzzymatching=true" query key/value is included in the request and it is not supported, the response shall include the following HTTP Warning header (see <xref linkend="biblio_RFC_7234"/> <link xl:href="http://tools.ietf.org/html/rfc7234#section-5.5">Section 5.5</link>):</para>
             <para xml:id="para_0294dabf-269b-4359-a8e0-ac4a3af81945">Warning: 299 {SERVICE}: "The fuzzymatching parameter is not supported. Only literal matching has been performed."</para>
             <para xml:id="para_a0e05231-e1b9-4103-9dbe-1e3aba6fa217">where {SERVICE} is the base URL for the QIDO-RS provider. This may be a combination of scheme (http or https), host, port, and application.</para>
             <note>
@@ -6304,7 +6488,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   </itemizedlist>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_6763fad6-5ec3-4703-b24d-f6308d245d86">Each item in the multipart response will contain the following HTTP/1.1 headers:</para>
+                  <para xml:id="para_6763fad6-5ec3-4703-b24d-f6308d245d86">Each item in the multipart response will contain the following HTTP headers:</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_092a463b-3b38-4c2b-ba09-0b1d380855e1">Content-Type: application/dicom+xml</para>
@@ -6337,9 +6521,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.7.1.3" status="4" xml:id="sect_6.7.1.3">
           <title>Status Codes</title>
           <para xml:id="para_9ce841e3-02bf-477f-a4bc-9370be0e5318">
-<xref linkend="table_6.7-1" xrefstyle="select: label"/> lists the HTTP/1.1 status codes that shall be used to report any of the associated error and warning situations. Other error codes may be present for other error and warning situations.</para>
+<xref linkend="table_6.7-1" xrefstyle="select: label"/> lists the HTTP status codes that shall be used to report any of the associated error and warning situations. Other error codes may be present for other error and warning situations.</para>
           <table frame="box" label="6.7-1" rules="all" xml:id="table_6.7-1">
-            <caption>QIDO-RS HTTP/1.1 Status Codes</caption>
+            <caption>QIDO-RS HTTP Status Codes</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
@@ -7033,7 +7217,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <td align="left" colspan="1" rowspan="1">
                     <itemizedlist mark="none">
                       <listitem>
-<para xml:id="para_de48b7b3-524e-4703-89e0-c31f9f80044e">{BulkDataURL}</para>
+<para xml:id="para_de48b7b3-524e-4703-89e0-c31f9f80044e">{BulkDataURI}</para>
 </listitem>
                     </itemizedlist>
                   </td>
@@ -7704,9 +7888,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.8.1.3" status="4" xml:id="sect_6.8.1.3">
           <title>Status Codes</title>
           <para xml:id="para_01039997-d782-41cb-9f9a-e3afd32e0026">
-<xref linkend="table_6.8-2" xrefstyle="select:label"/> lists the HTTP/1.1 status codes that shall be used to report any of the associated error and warning situations. Other error codes may be present for other error and warning situations.</para>
+<xref linkend="table_6.8-2" xrefstyle="select:label"/> lists the HTTP status codes that shall be used to report any of the associated error and warning situations. Other error codes may be present for other error and warning situations.</para>
           <table frame="box" label="6.8-2" rules="all" xml:id="table_6.8-2">
-            <caption>Server Options HTTP/1.1 Status Codes</caption>
+            <caption>Server Options HTTP Status Codes</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
@@ -8097,21 +8281,21 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.9.1.2" status="4" xml:id="sect_6.9.1.2">
           <title>Behavior</title>
           <para xml:id="para_3ba6f95c-d273-4200-bd68-267814c40d20">The Origin-Server shall create and maintain UPS instances as instructed by CreateUPS requests and as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.5.3" xrefstyle="select: docname label"/>.</para>
-          <para xml:id="para_b7a4de25-f187-4436-add7-09a8ab264c4c">The Origin-Server shall return the HTTP/1.1 Status Line applicable to the associated request.</para>
+          <para xml:id="para_b7a4de25-f187-4436-add7-09a8ab264c4c">The Origin-Server shall return the HTTP Status Line applicable to the associated request.</para>
         </section>
         <section label="6.9.1.3" status="4" xml:id="sect_6.9.1.3">
           <title>Response</title>
-          <para xml:id="para_b4f5a353-124b-41e2-9abf-64eb0619c0e4">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_b4f5a353-124b-41e2-9abf-64eb0619c0e4">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.1.3.1" status="5" xml:id="sect_6.9.1.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_6165777f-85b8-4d61-8422-b6901a445fbc">If the Create request is successful, the Origin-Server shall return an HTTP/1.1 "201 - Created" response code.</para>
+            <para xml:id="para_6165777f-85b8-4d61-8422-b6901a445fbc">If the Create request is successful, the Origin-Server shall return an HTTP "201 - Created" response code.</para>
             <para xml:id="para_d3a80cff-d7cb-4f7d-903f-1a3333da38d3">If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.1-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.1-1" rules="all" xml:id="table_6.9.1-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_116689b5-6a47-47b3-a2e3-f3a907985491">HTTP/1.1 Code</para>
+                    <para xml:id="para_116689b5-6a47-47b3-a2e3-f3a907985491">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_2f5c6960-20a6-48e8-b966-bae55b65d5f0">Reason Phrase</para>
@@ -8193,14 +8377,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </section>
           <section label="6.9.1.3.2" status="5" xml:id="sect_6.9.1.3.2">
             <title>Response Headers</title>
-            <para xml:id="para_82de0c90-42ae-4454-b9cd-d19e8c67033a">If the request is successful, the HTTP/1.1 response message shall include the following HTTP/1.1 header:</para>
+            <para xml:id="para_82de0c90-42ae-4454-b9cd-d19e8c67033a">If the request is successful, the HTTP response message shall include the following HTTP header:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_478008c3-750b-4f24-823e-5645343d7fe2">Content-Location: {+WorkitemURL}</para>
                 <para xml:id="para_71dddf04-cad0-4dcc-a6a6-f7d8f7f63d7f">Where {+WorkitemURL} is the URL from which the created UPS Instance can be retrieved (see <xref linkend="sect_6.9.4" xrefstyle="select: label"/>)</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_9a5d3bdf-257d-4c09-ba1e-fe552f168562">If the UPS instance was created with modifications, the response message shall include the following HTTP/1.1 header:</para>
+            <para xml:id="para_9a5d3bdf-257d-4c09-ba1e-fe552f168562">If the UPS instance was created with modifications, the response message shall include the following HTTP header:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_ad4be69c-4b35-4988-ae21-a429c8fa346a">Warning: 299 {+SERVICE}: The UPS was created with modifications.</para>
@@ -8299,21 +8483,21 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.9.2.2" status="4" xml:id="sect_6.9.2.2">
           <title>Behavior</title>
           <para xml:id="para_2cc34fb6-50c8-4b8b-974f-37fd13b02ce8">The Origin-Server shall support the Attribute changes to the UPS instance specified by the User-Agent in the UpdateUPS request and as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.6.3" xrefstyle="select: docname label"/>.</para>
-          <para xml:id="para_9c398dca-8bba-4e0a-9e1a-2700f5f5d36d">The Origin-Server shall return the HTTP/1.1 Status applicable to the associated request.</para>
+          <para xml:id="para_9c398dca-8bba-4e0a-9e1a-2700f5f5d36d">The Origin-Server shall return the HTTP Status applicable to the associated request.</para>
         </section>
         <section label="6.9.2.3" status="4" xml:id="sect_6.9.2.3">
           <title>Response</title>
-          <para xml:id="para_fc078948-1c00-4376-abce-bc50717ed776">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_fc078948-1c00-4376-abce-bc50717ed776">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.2.3.1" status="5" xml:id="sect_6.9.2.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_30463e57-9fdf-4de3-ba6a-f7c8a10ad57a">If the Set request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_30463e57-9fdf-4de3-ba6a-f7c8a10ad57a">If the Set request is successful, the Origin-Server shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_60ac4877-486d-49e5-b92f-0d99febce733">If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.2-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.2-1" rules="all" xml:id="table_6.9.2-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_e1d42c4e-e58d-4669-93e1-348cdcb929e0">HTTP/1.1 Code</para>
+                    <para xml:id="para_e1d42c4e-e58d-4669-93e1-348cdcb929e0">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_34f4a5ae-5e42-46f9-8a70-a3637d4bc06a">Reason Phrase</para>
@@ -8417,19 +8601,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </section>
           <section label="6.9.2.3.2" status="5" xml:id="sect_6.9.2.3.2">
             <title>Response Headers</title>
-            <para xml:id="para_c4e7122b-0e5f-4def-8429-9a94fe30a6d6">If the UPS instance was updated but with modifications made by the Origin-Server, the response message shall include the following HTTP/1.1 header:</para>
+            <para xml:id="para_c4e7122b-0e5f-4def-8429-9a94fe30a6d6">If the UPS instance was updated but with modifications made by the Origin-Server, the response message shall include the following HTTP header:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_e99a3d65-c358-4a89-ba58-bf4f50db6c5e">Warning: 299 {+SERVICE}: The UPS was created with modifications.</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_db9a9460-e146-4379-b8af-fa56a2764bd3">If optional attributes were rejected, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_db9a9460-e146-4379-b8af-fa56a2764bd3">If optional attributes were rejected, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_840c2a96-3b5e-4c5b-a570-0bdcbaf0b1db">Warning: 299 {+SERVICE}: Requested optional Attributes are not supported.</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_f1a461e3-f672-493d-bfbd-0d900cc258b4">If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages encoded in an HTTP/1.1 Warning header field describing the nature of the conflict:</para>
+            <para xml:id="para_f1a461e3-f672-493d-bfbd-0d900cc258b4">If the request was rejected with an HTTP 409 status code, the response message shall include one of following messages encoded in an HTTP Warning header field describing the nature of the conflict:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_1b81d4e5-7c87-4bae-babb-fb7eccd231f6">Warning: 299 {+SERVICE}: The Transaction UID is missing.</para>
@@ -8536,17 +8720,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
         <section label="6.9.3.3" status="4" xml:id="sect_6.9.3.3">
           <title>Response</title>
-          <para xml:id="para_a8c25d80-6c05-4779-95e5-d97cd1fa23ce">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_a8c25d80-6c05-4779-95e5-d97cd1fa23ce">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.3.3.1" status="5" xml:id="sect_6.9.3.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_3343ccd3-9039-4ca6-a034-db7034b2ab7b">If the SearchForUPS request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_3343ccd3-9039-4ca6-a034-db7034b2ab7b">If the SearchForUPS request is successful, the Origin-Server shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_de6ef616-2343-4ee5-a523-adaf3297207c">If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.3-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.3-1" rules="all" xml:id="table_6.9.3-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_44271312-12e1-47ae-b401-f5530a5e5bea">HTTP/1.1 Code</para>
+                    <para xml:id="para_44271312-12e1-47ae-b401-f5530a5e5bea">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_e6339b0b-1b74-4d17-8814-9d7d670e4c37">Reason Phrase</para>
@@ -8677,7 +8861,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   <para xml:id="para_0c3ed0a5-7b85-4947-b777-d8b62a40e1a9">If there are no matching results, the message body shall be empty.</para>
                  </listitem>
                 <listitem>
-                  <para xml:id="para_59fff842-5f71-4f8b-a18a-9623e036d354">Each part in the multipart body includes the following HTTP/1.1 headers:</para>
+                  <para xml:id="para_59fff842-5f71-4f8b-a18a-9623e036d354">Each part in the multipart body includes the following HTTP headers:</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_7d679bbd-ed94-43f6-999a-b2e81d0fdc5a">Content-Type: application/dicom+xml</para>
@@ -8766,26 +8950,26 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
         <section label="6.9.4.2" status="4" xml:id="sect_6.9.4.2">
           <title>Behavior</title>
-           <para xml:id="para_b0e0ca6d-23ae-44ea-8d16-300cc860e9d4">The Origin-Server shall return, via the HTTP/1.1 response, the indicated Unified Procedure Step Instance to the User-Agent.</para>
+           <para xml:id="para_b0e0ca6d-23ae-44ea-8d16-300cc860e9d4">The Origin-Server shall return, via the HTTP response, the indicated Unified Procedure Step Instance to the User-Agent.</para>
           <note>
             <para xml:id="para_ec3ff97d-8b67-4cdf-aa19-731d802a3e07">The requirement for the Origin-Server to respond to GET requests for UPS Instances that have moved to the COMPLETED or CANCELED state is limited. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.1.3" xrefstyle="select: docname label"/>.</para>
           </note>
           <para xml:id="para_24cc2424-389c-42b0-8a62-b67886793965">The Origin-Server shall not return the Transaction UID (0008,1195) Attribute. This is necessary to preserve this Attribute's role as an access lock.</para>
-          <para xml:id="para_96746a8d-e73c-476c-8415-cf7513f973e7">The Origin-Server shall return the HTTP/1.1 Response Status Code applicable to the associated request. A Failure Code shall indicate that the Origin-Server has not returned the SOP Instance.</para>
+          <para xml:id="para_96746a8d-e73c-476c-8415-cf7513f973e7">The Origin-Server shall return the HTTP Response Status Code applicable to the associated request. A Failure Code shall indicate that the Origin-Server has not returned the SOP Instance.</para>
         </section>
         <section label="6.9.4.3" status="4" xml:id="sect_6.9.4.3">
           <title>Response</title>
-          <para xml:id="para_9ac893bb-dfc5-42d7-9929-d865b0a97385">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_9ac893bb-dfc5-42d7-9929-d865b0a97385">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.4.3.1" status="5" xml:id="sect_6.9.4.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_85dba46a-aadb-4693-94ae-5425e48328df">If the Retrieve request is successful, the Origin-Server shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_85dba46a-aadb-4693-94ae-5425e48328df">If the Retrieve request is successful, the Origin-Server shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_3e13775e-42b1-4c38-9e3b-f7e466c3a2df">If the request fails, the Origin-Server shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.4-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.4-1" rules="all" xml:id="table_6.9.4-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_22b68152-7a32-4bd4-8e56-741cec172341">HTTP/1.1 Code</para>
+                    <para xml:id="para_22b68152-7a32-4bd4-8e56-741cec172341">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_7e5885e9-8060-435f-b757-c62e6e61be18">Reason Phrase</para>
@@ -8982,21 +9166,21 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.9.5.2" status="4" xml:id="sect_6.9.5.2">
           <title>Behavior</title>
           <para xml:id="para_8b62bdf8-0512-49d7-8f2a-eca1393b72da">The Origin-Server shall support the state changes to the UPS instance specified in the request as described by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.1.3" xrefstyle="select: docname label"/>.</para>
-          <para xml:id="para_ae253839-a04b-43e5-9821-924772860ea3">After completing the ChangeUPSState request, the Origin-Server shall return the HTTP/1.1 Response Line applicable to the associated request.</para>
+          <para xml:id="para_ae253839-a04b-43e5-9821-924772860ea3">After completing the ChangeUPSState request, the Origin-Server shall return the HTTP Response Line applicable to the associated request.</para>
         </section>
         <section label="6.9.5.3" status="4" xml:id="sect_6.9.5.3">
           <title>Response</title>
-          <para xml:id="para_48b78c11-0588-416a-9063-704952972218">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_48b78c11-0588-416a-9063-704952972218">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.5.3.1" status="5" xml:id="sect_6.9.5.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_6c527955-6601-4279-a96d-205a3158d84f">If the State Change was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_6c527955-6601-4279-a96d-205a3158d84f">If the State Change was successful, the Service shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_4b04eb83-315b-4621-88d0-7b9b586efbd8">If the State Change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.5-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.5-1" rules="all" xml:id="table_6.9.5-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_a76fbfc3-5e3f-4a1f-b696-820fe268f1e8">HTTP/1.1 Code</para>
+                    <para xml:id="para_a76fbfc3-5e3f-4a1f-b696-820fe268f1e8">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_37a34c6b-a242-4f9c-8523-139d558f648b">Reason Phrase</para>
@@ -9100,19 +9284,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </section>
           <section label="6.9.5.3.2" status="5" xml:id="sect_6.9.5.3.2">
             <title>Response Headers</title>
-            <para xml:id="para_8a01f85c-3f60-4b6e-913e-82446efae3f1">If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "CANCELED" and the UPS Instance is already in that state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_8a01f85c-3f60-4b6e-913e-82446efae3f1">If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "CANCELED" and the UPS Instance is already in that state, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
 <para xml:id="para_f542085c-af02-4463-86b3-7a5fec560628">Warning: 299 {+SERVICE}: The UPS is already in the requested state of CANCELED.</para>
 </listitem>
             </itemizedlist>
-            <para xml:id="para_33a66bdf-8d46-40ed-8250-95dc80c72a90">If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "COMPLETED" and the UPS Instance is already in that state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_33a66bdf-8d46-40ed-8250-95dc80c72a90">If the User-Agent specifies a Procedure Step State (0074,1000) attribute with a value of "COMPLETED" and the UPS Instance is already in that state, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_9ed0ad89-a4c5-44b9-917c-9e33cf651f78">Warning: 299 {+SERVICE}: The UPS is already in the requested state of COMPLETED.</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_36b03646-3e63-4102-8641-301867f68e70">If the request was rejected with an HTTP/1.1 409 status code, the response message shall include one of following messages in the HTTP/1.1 Warning header field describing the nature of the conflict:</para>
+            <para xml:id="para_36b03646-3e63-4102-8641-301867f68e70">If the request was rejected with an HTTP 409 status code, the response message shall include one of following messages in the HTTP Warning header field describing the nature of the conflict:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_c9bd54a7-3027-41b7-80b4-c9d2dd17ccbf">Warning: 299 {+SERVICE}: The Transaction UID is missing.</para>
@@ -9211,23 +9395,23 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <para xml:id="para_1583907e-c7f4-438c-9fe4-2b77741f0d3f">The request may include a Reason For Cancellation and/or a proposed Procedure Step Discontinuation Reason Code Sequence.</para>
           <para xml:id="para_b17cc9c2-c689-4a13-9b64-15176dac1541">The request may also include a Contact Display Name and/or a Contact URI for the person with whom the cancel request may be discussed.</para>
           <note>
-            <para xml:id="para_90494204-2070-4e52-a49f-eefad6134ca0">An HTTP/1.1 Status Code indicating success means that the Request was accepted, not that the UPS has been canceled. The system performing the UPS is not obliged to honor the request to cancel and in some scenarios, may not even receive notification of the request. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.4" xrefstyle="select: docname label"/>.</para>
+            <para xml:id="para_90494204-2070-4e52-a49f-eefad6134ca0">An HTTP Status Code indicating success means that the Request was accepted, not that the UPS has been canceled. The system performing the UPS is not obliged to honor the request to cancel and in some scenarios, may not even receive notification of the request. See <olink targetdoc="PS3.4" targetptr="sect_CC.2.4" xrefstyle="select: docname label"/>.</para>
           </note>
           <para xml:id="para_cdfc944f-5efb-40de-8d87-3e83a58c4829">To cancel an IN PROGRESS UPS that the User-Agent is itself performing, the User-Agent shall instead use the ChangeUPSState action as described in <xref linkend="sect_6.9.5" xrefstyle="select: label"/>.</para>
         </section>
         <section label="6.9.6.3" status="4" xml:id="sect_6.9.6.3">
           <title>Response</title>
-          <para xml:id="para_33fa5ffc-839e-4829-bf11-146e98cc9005">The Origin-Server shall return an HTTP/1.1 response message.</para>
+          <para xml:id="para_33fa5ffc-839e-4829-bf11-146e98cc9005">The Origin-Server shall return an HTTP response message.</para>
           <section label="6.9.6.2.1" status="5" xml:id="sect_6.9.6.2.1">
             <title>Response Status Line</title>
-            <para xml:id="para_de7b2086-2af4-4cfc-857e-08c3c922d365">If the cancel request was accepted, the Service shall return an HTTP/1.1 "202 - Accepted" response code.</para>
+            <para xml:id="para_de7b2086-2af4-4cfc-857e-08c3c922d365">If the cancel request was accepted, the Service shall return an HTTP "202 - Accepted" response code.</para>
             <para xml:id="para_df25c10a-54e7-4c72-b6cc-24e0f6a56134">If the cancel request was rejected, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.6-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.6-1" rules="all" xml:id="table_6.9.6-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_99045aaf-e11b-425c-93e4-19a206b65d13">HTTP/1.1 Code</para>
+                    <para xml:id="para_99045aaf-e11b-425c-93e4-19a206b65d13">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_d691e18c-74dd-48c1-81fc-e03b7013e86b">Reason Phrase</para>
@@ -9320,7 +9504,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </section>
           <section label="6.9.2.5.2" status="5" xml:id="sect_6.9.2.5.2">
             <title>Response Headers</title>
-            <para xml:id="para_2e459311-4858-4d02-936d-f09374d638d3">If the UPS Instance is already in a canceled state, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_2e459311-4858-4d02-936d-f09374d638d3">If the UPS Instance is already in a canceled state, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_f5b54030-c2b0-4709-a808-898b69ebba19">Warning: 299 {+SERVICE}: The UPS is already in the requested state of CANCELED.</para>
@@ -9410,14 +9594,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <section label="6.9.7.2" status="4" xml:id="sect_6.9.7.2">
           <title>Behavior</title>
           <para xml:id="para_e20edb09-19f5-4bcd-bbc0-bb7bd1ee27fa">The Origin-Server shall support the management of UPS instance subscriptions as specified by the SCP behavior in <olink targetdoc="PS3.4" targetptr="sect_CC.2.3.3" xrefstyle="select: docname label"/>.</para>
-          <para xml:id="para_b5c38421-1e02-4a26-8a31-e3304e315c02">Upon receipt of the CreateSubscription, SuspendGlobalSubscription or DeleteSubscription request, the Origin-Server shall attempt to update the Global Subscription State, Filtered Global Subscription and/or UPS Subscription State of the specified Application Entity with respect to the specified SOP Instance UID as described in <olink targetdoc="PS3.4" targetptr="table_CC.2.3-2" xrefstyle="select: docname label"/> and then return the appropriate HTTP/1.1 response.</para>
+          <para xml:id="para_b5c38421-1e02-4a26-8a31-e3304e315c02">Upon receipt of the CreateSubscription, SuspendGlobalSubscription or DeleteSubscription request, the Origin-Server shall attempt to update the Global Subscription State, Filtered Global Subscription and/or UPS Subscription State of the specified Application Entity with respect to the specified SOP Instance UID as described in <olink targetdoc="PS3.4" targetptr="table_CC.2.3-2" xrefstyle="select: docname label"/> and then return the appropriate HTTP response.</para>
         </section>
         <section label="6.9.7.3" status="4" xml:id="sect_6.9.7.3">
           <title>Response</title>
           <section label="6.9.7.3.1" status="5" xml:id="sect_6.9.7.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_cf67d714-7339-417f-aafa-12b2421d1aed">The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
-            <para xml:id="para_3233756e-4b82-412f-9aa3-5c8c1afd7dea">If the CreateSubscription request was successful, the Service shall return an "HTTP/1.1 201 - Created" response code. The response shall contain a "Content-Location" header of the following format:</para>
+            <para xml:id="para_cf67d714-7339-417f-aafa-12b2421d1aed">The Service shall return an HTTP status line, including a status code and associated reason phrase.</para>
+            <para xml:id="para_3233756e-4b82-412f-9aa3-5c8c1afd7dea">If the CreateSubscription request was successful, the Service shall return an "HTTP 201 - Created" response code. The response shall contain a "Content-Location" header of the following format:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_26261613-3323-480f-aa20-7705587eedc2">Content-Location: {WSSERVICE}</para>
@@ -9435,7 +9619,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_8e388fce-2af0-4c4a-8f4f-b04bb633c8fb">HTTP/1.1 Code</para>
+                    <para xml:id="para_8e388fce-2af0-4c4a-8f4f-b04bb633c8fb">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_bade3a32-e4d6-4113-b2a7-4f66d702241d">Reason Phrase</para>
@@ -9528,13 +9712,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </section>
           <section label="6.9.7.3.2" status="5" xml:id="sect_6.9.7.3.2">
             <title>Response Headers</title>
-            <para xml:id="para_4cb1225b-c0c8-4fdb-b047-6ca7c93df9e9">If the CreateSubscriptionrequest was accepted but the deletion lock was not, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_4cb1225b-c0c8-4fdb-b047-6ca7c93df9e9">If the CreateSubscriptionrequest was accepted but the deletion lock was not, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_5761f5aa-5f28-4c47-90d8-8587ea51317d">Warning: 299 {+SERVICE}: Deletion Lock not granted.</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_57812f92-cbeb-4bd7-8860-2849f8cf8b38">If the request was rejected with an HTTP/1.1 403 status code because Filtered Global Subscription is not supported, the response message shall include the following HTTP/1.1 Warning header field:</para>
+            <para xml:id="para_57812f92-cbeb-4bd7-8860-2849f8cf8b38">If the request was rejected with an HTTP 403 status code because Filtered Global Subscription is not supported, the response message shall include the following HTTP Warning header field:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_51b912d6-8e98-478a-a0b4-9a37cd4c751a">Warning: 299 {+SERVICE}: The Origin-Server does not support Global Subscription Filtering.</para>
@@ -9595,15 +9779,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <title>Response</title>
           <section label="6.9.8.3.1" status="5" xml:id="sect_6.9.8.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_d5f1f63e-c167-4477-bdf8-ddf9a5b7a800">The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
-            <para xml:id="para_2f211101-b9a7-49f5-83c2-0563edccf4ab">If the SuspendGlobalSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_d5f1f63e-c167-4477-bdf8-ddf9a5b7a800">The Service shall return an HTTP status line, including a status code and associated reason phrase.</para>
+            <para xml:id="para_2f211101-b9a7-49f5-83c2-0563edccf4ab">If the SuspendGlobalSubscriptionrequest was successful, the Service shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_1406bb6c-c9be-4e54-a420-5aee0145c7c6">If the subscription change fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.8-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.8-1" rules="all" xml:id="table_6.9.8-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_808fedf3-6c3f-42b3-84f0-3184cb53756a">HTTP/1.1 Code</para>
+                    <para xml:id="para_808fedf3-6c3f-42b3-84f0-3184cb53756a">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_62f9c544-26dd-4f46-ba24-763593ed1e89">Reason Phrase</para>
@@ -9748,15 +9932,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <title>Response</title>
           <section label="6.9.9.3.1" status="5" xml:id="sect_6.9.9.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_76c90e5f-39fb-477a-9028-e09c6464d4b8">The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
-            <para xml:id="para_c6a2e204-9c57-4af4-8943-4b562c6ffc30">If the DeleteSubscriptionrequest was successful, the Service shall return an HTTP/1.1 "200 - OK" response code.</para>
+            <para xml:id="para_76c90e5f-39fb-477a-9028-e09c6464d4b8">The Service shall return an HTTP status line, including a status code and associated reason phrase.</para>
+            <para xml:id="para_c6a2e204-9c57-4af4-8943-4b562c6ffc30">If the DeleteSubscriptionrequest was successful, the Service shall return an HTTP "200 - OK" response code.</para>
             <para xml:id="para_8ad72394-2236-4e0b-b3ec-8c05e9a3e431">If the subscription fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.9-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.7-1" rules="all" xml:id="table_6.9.9-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_4b95a2e3-ae1b-4f88-9f7e-80fa29d49fe1">HTTP/1.1 Code</para>
+                    <para xml:id="para_4b95a2e3-ae1b-4f88-9f7e-80fa29d49fe1">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_22354367-d1b7-44bc-8c2b-bd366009675b">Reason Phrase</para>
@@ -9901,15 +10085,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <title>Response</title>
           <section label="6.9.10.3.1" status="5" xml:id="sect_6.9.10.3.1">
             <title>Response Status Line</title>
-            <para xml:id="para_320b9c41-c77d-4652-bab3-24daa7dbfaa9">The Service shall return an HTTP/1.1 status line, including a status code and associated reason phrase.</para>
-            <para xml:id="para_cfc1258b-16c8-4f60-b834-c4a7dfdf9a6d">If the request was successful, the Service shall return an HTTP/1.1 "101 - Switching Protocols" response code.</para>
+            <para xml:id="para_320b9c41-c77d-4652-bab3-24daa7dbfaa9">The Service shall return an HTTP status line, including a status code and associated reason phrase.</para>
+            <para xml:id="para_cfc1258b-16c8-4f60-b834-c4a7dfdf9a6d">If the request was successful, the Service shall return an HTTP "101 - Switching Protocols" response code.</para>
             <para xml:id="para_e3fb7105-b5d9-45a8-ae27-3174b5ef4c17">If the request fails, the Service shall return an appropriate failure status line with a response code from <xref linkend="table_6.9.10-1" xrefstyle="select: label"/>.</para>
             <table frame="box" label="6.9.10-1" rules="all" xml:id="table_6.9.10-1">
               <caption>Status Codes</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_afbf638b-de2e-4c48-9f40-16e15c0051fa">HTTP/1.1 Code</para>
+                    <para xml:id="para_afbf638b-de2e-4c48-9f40-16e15c0051fa">HTTP Code</para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_87724547-c776-42d3-86e2-daeffbb9ec5d">Reason Phrase</para>
@@ -10052,13 +10236,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
-    <title>Persistent Object Types</title>
+    <title>Object Types</title>
     <para xml:id="para_6eda7c23-b8dc-4461-929f-23594f3cf800">Retired. See <xref linkend="sect_6.1.1" xrefstyle="select: label"/>.</para>
   </chapter>
   <chapter label="8" status="1" xml:id="chapter_8">
     <title>Parameters of the Request</title>
     <section label="8.1" status="2" xml:id="sect_8.1">
-      <title>Parameters Available for all DICOM Persistent Objects</title>
+      <title>Parameters Available for all DICOM Objects</title>
       <para xml:id="para_8df370c6-c0b2-429d-997d-c0798954b183">Parameters specified in this section are applicable to all supported DICOM SOP Classes.</para>
       <note>
         <para xml:id="para_27d348ab-3142-4e78-83b0-3967ace3c46d">To identify a DICOM Object, only one UID is required, because any UID is globally unique. However, the standard requires that the UID of the higher levels in the DICOM Information Model are specified (i.e., series and study), in order to support the use of DICOM devices that support only the baseline hierarchical (rather than extended relational) Query/Retrieve model, which requires the Study Instance UID and Series Instance UID to be defined when retrieving an SOP Instance, as defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
@@ -10116,7 +10300,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </section>
       <section label="8.1.7" status="3" xml:id="sect_8.1.7">
         <title>Anonymize Object</title>
-        <para xml:id="para_f493a9e9-de39-41a8-804a-358305812831">Removal of all patient identification information from within the DICOM objects, if not already done, as defined in <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>. This parameter is OPTIONAL. In the URI based mode, it shall only be present if contentType is application/dicom.</para>
+        <para xml:id="para_f493a9e9-de39-41a8-804a-358305812831">Removal of all patient identification information from within the DICOM Objects, if not already done, as defined in <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>. This parameter is OPTIONAL. In the URI based mode, it shall only be present if contentType is application/dicom.</para>
         <para xml:id="para_eb6bbfc5-e4ce-4291-8852-e2a906527de9">This parameter is Optional</para>
         <para xml:id="para_3e387e8a-9010-494c-8b12-618dc4aa54c2">The parameter name shall be "anonymize" for URI based mode, and "Anonymize" for the WS mode.</para>
         <para xml:id="para_1c98aece-144f-47ce-914b-97e3b8cc2f6a">The value shall be "yes".</para>
@@ -10126,7 +10310,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_32f8be6a-8cb6-45e4-91eb-2d803c96c44d">This standard does not introduce any security-related requirements. It is likely that the information contained within DICOM objects identifies the patient. The protocol used (that is HTTP) can be replaced by HTTPs, which is its secure extension, to protect the information in transit. The underlying DICOM implementation decides whether or not to grant access to a particular DICOM object based on whatever security policy or mechanism it has in place. A server is unlikely to fulfill a request from an unknown user (e.g., accessed via the HTTP protocol) unless it is certain that the data requested has no patient identifying information within it and has been approved for public viewing.</para>
+              <para xml:id="para_32f8be6a-8cb6-45e4-91eb-2d803c96c44d">This standard does not introduce any security-related requirements. It is likely that the information contained within DICOM Objects identifies the patient. The protocol used (that is HTTP) can be replaced by HTTPs, which is its secure extension, to protect the information in transit. The underlying DICOM implementation decides whether or not to grant access to a particular DICOM object based on whatever security policy or mechanism it has in place. A server is unlikely to fulfill a request from an unknown user (e.g., accessed via the HTTP protocol) unless it is certain that the data requested has no patient identifying information within it and has been approved for public viewing.</para>
             </listitem>
             <listitem>
               <para xml:id="para_cbce1e8c-714a-4227-b5de-54b2c8961fbd">The Anonymize object enables, for example, teaching files systems or clinical trial applications to offer an access to original images stored in a PACS, without disclosing the patients identity, and requiring storage of a (de-identified) copy of the original image. Anonymization is the responsibility of the Server. In order to preserve patient confidentiality, the Server likely will refuse to deliver an anonymized SOP instance to an unknown or unauthorized person unless the Server is certain that the SOP instance holds no patient identifying information. This would include "blanking out" any annotation area(s) containing nominative information burned into the pixels or in the overlays.</para>
@@ -10136,17 +10320,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </section>
       <section label="8.1.9" status="3" xml:id="sect_8.1.9">
         <title>Retrieve Partial Information From Objects</title>
-        <para xml:id="para_e6e3f010-068f-456e-8b66-078ee90dc29d">Retrieval of additional information from the DICOM objects, using a filtering mechanism based on the XML mapping of DICOM IODs, as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>. This parameter is defined only for the WS mode "Information Requester" transaction.</para>
+        <para xml:id="para_e6e3f010-068f-456e-8b66-078ee90dc29d">Retrieval of additional information from the DICOM Objects, using a filtering mechanism based on the XML mapping of DICOM IODs, as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>. This parameter is defined only for the WS mode "Information Requester" transaction.</para>
         <para xml:id="para_5e3a00cb-6f36-4c8f-98f2-7b9114687522">The parameter name shall be "XPath".</para>
       </section>
     </section>
     <section label="8.2" status="2" xml:id="sect_8.2">
-      <title>Parameters for DICOM Image Persistent Objects</title>
+      <title>Parameters for DICOM Images</title>
       <para xml:id="para_1284251f-1ea1-4a76-a134-0084b17fe152">These parameters shall only be included when a request is made for a Single Frame Image Objects or Multi-Frame Image or video Objects as defined in <xref linkend="sect_6.1.1.2" xrefstyle="select: label"/>.</para>
     </section>
     <section label="8.2.1" status="2" xml:id="sect_8.2.1">
       <title>Annotation On The Object</title>
-      <para xml:id="para_9b819725-5ae3-4935-93c3-065b77e9879e">Annotation of objects retrieved and displayed as an image. This parameter is OPTIONAL for the URI based mode and the WS mode "Rendered Requester" transaction. It shall not be present if contentType is application/dicom, or is a non-image MIME type (e.g., text/*). When it is not present for image objects, no additional annotation may be burnt in.</para>
+      <para xml:id="para_9b819725-5ae3-4935-93c3-065b77e9879e">Annotation of objects retrieved and displayed as an image. This parameter is OPTIONAL for the URI based mode and the WS mode "Rendered Requester" transaction. It shall not be present if contentType is application/dicom, or is a non-image media type (e.g., text/*). When it is not present for image objects, no additional annotation may be burnt in.</para>
       <para xml:id="para_0fc13d03-d46e-454e-a539-e7acacd30a0e">When used in conjunction with a presentation state object, it shall be applied after the presentation on the images. When used in conjunction with the region parameter, it shall be applied after the selection of the region.</para>
       <para xml:id="para_570078bf-b1c6-4584-9ca6-b74cb1aa6ab6">The parameter name shall be "annotation" for URI based mode, and "Annotation" for the WS mode. Its value is a non-empty list of one or more of the following items, separated by a "," character:</para>
       <itemizedlist>
@@ -10222,7 +10406,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <section label="8.2.8" status="3" xml:id="sect_8.2.8">
         <title>Image Quality</title>
         <para xml:id="para_9a590eee-f935-4919-b523-57c1baafce74">The parameter name shall be "imageQuality" for URI based mode, and "ImageQuality" for the WS mode. It is OPTIONAL for the URI based mode and the WS mode "DICOM requester" and "Rendered Requester" transactions. It shall not be present if contentType is application/dicom, except if the transferSyntax parameter is present and corresponds to a lossy compression.</para>
-        <para xml:id="para_23383168-b0a3-4111-87a8-08cb528d33ee">If the requested MIME type is for a lossy compressed image (e.g., image/jpeg), this parameter indicates the required quality of the image to be returned within the range 1 to 100, 100 being the best quality.</para>
+        <para xml:id="para_23383168-b0a3-4111-87a8-08cb528d33ee">If the requested media type is for a lossy compressed image (e.g., image/jpeg), this parameter indicates the required quality of the image to be returned within the range 1 to 100, 100 being the best quality.</para>
         <note>
           <para xml:id="para_7258b1ba-7828-4404-88d6-f89edf0813ec">Decompression and re-compression may degrade the image quality if the original image was already irreversibly compressed. In case the image has been already lossy compressed using the same format as required (e.g., jpeg), it may be sent as it is without decompressing and re-compressing it.</para>
         </note>
@@ -10346,7 +10530,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ]]></programlisting>
     </section>
     <section label="B.4" status="2" xml:id="sect_B.4">
-      <title>Retrieving As A DICOM MIME Type</title>
+      <title>Retrieving As A DICOM Media Type</title>
       <para xml:id="para_e0048ced-bdc9-4efb-a04b-581c715b0819">Retrieving a DICOM image object using the baseline 8-bit lossy JPEG transfer syntax, and de-identified:</para>
       <programlisting><![CDATA[http://www.medical-webservice.st/RetrieveDocument?requestType=WADO
   &studyUID=1.2.250.1.59.40211.12345678.678910
@@ -10360,7 +10544,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   </chapter>
   <chapter label="C" status="1" xml:id="chapter_C">
     <title>Applications (Informative)</title>
-    <para xml:id="para_b52fa18b-ea9e-4a5a-8807-022528ddcd3d">There are multiple applications, in which DICOM and "web-based" environments are interacting. "Web-based" means information and communication systems that are using Internet related technologies (Web, e-mail…). The basic feature supported by this standard is a mechanism for the "Web-based" system to retrieve a DICOM persistent object from the "DICOM-based" system.</para>
+    <para xml:id="para_b52fa18b-ea9e-4a5a-8807-022528ddcd3d">There are multiple applications, in which DICOM and "web-based" environments are interacting. "Web-based" means information and communication systems that are using Internet related technologies (Web, e-mail…). The basic feature supported by this standard is a mechanism for the "Web-based" system to retrieve a DICOM object from the "DICOM-based" system.</para>
     <para xml:id="para_e9e71831-a112-4c37-97e2-99e80b091f07">Typical applications are:</para>
     <orderedlist numeration="lowerroman">
       <listitem>
@@ -10376,7 +10560,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <para xml:id="para_25a69d21-8e94-4c00-80d3-c12e57809dfc">Providing access to anonymized DICOM reports, images and waveforms via a web server, for teaching purposes and for clinical trials.</para>
       </listitem>
     </orderedlist>
-    <para xml:id="para_b9c5fa82-5e81-4673-8d2c-a408afcc4251">To retrieve DICOM persistent objects using "WADO", the "web-based" system must "know" the UIDs (Study, Series, SOP Instance) of the objects it needs to retrieve. These may be obtained through different methods (reception of a standardized message containing a document containing the reference to the DICOM objects, query of other systems…) that are beyond the scope of this standard.</para>
+    <para xml:id="para_b9c5fa82-5e81-4673-8d2c-a408afcc4251">To retrieve DICOM Objects using "WADO", the "web-based" system must "know" the UIDs (Study, Series, SOP Instance) of the objects it needs to retrieve. These may be obtained through different methods (reception of a standardized message containing a document containing the reference to the DICOM Objects, query of other systems…) that are beyond the scope of this standard.</para>
   </chapter>
   <chapter label="D" status="1" xml:id="chapter_D">
     <title>IANA Character Set Mapping</title>

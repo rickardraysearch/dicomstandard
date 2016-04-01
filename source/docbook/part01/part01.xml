@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2016a - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2016b - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -48,17 +48,90 @@
   </chapter>
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
+    <para xml:id="para_b5f10157-a778-4ad5-b339-2233ce0b3e60">The DICOM Standards Committee is an independent, international standards development organization comprising biomedical
+      professional societies whose specialties include the use of medical imaging, manufacturers of medical imaging equipment and
+      related information systems, and  government agencies, trade associations, and other standards development organizations with
+      an interest in standardization of medical imaging information and related data. Membership is open to all organizations with
+      a material interest in the work of the Committee.  The Committee collaborates closely with other standards development
+      organizations in the fields of Healthcare Informatics and Electrical Equipment in Medical Practice. The Secretariat of the
+      Committee is the National Electrical Manufacturers Association and its Medical Imaging and Technology Alliance division.</para>
+    <para xml:id="para_78a26edd-d78a-413f-aaed-8d10f5b1e376">The principal product of the Committee is this Standard, Digital Imaging and Communications in Medicine (DICOM).</para>
     <para xml:id="para_d38dcd6e-56f5-4548-b1d6-3118ac63fa9b">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_882e39f2-e05f-4512-9679-77d6a2fa6cd2">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_882e39f2-e05f-4512-9679-77d6a2fa6cd2">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
+    <para xml:id="para_8f7819be-9d91-42c9-a24f-bd2c2f9d058b">The Standard is published as NEMA Standard PS3, and its Parts are identified by the numbering of the NEMA publication (PS3.1, PS3.2, etc.).</para>
     <para xml:id="para_5e7cf400-834e-4621-95a9-9a8d003b44e0">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_f3031d7d-3e6e-47f0-9cb5-d70056284b2b">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_a9231a05-4bc8-4615-827c-8829b34ed019">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
     <para xml:id="para_2ea4fb45-5b3b-491c-a032-4b464156d42a">LOINC® is the registered trademark of Regenstrief Institute, Inc, all rights reserved.</para>
   </chapter>
-  <chapter label="" status="1" xml:id="chapter_Introduction">
-    <title>Introduction</title>
-    <para xml:id="para_c197d1ed-d971-43fa-9740-59df271129e5">Digital Imaging and Communications in Medicine (DICOM) is the standard for the communication and management of medical imaging information and related data.</para>
-    <section label="" status="2" xml:id="sect_History">
+  
+  <chapter label="1" status="1" xml:id="chapter_1">
+    <title>Scope and Field of Application</title>
+    <para xml:id="para_2017ee20-1d0a-4e65-ad76-eb8b297cda3a">PS3.1 provides an overview of the entire Digital Imaging and Communications in Medicine
+      (DICOM) Standard. It describes the history, scope, goals, and structure of the Standard. In
+      particular, it contains a brief description of the contents of each part of the
+      Standard.</para>
+    <section label="1.1" status="2" xml:id="sect_1.1">
+      <title>Scope of DICOM</title>
+      <para xml:id="para_7a47dcbe-eab3-4dd2-9275-31c38c13b90b">Digital Imaging and Communications in Medicine (DICOM) is the standard for the communication and management of medical imaging information and related data.</para>
+      <para xml:id="para_d255c7c7-c0dc-46ff-8c21-43e1546688de">The DICOM Standard facilitates interoperability of medical imaging equipment by
+        specifying:</para>
+      <para xml:id="para_c4aee28b-f6c1-49a7-a2b8-585665d3ccfc">
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_3e2dd910-26a3-40b6-9be8-34339e7e458e">For network communications, a set of protocols to be followed by devices claiming
+              conformance to the Standard.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_2d012715-a95a-4b23-94cf-2fc870c25884">The syntax and semantics of Commands and associated information that can be
+              exchanged using these protocols.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_de5b591c-3858-47d4-af37-0da3de7ce937">For media communication, a set of media storage services to be followed by devices
+              claiming conformance to the Standard, as well as a File Format and a medical directory
+              structure to facilitate access to the images and related information stored on
+              interchange media.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_16e42287-7940-4186-8381-1bc32f4d1ef9">Information that must be supplied with an implementation for which conformance to
+              the Standard is claimed.</para>
+          </listitem>
+        </itemizedlist>
+      </para>
+      <para xml:id="para_82b08f72-8223-4fff-b824-7e26b3f4429f">The DICOM Standard does not specify:</para>
+      <para xml:id="para_b02ecb93-bede-426f-a448-eb62c5375019">
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_e25fbe43-5c0b-4db3-ae07-6256f0e18ae4">The implementation details of any features of the Standard on a device claiming
+              conformance.
+            </para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_bbd0115f-12ab-4665-870d-43420ba9bf3e">The overall set of features and functions to be expected from a system implemented
+              by integrating a group of devices each claiming DICOM conformance.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6605eae4-88a5-4ab1-af9e-955832deeaa8">A testing/validation procedure to assess an implementation's conformance to the
+              Standard.</para>
+          </listitem>
+        </itemizedlist>
+      </para>
+    </section>
+    <section label="1.2" status="2" xml:id="sect_1.2">
+      <title>Field of Application</title>
+    <para xml:id="para_34ba4ab2-828c-4305-a704-930c077376ee">The DICOM Standard pertains to the field of Medical Informatics. Within that field, it
+      addresses the exchange of digital information between medical imaging equipment and other
+      systems. Because such equipment may interoperate with other medical devices and information systems, the scope of this
+      Standard needs to overlap with other areas of medical informatics. However, the DICOM Standard
+      does not address the breadth of this field.</para>
+      <para xml:id="para_c95bc0bb-d13a-4770-a96e-23a8faf6159b">This Standard has been developed with an emphasis on diagnostic medical imaging as practiced in radiology, cardiology, pathology, dentistry,
+        ophthalmology and related disciplines, and image-based therapies such as interventional radiology, radiotherapy and surgery.
+        However, it is also applicable to a wide range of image and non-image related information exchanged in clinical, research,
+        veterinary, and other medical environments.</para>
+      <para xml:id="para_082e8a0c-4ec0-4a75-b70f-e6c7c11368c6">This Standard facilitates interoperability of systems claiming conformance in a multi-vendor environment, but does not, by itself,
+        guarantee interoperability.</para>
+    </section>
+    <section label="1.3" status="2" xml:id="sect_1.3">
       <title>History</title>
       <para xml:id="para_0f07e136-3ada-463c-8073-19dae3b76a69">With the introduction of computed tomography (CT) followed by other digital diagnostic
         imaging modalities in the 1970's, and the increasing use of computers in clinical
@@ -87,19 +160,14 @@
       </para>
       <para xml:id="para_ff76949a-0981-40dd-a0a8-826f7cc55188">ACR-NEMA Standards Publication No. 300-1985, published in 1985 was designated version
         1.0. The Standard was followed by two revisions: No. 1, dated October 1986 and No. 2, dated
-        January 1988.</para>
+        January 1988. These Standards Publications specified a hardware interface, a minimum set of software commands, and a consistent set of data formats.</para>
       <para xml:id="para_ab30fa0a-8642-4195-a5ba-c0701fc684c5">ACR-NEMA Standards Publication No. 300-1988, published in 1988 was designated version
         2.0. It included version 1.0, the published revisions, and additional revisions. It also
         included new material to provide command support for display devices, to introduce a new
         hierarchy scheme to identify an image, and to add data elements for increased specificity
         when describing an image.</para>
-      <para xml:id="para_1a13d6c5-8bc2-4554-84ae-e2b3a8faa779">These Standards Publications specified a hardware interface, a minimum set of software
-        commands, and a consistent set of data formats.</para>
-    </section>
-    <section label="" status="2" xml:id="sect_DICOMStandard">
-      <title>The DICOM Standard</title>
-      <para xml:id="para_f31f883a-165b-4fdd-b57f-0d5253aa4ac2">This Standard, which is currently designated Digital Imaging and Communications in
-        Medicine (DICOM), embodies a number of major enhancements to previous versions of the
+      <para xml:id="para_f31f883a-165b-4fdd-b57f-0d5253aa4ac2">In 1993, ACR-NEMA Standard 300 was substantially revised and replaced by this Standard, designated Digital Imaging and Communications in
+        Medicine (DICOM). It embodies a number of major enhancements to previous versions of the
         ACR-NEMA Standard:</para>
       <para xml:id="para_f251abd6-c0ba-4337-8044-e35386baa3a7">
         <itemizedlist>
@@ -110,127 +178,110 @@
               environment using the industry standard networking protocol TCP/IP.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_cd7615a9-a1ce-48e5-8794-c54d9650a966">It is applicable to an off-line media environment. The ACR-NEMA Standard did not
+            <para xml:id="para_cd7615a9-a1ce-48e5-8794-c54d9650a966">It is applicable to off-line media exchange. The ACR-NEMA Standard did not
               specify a file format or choice of physical media or logical filesystem. DICOM
               supports operation in an off-line media environment using industry standard media such
-              as CD-R and MOD and logical filesystems such as ISO 9660 and PC File System
-              (FAT16).</para>
+              as CD-R, DVD-R and USB and common file systems.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_daa65848-d128-471d-aaeb-c20161536e9f">It specifies how devices claiming conformance to the Standard react to commands
-              and data being exchanged. The ACR-NEMA Standard was confined to the transfer of data,
-              but DICOM specifies, through the concept of Service Classes, the semantics of commands
-              and associated data.</para>
+            <para xml:id="para_daa65848-d128-471d-aaeb-c20161536e9f">It is a service oriented protocol, specifying the semantics of commands and associated data, and how devices claiming conformance to the Standard react to commands
+              and data being exchanged. Specified services include support for management of the workflow of an imaging department. The ACR-NEMA Standard was confined to the transfer of data
+              with only implicit service requirements.</para>
           </listitem>
           <listitem>
             <para xml:id="para_d2a0ba35-3fc1-4b61-a779-05311005737a">It specifies levels of conformance. The ACR-NEMA Standard specified a minimum
               level of conformance. DICOM explicitly describes how an implementor must structure a
               Conformance Statement to select specific options.</para>
           </listitem>
-          <listitem>
-            <para xml:id="para_4fb98b8e-e2b8-47d4-a2e3-e8cbc476c205">It is structured as a multi-part document. This facilitates evolution of the
-              Standard in a rapidly evolving environment by simplifying the addition of new
-              features. ISO directives that define how to structure multi-part documents have been
-              followed in the construction of the DICOM Standard.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_cceb855c-648d-45b2-bcd3-0c20c258a0b9"> It introduces explicit Information Objects not only for images and graphics but
-              also for waveforms, reports, printing, etc.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_ed5b9ea4-0f90-4a87-af56-3ada86b43246">It specifies an established technique for uniquely identifying any Information
-              Object. This facilitates unambiguous definitions of relationships between Information
-              Objects as they are acted upon across the network.</para>
-          </listitem>
         </itemizedlist>
       </para>
+      <para xml:id="para_7a4232f0-c4e5-4ead-86f6-531096bedc80">In 1995, with the addition of DICOM capabilities for cardiology imaging supported by the American College of Cardiology, the ACR-NEMA Joint Committee
+        was reorganized as the DICOM Standards Committee, a broad collaboration of stakeholders across all medical imaging specialties.</para>
     </section>
-    <section label="" status="2" xml:id="sect_CurrentDirection">
-      <title>Current Direction</title>
-      <para xml:id="para_92d8fc17-e16c-4f3f-aa59-4a363e85e5ea">The DICOM Standard is an evolving standard and it is maintained in accordance with the
-        Procedures of the DICOM Standards Committee. Proposals for enhancements are forthcoming from
-        the DICOM Committee member organizations based on input from users of the Standard. These
-        proposals are considered for inclusion in future editions of the Standard. A requirement in
-        updating the Standard is to maintain effective compatibility with previous editions.</para>
+    <section label="1.4" status="2" xml:id="sect_1.4">
+      <title>Principles</title>
+      <section label="1.4.1" status="3" xml:id="sect_1.4.1">
+        <title>Global Applicability and Localization</title>
+        <para xml:id="para_04123766-a3d6-498d-8ab8-2477d98f19cb">DICOM is a world-wide standard that can be used in every locale. It provides mechanisms to handle data  that support cultural requirements,
+          such as different writing systems, character sets, languages, and structures for addresses and person names. It supports the variety of workflows,
+          processes and policies used for biomedical imaging in different geographic regions, medical specialties and local practices.</para>
+        <para xml:id="para_b30e2faf-eb75-4d6e-a913-8b15187823fe">Localization to meet the requirements of national or local health and workflow policies can be done without deviating from the Standard.
+          Such localization may include specifying code sets (e.g., procedure codes), or profiling data element usage (both specifying locally allowed
+          values, and making elements that are optional in the Standard mandatory for local use).</para>
+        <para xml:id="para_f0f399c4-33b7-43ca-813b-06182686d3b9">Localization and profiling can be specified in a number of mechanisms outside the purview of the DICOM Standard.
+          One such mechanism is Integration Profiles from the Integrating the Healthcare Enterprise (IHE) organization.
+          It is important that Profiling adhere to the concept of non-contradiction.
+          A Profile can add requirements but should not contradict DICOM requirements, as that would make it
+          impossible to comply with both DICOM and the Profile.</para>
+      </section>
+      <section label="1.4.2" status="3" xml:id="sect_1.4.2">
+        <title>Continuous Maintenance</title>
+        <para xml:id="para_92d8fc17-e16c-4f3f-aa59-4a363e85e5ea">The DICOM Standard is an evolving standard and it is maintained in accordance with
+          the Procedures of the DICOM Standards Committee.
+          Proposals for enhancements are welcome from all users of the Standard, and may be submitted to the Secretariat.
+          Supplements and corrections to the Standard are balloted and approved several times a year.
+          When approved as Final Text, each change becomes official, is published separately, and goes into effect immediately.
+          At intervals, all of the approved Final Text changes are consolidated and published in an updated edition of the Standard.
+          Once changes are consolidated into an updated edition of the Standard, the individual change documents are not maintained;
+          readers are directed to use the consolidated edition of the Standard.</para>
+        <para xml:id="para_f90e202d-d0df-4f16-a448-249415749e26">A requirement in updating the Standard is to maintain effective compatibility with previous editions.</para>
+        <para xml:id="para_38486599-c754-4f17-87ad-987c1542a50f">The maintenance process may involve retirement of sections of the Standard.</para>
+        <para xml:id="para_0eae6a18-2317-4baf-8bc9-c7d9db9f8eb1">Retirement does not imply that these features cannot be used. However, the DICOM
+          Standards Committee will not maintain the documentation of retired features. The reader is
+          referred to earlier editions of the Standard.</para>
+        <para xml:id="para_d3113d8d-92c2-466a-9caa-fdeb11436b1f">The use of the retired features is discouraged for new implementations, in favor of those
+          alternatives remaining in the standard.</para>
+      </section>
+      <section label="1.4.3" status="3" xml:id="sect_1.4.3">
+        <title>Information Objects and Unique Object Identification</title>
+        <para xml:id="para_cceb855c-648d-45b2-bcd3-0c20c258a0b9">Many DICOM services involve the exchange of persistent information objects, such as images.
+          An instance of such an information object may be exchanged across many systems and many organizational contexts, and over time.
+          While minor changes may be made to the attributes of an instance to facilitate its handling within a particular organization
+          (e.g., by coercing a Patient ID to the value used in a local context), the semantic content of an instance does not change.</para>
+        <para xml:id="para_ed5b9ea4-0f90-4a87-af56-3ada86b43246">Each instance is identified by a globally unique object identifier, which
+          persists with the instance across all exchanges. Changes to the semantic content of an instance are defined to create a new instance,
+          which is assigned a new globally unique object identifier.</para>
+      </section>
+      <section label="1.4.4" status="3" xml:id="sect_1.4.4">
+        <title>Conformance</title>
+        <para xml:id="para_1d8943a1-ead9-44e8-b712-33000a2475c8">Conformance to the DICOM Standard is stated in terms of Service-Object Pair (SOP) Classes, which represent Services
+          (such as Storage using network, media, or web) operating on types of Information Objects  (such as CT or MR images).</para>
+        <para xml:id="para_13265bb8-dae6-459d-8e3f-d343efee9e86">SOP Class specifications in the DICOM Standard are only changed in a manner that is intended to be forward and backward
+          compatible for all editions of the Standard. Conformance requirements and conformance claims are therefore referenced to the
+          identifier of the SOP Class, and never referenced to an edition of the Standard.</para>
+        <para xml:id="para_33420af3-935a-46e5-bdbd-3fc4b4eac001">Each implementation is required to provide a Conformance Statement, in accordance with a consistent <foreignphrase xml:lang="la">pro forma</foreignphrase> structure,
+          facilitating comparison of products for interoperability.</para>
+      </section>
+      <section label="1.4.5" status="3" xml:id="sect_1.4.5">
+        <title>Consistency of Information Model</title>
+        <para xml:id="para_c953a659-68b4-49b2-b0b1-1e74b09218f4">A large number of information objects defined in the DICOM Standard follow a common composite information model with
+          information entities representing Patient, Study, Series, Equipment, Frame of Reference, and the specific instance data type.
+          This information model is a simplification of the real world concepts and activities of medical imaging;
+          for acquisition modalities, a Study is approximately equivalent to an ordered procedure, and a Series is approximately
+          equivalent to a performed data acquisition protocol element. In other domains, such as Radiotherapy, the Study and Series are
+          less clearly related to real world entities or activities, but are still required for consistency.
+          This simplified model is sufficient for the pragmatic needs of managing imaging and related data collected in routine practice.</para>
+        <para xml:id="para_4a62af23-9477-4017-bbb4-2349cbaad4d0">New information objects defined in DICOM will typically conform to this existing common information model,
+          allowing reuse of implementations with minimal changes to support the new objects.</para>
+      </section>
     </section>
-    <section label="" status="2" xml:id="sect_Retirement">
-      <title>Retirement</title>
-      <para xml:id="para_38486599-c754-4f17-87ad-987c1542a50f">Part of the maintenance process involves retirement of sections of the Standard,
-        including but not limited to, IODs, Attributes, Service Classes, SOP Classes, Transfer
-        Syntaxes and Protocols.</para>
-      <para xml:id="para_0eae6a18-2317-4baf-8bc9-c7d9db9f8eb1">Retirement does not imply that these features cannot be used. However, the DICOM
-        Standards Committee will not maintain the documentation of retired features. The reader is
-        referred to earlier editions of the Standard.</para>
-      <para xml:id="para_d3113d8d-92c2-466a-9caa-fdeb11436b1f">The use of the retired features is deprecated in new implementations, in favor of those
-        alternatives remaining in the standard.</para>
-    </section>
-  </chapter>
-  <chapter label="1" status="1" xml:id="chapter_1">
-    <title>Scope and Field of Application</title>
-    <para xml:id="para_2017ee20-1d0a-4e65-ad76-eb8b297cda3a">PS3.1 provides an overview of the entire Digital Imaging and Communications in Medicine
-      (DICOM) Standard. It describes the history, scope, goals, and structure of the Standard. In
-      particular, it contains a brief description of the contents of each part of the
-      Standard.</para>
-    <para xml:id="para_d255c7c7-c0dc-46ff-8c21-43e1546688de">The DICOM Standard facilitates interoperability of medical imaging equipment by
-      specifying:</para>
-    <para xml:id="para_c4aee28b-f6c1-49a7-a2b8-585665d3ccfc">
-      <itemizedlist>
-        <listitem>
-          <para xml:id="para_3e2dd910-26a3-40b6-9be8-34339e7e458e">For network communications, a set of protocols to be followed by devices claiming
-              conformance to the Standard.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_2d012715-a95a-4b23-94cf-2fc870c25884">The syntax and semantics of Commands and associated information that can be
-            exchanged using these protocols.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_de5b591c-3858-47d4-af37-0da3de7ce937">For media communication, a set of media storage services to be followed by devices
-            claiming conformance to the Standard, as well as a File Format and a medical directory
-            structure to facilitate access to the images and related information stored on
-            interchange media.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_16e42287-7940-4186-8381-1bc32f4d1ef9">Information that must be supplied with an implementation for which conformance to
-            the Standard is claimed.</para>
-        </listitem>
-      </itemizedlist>
-    </para>
-    <para xml:id="para_82b08f72-8223-4fff-b824-7e26b3f4429f">The DICOM Standard does not specify:</para>
-    <para xml:id="para_b02ecb93-bede-426f-a448-eb62c5375019">
-      <itemizedlist>
-        <listitem>
-          <para xml:id="para_e25fbe43-5c0b-4db3-ae07-6256f0e18ae4">The implementation details of any features of the Standard on a device claiming
-              conformance.
-          </para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_bbd0115f-12ab-4665-870d-43420ba9bf3e">The overall set of features and functions to be expected from a system implemented
-            by integrating a group of devices each claiming DICOM conformance.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_6605eae4-88a5-4ab1-af9e-955832deeaa8">A testing/validation procedure to assess an implementation's conformance to the
-            Standard.</para>
-        </listitem>
-      </itemizedlist>
-    </para>
-    <para xml:id="para_34ba4ab2-828c-4305-a704-930c077376ee">The DICOM Standard pertains to the field of Medical Informatics. Within that field, it
-      addresses the exchange of digital information between medical imaging equipment and other
-      systems. Because such equipment may interoperate with other medical devices, the scope of this
-      Standard needs to overlap with other areas of medical informatics. However, the DICOM Standard
-      does not address the breadth of this field.</para>
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
     <para xml:id="para_d480ea5b-96f8-4a78-a381-909c8600ec4b"/>
     <bibliography>
       <title/>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and Presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
       <biblioentry xml:id="biblio_ACRNEMA300_1988">
         <abbrev>ACR/NEMA 300</abbrev>
@@ -240,21 +291,24 @@
         <date>1988</date>
         <title>Digital Imaging and Communications</title>
       </biblioentry>
-      <biblioentry xml:id="biblio_ISO8822_1988">
-        <abbrev>ISO 8822</abbrev>
+      <biblioentry xml:id="biblio_ISO8822_1994">
+        <abbrev>ISO/IEC 8822</abbrev>
         <author>
-          <orgname>ISO</orgname>
+          <orgname>ISO/IEC</orgname>
         </author>
-        <date>1988</date>
+        <date>1994</date>
         <title>Information Processing Systems - Open Systems Interconnection - Connection Oriented Presentation Service Definition</title>
       </biblioentry>
-      <biblioentry xml:id="biblio_ISO8649_1988">
-        <abbrev>ISO 8649</abbrev>
+      <biblioentry xml:id="biblio_ISO8649_1996">
+        <abbrev>ISO/IEC 8649</abbrev>
         <author>
-          <orgname>ISO</orgname>
+          <orgname>ISO/IEC</orgname>
         </author>
-        <date>1988</date>
+        <date>1996</date>
         <title>Information Processing Systems - Open Systems Interconnection - Service Definition for the Association Control Service Element</title>
+        <releaseinfo>
+          <remark>Withdrawn 2012.</remark>
+        </releaseinfo>
       </biblioentry>
     </bibliography>
   </chapter>
@@ -479,7 +533,7 @@
     </variablelist>
   </chapter>
   <chapter label="5" status="1" xml:id="chapter_5">
-    <title>Goals of The DICOM Standard</title>
+    <title>The DICOM Communication Model</title>
     <para xml:id="para_41d06a43-df74-4eb7-92d5-a88a6bafc255">The DICOM Standard facilitates interoperability of devices claiming conformance. In
       particular, it:</para>
     <para xml:id="para_076a5f1e-abc7-44fa-b811-746b1ce9ca9c">
@@ -512,14 +566,6 @@
         </listitem>
       </itemizedlist>
     </para>
-    <para xml:id="para_ddc54868-d6d5-40ba-96ea-35cf2af9acbf">Even though the DICOM Standard has the potential to facilitate implementations of PACS
-      solutions, use of the Standard alone does not guarantee that all the goals of a PACS will be
-      met. This Standard facilitates interoperability of systems claiming conformance in a
-      multi-vendor environment, but does not, by itself, guarantee interoperability.</para>
-    <para xml:id="para_29f3fde2-b2ec-4298-895c-c17751096664">This Standard has been developed with an emphasis on diagnostic medical imaging as
-      practiced in radiology, cardiology and related disciplines; however, it is also applicable to
-      a wide range of image and non-image related information exchanged in clinical and other
-      medical environments.</para>
     <para xml:id="para_7514f59e-066a-4fc9-8297-695395626c95">
 <xref linkend="figure_5-1" xrefstyle="select: label"/> presents the general communication model of the Standard, which spans both
       network (on-line) and media storage interchange (off-line) communication. Applications may
@@ -1174,14 +1220,14 @@
       all of the approved Final Text changes are consolidated into a published edition of the
       Standard, identified by year of publication, but such publication is only a convenience to the
       user; the Standard is officially changed when each change is approved.</para>
-    <para xml:id="para_dfc3171c-6c12-4b9f-afdd-cb3ec45e94d1">Conformance to the DICOM Standard is through specified SOP Classes (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), Profiles
-      (see <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>), and Web Services (see <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>). Once such a unit of conformance is
+    <para xml:id="para_dfc3171c-6c12-4b9f-afdd-cb3ec45e94d1">Conformance to the DICOM Standard is through specified SOP Classes using DIMSE messages (see <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>), Web Services (see <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>), media interchange (see <olink targetdoc="PS3.4" targetptr="chapter_I" xrefstyle="template:Annex %n “%t” in PS3.4"/> and <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>), or the hosted application API (see <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>). Additional conformance claims may be made to Profiles
+      (see <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>). Once such a unit of conformance is
       specified in the Standard, all changes thereto are forward and backward compatible (except in
       rare cases where the original specification was non-interoperable, or conflicted with another
       standard). Conformance requirements and conformance claims are therefore referenced to the
       name and/or identifier of the feature, and never referenced to an edition of the Standard.
       Generally, the only appropriate reference to a particular edition of the Standard is to
-      identify a retired feature (see <xref linkend="sect_Retirement" xrefstyle="template:%t"/> in the Introduction to this Part).</para>
+      identify a retired feature (see <xref linkend="sect_1.4.2" xrefstyle="select: label title"/>).</para>
     <para xml:id="para_9b0cee4f-2d62-41a2-9cb1-f6f7fe9a40cd">The following citation form is preferred for general references to the Standard, without
       specification of date of edition, when specific conformance requirements are not
       invoked:</para>
@@ -1193,29 +1239,66 @@
       <itemizedlist>
         <listitem>
           <para xml:id="para_523cf9cf-8e9f-4abb-a2e1-8eccb00854cc">
-            <quote>… conformant to the DICOM &lt;name&gt; SOP Class, as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:
-              Service Class Specifications.</quote>
+            <quote>… conformant to the DICOM &lt;name&gt; SOP Class for network exchange [as a Service Class &lt;User | Provider&gt;], as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>: Service Class Specifications.</quote>
           </para>
         </listitem>
         <listitem>
-          <para xml:id="para_5ed5702a-47bb-4ed7-a952-85d0a757bef1">
-            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile, as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>:
-          Media Storage Application Profiles.</quote>
-          </para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_f6633f45-7c5f-4ee0-974a-17ef5d94ace8">
-            <quote>… conformant to the DICOM &lt;name&gt; Profile, as specified in DICOM <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>: Security and
-            System Management Profiles.</quote>
+          <para xml:id="para_a1d3cc62-aef4-454c-9bb8-bb76b98016a2">
+            <quote>… conformant to the DICOM &lt;name&gt; SOP Class for media exchange [as a File Set &lt;Creator | Updater | Reader&gt;], as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>: Service Class Specifications.</quote>
           </para>
         </listitem>
         <listitem>
           <para xml:id="para_0da85449-f995-46bf-8f21-05e694a2fce2">
-            <quote>… conformant to WADO, as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
+            <quote>… conformant to the DICOM &lt;name&gt; Web Service [as &lt;an Origin-server | a User-agent&gt;], as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
+          </para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_4eba59c8-396b-4d33-ac89-e1b0e07543eb">
+            <quote>… conformant to DICOM Application Hosting [as a &lt;Hosting System | Hosted Application&gt;], as specified in DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>: Application Hosting.</quote>
+          </para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_5ed5702a-47bb-4ed7-a952-85d0a757bef1">
+            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile [as a File Set &lt;Creator | Updater | Reader&gt;] [&lt;name&gt; SOP Class], as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>: Media Storage Application Profiles.</quote>
+          </para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_f6633f45-7c5f-4ee0-974a-17ef5d94ace8">
+            <quote>… conformant to the DICOM &lt;name&gt; Profile, as specified in DICOM <olink targetdoc="PS3.15" targetptr="PS3.15" xrefstyle="select: labelnumber"/>: Security and System Management Profiles.</quote>
           </para>
         </listitem>
       </itemizedlist>
     </para>
+    <note>
+      <orderedlist>
+        <listitem>
+          <para xml:id="para_691c7e82-9f3d-4e01-9849-3cb80a7ab3b1">Some Application Profiles and Web Services may fully specify the information objects exchanged,
+            while others may require explicit specification of SOP Classes in the references.</para>
+        </listitem>
+        <listitem>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_60d781e7-4e16-4994-97c9-c3510467f774">
+                <quote>The modality shall be conformant to the DICOM CT Image Storage and MR Image Storage SOP Classes
+                  for network exchange as a Service Class User, as specified in DICOM <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>: Service Class Specifications.</quote>
+              </para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_e9b00ecc-a3ce-47a7-a199-814746e81ed5">
+                <quote>The workstation shall be conformant to the DICOM STD-XA1K-DVD Application Profile as a File Set Reader,
+                  as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>: Media Storage Application Profiles.</quote>
+              </para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_a0cd731c-83ff-4d52-9e20-0c765d9ce117">
+                <quote>The PACS shall be conformant to the DICOM WADO-RS and STOW-RS Web Services as an Origin-server for the SOP Classes listed in Table X,
+                  as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
+              </para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </orderedlist>
+    </note>
     <para xml:id="para_c9e802a6-27c9-4dea-9de0-1bcdda57a7ef">Reference may be made to other features of the Standard, but these shall not be construed
       as DICOM conformance requirements (although they may be conformance requirements for non-DICOM
       implementation guides or regulations). Following are some examples:</para>
@@ -1233,12 +1316,23 @@
         </para>
       </listitem>
       <listitem>
+        <para xml:id="para_a09e2de4-357d-46ea-ab42-88f75f344caf">
+          <quote>… HL7 CDA instances using Template ID &lt;identifier and name&gt;, as specified in DICOM <olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/>: Imaging Reports using HL7 Clinical Document Architecture.</quote>
+        </para>
+      </listitem>
+      <listitem>
         <para xml:id="para_69afa62e-a8cc-433f-a899-16e9fcf16d7b">
           <quote>… using the &lt;name&gt; Transfer Syntax, as specified in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>: Data Structure and
         Semantics.</quote>
         </para>
       </listitem>
     </itemizedlist>
+    <note>
+      <para xml:id="para_25c6f4e1-31bb-4f80-84b6-6f0be028e58a">For example, products producing or receiving SR documents must conform to a SOP Class, such as Enhanced SR;
+        such products may also cite use of Template ID 5200 Echocardiography Procedure Report, but that is not a formal DICOM Conformance assertion.
+        However, a non-DICOM implementation guide, such as the IHE Echocardiography Workflow Profile, may require use of that Template,
+        and an implementation may describe its use of specific Templates in its Conformance Statement.</para>
+    </note>
     <para xml:id="para_c8fca69e-e2f5-4ebe-8acb-3eb5d88ac3cd">Since changes to the Standard shall not be cited prior to adoption as Final Text, and
       since after adoption they are formally part of the Standard, there should be no citations to
       supplements or correction items for the purpose of describing conformance. Reference to such

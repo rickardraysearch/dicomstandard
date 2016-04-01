@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2016a - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2016b - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_ffc33ef0-a692-48af-a7a1-440d4ac0bf1c">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_a27cd82f-e697-431d-8f23-653c1ddfe096">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_a27cd82f-e697-431d-8f23-653c1ddfe096">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_66ba86fe-01fc-4de6-8805-5c2994ed9e6a">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_9893c058-21fc-4735-8bc8-a6dacf79d9a3">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_d8572681-cee7-40e3-a9b3-4b287765c4e5">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -114,21 +114,25 @@
     <title>Normative References</title>
     <para xml:id="para_2db5c4d2-148e-4c67-a4dd-357075a32f3a">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
-    <para xml:id="para_7342e92c-4ff9-45bd-abec-15cbcfbdf759">IETF RFC 2045,2046,2048 MIME Multipurpose Internet Mail Extension</para>
-    <para xml:id="para_7552dd36-5fe4-4a85-8834-520a52facb0c">IETF RFC 3240 application/dicom MIME Sub-type Registration</para>
-    <para xml:id="para_31c7e5e2-066f-4d0a-9d3d-983e99a4b0a7">IETF RFC 3986 Uniform Resource Identifiers (URI) : Generic Syntax</para>
+    <para xml:id="para_7342e92c-4ff9-45bd-abec-15cbcfbdf759">IETF RFC2045,2046,2048 MIME Multipurpose Internet Mail Extension</para>
+    <para xml:id="para_7552dd36-5fe4-4a85-8834-520a52facb0c">IETF RFC3240 application/dicom MIME Sub-type Registration</para>
+    <para xml:id="para_31c7e5e2-066f-4d0a-9d3d-983e99a4b0a7">IETF RFC3986 Uniform Resource Identifiers (URI) : Generic Syntax</para>
     <para xml:id="para_64ae4837-c2d7-4938-a804-fc476dc165ce">ISO 8822:1988 Information processing systems -- Open Systems Interconnection - Connection oriented presentation service definition</para>
     <para xml:id="para_8ae891ff-8b44-4ad9-bf36-8ead1880905c">ISO/IEC 19757 DSDL Document Schema Definition Languages (DSDL)</para>
-    <para xml:id="para_3778ebb3-dc20-42ee-97cb-a803e0134ec4">ITU-T Recommendation X.667 UUID (also IETF RFC 4122)</para>
+    <para xml:id="para_3778ebb3-dc20-42ee-97cb-a803e0134ec4">ITU-T Recommendation X.667 UUID (also IETF RFC4122)</para>
     <para xml:id="para_bf07d6fb-03eb-46fa-921d-0ad3d0724550">W3C Recommendation Web Services Description Language (WSDL) 1.1</para>
     <note>
       <para xml:id="para_36bf6ded-0b86-40d1-8fae-2bb0cd402e03">The WSDL W3C Recommendation can be found at <link xl:href="http://www.w3.org/TR/wsdl"/>
@@ -1156,7 +1160,7 @@
     </section>
     <section label="9.3" status="2" xml:id="sect_9.3">
       <title>MimeType</title>
-      <para xml:id="para_6f25802f-7779-40e5-82de-1757183e812c">A data type whose values are Defined Terms that identify particular MIME content types. The syntax of the string defining a MIME content type is defined in IETF RFC 2045. Top level MIME content types are defined in IETF RFC 2046. MIME content types are drawn from the list managed by the Internet Assigned Numbers Authority (IANA) whose web site is at <link xl:href="http://www.iana.org/assignments/media-types/"/>, as described in IETF RFC 2048.</para>
+      <para xml:id="para_6f25802f-7779-40e5-82de-1757183e812c">A data type whose values are Defined Terms that identify particular MIME content types. The syntax of the string defining a MIME content type is defined in IETF RFC2045. Top level MIME content types are defined in IETF RFC2046. MIME content types are drawn from the list managed by the Internet Assigned Numbers Authority (IANA) whose web site is at <link xl:href="http://www.iana.org/assignments/media-types/"/>, as described in IETF RFC2048.</para>
     </section>
     <section label="9.4" status="2" xml:id="sect_9.4">
       <title>ModelSetDescriptor</title>
@@ -3329,13 +3333,7 @@ AbstractImageDataSet =
       attribute minValue { xsd:double }?,
       attribute maxValue { xsd:double }?,
       element Semantics { CodedTerm },
-      element Unit { CodedTerm  },
-      element RealWorldMapping {
-        attribute rescaleSlope { xsd:double },
-        attribute rescaleIntercept { xsd:double },
-        element Unit { CodedTerm },
-        element Semantics { CodedTerm }
-      }*
+      element Unit { CodedTerm }
     }+,
     element Dimension {
       attribute idNumber { xsd:positiveInteger },
@@ -3344,9 +3342,9 @@ AbstractImageDataSet =
       (element Regular {
          attribute width { xsd:double },
          attribute spacing { xsd:double },
-         element Unit { CodedTerm  },
-         element AxisDirection { CodedTerm  }?,
-         element AxisOrientation { CodedTerm  }?
+         element Unit { CodedTerm },
+         element AxisDirection { CodedTerm }?,
+         element AxisOrientation { CodedTerm }?
        }
        | element Irregular {
            attribute origin { xsd:double },
@@ -3355,9 +3353,9 @@ AbstractImageDataSet =
              attribute width { xsd:double },
              attribute distanceToOrigin { xsd:double }
            }+,
-         element Unit { CodedTerm  },
-         element AxisDirection { CodedTerm  }?,
-         element AxisOrientation { CodedTerm  }?
+         element Unit { CodedTerm },
+         element AxisDirection { CodedTerm }?,
+         element AxisOrientation { CodedTerm }?
          }
        | element Qualitative {
            element Sample {

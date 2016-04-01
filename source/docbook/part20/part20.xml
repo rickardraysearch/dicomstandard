@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2016a - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2016b - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_5cd3f15c-db82-4f61-b7da-e0974c5c5c5a">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_febe0a70-3963-4a39-b265-67834f6390a7">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_febe0a70-3963-4a39-b265-67834f6390a7">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_9ebbc019-87c6-4282-8978-80f20c2ed332">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_08b2d2c1-d3b1-4c75-b1dd-e233881eab68">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_0bce879c-1cc9-4d62-9423-271830bbd29b">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -65,13 +65,17 @@
     <title>Normative and Informative References</title>
     <para xml:id="para_5bf51e91-b581-4a63-9f32-4037b718f674">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
     <para xml:id="para_700045e7-1290-4dc7-adfb-77a032059e6f">ANSI/HL7 CDA®, R2-2005 HL7 Version 3 Standard: Clinical Document Architecture (CDA) Release 2, 2005 (<link xl:href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7"/>)</para>
@@ -97,7 +101,7 @@
       reserved.</para>
     <para xml:id="para_317624b3-8ef1-4fdf-acea-8a03e26acbbf">THE LOINC TABLE (IN ALL FORMATS), LOINC PANELS AND FORMS FILE, LOINC DOCUMENT ONTOLOGY FILE, AND LOINC HIERARCHIES ARE PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</para>
     <para xml:id="para_aa335c5b-c28e-4c6f-bf47-6d38526540a3">LOINC® is a registered United States trademark of Regenstrief Institute, Inc. A small portion of the LOINC table may include content (e.g., survey instruments) that is subject to copyrights owned by third parties. Such content has been mapped to LOINC terms under applicable copyright and terms of use. Notice of such third party copyright and license terms would need to be included if such content is included.</para>
-    <para xml:id="para_3c76379a-ecb2-48b4-b8cf-19fd992d07de">RFC 4646 Tags for Identifying Languages, The Internet Society, 2005</para>
+    <para xml:id="para_3c76379a-ecb2-48b4-b8cf-19fd992d07de">RFC4646 Tags for Identifying Languages, The Internet Society, 2005</para>
     <para xml:id="para_d6e320d9-19a1-4e32-a1d5-a634fcc0b644">SNOMED CT® Systematized Nomenclature of Medicine - Clinical Terms, International Release, International Health Terminology Standards Development Organisation (IHTSDO), January 2015</para>
     <para xml:id="para_a9b7da55-9109-461d-b6d2-0288fe3660bc">SNOMED CT is a registered trademark of the International Health Terminology Standard Development Organisation (IHTSDO).</para>
     <para xml:id="para_ed6f6c29-b71f-462d-b761-8c2f51f37b08">UCUM Unified Code for Units of Measure, Regenstrief Institute, Indianapolis 2013.</para>
@@ -995,13 +999,13 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             <tbody>
               <tr valign="top">
                 <td align="center" colspan="1" rowspan="1">
-                  <para>...</para>
+                  <para xml:id="para_8633e709-fe07-47fb-9dd3-5a5443b16f0b">...</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
-                  <para>...</para>
+                  <para xml:id="para_d4b0bed9-258c-48bd-9b49-8ad578bacf6f">...</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
-                  <para>...</para>
+                  <para xml:id="para_02acce46-94bb-4ce5-abc6-e2d00f371872">...</para>
                 </td>
               </tr>
             </tbody>

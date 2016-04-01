@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2016a - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2016b - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_f6b752e0-d9ac-4380-a8f4-cb7c8b590e30">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_b7bb9a5a-8369-4de2-9487-78006db40c35">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_b7bb9a5a-8369-4de2-9487-78006db40c35">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_92fd192b-1756-49de-a95a-6ce56be26c7d">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_0c4b7c64-4ff1-43b5-8978-2d71fa426a2e">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_125708f7-725b-41b0-9e3b-bf2ea16eb6b4">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -85,13 +85,17 @@
     <title>Normative References</title>
     <para xml:id="para_34485576-301f-4230-bb3c-3d48bb4d0b86">The following standards contain provisions, which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
     <para xml:id="para_d25645c2-e48c-4ec8-986a-7353f5cd8cff">ISO 7498-1 Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
@@ -2569,6 +2573,17 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a753a5c3-c3a4-4e5f-a78f-ee1bea75b496">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9e00674a-c1fe-4de9-91fb-053c5216e533">1.2.840.10008.5.1.4.1.1.90.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ff1c0f50-dff9-43ed-838d-5a3bc276e5aa">Content Assessment Results Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3faeeabc-7c92-4039-9863-38fd3c959b61">Transfer</para>
             </td>
           </tr>
           <tr valign="top">
@@ -7279,8 +7294,12 @@
                   <caption>Worklist Request Identifier</caption>
                   <thead>
                     <tr valign="top">
-                      <th align="center" colspan="1" rowspan="1">
+                      <th align="center" colspan="8" rowspan="1">
                         <para xml:id="para_5d8cd3ee-6074-4f3a-bd73-256606e4b270">Module Name</para>
+                      </th>
+                    </tr>
+                    <tr valign="top">
+                      <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_5a4516f3-2b81-4b68-9874-44a11a331eaf">Attribute Name</para>
                       </th>
                       <th align="center" colspan="1" rowspan="1">
@@ -7307,29 +7326,6 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr valign="top">
-                      <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_ebef1436-5537-4d0c-a8c1-b414f71a5854">SOP Common</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6648a7e7-57f5-4e13-8185-f07d938466c1">Specific Character Set</para>
-                      </td>
-                      <td align="center" colspan="1" rowspan="1">
-                        <para xml:id="para_e309b676-62f9-4144-8091-4c512502b365">(0008,0005)</para>
-                      </td>
-                      <td align="center" colspan="1" rowspan="1">
-                        <para xml:id="para_9da32a53-1dd1-450d-8ebc-d2c00c25a45f">CS</para>
-                      </td>
-                      <td align="center" colspan="1" rowspan="1"/>
-                      <td align="center" colspan="1" rowspan="1">
-                        <para xml:id="para_0007c132-6f90-4abe-88db-e72d14ed3c47">x</para>
-                      </td>
-                      <td align="center" colspan="1" rowspan="1"/>
-                      <td align="center" colspan="1" rowspan="1"/>
-                      <td align="center" colspan="1" rowspan="1"/>
-                    </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
                         <para xml:id="para_75b43001-101c-4615-9439-9a79dbe19a8e">Scheduled Procedure Step</para>
@@ -8143,7 +8139,10 @@
                     </tr>
                   </tbody>
                 </table>
-                <para xml:id="para_59d0d8a4-c8ca-458c-a35c-7496552439ef">The above table should be read as follows:</para>
+                <note>
+                  <para xml:id="para_2d53a4b7-44a7-426b-b537-c6512273ea59">If an extended character set is used in the Request Identifier, Specific Character Set (0008,0005) will be included in the Identifier with the value "ISO_IR 100" or "ISO_IR 144" (see <xref linkend="sect_B.6" xrefstyle="select: label"/>). Otherwise, Specific Character Set (0008,0005) will not be sent</para>
+                </note>
+                <para xml:id="para_59d0d8a4-c8ca-458c-a35c-7496552439ef">The above tables should be read as follows:</para>
                 <variablelist>
                    <varlistentry>
 <term>Module Name</term>
@@ -11287,7 +11286,7 @@
           </section>
         </section>
       </section>
-      <section label="B.4.3" xml:id="sect_b.4.3">
+      <section label="B.4.3" xml:id="sect_B.4.3">
         <title>Network Interfaces</title>
         <section label="B.4.3.1" xml:id="sect_B.4.3.1">
           <title>Physical Network Interface</title>
@@ -16147,7 +16146,7 @@
               </tbody>
             </table>
             <table frame="box" label="B.8.1-18" rules="all" xml:id="table_B.8.1-18">
-              <caption>VOI LUT Module of Created Rf SOP Instances</caption>
+              <caption>VOI LUT Module of Created RF SOP Instances</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
@@ -48958,13 +48957,13 @@
               </mediaobject>
             </figure>
           </para>
-          <para xml:id="para_bee73518-58f3-4db5-87e8-bad65b2e60da">The STOW-RS Service Application receives STOW requests from a remote AE. These requests are HTTP/1.1 POST requests. It is associated with the local real-world activity "Store Instances". It converts these requests into internal functions to store the given SOP Instances. It returns a summary HTTP status line, including a status code and an associated textual phase, followed by an XML message indicating success, warning, or failure for each instance to the requesting remote AE.</para>
+          <para xml:id="para_bee73518-58f3-4db5-87e8-bad65b2e60da">The STOW-RS Service Application receives STOW requests from a remote AE. These requests are HTTP POST requests. It is associated with the local real-world activity "Store Instances". It converts these requests into internal functions to store the given SOP Instances. It returns a summary HTTP status line, including a status code and an associated textual phase, followed by an XML message indicating success, warning, or failure for each instance to the requesting remote AE.</para>
         </section>
         <section label="J.4.1.2" xml:id="sect_J.4.1.2">
           <title>Functional Definition of AEs</title>
           <section label="J.4.1.2.1" xml:id="sect_J.4.1.2.1">
             <title>Functional Definition of STOW Service Application</title>
-            <para xml:id="para_29774e76-ffef-4418-8cdc-c6d0b0bf5429">The reception of a STOW-RS POST request will activate the STOW-RS Service. The storage request is based upon the accept headers in the STOW-RS POST request. The response includes an HTTP/1.1 status line, including a status-code and its associated textual phrase, followed by an XML message indicating success, warning, or failure for each instance stored by the STOW-RS service.</para>
+            <para xml:id="para_29774e76-ffef-4418-8cdc-c6d0b0bf5429">The reception of a STOW-RS POST request will activate the STOW-RS Service. The storage request is based upon the accept headers in the STOW-RS POST request. The response includes an HTTP status line, including a status-code and its associated textual phrase, followed by an XML message indicating success, warning, or failure for each instance stored by the STOW-RS service.</para>
           </section>
         </section>
       </section>
@@ -49036,7 +49035,7 @@
             </section>
             <section label="J.4.2.2.4.2" xml:id="sect_J.4.2.2.4.2">
               <title>Number of Connections</title>
-              <para xml:id="para_870b3931-a815-4b3e-a444-65f89882072d">EXAMPLE-STOW-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP/1.1 connection is accepted. When an earlier request completes, a pending request will proceed.</para>
+              <para xml:id="para_870b3931-a815-4b3e-a444-65f89882072d">EXAMPLE-STOW-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.</para>
               <table frame="box" label="J.4.2-4" rules="all" xml:id="table_J.4.2-4">
                 <caption>Number of HTTP Requests Supported</caption>
                 <tbody>
@@ -49057,17 +49056,17 @@
             </section>
             <section label="J.4.2.2.4.4" xml:id="sect_J.4.2.2.4.4">
               <title>SOP Specific Conformance for SOP Class(Es)</title>
-              <para xml:id="para_5cabfe08-9035-4d98-ae38-9fd980bda720">The EXAMPLE-STOW-SERVICE response message header contains status codes indicating success, warning, or failure as shown in the "HTTP/1.1 Standard Response Codes" below. No additional status codes are used.</para>
+              <para xml:id="para_5cabfe08-9035-4d98-ae38-9fd980bda720">The EXAMPLE-STOW-SERVICE response message header contains status codes indicating success, warning, or failure as shown in the "HTTP Standard Response Codes" below. No additional status codes are used.</para>
               <para xml:id="para_ae10c6f8-43ff-4190-b6ef-456d250602ae"/>
               <table frame="box" label="J.4.2.2.4.4-1" rules="all" xml:id="table_J.4.2.2.4.4">
-                <caption>HTTP/1.1 Standard Response Codes</caption>
+                <caption>HTTP Standard Response Codes</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_aeb37fa9-bde9-40da-98b3-a5e08a75e05f">Service Status</para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_bbeb6c20-8f4f-416c-afa5-9de17991aa96">HTTP/1.1 Status Code</para>
+                      <para xml:id="para_bbeb6c20-8f4f-416c-afa5-9de17991aa96">HTTP Status Code</para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_276426d5-2a6b-46d7-9c1b-782bf96979d9">STOW-RS Description</para>
@@ -49504,7 +49503,7 @@
               </mediaobject>
             </figure>
           </para>
-          <para xml:id="para_c422cdab-ee30-41f4-aa40-b797adeec4d9">The QIDO-RS Provider Application receives QIDO requests from a remote AE. These requests are HTTP/1.1 GET requests. It is associated with the local real-world activity "Query Remote Device". It uses the request to select matching Studies, Series or Instances. It then returns a set of matching Studies, Series or Instances or a response code indicating warning or failure back to the requesting device.</para>
+          <para xml:id="para_c422cdab-ee30-41f4-aa40-b797adeec4d9">The QIDO-RS Provider Application receives QIDO requests from a remote AE. These requests are HTTP GET requests. It is associated with the local real-world activity "Query Remote Device". It uses the request to select matching Studies, Series or Instances. It then returns a set of matching Studies, Series or Instances or a response code indicating warning or failure back to the requesting device.</para>
         </section>
         <section label="K.4.1.2" xml:id="sect_K.4.1.2">
           <title>Functional Definition of AEs</title>
@@ -50408,9 +50407,9 @@
             </section>
             <section label="K.4.2.1.4.2" xml:id="sect_K.4.2.1.4.2">
               <title>Number of Connections</title>
-              <para xml:id="para_e2f02851-9b1a-4b17-b187-b1f447a4a461">EXAMPLE-QIDO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP/1.1 connection is accepted. When an earlier request completes, a pending request will proceed.</para>
+              <para xml:id="para_e2f02851-9b1a-4b17-b187-b1f447a4a461">EXAMPLE-QIDO-SERVICE limits the number of simultaneous RS requests. Additional requests will be queued after the HTTP connection is accepted. When an earlier request completes, a pending request will proceed.</para>
               <table frame="box" label="K.4.2-4" rules="all" xml:id="table_K.4.2-4">
-                <caption>Number of HTTP/1.1 Requests Supported</caption>
+                <caption>Number of HTTP Requests Supported</caption>
                 <tbody>
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1">
@@ -50431,7 +50430,7 @@
               <title>Response Status</title>
               <para xml:id="para_66858a71-32e8-4130-8234-75eefd371bfc">The EXAMPLE-QIDO-SERVICE shall provide a response message header containing the appropriate status code indicating success, warning, or failure as shown in <xref linkend="table_K.4.2-5" xrefstyle="select: label"/>.</para>
               <table frame="box" label="K.4.2-5" rules="all" xml:id="table_K.4.2-5">
-                <caption>HTTP/1.1 Standard Response Codes</caption>
+                <caption>HTTP Standard Response Codes</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">

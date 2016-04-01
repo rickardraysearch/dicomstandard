@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.8" version="5.0" xml:id="PS3.8">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.8" version="5.0" xml:id="PS3.8">
   <title>PS3.8</title>
-  <subtitle>DICOM PS3.8 2016a - Network Communication Support for Message Exchange</subtitle>
+  <subtitle>DICOM PS3.8 2016b - Network Communication Support for Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_84fe2d6b-f301-4faf-a974-b91c8b517291">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_7f53e540-e449-4dd9-a44f-f457950a23f4">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_7f53e540-e449-4dd9-a44f-f457950a23f4">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_1d162028-3dc6-455e-81b4-e13388ed3acd">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_05686381-4c10-4803-a297-9f89bab3cadf">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_471fb5be-6322-4f77-87ad-f5c656f1236e">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -74,13 +74,17 @@
 <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
   <bibliography>
-    <biblioentry xml:id="biblio_ISODirectives3">
-      <abbrev>ISO/IEC Directives, Part 3</abbrev>
+    <biblioentry xml:id="biblio_ISODirectives2">
+      <abbrev>ISO/IEC Directives, Part 2</abbrev>
       <author>
         <orgname>ISO/IEC</orgname>
       </author>
-      <date>1989</date>
-      <title>Drafting and presentation of International Standards</title>
+      <date>2011/04</date>
+      <edition>6.0</edition>
+      <title>Rules for the structure and drafting of International Standards</title>
+      <bibliosource>
+        <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+      </bibliosource>
     </biblioentry>
   </bibliography>
   <section label="2.1" status="2" xml:id="sect_2.1">
@@ -104,12 +108,12 @@
     <title>Other Documents</title>
   
   <para xml:id="para_14d22363-371d-4a95-80ec-ef6039a2a23e">NIST Special Publication 500-150 - Stable Implementation Agreements for Open Systems Interconnection Protocols</para>
-  <para xml:id="para_27f942a8-382b-4bb9-abe0-f536c729976b">RFC 791, Internet Protocol - DARPA Internet Protocol Specification</para>
-  <para xml:id="para_d3eba435-932c-4766-9cdd-8494967accaf">RFC 792, Internet Control Message Protocol - DARPA Internet Program Protocol Specification</para>
-  <para xml:id="para_02250798-8e6f-4342-a6d8-383924063a0c">RFC 793, Transmission Control Program - DARPA Internet Protocol Specification</para>
-  <para xml:id="para_81b2c53a-d0a0-49fd-a538-17b6e3d5dfd6">RFC 950, Internet Subnetting</para>
-  <para xml:id="para_bf62e07f-b588-4c03-995f-dc3322b1c7d0">RFC 1881, IPv6 Address Allocation Management</para>
-  <para xml:id="para_5ca6e255-e957-4744-9d7d-329c945a247d">RFC 2460, Internet Protocol, Version 6 (IPv6) Specification</para>
+  <para xml:id="para_27f942a8-382b-4bb9-abe0-f536c729976b">RFC791, Internet Protocol - DARPA Internet Protocol Specification</para>
+  <para xml:id="para_d3eba435-932c-4766-9cdd-8494967accaf">RFC792, Internet Control Message Protocol - DARPA Internet Program Protocol Specification</para>
+  <para xml:id="para_02250798-8e6f-4342-a6d8-383924063a0c">RFC793, Transmission Control Program - DARPA Internet Protocol Specification</para>
+  <para xml:id="para_81b2c53a-d0a0-49fd-a538-17b6e3d5dfd6">RFC950, Internet Subnetting</para>
+  <para xml:id="para_bf62e07f-b588-4c03-995f-dc3322b1c7d0">RFC1881, IPv6 Address Allocation Management</para>
+  <para xml:id="para_5ca6e255-e957-4744-9d7d-329c945a247d">RFC2460, Internet Protocol, Version 6 (IPv6) Specification</para>
   </section>
 </chapter>
 <chapter label="3" status="1" xml:id="chapter_3">
@@ -1640,25 +1644,25 @@
   <para xml:id="para_8f386c3e-3c37-4327-b3f7-d6da2b0e85db">The Services provided by the TCP Transport Services are not formally documented. This section, therefore, makes use of "commonly" used terms in a number of TCP Programming Interface Implementations (e.g., Sockets). However, the following RFCs shall be required for TCP/IP support. They specify the support needed for IPv4.</para>
   <orderedlist numeration="loweralpha">
 <listitem>
-<para xml:id="para_1c951781-e9cb-4a87-a333-ade47b5c1fc5">RFC 793, Transmission Control Program - DARPA Internet Protocol Specification</para>
+<para xml:id="para_1c951781-e9cb-4a87-a333-ade47b5c1fc5">RFC793, Transmission Control Program - DARPA Internet Protocol Specification</para>
 </listitem>
 <listitem>
-<para xml:id="para_b7967a71-b1d4-4375-98bc-d87f86e9d14c">RFC 791, Internet Protocol - DARPA Internet Protocol Specification</para>
+<para xml:id="para_b7967a71-b1d4-4375-98bc-d87f86e9d14c">RFC791, Internet Protocol - DARPA Internet Protocol Specification</para>
 </listitem>
 <listitem>
-<para xml:id="para_3da3d11f-ad88-4697-bc07-048c531158f4">RFC 792, Internet Control Message Protocol - DARPA Internet Program Protocol Specification</para>
+<para xml:id="para_3da3d11f-ad88-4697-bc07-048c531158f4">RFC792, Internet Control Message Protocol - DARPA Internet Program Protocol Specification</para>
 </listitem>
 <listitem>
-<para xml:id="para_95f7fe3a-170d-4a76-aabd-5231dbe74595">RFC 950, Internet Subnetting</para>
+<para xml:id="para_95f7fe3a-170d-4a76-aabd-5231dbe74595">RFC950, Internet Subnetting</para>
 </listitem>
 </orderedlist>
   <para xml:id="para_9958dafb-f3dc-44c1-b10b-ee99e1f90e8f">In addition, devices that support IPv6 shall comply with:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
-<para xml:id="para_8c337665-1906-4b87-9ca6-6ca1b044eb8d">RFC 1881, IPv6 Address Allocation Management</para>
+<para xml:id="para_8c337665-1906-4b87-9ca6-6ca1b044eb8d">RFC1881, IPv6 Address Allocation Management</para>
 </listitem>
 <listitem>
-<para xml:id="para_f0acf3ef-634a-4999-9e53-14279912e60e">RFC 2460, Internet Protocol, Version 6 (IPv6) Specification</para>
+<para xml:id="para_f0acf3ef-634a-4999-9e53-14279912e60e">RFC2460, Internet Protocol, Version 6 (IPv6) Specification</para>
 </listitem>
 </orderedlist>
   <note>

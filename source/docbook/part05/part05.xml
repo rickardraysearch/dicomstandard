@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2016a - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2016b - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_385974e1-07ac-467d-a77c-8d5d6c475f0e">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_4b7125b5-1f6d-47c1-804d-4b2966ff615e">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_4b7125b5-1f6d-47c1-804d-4b2966ff615e">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_b8a51be3-28ef-4aaa-a74c-7f1f242aecd2">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_33a14e20-b561-4536-bc71-8b95a09fade2">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_85f467fb-c08b-40c4-9358-accb2a3ab790">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -151,6 +151,17 @@
           <date>March 2005</date>
           <title>White Paper Blu-ray Disc™ Format 2.B Audio Visual Application Format Specifications for BD-ROM</title>
         </biblioentry>
+        <biblioentry xml:id="biblio_ECMA_TR-098">
+          <abbrev>ECMA TR-098</abbrev>
+          <author>
+            <orgname>European Computer Manufacturers Association</orgname>
+           </author>
+           <date>2009</date>
+            <title>JPEG File Interchange Format (JFIF)</title>
+           <bibliosource>
+            <link xl:href="http://www.ecma-international.org/publications/techreports/E-TR-098.htm"/>
+           </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_ETSI_TS_102_366">
           <abbrev>ETSI TS 102 366</abbrev>
           <author>
@@ -167,15 +178,19 @@
           <date>1985</date>
           <title>32-bit and 64-bit Floating Point Number Representations</title>
         </biblioentry>
-        <biblioentry xml:id="biblio_ISODirectives3">
-          <abbrev>ISO/IEC Directives, Part 3</abbrev>
-          <author>
-            <orgname>ISO/IEC</orgname>
-          </author>
-          <date>1989</date>
-          <title>Drafting and presentation of International Standards</title>
-        </biblioentry>
-        <biblioentry xml:id="biblio_ISO646">
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
+        <author>
+          <orgname>ISO/IEC</orgname>
+        </author>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
+      </biblioentry>
+      <biblioentry xml:id="biblio_ISO646">
           <abbrev>ISO 646</abbrev>
           <author>
             <orgname>ISO</orgname>
@@ -335,7 +350,15 @@
           <date>2005</date>
           <title>Information technology - Open Systems Interconnection - Procedures for the operation of OSI Registration Authorities: General procedures and top arcs of the ASN.1 Object Identifier tree</title>
         </biblioentry>
-        <biblioentry xml:id="biblio_ISOIEC10918-1">
+        <biblioentry xml:id="biblio_ISOIEC9834-8">
+          <abbrev>ISO/IEC 9834-8</abbrev>
+          <author>
+           <orgname>ISO/IEC</orgname>
+          </author>
+          <date>2014</date>
+          <title>Information technology - Open Systems Interconnection - Procedures for the operation of OSI Registration Authorities: Generation of universally unique identifiers (UUIDs) and their use in object identifiers</title>
+        </biblioentry>
+       <biblioentry xml:id="biblio_ISOIEC10918-1">
           <abbrev>ISO/IEC 10918-1</abbrev>
           <author>
             <orgname>ISO/IEC</orgname>
@@ -350,6 +373,14 @@
           </author>
           <date>1995</date>
           <title>JPEG Standard for digital compression and encoding of continuous-tone still images. Part 2 - Testing</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC10918-5">
+          <abbrev>ISO/IEC 10918-5</abbrev>
+          <author>
+            <orgname>ISO/IEC</orgname>
+          </author>
+          <date>2013</date>
+          <title>JPEG Standard for digital compression and encoding of continuous-tone still images. Part 5 - JPEG File Interchange Format (JFIF)</title>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC11172-3">
           <abbrev>ISO/IEC 11172-3</abbrev>
@@ -463,7 +494,18 @@
           <date>2005</date>
           <title>Information technology - JPEG 2000 image coding system: Interactivity tools, APIs and protocols</title>
         </biblioentry>
-        <biblioentry xml:id="biblio_ENV_41_503">
+      <biblioentry xml:id="biblio_ITU-T_X.667">
+        <abbrev>ITU-T X.667</abbrev>
+        <author>
+          <orgname>ITU</orgname>
+        </author>
+        <date>2012</date>
+        <title>Information technology - Procedures for the operation of object identifier registration authorities: Generation of universally unique identifiers and their use in object identifiers</title>
+        <bibliosource>
+          <link xl:href="http://www.itu.int/rec/T-REC-X.667/en"/>
+        </bibliosource>
+      </biblioentry>
+      <biblioentry xml:id="biblio_ENV_41_503">
           <abbrev>ENV 41 503</abbrev>
           <author>
             <orgname>ENV</orgname>
@@ -512,7 +554,7 @@
           <title>Code for Information Interchange (Hangul and Hanja)</title>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_1468">
-          <abbrev>RFC 1468</abbrev>
+          <abbrev>RFC1468</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -522,7 +564,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_1554">
-          <abbrev>RFC 1554</abbrev>
+          <abbrev>RFC1554</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -532,7 +574,7 @@
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_1951">
-          <abbrev>RFC 1951</abbrev>
+          <abbrev>RFC1951</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -542,7 +584,7 @@
           </bibliosource>
         </biblioentry>
       <biblioentry xml:id="biblio_RFC_3986">
-        <abbrev>RFC 3986</abbrev>
+        <abbrev>RFC3986</abbrev>
           <author>
             <orgname>IETF</orgname>
           </author>
@@ -552,7 +594,7 @@
           </bibliosource>
         </biblioentry>
       <biblioentry xml:id="biblio_RFC_3987">
-        <abbrev>RFC 3987</abbrev>
+        <abbrev>RFC3987</abbrev>
         <author>
           <orgname>IETF</orgname>
         </author>
@@ -562,7 +604,7 @@
         </bibliosource>
       </biblioentry>
       <biblioentry xml:id="biblio_RFC_5890">
-        <abbrev>RFC 5890</abbrev>
+        <abbrev>RFC5890</abbrev>
         <author>
           <orgname>IETF</orgname>
         </author>
@@ -572,7 +614,7 @@
         </bibliosource>
       </biblioentry>
       <biblioentry xml:id="biblio_RFC_5891">
-        <abbrev>RFC 5891</abbrev>
+        <abbrev>RFC5891</abbrev>
         <author>
           <orgname>IETF</orgname>
         </author>
@@ -589,18 +631,18 @@
     <para xml:id="para_19a22c15-35e6-44bc-99c3-c481e6a59d0d">For the purposes of this standard, the following definitions apply.</para>
     <section label="3.1" status="2" xml:id="sect_3.1">
       <title>Reference Model Definitions</title>
-      <para xml:id="para_3b64fe1a-58cf-4e93-996f-c5b454d0841b">This part of the standard makes use of the following terms defined in ISO 7498:</para>
+      <para xml:id="para_3b64fe1a-58cf-4e93-996f-c5b454d0841b">This part of the standard makes use of the following terms defined in <xref linkend="biblio_ISO7498"/>:</para>
       <para xml:id="para_99356006-616c-463b-a3a3-c8e195dda97f">a) Application Entities</para>
       <para xml:id="para_1d0e38a8-c754-400a-a156-6b44c11d8097">b) OSI Presentation Protocol</para>
     </section>
     <section label="3.2" status="2" xml:id="sect_3.2">
       <title>ACSE Service Definitions</title>
-      <para xml:id="para_213b5f71-2df5-44f7-b623-78de9839a678">This part of the standard makes use of the following terms defined in ISO 8649:</para>
+      <para xml:id="para_213b5f71-2df5-44f7-b623-78de9839a678">This part of the standard makes use of the following terms defined in <xref linkend="biblio_ISO8649"/>:</para>
       <para xml:id="para_10438883-300b-4597-bf57-71672943b64e">a) Association</para>
     </section>
     <section label="3.3" status="2" xml:id="sect_3.3">
       <title>Presentation Service Definitions</title>
-      <para xml:id="para_d4172819-25ec-4390-bb3b-764fbfefea30">This part of the standard makes use of the following terms defined in ISO 8822:</para>
+      <para xml:id="para_d4172819-25ec-4390-bb3b-764fbfefea30">This part of the standard makes use of the following terms defined in <xref linkend="biblio_ISO8822"/>:</para>
       <para xml:id="para_0f4365c5-aa19-470b-9457-fd1ef8936cd9">a) Presentation Context</para>
       <para xml:id="para_5617e6fd-86c9-4a4b-9719-a717a3d7c93b">b) Presentation Data Value (PDV)</para>
       <para xml:id="para_aaadf7b6-d53d-49a0-bf03-46585d2393fe">c) Transfer Syntax</para>
@@ -608,7 +650,7 @@
     </section>
     <section label="3.4" status="2" xml:id="sect_3.4">
       <title>Object Identification Definitions</title>
-      <para xml:id="para_cf1401fa-002d-4f5f-9c90-c5b59fe6248e">This part of the standard makes use of the following terms defined in ISO 8824:</para>
+      <para xml:id="para_cf1401fa-002d-4f5f-9c90-c5b59fe6248e">This part of the standard makes use of the following terms defined in <xref linkend="biblio_ISOIEC8824"/>:</para>
       <para xml:id="para_0ffd16a4-fac9-4068-8c4b-345a90b559f6">a) OSI Object Identification</para>
     </section>
     <section label="3.5" status="2" xml:id="sect_3.5">
@@ -1420,6 +1462,9 @@
                   </listitem>
                   <listitem>
                     <para xml:id="para_d46e39cc-cdfa-42e1-b9c8-de559b171268">See also DT VR in this table.</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_b8208da4-1132-455c-bb65-1e5fa04387f1">Dates before year 1582, e.g. used for dating historical or archeological items, are interpreted as proleptic Gregorian calendar dates, unless otherwise specified.</para>
                   </listitem>
                 </orderedlist>
               </note>
@@ -2975,7 +3020,17 @@
         <para xml:id="para_7984993b-9caf-4610-be77-8fa0ed194c66">It is possible that multiple implementers may define Private Elements with the same (odd) group number. To avoid conflicts, Private Elements shall be assigned Private Data Element Tags according to the following rules.</para>
         <orderedlist numeration="loweralpha">
           <listitem>
-            <para xml:id="para_184c146b-050a-44b5-8420-fdf179f0bf0b">Private Creator Data Elements numbered (gggg,0010-00FF) (gggg is odd) shall be used to reserve a block of Elements with Group Number gggg for use by an individual implementer. The implementer shall insert an identification code in the first unused (unassigned) Element in this series to reserve a block of Private Elements. The VR of the private identification code shall be LO (Long String) and the VM shall be equal to 1.</para>
+            <para xml:id="para_184c146b-050a-44b5-8420-fdf179f0bf0b">Private Creator Data Elements numbered (gggg,0010-00FF) (gggg is odd) shall be used to reserve a block of Elements with Group Number gggg for use by an individual implementer. The implementer shall insert an identification code in the first unused (unassigned) Element in this series to reserve a block of Private Elements. The VR of the private identification code shall be LO (Long String) and the VM shall be equal to 1. A Private Creator identifier may be used only once within a Group; reserving multiple blocks of Elements in the same Group with the same identifier is not allowed.</para>
+            <note>
+              <orderedlist>
+                <listitem>
+                  <para xml:id="para_057b129b-322a-455e-b352-40c6c0749bb4">If an implementer needs multiple repetitions of a private element, a private Sequence attribute (see <xref linkend="sect_7.5" xrefstyle="select: label"/>) may be used to contain these multiple items.</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_92d7dbb9-3596-4b2e-bd11-73c799bf71d2">An implementer may use the same Private Creator identifier for multiple Groups.</para>
+                </listitem>
+              </orderedlist>
+            </note>
           </listitem>
           <listitem>
             <para xml:id="para_167ccd9d-9024-4382-b234-56ee7ed8d38a">Private Creator Data Element (gggg,0010), is a Type 1 Data Element that identifies the implementer reserving element (gggg,1000-10FF), Private Creator Data Element (gggg,0011) identifies the implementer reserving elements (gggg,1100-11FF), and so on, until Private Creator Data Element (gggg,00FF) identifies the implementer reserving elements (gggg,FF00-FFFF).</para>
@@ -3207,7 +3262,7 @@
               <para xml:id="para_6424f9ef-dfaa-40ff-9ca9-109d42a93363">Those characteristics not explicitly specified in the compressed data stream (e.g., the color space of the compressed components, which is not specified in the JPEG Interchange Format), or implied by the definition of the compression scheme (e.g., always unsigned in JPEG), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR_FULL_422" would describe the color space that is commonly used to lossy compress images using JPEG. It is unusual to use an RGB color space for lossy compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_e639eb95-8d71-43a2-9a21-017e0bd8eb56">The JPEG Interchange Format is distinct from the JPEG File Interchange Format (JFIF). The JPEG Interchange Format is defined in <xref linkend="biblio_ISOIEC10918-1"/> section 4.9.1, and refers to the inclusion of decoding tables, as distinct from the "abbreviated format" in which these tables are not sent (and the decoder is assumed to already have them). The JPEG Interchange Format does NOT specify the color space. The JPEG File Interchange Format, not part of the original JPEG standard, but defined in ECMA TR-098, and under development as ISO 101918-5, is often used to store JPEG bit streams in consumer format files, and does include the ability to specify the color space of the components. THE JFIF APP0 marker segment is NOT required to be present in DICOM encapsulated JPEG bit streams, and should not be relied upon to recognize the color space. Its presence is not forbidden (unlike the JP2 information for JPEG 2000 Transfer Syntaxes), but it is recommended that it be absent.</para>
+              <para xml:id="para_e639eb95-8d71-43a2-9a21-017e0bd8eb56">The JPEG Interchange Format is distinct from the JPEG File Interchange Format (JFIF). The JPEG Interchange Format is defined in <xref linkend="biblio_ISOIEC10918-1"/> section 4.9.1, and refers to the inclusion of decoding tables, as distinct from the "abbreviated format" in which these tables are not sent (and the decoder is assumed to already have them). The JPEG Interchange Format does NOT specify the color space. The JPEG File Interchange Format, not part of the original JPEG standard, but defined in <xref linkend="biblio_ECMA_TR-098"/> and <xref linkend="biblio_ISOIEC10918-5"/>, is often used to store JPEG bit streams in consumer format files, and does include the ability to specify the color space of the components. The JFIF APP0 marker segment is NOT required to be present in DICOM encapsulated JPEG bit streams, and should not be relied upon to recognize the color space. Its presence is not forbidden (unlike the JP2 information for JPEG 2000 Transfer Syntaxes), but it is recommended that it be absent.</para>
             </listitem>
             <listitem>
               <para xml:id="para_b217610e-776a-4c22-88c2-6c765f687a4b">Should the compression process be incapable of encoding a particular form of pixel data representation (e.g., JPEG cannot encode signed integers, only unsigned integers), then ideally only the appropriate form should be "fed" into the compression process. However, for certain characteristics described in DICOM Data Elements but not explicitly described in the compressed data stream (such as Pixel Representation), then the DICOM Data Element should be considered to describe what has been compressed (e.g., the pixel data really is to be interpreted as signed if Pixel Representation so specifies).</para>
@@ -4588,14 +4643,14 @@
     <note>
       <para xml:id="para_508a7982-7da0-4d39-a151-76a1440d92b2">For example the same UID value cannot be used to identify both a study instance (Study Instance UID) and a series instance (Series Instance UID) within that study or a different study. Implementers also need to be cautioned against building new UID values by derivation (for example by adding a suffix) from a UID assigned by another implementation.</para>
     </note>
-    <para xml:id="para_4e9d91e8-f358-4e7b-8389-507f4b272ff7">The UID identification scheme is based on the OSI Object Identification (numeric form) as defined by the ISO 8824 standard. All Unique Identifiers, used within the context of the DICOM Standard, are registered values as defined by ISO 9834-1 to ensure global uniqueness. The uses of such UIDs are defined in the various Parts of the DICOM Standard.</para>
+    <para xml:id="para_4e9d91e8-f358-4e7b-8389-507f4b272ff7">The UID identification scheme is based on the OSI Object Identification (numeric form) as defined by the <xref linkend="biblio_ISOIEC8824"/> standard. All Unique Identifiers, used within the context of the DICOM Standard, are registered values as defined by <xref linkend="biblio_ISOIEC9834-1"/> to ensure global uniqueness. The uses of such UIDs are defined in the various Parts of the DICOM Standard.</para>
     <para xml:id="para_53527c68-d0af-490c-bbaf-bd1cc36a408a">Each UID is composed of two parts, an &lt;org root&gt; and a &lt;suffix&gt;:</para>
     <itemizedlist mark="none">
       <listitem>
         <para xml:id="para_86a5635e-0779-4e52-a71c-2ffdf453a87c">UID = &lt;org root&gt;.&lt;suffix&gt;</para>
       </listitem>
     </itemizedlist>
-    <para xml:id="para_7cb82a50-f209-426c-bd0c-5a7fff21029a">The &lt;org root&gt; portion of the UID uniquely identifies an organization, (i.e., manufacturer, research organization, NEMA, etc.), and is composed of a number of numeric components as defined by ISO 8824. The &lt;suffix&gt; portion of the UID is also composed of a number of numeric components, and shall be unique within the scope of the &lt;org root&gt;. This implies that the organization identified in the &lt;org root&gt; is responsible for guaranteeing &lt;suffix&gt; uniqueness by providing registration policies. These policies shall guarantee &lt;suffix&gt; uniqueness for all UIDs created by that organization. Unlike the &lt;org root&gt;, which may be common for UIDs in an organization, the &lt;suffix&gt; shall take different unique values between different UIDs that identify different objects.</para>
+    <para xml:id="para_7cb82a50-f209-426c-bd0c-5a7fff21029a">The &lt;org root&gt; portion of the UID uniquely identifies an organization, (i.e., manufacturer, research organization, NEMA, etc.), and is composed of a number of numeric components as defined by <xref linkend="biblio_ISOIEC8824"/>. The &lt;suffix&gt; portion of the UID is also composed of a number of numeric components, and shall be unique within the scope of the &lt;org root&gt;. This implies that the organization identified in the &lt;org root&gt; is responsible for guaranteeing &lt;suffix&gt; uniqueness by providing registration policies. These policies shall guarantee &lt;suffix&gt; uniqueness for all UIDs created by that organization. Unlike the &lt;org root&gt;, which may be common for UIDs in an organization, the &lt;suffix&gt; shall take different unique values between different UIDs that identify different objects.</para>
     <para xml:id="para_fb82b1f7-fd1a-448c-a99a-9e7144b697d6">The &lt;org root&gt; "1.2.840.10008" is reserved for DICOM defined items (such as DICOM Transfer Syntaxes) and shall not be used for privately defined items (such as an Image Instance).</para>
     <para xml:id="para_85ad2518-509a-47b3-bb2f-d196fd289140">Although a specific implementation may choose some particular structure for its generated UIDs, it should never assume that a UID carries any semantics. Thus, a UID shall not be "parsed" to find a particular value or component. Component definition (for the suffix) is implementation specific and may change as long as uniqueness is maintained. Parsing UIDs may jeopardize the ability to inter-operate as implementations evolve.</para>
     <para xml:id="para_ff378a31-57bc-4bd9-b3dd-e88c6094fe0e">Example of UID structure is given in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.</para>
@@ -4642,7 +4697,7 @@
       </section>
       <section label="9.2.2" status="3" xml:id="sect_9.2.2">
         <title>Privately Defined Unique Identifiers</title>
-        <para xml:id="para_697b1fa9-d822-41a5-837a-e5cf179ae5fd">Privately Defined UIDs are commonly used within DICOM. However, such UIDs will not be registered by NEMA. Organizations that define private UIDs are responsible for properly registering their UIDs (at least obtain a registered &lt;Org Root&gt;) as defined for OSI Object Identifiers (ISO 9834-1). The private organization defining the UID shall accept the responsibility of ensuring its uniqueness.</para>
+        <para xml:id="para_697b1fa9-d822-41a5-837a-e5cf179ae5fd">Privately Defined UIDs are commonly used within DICOM. However, such UIDs will not be registered by NEMA. Organizations that define private UIDs are responsible for properly registering their UIDs (at least obtain a registered &lt;Org Root&gt;) as defined for OSI Object Identifiers <xref linkend="biblio_ISOIEC9834-1"/>. The private organization defining the UID shall accept the responsibility of ensuring its uniqueness.</para>
       </section>
     </section>
   </chapter>
@@ -5817,7 +5872,7 @@
         </note>
         <para xml:id="para_b4c579fd-5d9f-4c45-a18e-a7e377e6ee57">For all images, including all frames of a multi-frame image, the JPEG Interchange Format shall be used (the table specification shall be included).</para>
         <note>
-          <para xml:id="para_7e177ec0-1d10-4178-9781-10569107c160">This refers to the ISO 10918-1 "interchange format", not the ISO 10918-5 JPEG File Interchange Format (JFIF).</para>
+          <para xml:id="para_7e177ec0-1d10-4178-9781-10569107c160">This refers to the <xref linkend="biblio_ISOIEC10918-1"/> "interchange format", not the <xref linkend="biblio_ISOIEC10918-5"/> JPEG File Interchange Format (JFIF).</para>
         </note>
         <para xml:id="para_822bfd5b-306d-43cf-95fe-9123126b697d">If images with Photometric Interpretation (0028,0004) YBR_FULL_422 or YBR_PARTIAL_422, are encoded with JPEG coding Process 1 (non hierarchical with Huffman coding), identified by DICOM Transfer Syntax UID "1.2.840.10008.1.2.4.50"the minimum compressible unit is YYCBCR, where Y, CB, and CR are 8 by 8 blocks of pixel values. The data stream encodes two Y blocks followed by the corresponding CB and CR blocks.</para>
       </section>
@@ -5828,7 +5883,7 @@
       </section>
       <section label="A.4.3" status="3" xml:id="sect_A.4.3">
         <title>JPEG-LS Image Compression</title>
-        <para xml:id="para_bb588e44-6c19-409a-bc82-eeadf45b36c7">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS-14495-1 (JPEG-LS Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
+        <para xml:id="para_bb588e44-6c19-409a-bc82-eeadf45b36c7">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, <xref linkend="biblio_ISOIEC14495-1"/> (JPEG-LS Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para xml:id="para_50ad5f9e-67ec-405b-8aba-15ec24c1bb59">A DICOM Transfer Syntax for JPEG-LS Image Compression shall be identified by a UID value, appropriate to its JPEG-LS coding process.</para>
         <para xml:id="para_28e21f5e-7477-472d-a7f4-8e27bbdc9cc9">Two Transfer Syntaxes are specified for JPEG-LS:</para>
         <orderedlist>
@@ -5847,7 +5902,7 @@
       </section>
       <section label="A.4.4" status="3" xml:id="sect_A.4.4">
         <title>JPEG 2000 Image Compression</title>
-        <para xml:id="para_83279ae5-ca69-460a-a33a-94159c991927">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, ISO/IS 15444-1 (JPEG 2000 Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
+        <para xml:id="para_83279ae5-ca69-460a-a33a-94159c991927">The International Standards Organization ISO/IEC JTC1 has developed an International Standard, <xref linkend="biblio_ISOIEC15444-1"/> (JPEG 2000 Part 1), for digital compression and coding of continuous-tone still images (see <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> for further details).</para>
         <para xml:id="para_2bf4d123-b0c1-4cad-b569-f453bac514c1">A DICOM Transfer Syntax for JPEG 2000 Image Compression shall be identified by a UID value, appropriate to the choice of JPEG 2000 coding process.</para>
         <para xml:id="para_06500b71-3629-459f-b21e-5e6512edd819">Two Transfer Syntaxes are specified for JPEG 2000 Part 1:</para>
         <orderedlist numeration="arabic">
@@ -6136,10 +6191,8 @@
     </section>
     <section label="B.2" status="2" xml:id="sect_B.2">
       <title>UUID Derived UID</title>
-      <para xml:id="para_1d439832-2824-40af-aa54-0619d57a50fd">ISO/IEC 9834-8 / ITU-T X.667 defines a method by which a UID may be constructed from the root "2.25." followed by a decimal representation of a Universally Unique Identifier (UUID). That decimal representation treats the 128 bit UUID as an integer, and may thus be up to 39 digits long (leading zeros must be suppressed).</para>
-      <note>
-        <para xml:id="para_d317721a-4f9e-436e-ad11-30797690cb80">ISO/IEC 9834-8 / ITU-T X.667 is available at <link xl:href="http://www.itu.int/rec/T-REC-X.667/en"/>.</para>
-      </note>
+      <para xml:id="para_1d439832-2824-40af-aa54-0619d57a50fd">
+<xref linkend="biblio_ISOIEC9834-8"/> / <xref linkend="biblio_ITU-T_X.667"/> defines a method by which a UID may be constructed from the root "2.25." followed by a decimal representation of a Universally Unique Identifier (UUID). That decimal representation treats the 128 bit UUID as an integer, and may thus be up to 39 digits long (leading zeros must be suppressed).</para>
       <para xml:id="para_35ef9005-8914-4a15-82f3-37d07fe44f59">A UUID derived UID may be appropriate for dynamically created UIDs, such as SOP Instance UIDs, but is usually not appropriate for UIDs determined during application software design, such as private SOP Class or Transfer Syntax UIDs, or Implementation Class UIDs.</para>
     </section>
   </chapter>
@@ -6161,16 +6214,16 @@
 </para>
       </listitem>
     </itemizedlist>
-    <para xml:id="para_24e29806-5be9-4491-8900-3da96c1a0750">UID structure is based on the numeric form of the OSI Object Identifier as defined by ISO 8824. Values shall be registered as defined by ISO 9834-1 to ensure global uniqueness.</para>
+    <para xml:id="para_24e29806-5be9-4491-8900-3da96c1a0750">UID structure is based on the numeric form of the OSI Object Identifier as defined by <xref linkend="biblio_ISOIEC8824"/>. Values shall be registered as defined by <xref linkend="biblio_ISOIEC9834-1"/> to ensure global uniqueness.</para>
     <para xml:id="para_6a78dede-58cb-44cf-996c-7f786829fb3a">The DICOM Standard assigns Values to a number of such unique identifiers. The organization responsible for their registration is NEMA, which guarantees uniqueness.</para>
-    <para xml:id="para_1ffb6533-9c93-4d44-9830-99e40a6605cc">For privately registered identifiers, NEMA will not act as registration authority. Related organizations shall obtain their proper registration as defined for OSI Object Identifiers by ISO 9834-1 to ensure global uniqueness. National Standards Organizations representing a number of countries (e.g., UK, France, Japan, USA, etc.) for the International Standards Organization act as a registration authority by delegation from ISO, as defined by ISO 9834-1.</para>
+    <para xml:id="para_1ffb6533-9c93-4d44-9830-99e40a6605cc">For privately registered identifiers, NEMA will not act as registration authority. Related organizations shall obtain their proper registration as defined for OSI Object Identifiers by <xref linkend="biblio_ISOIEC9834-1"/> to ensure global uniqueness. National Standards Organizations representing a number of countries (e.g., UK, France, Japan, USA, etc.) for the International Standards Organization act as a registration authority by delegation from ISO, as defined by <xref linkend="biblio_ISOIEC9834-1"/>.</para>
     <note>
       <orderedlist numeration="arabic">
         <listitem>
           <para xml:id="para_94940f63-97fb-473f-ae85-dcaece3090ac">For example, in the USA ANSI assigns, for a fee, Organization Identifiers to any requesting organization. Such an identifier may be used by the identified organization as a root to which it may add a suffix made of one or more components. The identified organization accepts the responsibility to properly register these suffixes to ensure uniqueness.</para>
         </listitem>
         <listitem>
-          <para xml:id="para_aad0ba04-9e07-4118-a15b-755fc5c932e8">Following are two typical examples of obtaining a UID &lt;org root&gt;. These examples are not intended to illustrate all the possible methods for obtaining a UID &lt;org root&gt;, see ISO 8824 and ISO 9834-1 for complete specifications. Organization identifiers may be obtained from various ISO member bodies (e.g., IBN in Belgium, ANSI in the United States, AFNOR in France, BSI in Great Britain, DIN in Germany, COSIRA in Canada).</para>
+          <para xml:id="para_aad0ba04-9e07-4118-a15b-755fc5c932e8">Following are two typical examples of obtaining a UID &lt;org root&gt;. These examples are not intended to illustrate all the possible methods for obtaining a UID &lt;org root&gt;, see <xref linkend="biblio_ISOIEC8824"/> and <xref linkend="biblio_ISOIEC9834-1"/> for complete specifications. Organization identifiers may be obtained from various ISO member bodies (e.g., IBN in Belgium, ANSI in the United States, AFNOR in France, BSI in Great Britain, DIN in Germany, COSIRA in Canada).</para>
           <para xml:id="para_f227c2e0-d982-4fca-8edc-a8ca4b5adb21">The first example shows the case of an &lt;org root&gt; issued by an ISO Member Body (ANSI in the USA in this example). The &lt;org root&gt; is composed of an identifier for ISO, a member body branch identifier, a country code and an organization ID. Note that there is no requirement that an implementation using an ANSI issued &lt;org root&gt; be made or located in the USA. The &lt;org root&gt; is made up of the following components: 1.2.840.xxxxx</para>
           <itemizedlist>
             <listitem>

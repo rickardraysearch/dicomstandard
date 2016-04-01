@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.4" version="5.0" xml:id="PS3.4">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2016a - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2016b - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_8394fd0e-eba6-4271-bb9b-4730c7a13b2a">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_92db2498-5673-4c45-af9c-8962ed4495cc">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_92db2498-5673-4c45-af9c-8962ed4495cc">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_005795b6-0a9d-454b-ba8e-f9469d55b855">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_70a8d5d4-cba5-46a7-a60d-932cb142d3ce">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_55456d93-fdf2-43f6-85ce-45e09f526232">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -108,13 +108,17 @@
     <title>Normative References</title>
     <para xml:id="para_9c5bd01c-d918-409f-94c5-a3f4f3b56d51">The following standards contain provisions which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
     <para xml:id="para_70c21431-7e21-480f-b83d-5672236d8337">ISO 7498-1 Information Processing Systems-Open Systems Interconnection- Basic Reference Model</para>
@@ -2942,7 +2946,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2b4279fe-9de1-4015-a6f1-58da7262e151">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.14" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -2983,6 +2987,17 @@
               <para xml:id="para_853e8ca2-6d93-4711-bfa9-670c4f547a4f">
 <olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
 </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_01e8db9e-925b-4b06-86bf-f3914e261ce4">Content Assessment Results Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6ad602c6-380d-43fa-937e-26513b488cd0">1.2.840.10008.5.1.4.1.1.90.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <olink targetdoc="PS3.3" targetptr="sect_A.81" xrefstyle="select: title"/>
             </td>
           </tr>
           <tr valign="top">
@@ -3504,6 +3519,10 @@
           </itemizedlist>
           <para xml:id="para_20032327-9a10-4066-8a27-7c03a04ba0a8">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of MONOCHROME for Pixel Presentation (0008,9205) and shall have only a single item in the Volumetric Presentation State Input Sequence (0070,1201).</para>
           <para xml:id="para_a2912829-bba5-4739-a9e4-4b35b636aafc">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of TRUE COLOR for Pixel Presentation (0008,9205).</para>
+        </section>
+        <section label="B.5.1.20" status="4" xml:id="sect_B.5.1.20">
+          <title>Content Assessment Results Storage SOP Classes</title>
+          <para xml:id="para_09197df5-6ec4-47c3-bba5-d4b4f7ed1b41">An SCU of the Content Assessment Results Storage SOP Class that creates SOP Instances of the Class shall identify in its Conformance Statement the criteria for setting the Observation Significance (0082,0008).</para>
         </section>
       </section>
     </section>
@@ -18119,7 +18138,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0e799e77-4481-4ffb-bee9-edaeb9ef204b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.14" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -18160,6 +18179,17 @@
               <para xml:id="para_9f22748f-a7b9-485c-8776-d1b848e36b65">
 <olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
 </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_aacbcaf7-cd3f-4f06-92f5-5c230d600309">Content Assessment Results Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_908da0d9-f058-4ea3-88c5-64ae667f19a7">1.2.840.10008.5.1.4.1.1.90.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <olink targetdoc="PS3.3" targetptr="sect_A.81" xrefstyle="select: title"/>
             </td>
           </tr>
           <tr valign="top">
@@ -20256,7 +20286,7 @@
                     <para xml:id="para_a123c160-7a76-4552-8d0b-207bc9d741f7">1</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_6843b14d-ebd8-40bf-82e0-953b5afed8b7">The Scheduled station AE title shall be retrieved with Single Value Matching only.</para>
+                    <para xml:id="para_6843b14d-ebd8-40bf-82e0-953b5afed8b7">Scheduled Station AE Title shall be retrieved with Single Value Matching only.</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -22837,7 +22867,7 @@
           <para xml:id="para_84b543cd-10cf-41e5-a6ae-04e657911df6">Content items referenced from another SR object instance, such as a prior Mammography CAD SR, Chest CAD SR or Colon CAD SR shall be inserted by-value in the new SR object instance, with appropriate original source observation context. It is necessary to update Rendering Intent, and referenced content item identifiers for by-reference relationships, within content items paraphrased from another source.</para>
         </section>
         <section label="O.2.1.2" status="4" xml:id="sect_O.2.1.2">
-          <title>Extensible SR SOP Classes</title>
+          <title>Extensible SR SOP Class</title>
           <para xml:id="para_b5e31953-456f-4ce2-947e-0aa7dd5c7cf7">The concept of extensibility implies that a recipient may encounter Content Items, Value Types and Relationship Types that are unanticipated and unsupported and hence potentially unrenderable.</para>
           <para xml:id="para_f08c9759-9193-4ee5-a8d6-7e3539e69dc9">An implementation shall identify in its Conformance Statement which Content Items, Value Types and Relationship Types it creates.</para>
         </section>
@@ -22865,7 +22895,7 @@
           <para xml:id="para_6bdff43a-eabf-4658-9ea0-831a02c90c0d">The SCP may further interpret whether or not to render a Single Image Finding that has Rendering Intent "Presentation Optional" by interpreting the value of the CAD Operating Point content item that is subordinate to the Rendering Intent, if present. If the CAD Operating Point content item is not present, then rendering of the Single Image Finding may be based on recommendations in the creator's DICOM Conformance Statement. For further information on the intended use of CAD Operating Point see <olink targetdoc="PS3.17" targetptr="sect_E.4" xrefstyle="select: docname label quotedtitle"/>.</para>
         </section>
         <section label="O.2.2.2" status="4" xml:id="sect_O.2.2.2">
-          <title>Extensible SR SOP Classes</title>
+          <title>Extensible SR SOP Class</title>
           <para xml:id="para_9d5f1a85-e5eb-4c3f-97ce-bc0b46024e27">The concept of extensibility implies that a recipient may encounter Content Items, Value Types and Relationship Types that are unanticipated and unsupported and hence potentially unrenderable.</para>
           <para xml:id="para_602c1438-2ea8-487f-a045-c8d32c2b5797">An implementation shall identify in its Conformance Statement which Content Items, Value Types and Relationship Types it supports.</para>
           <para xml:id="para_a71adeaf-e43b-4ed4-a98c-47e7c3f2200e">Since it may not be possible to render the entire content in an unambiguous manner because of unrecognized content, an SCP intending to display or otherwise render an Extensible SR SOP Instance</para>

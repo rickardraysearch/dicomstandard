@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2016a - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2016b - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_257fca81-0098-45fc-a6b9-4211cecffacb">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_4a82de5e-27cd-4215-a7dd-47566638a191">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_4a82de5e-27cd-4215-a7dd-47566638a191">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_d8960675-07c1-4e16-a409-2b3156f2e187">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_7838319f-c17b-4a8e-bfcb-3225a7cd8f90">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_bcae2e85-3d85-4a8f-8dea-1f74bb06db86">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -121,13 +121,17 @@
       <title>Normative References</title>
       <para xml:id="para_2612bf49-a179-4def-8941-8848692dca1f">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
       <bibliography>
-        <biblioentry xml:id="biblio_ISODirectives3">
-          <abbrev>ISO/IEC Directives, Part 3</abbrev>
+        <biblioentry xml:id="biblio_ISODirectives2">
+          <abbrev>ISO/IEC Directives, Part 2</abbrev>
           <author>
             <orgname>ISO/IEC</orgname>
           </author>
-          <date>1989</date>
-          <title>Drafting and presentation of International Standards</title>
+          <date>2011/04</date>
+          <edition>6.0</edition>
+          <title>Rules for the structure and drafting of International Standards</title>
+          <bibliosource>
+            <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+          </bibliosource>
         </biblioentry>
       </bibliography>
       <para xml:id="para_c6105f8c-c6e3-4611-8fb0-273e40320fea">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
@@ -135,8 +139,8 @@
       <para xml:id="para_2d54a21a-e3e0-4eea-8e06-148d09708a77">ISO/TR 8509, Information Processing Systems - Open Systems Interconnection - Service Conventions</para>
       <para xml:id="para_c06f580c-5653-4239-82d0-dcfae325b05d">ISO 8822, Information Processing Systems - Open Systems Interconnection - Connection-Oriented Presentation Service Definition.</para>
       <para xml:id="para_8186ef74-f9c0-42fd-bcfd-4b135316b397">ISO 8859, Information Processing - 8-bit single-byte coded graphic character sets - Part 1: Latin Alphabet No. 1</para>
-      <para xml:id="para_fb74e0ae-581c-4d87-842c-623c3bd489f4">RFC-3369, Cryptographic Message Syntax, August 2002</para>
-      <para xml:id="para_0b262212-de3e-473b-84c2-dae4cc31be52">RFC 2557 MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</para>
+      <para xml:id="para_fb74e0ae-581c-4d87-842c-623c3bd489f4">RFC3369, Cryptographic Message Syntax, August 2002</para>
+      <para xml:id="para_0b262212-de3e-473b-84c2-dae4cc31be52">RFC2557 MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</para>
     </section>
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
@@ -371,7 +375,7 @@
         <varlistentry>
           <term>Secure DICOM File</term>
           <listitem>
-            <para xml:id="para_4edcdb27-907e-43c6-b05e-d3ab565f1f73">A DICOM File that is encapsulated with the Cryptographic Message Syntax specified in RFC 2630.</para>
+            <para xml:id="para_4edcdb27-907e-43c6-b05e-d3ab565f1f73">A DICOM File that is encapsulated with the Cryptographic Message Syntax specified in RFC2630.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -1052,7 +1056,7 @@
     </section>
     <section label="7.4" status="2" xml:id="sect_7.4">
       <title>Secure DICOM File Format</title>
-      <para xml:id="para_798791cd-6f8e-443b-a737-fbfeb3f234cb">A Secure DICOM File shall contain a single DICOM File encapsulated with the Cryptographic Message Syntax as defined in RFC 3369. Depending on the cryptographic algorithms used for encapsulation, a Secure DICOM File can provide one or more the following security properties:</para>
+      <para xml:id="para_798791cd-6f8e-443b-a737-fbfeb3f234cb">A Secure DICOM File shall contain a single DICOM File encapsulated with the Cryptographic Message Syntax as defined in RFC3369. Depending on the cryptographic algorithms used for encapsulation, a Secure DICOM File can provide one or more the following security properties:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_60814adf-647c-4acd-b489-1d3f40cd620c">Data Confidentiality (by means of encryption)</para>
@@ -1126,7 +1130,7 @@
             <para xml:id="para_735905e1-a81e-4a61-ba8b-d66f6d8ee85d">The DICOM File Service does not specify any "separator" between the Components of the File ID. This is a Value Representation issue that may be addressed in a specific manner by each Media Format Layer. In DICOM IODs, File ID Components are generally handled as multiple Values and separated by "backslashes". There is no requirement that Media Format Layers use this separator.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_e3c78549-61f9-4591-9758-45ff1316ace4">DICOM files stored on interchange media may have an alternate file name or link that uses less restricted file names, such as a filename extension (e.g., ".dcm" in accordance with RFC 3240).</para>
+            <para xml:id="para_e3c78549-61f9-4591-9758-45ff1316ace4">DICOM files stored on interchange media may have an alternate file name or link that uses less restricted file names, such as a filename extension (e.g., ".dcm" in accordance with RFC3240).</para>
           </listitem>
         </orderedlist>
       </note>
@@ -2042,7 +2046,7 @@
         <para xml:id="para_d2340592-3e8c-4087-b110-3e2e68e011e9">an XML document with any multimedia components encoded in-line, and stored in a single file. The file shall be stored on the media with a File ID as defined for DICOM files. There shall be no preamble or header in the file prior to the XML content. For the purpose of identifying the Transfer Syntax of such a stored file from the DICOMDIR, the Transfer Syntax UID "1.2.840.10008.1.2.6.2" is specified for an XML encoded document.</para>
       </listitem>
       <listitem>
-        <para xml:id="para_6de5b624-b435-4b8e-b72f-bf444281d3cb">a Multipart MIME package, as described in RFC 2557 "MIME Encapsulation of Aggregate Documents, such as HTML (MHTML) " (http://www.ietf.org/rfc/rfc2557.txt). A single package shall be stored in a single file, and shall encapsulate a single HL7 Structured Document and its referenced multimedia. The file shall be stored on the media with a File ID as defined for DICOM files. There shall be no preamble or header in the file prior to the MIME headers. For the purpose of identifying the Transfer Syntax of such a stored file from the DICOMDIR, the Transfer Syntax UID "1.2.840.10008.1.2.6.1" is specified for RFC 2557 MIME Encapsulation.</para>
+        <para xml:id="para_6de5b624-b435-4b8e-b72f-bf444281d3cb">a Multipart MIME package, as described in RFC2557 "MIME Encapsulation of Aggregate Documents, such as HTML (MHTML) " (http://www.ietf.org/rfc/rfc2557.txt). A single package shall be stored in a single file, and shall encapsulate a single HL7 Structured Document and its referenced multimedia. The file shall be stored on the media with a File ID as defined for DICOM files. There shall be no preamble or header in the file prior to the MIME headers. For the purpose of identifying the Transfer Syntax of such a stored file from the DICOMDIR, the Transfer Syntax UID "1.2.840.10008.1.2.6.1" is specified for RFC2557 MIME Encapsulation.</para>
       </listitem>
     </itemizedlist>
     <note>

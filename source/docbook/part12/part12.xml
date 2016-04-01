@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.12" version="5.0" xml:id="PS3.12">
   <title>PS3.12</title>
-  <subtitle>DICOM PS3.12 2016a - Media Formats and Physical Media for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.12 2016b - Media Formats and Physical Media for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -49,7 +49,7 @@
   <chapter label="" status="1" xml:id="chapter_Foreword">
     <title>Foreword</title>
     <para xml:id="para_72f4628f-c605-4bb8-80c8-8fe22e5e8471">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
-    <para xml:id="para_19567d44-0801-49b5-a6d8-2ef5f7e621f3">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_19567d44-0801-49b5-a6d8-2ef5f7e621f3">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_cf1d5b72-4ab9-40d7-8ccb-19b0ab96a953">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_cbe783ae-9bc3-44ed-b367-c0837b855420">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_8da0c031-2e58-483b-b3ff-27179405b309">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -72,13 +72,17 @@
     <title>Normative References</title>
     <para xml:id="para_b71853b3-598b-4955-b38d-60057f4b48c9">The following standards contain provisions that, through references in this text, constitute provisions of this standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
     <para xml:id="para_445d3fd1-6f23-4d83-9af6-29f11badc232">ISO/IEC 10090 Continuous Composite Format and Cartridge Standard</para>
@@ -121,7 +125,7 @@
     <para xml:id="para_7e9e2cbb-9f98-4105-8806-f39ca85b8e50">Blu-ray Disc™ Association. White Paper Blu-ray Disc™ Recordable Format Part 1 Physical Specifications (February 2006).</para>
     <para xml:id="para_4e87afc6-e74c-4260-a682-08e774e46c9a">Blu-ray Disc™ Association. White Paper Blu-ray Disc™ 1.C Physical Format Specifications for BD-ROM 5
   <superscript>th</superscript>Edition (March, 2007).</para>
-    <para xml:id="para_9d4cb98e-acad-44c7-9296-55d5fe7604c9">RFC 3240, Digital Imaging and Communications in Medicine (DICOM) - Application/dicom MIME Sub-type Registration</para>
+    <para xml:id="para_9d4cb98e-acad-44c7-9296-55d5fe7604c9">RFC3240, Digital Imaging and Communications in Medicine (DICOM) - Application/dicom MIME Sub-type Registration</para>
     <para xml:id="para_48112795-d525-48e4-b75e-119ab152bc30">ISO/IEC IS 15286:1999 Data Interchange on 130mm Optical Disk Cartridges - Capacity 5.2GB Per Cartridge.</para>
     <para xml:id="para_0a9687cc-42d9-4e2b-b9ba-649b4b4ae931">GIGAMO 2.3GB 90mm Magneto-Optical Disk System, Cherry Book2 version 1.0</para>
     <para xml:id="para_753c7896-ad67-4104-aca0-f547fee787a4">Universal Serial Bus Specification Revision 2.0 USB Implementors Forum</para>
@@ -129,13 +133,13 @@
     <para xml:id="para_c6d8e97e-8a38-4a0e-8956-36ad336c8b5b">CF+ and CompactFlash Specification, Revision 1.4 or later CompactFlash Association</para>
     <para xml:id="para_aba84552-1082-41f0-baf9-efffb9e23ac7">MMCA System Specification version 3.3.1 MultiMedia Card Association</para>
     <para xml:id="para_369e5880-d5a4-4e8a-8ffc-8ec2c1410853">SD Card specification version 1.0 CD Card Association</para>
-    <para xml:id="para_a0848606-bf81-44bf-b560-21b6ec5e0df0">RFC 1939 Post Office Protocol - Version 3 (POP3)</para>
-    <para xml:id="para_cf3aa200-319d-4393-9ba5-7fb4376daac2">RFC 2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</para>
-    <para xml:id="para_e2734887-6e80-4e7f-8ec5-31941fa5e669">RFC 2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</para>
-    <para xml:id="para_2463c56c-769a-4c45-b770-3810ea918255">RFC 2821 Simple Mail Transfer Protocol (SMTP)</para>
-    <para xml:id="para_9ead4bad-c6ba-487c-baf0-2a5429bca821">RFC 3464 An Extensible Message Format for Delivery Status Notifications</para>
-    <para xml:id="para_c4a79aa0-0c4a-4e07-ba5d-7e24f0222d45">RFC 3501 Internet Message Access Protocol - Version 4rev1 (IMAP4)</para>
-    <para xml:id="para_7595a676-f95a-4501-87cf-2d5f2e442607">RFC 3798 Message Disposition Notification</para>
+    <para xml:id="para_a0848606-bf81-44bf-b560-21b6ec5e0df0">RFC1939 Post Office Protocol - Version 3 (POP3)</para>
+    <para xml:id="para_cf3aa200-319d-4393-9ba5-7fb4376daac2">RFC2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</para>
+    <para xml:id="para_e2734887-6e80-4e7f-8ec5-31941fa5e669">RFC2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</para>
+    <para xml:id="para_2463c56c-769a-4c45-b770-3810ea918255">RFC2821 Simple Mail Transfer Protocol (SMTP)</para>
+    <para xml:id="para_9ead4bad-c6ba-487c-baf0-2a5429bca821">RFC3464 An Extensible Message Format for Delivery Status Notifications</para>
+    <para xml:id="para_c4a79aa0-0c4a-4e07-ba5d-7e24f0222d45">RFC3501 Internet Message Access Protocol - Version 4rev1 (IMAP4)</para>
+    <para xml:id="para_7595a676-f95a-4501-87cf-2d5f2e442607">RFC3798 Message Disposition Notification</para>
     <para xml:id="para_e7fb4972-0dab-480b-9be4-58703c1fd8ba">ZIP File Format Specification, PKWARE, Inc.</para>
     <para xml:id="para_2fbe8b74-1ade-442c-a1ca-c00f29a7b27a">Microsoft Extensible Firmware Initiative FAT32 File System Specification, rev. 1.03, December 6, 2000</para>
   </chapter>
@@ -1345,7 +1349,7 @@
         <note>
           <orderedlist>
             <listitem>
-              <para xml:id="para_de138333-16b0-4f1d-94e8-d6306c7b70e1">RFC 3240 describes under the heading of additional information that a Macintosh File Type Code of "DICM" be used for DICOM files.</para>
+              <para xml:id="para_de138333-16b0-4f1d-94e8-d6306c7b70e1">RFC3240 describes under the heading of additional information that a Macintosh File Type Code of "DICM" be used for DICOM files.</para>
             </listitem>
             <listitem>
               <para xml:id="para_34daa45c-3cea-4a10-b0f1-f50d8638ca3f">Where Universal Type Identifiers (UTIs) are in use, it is recommended that a UTI of org.nema.dicom be used for DICOM files, which is defined here as conforming to public.data (not public.image, since not all DICOM files are images), and is defined to correspond to the tags 'DICM', .dcm and Application/dicom. The UTI property UTTypeIdentifier is "DICOM" and the UTI property UTTypeReferenceURL is http://dicom.nema.org/.</para>
@@ -1365,7 +1369,7 @@
     </section>
   </chapter>
   <chapter label="L" status="1" xml:id="chapter_L">
-    <title>RFC 3240 - Digital Imaging and Communications in Medicine (dicom) - Application/dicom MIME Sub-type Registration (Informative)</title>
+    <title>RFC3240 - Digital Imaging and Communications in Medicine (dicom) - Application/dicom MIME Sub-type Registration (Informative)</title>
     <programlisting><![CDATA[Network Working Group                                          D. Clunie
 Request for Comments: 3240                                 E. Cordonnier
 Category: Informational                                  DICOM Committee
@@ -2552,14 +2556,14 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
       <section label="W.2.1" status="3" xml:id="sect_W.2.1">
         <title>Sender of the Email</title>
         <para xml:id="para_4d096403-1669-43d6-8e22-99df7511eabe">The sender Application Entity composes an email and sends that email using a standard email transmission protocol.</para>
-        <para xml:id="para_0c1f918b-e7d5-4b87-8abf-112d3675ef2c">The sender shall compose an email in compliance with RFCs 2045 and 2046, as a MIME Encoded email. RFC 2046 defines both MIME encoding and the mechanisms to be used for breaking up the email message if it is too large for the email system to send as a single email. The sender may request delivery acknowledgment and problem notification in accordance with RFCs 3464 and 3798, but shall be prepared for email recipients that do not implement RFCs 3464 and 3798. The sender shall send the email by means of Simple Mail Transfer Protocol (RFC 2821).</para>
+        <para xml:id="para_0c1f918b-e7d5-4b87-8abf-112d3675ef2c">The sender shall compose an email in compliance with RFCs 2045 and 2046, as a MIME Encoded email. RFC2046 defines both MIME encoding and the mechanisms to be used for breaking up the email message if it is too large for the email system to send as a single email. The sender may request delivery acknowledgment and problem notification in accordance with RFCs 3464 and 3798, but shall be prepared for email recipients that do not implement RFCs 3464 and 3798. The sender shall send the email by means of Simple Mail Transfer Protocol (RFC2821).</para>
         <note>
           <para xml:id="para_c0895e38-d24b-4b40-a5f8-12fb4e3d3d50">The sender Application Entity does not need to be a single software program. For example, the attachment file may be created independently and then a generic email program used to manage attaching the file and sending the email.</para>
         </note>
       </section>
       <section label="W.2.2" status="3" xml:id="sect_W.2.2">
         <title>Recipient of the Email</title>
-        <para xml:id="para_80f17440-3832-46d1-b0a6-e100899c66c2">The recipient Application Entity shall be able to receive an email by means of one or more of POP3 (RFC 1939), IMAP4 (RFC 3501), or SMTP (RFC 2821), and extract the attachment specified in the Application Profile. The recipient shall comply with RFC 2046, and may comply with RFCs 3464 and 3798.</para>
+        <para xml:id="para_80f17440-3832-46d1-b0a6-e100899c66c2">The recipient Application Entity shall be able to receive an email by means of one or more of POP3 (RFC1939), IMAP4 (RFC3501), or SMTP (RFC2821), and extract the attachment specified in the Application Profile. The recipient shall comply with RFC2046, and may comply with RFCs 3464 and 3798.</para>
       </section>
     </section>
   </chapter>

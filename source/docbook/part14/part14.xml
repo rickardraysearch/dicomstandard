@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" label="PS3.14" version="5.0" xml:id="PS3.14">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.14" version="5.0" xml:id="PS3.14">
   <title>PS3.14</title>
-  <subtitle>DICOM PS3.14 2016a - Grayscale Standard Display Function</subtitle>
+  <subtitle>DICOM PS3.14 2016b - Grayscale Standard Display Function</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -53,7 +53,7 @@
     <para xml:id="para_08f0a827-1eb0-4097-8a83-667a9a0f6ffa">A digital signal from an image can be measured, characterized, transmitted, and reproduced objectively and accurately. However, the visual interpretation of that signal is dependent on the varied characteristics of the systems displaying that image. Currently, images produced by the same signal may have completely different visual appearance, information, and characteristics on different display devices.</para>
     <para xml:id="para_5441b9e0-9447-4680-a310-b2d659cd902f">In medical imaging, it is important that there be a visual consistency in how a given digital image appears, whether viewed, for example, on the display monitor of a workstation or as a film on a light-box. In the absence of any standard that regulates how these images are to be visually presented on any device, a digital image that has good diagnostic value when viewed on one device could look very different and have greatly reduced diagnostic value when viewed on another device. Accordingly, PS3.14 was developed to provide an objective, quantitative mechanism for mapping digital image values into a given range of Luminance. An application that knows this relationship between digital values and display Luminance can produce better visual consistency in how that image appears on diverse display devices. The relationship that PS3.14 defines between digital image values and displayed Luminance is based upon measurements and models of human perception over a wide range of
   Luminance, not upon the characteristics of any one image presentation device or of any one imaging modality. It is also not dependent upon user preferences, which can be more properly handled by other constructs such as the DICOM Presentation Lookup Table.</para>
-    <para xml:id="para_7ace0542-398d-485f-b9e8-8dcef5a40d63">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives3"/>.</para>
+    <para xml:id="para_7ace0542-398d-485f-b9e8-8dcef5a40d63">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_58d0daed-2abd-4efc-959a-f70bc75f534c">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_244f0d33-ef99-4fc2-97ec-faae9a181718">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_052f5f7a-2965-4b98-8b3c-e3d13aa19dbb">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -69,13 +69,17 @@
     <title>Normative References</title>
     <para xml:id="para_a402894b-ba69-437d-99a8-a23a0b2b2a83">The following standards contain provisions, which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
-      <biblioentry xml:id="biblio_ISODirectives3">
-        <abbrev>ISO/IEC Directives, Part 3</abbrev>
+      <biblioentry xml:id="biblio_ISODirectives2">
+        <abbrev>ISO/IEC Directives, Part 2</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>1989</date>
-        <title>Drafting and presentation of International Standards</title>
+        <date>2011/04</date>
+        <edition>6.0</edition>
+        <title>Rules for the structure and drafting of International Standards</title>
+        <bibliosource>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+        </bibliosource>
       </biblioentry>
     </bibliography>
   </chapter>
