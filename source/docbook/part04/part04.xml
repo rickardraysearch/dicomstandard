@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2016b - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2016c - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -626,10 +626,10 @@
     </section>
     <section label="6.7" status="2" xml:id="sect_6.7">
       <title>Service Class Specification</title>
-      <para xml:id="para_28f94c31-7dc4-46e8-93dc-a228c6bb2afd">A Service Class Specification defines a group of one or more SOP Classes related to a specific function that is to be accomplished by communicating Application Entities. A Service Class Specification also defines rules that allow implementations to state some pre-defined level of conformance to one or more SOP Classes. Applications may conform to SOP Classes as either a Service Class User (SCU) or Service Class Provider (SCP).</para>
+      <para xml:id="para_28f94c31-7dc4-46e8-93dc-a228c6bb2afd">A Service Class Specification defines a group of one or more SOP Classes related to a specific function that is to be accomplished by communicating Application Entities. A Service Class Specification also defines rules that allow implementations to state some pre-defined level of conformance to one or more SOP Classes. Applications may conform to network SOP Classes as either a Service Class User (SCU) or Service Class Provider (SCP), and to media exchange SOP Classes as a File Set Creator (FSC), File Set Reader (FSR), or File Set Updater (FSU).</para>
       <para xml:id="para_af9f3b96-d178-42cd-8d93-cd8b2baa4fc3">Service Class Specifications are defined in this Part of the DICOM Standard.</para>
       <note>
-        <para xml:id="para_93245b3a-bd19-41ab-8f46-72014c50f192">Such interaction between peer Application Entities work on a 'client/server model.' The SCU acts as the 'client,' while the SCP acts as the 'server'. The SCU/SCP roles are determined during Association establishment.</para>
+        <para xml:id="para_93245b3a-bd19-41ab-8f46-72014c50f192">Network interaction between peer Application Entities work on a 'client/server model.' The SCU acts as the 'client,' while the SCP acts as the 'server'. The SCU/SCP roles are determined during Association establishment.</para>
       </note>
     </section>
   </chapter>
@@ -3222,47 +3222,11 @@
               </para>
             </td>
           </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_22e95292-b440-4acc-973c-0149a69002cd">Generic Implant Template Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e096a924-623c-4e05-8bc7-afaf1e438ee9">1.2.840.10008.5.1.4.43.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_33e16a3e-969c-4ba0-8e51-40abbc324362">
-                <olink targetdoc="PS3.3" targetptr="sect_A.61" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f89b65c4-deb7-4131-932c-bd27de4b0153">Implant Assembly Template Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8f3f1827-8f7c-4f23-900c-1f4e8025db95">1.2.840.10008.5.1.4.44.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6d1a750e-cd64-481f-abe9-ebd9b39c124d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.62" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cacc41a2-4157-4ef1-9251-6735dbb6b5e3">Implant Template Group Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3a75d8a5-db85-4f9a-976a-8d4cdef8b82d">1.2.840.10008.5.1.4.45.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8b85fe2f-2410-4599-888e-27bd3ac9cb37">
-                <olink targetdoc="PS3.3" targetptr="sect_A.63" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
         </tbody>
       </table>
+      <note>
+        <para xml:id="para_df400ae0-f4f4-4df6-9d09-99a74e2d6bf5">The Generic Implant Template Storage, Implant Assembly Template Storage, and Implant Template Group Storage SOP Classes were formerly specified in this table, incorrectly since they do not use the Patient / Study / Series / Instance information model. Those have been consolidated into the Non-Patient Object Storage Service Class (see <xref linkend="chapter_GG" xrefstyle="template: Annex %n"/>).</para>
+      </note>
       <section label="B.5.1" status="3" xml:id="sect_B.5.1">
         <title>Specialization for Standard SOP Classes</title>
         <section label="B.5.1.1" status="4" xml:id="sect_B.5.1.1">
@@ -3363,7 +3327,7 @@
         </section>
         <section label="B.5.1.8" status="4" xml:id="sect_B.5.1.8">
           <title>Enhanced MR Color Image Storage SOP Class</title>
-          <para xml:id="para_5710ffde-f9c9-476e-8e8a-2a8eb0f4813c">An SCP of the Enhanced MR Image Storage SOP Class shall also support the Color Softcopy Presentation State Storage SOP Class.</para>
+          <para xml:id="para_5710ffde-f9c9-476e-8e8a-2a8eb0f4813c">An SCP of the Enhanced MR Color Image Storage SOP Class shall also support the Color Softcopy Presentation State Storage SOP Class.</para>
           <note>
             <para xml:id="para_4169b1b9-4c19-4157-9ea6-b5cac9b3ef27">This requirement is present in order to allow the exchange of graphical annotations created by an acquisition device.</para>
           </note>
@@ -3386,34 +3350,10 @@
         </section>
         <section label="B.5.1.10" status="4" xml:id="sect_B.5.1.10">
           <title>Implant Template Storage SOP Classes</title>
-          <para xml:id="para_2b262512-47c4-416f-98b7-7ef8447f36d4">A device that is a Generic Implant Template Storage, Implant Assembly Template Storage, or Implant Template Group Storage SOP Class SCU may modify information in a SOP Instance that it has previously sent or received. When this SOP Instance is modified and sent to an SCP, it shall be assigned a new SOP Instance UID if there is addition, removal or update of any Attribute within:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_df12ddf3-925a-464b-b572-dbbf77d20bda">Generic Implant Template Description Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_8ba715f5-47d5-4d45-a356-67789bf76ab9">Generic Implant Template 2D Drawings Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_73de9869-d28c-48e5-a22b-da822393032d">Generic Implant Template 3D Models Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_cdd027b2-542c-4c11-80c1-f01e94f09d0e">Generic Implant Template Mating Features Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_bff42dc4-6804-4589-ba74-c37c6294e9ea">Generic Implant Template Planning Landmarks Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_7b252f6a-955b-4a73-8c2c-a1355759dcd8">Implant Assembly Template Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_d762e477-7b6a-4071-890c-f44ba23c266a">Implant Template Group Module</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_30219fce-f940-4eba-8db5-0d993a496835">Surface Mesh Module</para>
-            </listitem>
-          </itemizedlist>
-          <para xml:id="para_ab9ae387-c1bb-411c-a370-b3f5ddb36791">Referential integrity between sets of related SOP instances shall be maintained.</para>
+          <para xml:id="para_2b262512-47c4-416f-98b7-7ef8447f36d4">See <xref linkend="chapter_GG" xrefstyle="template: Annex %n"/>.</para>
+          <note>
+            <para xml:id="para_4307cdb5-73c9-4f20-a60b-a42f56809ee1">The requirements of this section have been consolidated into the Non-Patient Object Storage Service Class (see <xref linkend="sect_GG.6.3" xrefstyle="select: label"/>).</para>
+          </note>
         </section>
         <section label="B.5.1.11" status="4" xml:id="sect_B.5.1.11">
           <title>Ophthalmic Axial Measurements Storage SOP Class</title>
@@ -16823,8 +16763,21 @@
     </section>
     <section label="I.4" status="2" xml:id="sect_I.4">
       <title>Media Storage Standard SOP Classes</title>
-      <para xml:id="para_2aec48d3-e23c-44e0-a56a-d20b80cab76c">The SOP Classes in the Media Storage Service Class identify the Composite and Normalized IODs to be stored. The following Standard SOP Classes are identified in <xref linkend="table_I.4-1" xrefstyle="select: label"/>
+      <para xml:id="para_2aec48d3-e23c-44e0-a56a-d20b80cab76c">The SOP Classes in the Media Storage Service Class identify the Composite IODs to be stored. The following Standard SOP Classes are defined:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_9f4c3910-d8d5-4336-b6cb-5b664fd3e182">all SOP Classes specified for the DIMSE C-STORE based Storage Service Class identified in <xref linkend="table_B.5-1" xrefstyle="select: label"/>
 </para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_7dcc32de-e896-4c7d-9372-fc78a6cfbdb8">all SOP Classes specified for the DIMSE C-STORE based Non-Patient Object Storage Service Class identified in <xref linkend="table_GG.3-1" xrefstyle="select: label"/>
+</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_2e89db0a-9072-4e2b-9140-142483166f5f">the media directory SOP Class identified in <xref linkend="table_I.4-1" xrefstyle="select: label"/>
+</para>
+        </listitem>
+      </itemizedlist>
       <table frame="box" label="I.4-1" rules="all" xml:id="table_I.4-1">
         <caption>Media Storage Standard SOP Classes</caption>
         <thead>
@@ -16860,1630 +16813,12 @@
               </para>
             </td>
           </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_65e61ae5-24bc-4c67-a49b-ceaa3a48aa55">Computed Radiography Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_58907329-7457-4674-8a8d-900cbe8d81eb">1.2.840.10008.5.1.4.1.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b030ef7a-8ff6-4616-bdc0-49c70318dfd9">
-                <olink targetdoc="PS3.3" targetptr="sect_A.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ccdaf121-2408-4fa1-a231-24d7a9485bc3">Digital X-Ray Image Storage - For Presentation</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_34ccb5f0-c5d4-4920-97d9-56a4ae917261">1.2.840.10008.5.1.4.1.1.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_194fbbca-6da5-48ab-96f3-550ec34e954d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.26" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_19ad4c85-5b5a-4560-a099-37a930d4b39d">Digital X-Ray Image Storage - For Processing</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ddf6f825-7b80-47be-a0b7-f4e7c8eea2c6">1.2.840.10008.5.1.4.1.1.1.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bb9e3522-72fd-49b1-a647-7e1824bb803d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.26" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9210f3b9-1dc2-4773-98b5-e72174de35ab">Digital Mammography X-Ray Image Storage - For Presentation</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fd675e8d-3cc1-4a43-b034-b3cc8e18f03d">1.2.840.10008.5.1.4.1.1.1.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_485ba847-f3aa-4d90-a021-1a4db4d97ac8">
-                <olink targetdoc="PS3.3" targetptr="sect_A.27" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c936de46-cd14-4ed4-809c-b5e10e1d935a">Digital Mammography X-Ray Image Storage - For Processing</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f52e42e7-cb31-4774-a576-586e9b97ebca">1.2.840.10008.5.1.4.1.1.1.2.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_02ed9dfa-7372-433b-a172-bcd04e4ae157">
-                <olink targetdoc="PS3.3" targetptr="sect_A.27" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ba7e1788-e9e9-4555-aafe-edfb0c53fed3">Digital Intra-Oral X-Ray Image Storage - For Presentation</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5bf95b4b-0b95-4115-b08b-f2235ff83922">1.2.840.10008.5.1.4.1.1.1.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_267127f0-ed1f-4b35-9a10-67cce57c6a78">
-                <olink targetdoc="PS3.3" targetptr="sect_A.28" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c2b29f37-2709-4932-a407-02a5848497d2">Digital Intra-Oral X-Ray Image Storage - For Processing</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a099186a-c71b-4f6a-8596-51ee3d2fd967">1.2.840.10008.5.1.4.1.1.1.3.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e2b7b332-efa7-40c0-a99a-3c107f004690">
-                <olink targetdoc="PS3.3" targetptr="sect_A.28" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_64fb592b-699e-4f64-8774-b641a4c59082">CT Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fd060f7d-1f0e-4388-8aee-e4eff776846e">1.2.840.10008.5.1.4.1.1.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_534182b4-19bb-4022-bc78-d325ce48e02e">
-                <olink targetdoc="PS3.3" targetptr="sect_A.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8eee50f9-e939-4bc4-b472-5ed31553620a">Enhanced CT Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_50345fac-e6ce-4e83-a6a1-0198f19a6071">1.2.840.10008.5.1.4.1.1.2.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fcc72635-1d3e-40b0-bf4a-655bb1a51a68">
-                <olink targetdoc="PS3.3" targetptr="sect_A.38.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e89a3698-f63f-4c00-ac5b-c6d1da096100">Legacy Converted Enhanced CT Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ecbd362d-3304-4bab-b53c-5137e4871c0a">1.2.840.10008.5.1.4.1.1.2.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f34b0eed-7353-4f19-a39f-2bce69a02b84">
-                <olink targetdoc="PS3.3" targetptr="sect_A.70" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_187b2c54-bdbd-4e9f-9fdc-14121b0e095e">Ultrasound Multi-frame Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_522fed90-a598-4e74-a6fe-0766f446eacc">1.2.840.10008.5.1.4.1.1.3.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c9221041-2d44-4697-84c4-592db0ee1ff9">
-                <olink targetdoc="PS3.3" targetptr="sect_A.7" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d03ff94d-6980-4888-ba65-bbca735b28fb">MR Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6ac97df3-571b-4074-bbe2-532831831537">1.2.840.10008.5.1.4.1.1.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_477b7322-5171-4300-a6bd-0c565311627e">
-                <olink targetdoc="PS3.3" targetptr="sect_A.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e47c8ef2-6ef7-48d5-b627-79d3f33dfd01">Enhanced MR Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_be2097d5-5df2-492a-9a22-acf528d0908a">1.2.840.10008.5.1.4.1.1.4.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fe7d4a1a-d21e-4ca8-8ca7-8feb7c90b8ee">
-                <olink targetdoc="PS3.3" targetptr="sect_A.36.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a62300a1-2050-499f-aa2e-be4d62230b1b">MR Spectroscopy Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_09f965a2-77d2-4e5b-986f-bd2deaad3625">1.2.840.10008.5.1.4.1.1.4.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_12d04c5e-f5f0-4219-9d52-265c0adf453a">
-                <olink targetdoc="PS3.3" targetptr="sect_A.36.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_12644e85-1a1b-4a01-9226-f449581f6930">Enhanced MR Color Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_17f22655-e5c0-482b-8024-30df6e5b7f8e">1.2.840.10008.5.1.4.1.1.4.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c578cc3f-5bf5-40ff-828f-609a6d79afb4">
-                <olink targetdoc="PS3.3" targetptr="sect_A.36.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_473da32f-f380-456e-b990-767ae30bde3f">Legacy Converted Enhanced MR Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8c4bdbfe-31c8-41e7-9c04-268fad2e54ab">1.2.840.10008.5.1.4.1.1.4.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_728c52b5-68d9-4ab0-a816-b7430bc6d7f7">
-                <olink targetdoc="PS3.3" targetptr="sect_A.71" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_75c2988f-67fb-4309-99a0-59aeac9216a0">Ultrasound Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e7a246ad-efce-4cd5-b09d-3832ca69f921">1.2.840.10008.5.1.4.1.1.6.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4add0202-7a1c-4b58-887d-4502b36a535f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3940723b-ad04-4a04-b6a6-e9c580b0b696">Enhanced US Volume Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_72ae4b07-428b-41f3-b56d-8f6024f2130f">1.2.840.10008.5.1.4.1.1.6.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a8fa8f7c-952a-4b1c-b653-dfa55b7620ad">
-                <olink targetdoc="PS3.3" targetptr="sect_A.59" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cac3bc30-48d9-49b5-8ad3-b05c24ad5ccf">Secondary Capture Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_560a9e71-915d-420c-bfaa-be9d6647c5cd">1.2.840.10008.5.1.4.1.1.7</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6dd7cfe8-555f-4350-88ef-623e47b6b284">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_538cfb8e-ef57-4f93-a880-a64521e6f724">Multi-frame Single Bit Secondary Capture Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d17bdb62-ba77-474b-b115-630db86bde85">1.2.840.10008.5.1.4.1.1.7.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_dc9f6fff-b85a-4424-8945-4e4d5bde2abe">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3c53fa4b-3db4-4ecc-84c6-b0887a351cbf">Multi-frame Grayscale Byte Secondary Capture Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cff5f2b5-39e8-440b-985b-1b899d2d9721">1.2.840.10008.5.1.4.1.1.7.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3ec4e740-ebf4-42c3-8dbf-9d7c07324acb">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_dd06bb4d-86ef-4f1e-85de-f902bb1df9bf">Multi-frame Grayscale Word Secondary Capture Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_82506cf5-9dd6-41cc-a8f5-5fe8553e361c">1.2.840.10008.5.1.4.1.1.7.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7d125118-bd25-4bf7-a389-8038606b2a02">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_86a03298-c131-4e94-b9ba-903143fec6ba">Multi-frame True Color Secondary Capture Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0bbb4aed-0ff6-4215-9507-8eeeb467da34">1.2.840.10008.5.1.4.1.1.7.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e0b4a2aa-0a47-4812-b2a3-d400a84dfb66">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0ab107b0-5b02-49c2-99de-e8e6dc470eca">12-lead ECG Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_528863f4-ebd2-4e19-b08e-71afed00aded">1.2.840.10008.5.1.4.1.1.9.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6610eead-31e2-4e11-9a66-6e0a7393183b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_eaa01b19-755d-4d3c-846f-c03b6cc1a71b">General ECG Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bbf71d60-7ea7-45b6-b9ac-da744d4cf098">1.2.840.10008.5.1.4.1.1.9.1.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1b0587bb-a9e3-4e62-8da4-dd602aa901cd">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ddf8f95a-9580-4fbd-976b-ee612cb5810f">Ambulatory ECG Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6226aa41-429b-48bf-bc71-33981d6409f3">1.2.840.10008.5.1.4.1.1.9.1.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bf50e2ff-46e1-4f15-89f3-5348993f5858">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f8b392b3-8c18-44bb-9331-23a66725ec31">Hemodynamic Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8a77c1a8-26b5-417c-9577-6e3f3e77c8ef">1.2.840.10008.5.1.4.1.1.9.2.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b89ddedc-bfdb-4c4f-9ea4-2615c8f54694">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5d0a95d7-aa07-4ae2-b4de-508b9dd68ca0">Cardiac Electrophysiology Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_03014ae3-3100-4281-b854-8bd2fab4a9ed">1.2.840.10008.5.1.4.1.1.9.3.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a6147e8f-92ad-4179-9cc1-9bfce97a84b9">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.7" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6d32e23e-764f-44a4-b361-536f4fe7b341">Basic Voice Audio Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_02a14a1e-e093-4915-ab93-83a2ffb313a8">1.2.840.10008.5.1.4.1.1.9.4.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6de98877-ac8e-456b-8d87-6f0a55104974">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ac5bd009-c518-4964-a105-6e3fc1bcf841">General Audio Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8330e566-87ed-44b2-93ad-8d0273f9526c">1.2.840.10008.5.1.4.1.1.9.4.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8dcb9724-85c0-4124-8a61-cbbaedb77068">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.10" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_62109f1d-9d08-47b4-82bd-aab5d8163a48">Arterial Pulse Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a5bf8a46-f4f5-4a93-9320-4a6e6d2ba4fd">1.2.840.10008.5.1.4.1.1.9.5.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_147b6976-9ad5-4d94-9f63-ee99ce3290b2">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.8" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a0d3b11a-78f8-4cf4-9e5f-698ae0438e6e">Respiratory Waveform Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6979a8b9-dc23-49b2-a7cf-2a10190fa648">1.2.840.10008.5.1.4.1.1.9.6.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_78ab1941-aa37-4ffd-9e11-01547c0a4f7e">
-                <olink targetdoc="PS3.3" targetptr="sect_A.34.9" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1fb8fc8b-6171-4d82-8f32-c7b24c8af50e">Grayscale Softcopy Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1edd7811-ef7d-45a2-9444-34506025a542">1.2.840.10008.5.1.4.1.1.11.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_75c08f67-bdad-4393-b0eb-3b60d4cadefa">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6f7d6349-d1e4-45e8-893c-af07aebb5cc9">Color Softcopy Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_eb0e480b-453b-4eca-a3d2-b0cd7a4efd6a">1.2.840.10008.5.1.4.1.1.11.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_34a27aea-9959-4d17-9af5-9c9c175f8a23">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b622d2a2-439c-47bf-bdfa-4561874707d8">Pseudo-Color Softcopy Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ffdcac04-6f3c-4aac-805d-5bb6102a4768">1.2.840.10008.5.1.4.1.1.11.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_14c2d7a8-0b96-4fc0-9f8b-a15975863d53">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fafa3018-55fe-4f3b-af9c-f1fb89395d7b">Blending Softcopy Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8f774a8a-4608-40de-a5d5-eafe5a825555">1.2.840.10008.5.1.4.1.1.11.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c45af0e3-93d3-4340-8610-820895078911">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ecf3362a-7cb7-4b60-8711-c5e160393397">XA/XRF Grayscale Softcopy Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_79fa9e23-d819-44d2-a59e-4f46c3339549">1.2.840.10008.5.1.4.1.1.11.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_84ff858f-5f3c-48b1-ba44-ad4fb260f912">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b9bab2be-8662-47ca-8219-9bf5805a5baf">Grayscale Planar MPR Volumetric Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_40be88cf-bd31-4303-b10d-83e61f644216">1.2.840.10008.​5.​1.​4.​1.​1.​11.​6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d6bdd16d-a26a-4de5-9434-52285e175a74">Planar MPR Volumetric Presentation State</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0d10d1cf-d436-4262-86c2-f732560fd498">Compositing Planar MPR Volumetric Presentation State Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3f39f633-79b5-483b-a0ed-6b584ee0dac3">1.2.840.10008.​5.​1.​4.​1.​1.​11.​7</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e10094a8-bb27-40e9-89a7-019b92e42a90">Planar MPR Volumetric Presentation State</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0fc095a5-da72-483d-8b39-f13a7d955692">X-Ray Angiographic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_86c5c529-04f6-40b4-9ae8-300caf055374">1.2.840.10008.5.1.4.1.1.12.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7818f976-5baa-4005-9533-1bcd46cec24d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.14" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f629536f-3d7c-44f6-abee-d3393be77a72">Enhanced XA Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8af0397d-7063-4067-ab0d-cce65705b566">1.2.840.10008.5.1.4.1.1.12.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2d7401ba-e53f-44fd-909b-5fef79afbace">
-                <olink targetdoc="PS3.3" targetptr="sect_A.47" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b0d4844c-748d-4df5-ab38-efe3399c0cf0">X-Ray Radiofluoroscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8277ce3c-305a-47d5-84ce-4c8bee15da0c">1.2.840.10008.5.1.4.1.1.12.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f7718a46-ddff-461e-81bc-ba33da2e184e">
-                <olink targetdoc="PS3.3" targetptr="sect_A.16" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4498c9c2-55a5-4677-a827-efc7cb715091">Enhanced XRF Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_75e7ca86-97bf-44ea-97db-fbe61abc692a">1.2.840.10008.5.1.4.1.1.12.2.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e7c075ac-e251-4384-acee-e76fdfaecd86">
-                <olink targetdoc="PS3.3" targetptr="sect_A.48" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1f6cd175-403e-4b2d-8582-5ee3a1859c6e">X-Ray 3D Angiographic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_370ebec1-12a9-40ee-a138-ea0d0b4c295d">1.2.840.10008.5.1.4.1.1.13.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_113d4312-43b2-4f95-904d-9f44d4fe080b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.53" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f2886bdf-9643-4883-b1f2-45497225ae98">X-Ray 3D Craniofacial Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f92d2ece-ebdf-4419-abb8-cb2e42fd8b4a">1.2.840.10008.5.1.4.1.1.13.1.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_168d4cb7-a234-4905-9182-7e8f05558c68">
-                <olink targetdoc="PS3.3" targetptr="sect_A.54" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5fdcbd45-2ac1-48c2-bed2-fa500e98d082">Breast Tomosynthesis Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_592f2b97-0cfa-4515-bf79-1ab1cbe4c9f8">1.2.840.10008.5.1.4.1.1.13.1.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_33acea66-df43-44bc-a79b-468491764894">
-                <olink targetdoc="PS3.3" targetptr="sect_A.55" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8b1dc9b1-f5f0-49ad-b04f-c93ddc61d2f8">Breast Projection X-Ray Image Storage - For Presentation</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f8c3c30e-8f2d-4741-a88a-be38bba69def">1.2.840.10008.5.1.4.1.1.13.1.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_132c9319-a1dc-481b-95dd-ac03f75a2ac7">
-                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bdf1dd89-7f1e-4861-b802-46b5d679d4d1">Breast Projection X-Ray Image Storage - For Processing</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8b780c1f-f67a-4385-9e89-2e5337d59527">1.2.840.10008.5.1.4.1.1.13.1.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_35c6bb2e-6249-4820-a37a-48ed1abe8ed1">
-                <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a23f3d62-3bad-40ad-a1e9-db946522934e">Intravascular Optical Coherence Tomography Image Storage - For Presentation</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8ef5c2a5-e4f4-4b92-a092-0fd9a94c9b1b">1.2.840.10008.5.1.4.1.1.14.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0c05bbd2-a9be-4b64-9206-31bb6c7d80b6">
-                <olink targetdoc="PS3.3" targetptr="sect_A.66" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bebcd806-2c27-48af-a204-0ddee6682460">Intravascular Optical Coherence Tomography Image Storage - For Processing</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_98dd2ad1-02e0-4ca8-bffb-148ddb976a59">1.2.840.10008.5.1.4.1.1.14.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7207aaf8-a7a4-446b-a558-2c62ac9ef0fa">
-                <olink targetdoc="PS3.3" targetptr="sect_A.66" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1319344b-f5cd-4c6f-a74b-f6371a98a457">Nuclear Medicine Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7d55f723-9822-41dd-a8ca-c187ae8f7b19">1.2.840.10008.5.1.4.1.1.20</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_26e42425-b878-4080-b977-d07df8058d4d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_973c7bc8-7068-47ed-8a1b-2dc78faf639b">Parametric Map Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3d72c275-232b-4be2-94e9-c609e725824c">1.2.840.10008.5.1.4.1.1.30</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e8e4b0d8-a4ae-4f99-a785-07fb928eb431">
-                <olink targetdoc="PS3.3" targetptr="sect_A.75" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9128c9c8-5207-4786-88d8-bcc462db7a76">Raw Data Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1221c822-88bb-4ccc-babe-6ed7e5020dfa">1.2.840.10008.5.1.4.1.1.66</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_617b3a35-c3c2-4b70-a8a5-bf7f36d5f368">
-                <olink targetdoc="PS3.3" targetptr="sect_A.37" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1d30d131-1f2a-4374-b1a0-066af0d71d9e">Spatial Registration Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_24f7c722-9205-419c-a4b6-5766a1ce6bbc">1.2.840.10008.5.1.4.1.1.66.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d91b4752-ff77-4f9c-aab7-bd16e571aff5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.39.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_85f1bfb1-01b6-4d6b-8107-7a2e694d6a40">Spatial Fiducials Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2f084524-4184-480a-8e42-41a9816be011">1.2.840.10008.5.1.4.1.1.66.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_71b263b1-895e-4229-a150-b5c0b89a21a2">
-                <olink targetdoc="PS3.3" targetptr="sect_A.40" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ad823bea-2d57-4c24-815a-bcb25e606605">Deformable Spatial Registration Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_15f44177-83bc-4446-830d-b92ec806dbd3">1.2.840.10008.5.1.4.1.1.66.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bad00b50-03ab-4844-8d8c-48696cc0f7a8">
-                <olink targetdoc="PS3.3" targetptr="sect_A.39.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1c76c0bc-bb4b-49de-b576-2ba3e3fccadf">Segmentation Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1695b88a-bc61-40a7-87ad-4bcdfb7a9180">1.2.840.10008.5.1.4.1.1.66.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_83bec82f-21be-43a0-b38e-89bbaf07dad6">
-                <olink targetdoc="PS3.3" targetptr="sect_A.51" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a4b0af8c-afa1-4d4e-86ee-12c14ea3bff8">Surface Segmentation Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e57eac40-37a1-4183-9304-138c8207b051">1.2.840.10008.5.1.4.1.1.66.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a585f201-e1f3-4722-8fab-4ed60592cc8f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.57" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9f355ade-eb9e-4e4d-abdd-cead579344a1">Tractography Results Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0760736a-5d32-4280-901c-8ddf63bc8429">1.2.840.10008.5.1.4.1.1.66.6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ec40b8a1-97e0-4455-ba9e-e91e89e9c54f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.78" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0d571b03-ca1f-45b6-8efb-a21079c550d9">Real World Value Mapping Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5fbaec13-33fe-484c-8260-2dac1b9ab0c0">1.2.840.10008.5.1.4.1.1.67</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b2bc3877-05c7-4ec2-86d7-8786506e620f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.46" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1f7b4ef4-c5a7-4290-a291-90a00a4f13bf">Surface Scan Mesh Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_18fcbb16-1bdb-4a1f-bab9-7f87f467c16c">1.2.840.10008.5.1.4.1.1.68.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e4c880d7-1869-4770-a2d4-63c9c84f96a5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.68" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d6607a3e-04ef-48c4-a588-3d1214f87d60">Surface Scan Point Cloud Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_344a79a2-364d-4e71-b552-e97910cb203a">1.2.840.10008.5.1.4.1.1.68.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e28d0a45-becf-42d3-9de5-3041dbb2419a">
-                <olink targetdoc="PS3.3" targetptr="sect_A.69" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bd67b6ec-8b8d-4b9a-9778-f02e22bf2554">VL Endoscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_84bb7f5f-8764-4963-a308-af6b9458ed83">1.2.840.10008.5.1.4.1.1.77.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_08ae8b9b-6d20-4769-a3b5-dfdd449e08c5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_adc76671-794c-4a73-a618-56e200abc9d5">Video Endoscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7771e12e-7c2a-4c1e-a9d6-473ec7d73d5c">1.2.840.10008.5.1.4.1.1.77.1.1.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3bed4db3-41b7-4496-bc8b-1308b073f962">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ce99c253-04a2-4f27-ae84-428a2620922b">VL Microscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5891974e-8b22-444a-9794-82d3c91b0c52">1.2.840.10008.5.1.4.1.1.77.1.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_319fc539-ee1c-4e89-8fa6-526d36efd7ec">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a0db4796-c9ec-41a8-89e9-a6f6b3ede009">Video Microscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2046dd03-54ee-4f9a-b4b7-0aaec8836acb">1.2.840.10008.5.1.4.1.1.77.1.2.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_deb772eb-c37c-4451-b6a6-efb8f7cce86f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1e5c467d-440c-4138-b257-6aed962676c3">VL Slide-Coordinates Microscopic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_629a1ddc-85be-48ef-b2fc-b59ccf238202">1.2.840.10008.5.1.4.1.1.77.1.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cb2c38bf-a49f-4c6f-80a4-cd3f24e2dc6c">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d8f43406-bd3f-495f-a9bf-a037b57fba85">VL Photographic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_00b929a5-2d45-44ac-bec7-b85b7caf841f">1.2.840.10008.5.1.4.1.1.77.1.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6fcae612-3cce-42c0-a499-cc1ec558c597">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_45bcb8f5-e97b-4ea1-8b85-b819a03fa0a1">Video Photographic Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d5ad8f59-3cec-4b06-a9a7-95f695782bde">1.2.840.10008.5.1.4.1.1.77.1.4.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7a42aa41-2011-4869-b5ed-29c38f1fc0b7">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.7" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1a9fc359-24be-4f8e-99da-27a376e4e905">Ophthalmic Photography 8 Bit Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1773faa7-d7c2-40a6-accb-074749e8668d">1.2.840.10008.5.1.4.1.1.77.1.5.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_edbd7ae9-7191-4343-81c0-1a550d8fd4a9">
-                <olink targetdoc="PS3.3" targetptr="sect_A.41" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8dbba7f9-70ca-481f-b8af-8adbc082d966">Ophthalmic Photography 16 Bit Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d9a1c384-56dd-4cc3-b568-81ab2965b634">1.2.840.10008.5.1.4.1.1.77.1.5.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_49e2ce2b-789f-4d07-905e-14a70244f77b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.42" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b91ee7df-dd3d-40ab-94fe-c79baab9e9f3">Stereometric Relationship Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_840865ef-fd34-4197-9130-86f36e49a3bc">1.2.840.10008.5.1.4.1.1.77.1.5.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_58f94c7a-8161-4afc-837d-df395d7e848f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.43" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7b7a6ce5-dd7a-4f33-906e-ed4fe36633f5">Ophthalmic Tomography Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f548abe9-07ad-4322-8eda-cf968720abe0">1.2.840.10008.5.1.4.1.1.77.1.5.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_59fd86ff-11ac-4897-aad1-bead586916d6">
-                <olink targetdoc="PS3.3" targetptr="sect_A.52" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_662204b4-e87a-4069-9362-768d545d318b">Wide Field Ophthalmic Photography Stereographic Projection Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_44e5a6c1-9e35-431e-bf87-99bd39557076">1.2.840.10008.5.1.4.1.1.77.1.5.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b6462aab-1df7-49dc-b4d8-c0e84ba66b27">
-                <olink targetdoc="PS3.3" targetptr="sect_A.76" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4aad3567-6dbc-43e2-8bf9-1317cf34f6ab">Wide Field Ophthalmic Photography 3D Coordinates Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b13fbf43-9b6a-456f-bec1-2303894e8355">1.2.840.10008.5.1.4.1.1.77.1.5.6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2679bf80-86f4-4d63-84fd-ff3d3d37ecfc">
-                <olink targetdoc="PS3.3" targetptr="sect_A.77" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_52ec9fc9-c3dd-407b-93c8-39d8695b24b7">VL Whole Slide Microscopy Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c120ce76-2a65-4bb3-b9b2-5f2891f3b544">1.2.840.10008.5.1.4.1.1.77.1.6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e4932a62-072f-43f7-a4a2-3d1d31b6dfb3">
-                <olink targetdoc="PS3.3" targetptr="sect_A.32.8" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f60eb9c7-85da-4cc1-8826-4e743c1412cf">Lensometry Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_77f39932-2fe3-4b0f-ac40-52f5c1f12ec8">1.2.840.10008.5.1.4.1.1.78.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c25a9daf-ac77-47e8-b16b-de10157a4219">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_66eb939f-2f1f-46a8-9748-16cf76873a33">Autorefraction Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_207ee305-1ccc-4da7-aae0-76641d5e5e9f">1.2.840.10008.5.1.4.1.1.78.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_afb5226d-dd47-4073-af3a-5b2fda4a5bf2">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ef957ec6-9dd8-4381-8e9d-be029e435ede">Keratometry Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b394f604-746d-4049-93a1-2da832cf0538">1.2.840.10008.5.1.4.1.1.78.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_055af947-daec-4e01-be74-60305f1201c1">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_97ed44fc-fe91-47f7-88f1-5fafa1e7ad4e">Subjective Refraction Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ab726c40-b8e9-4aa2-801e-de87a64bec9f">1.2.840.10008.5.1.4.1.1.78.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8be106eb-935c-43fe-999d-c8bcab71789f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d9a92201-b530-46a5-bd67-b824a081196b">Visual Acuity Storage Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_137c2278-9934-47b7-8df4-0bd06629d375">1.2.840.10008.5.1.4.1.1.78.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_96880c67-41eb-48c6-836b-07c9f1453485">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e4bf0115-3790-4a88-94d1-bb5084f93a38">Spectacle Prescription Report Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c95ed8fe-fc59-48aa-bffb-41e8c6739247">1.2.840.10008.5.1.4.1.1.78.6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_17b72df8-30e7-4f6e-876c-a8d68c007e00">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.9" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_93870b64-91ff-4291-b563-583f03bf72a7">Ophthalmic Axial Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_97ef37ea-2c0a-4b15-a33c-0994da7e9744">1.2.840.10008.5.1.4.1.1.78.7</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fd8cb4a6-e10c-470c-b1d5-7f5dd7327da5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e17346fc-e55e-44e2-aae1-f141b3ec8e0b">Intraocular Lens Calculations Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4e6d0553-6a1b-4104-9d0c-d78e8d2e177f">1.2.840.10008.5.1.4.1.1.78.8</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f6288110-d762-4ac6-bca1-6c8575941656">
-                <olink targetdoc="PS3.3" targetptr="sect_A.60.7" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_90331e74-0dc1-4c1c-8fd6-1482f0ac0312">Macular Grid Thickness and Volume Report</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_af8f2010-f7aa-4c97-b399-4ea9abe47719">1.2.840.10008.5.1.4.1.1.79.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_32c74734-f323-4d39-9ac7-ada2250af0ee">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.11" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9bccd40e-5b4c-4426-8ddb-5c7160aafdf6">Ophthalmic Visual Field Static Perimetry Measurements Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_96e1ec33-54fd-4681-b861-43d9af58154c">1.2.840.10008.5.1.4.1.1.80.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cb28f160-46d4-4391-bc6b-e3a61040c21d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.65" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3cbcd069-0969-4fd6-9491-33c63adfdc97">Ophthalmic Thickness Map Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fa375b5b-1cca-4139-96a4-1845dace6f70">1.2.840.10008.5.1.4.1.1.81.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b4c819f6-454d-452e-8be8-76c825874bcf">
-                <olink targetdoc="PS3.3" targetptr="sect_A.67" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bf50c292-99f3-43ad-8f9f-ba4b3b163c2e">Corneal Topography Map Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ac8e766f-25fe-4a27-bf8e-95975fe087a3">1.2.840.10008.5.1.4.1.1.82.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_35accd68-c57a-4b59-972a-f03ab00cbffc">
-                <olink targetdoc="PS3.3" targetptr="sect_A.73" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_72508554-09e0-47a4-aecd-d2d67360bbd2">Basic Text SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c7392ce7-7893-4858-b78c-0d0acfc71c95">1.2.840.10008.5.1.4.1.1.88.11</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_65b99df7-2f80-45b6-8db3-0f3a3f2da056">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ae5f8808-ee00-4050-9d43-28ad504db9d7">Enhanced SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c189756b-e007-49f3-ada3-98494444b1c6">1.2.840.10008.5.1.4.1.1.88.22</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_64f65d31-fc0b-40e7-a17e-ad4aac97c327">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e655b503-59a8-48ef-89bb-e18799590c9f">Comprehensive SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_63f48163-c0df-4e9b-a765-d5efcc4daa04">1.2.840.10008.5.1.4.1.1.88.33</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f17e0a50-3dca-418f-b593-5597f03de0c2">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.3" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d0851c2c-c02f-4239-b6e1-42d347a6c237">Comprehensive 3D SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1cf6f8e3-cda3-461a-afd8-e77525384ee5">1.2.840.10008.5.1.4.1.1.88.34</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2850393e-1250-4002-954b-728b59902dd8">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ad69492d-6f11-4a69-a009-6017363ea196">Extensible SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e9e24618-9825-4c59-aef0-7e5832480748">1.2.840.10008.5.1.4.1.1.88.35</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_25d38874-d1ff-4ca2-8199-cbc312ae8567">
-<olink targetdoc="PS3.3" targetptr="sect_A.35.15" xrefstyle="select: title"/>
-</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0c85f01a-4dc1-408e-a9e4-b02d82fc055e">Procedure Log Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3b5bfeff-d599-43b7-8b72-207e1e43347b">1.2.840.10008.5.1.4.1.1.88.40</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_909597b1-2cdb-4ec2-8e34-0103ed0c4a1b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.7" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4489940e-f60f-4105-b4f8-b0a12da30677">Mammography CAD SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_85261fdf-eddf-4edb-876d-fef85cbf28af">1.2.840.10008.5.1.4.1.1.88.50</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_00919c4e-ce80-49c6-a952-8645f94f97ba">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2d13060a-ecf4-4d1c-818c-108d2cb7fad5">Key Object Selection Document Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_997aee77-5b0f-4737-bb3b-0ee497002094">1.2.840.10008.5.1.4.1.1.88.59</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7e4deb04-bfe4-489f-aed2-5c3841581479">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.4" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0b0e4576-e883-4873-ba5c-5373329e1a51">Chest CAD SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6669956e-5b9c-4733-8961-e34b97086d75">1.2.840.10008.5.1.4.1.1.88.65</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0e7df490-6a77-49bb-af77-63be04eea326">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.6" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4135ae9b-6cec-459c-800b-b50d244ad23e">X-Ray Radiation Dose SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c07f207c-0835-4f57-a17b-e874048c381d">1.2.840.10008.5.1.4.1.1.88.67</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_60679451-c9cf-4b76-8c4b-477c09be1eea">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.8" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2d549de4-3520-4e4b-a660-d0e5c7497f43">Radiopharmaceutical Radiation Dose SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2fc8a575-a7e8-4b9c-a70d-80b12558e8d5">1.2.840.10008.5.1.4.1.1.88.68</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0e799e77-4481-4ffb-bee9-edaeb9ef204b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.14" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0dbbf726-276d-4272-9a72-a8105aed2919">Colon CAD SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7b9be1f2-8e89-44db-8e91-09351117ea83">1.2.840.10008.5.1.4.1.1.88.69</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a6b20bc6-1a6a-4f07-83b7-c9eb351276ed">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.10" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cc1b062a-04c4-440c-b45c-9196c9419b9d">Implantation Plan SR Document Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_aaa212f4-f2c0-491d-b263-45f804a76da5">1.2.840.10008.5.1.4.1.1.88.70</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_af4fc135-49bd-4ce8-8bc2-116bcf4ba01b">
-                <olink targetdoc="PS3.3" targetptr="sect_A.35.12" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_eca82c91-6762-4754-ac60-5a372ab2e12d">Acquisition Context SR Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_95d5fd1e-04fd-47aa-a582-667ea4909392">1.2.840.10008.5.​1.​4.​1.​1.​88.​71</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9f22748f-a7b9-485c-8776-d1b848e36b65">
-<olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
-</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_aacbcaf7-cd3f-4f06-92f5-5c230d600309">Content Assessment Results Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_908da0d9-f058-4ea3-88c5-64ae667f19a7">1.2.840.10008.5.1.4.1.1.90.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <olink targetdoc="PS3.3" targetptr="sect_A.81" xrefstyle="select: title"/>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_70c44193-e32e-4f39-b09a-5dbe4b954b75">Encapsulated PDF Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_726a16a1-60cf-45bb-a642-28fd1833db95">1.2.840.10008.5.1.4.1.1.104.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_72a096b0-d1cb-4bff-922d-4c3ca1cbb8de">
-                <olink targetdoc="PS3.3" targetptr="sect_A.45.1" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_374eb526-c952-4df0-8784-e89fcba08a05">Encapsulated CDA Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_731a89d2-71f3-4222-92b6-1d05792165c7">1.2.840.10008.5.1.4.1.1.104.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_aa3d918c-8bc2-4994-b209-14ffe470aba8">
-                <olink targetdoc="PS3.3" targetptr="sect_A.45.2" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3acf8b1b-5cb5-40a3-8ba9-55360a7d2141">Positron Emission Tomography Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bc6bf7a7-3233-4a8a-9271-45242bd6451f">1.2.840.10008.5.1.4.1.1.128</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_98dd3a4d-6b7d-4766-9b75-fe52d1a15bd1">
-                <olink targetdoc="PS3.3" targetptr="sect_A.21" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b7ee3306-5fba-43d7-93f0-e18ba318b832">Enhanced PET Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8c57e94b-7add-4fcc-9625-d2b2bed2db7b">1.2.840.10008.5.1.4.1.1.130</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_637dce67-4de2-48a5-80d8-103b0090467d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.56" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d97a3d90-3791-4132-8979-66859005d4e5">Legacy Converted Enhanced PET Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b9e58673-7163-4b47-b679-3ddbdf67da4f">1.2.840.10008.5.1.4.1.1.128.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_52a93bb4-9f5f-4369-8dfc-0c4ca5321e15">
-                <olink targetdoc="PS3.3" targetptr="sect_A.72" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ab751b88-3eb2-4776-95f4-b4a3f015aad6">Basic Structured Display Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d55f3a7b-534b-42e7-9972-273f1bc4d5d4">1.2.840.10008.5.1.4.1.1.131</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b47edede-5824-4388-9f15-925786eaa0cb">
-                <olink targetdoc="PS3.3" targetptr="sect_A.33.5" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a34aeaeb-edfd-4915-8438-9117d832a137">RT Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_be5f629d-0969-411c-adb4-7beb464399e5">1.2.840.10008.5.1.4.1.1.481.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3a5db4fa-0efb-4a89-8077-83c0298f9f82">
-                <olink targetdoc="PS3.3" targetptr="sect_A.17" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4ed5c023-3a26-4a24-8b90-2e214c6f936e">RT Dose Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8c49246a-025d-4584-8ad8-134624c9a023">1.2.840.10008.5.1.4.1.1.481.2</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_781c7b93-ab1d-4e66-883c-8293f9b0e09f">
-                <olink targetdoc="PS3.3" targetptr="sect_A.18" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b7ea4143-1ba8-4c88-b254-788b08ad5749">RT Structure Set Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b412e1f0-50b9-44d6-afe0-611c8bf4f09d">1.2.840.10008.5.1.4.1.1.481.3</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_14f42093-dca1-4f6f-9a59-b34d7a02c0ae">
-                <olink targetdoc="PS3.3" targetptr="sect_A.19" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_986d8a14-d9f9-44e2-95b1-420d57d9d86b">RT Beams Treatment Record Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_333c02a7-a957-4949-8da5-736bcb26db86">1.2.840.10008.5.1.4.1.1.481.4</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1938364f-2253-48f5-8ea0-cad9def8e46d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.29" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_97664a8e-f23a-4fed-8f6d-6489093f8ecf">RT Plan Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a87e9116-11e2-442e-97ad-e82471ec29d1">1.2.840.10008.5.1.4.1.1.481.5</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6996ce64-6073-43bc-a27a-5eb07ca074f5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.20" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b04c1e03-db02-4ba0-b99f-6228a2678525">RT Brachy Treatment Record Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a6057dee-2d9b-4d21-ad27-8aa65b550c6c">1.2.840.10008.5.1.4.1.1.481.6</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_28014c1e-6402-4e2e-9f4b-88e4354f6557">
-                <olink targetdoc="PS3.3" targetptr="sect_A.30" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7b83f54b-7969-48e9-88ea-2b057b6e485f">RT Treatment Summary Record Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_14ff9fcc-bf3c-46c2-aa68-0ce0e69b9a8a">1.2.840.10008.5.1.4.1.1.481.7</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2e258921-c9b5-4620-9e17-24edb4b05608">
-                <olink targetdoc="PS3.3" targetptr="sect_A.31" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_821fe925-c8b9-4601-a38c-cf0418520099">RT Ion Plan Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f1003ca3-4505-4a56-a537-466c21572658">1.2.840.10008.5.1.4.1.1.481.8</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a59cd191-68d8-4910-a1c3-bdfb2292ee76">
-                <olink targetdoc="PS3.3" targetptr="sect_A.49" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9e5aada6-92ee-4eb0-8ced-9e120449534a">RT Ion Beams Treatment Record Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c49afe01-0625-4f57-877d-696d9a0599d6">1.2.840.10008.5.1.4.1.1.481.9</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_76082f48-ef9d-43b0-b616-1c91a9257a31">
-                <olink targetdoc="PS3.3" targetptr="sect_A.50" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7855fdbe-8c92-446c-ab08-eeccc9c3ac87">RT Beams Delivery Instruction Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4ab37663-ac60-47eb-b200-86374cbdecd4">1.2.840.10008.5.1.4.34.7</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a3bac986-fac1-4be6-bc85-f89a4e565657">
-                <olink targetdoc="PS3.3" targetptr="sect_A.64" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_33a30224-46e7-4039-a53a-284cfa525efb">RT Brachy Application Setup Delivery Instruction Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8b73f6b8-36d9-4ffa-b9dc-38eb7ae29d82">1.2.840.10008.5.1.4.34.10</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_23276968-7ade-43e5-baa8-c9f17e7b9b0d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.79" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7414b4df-4494-400c-9669-ab1cd4662535">Hanging Protocol Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ac1aa8b2-7ed8-4f3b-bbd2-6a719b3e2dcf">1.2.840.10008.5.1.4.38.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_01d508c4-a576-4490-b4d6-da5704177d64">
-                <olink targetdoc="PS3.3" targetptr="sect_A.44" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3c9ffe71-5efd-487f-8a16-5140f80a96d2">Color Palette Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1f3a0eb7-8829-4d0a-9598-ea2e9db4cc1c">1.2.840.10008.5.1.4.39.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2385016d-ca4c-4111-b96c-5c6f16a9385d">
-                <olink targetdoc="PS3.3" targetptr="sect_A.58" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_af281c34-f97c-4f2d-8bf0-94cd5c382af3">Generic Implant Template Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7159c6dc-9fab-4535-be7d-42bd4a792d8c">1.2.840.10008.5.1.4.43.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b98c733c-f26f-46fb-916e-393caea8a862">
-                <olink targetdoc="PS3.3" targetptr="sect_A.61" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_714584f9-027a-4efc-bc0c-1a1a82ddefaf">Implant Assembly Template Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_599c04de-b017-499a-9715-b9bfcfcb3b57">1.2.840.10008.5.1.4.44.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_748216e9-68a5-4a02-a422-7e27baf84cfa">
-                <olink targetdoc="PS3.3" targetptr="sect_A.62" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5fbc5724-f613-4d66-9a7d-a74ad16c37a3">Implant Template Group Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5f3a1a51-a4c2-40dc-9e98-d4c479757334">1.2.840.10008.5.1.4.45.1</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5daa527d-a944-4544-a37d-3dd92aa86a71">
-                <olink targetdoc="PS3.3" targetptr="sect_A.63" xrefstyle="select: title"/>
-              </para>
-            </td>
-          </tr>
         </tbody>
       </table>
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_fb9fcfcc-ce69-4a4d-9060-596e76ed9c8e">Except for the Media Storage Directory SOP Classes, the above listed Media Storage Standard SOP Classes are assigned the same UID Value as the corresponding network communication SOP Classes. This was done to simplify UID assignment. Although these SOP Classes are based on different Operations, the context of their usage should unambiguously distinguish a Media Storage SOP Class from a Network communication SOP Class.</para>
+            <para xml:id="para_fb9fcfcc-ce69-4a4d-9060-596e76ed9c8e">Except for the Media Storage Directory SOP Class, all the SOP Classes in the Media Storage Service Class are assigned the same UID Value as the corresponding network communication SOP Classes. This was done to simplify UID assignment. Although these SOP Classes are based on different Operations, the context of their usage should unambiguously distinguish a SOP Class  used for Media Storage from a network communication SOP Class.</para>
           </listitem>
           <listitem>
             <para xml:id="para_f9568b1c-9c15-4932-8519-237d662c0bcf">The storage of Normalized Print SOP Instances on media was previously defined in DICOM. They have been retired. See PS 3.4-1998.</para>
@@ -18556,61 +16891,7 @@
     </section>
     <section label="I.5" status="2" xml:id="sect_I.5">
       <title>Retired Standard SOP Classes</title>
-      <para xml:id="para_f52e162f-655a-4348-9f2e-9d7c6ff66fea">The SOP Classes in <xref linkend="table_I.5-1" xrefstyle="select: label"/> were defined in previous versions of the DICOM Standard. They are now retired and have been replaced by new standard SOP Classes shown in <xref linkend="table_I.4-1" xrefstyle="select: label"/>.</para>
-      <note>
-        <para xml:id="para_fdbd40d3-b17c-4145-a78a-3e54ba77cb1e">Usage of the retired SOP Classes is permitted by DICOM. However, new implementations are strongly encouraged to implement the newer SOP Classes.</para>
-      </note>
-      <table frame="box" label="I.5-1" rules="all" xml:id="table_I.5-1">
-        <caption>Retired Standard SOP Classes</caption>
-        <thead>
-          <tr valign="top">
-            <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_6db71920-1632-45eb-96a1-11d1b571ab38">
-                <emphasis role="bold">SOP Class Name</emphasis>
-              </para>
-            </th>
-            <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_c40c4832-2bb0-43a8-83f2-94a9a9fe5a22">
-                <emphasis role="bold">SOP Class UID</emphasis>
-              </para>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4b90e6ba-0f91-4395-bbd4-dba875a9b403">Nuclear Medicine Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_615120ec-57ad-4572-aeb0-0be2a9f649a7">1.2.840.10008.5.1.4.1.1.5</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1121e84d-60c1-4978-bd74-e9761c6f7f29">Ultrasound Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1c0a7269-2dc3-4bb8-ad4a-02e09b75fab1">1.2.840.10008.5.1.4.1.1.6</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5433011c-bfde-404a-b446-4c5652190c30">Ultrasound Multi-frame Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c9b75a80-ab79-41dc-9cd8-978361f0390f">1.2.840.10008.5.1.4.1.1.3</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e2f3b9ae-806e-460c-aec4-389426053941">X-Ray Angiographic Bi-plane Image Storage</para>
-            </td>
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_57b12f72-1ead-498d-91fc-0a1346539d52">1.2.840.10008.5.1.4.1.1.12.3</para>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <para xml:id="para_f52e162f-655a-4348-9f2e-9d7c6ff66fea">See <xref linkend="sect_B.6" xrefstyle="select: label"/>.</para>
     </section>
   </chapter>
   <chapter label="J" status="1" xml:id="chapter_J">
@@ -26406,207 +24687,10 @@
   </chapter>
   <chapter label="T" status="1" xml:id="chapter_T">
     <title>Hanging Protocol Storage Service Class</title>
-    <section label="T.1" status="2" xml:id="sect_T.1">
-      <title>Overview</title>
-      <section label="T.1.1" status="3" xml:id="sect_T.1.1">
-        <title>Scope</title>
-        <para xml:id="para_b343a91a-d276-400b-a2ae-578b5dabc68d">The Hanging Protocol Storage Service Class defines an application-level class-of-service that allows one DICOM AE to send a Hanging Protocol SOP Instance to another DICOM AE.</para>
-      </section>
-      <section label="T.1.2" status="3" xml:id="sect_T.1.2">
-        <title>Service Definition</title>
-        <para xml:id="para_a5aab7f5-104f-41c6-9c54-87b069252c73">The Hanging Protocol Storage Service Class consists of a single SOP Class: the Hanging Protocol Storage SOP Class. It uses the Hanging Protocol IOD that represents the Hanging Protocol IE. This IOD is defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. The Hanging Protocol Storage Service Class uses the C-STORE DIMSE Service specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. A successful completion of the C-STORE has the following semantics:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_efb01959-6f0d-47ee-89b0-c624d7bb2fc5">Both the SCU and the SCP support Hanging Protocol information.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_0aeb7496-8b25-482b-a9b6-06b8957dcca6">The Hanging Protocol information is stored in some medium.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_b38d605e-4499-4ea9-be94-f7af5741f1c7">For some time frame, the Hanging Protocol information may be accessed.</para>
-          </listitem>
-        </itemizedlist>
-        <note>
-          <orderedlist numeration="arabic">
-            <listitem>
-              <para xml:id="para_8e60cf45-8875-4398-9aa4-a01df7830cef">Support for the Hanging Protocol Storage SOP Class does not imply support for the Hanging Protocol Query/Retrieve Service Class.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_2a65e821-418b-4cfc-bb75-4890c4169fed">The duration of the storage is also implementation dependent, but is described in the Conformance Statement of the SCP.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_33db3b2f-bb90-4fda-ae15-d1fb103d53db">The Hanging Protocol Storage SOP Class is intended to be used in a variety of environments: e.g., for workstations to transfer Hanging Protocol SOP Instances to other workstations or archives, for archives to transfer Hanging Protocol SOP Instances to workstations, etc.</para>
-            </listitem>
-          </orderedlist>
-        </note>
-      </section>
-    </section>
-    <section label="T.2" status="2" xml:id="sect_T.2">
-      <title>Association Negotiation</title>
-      <para xml:id="para_1d7b49cb-2df8-4c3d-a0db-5c9a15238be3">The Association negotiation rules as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> apply to the SOP Class of this Service Class. No SOP Class specific application information is used.</para>
-    </section>
-    <section label="T.3" status="2" xml:id="sect_T.3">
-      <title>Conformance Overview</title>
-      <para xml:id="para_98f076aa-fb3c-4b58-944b-76bf609402b1">The application-level services addressed by this Service Class definition are specified in a single SOP Class: Hanging Protocol Storage SOP Class.</para>
-    </section>
-    <section label="T.4" status="2" xml:id="sect_T.4">
-      <title>Hanging Protocol Storage SOP Class</title>
-      <para xml:id="para_a4e295d5-156b-4351-880a-b5899e070604">This Section defines the SCU and SCP behavior for the Hanging Protocol Storage SOP Class. The C-STORE DIMSE-C Service shall be the mechanism used to transfer Hanging Protocol SOP Instances between peer DICOM AEs as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
-      <section label="T.4.1" status="3" xml:id="sect_T.4.1">
-        <title>Service Class User</title>
-        <para xml:id="para_44034a38-81bb-4ec3-a9b9-c51f8908b1bc">The DICOM AE that claims conformance to this SOP Class as an SCU shall be capable of sending a Hanging Protocol SOP Instance that meets the requirements of the Hanging Protocol IOD. It shall be invoked by the SCU through the use of the DIMSE C-STORE request used in conjunction with this SOP Class.</para>
-        <para xml:id="para_1ec999c9-0a01-441f-993f-8cf64d54a9cd">The SCU shall include a Data Set with the Attributes as defined in the Hanging Protocol IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
-        <para xml:id="para_49e7e123-0383-40f5-861a-bed58f0ef234">The SCU shall recognize the status of the C-STORE service and take appropriate action based on the success or failure of the service. This SOP Class places no further requirements on what the SCU shall do other than that it shall distinguish between successful and failed C-STORE responses. This behavior shall be documented as part of the SOP Class Conformance Statement.</para>
-      </section>
-      <section label="T.4.2" status="3" xml:id="sect_T.4.2">
-        <title>Service Class Provider</title>
-        <para xml:id="para_6f9a903b-e701-498f-8324-bb6573a29dfc">The DICOM AE that claims conformance to this SOP Class as an SCP shall receive a Hanging Protocol SOP Instance through the use of the DIMSE C-STORE service used in conjunction with this SOP Class.</para>
-        <para xml:id="para_48eb8a69-bb7e-4fc7-b261-831c204eedb6">The SCP shall store and provide access to all Type 1, Type 2, and Type 3 Attributes defined in the Hanging Protocol IOD, as well as any Standard Extended Attributes (including Private Attributes) included in the SOP Instance. The SCP may, but is not required to validate that the Attributes of the Hanging Protocol SOP Instance meet the requirements of the Hanging Protocol IOD. The SCP shall not modify the values of any Attributes in the Hanging Protocol SOP Instance without assigning a new SOP Instance UID.</para>
-        <para xml:id="para_e861a280-ded7-495e-85b0-80fea81a1272">If a display device acting as an SCP applies a Hanging Protocol to a set of images, all mandatory Hanging Protocol and presentation intent Attributes shall be applied.</para>
-        <para xml:id="para_d510c161-9bc4-4f5c-8501-733fc2871730">The SCP shall return, via the C-STORE response primitive, the Response Status Code applicable to the associated request. By performing this service successfully, the SCP indicates that the Hanging Protocol SOP Instance has been successfully stored. <xref linkend="table_T.4-1" xrefstyle="select: label"/> shows the response status values. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
-        <table frame="box" label="T.4-1" rules="all" xml:id="table_T.4-1">
-          <caption>C-STORE Response Status Values</caption>
-          <thead>
-            <tr valign="top">
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_df7532c1-3681-4dec-93e1-ffa1cd94c98f">
-                  <emphasis role="bold">Service Status</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_fdfdebff-2a1a-47b5-9fca-9fa1da9fe78d">
-                  <emphasis role="bold">Further Meaning</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_c7b73e41-8722-4a37-b19f-a86c6c0d43dc">
-                  <emphasis role="bold">Status Codes</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_1546f155-1f02-4b0d-8441-5150ee0569d0">
-                  <emphasis role="bold">Related Fields</emphasis>
-                </para>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="3">
-                <para xml:id="para_011cb895-38c7-4f2b-8812-da21e6b756ed">Failure</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_4c784e39-5168-4efd-af7b-1ee905918b50">Refused: Out of Resources</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_3e1583aa-6d9c-4cb9-91be-08c359057a4d">A700</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_8f5cce28-47d7-407d-81a9-653aea9d3de3">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_9b5612ac-e286-4839-85de-161e88fd590f">Error: Data Set Does Not Match SOP Class</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_1bf0a8d3-5b62-4137-8182-91dbc4611890">A900</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_2a8cded0-5b10-4ee7-bec7-529014b901c7">(0000,0901)</para>
-                <para xml:id="para_a47dda19-b859-4b87-836c-6019a8744d22">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_0f3045fc-896b-41a3-8d42-a1a9e60ea788">Error: Cannot Understand</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_aa893343-bb78-4493-bb11-85af2c43b602">C000</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_9db16753-debe-410d-acf3-eb92d461225f">(0000,0901)</para>
-                <para xml:id="para_55ac3f52-fea9-4b50-bbf8-b7eecf30fe11">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_83427f6e-3476-40ad-b343-d07719dc8420">Success</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1"/>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_6bd7f97a-8e39-4566-9484-251886f1e5cb">0000</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_d1716450-300d-4c5e-a6b0-2a64e8e83f7b">None</para>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <note>
-          <para xml:id="para_34184090-8bcf-4e92-94f0-3e54ab426e00">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
-        </note>
-      </section>
-      <section label="T.4.3" status="3" xml:id="sect_T.4.3">
-        <title>Hanging Protocol Storage SOP Class UID</title>
-        <para xml:id="para_80f10870-9f2e-4ec4-840e-2b29c5d80a21">The Hanging Protocol Storage SOP Class shall be uniquely identified by the Hanging Protocol Storage SOP Class UID, which shall have a value "1.2.840.10008.5.1.4.38.1".</para>
-      </section>
-      <section label="T.4.4" status="3" xml:id="sect_T.4.4">
-        <title>Conformance Statement Requirements</title>
-        <para xml:id="para_90b970a5-6dba-430c-b14f-d9a991df3f75">An implementation may conform to the Hanging Protocol Storage SOP Class as an SCU, SCP or both. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
-        <section label="T.4.4.1" status="4" xml:id="sect_T.4.4.1">
-          <title>SCU Conformance Requirements</title>
-          <para xml:id="para_ab0bb0b5-1de7-449f-9d5b-2e8ef9c0aef6">An implementation that conforms to the Hanging Protocol Storage SOP Class as an SCU that is a creator of Hanging Protocol SOP Instances shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_b31b0282-44ba-40ec-ba0c-1cc6166e8fa4">The manner in which the values of the Hanging Protocol IOD Attributes are derived from displayed images, layouts, operator intervention or defaults.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_97e6b213-3c3b-475f-81bb-6def0750c798">Any Private Attributes that are used as the value of Selector Attribute (0072,0026) in the Image Set Selector Sequence, Filter Operations Sequence or Sorting Operations Sequence.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_7c7d1821-236a-40c5-8ec2-1b0c039a84fa">The optional Attributes that may be included in a Hanging Protocol SOP Instance.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_dc039ad5-39bd-4f88-bc7e-28abab4c657b">The behavior of the SCU in the case of a successful C-STORE response status.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_e366445a-cbd6-4986-be3d-6ac2f1f22c61">The behavior of the SCU in each case of a failure C-STORE response status.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-        <section label="T.4.4.2" status="4" xml:id="sect_T.4.4.2">
-          <title>SCP Conformance Requirements</title>
-          <para xml:id="para_8f6bfa1b-9f37-4add-9c7f-efa8ccaaf683">An implementation that conforms to the Hanging Protocol Storage SOP Class as an SCP that interprets Hanging Protocol SOP Instances for display shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_64daf15c-9c68-40fd-8c4c-6743fa38a7c8">The range of display environments that the SCP will support (e.g., number of screens, size of screens, overlapping image boxes).</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_f7be42f5-02a2-42d9-b572-41f8f35ac7ad">The optional Attributes of the Hanging Protocol IOD that it is capable of interpreting and those that are not supported.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_016b609b-5907-4a42-97cc-0de8f303b5e0">Description of application behavior when the value of Partial Data Display Handling (0072,0208) is ADAPT_LAYOUT or zero length.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_2768483b-9bb1-4feb-a266-27d66db96b83">Description of application behavior when the display environment of the Hanging Protocol Instance differs from the display environment of the application, with respect to preserving layout versus spatial resolution.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_29c757ee-9f9f-4086-a578-0474f28d23c1">The Image Storage SOP Classes for which the Hanging Protocol Storage SOP Class is supported</para>
-            </listitem>
-          </itemizedlist>
-          <para xml:id="para_ba5e1aa2-81eb-4e12-9d61-d42899094bf4">An implementation that conforms to the Hanging Protocol Storage SOP Class as an SCP shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_f99c6565-3efe-417b-bf38-be15267949b6">The behavior of the SCP in the case of a successful C-STORE operation, including the access method for a stored Hanging Protocol SOP Instance, and the duration of the storage.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_7049eef9-32a7-43a2-bb65-fd98f4634c94">The meaning of each case of a failure C-STORE response status, as well as appropriate recovery action.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-      </section>
-    </section>
+    <para xml:id="para_77b94dd9-7afb-4f22-a6f7-ecf4a442433c">See <xref linkend="chapter_GG" xrefstyle="template: Annex %n"/>.</para>
+    <note>
+      <para xml:id="para_cc34b5c4-8e5d-4b2f-bb48-af030098bf77">The requirements of this section have been consolidated into the Non-Patient Object Storage Service Class (see <xref linkend="sect_GG.6.1" xrefstyle="select: label"/>).</para>
+    </note>
   </chapter>
   <chapter label="U" status="1" xml:id="chapter_U">
     <title>Hanging Protocol Query/Retrieve Service Class</title>
@@ -28830,195 +26914,10 @@
   </chapter>
   <chapter label="W" status="1" xml:id="chapter_W">
     <title>Color Palette Storage Service Class</title>
-    <section label="W.1" status="2" xml:id="sect_W.1">
-      <title>Overview</title>
-      <section label="W.1.1" status="3" xml:id="sect_W.1.1">
-        <title>Scope</title>
-        <para xml:id="para_654cd16a-8d5a-4370-81a6-af5015b81fd6">The Color Palette Storage Service Class defines an application-level class-of-service that allows one DICOM AE to send a Color Palette SOP Instance to another DICOM AE.</para>
-      </section>
-      <section label="W.1.2" status="3" xml:id="sect_W.1.2">
-        <title>Service Definition</title>
-        <para xml:id="para_862243b5-6ab0-4e81-845f-0705663abad1">The Color Palette Storage Service Class consists of a single SOP Class: the Color Palette Storage SOP Class. It uses the Color Palette IOD that represents the Color Palette IE. This IOD is defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. The Color Palette Storage Service Class uses the C-STORE DIMSE Service specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. A successful completion of the C-STORE has the following semantics:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_77756b36-6a53-4480-aa35-0d7b8f6a4f01">Both the SCU and the SCP support Color Palette information.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_ca6147a3-a758-45d5-a76f-cbe3e19a0743">The Color Palette information is stored in some medium.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_4323932b-8afb-4050-8911-9c90ad9d12fe">For some time frame, the Color Palette information may be accessed.</para>
-          </listitem>
-        </itemizedlist>
-        <note>
-          <orderedlist numeration="arabic">
-            <listitem>
-              <para xml:id="para_447df79b-44ae-48eb-a135-c311133038c5">Support for the Color Palette Storage SOP Class does not imply support for the Color Palette Query/Retrieve Service Class.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_d9556e7d-b965-4cfd-b02c-5808ab79266a">The duration of the storage is also implementation dependent, but is described in the Conformance Statement of the SCP.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_61899a03-d210-4786-81aa-40dfca38922c">The Color Palette Storage SOP Class is intended to be used in a variety of environments: e.g., for workstations to transfer Color Palette SOP Instances to other workstations or archives, for archives to transfer Color Palette SOP Instances to workstations, etc.</para>
-            </listitem>
-          </orderedlist>
-        </note>
-      </section>
-    </section>
-    <section label="W.2" status="2" xml:id="sect_W.2">
-      <title>Association Negotiation</title>
-      <para xml:id="para_b633656d-a7c4-4218-8c88-28e8320c7262">The Association negotiation rules as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> apply to the SOP Class of this Service Class. No SOP Class specific application information is used.</para>
-    </section>
-    <section label="W.3" status="2" xml:id="sect_W.3">
-      <title>Conformance Overview</title>
-      <para xml:id="para_ee419ee4-6dce-46b6-9ad1-245d65f1b87f">The application-level services addressed by this Service Class definition are specified in a single SOP Class: Color Palette Storage SOP Class.</para>
-    </section>
-    <section label="W.4" status="2" xml:id="sect_W.4">
-      <title>Color Palette Storage SOP Class</title>
-      <para xml:id="para_9c52cd08-bb1d-4aec-bca3-f3dad412c09a">This Section defines the SCU and SCP behavior for the Color Palette Storage SOP Class. The C-STORE DIMSE-C Service shall be the mechanism used to transfer Color Palette SOP Instances between peer DICOM AEs as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
-      <section label="W.4.1" status="3" xml:id="sect_W.4.1">
-        <title>Service Class User</title>
-        <para xml:id="para_91529a13-1b28-4d77-97e2-54c93cae6862">The DICOM AE that claims conformance to this SOP Class as an SCU shall be capable of sending a Color Palette SOP Instance that meets the requirements of the Color Palette IOD. It shall be invoked by the SCU through the use of the DIMSE C-STORE request used in conjunction with this SOP Class.</para>
-        <para xml:id="para_3be142ce-dd6f-4389-9831-3011700dc544">The SCU shall include a Data Set with the Attributes as defined in the Color Palette IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
-        <para xml:id="para_ec264051-c63b-480f-84a0-3d976d246002">The SCU shall recognize the status of the C-STORE service and take appropriate action based on the success or failure of the service. This SOP Class places no further requirements on what the SCU shall do other than that it shall distinguish between successful and failed C-STORE responses. This behavior shall be documented as part of the SOP Class Conformance Statement.</para>
-      </section>
-      <section label="W.4.2" status="3" xml:id="sect_W.4.2">
-        <title>Service Class Provider</title>
-        <para xml:id="para_6a721efd-aa77-4101-af1e-6ad30fd8c7cd">The DICOM AE that claims conformance to this SOP Class as an SCP shall receive a Color Palette SOP Instance through the use of the DIMSE C-STORE service used in conjunction with this SOP Class.</para>
-        <para xml:id="para_a785e60a-61be-444f-aa2c-5bd3fcf25525">The SCP shall store and provide access to all Type 1, Type 2, and Type 3 Attributes defined in the Color Palette IOD, as well as any Standard Extended Attributes (including Private Attributes) included in the SOP Instance. The SCP may, but is not required to validate that the Attributes of the Color Palette SOP Instance meet the requirements of the Color Palette IOD. The SCP shall not modify the values of any Attributes in the Color Palette SOP Instance without assigning a new SOP Instance UID, except that the SCP may modify values of, or add, Type 3 and Private Attributes that do not change the semantics or interpretation of the Palette.</para>
-        <note>
-          <para xml:id="para_94df6132-9b69-4b51-a2f1-834c09c2d633">E.g., an SCP may add values to Alternate Content Description Sequence (0070,0087), to provide an additional description in another language.</para>
-        </note>
-        <para xml:id="para_aec8b9fd-bc32-4fdd-a381-d5c0beb3c5f7">If a display device acting as an SCP applies a Color Palette to a set of images, all mandatory Color Palette and presentation intent Attributes shall be applied.</para>
-        <para xml:id="para_17560df4-a95c-47d5-8dd1-70112d4641c8">The SCP shall return, via the C-STORE response primitive, the Response Status Code applicable to the associated request. By performing this service successfully, the SCP indicates that the Color Palette SOP Instance has been successfully stored. <xref linkend="table_W.4-1" xrefstyle="select: label"/> shows the response status values. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
-        <table frame="box" label="W.4-1" rules="all" xml:id="table_W.4-1">
-          <caption>C-STORE Response Status Values</caption>
-          <thead>
-            <tr valign="top">
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_32bb7ec7-f931-4d12-9b40-7edaade65e07">
-                  <emphasis role="bold">Service Status</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_3b05c098-94d3-472a-9f93-eadc3c7dd13d">
-                  <emphasis role="bold">Further Meaning</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_be4c6369-49b5-4432-9d3a-0ee0aaabaeb5">
-                  <emphasis role="bold">Status Codes</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_85f4235c-c21a-4e4a-8a7d-ae1c4077ff11">
-                  <emphasis role="bold">Related Fields</emphasis>
-                </para>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="3">
-                <para xml:id="para_a486145a-ae03-42e3-a04b-470a232c3a14">Failure</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_366ce023-123c-496f-919a-cd3df088d510">Refused: Out of Resources</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_a09558db-4eb1-45af-9712-1f4c0046bdc2">A700</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_46f2a030-93a9-435f-bb36-79e80e0d37cd">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_ad36c0ba-ee01-42f1-8bb5-3bc4472a4413">Error: Data Set Does Not Match SOP Class</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_fbf3395a-8f1e-42f2-973c-783a7583642c">A900</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_d66373b6-4a6c-4785-b392-1fe040d721dc">(0000,0901)</para>
-                <para xml:id="para_371794ef-0df5-4912-a741-5f43e70cd230">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_a6cd81ed-0408-4a6b-a92c-f3a76f2deb60">Error: Cannot Understand</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_c1bdb271-1439-4621-8ebe-1889bfc53dc2">C000</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_f3e2f0d0-875b-48e7-906b-8ad57503da47">(0000,0901)</para>
-                <para xml:id="para_4af620cc-8996-4c57-86bd-9cb21bbda2ae">(0000,0902)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_38948c1f-a4c7-4676-a877-078fdd028b1c">Success</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1"/>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_442c7045-dfbc-4571-b9fe-f0f5016894ca">0000</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_e9ec33a3-d983-4e02-8ef0-224568238df1">None</para>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <note>
-          <para xml:id="para_7a24800c-cd4d-42e8-8245-7adb9db1a158">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
-        </note>
-      </section>
-      <section label="W.4.3" status="3" xml:id="sect_W.4.3">
-        <title>Color Palette Storage SOP Class UID</title>
-        <para xml:id="para_e315544a-b20d-43ce-a63a-7e62dfc648d3">The Color Palette Storage SOP Class shall be uniquely identified by the Color Palette Storage SOP Class UID, which shall have a value "1.2.840.10008.5.1.4.39.1".</para>
-      </section>
-      <section label="W.4.4" status="3" xml:id="sect_W.4.4">
-        <title>Conformance Statement Requirements</title>
-        <para xml:id="para_2a744b28-3338-4666-ad8d-7d6fc05fcce8">An implementation may conform to the Color Palette Storage SOP Class as an SCU, SCP or both. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
-        <section label="W.4.4.1" status="4" xml:id="sect_W.4.4.1">
-          <title>SCU Conformance Requirements</title>
-          <para xml:id="para_7a7f454a-e860-4581-be9a-ba2b0e11647c">An implementation that conforms to the Color Palette Storage SOP Class as an SCU that is a creator of Color Palette SOP Instances shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_1185d1f8-5350-4809-b849-85e321e472e9">The optional Attributes that may be included in a Color Palette SOP Instance.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_f536b9fd-96ab-4173-bbe7-b7916a066373">The behavior of the SCU in the case of a successful C-STORE response status.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_f989ffa2-a923-4b17-823d-2ba4df2be4cd">The behavior of the SCU in each case of a failure C-STORE response status.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-        <section label="W.4.4.2" status="4" xml:id="sect_W.4.4.2">
-          <title>SCP Conformance Requirements</title>
-          <para xml:id="para_0ac80e57-3c38-4fbb-a29f-b4083b631649">An implementation that conforms to the Color Palette Storage SOP Class as an SCP that interprets Color Palette SOP Instances for display shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_c99634c9-a02d-449e-9795-aa0f9b632d18">The optional Attributes of the Color Palette IOD that it is capable of interpreting and those that are not supported.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_696224a6-686e-454f-9e7d-834e95a47930">The Image Storage SOP Classes for which application of the Color Palette Storage SOP Class is supported</para>
-            </listitem>
-          </itemizedlist>
-          <para xml:id="para_2d4e1fee-200b-40f5-baa8-d0f93c4c3a7d">An implementation that conforms to the Color Palette Storage SOP Class as an SCP shall state in its Conformance Statement:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_751ce869-236d-4489-8863-01715d453afa">The behavior of the SCP in the case of a successful C-STORE operation, including the access method for a stored Color Palette SOP Instance, and the duration of the storage.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_ee2bc369-5857-4359-9158-f128d465c15d">The meaning of each case of a failure C-STORE response status, as well as appropriate recovery action.</para>
-            </listitem>
-          </itemizedlist>
-        </section>
-      </section>
-    </section>
+    <para xml:id="para_0c6d58ed-0fe8-4d81-872f-695f9b5bcfe6">See <xref linkend="chapter_GG" xrefstyle="template: Annex %n"/>.</para>
+    <note>
+      <para xml:id="para_dcd16101-914f-4031-9d9a-6e5e97339b16">The requirements of this section have been consolidated into the Non-Patient Object Storage Service Class (see <xref linkend="sect_GG.6.2" xrefstyle="select: label"/>).</para>
+    </note>
   </chapter>
   <chapter label="X" status="1" xml:id="chapter_X">
     <title>Color Palette Query/Retrieve Service Class</title>
@@ -34965,6 +32864,138 @@
                   <para xml:id="para_5c9c9fd5-394c-4f7c-952c-c3bad4561f01">-/1</para>
                 </td>
               </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="11">
+                  <para xml:id="para_19a440b3-2afe-4dd1-8e76-ba4b1821160e">UPS Assigned</para>
+                </td>
+                <td align="center" colspan="1" rowspan="11">
+                  <para xml:id="para_4c36677c-2780-4744-a28e-fbe2b2e77d88">5</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_3b789302-1ad7-4d6a-a5ff-bb39f0b72a2c">Scheduled Station Name Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_8dc6cb10-36db-472a-ab1e-53ef35abf36b">(0040,4025)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_5030b74f-6cf3-43e1-af0b-86ca94f95efc">-/1C</para>
+                  <para xml:id="para_1667becf-fbbc-4b84-a278-e3d6c4163783">Required if populated in the UPS Instance</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_ad396a46-73f3-4451-b997-447caa0df6af">&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_26f0d383-6835-4725-8f57-40556b644434">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f0195fcf-53b6-4859-84d5-7c19a957932d">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_c41e65a6-ea78-4b70-bf65-b1ed8e5f87e9">&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9b9b0cf9-1fda-4024-9dca-3bc206b8b33e">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d7dbd8d5-dba7-4016-8234-0932855accdf">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_ce958ca1-7489-46e2-9c19-9b97ce7bcb98">&gt;Coding Scheme Version</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_50d209d9-faac-49e1-ad78-7e8fff177edf">(0008,0103)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_af6156a0-70ca-4970-be4c-c3681cfab914">-/1C</para>
+                  <para xml:id="para_f255559a-6daa-45b5-ba74-6b8a353ff77d">Required if the value of Coding Scheme Designator (0008,0102) is not sufficient to identify the Code Value (0008,0100) unambiguously</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_fb5551cf-9ad8-416e-bbe1-08e66d8543d6">&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_0cf5bf9b-8a53-4142-ac5e-d2446e3d5bc0">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_00879de4-b88e-41e0-93e4-618f3e6824da">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_f96e42f9-c8a3-430d-a65b-ffcc27b312c4">Human Performer Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d0f34ed1-41da-404f-8968-d716dd1b7bda">(0040,4009)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_100859e7-41df-4a55-a1fb-9fb4aaf12676">-/1C</para>
+                  <para xml:id="para_bf495b33-b9d8-4bc3-a87d-0f3ca7ad0c20">Required if populated in the UPS Instance</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_8cb999b7-6f02-49f8-b228-516315da3e00">&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2d73b5bd-e80a-4c5b-a19e-3347d1411099">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f6520802-4ae8-4452-9f7b-b5be6f4843ee">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_9a0ea4b3-5ef3-490a-9525-c0b88e878186">&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_75b3eae4-fc63-49b7-a9f7-50e8dcfdfe94">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_044a8500-357b-42b0-97af-b8e589d429c9">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a48a3ba4-1eb6-4209-97c4-c8e386160b00">&gt;Coding Scheme Version</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3f84a3a3-66be-429e-b812-72da49d1a180">(0008,0103)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_8a97f811-de39-4939-8a61-93b52a50368f">-/1C</para>
+                  <para xml:id="para_d79731d5-639a-403d-ab28-47552b2fe529">Required if the value of Coding Scheme Designator (0008,0102) is not sufficient to identify the Code Value (0008,0100) unambiguously</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_09798edf-79c8-4deb-9ba7-5f07d568c8f4">&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ece61fcd-d506-40d2-b664-eddd5ad36610">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7bd1e418-fa94-427c-b1d7-6bd7a330cc47">-/1</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_d44a7c0a-43de-4fce-9839-93e4dc0e69db">Human Performer's Organization</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_40e70780-d732-46ee-a5df-88c9dc7b7242">(0040,4036)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f79b36ee-cbe7-43d4-935a-1325a824ca46">-/1C</para>
+                  <para xml:id="para_3190d62a-fd3e-4869-8c26-70c28e8072a9">Required if populated in the UPS Instance</para>
+                </td>
+              </tr>
             </tbody>
           </table>
           <note>
@@ -34989,6 +33020,7 @@
               </listitem>
             </orderedlist>
           </note>
+          <para xml:id="para_5784f056-5d1d-435d-ac1d-0e6b69b7f96f">If an SCU receives an N-EVENT-REPORT for an instance with an Event Type ID of 5 (UPS Assigned) and the device or human specified in the notification correspond to the SCU, then the UPS has been assigned to that SCU.</para>
           <para xml:id="para_dbfaf555-40d9-4a03-9192-0301405aa760">An SCU that wishes to start/stop receiving N-EVENT-REPORTs about UPS instances may subscribe/unsubscribe as described in <xref linkend="sect_CC.2.3.2" xrefstyle="select: label"/>.</para>
           <para xml:id="para_5ac37130-ead1-482d-94cc-914bb6cc4654">If an SCU receives an N-EVENT-REPORT with an Event Type ID of 4 (SCP Status Change), it is not required to act on that information, however the SCU may want to consider actions such as: re-subscribing if the subscription list has been Cold Started, verifying (and recreating if necessary) scheduled UPSs if the UPS list has been Cold Started, etc.</para>
           <note>
@@ -35001,10 +33033,12 @@
           <para xml:id="para_5e3f4d4d-9909-4350-b41c-131ac9b24e46">Each time the SCP completes a Subscribe to Receive UPS Event Reports Action (see <xref linkend="sect_CC.2.3.1" xrefstyle="select: label"/>) for a specific UPS instance, the SCP shall send to the Receiving AE a UPS State Report Event and provide the current value of the Procedure Step State (0074,1000) and Input Readiness State (0040,4041) Attributes for the UPS instance.</para>
           <para xml:id="para_1555a277-b33a-4020-aa7d-7a0464f7fae9">Each time the SCP completes a Subscribe to Receive UPS Event Reports Action (see <xref linkend="sect_CC.2.3.1" xrefstyle="select: label"/>) for the well-known UID 1.2.840.10008.5.1.4.34.5 with the value of the Deletion Lock set to TRUE (i.e., a Global Subscription with Lock), the SCP shall send to the Receiving AE a UPS State Report Event for every UPS Instance managed by the SCP and provide the current value of the Procedure Step State (0074,1000) and Input Readiness State (0040,4041) Attributes.</para>
           <para xml:id="para_c62402b8-aa20-47e8-b12c-0176cad6a0d8">Each time the SCP creates a new UPS instance, the SCP shall send a UPS State Report Event, indicating a change of status to SCHEDULED and the initial value of and Input Readiness State (0040,4041), to all AEs with a Global Subscription State of "Global Subscription with Lock" or "Global Subscription w/o Lock". (see <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>)</para>
+          <para xml:id="para_a6b92781-c301-4264-a2a8-4ad3017e7fd5">Each time the SCP creates a new UPS instance and either the Scheduled Station Name Code Sequence (0040,4025) or the Scheduled Human Performers Sequence (0040,4034) is populated, the SCP shall also send a UPS Assigned Event, with the current contents of the Scheduled Station Name Code Sequence (0040,4025) and the Scheduled Human Performers Sequence (0040,4034), to all AEs with a Global Subscription State of "Global Subscription with Lock" or "Global Subscription w/o Lock".</para>
           <para xml:id="para_5d495682-7f89-46da-b0af-2395e764510a">In the following text "Subscribed SCUs" means all AEs where the UPS Subscription State of the UPS Instance in question is "Subscribed with Lock" or "Subscribed w/o Lock" (see <xref linkend="sect_CC.2.3" xrefstyle="select: label"/>). If the SCP also supports the HTTP CreateSubscription service as an Origin-Server, "Subscribed SCUs" also includes all CreateSubscription User-Agents where the UPS Subscription State of the UPS Instance in question is "Subscribed with Lock" or "Subscribed w/o Lock" (see <olink targetdoc="PS3.18" targetptr="sect_6.9.7" xrefstyle="select: docname label quotedtitle"/>).</para>
           <para xml:id="para_649ec948-1648-4cc1-96b1-b3328c054661">Each time the SCP changes the Procedure Step State (0074,1000) Attribute for a UPS instance, the SCP shall send a UPS State Report Event to subscribed SCUs.</para>
           <para xml:id="para_fac7052c-a284-4f4b-a9d5-d520a4985252">Each time the SCP changes the Input Readiness State (0040,4041) Attribute for a UPS instance, the SCP shall send a UPS State Report Event to subscribed SCUs.</para>
           <para xml:id="para_b8e29236-a064-4441-a63f-52ff00d929c5">Each time the SCP receives an N-ACTION with an Action Type ID of 2 (Request UPS Cancel), the SCP shall send a UPS Cancel Requested Event to subscribed SCUs. The SCP shall include the AE Title of the triggering N-ACTION SCU in the Requesting AE Attribute. The SCP shall include the Reason For Cancellation, Contact Display Name and Contact URI Attributes if they were provided in the triggering N-ACTION.</para>
+          <para xml:id="para_e68a5649-e0a3-473c-9fae-a5f1ca427873">Each time the SCP updates the Scheduled Station Name Code Sequence (0040,4025) or the Scheduled Human Performers Sequence (0040,4034) for a UPS instance, the SCP shall send a UPS Assigned Event, with the current contents of the Scheduled Station Name Code Sequence (0040,4025) and the Scheduled Human Performers Sequence (0040,4034), to subscribed SCUs.</para>
           <para xml:id="para_53413c43-93b3-4e7b-92c1-4f973fe53653">Each time the SCP updates the Procedure Step Progress (0074,1004), the Procedure Step Progress Description (0074,1006), or the contents of the Procedure Step Communications URI Sequence (0074,1008) for a UPS instance, the SCP shall send a UPS Progress Event, with the current contents of the Progress Information Sequence (0074,1002), to subscribed SCUs.</para>
           <para xml:id="para_cfbc3c94-ad5e-4eae-b0ab-26fdbb7f8f03">Each time the SCP is restarted, the SCP shall send an SCP Status Change Event. The SCP, if it knows it is going down, may send an additional SCP Status Change Event before it is shut down. Since the subscription lists may be incomplete or missing in the event of a restart, the SCP shall maintain a fallback list of AEs (for example as a configuration file, or from an LDAP server). The SCP shall send the SCP Status Change Events to:</para>
           <itemizedlist>
@@ -36326,7 +34360,7 @@
                     <para xml:id="para_46fe030d-41d8-408b-8390-140877dcfa6d">1</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_8051cee6-67b1-4614-9c31-aca143bf0e28"/>
+                    <para xml:id="para_8051cee6-67b1-4614-9c31-aca143bf0e28">URL specifying the location of the referenced instance(s).</para>
                   </td>
                 </tr>
               </tbody>
@@ -46439,6 +44473,379 @@
             <para xml:id="para_cdd713dd-0f5a-42e1-a89a-8f6356145f4d">For an SCP of a Volumetric Presentation State Storage SOP Class, whether references to Structured Report instances are supported, and if not supported, any notifications or lack of notifications to the user that the context information is not displayed.</para>
           </listitem>
         </itemizedlist>
+      </section>
+    </section>
+  </chapter>
+  <chapter label="GG" status="1" xml:id="chapter_GG">
+    <title>Non-Patient Object Storage Service Class</title>
+    <section label="GG.1" status="2" xml:id="sect_GG.1">
+      <title>Overview</title>
+      <section label="GG.1.1" status="3" xml:id="sect_GG.1.1">
+        <title>Scope</title>
+        <para xml:id="para_efc2367e-c7b7-430e-87f2-7fe3e79610f8">The Non-Patient Object Storage Service Class defines an application-level class-of-service that allows one DICOM AE to send a SOP Instance of a non-patient-related information object to another DICOM AE.</para>
+      </section>
+      <section label="GG.1.2" status="3" xml:id="sect_GG.1.2">
+        <title>Service Definition</title>
+        <para xml:id="para_7f1bb136-b9ec-4f99-8b34-56a7b763cad3">The Non-Patient Object Storage Service Class includes several SOP Classes, each using an IOD defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> (see <xref linkend="sect_GG.3" xrefstyle="select: label"/>). The Non-Patient Object Storage Service Class uses the C-STORE DIMSE Service specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. A successful completion of the C-STORE has the following semantics:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_1ca9b388-8a7f-418b-a247-d8d5eb1fdec0">Both the SCU and the SCP support the type of information to be stored.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6439a6db-623f-4b78-a37a-78c319943dd8">The transferred information is stored in some medium.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_14f3918c-c2b1-41a0-9f71-bca5df6d5019">For some time frame, the stored information may be accessed.</para>
+          </listitem>
+        </itemizedlist>
+        <note>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_348aa473-b59f-4099-ab0b-97267c25e1f7">Support for the Non-Patient Object Storage Service Class does not imply support for any related Query/Retrieve Service Classes.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_a72ae083-9560-42e3-b619-b89448973bd2">The duration of the storage is also implementation dependent, but is described in the Conformance Statement of the SCP.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_c22883ea-c6d5-461c-b7ba-f6faa17586f9">The Non-Patient Object Storage Service Class is intended to be used in a variety of environments: e.g., for workstations to transfer SOP Instances to other workstations or archives, for archives to transfer SOP Instances to workstations, etc.</para>
+            </listitem>
+          </orderedlist>
+        </note>
+      </section>
+    </section>
+    <section label="GG.2" status="2" xml:id="sect_GG.2">
+      <title>Association Negotiation</title>
+      <para xml:id="para_ecc12ecd-6b5d-42ba-9cb7-d096215811c3">The Association negotiation rules as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> apply to the SOP Classes of this Service Class. No SOP Class specific application information (extended negotiation) is used.</para>
+    </section>
+    <section label="GG.3" status="2" xml:id="sect_GG.3">
+      <title>SOP Classes</title>
+      <para xml:id="para_3f9f5eb4-396a-4131-b260-9d4327472575">The application-level services addressed by the Non-Patient Object Storage Service Class definition are specified in the SOP Classes specified in <xref linkend="table_GG.3-1" xrefstyle="select: label"/>.</para>
+      <table frame="box" label="GG.3-1" rules="all" xml:id="table_GG.3-1">
+        <caption>Standard SOP Classes</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_ff75f1ba-c13c-4253-9566-80cadbb01145">
+                <emphasis role="bold">SOP Class Name</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_96a87364-da12-41bb-a289-de8f613ba607">
+                <emphasis role="bold">SOP Class UID</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_d2a550bd-67a7-42fe-aa0a-14ab088a2b93">
+                <emphasis role="bold">IOD Specification (defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>)</emphasis>
+              </para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_afb18a73-7b03-4fc9-bdca-af8b387ab1dd">Hanging Protocol Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_99769d4b-8e22-44a5-998b-a224034aa267">1.2.840.10008.5.1.4.38.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_95af7a18-b5d0-415d-9841-6120521219e8">
+                <olink targetdoc="PS3.3" targetptr="sect_A.44" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_df563401-743d-4421-a603-063d98214414">Color Palette Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3cd92c93-2635-4ef1-9af1-d0457295b68e">1.2.840.10008.5.1.4.39.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6ce25b84-e1e8-41cb-b6e4-5187af4c5f63">
+                <olink targetdoc="PS3.3" targetptr="sect_A.58" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_22e95292-b440-4acc-973c-0149a69002cd">Generic Implant Template Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e096a924-623c-4e05-8bc7-afaf1e438ee9">1.2.840.10008.5.1.4.43.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_33e16a3e-969c-4ba0-8e51-40abbc324362">
+                <olink targetdoc="PS3.3" targetptr="sect_A.61" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f89b65c4-deb7-4131-932c-bd27de4b0153">Implant Assembly Template Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8f3f1827-8f7c-4f23-900c-1f4e8025db95">1.2.840.10008.5.1.4.44.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6d1a750e-cd64-481f-abe9-ebd9b39c124d">
+                <olink targetdoc="PS3.3" targetptr="sect_A.62" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cacc41a2-4157-4ef1-9251-6735dbb6b5e3">Implant Template Group Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3a75d8a5-db85-4f9a-976a-8d4cdef8b82d">1.2.840.10008.5.1.4.45.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8b85fe2f-2410-4599-888e-27bd3ac9cb37">
+                <olink targetdoc="PS3.3" targetptr="sect_A.63" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section label="GG.4" status="2" xml:id="sect_GG.4">
+      <title>Behavior</title>
+      <para xml:id="para_af7a9a7c-11cd-4093-8527-3f00694a452b">This Section defines the SCU and SCP behavior for the Non-Patient Object Storage Service. The C-STORE DIMSE-C Service shall be the mechanism used to transfer SOP Instances between peer DICOM AEs as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+      <para xml:id="para_c0ffff2c-53b6-4ce6-be7b-1212621be7bd">In addition to the behaviors specified in this section, there may be SOP Class specific behavior requirements, as described in <xref linkend="sect_GG.6" xrefstyle="select: label"/>.</para>
+      <section label="GG.4.1" status="3" xml:id="sect_GG.4.1">
+        <title>Service Class User</title>
+        <para xml:id="para_3fe62d6f-03e7-4628-a7f3-413643c38e24">A DICOM AE that claims conformance to any of the Non-Patient Object Storage SOP Classes as an SCU shall be capable of sending a SOP Instance that meets the requirements of the related IOD. The Service shall be invoked by the SCU through the use of the DIMSE C-STORE request used in conjunction with the SOP Class.</para>
+        <para xml:id="para_9dac5578-b7e2-48ca-bfe1-350a590ae39c">The SCU shall recognize the status of the C-STORE service and take appropriate action based on the success or failure of the service. The Non-Patient Object Storage Service places no further requirements on what the SCU shall do other than that it shall distinguish between successful and failed C-STORE responses. This behavior shall be documented as part of the Conformance Statement.</para>
+      </section>
+      <section label="GG.4.2" status="3" xml:id="sect_GG.4.2">
+        <title>Service Class Provider</title>
+        <para xml:id="para_4ccb4050-1818-4575-9f0c-6e5347dea6df">A DICOM AE that claims conformance to any of the Non-Patient Object Storage SOP Classes as an SCP shall receive and store a SOP Instance through the use of the DIMSE C-STORE service used in conjunction with the specific SOP Class.</para>
+        <para xml:id="para_dad730b2-4282-45e3-92b3-77c5a807d4bd">The SCP shall store and provide access to all Type 1, Type 2, and Type 3 Attributes defined in the IOD, as well as any Standard Extended Attributes (including Private Attributes) included in the SOP Instance. The SCP may, but is not required to validate that the Attributes of the SOP Instance meet the requirements of the associated IOD.</para>
+        <para xml:id="para_12a49e7e-5164-493c-81d4-9b2777a1f712">The SCP shall not modify the values of any Attributes in the SOP Instance without assigning a new SOP Instance UID, except that the SCP may modify values of, or add, Type 3 and Private Attributes that do not change the semantics or interpretation of the SOP Instance.</para>
+        <note>
+          <para xml:id="para_fad96a9b-6a70-453e-8f26-c9147caede98">E.g., an SCP may add values to Alternate Content Description Sequence (0070,0087), to provide an additional description in another language.</para>
+        </note>
+        <para xml:id="para_882ae5af-9b97-483e-81ee-af4b3f7f5a72">The SCP shall return, via the C-STORE response primitive, the Response Status Code applicable to the associated request. By performing this service successfully, the SCP indicates that the SOP Instance has been successfully stored. <xref linkend="table_GG.4-1" xrefstyle="select: label"/> shows the response status values. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+        <table frame="box" label="GG.4-1" rules="all" xml:id="table_GG.4-1">
+          <caption>C-STORE Response Status Values</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_df7532c1-3681-4dec-93e1-ffa1cd94c98f">
+                  <emphasis role="bold">Service Status</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fdfdebff-2a1a-47b5-9fca-9fa1da9fe78d">
+                  <emphasis role="bold">Further Meaning</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c7b73e41-8722-4a37-b19f-a86c6c0d43dc">
+                  <emphasis role="bold">Status Codes</emphasis>
+                </para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1546f155-1f02-4b0d-8441-5150ee0569d0">
+                  <emphasis role="bold">Related Fields</emphasis>
+                </para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="3">
+                <para xml:id="para_011cb895-38c7-4f2b-8812-da21e6b756ed">Failure</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_4c784e39-5168-4efd-af7b-1ee905918b50">Refused: Out of Resources</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3e1583aa-6d9c-4cb9-91be-08c359057a4d">A700</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8f5cce28-47d7-407d-81a9-653aea9d3de3">(0000,0902)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_9b5612ac-e286-4839-85de-161e88fd590f">Error: Data Set Does Not Match SOP Class</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1bf0a8d3-5b62-4137-8182-91dbc4611890">A900</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2a8cded0-5b10-4ee7-bec7-529014b901c7">(0000,0901)</para>
+                <para xml:id="para_a47dda19-b859-4b87-836c-6019a8744d22">(0000,0902)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_0f3045fc-896b-41a3-8d42-a1a9e60ea788">Error: Cannot Understand</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_aa893343-bb78-4493-bb11-85af2c43b602">C000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9db16753-debe-410d-acf3-eb92d461225f">(0000,0901)</para>
+                <para xml:id="para_55ac3f52-fea9-4b50-bbf8-b7eecf30fe11">(0000,0902)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_83427f6e-3476-40ad-b343-d07719dc8420">Success</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1"/>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6bd7f97a-8e39-4566-9484-251886f1e5cb">0000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d1716450-300d-4c5e-a6b0-2a64e8e83f7b">None</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <note>
+          <para xml:id="para_3351dc9c-67e8-48db-b2b6-b6dc0f407b97">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
+        </note>
+      </section>
+    </section>
+    <section label="GG.5" status="2" xml:id="sect_GG.5">
+      <title>Conformance Statement Requirements</title>
+      <para xml:id="para_8eaf8ac5-af48-4eda-99f9-2c0abc31884f">An implementation may conform to any of the Non-Patient Object Storage SOP Classes as an SCU, SCP or both. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+      <section label="GG.5.1" status="3" xml:id="sect_GG.5.1">
+        <title>SCU Conformance Requirements</title>
+        <para xml:id="para_2fadcf35-a742-4c54-b05c-09926dbd1638">An implementation that conforms to a SOP Class of the Non-Patient Object Storage Service as an SCU shall state in its Conformance Statement:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_c9acfc2f-c08c-4ac0-a91d-14be6f297f1c">Whether the implementation is a SOP Instance creator for the SOP Class.</para>
+            <note>
+              <para xml:id="para_a55d015f-0fcf-4391-a4ea-7cb0c31a49a2">There may be SOP Class specific Conformance Statement requirements for creators of SOP Instances. See <xref linkend="sect_GG.6" xrefstyle="select: label"/>.</para>
+            </note>
+          </listitem>
+          <listitem>
+            <para xml:id="para_647bfd62-e6a9-4a42-9df9-a4d627211f71">The behavior of the SCU in the case of a success C-STORE response status.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_716312c8-0d23-417e-b1d0-dae007987cf2">The behavior of the SCU in each case of a failure C-STORE response status.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+      <section label="GG.5.2" status="3" xml:id="sect_GG.5.2">
+        <title>SCP Conformance Requirements</title>
+        <para xml:id="para_91c37b9c-e9f3-4c69-90e4-8eeacda2b757">An implementation that conforms to a SOP Class of the Non-Patient Object Storage Service as an SCP shall state in its Conformance Statement:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_c63e12a6-7391-4532-bef3-9fd9d036322f">The behavior of the SCP in the case of a successful C-STORE operation, including the access method for a stored SOP Instance, and the duration of the storage.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_8e2f37c8-df24-47e0-9220-17888872a1b2">The meaning of each case of a failure C-STORE response status, as well as appropriate recovery action.</para>
+          </listitem>
+        </itemizedlist>
+        <note>
+          <para xml:id="para_e93fb1bd-2dfd-4eb2-85fc-5d0c7f64f351">There may be SOP Class specific Conformance Statement requirements for applications that interpret the SOP Instances for display or further processing. See <xref linkend="sect_GG.6" xrefstyle="select: label"/>.</para>
+        </note>
+      </section>
+    </section>
+    <section label="GG.6" status="2" xml:id="sect_GG.6">
+      <title>Application Behavior for Standard SOP Classes</title>
+      <para xml:id="para_fd04e4ec-de44-4797-9ad7-5d515221bf51">This section specifies SOP Class specific behaviors for conformant applications.</para>
+      <section label="GG.6.1" status="3" xml:id="sect_GG.6.1">
+        <title>Hanging Protocol SOP Class</title>
+        <section label="GG.6.1.1" status="3" xml:id="sect_GG.6.1.1">
+          <title>Instance Creator</title>
+          <para xml:id="para_ab0bb0b5-1de7-449f-9d5b-2e8ef9c0aef6">An implementation that conforms to the Hanging Protocol Storage SOP Class as an SCU and is a SOP Instance creator shall state in its Conformance Statement:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_b31b0282-44ba-40ec-ba0c-1cc6166e8fa4">The manner in which the values of the Hanging Protocol IOD Attributes are derived from displayed images, layouts, operator intervention or defaults.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_97e6b213-3c3b-475f-81bb-6def0750c798">Any Private Attributes that are used as the value of Selector Attribute (0072,0026) in the Image Set Selector Sequence, Filter Operations Sequence or Sorting Operations Sequence.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_7c7d1821-236a-40c5-8ec2-1b0c039a84fa">The optional Attributes that may be included in a Hanging Protocol SOP Instance.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section label="GG.6.1.2" status="3" xml:id="sect_GG.6.1.2">
+          <title>Display Application</title>
+          <para xml:id="para_8f6bfa1b-9f37-4add-9c7f-efa8ccaaf683">An implementation that conforms to the Hanging Protocol Storage SOP Class as an SCP and interprets the contents of instances of the SOP Class to control the display of images, shall apply all mandatory Hanging Protocol and presentation intent Attributes to the sets of displayed images. Such an implementation shall state in its Conformance Statement:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_64daf15c-9c68-40fd-8c4c-6743fa38a7c8">The range of display environments that the application will support (e.g., number of screens, size of screens, overlapping image boxes).</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_f7be42f5-02a2-42d9-b572-41f8f35ac7ad">The optional Attributes of the Hanging Protocol IOD that it is capable of interpreting and those that are not supported.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_016b609b-5907-4a42-97cc-0de8f303b5e0">Description of application behavior when the value of Partial Data Display Handling (0072,0208) is ADAPT_LAYOUT or zero length.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_2768483b-9bb1-4feb-a266-27d66db96b83">Description of application behavior when the display environment of the Hanging Protocol Instance differs from the display environment of the application, with respect to preserving layout versus spatial resolution.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_29c757ee-9f9f-4086-a578-0474f28d23c1">The Image Storage SOP Classes for which the Hanging Protocol Storage SOP Class is supported for display control.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+      <section label="GG.6.2" status="3" xml:id="sect_GG.6.2">
+        <title>Color Palette Storage SOP Class</title>
+        <section label="GG.6.2.1" status="3" xml:id="sect_GG.6.2.1">
+          <title>Instance Creator</title>
+          <para xml:id="para_7a7f454a-e860-4581-be9a-ba2b0e11647c">An implementation that conforms to the Color Palette Storage SOP Class as an SCU and is a SOP Instance creator shall state in its Conformance Statement:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_1185d1f8-5350-4809-b849-85e321e472e9">The optional Attributes that may be included in a Color Palette SOP Instance.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+        <section label="GG.6.2.2" status="3" xml:id="sect_GG.6.2.2">
+          <title>Display Application</title>
+          <para xml:id="para_aec8b9fd-bc32-4fdd-a381-d5c0beb3c5f7">An implementation that conforms to the Color Palette Storage SOP Class as an SCP and interprets the contents of instances of the SOP Class to affect the display of images, shall apply all mandatory Color Palette and presentation intent Attributes to the applicable displayed images.</para>
+          <para xml:id="para_0ac80e57-3c38-4fbb-a29f-b4083b631649">An implementation that conforms to the Color Palette Storage SOP Class as an SCP and interprets the contents of instances of the SOP Class to affect the display of images shall state in its Conformance Statement:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_c99634c9-a02d-449e-9795-aa0f9b632d18">The optional Attributes of the Color Palette IOD that it is capable of interpreting and those that are not supported.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_696224a6-686e-454f-9e7d-834e95a47930">The Image Storage SOP Classes for which application of the Color Palette Storage SOP Class is supported</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+      <section label="GG.6.3" status="3" xml:id="sect_GG.6.3">
+        <title>Template Storage SOP Classes</title>
+        <para xml:id="para_0777b3c2-e628-487c-98e3-de5209ef7cd1">An implementation that is a Generic Implant Template Storage, Implant Assembly Template Storage, or Implant Template Group Storage SOP Class SCU may modify information in a SOP Instance that it has previously sent or received. When this SOP Instance is modified and sent to an SCP, it shall be assigned a new SOP Instance UID if there is addition, removal or update of any Attribute within:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_df12ddf3-925a-464b-b572-dbbf77d20bda">Generic Implant Template Description Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_8ba715f5-47d5-4d45-a356-67789bf76ab9">Generic Implant Template 2D Drawings Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_73de9869-d28c-48e5-a22b-da822393032d">Generic Implant Template 3D Models Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_cdd027b2-542c-4c11-80c1-f01e94f09d0e">Generic Implant Template Mating Features Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_bff42dc4-6804-4589-ba74-c37c6294e9ea">Generic Implant Template Planning Landmarks Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_7b252f6a-955b-4a73-8c2c-a1355759dcd8">Implant Assembly Template Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_d762e477-7b6a-4071-890c-f44ba23c266a">Implant Template Group Module</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_30219fce-f940-4eba-8db5-0d993a496835">Surface Mesh Module</para>
+          </listitem>
+        </itemizedlist>
+        <para xml:id="para_58b8022b-4cd4-4716-8960-bf1d5c7e5a63">Referential integrity between sets of related SOP instances shall be maintained.</para>
       </section>
     </section>
   </chapter>

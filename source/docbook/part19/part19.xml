@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2016b - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2016c - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1461,32 +1461,25 @@
     <section label="10.1" status="2" xml:id="sect_10.1">
       <title>Coded Terminology</title>
       <para xml:id="para_9785058b-0e31-400c-8b13-4ea2fba6ed49">Models may make use of coded terminology. The representation of coded terminology in DICOM is described in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Specific terminology of interest, organized in Context Groups in <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>, can be referenced using the following macro.</para>
-      <table frame="box" label="10.1-1" rules="all" xml:id="table_10.1-1">
-        <caption>Coded Terminology Macro</caption>
+      <table frame="box" label="10.1-1a" rules="all" xml:id="table_10.1-1a">
+        <caption>Basic Coded Terminology Macro</caption>
         <thead>
           <tr valign="top">
             <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_153779d4-ecba-4546-a739-e74f5859fd2e">Name</para>
+              <para xml:id="para_f1ef9dc9-d10a-4367-a285-6bb965d3bb52">Name</para>
             </th>
             <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_ae91176c-776e-42a7-832b-f4806270bc56">Optionality</para>
+              <para xml:id="para_d81925a5-7754-42e0-baec-af409000b16e">Optionality</para>
             </th>
             <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_274b141a-0bf2-4601-a880-aaf184655744">Cardinality</para>
+              <para xml:id="para_577eb8ca-fcf6-4f81-a874-2d7ebed3d3b0">Cardinality</para>
             </th>
             <th align="center" colspan="1" rowspan="1">
-              <para xml:id="para_e4e6e2c3-89ef-4aa3-912f-5b76375930e3">Description</para>
+              <para xml:id="para_868ffae2-3e62-4551-84b8-cf7dd599da5c">Description</para>
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
-            <td align="left" colspan="4" rowspan="1">
-              <para xml:id="para_032a2da8-b98a-4f1e-a446-abe370c17cdd">
-                <emphasis role="italic">BASIC CODED ENTRY ATTRIBUTES</emphasis>
-              </para>
-            </td>
-          </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_074ea902-02df-4fa5-b6da-494b899f8023">CodeValue</para>
@@ -1544,13 +1537,27 @@
               <para xml:id="para_2c7a07d7-65f2-4bc3-b5d1-994fc5c25733">A brief human readable description of what the coded value means. See <olink targetdoc="PS3.3" targetptr="sect_8.3" xrefstyle="select: docname label"/>.</para>
             </td>
           </tr>
+        </tbody>
+      </table>
+      <table frame="box" label="10.1-1b" rules="all" xml:id="table_10.1-1b">
+        <caption>Enhanced Coded Terminology Macro</caption>
+        <thead>
           <tr valign="top">
-            <td align="left" colspan="4" rowspan="1">
-              <para xml:id="para_fe3b2ef5-7e56-4fe8-81f3-0a3450ff9cae">
-                <emphasis role="italic">ENHANCED ENCODING MODE</emphasis>
-              </para>
-            </td>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_3649e480-f99f-4069-b0a9-14ba19645ac9">Name</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_85d47e72-e16b-4536-87cc-b8fc08853570">Optionality</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_b2907bc6-a6d0-4f41-953c-6887c824ae1b">Cardinality</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_7d53170e-a753-4fd0-a91c-369f2bc591e6">Description</para>
+            </th>
           </tr>
+        </thead>
+        <tbody>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_ca06f0d5-c2a9-4f90-a9ad-a2899d54a47f">ContextIdentifier</para>
@@ -1605,6 +1612,20 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_01b330a6-1eff-4f03-86a1-7d577ab87240">Uniquely identifies the Mapping Resource that defines the Context Group.</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9df0fdb8-b299-458f-b56c-42bca2e220c2">MappingResourceName</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_b856239b-74a1-44e9-b393-6381cd049e8e">O</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_1ce544f3-04a5-496b-9a96-bf8ac135c057">0-1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_be217ca6-b108-4263-ab29-25a6619d11c0">Name of Mapping Resource like name of an Institution or Organization.</para>
             </td>
           </tr>
           <tr valign="top">
@@ -1665,6 +1686,80 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_13b7a0d6-bfac-49f0-b97e-625ca9d15505">Identifies the person or organization who created an extension to the Context Group. See <olink targetdoc="PS3.3" targetptr="sect_8.7" xrefstyle="select: docname label"/>.</para>
               <para xml:id="para_6ec925d7-0d84-429e-99cc-385285fc739b">Required if the value of contextGroupExtensionFlag is "Y".</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table frame="box" label="10.1-1" rules="all" xml:id="table_10.1-1">
+        <caption>Coded Terminology Macro</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_153779d4-ecba-4546-a739-e74f5859fd2e">Name</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_ae91176c-776e-42a7-832b-f4806270bc56">Optionality</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_274b141a-0bf2-4601-a880-aaf184655744">Cardinality</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_e4e6e2c3-89ef-4aa3-912f-5b76375930e3">Description</para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <para xml:id="para_032a2da8-b98a-4f1e-a446-abe370c17cdd">
+                <emphasis role="italic">BASIC CODED ENTRY ATTRIBUTES</emphasis>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <emphasis role="italic">Include <xref linkend="table_10.1-1a" xrefstyle="select: label"/>
+</emphasis>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4bfed16e-6208-4732-93c6-fa936437aa73">DicomAttribute that encodes EquivalentCodeSequence</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_e8777da7-23d2-44b3-8ce4-852fdc433849">O</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_4d45e044-3f0b-43b8-96c9-71aba88ce3ae">0-1 with 1-n Item</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6b590eae-0d19-46d2-b00c-34fa3053fe74">Codes that are considered equivalent by the creating system.</para>
+              <para xml:id="para_52b10eba-9912-4415-a818-9c0fb2c723c2">See <olink targetdoc="PS3.3" targetptr="sect_8.9" xrefstyle="select: docname label"/>.</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <emphasis role="italic">&gt;Include <xref linkend="table_10.1-1a" xrefstyle="select: label"/>
+</emphasis>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <emphasis role="italic">&gt;Include <xref linkend="table_10.1-1b" xrefstyle="select: label"/>
+</emphasis>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <para xml:id="para_fe3b2ef5-7e56-4fe8-81f3-0a3450ff9cae">
+                <emphasis role="italic">ENHANCED ENCODING MODE</emphasis>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="4" rowspan="1">
+              <emphasis role="italic">Include <xref linkend="table_10.1-1b" xrefstyle="select: label"/>
+</emphasis>
             </td>
           </tr>
         </tbody>
@@ -2182,7 +2277,7 @@
                 </note>
                 <para xml:id="para_40e6cfd1-d1ab-428c-aa1d-759b3233246a">All rules (e.g., byte ordering and swapping) in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply.</para>
                 <note>
-                  <para xml:id="para_368ed09e-9d16-43d8-acad-d6712577863f">Implementers should in particular pay attention the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OW and OF.</para>
+                  <para xml:id="para_368ed09e-9d16-43d8-acad-d6712577863f">Implementers should in particular pay attention the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL and OW.</para>
                 </note>
                 <para xml:id="para_63ec0186-3bf5-40db-80b1-b9418adccb87">If the BulkData has a string or text Value Representation, the value(s) of the DICOM Specific Character Set Data Element, if present, might be necessary to determine its encoding.</para>
               </td>
@@ -2254,7 +2349,7 @@
                 </note>
                  <para xml:id="para_59619b0f-1a7f-49ec-9d00-3dd74f2c1b72">All rules (e.g., byte ordering and swapping) in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply.</para>
                 <note>
-                  <para xml:id="para_50130faa-0218-41ff-86cb-3c9c9a4d8e7b">Implementers should in particular pay attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF and OW.</para>
+                  <para xml:id="para_50130faa-0218-41ff-86cb-3c9c9a4d8e7b">Implementers should in particular pay attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL and OW.</para>
                 </note>
               </td>
             </tr>
@@ -2317,7 +2412,7 @@ Keyword = attribute keyword { xsd:token }
 # canonical XML definition of Hex, with lowercase letters disallowed
 Tag = attribute tag { xsd:string{ minLength="8" maxLength="8" pattern="[0-9A-F]{8}" } } 
 VR = attribute vr { "AE" | "AS" | "AT"| "CS" | "DA" | "DS" | "DT" | "FL" | "FD" 
-                    | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OW" | "PN" | "SH" | "SL" 
+                    | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OL" | "OW" | "PN" | "SH" | "SL" 
                     | "SQ" | "SS" | "ST" | "TM" | "UC" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" }
 PrivateCreator = attribute privateCreator{ xsd:string }
 UUID = attribute uuid { xsd:string }

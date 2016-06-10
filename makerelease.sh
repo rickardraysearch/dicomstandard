@@ -95,6 +95,7 @@ zip "${releasefilebasename}_html_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/html/part18.html \
 	output/html/part19.html \
 	output/html/part20.html \
+	output/html/part03_fromword_files \
 	output/html/part14_fromword_files \
 	output/html/part16_fromword_files \
 	output/html/part17_fromword_files \

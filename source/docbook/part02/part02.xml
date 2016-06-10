@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2016b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2016c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -24988,10 +24988,10 @@
                   </thead>
                   <tbody>
                     <tr valign="top">
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_43edbba6-a10a-41b6-880c-68f9aa5ab0af">Verification</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_6e212efd-5b14-44b5-b7ea-dab7ba853600">1.2.840.10008.1.1</para>
                       </td>
                       <td align="left" colspan="1" rowspan="1">
@@ -25000,10 +25000,10 @@
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_80a86e72-d1bd-48bf-ab0a-2fa526672206">1.2.840.10008.1.2</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_3a3356fe-ba54-43d1-b74c-832bca5d70b5">SCP</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_ac019062-8ee6-4abd-9d29-4bb737431d53">None</para>
                       </td>
                     </tr>
@@ -25013,14 +25013,6 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_509426de-c863-4336-8ef6-e1a75e650092">1.2.840.10008.1.2.1</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_2411888f-9ec0-4d6b-9416-ce1a568a1259">Explicit VR Big Endian</para>
-                      </td>
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_bf67081c-1ae7-47c8-a933-b5626103460f">1.2.840.10008.1.2.2</para>
                       </td>
                     </tr>
                   </tbody>
@@ -25818,11 +25810,11 @@
                   </thead>
                   <tbody>
                     <tr valign="top">
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_edaa5742-ea8e-4568-ba84-c0d6e0a1bbc5">See <xref linkend="table_D.4.2-6" xrefstyle="select: label"/>
 </para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_dd7db941-3035-46f8-8a4a-9b40142163c5">See <xref linkend="table_D.4.2-6" xrefstyle="select: label"/>
 </para>
                       </td>
@@ -25832,10 +25824,10 @@
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e8670e06-86a0-4b89-bd96-b71b835380f7">1.2.840.10008.1.2</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_e1a19fb6-3a8d-460b-826f-aea506061ab2">SCP</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_f836b940-9e5c-4027-b715-b51d73cf630e">None</para>
                       </td>
                     </tr>
@@ -25845,14 +25837,6 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_bf67dc60-0d47-43e2-8951-d84901399834">1.2.840.10008.1.2.1</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_327265a3-e3fa-4240-8f3e-a89686407aa4">Explicit VR Big Endian</para>
-                      </td>
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_b07cf640-dd43-4258-9e6c-b0a7a7215ea6">1.2.840.10008.1.2.2</para>
                       </td>
                     </tr>
                   </tbody>
@@ -26773,11 +26757,11 @@
                   </thead>
                   <tbody>
                     <tr valign="top">
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_e57831d6-f76c-4eba-aa56-cde601447fd9">See <xref linkend="table_D.4.2-12" xrefstyle="select: label"/>
 </para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_a1d0524e-c5a5-4d90-b016-0509808d72fa">See <xref linkend="table_D.4.2-12" xrefstyle="select: label"/>
 </para>
                       </td>
@@ -26787,10 +26771,10 @@
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_4ca08d78-0de4-4442-91ab-988e6a63ea43">1.2.840.10008.1.2</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_df7e3e10-12cf-4289-a3da-eba635a5116f">SCU</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_c795af2f-ac03-4cd3-b9fc-997c85cca2d9">None</para>
                       </td>
                     </tr>
@@ -26800,14 +26784,6 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e958b1eb-5446-434c-a2d1-72f54fbf4937">1.2.840.10008.1.2.1</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_05974283-2a74-40ca-bddc-699a68d9428b">Explicit VR Big Endian</para>
-                      </td>
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1e1bf8b0-e7d4-4d46-b836-a4bf5e1117c2">1.2.840.10008.1.2.2</para>
                       </td>
                     </tr>
                   </tbody>
@@ -27119,11 +27095,11 @@
                   </thead>
                   <tbody>
                     <tr valign="top">
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_0eacbac9-9cf6-424c-854c-895f8ec559d0">See <xref linkend="table_D.4.2-18" xrefstyle="select: label"/>
 </para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_c4f239d0-35f6-42f2-a77a-45973ab52082">See <xref linkend="table_D.4.2-18" xrefstyle="select: label"/>
 </para>
                       </td>
@@ -27133,10 +27109,10 @@
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_323be121-497c-47c3-98e4-ff2c9a052a2c">1.2.840.10008.1.2</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_36b0cbbe-3337-4f3a-95ae-d3cde6b1de45">SCU</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_426a16e4-9558-4ddb-8d87-dd6bda2cf4cd">None</para>
                       </td>
                     </tr>
@@ -27146,14 +27122,6 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_f6dd945a-1ac5-4395-93de-21f0753bdfc4">1.2.840.10008.1.2.1</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_96374ce8-64cb-465c-a8f0-e786da320b5b">Explicit VR Big Endian</para>
-                      </td>
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_85bd879c-1aef-475f-acb2-bc7b2b6c4384">1.2.840.10008.1.2.2</para>
                       </td>
                     </tr>
                   </tbody>
@@ -28182,11 +28150,11 @@
                   </thead>
                   <tbody>
                     <tr valign="top">
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_1059a3db-d930-46d5-8ac2-4722e28d2f50">See <xref linkend="table_D.4.2-25" xrefstyle="select: label"/>
 </para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_51105056-c374-4064-9e38-36441045b49b">See <xref linkend="table_D.4.2-25" xrefstyle="select: label"/>
 </para>
                       </td>
@@ -28196,10 +28164,10 @@
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_77c8069c-01c9-4ffa-9aa5-78071aecb529">1.2.840.10008.1.2</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_e214b70d-dee9-44fd-b9bf-77e9f37c6d9a">SCP</para>
                       </td>
-                      <td align="left" colspan="1" rowspan="3">
+                      <td align="left" colspan="1" rowspan="2">
                         <para xml:id="para_19058c39-8ee5-489e-93dc-cba16fb6e3dc">None</para>
                       </td>
                     </tr>
@@ -28209,14 +28177,6 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_7c2e368a-f1e4-4583-b427-699f1913641a">1.2.840.10008.1.2.1</para>
-                      </td>
-                    </tr>
-                    <tr valign="top">
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_f8ab90d3-d58b-4fb3-9445-d404ea3ef9f0">Explicit VR Big Endian</para>
-                      </td>
-                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_df926266-26c9-4edc-9bfa-63d5098f25d5">1.2.840.10008.1.2.2</para>
                       </td>
                     </tr>
                   </tbody>
@@ -49542,7 +49502,7 @@
                     <para xml:id="para_53044216-3303-462a-aaef-1f3cc989ebd0">Media Types</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_7ce3eaac-35b7-4f62-9e84-1d26c957ac80">Restricted to "multipart/related; type=application/dicom+xml" or "application/json"</para>
+                    <para xml:id="para_7ce3eaac-35b7-4f62-9e84-1d26c957ac80">Restricted to "multipart/related; type=application/dicom+xml" or "application/dicom+json"</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -49859,7 +49819,7 @@
                     <para xml:id="para_7e876cb3-d171-4cf5-abf1-692a9f891ff9">Media Types</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0f0da6cb-15c0-4bfa-8869-4b7d729c6966">Restricted to "multipart/related; type=application/dicom+xml" or "application/json"</para>
+                    <para xml:id="para_0f0da6cb-15c0-4bfa-8869-4b7d729c6966">Restricted to "multipart/related; type=application/dicom+xml" or "application/dicom+json"</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -50099,7 +50059,7 @@
                     <para xml:id="para_f969534c-9172-4a1e-becc-260251f15f78">Media Types</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_4d2b67e3-9f3f-4040-9eb5-c7884d666419">Restricted to "multipart/related; type=application/dicom+xml" or "application/json"</para>
+                    <para xml:id="para_4d2b67e3-9f3f-4040-9eb5-c7884d666419">Restricted to "multipart/related; type=application/dicom+xml" or "application/dicom+json"</para>
                   </td>
                 </tr>
                 <tr valign="top">

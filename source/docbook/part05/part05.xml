@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2016b - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2016c - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1415,7 +1415,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_53012354-d943-4d36-8103-f7640b7a15bc">Ordered pair of 16-bit unsigned integers that is the value of a Data Element Tag.</para>
-              <para xml:id="para_4461a6a0-0a7e-4546-ade2-aa304e3d6212">Example: A Data Element Tag of (0018,00FF) would be encoded as a series of 4 bytes in a Little-Endian Transfer Syntax as 18H,00H,FFH,00H and in a Big-Endian Transfer Syntax as 00H,18H,00H,FFH.</para>
+              <para xml:id="para_4461a6a0-0a7e-4546-ade2-aa304e3d6212">Example: A Data Element Tag of (0018,00FF) would be encoded as a series of 4 bytes in a Little-Endian Transfer Syntax as 18H,00H,FFH,00H.</para>
               <note>
                 <para xml:id="para_ecc00586-542e-403c-844f-95526ddcf942">The encoding of an AT value is exactly the same as the encoding of a Data Element Tag as defined in <xref linkend="chapter_7" xrefstyle="template:Section %n"/>.</para>
               </note>
@@ -1624,7 +1624,7 @@
               <para xml:id="para_bd2d566b-6196-4dfa-b40b-2ed6214162f6">Other Byte</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_63ef9d65-10d9-445d-b7b3-93cb6d31e218">A string of bytes where the encoding of the contents is specified by the negotiated Transfer Syntax. OB is a VR that is insensitive to Little/Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). The string of bytes shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
+              <para xml:id="para_63ef9d65-10d9-445d-b7b3-93cb6d31e218">An octet-stream where the encoding of the contents is specified by the negotiated Transfer Syntax. OB is a VR that is insensitive to byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). The octet-stream shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_401bb3cf-9510-477f-b992-96cd3d0aa2c9">not applicable</para>
@@ -1639,7 +1639,7 @@
               <para xml:id="para_3ff0e461-16ef-4035-afbe-d2be9b209fdd">Other Double</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c00ad319-fe87-41ad-83b5-ac20a1a70afe">A string of 64-bit IEEE 754:1985 floating point words. OD is a VR that requires byte swapping within each 64-bit word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_c00ad319-fe87-41ad-83b5-ac20a1a70afe">A stream of 64-bit IEEE 754:1985 floating point words. OD is a VR that requires byte swapping within each 64-bit word when changing byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_98ea7d6a-97b6-4f95-b818-830c8eb86784">not applicable</para>
@@ -1654,7 +1654,7 @@
               <para xml:id="para_62319e8c-b6d8-4e69-99ef-22b57db8b33e">Other Float</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_411d45f9-2aae-46c4-af81-60d4205f25c2">A string of 32-bit IEEE 754:1985 floating point words. OF is a VR that requires byte swapping within each 32-bit word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_411d45f9-2aae-46c4-af81-60d4205f25c2">A stream of 32-bit IEEE 754:1985 floating point words. OF is a VR that requires byte swapping within each 32-bit word when changing byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2e1db68a-7c7b-4565-90ae-db7bdacf2f71">not applicable</para>
@@ -1669,7 +1669,7 @@
               <para xml:id="para_199bed09-5450-4a6b-86ce-0bc9ab308cb8">Other Long</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_42969a8a-2079-410d-bcda-972786062dc9">A string of 32-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OL is a VR that requires byte swapping within each word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_42969a8a-2079-410d-bcda-972786062dc9">A stream of 32-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OL is a VR that requires byte swapping within each word when changing byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b4817f91-53e7-4054-b7f8-d99e3019b848">not applicable</para>
@@ -1684,7 +1684,7 @@
               <para xml:id="para_b8371695-2729-4b85-8c99-12c64e4d3aaf">Other Word</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_29d49676-964d-48ea-81bc-8551eddc026e">A string of 16-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OW is a VR that requires byte swapping within each word when changing between Little Endian and Big Endian byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_29d49676-964d-48ea-81bc-8551eddc026e">A stream of 16-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OW is a VR that requires byte swapping within each word when changing byte ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_cd98f5fb-75f7-4f25-aebe-94715a7d7dbc">not applicable</para>
@@ -1896,7 +1896,7 @@
               <para xml:id="para_3025cbc4-f16a-4f82-a61d-61b6a2a9b14a">Unknown</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_25e87db4-d8f5-4bf2-9dee-2c2b0c3949d4">A string of bytes where the encoding of the contents is unknown (see <xref linkend="sect_6.2.2" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_25e87db4-d8f5-4bf2-9dee-2c2b0c3949d4">An octet-stream where the encoding of the contents is unknown (see <xref linkend="sect_6.2.2" xrefstyle="select: label"/>).</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_db86752a-e13d-4b7a-b9dc-1f5ef3af54d7">not applicable</para>
@@ -2058,7 +2058,7 @@
         <title>Unknown (UN) Value Representation</title>
         <para xml:id="para_768f8d76-226d-44f6-a9ee-44cf0ef649af">The Unknown (UN) VR shall only be used for Private Attribute Data Elements and Standard Data Elements previously encoded as some DICOM VR other than UN using the DICOM Default Transfer Syntax (Implicit VR Little Endian), and whose Value Representation is currently unknown,
           or whose known Value Representation is none of OB, OD, OF, OL, OW, SQ, UC, UR or UT and whose value length exceeds 65534 (2<superscript>16</superscript>-2) and therefore cannot be encoded as a 16-bit unsigned integer in the Value Length Field defined for the known Value Representation (see <xref linkend="sect_6.2.1" xrefstyle="select: label"/>).
-          As long as the VR is unknown the Value Field is insensitive to Little/Big Endian byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for a discussion of Transfer Syntaxes.</para>
+          As long as the VR is unknown the Value Field is insensitive to byte ordering and shall not be 'byte-swapped' (see <xref linkend="sect_7.3" xrefstyle="select: label"/>). In the case of undefined length sequences, the value shall remain in implicit VR form. See <xref linkend="sect_7.8" xrefstyle="select: label"/> for a description of Private Data Attribute Elements and section 10 and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> for a discussion of Transfer Syntaxes.</para>
         <para xml:id="para_49556031-2a34-4a00-b3e4-a8ab70495c94">The UN VR shall not be used for Private Creator Data Elements (i.e., the VR is equal to LO, see <xref linkend="sect_7.8.1" xrefstyle="select: label"/>).</para>
         <para xml:id="para_98977780-9f84-458f-97d1-1703e7007afb">The UN VR shall not be used for File Meta Information Data Elements (any Tag (0002,xxxx), see <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>).</para>
         <note>
@@ -2467,8 +2467,8 @@
       </note>
     </section>
     <section label="7.3" status="2" xml:id="sect_7.3">
-      <title>Big Endian Versus Little Endian Byte Ordering</title>
-      <para xml:id="para_fe41f7af-a4ee-4a9f-8e74-e115224086d3">Another component of the encoding of a Data Set that shall be agreed upon by communicating Application Entities is the Byte Ordering.</para>
+      <title>Little Endian Byte Ordering</title>
+      <para xml:id="para_fe41f7af-a4ee-4a9f-8e74-e115224086d3">All unretired Transfer Syntaxes in DICOM require the use of Little Endian Byte Ordering.</para>
       <para xml:id="para_a38977c0-90cf-409a-8aad-1f9573e4e862">Little Endian byte ordering is defined as follows:</para>
       <itemizedlist>
         <listitem>
@@ -2478,23 +2478,15 @@
           <para xml:id="para_34c940f5-337d-4566-878d-0177daefd5ef">In a character string consisting of multiple 8-bit single byte codes, the characters will be encoded in the order of occurrence in the string (left to right).</para>
         </listitem>
       </itemizedlist>
-      <para xml:id="para_a05846b2-0d73-45d9-86b5-7d06a82de928">Big Endian byte ordering is defined as follows:</para>
-      <itemizedlist>
-        <listitem>
-          <para xml:id="para_77a1442b-91bf-490a-931d-c7c492a83b8c">In a binary number consisting of multiple bytes, the most significant byte shall be encoded first; with the remaining bytes encoded in decreasing order of significance.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_66f09c72-4b3a-4f9f-9ead-ab2c3b4bd961">In a character string consisting of multiple 8-bit single byte codes, the characters will be encoded in the order of occurrence in the string (left to right).</para>
-        </listitem>
-      </itemizedlist>
+      <para xml:id="para_a05846b2-0d73-45d9-86b5-7d06a82de928">Big Endian byte ordering was previously described but has been retired, See PS3.5 2016b.</para>
       <note>
-        <para xml:id="para_b20f2fbd-617f-4233-8f28-ceacdcab0ffd">The packing of bits within values of OB, OL or OW Value representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>.</para>
+        <para xml:id="para_b20f2fbd-617f-4233-8f28-ceacdcab0ffd">The packing of bits within values of OB or OW Value Representation for Pixel Data and Overlay Data is described in <xref linkend="chapter_8" xrefstyle="template:Section %n"/>. The OL Value Representation is not used for Pixel Data or Overlay Data.</para>
       </note>
-      <para xml:id="para_01d35885-9117-4583-a818-eb9468e2e9c3">Byte ordering is a component of an agreed upon Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/>). The default DICOM Transfer Syntax, which shall be supported by all AEs, uses Little Endian encoding and is specified in <xref linkend="sect_A.1" xrefstyle="select: label"/>. Alternate Transfer Syntaxes, some of which use Big Endian encoding, are also specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
+      <para xml:id="para_01d35885-9117-4583-a818-eb9468e2e9c3">Byte ordering is a component of an agreed upon Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/>). The default DICOM Transfer Syntax, which shall be supported by all AEs, uses Little Endian encoding and is specified in <xref linkend="sect_A.1" xrefstyle="select: label"/>. Alternate Little Endian Transfer Syntaxes are also specified in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>.</para>
       <note>
         <para xml:id="para_e28249f6-e346-45cb-bf58-62c561fcf88d">The Command Set structure as specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> is encoded using the Little Endian Implicit VR Transfer Syntax.</para>
       </note>
-      <para xml:id="para_f19daaf4-7894-4138-8db1-20e87d232a62">In the default case of Little Endian encoding, Big Endian Machines interpreting Data Sets shall do 'byte swapping' before interpreting or operating on certain Data Elements. The Data Elements affected are all those having VRs that are multiple byte Values and that are not a character string of 8-bit single byte codes. VRs constructed of a string of characters of 8-bit single byte codes are really constructed of a string of individual bytes, and are therefore not affected by byte ordering. The VRs that are not a string of characters and consist of multiple bytes are:</para>
+      <para xml:id="para_f19daaf4-7894-4138-8db1-20e87d232a62">In the case of Little Endian encoding, Big Endian Machines interpreting Data Sets shall do 'byte swapping' before interpreting or operating on certain Data Elements. The Data Elements affected are all those having VRs that are multiple byte Values and that are not a character string of 8-bit single byte codes. VRs constructed of a string of characters of 8-bit single byte codes are really constructed of a string of individual bytes, and are therefore not affected by byte ordering. The VRs that are not a string of characters and consist of multiple bytes are:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_8350f735-1f76-4828-93c4-18bb424b95b6">2-byte US, SS, OW and each component of AT</para>
@@ -3083,7 +3075,7 @@
     <section label="8.1" status="2" xml:id="sect_8.1">
       <title>Pixel and Overlay Data, and Related Data Elements</title>
       <para xml:id="para_55a4d726-165f-4db4-9994-5943fec5e49b">Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009) and Overlay Data (60xx,3000) shall be used for the exchange of encoded graphical image data. These elements along with additional Data Elements, specified as Attributes of the Image Information Entities defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, shall be used to describe the way in which the Pixel Data and Overlay Data are encoded and shall be interpreted. Finally, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/> and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>), Pixel Data may be compressed.</para>
-      <para xml:id="para_94ef8b24-cfd9-4ed7-ae3b-06991da2e04f">Pixel Data (7FE0,0010) and Overlay Data (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The only difference between OW and OB being that OB, a string of bytes, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
+      <para xml:id="para_94ef8b24-cfd9-4ed7-ae3b-06991da2e04f">Pixel Data (7FE0,0010) and Overlay Data (60xx,3000) have a VR of OW or OB, depending on the negotiated Transfer Syntax (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The only difference between OW and OB being that OB, an octet-stream, shall be unaffected by Byte Ordering (see <xref linkend="sect_7.3" xrefstyle="select: label"/>).</para>
       <para xml:id="para_7f5d54ad-95d5-4677-803e-8c6cfde0ff09">Float Pixel Data (7FE0,0008) has a
         Value Representation of OF.</para>
       <para xml:id="para_dc7e0fa3-521b-4f1b-96f8-cf5f2289ec6b">Double Float Pixel Data (7FE0,0009)
@@ -3125,7 +3117,7 @@
             </listitem>
             <listitem>
               <para xml:id="para_f777ac20-cdc7-41ba-9e81-128c7eba5bf8">Formerly, High Bit
-                (0028,0102) was not restricted to being be one less than Bits Stored (0028,0101)
+                (0028,0102) was not restricted to be one less than Bits Stored (0028,0101)
                 in this Part, or in the general case, though almost all Information Object
                 Definitions in PS3.3 imposed such a restriction. See PS3.5
                 2014c.</para>
@@ -3164,23 +3156,23 @@
               <para xml:id="para_090350ab-3413-4d1e-b0ba-5453c346f9e8">There is no Data Element analogous to Bits Stored (0028,0101) since Overlay Planes always have a bit depth of 1.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_5e4c79f2-35d2-4315-bfb0-4a668b3732b2">Restrictions on the allowed values for these Data Elements are defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Formerly overlay data stored in unused bits of Pixel Data (7FE0,0010) was described, and these attributes had meaningful values but this usage has been retired. See PS3.5-2004. For overlays encoded in Overlay Data Element (60xx,3000), Overlay Bits Allocated (60xx,0100) is always 1 and Overlay Bit Position (60xx,0102) is always 0.</para>
+              <para xml:id="para_5e4c79f2-35d2-4315-bfb0-4a668b3732b2">Restrictions on the allowed values for these Data Elements are defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Formerly overlay data stored in unused bits of Pixel Data (7FE0,0010) was described, and these attributes had meaningful values but this usage has been retired. See PS3.5-2004. For overlays encoded in Overlay Data (60xx,3000), Overlay Bits Allocated (60xx,0100) is always 1 and Overlay Bit Position (60xx,0102) is always 0.</para>
             </listitem>
           </orderedlist>
         </note>
-        <para xml:id="para_58b4f1a2-07ee-4e09-abf5-d99388f13d38">For Overlay Data Element (60xx,3000), the Value Representation OW is most often required. The Value Representation OB may also be used for Overlay Data in cases where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
+        <para xml:id="para_58b4f1a2-07ee-4e09-abf5-d99388f13d38">For Overlay Data (60xx,3000), the Value Representation OW is most often required. The Value Representation OB may also be used for Overlay Data in cases where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <note>
           <para xml:id="para_b5a3fd56-1954-49ab-a334-41ce059eae4d">The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data when using the default Transfer Syntax.</para>
         </note>
-        <para xml:id="para_e5bcf268-0b7d-4b21-b495-84b330046490">Overlay Data is encoded as the direct concatenation of the bits of a single Overlay Plane, where the first bit of an Overlay Plane is encoded in the least significant bit, immediately followed by the next bit of the Overlay Plane in the next most significant bit. When the Overlay Data crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). For Overlay Data encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
+        <para xml:id="para_e5bcf268-0b7d-4b21-b495-84b330046490">Overlay Data is encoded as the direct concatenation of the bits of a single Overlay Plane, where the first bit of an Overlay Plane is encoded in the least significant bit, immediately followed by the next bit of the Overlay Plane in the next most significant bit. When the Overlay Data crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). For Overlay Data encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is defined by the Little Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
         <note>
-          <para xml:id="para_a7ef1ac3-5a2d-4db2-a26c-885be2db7d91">For Overlay Data encoded with the Value Representation OB, the Overlay Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
+          <para xml:id="para_a7ef1ac3-5a2d-4db2-a26c-885be2db7d91">For Overlay Data encoded with the Value Representation OB, the Overlay Data encoding is unaffected by byte ordering.</para>
         </note>
       </section>
     </section>
     <section label="8.2" status="2" xml:id="sect_8.2">
       <title>Native or Encapsulated Format Encoding</title>
-      <para xml:id="para_f9b54410-31ad-4044-9be0-651dd86c84b3">Pixel data conveyed in the Pixel Data Element (7FE0,0010) may be sent either in a Native (uncompressed) Format or in an Encapsulated Format (e.g., compressed) defined outside the DICOM standard.</para>
+      <para xml:id="para_f9b54410-31ad-4044-9be0-651dd86c84b3">Pixel data conveyed in the Pixel Data (7FE0,0010) may be sent either in a Native (uncompressed) Format or in an Encapsulated Format (e.g., compressed) defined outside the DICOM standard.</para>
       <para xml:id="para_7bc14864-77a5-4409-8ec0-c246cace4681">Pixel Data conveyed in the Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) shall be in a Native (uncompressed) Format if encoded in a Standard Transfer Syntax.</para>
       <note>
         <orderedlist>
@@ -3215,11 +3207,11 @@
           not cross word boundaries.</para>
       </note>
       <para xml:id="para_d6734089-67bc-433e-87f7-40f00a859a9d">Native format Pixel Cells are encoded as the direct concatenation of the bits of each Pixel Cell, the least significant bit of each Pixel Cell is encoded in the least significant bit of the encoded word or byte, immediately followed by the next most significant bit of each Pixel Cell in the next most significant bit of the encoded word or byte, successively until all bits of the Pixel Cell have been encoded, then immediately followed by the least significant bit of the next Pixel Cell in the next most significant bit of the encoded word or byte. The number of bits of each Pixel Cell is defined by the Bits Allocated (0028,0100) Data Element Value. When a Pixel Cell crosses a word boundary in the OW case, or a byte boundary in the OB case, it shall continue to be encoded, least significant bit to most significant bit, in the next word, or byte, respectively (see <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>). For Pixel Data (7FE0,0010) encoded with the Value Representation OW, the byte ordering of the resulting 2-byte words is
-  defined by the Little Endian or Big Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
+  defined by the Little Endian Transfer Syntaxes negotiated at the Association Establishment (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_1e6dec20-1376-4b1e-b909-255ba6abcf59">For Pixel Data (7FE0,0010) encoded with the Value Representation OB, the Pixel Data (7FE0,0010) encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
+            <para xml:id="para_1e6dec20-1376-4b1e-b909-255ba6abcf59">For Pixel Data (7FE0,0010) encoded with the Value Representation OB, the Pixel Data (7FE0,0010) encoding is unaffected by byte ordering.</para>
           </listitem>
           <listitem>
             <para xml:id="para_754c31cf-0a9a-484e-bfba-2130fc81252e">If encoding Pixel Data (7FE0,0010) with a Value for Bits Allocated (0028,0100) not equal to 16 be sure to read and understand <xref linkend="chapter_D" xrefstyle="template:Annex %n"/>.</para>
@@ -4578,9 +4570,9 @@
     </section>
     <section label="8.3" status="2" xml:id="sect_8.3">
       <title>Waveform Data and Related Data Elements</title>
-      <para xml:id="para_9a8e1cfc-73c8-4db2-a88a-040b4251f39d">The DICOM protocol provides for the exchange of encoded time-based signals, or waveforms, encoded in the Waveform Data Element (5400,1010).</para>
+      <para xml:id="para_9a8e1cfc-73c8-4db2-a88a-040b4251f39d">The DICOM protocol provides for the exchange of encoded time-based signals, or waveforms, encoded in the Waveform Data 5400,1010).</para>
       <note>
-        <para xml:id="para_d143f2ad-4d5f-4107-abff-0f8e36db57ec">Per <xref linkend="sect_7.6" xrefstyle="select: label"/>, an IOD supporting multiple sets of Waveform Data will encapsulate Data Element (5400,1010) within a Sequence.</para>
+        <para xml:id="para_d143f2ad-4d5f-4107-abff-0f8e36db57ec">Per <xref linkend="sect_7.6" xrefstyle="select: label"/>, an IOD supporting multiple sets of Waveform Data will encapsulate Waveform Data (5400,1010) within a Sequence.</para>
       </note>
       <para xml:id="para_d9e0d1cb-8342-422f-a1fa-e5bc837581f4">Encoded Waveform Data of various bit depths is accommodated through the Waveform Bits Allocated (5400,1004) Data Element. This element defines the size of each waveform data sample within the Waveform Data (5400,1010). Allowed values are 8 and 16 bits.</para>
       <para xml:id="para_4e05e669-69cc-48b4-b632-33d56cefab1c">The Value Representation of the Waveform Data (5400,1010) shall be OW; OB shall be used in cases where Waveform Bits Allocated has a value of 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed.</para>
@@ -4849,33 +4841,33 @@
               <para xml:id="para_688311f0-474b-4810-9731-36820df76692">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
-                  <para xml:id="para_721bde46-66b0-4def-83d6-422e845a8abe">Data Element (7FE0,0010) Pixel Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_721bde46-66b0-4def-83d6-422e845a8abe">Pixel Data (7FE0,0010) has the Value Representation OW and shall be encoded in Little Endian.</para>
                   <note>
                     <para xml:id="para_8e5a1a29-830f-4e34-9849-19d37640200b">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_d9f0b53d-3be8-48c3-979d-1ce5fb85c94e">Data Element (60xx,3000) Overlay Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_d9f0b53d-3be8-48c3-979d-1ce5fb85c94e">Overlay Data (60xx,3000) has the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_69a3a25e-611d-4bf1-98ed-b8dd2400c5f6">Data Element (5400,1010) Waveform Data shall have Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_69a3a25e-611d-4bf1-98ed-b8dd2400c5f6">Waveform Data (5400,1010) shall have Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_fb43ca34-fc6e-4c66-861b-5993741de375">Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_fb43ca34-fc6e-4c66-861b-5993741de375">Red Palette Color Lookup Table Data (0028,1201), Green Palette Color Lookup Table Data (0028,1202), Blue Color Palette Lookup Table Data (0028,1203) and Alpha Palette Color Lookup Table Data (0028,1204) have the Value Representation OW and shall be encoded in Little Endian.</para>
                   <note>
-                    <para xml:id="para_f213464c-dcb8-45c0-ac69-7a6956a1e82e">Previous versions of the Standard either did not specify the encoding of Data Elements (0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case.</para>
+                    <para xml:id="para_f213464c-dcb8-45c0-ac69-7a6956a1e82e">Previous versions of the Standard either did not specify the encoding of Red Palette Color Lookup Table Data (0028,1201), Green Palette Color Lookup Table Data (0028,1202) and Blue Color Palette Lookup Table Data (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case.</para>
                   </note>
                 </listitem>
               </itemizedlist>
             </listitem>
             <listitem>
-              <para xml:id="para_88f07933-f799-42f6-934e-c97788571ef8">Data Elements (0028,1101), (0028,1102),(0028,1103) Red, Green, Blue Palette Lookup Table Descriptor have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+              <para xml:id="para_88f07933-f799-42f6-934e-c97788571ef8">Red Palette Color Lookup Table Descriptor (0028,1101), Green Palette Color Lookup Table Descriptor (0028,1102) and Blue Palette Color Lookup Table Descriptor (0028,1103) have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
             </listitem>
             <listitem>
               <para xml:id="para_510c1137-900e-4c9d-8324-46f3f3abf8ff">Data Elements (0028,1221),(0028,1222),(0028,1223) Segmented Red, Green, Blue Palette Color Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_c87a6541-f99e-47ad-88c4-8735aadf3872">Data Element (0028,3006) LUT Data has the Value Representation US or OW and shall be encoded in Little Endian.</para>
+              <para xml:id="para_c87a6541-f99e-47ad-88c4-8735aadf3872">LUT Data (0028,3006) has the Value Representation US or OW and shall be encoded in Little Endian.</para>
               <note>
                 <para xml:id="para_4354db2b-de94-477c-87f8-31c64f335b0d">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. A VR of OW has been added to support explicit VR transfer syntaxes. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case.</para>
               </note>
@@ -4883,13 +4875,13 @@
           </itemizedlist>
           <itemizedlist>
             <listitem>
-              <para xml:id="para_55a362c0-e7cd-42f1-b82b-81c1c8d6350e">Data Element (0028,3002) LUT Descriptor has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+              <para xml:id="para_55a362c0-e7cd-42f1-b82b-81c1c8d6350e">LUT Descriptor (0028,3002) has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_8a78e3c0-ca2d-4dfa-b576-9a7475db0300">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+              <para xml:id="para_8a78e3c0-ca2d-4dfa-b576-9a7475db0300">Blending Lookup Table Data (0028,1408) has the Value Representation OW and shall be encoded in Little Endian.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_53a9c036-b024-4810-a64e-2bc50f960aaa">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
+              <para xml:id="para_53a9c036-b024-4810-a64e-2bc50f960aaa">Track Point Index List (0066,0129) has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -4897,7 +4889,7 @@
       <note>
         <orderedlist>
           <listitem>
-            <para xml:id="para_0eda2c64-2a68-4d83-9bad-efc3dd351975">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+            <para xml:id="para_0eda2c64-2a68-4d83-9bad-efc3dd351975">Encoding of Curve Data (5000,3000) and Audio Sample Data (5000,200C) was previously defined but has been retired. See PS3.5-2004.</para>
           </listitem>
           <listitem>
             <para xml:id="para_eff0e39c-c05f-4dd6-9a15-a0908b853244">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
@@ -4931,7 +4923,7 @@
               <para xml:id="para_466ae3fe-4657-400a-9e7e-611c7f919c02">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
-                  <para xml:id="para_71b223ac-9494-40f1-b318-092f590fdf9f">Data Element (7FE0,0010) Pixel Data</para>
+                  <para xml:id="para_71b223ac-9494-40f1-b318-092f590fdf9f">Pixel Data (7FE0,0010)</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_89eea998-24b5-402a-9486-4c9afdb3094a">where Bits Allocated (0028,0100) has a value greater than 8 shall have Value Representation OW and shall be encoded in Little Endian;</para>
@@ -4945,7 +4937,7 @@
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_958a0550-6886-4177-9070-39bf5c2f43db">Data Element (60xx,3000) Overlay Data</para>
+                  <para xml:id="para_958a0550-6886-4177-9070-39bf5c2f43db">Overlay Data (60xx,3000)</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_fe2c7c6e-a93d-46e6-a4c2-764c25c9e4c1">shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
@@ -4956,34 +4948,34 @@
                   </itemizedlist>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_ef82a8a1-44bf-4117-86e6-f32da068b797">Data Element (5400,1010) Waveform Data has the Value Representation specified in its Explicit VR Field. The component points shall be encoded in Little Endian.</para>
+                  <para xml:id="para_ef82a8a1-44bf-4117-86e6-f32da068b797">Waveform Data (5400,1010) has the Value Representation specified in its Explicit VR Field. The component points shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_37a2510f-1265-4112-b0da-4e80d40fb718">Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_37a2510f-1265-4112-b0da-4e80d40fb718">Red Palette Color Lookup Table Data (0028,1201), Green Palette Color Lookup Table Data (0028,1202), Blue Color Palette Lookup Table Data (0028,1203) and Alpha Palette Color Lookup Table Data (0028,1204) have the Value Representation OW and shall be encoded in Little Endian.</para>
                   <note>
-                    <para xml:id="para_439770f6-77fa-4fab-a171-c2ba12fb101b">Previous versions of the Standard either did not specify the encoding of Data Elements (0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits.</para>
+                    <para xml:id="para_439770f6-77fa-4fab-a171-c2ba12fb101b">Previous versions of the Standard either did not specify the encoding of Red Palette Color Lookup Table Data (0028,1201), Green Palette Color Lookup Table Data (0028,1202) and Blue Color Palette Lookup Table Data (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits.</para>
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_cac05089-3fcd-4b0f-8f1a-1a4e355fe5ce">Data Elements (0028,1101), (0028,1102),(0028,1103) Red, Green, Blue Palette Lookup Table Descriptor have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+                  <para xml:id="para_cac05089-3fcd-4b0f-8f1a-1a4e355fe5ce">Red Palette Color Lookup Table Descriptor (0028,1101), Green Palette Color Lookup Table Descriptor (0028,1102) and Blue Palette Color Lookup Table Descriptor (0028,1103) have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_28ea9652-4aee-4abc-9e97-4ea6cbf6d641">Data Elements (0028,1221), (0028,1222), (0028,1223) Segmented Red, Green, Blue Palette Color Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_28ea9652-4aee-4abc-9e97-4ea6cbf6d641">Segmented Red Palette Color Lookup Table Data (0028,1221), Segmented Green Palette Color Lookup Table Data (0028,1222) and Segmented Blue Palette Color Lookup Table Data (0028,1223) have the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_ea6199eb-00ff-45c1-aa35-e6809c909ba6">Data Element (0028,3006) LUT Data has the Value Representation US or OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_ea6199eb-00ff-45c1-aa35-e6809c909ba6">LUT Data (0028,3006) has the Value Representation US or OW and shall be encoded in Little Endian.</para>
                   <note>
                     <para xml:id="para_b642680c-8b12-4518-8f30-ae6e71a6c642">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits. Hence a VR of OW has been added. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different.</para>
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_afa68ae7-757a-43c8-b9dc-7a050dee2575">Data Element (0028,3002) LUT Descriptor has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+                  <para xml:id="para_afa68ae7-757a-43c8-b9dc-7a050dee2575">LUT Descriptor (0028,3002) has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_ffeae2ab-07b1-41e8-91c8-88d0bce05fa1">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_ffeae2ab-07b1-41e8-91c8-88d0bce05fa1">Blending Lookup Table Data (0028,1408) has the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_d0eac346-4f90-4d02-a474-237341665eef">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
+                  <para xml:id="para_d0eac346-4f90-4d02-a474-237341665eef">Track Point Index List (0066,0129) has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -4993,10 +4985,10 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_fab04f6c-c464-49a4-a53f-8413300ff129">For Data encoded with the Value Representation OB, the Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
+            <para xml:id="para_fab04f6c-c464-49a4-a53f-8413300ff129">For Data encoded with the Value Representation OB, the Data encoding is unaffected by byte ordering.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_f42dffda-b5a3-4d1d-91b8-8c7aa0209397">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+            <para xml:id="para_f42dffda-b5a3-4d1d-91b8-8c7aa0209397">Encoding of Curve Data (5000,3000) and Audio Sample Data (5000,200C) was previously defined but has been retired. See PS3.5-2004.</para>
           </listitem>
           <listitem>
             <para xml:id="para_44ba6501-93c6-4415-9b42-60b35060b6c4">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
@@ -5012,102 +5004,7 @@
     </section>
     <section label="A.3" status="2" xml:id="sect_A.3">
       <title>DICOM Big Endian Transfer Syntax (Explicit VR)</title>
-      <para xml:id="para_e7d83f64-9ac7-438e-96fd-f8fdd8ff564b">This Transfer Syntax applies to the encoding of the entire DICOM Data Set. This implies that when a DICOM Data Set is being encoded with the DICOM Big Endian Transfer Syntax the following requirements shall be met:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_8e2beefb-1d41-49d3-895d-c10b90c617f4">The Data Elements contained in the Data Set structure shall be encoded with Explicit VR (with a VR Field) as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_5f02b258-bc73-4edc-9d9b-775d3ea9ad86">The encoding of the overall Data Set structure (Data Element Tags, Value Length, and Value) shall be in Big Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_697e0a63-3e2f-4f9b-b518-0493fe0bbdfa">The encoding of the Data Elements of the Data Set shall be as follows according to their Value Representations:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_4fe7cb96-897a-4e59-bfdd-0ed4526c72ca">For all Value Representations defined in this part, except for the Value Representations OB and OW, the encoding shall be in Big Endian as specified in <xref linkend="sect_7.3" xrefstyle="select: label"/>.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_6572b746-02d8-43f9-8193-ab875b2eab4a">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
-              <itemizedlist>
-                <listitem>
-                  <para xml:id="para_bf5c33ac-dd30-41ea-9b23-7643205cad3a">Data Element (7FE0,0010) Pixel Data</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para xml:id="para_106f6342-4c10-400f-a67b-8934203c6f57">where Bits Allocated (0028,0100) has a value greater than 8 shall have Value Representation OW and shall be encoded in Big Endian;</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_4d1cadc6-627f-4b03-a541-4dd8ad6070d0">where Bits Allocated (0028,0100) has a value less than or equal to 8 shall have the Value Representation OB or OW and shall be encoded in Big Endian.</para>
-                    </listitem>
-                  </itemizedlist>
-                  <note>
-                    <para xml:id="para_6f36770e-6aae-491e-a4e5-620e48a55fe8">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
-                  </note>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_b9594f10-3fa3-41fa-a6ae-a76e799e7506">Data Element (60xx,3000) Overlay Data</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para xml:id="para_1ef77a76-e96d-42d0-8492-99d00f0e9684">shall have the Value Representation OB or OW and shall be encoded in Big Endian.</para>
-                      <note>
-                        <para xml:id="para_13fc8f6e-fba8-4272-9a0b-aa3e4ac0dfde">Previous versions of the Standard specified that the choice of OB or OW VR was based on whether or not Overlay Bits Allocated (60xx,0100) was greater than, or less than or equal to, 8. However, since only one bit plane can be encoded in each Overlay Data Element (60xx,3000), no value of Overlay Bits Allocated other than 1 makes sense. Such a restriction is now present in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
-                      </note>
-                    </listitem>
-                  </itemizedlist>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_dc941892-c8bd-496c-8a03-f140fca3becc">Data Element (5400,1010) Waveform Data has the Value Representation specified in its Explicit VR Field. The component points shall be encoded in Big Endian.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_dfcf801f-13e2-4c85-b8b7-67dd9896354e">Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Big Endian.</para>
-                  <note>
-                    <para xml:id="para_cfc28db1-0df8-4ad9-8c70-9c91a89df759">Previous versions of the Standard either did not specify the encoding of Data Elements (0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits.</para>
-                  </note>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_9e119a97-50cc-4aaa-af6a-96d2e952862c">Data Elements (0028,1101), (0028,1102),(0028,1103) Red, Green, Blue Palette Lookup Table Descriptor have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Big Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_e9f6bbb8-e8ae-40ce-aa09-0d8b9cef0337">Data Elements (0028,1221), (0028,1222), (0028,1223) Segmented Red, Green, Blue Palette Color Lookup Table Data have the Value Representation OW and shall be encoded in Big Endian.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_05a8c43f-69c3-4a06-bcfb-952f4ba8dcf0">Data Element (0028,3006) LUT Data has the Value Representation US or OW and shall be encoded in Big Endian.</para>
-                  <note>
-                    <para xml:id="para_1d82fa01-b144-45c7-bd1e-581ff8f5dc8e">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits. Hence a VR of OW has been added. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different.</para>
-                  </note>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_6f1d82b3-e15d-4678-bb2d-1e886295a909">Data Element (0028,3002) LUT Descriptor has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Big Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_487d95eb-7b12-4728-9a69-c9f2e8692388">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Big Endian.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_471cec77-673b-413a-b42e-764871630f15">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Big Endian and is always interpreted as unsigned.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </orderedlist>
-      <note>
-        <orderedlist numeration="arabic">
-          <listitem>
-            <para xml:id="para_ca332a54-e4b4-441b-8cce-4d11198be63b">For Data encoded with the Value Representation OB, the Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_1e9f75ce-7ed6-4353-83a0-0dc95728b534">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_cb1ee900-3774-4159-823a-6aca3544697a">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
-              List (0066,0023) and Primitive Point Index List (0066,0029) were previously defined with a
-              value representation of OW and always interpreted as unsigned, but have been retired.
-              These have been replaced by corresponding OL data elements, which allow values larger
-              than 65535 to index the full range of points that can be encoded in Point Coordinates Data
-              (0066,0016). See PS3.5-2015c.</para>
-          </listitem>
-        </orderedlist>
-      </note>
-      <para xml:id="para_46060c6d-66ba-4363-b747-79c7840e83c9">This DICOM Explicit VR Big Endian Transfer Syntax shall be identified by a UID of Value "1.2.840.10008.1.2.2".</para>
+      <para xml:id="para_e7d83f64-9ac7-438e-96fd-f8fdd8ff564b">This Transfer Syntax was retired in 2006. For the most recent description of it, see PS3.5 2016b.</para>
     </section>
     <section label="A.4" status="2" xml:id="sect_A.4">
       <title>Transfer Syntaxes For Encapsulation of Encoded Pixel Data</title>
@@ -5131,7 +5028,7 @@
               <para xml:id="para_428d2f48-a706-43e0-bb3d-2bc775291d51">For the Value Representations OB, OL and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
-                  <para xml:id="para_d11882a9-2d96-4239-8809-1d7343f9f6f6">Data Element (7FE0,0010) Pixel Data may be encapsulated or native.</para>
+                  <para xml:id="para_d11882a9-2d96-4239-8809-1d7343f9f6f6">Pixel Data (7FE0,0010) may be encapsulated or native.</para>
                   <para xml:id="para_6666f793-ab61-4d3f-8686-142a1fd52846">It shall be encapsulated if present in the top-level Data Set (i.e., not nested within a Sequence Data Element).</para>
                   <note>
                     <para xml:id="para_fe1716f0-299b-425e-b3e6-33276fe7e59b">The distinction between fixed value length (native) and undefined value length (encapsulated) is present so that the top level Data Set Pixel Data can be compressed (and hence encapsulated), but the Pixel Data within an Icon Image Sequence may or may not be compressed.</para>
@@ -5155,7 +5052,7 @@
                       </listitem>
                     </orderedlist>
                   </note>
-                  <para xml:id="para_5755baf8-0054-4d4e-a46b-0d8c389d2cf5">If encapsulated, it has the Value Representation OB and is a sequence of bytes resulting from one of the encoding processes. It contains the encoded pixel data stream fragmented into one or more Item(s). This Pixel Data Stream may represent a Single or Multi-frame Image. See <xref linkend="table_A.4-1" xrefstyle="select: label"/> and <xref linkend="table_A.4-2" xrefstyle="select: label"/>.</para>
+                  <para xml:id="para_5755baf8-0054-4d4e-a46b-0d8c389d2cf5">If encapsulated, it has the Value Representation OB and is an octet-stream resulting from one of the encoding processes. It contains the encoded pixel data stream fragmented into one or more Item(s). This Pixel Data Stream may represent a Single or Multi-frame Image. See <xref linkend="table_A.4-1" xrefstyle="select: label"/> and <xref linkend="table_A.4-2" xrefstyle="select: label"/>.</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_97c429e3-6c06-424d-9bce-7c3148ba1324">The Length of the Data Element (7FE0,0010) shall be set to the Value for Undefined Length (FFFFFFFFH).</para>
@@ -5206,7 +5103,7 @@
                   </itemizedlist>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_972ccef9-9624-4ca5-8a18-5d7c3574a7c5">Data Element (60xx,3000) Overlay Data</para>
+                  <para xml:id="para_972ccef9-9624-4ca5-8a18-5d7c3574a7c5">Overlay Data (60xx,3000)</para>
                   <itemizedlist>
                     <listitem>
                       <para xml:id="para_c0e24f7d-68e6-431d-b0e3-3b7bfdb4ab9d">shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
@@ -5214,34 +5111,34 @@
                   </itemizedlist>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_f5bb03c7-9c95-4e62-bddd-1033306a42f8">Data Element (5400,1010) Waveform Data has the Value Representation specified in its Explicit VR Field. The component points shall be encoded in Little Endian.</para>
+                  <para xml:id="para_f5bb03c7-9c95-4e62-bddd-1033306a42f8">Waveform Data (5400,1010) has the Value Representation specified in its Explicit VR Field. The component points shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_372c01e1-1206-4f77-aad9-d83d0b78a779">Data Elements (0028,1201), (0028,1202), (0028,1203), (0028,1204) Red, Green, Blue, Alpha Palette Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_372c01e1-1206-4f77-aad9-d83d0b78a779">Red Palette Color Lookup Table Data (0028,1201), Green Palette Color Lookup Table Data (0028,1202), Blue Color Palette Lookup Table Data (0028,1203) and Alpha Palette Color Lookup Table Data (0028,1204) have the Value Representation OW and shall be encoded in Little Endian.</para>
                   <note>
                     <para xml:id="para_10ce5dc8-65f4-4e8a-8c60-bb648bc77f6f">Previous versions of the Standard either did not specify the encoding of Data Elements 0028,1201), (0028,1202), (0028,1203) in this Part, but specified a VR of US or SS in PS3.6-1993, or specified OW in this Part but a VR of US, SS or OW in PS3.6-1996. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits.</para>
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_3913ddde-afa3-4304-bb64-6aef1446d65c">Data Elements (0028,1101), (0028,1102),(0028,1103) Red, Green, Blue Palette Lookup Table Descriptor have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+                  <para xml:id="para_3913ddde-afa3-4304-bb64-6aef1446d65c">Red Palette Color Lookup Table Descriptor (0028,1101), Green Palette Color Lookup Table Descriptor (0028,1102) and Blue Palette Color Lookup Table Descriptor (0028,1103) have the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_b182ced2-1be0-4145-8e6f-8545834626ba">Data Elements (0028,1221), (0028,1222), (0028,1223) Segmented Red, Green, Blue Palette Color Lookup Table Data have the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_b182ced2-1be0-4145-8e6f-8545834626ba">Segmented Red Palette Color Lookup Table Data (0028,1221), Segmented Green Palette Color Lookup Table Data (0028,1222) and Segmented Blue Palette Color Lookup Table Data (0028,1223) have the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_d4981850-0088-4025-9c7c-b76d3a73dcea">Data Element (0028,3006) LUT Data has the Value Representation US or OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_d4981850-0088-4025-9c7c-b76d3a73dcea">LUT Data (0028,3006) has the Value Representation US or OW and shall be encoded in Little Endian.</para>
                   <note>
                     <para xml:id="para_2b23551a-d3e5-48c0-a6eb-d67d8defe64f">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. However, an explicit VR of US or SS cannot be used to encode a table of 2<superscript>16</superscript> elements, since the Value Length is restricted to 16 bits. Hence a VR of OW has been added. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case, though the explicitly encoded VR field would be different.</para>
                   </note>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_ffe7b031-5aec-4244-9810-de6c4421ba2f">Data Element (0028,3002) LUT Descriptor has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
+                  <para xml:id="para_ffe7b031-5aec-4244-9810-de6c4421ba2f">LUT Descriptor (0028,3002) has the Value Representation SS or US (depending on rules specified in the IOD in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be encoded in Little Endian. The first and third values are always interpreted as unsigned, regardless of the Value Representation.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_391721fb-9b59-45ba-ab5e-08a67765d79a">Data Element (0028,1408) Blending Lookup Table Data has the Value Representation OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_391721fb-9b59-45ba-ab5e-08a67765d79a">Blending Lookup Table Data (0028,1408) has the Value Representation OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_17cb1fef-118b-4963-86e6-f11568da99d7">Data Element (0066,0129) Track Point Index List has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
+                  <para xml:id="para_17cb1fef-118b-4963-86e6-f11568da99d7">Track Point Index List (0066,0129) has the Value Representation OL and shall be encoded in Little Endian and is always interpreted as unsigned.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -5251,10 +5148,10 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_b4b1f63e-82e4-40b2-a375-f53dcd85f858">For Data encoded with the Value Representation OB, the Data encoding is unaffected by Little Endian or Big Endian byte ordering.</para>
+            <para xml:id="para_b4b1f63e-82e4-40b2-a375-f53dcd85f858">For Data encoded with the Value Representation OB, the Data encoding is unaffected by byte ordering.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_3a981bba-6fe4-437c-aa0f-8dae5173363b">Encoding of Curve Data and Audio Sample Data was previously defined but has been retired. See PS3.5-2004.</para>
+            <para xml:id="para_3a981bba-6fe4-437c-aa0f-8dae5173363b">Encoding of Curve Data (5000,3000) and Audio Sample Data (5000,200C) was previously defined but has been retired. See PS3.5-2004.</para>
           </listitem>
           <listitem>
             <para xml:id="para_b67b16c4-c714-4aa1-a32f-00d92ff74e7b">Vertex Point Index List (0066,0025), Edge Point Index List (0066,0024), Triangle Point Index
@@ -6113,7 +6010,7 @@
               <para xml:id="para_cb5211e5-ed9e-47fe-8b26-acb267e1a75e">For the Value Representations OB and OW, the encoding shall meet the following specification depending on the Data Element Tag:</para>
               <itemizedlist>
                 <listitem>
-                  <para xml:id="para_e1104bfd-3ae7-4bc4-8002-703ba9f77336">Data Element (7FE0,0010) Pixel Data shall not be present, but rather pixel data shall be referenced via Data Element (0028,7FE0) Pixel Data Provider URL</para>
+                  <para xml:id="para_e1104bfd-3ae7-4bc4-8002-703ba9f77336">Pixel Data (7FE0,0010) shall not be present, but rather pixel data shall be referenced via Data Element (0028,7FE0) Pixel Data Provider URL</para>
                 </listitem>
                 <listitem>
                   <para xml:id="para_5c2597ac-0f18-4ea7-93f0-0cc37c2105d4">Overlay data, if present, shall only be encoded in the Overlay Data attribute (60xx,3000), which shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
@@ -6291,10 +6188,10 @@
       <para xml:id="para_5998f031-471f-40e0-ae40-05258e522685">An individual pixel may consist of one or more Pixel Sample Values (e.g., color or multi-planar images). Each Pixel Sample Value can be expressed as either a binary 2's complement integer or a binary unsigned integer, as specified by the Pixel Representation Data Element (0028, 0103). The number of bits in each Pixel Sample Value is specified by Bits Stored (0028,0101). For 2's complement integer Pixel Samples the sign bit is the most significant bit of the Pixel Sample Value.</para>
       <para xml:id="para_a165bbc9-4be1-42ae-9c1f-ce62842c6cba">A Pixel Cell is the container for a Pixel Sample Value and optionally additional bits. These additional bits are used to place Pixels on certain boundaries (byte, word, etc.). A Pixel Cell exists for every individual Pixel Sample Value in the Pixel Data. The size of the Pixel Cells is specified by Bits Allocated (0028,0100) and is greater than or equal to the Bits Stored (0028,0101). The placement of the Pixel Sample Values within the Pixel Cells is specified by High Bit (0028,0102).</para>
       <para xml:id="para_9b1447fb-69a8-4e09-90cf-01acc90bd818">Any restrictions on the characteristics of a Pixel Cell and the Pixel Sample Value contained therein are specific to the Information Object Definition (e.g., Image Object) containing the Pixel Data Element (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
-      <para xml:id="para_2d9bdfdb-d89e-4134-8216-796a54b2190f">The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word String). The Pixel Data in DICOM 3.0, as it was in ACR-NEMA 2.0, is packed, except that Bits Allocated is always either 1, or a multiple of 8 (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
+      <para xml:id="para_2d9bdfdb-d89e-4134-8216-796a54b2190f">The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word). The Pixel Data in DICOM 3.0, as it was in ACR-NEMA 2.0, is packed, except that Bits Allocated is always either 1, or a multiple of 8 (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
       <para xml:id="para_797183b5-abb6-4308-a7e1-a1958dabf82d">All other (non-default) DICOM Transfer Syntaxes make use of explicit VR encoding. For these Transfer Syntaxes, all Pixel Data where Bits Allocated is less than or equal to 8 may be encoded with an explicit VR of OB (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). As in the OW case, Pixel Cells are packed together, but in this case the Pixel Data is broken up into a stream of physical 8-bit words.</para>
       <note>
-        <para xml:id="para_e83c50bf-f06f-4c8e-87cb-f15f9ad9d31f">For Pixel Data encoded with an explicit VR of OB, the encoding of the Pixel Data is unaffected by Little Endian or Big Endian byte ordering.</para>
+        <para xml:id="para_e83c50bf-f06f-4c8e-87cb-f15f9ad9d31f">For Pixel Data encoded with an explicit VR of OB, the encoding of the Pixel Data is unaffected by byte ordering.</para>
       </note>
       <para xml:id="para_d054b6da-e827-4f07-ac49-b9d6a6a03535">
         <figure label="D-2" pgwide="1" xml:id="figure_D-2">
@@ -6345,7 +6242,7 @@
           </mediaobject>
         </figure>
       </para>
-      <para xml:id="para_bd0d30fe-e491-4c19-9fc4-dce65e96100e">Byte ordering is also specified as part of the negotiated Transfer Syntax used in the exchange of a DICOM message. Sixteen bit words are transmitted across the network (a byte at a time) least significant byte first in the case of a Little Endian Transfer Syntax and most significant byte first when using a Big Endian Transfer Syntax (see Figure <xref linkend="figure_D-6" xrefstyle="select: labelnumber"/>).</para>
+      <para xml:id="para_bd0d30fe-e491-4c19-9fc4-dce65e96100e">Byte ordering is also specified as part of the negotiated Transfer Syntax used in the exchange of a DICOM message. Sixteen bit words are transmitted across the network (a byte at a time) least significant byte first in the case of a Little Endian Transfer Syntax (see Figure <xref linkend="figure_D-6" xrefstyle="select: labelnumber"/>).</para>
       <para xml:id="para_c5c3919d-9058-42b3-a74f-967950864a4f">
         <figure label="D-6" pgwide="1" xml:id="figure_D-6">
           <title>Sample Pixel Data Byte Streams (VR = OW)</title>
@@ -7654,7 +7551,7 @@
       <para xml:id="para_ea35d982-683f-429f-a1ee-a34b5ce11c41">The RLE algorithm described in this section is used to compress Byte Segments into RLE Segments. There is a one-to-one correspondence between Byte Segments and RLE Segments. Each RLE segment must be an even number of bytes or padded at its end with zero to make it even.</para>
       <section label="G.3.1" status="3" xml:id="sect_G.3.1">
         <title>The RLE Encoder</title>
-        <para xml:id="para_f7a09f60-7de1-4e16-b3d3-38e14e1769cd">A sequence of identical bytes (Replicate Run) is encoded as a two-byte code:</para>
+        <para xml:id="para_f7a09f60-7de1-4e16-b3d3-38e14e1769cd">A stream of identical bytes (Replicate Run) is encoded as a two-byte code:</para>
         <itemizedlist mark="none">
           <listitem>
             <para xml:id="para_7258e788-bbde-483c-ab4f-03640ed01459">&lt; -count + 1 &gt; &lt;byte value&gt;, where</para>
@@ -7668,13 +7565,13 @@
             </itemizedlist>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_f3678155-9e25-4478-a9c9-162a52d2d901">and a non-repetitive sequence of bytes (Literal Run) is encoded as:</para>
+        <para xml:id="para_f3678155-9e25-4478-a9c9-162a52d2d901">and a non-repetitive octet-stream (Literal Run) is encoded as:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_c6891198-e601-42d9-9def-d52ee2f4c741">&lt; count - 1 &gt; &lt;Literal sequence of bytes&gt;, where</para>
+            <para xml:id="para_c6891198-e601-42d9-9def-d52ee2f4c741">&lt; count - 1 &gt; &lt;Literal octet-stream&gt;, where</para>
             <itemizedlist mark="none">
               <listitem>
-                <para xml:id="para_4029f1e5-c907-47b2-b733-0b1323fde4d5">count = number of bytes in the sequence, and</para>
+                <para xml:id="para_4029f1e5-c907-47b2-b733-0b1323fde4d5">count = number of bytes in the octet-stream, and</para>
               </listitem>
               <listitem>
                 <para xml:id="para_bfd1b76a-8f2e-4597-88ce-1e6398921aa9">1 &lt;= count &lt;= 128.</para>

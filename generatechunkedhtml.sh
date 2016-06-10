@@ -72,6 +72,10 @@ if [ ! -z `ls -1 wordexport/part${part}/part${part}_fromword_files/*.jpg 2>&1| g
 then
   mkdir -p output/chtml/part${part}/part${part}_fromword_files; cp -v wordexport/part${part}/part${part}_fromword_files/*.jpg output/chtml/part${part}/part${part}_fromword_files
 fi
+if [ ! -z `ls -1 wordexport/part${part}/part${part}_fromword_files/*.gif 2>&1| grep -v 'No such file or directory' | head -1` ]
+then
+  mkdir -p output/chtml/part${part}/part${part}_fromword_files; cp -v wordexport/part${part}/part${part}_fromword_files/*.gif output/chtml/part${part}/part${part}_fromword_files
+fi
 
 mkdir -p output/chtml/part${part}/figures
 if [ ! -z `ls -1 source/docbook/part${part}/figures/*.svg 2>&1| grep -v 'No such file or directory' | head -1` ]
