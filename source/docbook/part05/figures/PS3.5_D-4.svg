@@ -2,8 +2,8 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="472px" viewBox="0 0 502 472" enable-background="new 0 0 502 472" xml:space="preserve">
-
+	 width="502px" height="212px" viewBox="0 0 502 212" enable-background="new 0 0 502 212" xml:space="preserve">
+        
 <defs>
 	<style type="text/css">
 	text {
@@ -14,164 +14,125 @@
 
 <g>
    <desc>
-	PS3.5 Part 5: Data Structures and Encoding
+	PS 3.5 Part 5: Data Structures and Encoding
    </desc>
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500" height="225"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="210"/>
 	<g>
+		
+			<rect x="102.729" y="35.797" fill="#CCDEF0" stroke="#010101" stroke-width="0.9521" stroke-miterlimit="1" width="296.542" height="160"/>
 		<g>
-			<g>
-				<g>
-					<rect x="102.729" y="28.286" fill="#CCDEF0" stroke="#010101" stroke-miterlimit="1" width="296.542" height="176.519"/>
-					<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="175.044" y1="65.366" x2="175.044" y2="50.965"/>
-					<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="117.144" y1="50.965" x2="117.144" y2="65.366"/>
-					<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="348.945" y1="65.366" x2="348.945" y2="50.965"/>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 102.7295 24.9663)" font-size="11">Example 1: CT Pixel Data Value</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 117.1445 177.9351)"><tspan x="0" y="0" font-size="11">MSb = Most Significant Bit</tspan><tspan x="0" y="13.2" font-size="11">LSb = Least Significant Bit</tspan></text>
-						</g>
-					</g>
-					<rect x="117.144" y="65.513" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="65.513" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.901" height="14.4"/>
-					<rect x="117.144" y="79.914" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="79.914" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
-					<rect x="117.144" y="94.314" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="94.314" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
-					<rect x="117.144" y="108.714" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="108.714" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
-					<rect x="117.144" y="123.115" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="123.115" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
-					<rect x="117.144" y="137.515" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
-					<rect x="175.044" y="137.515" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 226.4468 75.4683)" font-size="10">Pixel Sample 1</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 226.4468 90.1353)" font-size="10">Pixel Sample 2</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 226.4468 104.8022)" font-size="10">Pixel Sample 3</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 252.1719 119.3853)" font-size="10">...</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 252.1719 134.0522)" font-size="10">...</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 329.7461 75.4683)" font-size="10">LSb</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 329.7461 90.1353)" font-size="10">LSb</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 329.7461 104.8022)" font-size="10">LSb</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 356.2461 75.4683)" font-size="10">Word 0</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 356.2461 90.1353)" font-size="10">Word 1</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 356.2461 104.8022)" font-size="10">Word 2</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 178.1455 75.4683)" font-size="10">MSb</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 178.1455 90.1353)" font-size="10">MSb</text>
-						</g>
-					</g>
-					<g>
-						<g>
-							<text transform="matrix(0.8815 0 0 1 178.1455 104.8022)" font-size="10">MSb</text>
-						</g>
-					</g>
-				</g>
-				<g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 324.8086 60.687)" font-size="10">1</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 339.209 60.687)" font-size="10">0</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 310.8398 60.687)" font-size="10">2</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 296.248 60.687)" font-size="10">3</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 281.6523 60.687)" font-size="10">4</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 267.0625 60.687)" font-size="10">5</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 191.7539 60.687)" fill="#312A35" font-size="10">10</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 119.3574 60.687)" font-size="10">15</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 133.8594 60.687)" font-size="10">14</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 148.3589 60.687)" font-size="10">13</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 162.8594 60.687)" font-size="10">12</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 177.3589 60.687)" font-size="10">11</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 208.8105 60.687)" font-size="10">9</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 223.311 60.687)" font-size="10">8</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 237.8105 60.687)" font-size="10">7</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 252.3105 60.687)" font-size="10">6</text>
-					</g>
-				</g>
-			</g>
+			<text transform="matrix(1 0 0 1 102.7295 26.8413)" font-size="12">Example: CT Pixel Data Value</text>
+		</g>
+		<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="175.044" y1="64.617" x2="175.044" y2="50.217"/>
+		<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="117.144" y1="50.217" x2="117.144" y2="64.617"/>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="348.945" y1="64.617" x2="348.945" y2="50.217"/>
+		<g>
+			<text transform="matrix(1 0 0 1 117.1445 168.2578)"><tspan x="0" y="0" font-size="8">MSb = Most Significant Bit</tspan><tspan x="0" y="9.601" font-size="8">LSb = Least Significant Bit</tspan></text>
+		</g>
+		<rect x="117.144" y="64.765" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="64.765" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.901" height="14.4"/>
+		<rect x="117.145" y="79.165" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="79.165" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
+		<rect x="117.144" y="93.565" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="93.565" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
+		<rect x="117.144" y="107.966" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="107.966" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
+		<rect x="117.144" y="122.366" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="122.366" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
+		<rect x="117.144" y="136.767" fill="#6799C8" stroke="#010101" stroke-miterlimit="1" width="57.9" height="14.4"/>
+		<rect x="175.044" y="136.767" fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" width="173.915" height="14.4"/>
+		<g>
+			<text transform="matrix(1 0 0 1 228.6514 75.6943)" font-size="10">Pixel Sample 1</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 228.6523 90.0947)" font-size="10">Pixel Sample 2</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 228.6514 104.4951)" font-size="10">Pixel Sample 3</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 257.834 118.6338)" font-size="10">...</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 257.834 133.3008)" font-size="10">...</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 332.0713 74.1919)" font-size="8">LSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 332.0713 88.5923)" font-size="8">LSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 332.0713 102.9927)" font-size="8">LSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 356.2461 74.7168)" font-size="10">Word 0</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 356.2461 89.3838)" font-size="10">Word 1</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 356.2461 104.0508)" font-size="10">Word 2</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 178.0229 74.1919)" font-size="8">MSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 178.0239 88.5923)" font-size="8">MSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 178.0229 102.9927)" font-size="8">MSb</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 324.7578 59.9355)" font-size="9">1</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 339.1582 59.9355)" font-size="9">0</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 310.7881 59.9355)" font-size="9">2</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 296.1963 59.9355)" font-size="9">3</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 281.6016 59.9355)" font-size="9">4</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 267.0107 59.9355)" font-size="9">5</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 191.6514 59.9355)" fill="#312A35" font-size="9">10</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 119.2549 59.9355)" font-size="9">15</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 133.7568 59.9355)" font-size="9">14</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 148.2563 59.9355)" font-size="9">13</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 162.7568 59.9355)" font-size="9">12</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 177.2563 59.9355)" font-size="9">11</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 208.7593 59.9355)" font-size="9">9</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 223.2598 59.9355)" font-size="9">8</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 237.7593 59.9355)" font-size="9">7</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 252.2598 59.9355)" font-size="9">6</text>
 		</g>
 	</g>
 </g>

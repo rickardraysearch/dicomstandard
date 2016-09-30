@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2016c - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2016d - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -692,6 +692,8 @@
 <emphasis role="bold">Big Endian</emphasis>: A form of byte ordering where multiple byte binary values are encoded with the most significant byte encoded first, and the remaining bytes encoded in decreasing order of significance.</para>
       <para xml:id="para_1fd758db-6e3c-45ab-9d60-e319c7d40540">
 <emphasis role="bold">Character Repertoire</emphasis>: A finite set of different characters that is considered to be complete for a given purpose and is specified independently of their encoding (also referred to as a character set).</para>
+      <para xml:id="para_9c3d7dce-c46e-4826-a095-25662ada2b00">
+<emphasis role="bold">Code String</emphasis>: A string of characters identifying a controlled concept, including Defined Terms and Enumerated Values when represented as character strings. The scope of the controlled concept is limited to the attribute for which the string provides the value; i.e., the attribute defines the allowed set of values for the Code String, and a particular string may have different meanings in different attributes. A Code String is formally an arbitrary code representing a semantic concept; however, English language words (using the constrained character set of the CS Value Representation) are often used as codes for the semantics of those words.</para>
       <para xml:id="para_a01acd74-4023-4cef-b617-e715f63e30e8">
 <emphasis role="bold">Data Element</emphasis>: A unit of information as defined by a single entry in the data dictionary. An encoded Information Object Definition (IOD) Attribute that is composed of, at a minimum, three fields: a Data Element Tag, a Value Length, and a Value Field. For some specific Transfer Syntaxes, a Data Element also contains a VR Field where the Value Representation of that Data Element is specified explicitly.</para>
       <para xml:id="para_25347c36-b9fa-4e24-b101-228b9e78b02c">
@@ -1343,7 +1345,26 @@
       <para xml:id="para_5365717b-21d7-4c05-853c-9ab38004b2bb">Values with VRs constructed of character strings, except in the case of the VR UI, shall be padded with SPACE characters (20H, in the Default Character Repertoire) when necessary to achieve even length. Values with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to achieve even length. Values with a VR of OB shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
       <para xml:id="para_32d49290-4ed4-45ef-bced-0524398a84c1">All new VRs defined in future versions of DICOM shall be of the same Data Element Structure as defined in <xref linkend="sect_7.1.2" xrefstyle="select: label"/> (i.e., following the format for VRs such as OB, OD, OF, OL, OW, SQ and UN).</para>
       <note>
-        <para xml:id="para_cfdc9e96-676d-40a7-9db2-a0d88179d889">Since all new VRs will be defined as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>, an implementation may choose to ignore VRs not recognized by applying the rules stated in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
+        <orderedlist>
+          <listitem>
+            <para xml:id="para_cfdc9e96-676d-40a7-9db2-a0d88179d889">Since all new VRs will be defined as specified in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>, an implementation may choose to ignore VRs not recognized by applying the rules stated in <xref linkend="sect_7.1.2" xrefstyle="select: label"/>.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_16976f86-e181-44ed-94cc-f581ed6e3462">When converting a Data Set from an Explicit VR Transfer Syntax to a different Transfer Syntax, an implementation may copy Data Elements with unrecognized VRs in the following manner:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_4310d57e-7a7a-4fb2-b85d-c09b73883bd1">If the endianness of the Transfer Syntaxes is the same, the Value of the Data Element may be copied unchanged and if the target Transfer Syntax is Explicit VR, the VR bytes copied unchanged. In practice this only applies to Little Endian Transfer Syntaxes, since there was only one Big Endian Transfer Syntax defined.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_c8986cb5-5f5d-4fc9-a8bb-944ac0d2c28c">If the source Transfer Syntax is Little Endian and the target Transfer Syntax is the (retired) Big Endian Explicit VR Transfer Syntax, then the Value of the Data Element may be copied unchanged and the VR changed to UN, since being unrecognized, whether or not byte swapping is required is unknown. If the VR were copied unchanged, the byte order of the value might or might not be incorrect.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_f32a2408-9844-4584-b555-b7a9d7839d3d">If the source Transfer Syntax is the (retired) Big Endian Explicit VR Transfer Syntax, then the Data Element cannot be copied, because whether or not byte swapping is required is unknown, and there is no equivalent of the UN VR to use when the value is big endian rather than little endian.</para>
+              </listitem>
+            </itemizedlist>
+            <para xml:id="para_81c8adde-4b69-4a39-a5ac-d6d375054621">The issues of whether or not the element may be copied, and what VR to use if copying, do not arise when converting a Data Set from Implicit VR Little Endian Transfer Syntax, since the VR would not be present to be unrecognized, and if the data element VR is not known from a data dictionary, then UN would be used.</para>
+          </listitem>
+        </orderedlist>
       </note>
       <para xml:id="para_895fc31c-2dcb-4dde-8e3a-1652fc872b35">An individual Value, including padding, shall not exceed the Length of Value, except in the case of the last Value of a multi-valued field as specified in <xref linkend="sect_6.4" xrefstyle="select: label"/>.</para>
       <note xml:id="note_6.1-2-1">
@@ -1433,7 +1454,7 @@
               <para xml:id="para_86aefa1f-fc71-4742-82b9-29934b10466a">Code String</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7af76b7b-3f18-464b-bc35-6605c65e2ce1">A string of characters with leading or trailing spaces (20H) being non-significant.</para>
+              <para xml:id="para_7af76b7b-3f18-464b-bc35-6605c65e2ce1">A string of characters identifying a controlled concept. Leading or trailing spaces (20H) are not significant.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_aeb2484c-ccbd-4ff8-bf5c-b3df74ea28b4">Uppercase characters, "0"-"9", the SPACE character, and underscore "_", of the Default Character Repertoire</para>
@@ -2204,7 +2225,7 @@
           <varlistentry>
             <term>Value Representation</term>
             <listitem>
-              <para xml:id="para_8c6abdc8-2439-4aae-bdd0-98f7c35fd830">A two-byte character string containing the VR of the Data Element. The VR for a given Data Element Tag shall be as defined by the Data Dictionary as specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. The two character VR shall be encoded using characters from the DICOM default character set.</para>
+              <para xml:id="para_8c6abdc8-2439-4aae-bdd0-98f7c35fd830">Two single byte characters containing the VR of the Data Element. The VR for a given Data Element Tag shall be as defined by the Data Dictionary as specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. The two byte VR shall be encoded using characters from the DICOM default character set.</para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -2240,16 +2261,16 @@
         <para xml:id="para_fdb2bf98-c448-4d0b-bea4-d41171c8b883">When using the Explicit VR structures, the Data Element shall be constructed of four consecutive fields: Data Element Tag, VR, Value Length, and Value. Depending on the VR of the Data Element, the Data Element will be structured in one of two ways:</para>
         <itemizedlist>
           <listitem>
-            <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OD, OF, OL, OW, SQ and UN the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
+            <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OD, OF, OL, OW, SQ and UN the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of UC, UR and UT the 16 bits following the two character VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
+            <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of UC, UR and UT the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
             <note>
               <para xml:id="para_f27d1af5-7ecf-4e2a-9ce6-e2edd366e258">VRs of UC, UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
             </note>
           </listitem>
           <listitem>
-            <para xml:id="para_1dadedad-a61e-4cf1-bafd-ab5efe1d2a85">for all other VRs the Value Length Field is the 16-bit unsigned integer following the two character VR Field (<xref linkend="table_7.1-2" xrefstyle="select: label"/>). The value of the Value Length Field shall equal the length of the Value Field.</para>
+            <para xml:id="para_1dadedad-a61e-4cf1-bafd-ab5efe1d2a85">for all other VRs the Value Length Field is the 16-bit unsigned integer following the two byte VR Field (<xref linkend="table_7.1-2" xrefstyle="select: label"/>). The value of the Value Length Field shall equal the length of the Value Field.</para>
           </listitem>
         </itemizedlist>
         <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
@@ -2290,7 +2311,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_5e67423f-26ad-4664-888a-d5a4cf4c53d9">VR</para>
-                <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 byte character string) of "OB", "OD", "OF", "OL", "OW", "SQ", "UC", "UR", "UT" or "UN"</para>
+                <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 single byte characters) of "OB", "OD", "OF", "OL", "OW", "SQ", "UC", "UR", "UT" or "UN"</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_354dbd6a-0245-4914-97b9-2225646113ce">Reserved (2 bytes) set to a value of 0000H</para>
@@ -2363,7 +2384,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_7a3eefaa-aca8-4111-97f3-36bd031a6561">VR</para>
-                <para xml:id="para_f882be30-4d27-4b95-8e01-8db7636fc250">(2 byte character string)</para>
+                <para xml:id="para_f882be30-4d27-4b95-8e01-8db7636fc250">(2 single byte characters)</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_2cdaa98e-0fd7-4b66-9a6a-cda7067890f6">(16-bit unsigned integer)</para>
@@ -3066,7 +3087,7 @@
         <title>Encoding of Private Elements</title>
         <para xml:id="para_a67c52c0-e267-4abe-9448-e13a7e340e8d">The Value Representations used for Private Data Elements shall be the same as those VRs specified for Standard Data Elements in <xref linkend="sect_6.2" xrefstyle="select: label"/>. The encoding shall conform to the requirements for those VRs and shall be in accordance with the negotiated Transfer Syntax. A Private Data Element with SQ VR (a Private Data Sequence) may include Items with both Standard and Private Data Elements. Standard Data Elements used within a Private Data Sequence shall use the VRs as defined in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> for those data elements.</para>
         <para xml:id="para_194a8d5e-3851-48e5-a1dc-6db8d1acd5bb">The semantics of Standard Data Elements within a Private Data Sequence, and the definition of Attribute Values, are implementation dependent.</para>
-        <para xml:id="para_6ce35963-88c1-4134-b699-9648ab32e48e">For a Standard Extended SOP Class the Attributes Pixel Data (07FE,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009), Waveform Data (5400,1010) and Overlay Data (60xx,3000) shall not be included within a Private Sequence Item, nor within a standard Sequence Item nested directly or indirectly within a Private Sequence Item.</para>
+        <para xml:id="para_6ce35963-88c1-4134-b699-9648ab32e48e">For a Standard Extended SOP Class the Attributes Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008), Double Float Pixel Data (7FE0,0009), Waveform Data (5400,1010) and Overlay Data (60xx,3000) shall not be included within a Private Sequence Item, nor within a standard Sequence Item nested directly or indirectly within a Private Sequence Item.</para>
       </section>
     </section>
   </chapter>
@@ -3262,6 +3283,9 @@
             <listitem>
               <para xml:id="para_c141d2a1-75f6-426e-85fe-e99495d48030">DICOM Data Elements should not describe characteristics that are beyond the capability of the compression scheme used. For example, JPEG lossy processes are limited to 12 bits, hence the value of Bits Stored should be 12 or less. Bits Allocated is irrelevant, and is likely to be constrained by the Information Object Definition in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> to values of 8 or 16. Also, JPEG compressed data streams are always color-by-pixel and should be specified as such (a decoder can essentially ignore this element however as the value for JPEG compressed data is already known).</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_e47ec72b-e48e-4484-8cfb-62153e734c28">If JPEG Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_FULL_422 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+            </listitem>
           </orderedlist>
         </note>
       </section>
@@ -3283,6 +3307,9 @@
             <listitem>
               <para xml:id="para_7844c3d7-4b28-4f14-bcf3-19476a836b6b">DICOM Data Elements should not describe characteristics that are beyond the capability of the compression scheme used. For example, RLE compressed data streams (using the algorithm mandated in the DICOM Standard) are always color-by-plane.</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_57b858fe-3b23-47e7-bfc9-f67233f1188f">If RLE Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_FULL to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding. It is permitted, however, to leave the YBR_FULL color components unconverted but decompressed in the Native format, in which case the Photometric Interpretation in the Data Set with the Native encoding would be YBR_FULL.</para>
+            </listitem>
           </orderedlist>
         </note>
       </section>
@@ -3294,8 +3321,18 @@
         </note>
         <para xml:id="para_573ea007-d4e1-4c07-a82a-2d6b13d109eb">The use of the DICOM Encapsulated Format to support JPEG-LS Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG-LS Interchange Format shall be used to decode the compressed data stream.</para>
         <note>
-          <para xml:id="para_e40960fc-63dd-45b0-8ed7-993b40cbd763">See also the notes in <xref linkend="sect_8.2.1" xrefstyle="select: label"/>.</para>
-        </note>
+          <orderedlist numeration="arabic">
+            <listitem>
+              <para xml:id="para_e40960fc-63dd-45b0-8ed7-993b40cbd763">See also the notes in <xref linkend="sect_8.2.1" xrefstyle="select: label"/>.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_7eacfba3-42dd-43d0-b47f-45efb2fb200b">No Photometric Interpretation specific for JPEG-LS is currently defined in DICOM. Annex F of ISO 14495-2 describes a "Sample transformation for inverse colour transform" and a marker segment to encode its parameters, but this is not known to have been implemented. Common practice is to compress the RGB components unconverted, which sacrifices compression performance, and send the Photometric Interpretation as RGB. Though the YBR_RCT Photometric Interpretation and component conversion could theoretically be used, in the absence of DC shifting it results in signed values to be encoded, which are not supported by JPEG-LS.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_1510f0e0-33b0-4e0e-9d66-73f03399a37b">If JPEG-LS Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from any other Photometric Interpretation to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+            </listitem>
+          </orderedlist>
+         </note>
       </section>
       <section label="8.2.4" status="3" xml:id="sect_8.2.4">
         <title>JPEG 2000 Image Compression</title>
@@ -3308,17 +3345,26 @@
           <para xml:id="para_0e5c196d-7b04-42b4-9c18-22c0162d12ca">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
         <para xml:id="para_307b3170-88ee-4604-b4c4-958a8cc15009">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
-        <para xml:id="para_db847fdd-ca67-4516-bb90-45d161167bee">The JPEG 2000 bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation, if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). If the JPEG 2000 Part 1 reversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_RCT. If the JPEG 2000 Part 1 irreversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_ICT.</para>
+        <para xml:id="para_db847fdd-ca67-4516-bb90-45d161167bee">The JPEG 2000 bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation [ISO 15444-1 Annex G], if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). If the JPEG 2000 Part 1 reversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_RCT. If the JPEG 2000 Part 1 irreversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_ICT.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
               <para xml:id="para_08197219-168c-4756-88fc-be63881c1cbf">For example, single component may be present, and the Photometric Interpretation (0028,0004) may be MONOCHROME2.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_0a77cfd2-db8f-40f4-8d23-3a10092406af">Though it would be unusual, would not take advantage of correlation between the red, green and blue components, and would not achieve effective compression, a Photometric Interpretation of RGB could be specified as long as no multi-component transformation was specified by the JPEG 2000 bit stream.</para>
+              <para xml:id="para_832bcbc5-922e-43d1-9f35-4cba78b53059">The application of a JPEG 2000 Part 1 reversible multi-component transformation is signaled in the JPEG 2000 bitstream by a value of 1 rather than 0 in the SGcod Multiple component transformation type of the COD marker segment [ISO 15444-1 Table A.17]. No other value of Photometric Interpretation than YBR_RCT or YBR_ICT is permitted when SGcod Multiple component transformation type is 1.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_0a77cfd2-db8f-40f4-8d23-3a10092406af">Though it would be unusual, would not take advantage of correlation between the red, green and blue components, and would not achieve effective compression, a Photometric Interpretation of RGB could be specified as long as no multi-component transformation [ISO 15444-1 Annex G] was specified by the JPEG 2000 bit stream. Alternative methods of decorrelation of the color components than those specified in [ISO 15444-1 Annex G] are permitted as defined in PS3.3, such as a Photometric Interpretation of YBR_FULL; this may be useful when converting existing YBR_FULL Pixel Data (e.g., in a different Transfer Syntax) without further loss.</para>
+              <para xml:id="para_30071ffc-c6fa-43f8-84a7-56424cb8f633">In either case (Photometric Interpretation of RGB or YBR_FULL), the value of SGcod Multiple component transformation type would be 0.</para>
+              <para xml:id="para_1d6dc6c4-c9e9-4b2b-8175-94181e7c3deb">
+<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> may constrain the values of Photometric Interpretation for specific IODs.</para>
             </listitem>
             <listitem>
               <para xml:id="para_9146fe8f-7760-48f7-8a52-9c1dbf1ca927">Despite the application of a multi-component color transformation and its reflection in the Photometric Interpretation attribute, the "color space" remains undefined. There is currently no means of conveying "standard color spaces" either by fixed values (such as sRGB) or by ICC profiles. Note in particular that the JP2 file header is not sent in the JPEG 2000 bitstream that is encapsulated in DICOM.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_e8f7c114-fe18-4f0d-a9f3-6b8367bfb3b2">If JPEG 2000 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_ICT or YBR_RCT to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
             </listitem>
           </orderedlist>
         </note>
@@ -3338,7 +3384,14 @@
         <para xml:id="para_9d54ce83-fbe6-44d9-a910-4c3eae7443be">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
         <para xml:id="para_c268bcf7-3ff6-4626-af47-8aab8feb28ff">The MPEG2 MP@ML bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation, if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). MPEG2 MP@ML applies an irreversible multi-component transformation, so DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_PARTIAL_420 in the case of multi-component data, and MONOCHROME2 in the case of single component data (even though the MPEG2 bit stream itself is always encoded as three components, one luminance and two chrominance).</para>
         <note>
-          <para xml:id="para_1657a855-c8c2-4d9c-a5a6-5c6bf4093180">MPEG2 proposes some video formats. Each of the standards specified is used in a different market, including: ITU-R BT.470-2 System M for SD NTSC and ITU-R BT.470-2 System B/G for SD PAL/SECAM. A PAL based system should therefore be based on ITU-BT.470 System B for each of Color Primaries, Transfer Characteristic (gamma) and matrix coefficients and should take a value of 5 as defined in <xref linkend="biblio_ISOIEC13818-2"/>.</para>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_2ba2146f-321d-499e-931c-17f41cb4a462">If MPEG2 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_1657a855-c8c2-4d9c-a5a6-5c6bf4093180">MPEG2 proposes some video formats. Each of the standards specified is used in a different market, including: ITU-R BT.470-2 System M for SD NTSC and ITU-R BT.470-2 System B/G for SD PAL/SECAM. A PAL based system should therefore be based on ITU-BT.470 System B for each of Color Primaries, Transfer Characteristic (gamma) and matrix coefficients and should take a value of 5 as defined in <xref linkend="biblio_ISOIEC13818-2"/>.</para>
+            </listitem>
+          </orderedlist>
         </note>
         <para xml:id="para_6572622d-e549-4279-9ff6-b1c29e90d98c">The value of Planar Configuration (0028,0006) is irrelevant since the manner of encoding components is specified in the MPEG2 MP@ML standard, hence it shall be set to 0.</para>
         <para xml:id="para_c52e14b1-3f92-476c-be1f-21528a35ce09">In summary:</para>
@@ -3509,6 +3562,9 @@
           <para xml:id="para_49d5c0fa-e261-4974-8d53-d8428ad857b0">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
         <para xml:id="para_550767c3-9efa-4014-be77-38e3779c1b6b">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <note>
+          <para xml:id="para_893ba67a-05cf-46bd-ad44-72ec2989f1e3">If MPEG2 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+        </note>
         <para xml:id="para_39989b63-b4d8-46ee-ab01-0f10be3905b3">The requirements are:</para>
         <itemizedlist>
           <listitem>
@@ -3859,6 +3915,9 @@
            <para xml:id="para_189b7ade-5a0e-4b48-a83c-a2735266ee5a">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
         <para xml:id="para_1e5e3340-6432-49d9-8cdf-21c44d306380">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <note>
+          <para xml:id="para_10b66283-59e0-410b-bd94-c1ca64a0eec1">If MPEG-4 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+        </note>
         <para xml:id="para_475237f7-b060-4238-a2ea-c4194c317a0a">The requirements are:</para>
         <itemizedlist>
           <listitem>
@@ -4396,6 +4455,9 @@
            <para xml:id="para_a11f89e6-4849-4d7e-a930-62ab9e4fb12c">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
         <para xml:id="para_ec946e84-eec7-4e63-91e3-4ab0581cda27">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed data set might be encoded.</para>
+        <note>
+          <para xml:id="para_6627d6a9-29a0-42ad-b465-1769e704f609">If MPEG-4 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+        </note>
         <para xml:id="para_f88bec93-d7a1-4443-a09b-d7b40a577317">The requirements are:</para>
         <itemizedlist>
           <listitem>

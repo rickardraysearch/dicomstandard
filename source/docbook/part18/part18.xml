@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2016c - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2016d - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -4184,6 +4184,17 @@
                     </itemizedlist>
                   </listitem>
                   <listitem>
+                    <para xml:id="para_c7d99b64-bc7c-413e-999b-8709679b0ba3">an Encapsulated Document (0042,0011) bulk data element from a SOP Instance in the Study encoded in the media type specified in MIME Type of Encapsulated Document (0042,0012) in the Instance with the following header fields:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_73e48f23-9104-4d5f-91f6-dab86bb6f526">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_694125e1-2e07-42f4-b6d2-3cf9be75a7b9">Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
                     <para xml:id="para_595dcddb-d600-4778-9eba-c428486e2353">a compressed bulk data element from a SOP Instance in the Study encoded in a single-frame compression {MediaType} with the following headers:</para>
                     <itemizedlist>
                       <listitem>
@@ -4347,6 +4358,17 @@
                     </itemizedlist>
                   </listitem>
                   <listitem>
+                    <para xml:id="para_5d148af0-c7fd-48b1-a931-0f90642cb613">an Encapsulated Document (0042,0011) bulk data element from a SOP Instance in the Series encoded in the media type specified in MIME Type of Encapsulated Document (0042,0012) in the Instance with the following header fields:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_554a2ac5-ca88-4451-b92b-212876a90b51">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_2d675200-4758-47dd-bcb2-1537176d9e52">Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
                     <para xml:id="para_5f934188-4cab-4aa0-a701-e83901cf6a58">a compressed bulk data element from a SOP Instance in the Series encoded in a single-frame media type with the following headers:</para>
                     <itemizedlist>
                       <listitem>
@@ -4503,6 +4525,17 @@
                       </listitem>
                       <listitem>
                         <para xml:id="para_de616dfc-21c1-4dc1-ae43-682a91960b29">Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_b9105fd6-34f7-4040-8bcd-e3eb8be5b8c2">an Encapsulated Document (0042,0011) bulk data element encoded in the media type specified in MIME Type of Encapsulated Document (0042,0012) in the Instance with the following header fields:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_a2737764-f22e-432b-9b16-359e761c46ac">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_33887371-3773-4ba3-bbdf-2a88b0a8cf34">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -4779,6 +4812,17 @@
                       </listitem>
                       <listitem>
                         <para xml:id="para_dfc45f84-0e7a-486c-b74b-0829298e93a8">Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_6e5802f2-9639-44c1-b56c-4d4cacec6705">an Encapsulated Document (0042,0011) bulk data element from a SOP Instance in the Study encoded in the media type specified in MIME Type of Encapsulated Document (0042,0012) in the Instance with the following header fields:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_9fcecbdd-b4de-4cf7-8398-a1477f7fd847">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_644ef2d4-1683-4eba-b337-1f5befef0475">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -5643,17 +5687,39 @@
       </orderedlist>
       <para xml:id="para_7e4aaa2d-cfb2-408f-9e42-5c7ce788a59b">All request messages are HTTP multipart messages. The organization of SOP Instances into message parts depends on whether the SOP Instances are structured as <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances, or metadata and bulk data.</para>
       <para xml:id="para_adaea576-b5b9-4377-9f1f-e12e4026cab8">
-<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances shall be encoded with one message part per DICOM Instance.</para>
+        <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> binary instances shall be encoded with one message part per DICOM Instance.</para>
+      <para xml:id="para_9575b0b9-b883-4379-8a48-1d8fb60f56bc">When the request message contains compressed bulk data with a Content Type that is one of the media types specified in <xref linkend="table_6.6-1" xrefstyle="select: label"/>, the request may omit the Image Pixel Description Macro attributes and the origin server will derive them from the compressed bit stream. Some media types do not directly correspond to a DICOM Transfer Syntax and the origin server will transform the received bit stream into an uncompressed or lossless (reversibly) compressed Transfer Syntax.</para>
+      <note>
+        <orderedlist>
+          <listitem>
+            <para xml:id="para_23361d67-fc91-44b4-9077-31a4cb9176c8">This allows a user agent to use consumer media types to encode the pixel data even though it may not have:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_1941e1e8-c991-4db5-9caf-9ee05d482d11">the pixel data in a form that directly corresponds to a lossless (reversible) DICOM Transfer Syntax, or</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_070b9b09-c585-4016-8505-51efebec98eb">an API to access the information required to populate the Image Pixel Description Macro.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para xml:id="para_16f0095c-c106-40cf-a66c-a2aea98bd2b3">If the supplied compressed bit stream is in a lossless (reversible) format, the intent is to allow full fidelity retrieval of the decompressed pixels, not the format in which it happened to be submitted.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6f896b24-54bf-4b0b-b997-f652372e0691">If the supplied compressed bit stream is in a lossy (irreversible) format, there will be a corresponding DICOM Transfer Syntax, and the origin server is not expected to recompress it causing further loss.</para>
+          </listitem>
+        </orderedlist>
+      </note>
       <para xml:id="para_83722061-3e3a-49ab-afc8-a2dcdcd9f68f">Metadata and bulk data requests will be encoded in the following manner:(see <xref linkend="figure_6.5-1" xrefstyle="select: label title"/>):</para>
       <itemizedlist>
         <listitem>
-          <para xml:id="para_561ebb02-36c9-4e95-98be-e5b6bdac2650">All XML request messages shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object.</para>
+          <para xml:id="para_561ebb02-36c9-4e95-98be-e5b6bdac2650">All XML request messages shall be encoded as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/> with one message part per XML object; the attributes of the Image Pixel Description Macro may be omitted for the media types specified in <xref linkend="table_6.6-1" xrefstyle="select: label"/>.</para>
         </listitem>
         <listitem>
-          <para xml:id="para_089b5bb9-2751-44af-93da-195062bb927a">All JSON request messages shall be encoded as an array of DICOM JSON Model Objects defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> in a single message part.</para>
+          <para xml:id="para_089b5bb9-2751-44af-93da-195062bb927a">All JSON request messages shall be encoded as an array of DICOM JSON Model Objects defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/> in a single message part; the attributes of the Image Pixel Description Macro may be omitted for the media types specified in <xref linkend="table_6.6-1" xrefstyle="select: label"/>.</para>
         </listitem>
         <listitem>
-          <para xml:id="para_6f507e25-a6d0-4d51-a292-21b3595e0731">Uncompressed bulk and pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
+          <para xml:id="para_6f507e25-a6d0-4d51-a292-21b3595e0731">Bulk data (with the exception of encapsulated document element) and uncompressed pixel data shall be encoded in a Little Endian format using the application/octet-stream media type with one message part per bulk data item.</para>
         </listitem>
         <listitem>
           <para xml:id="para_d88e3987-d817-4fcb-a483-229b666d399f">Compressed pixel data shall be encoded in one of two ways:</para>
@@ -5666,10 +5732,114 @@
             </listitem>
           </itemizedlist>
         </listitem>
+        <listitem>
+          <para xml:id="para_78761e12-3a46-42c1-aa87-8e84ab9b0f65">An Encapsulated Document (0042,0011) bulk data element shall be encoded using the media-type from the MIME Type of Encapsulated Document (0042,0012) attribute with one message part per bulk data item.</para>
+        </listitem>
       </itemizedlist>
       <para xml:id="para_71331b45-0125-498b-ac95-ba01864baf15">Compressed pixel data shall be encoded using the media types and transfer syntaxes specified in <xref linkend="table_6.1.1.8-3b" xrefstyle="select: label"/>. Media types corresponding to several DICOM Transfer Syntax UIDs may require a transfer-syntax parameter to convey the Transfer Syntax the compressed pixel data is encoded in.</para>
       <para xml:id="para_39aec49c-a59d-4ccf-8098-e348e63c1788">The request header field Content-Type is used to indicate the media type of the payload.</para>
       <para xml:id="para_ec81376a-b54b-45e5-800d-0ef06613c805">The Service shall support uncompressed bulk data (multipart/related; type="application/octet-stream").</para>
+      <para xml:id="para_c733ae88-f2fe-4182-ab20-d7b0236a8e07">
+<xref linkend="table_6.6-1" xrefstyle="select: label"/> contains a list of media types containing compressed pixel data from which an origin server shall be able to derive the Image Pixel Data Description Macro Attribute values.</para>
+      <para xml:id="para_65c1a225-3581-4fa8-b58f-6650dd2ee9c1">Requirements are specified in <xref linkend="table_6.6-1" xrefstyle="select: label"/> as follows:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_98596bb4-fa05-4c32-9c03-f981bdc3107a">Transform - No DICOM Transfer Syntax exists; shall be transformed by the origin server into an uncompressed or lossless compressed Transfer Syntax (the choice of which is at the discretion of the origin server).</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_1f9393dc-7eeb-4c7e-b1e7-ccb1c84be68f">Unchanged - Shall be encapsulated in the corresponding DICOM Transfer Syntax without further lossy compression</para>
+        </listitem>
+      </itemizedlist>
+      <table frame="box" label="6.6-1" rules="all" xml:id="table_6.6-1">
+        <caption>Media Type Transformation to Transfer Syntaxes</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_0e89110b-a523-4c31-86e5-2a5945f26cfc">Media Type</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_02dbd49f-eec3-4276-8757-6d85b21aa907">Requirement</para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6c95f72c-b404-4dda-97d0-7f103fdce9e3">image/gif</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_22b9ad6b-aea4-487c-bb74-f83f38cf8eb4">Transform</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f6774f58-8aaf-4ff3-a034-e28dda09ac6e">Image/jp2</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_1d04a006-92c5-437b-853f-1c3e07c86f1d">Unchanged</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_95e748c8-356f-4d66-b838-f54eae66d168">image/jpeg</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_f2c64be1-a401-4b73-ac9d-779afeeadcd5">Unchanged</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_68ed375e-2fdd-400f-bcbc-f2ae69648d5a">image/jpx</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_c17701a9-ee61-4643-981f-2edea70495c2">Unchanged</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cb4ff984-905d-4f8d-a9ad-8a429259a6b4">image/png</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_8e0dee5b-e7ca-4273-a3be-ebdbb98c0938">Transform</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_41960348-71ec-40c3-be39-0886e64b8ee7">video/mp4</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_cf9086e5-452f-4de4-9de6-af326bfbc4dd">Unchanged</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f2fba45f-4bea-4066-b1d5-145c50683194">video/mpeg2</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_b14a5daf-f77d-4041-a88a-f7db09cbdb52">Unchanged</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <note>
+        <orderedlist>
+          <listitem>
+            <para xml:id="para_bffb3b63-bbd4-45cb-89dc-a10e7896aafe">In the case of pixel data supplied as image/gif or image/png, the origin server may transform the color representation from indexed color to true color (RGB) as necessary to conform to any Photometric Interpretation constraints specified by the IOD (i.e., if PALETTE COLOR is not permitted); such a transformation is considered lossless.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_3ef4fa6b-1da0-410b-8ca4-290ce378b07c">If the number of bits per channel of an image/png file is not supported by the IOD, a lossless transformation cannot be performed.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_4ff1f2cc-d2fe-4a90-a7aa-62ef36f682f8">An animated image/gif will be converted into a multi-frame image; image/png does not support animation, and MNG is not included in <xref linkend="table_6.6-1" xrefstyle="select: label"/>.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_b8c5cccd-8b9e-4090-8825-b0b3cc036e80">Any transparency information present in an image/gif or image/png file will be discarded, since DICOM does not support the concept of transparency.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6262c534-bb2f-4f40-bbe0-0bca75adec62">If an alpha channel is supplied in an image/png file, and the IOD does not support the RGBA Photometric Interpretation, the alpha channel will be discarded (i.e., considered to consist of all opaque values, consistent with the policy of discarding any transparency information).</para>
+          </listitem>
+        </orderedlist>
+      </note>
       <section label="6.6.1" status="3" xml:id="sect_6.6.1">
         <title>STOW-RS - Store Instances</title>
         <para xml:id="para_aa62421c-c3dd-4361-9900-197c356ce486">This action stores one or more DICOM instances associated with one or more study instance unique identifiers (SUID). The request message can be DICOM or metadata and bulk data depending on the "Content-Type", and is encapsulated in a multipart request body.</para>
@@ -5688,6 +5858,9 @@
                     </listitem>
                     <listitem>
                       <para xml:id="para_aa74902b-2e18-4ca1-86ab-73b11d519449">{StudyInstanceUID} (optional) is the study instance UID for a single study. If not specified, instances can be from multiple studies. If specified, all instances shall be from that study; instances not matching the StudyInstanceUID shall be rejected.</para>
+                      <note>
+                        <para xml:id="para_7797e725-56b9-4343-893b-9c2225b9dbc8">It is not necessary that the study referenced by the StudyInstanceUID in the resource (and in the provided instances) exists on the server, however it is necessary that it be a valid UID. The client may have obtained an appropriate UID from elsewhere or generated it as described in <olink targetdoc="PS3.5" targetptr="chapter_9" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="chapter_B" xrefstyle="template:Annex %n “%t” in PS3.5"/>.</para>
+                      </note>
                     </listitem>
                   </itemizedlist>
                 </listitem>
@@ -5724,9 +5897,6 @@
               </itemizedlist>
             </listitem>
           </itemizedlist>
-          <note>
-            <para xml:id="para_7797e725-56b9-4343-893b-9c2225b9dbc8">It is not necessary that the study referenced by the StudyInstanceUID in the resource (and in the provided instances) exists on the server, however it is necessary that it be a valid UID. The client may have obtained an appropriate UID from elsewhere or generated it as described in <olink targetdoc="PS3.5" targetptr="chapter_9" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="chapter_B" xrefstyle="template:Annex %n “%t” in PS3.5"/>.</para>
-          </note>
           <section label="6.6.1.1.1" status="5" xml:id="sect_6.6.1.1.1">
             <title>DICOM Request Message Body</title>
             <para xml:id="para_0e205248-00aa-4a78-a821-4843ccb69c96">The DICOM Request Message has a multipart body.</para>
@@ -5773,8 +5943,7 @@
               <listitem>
                 <para xml:id="para_80a1ef88-2b9c-4edd-a7d2-6e6192e30bb4">Each bulk data item shall be preceded by all metadata items that contain a reference to it.</para>
                 <note>
-                  <para xml:id="para_17139e5f-a491-4c75-b47b-ed1f12999fd7">This requires that all bulk data items for an instance shall be preceded by the XML metadata for that instance
-                    and if a bulk data item is included in multiple instances it shall be preceded by the XML metadata for each instance in which it is included.</para>
+                  <para xml:id="para_17139e5f-a491-4c75-b47b-ed1f12999fd7">This requires that all bulk data items for an instance shall be preceded by the XML metadata for that instance and if a bulk data item is included in multiple instances it shall be preceded by the XML metadata for each instance in which it is included.</para>
                 </note>
               </listitem>
               <listitem>
@@ -5794,6 +5963,17 @@
                       <listitem>
                         <para xml:id="para_63f9a56e-6263-439a-a29d-72e6081f1f4a">Content-Type: application/dicom+xml; transfer-syntax={TransferSyntaxUID}</para>
                         <para xml:id="para_6dc12f0d-3486-4645-8c10-5c61de0f8f41">Where {TransferSyntaxUID} is the UID of the DICOM Transfer Syntax used to encode the inline binary data in the XML metadata.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_686c537c-c8ad-40d5-a6fd-561e6591dd80">an encapsulated document with the following headers:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_668e963d-2338-4b1d-af11-e0e19ac2dad8">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_c04fe83d-9217-47fc-a639-cbcee6976fc3">Content-Location: {BulkDataURI}</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -5857,6 +6037,17 @@
                 <para xml:id="para_5714d939-983a-4706-ac09-2daffc42c812">Subsequent items will be one of the following:</para>
                 <itemizedlist>
                   <listitem>
+                    <para xml:id="para_f536d041-5ccb-4424-98d1-5535af35f5f2">an encapsulated document with the following headers:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_78869c8b-ae59-4410-8cf3-a8f63ebc3db4">Content-Type: {media-type}</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_1f73077b-da15-41d0-8c45-25f7379d63c6">Content-Location: {BulkDataURI}</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
                     <para xml:id="para_6e1a1d4d-1697-4f87-bdbc-366dedf2f8e8">an uncompressed bulk data element encoded in Little Endian binary format with the following headers:</para>
                     <itemizedlist>
                       <listitem>
@@ -5891,11 +6082,15 @@
         </section>
         <section label="6.6.1.2" status="4" xml:id="sect_6.6.1.2">
           <title>Action</title>
-          <para xml:id="para_2077d80f-6cce-4964-98a9-a6ce48c3e8a7">The Service may coerce or replace values of attributes such as Patient Name, ID, Accession Number, for example, during import of media from an external institution, reconciliation against a master patient index, or reconciliation against an imaging procedure order. The Service may correct, or replace incorrect values, such as Patient Name or ID, for example, when incorrect worklist item was chosen or operator input error occurs.</para>
+          <para xml:id="para_2077d80f-6cce-4964-98a9-a6ce48c3e8a7">The origin server may coerce or replace values of attributes such as Patient Name, ID, Accession Number, for example, during import of media from an external institution, reconciliation against a master patient index, or reconciliation against an imaging procedure order. The Service may correct, or replace incorrect values, such as Patient Name or ID, for example, when incorrect worklist item was chosen or operator input error occurs.</para>
           <para xml:id="para_890eaf2a-cbec-4816-8a6b-0371c1395843">If any element is coerced or corrected, the Original Attribute Sequence (0400,0561) shall be included in the DICOM Object that is stored and may be included in the <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> XML Store Instances Response Module in the response.</para>
           <note>
             <para xml:id="para_ded2e695-3abe-4257-b9b0-39bb5cf70ac4">For more information on populating the Original Attribute Sequence, see <olink targetdoc="PS3.3" targetptr="sect_C.12.1" xrefstyle="select: docname label quotedtitle"/>.</para>
           </note>
+          <para xml:id="para_5b38a067-cdaf-4fbb-9f8b-ef41ea448f02">The origin server shall encapsulate or convert any compressed pixel data received as bulk data into an appropriate DICOM Transfer Syntax, as defined in <xref linkend="table_6.6-1" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_d7540d0a-ec71-4204-821d-2b89e2486151">The origin server shall populate the attributes of the Image Pixel Description Macro, if absent from the Metadata, by deriving them from the compressed pixel data received as bulk data.</para>
+          <para xml:id="para_cb26d312-87a6-45d1-8995-dcd72d640535">The stored Instance(s) shall fully conform to the IOD and encoding requirements of <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, respectively.</para>
+          <para xml:id="para_d1fdc3c7-33ae-465e-81e5-2a94ad6f918a">The origin server shall return a status of 415 (Unsupported Media Type) if it cannot convert the bulk data or populate the Image Pixel Description Macro Attribute values.</para>
         </section>
         <section label="6.6.1.3" status="4" xml:id="sect_6.6.1.3">
           <title>Response</title>
@@ -5905,7 +6100,7 @@
               <para xml:id="para_16282b30-23b8-4408-ac5e-7a2ed3852ca5">an XML object as described in the Native DICOM Model defined in <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>, or</para>
             </listitem>
             <listitem>
-              <para xml:id="para_ffcf48c7-c502-489a-8cec-888a0e38700f">a DICOM JSON Model Object defined as defined in  <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
+              <para xml:id="para_ffcf48c7-c502-489a-8cec-888a0e38700f">a DICOM JSON Model Object defined as defined in <xref linkend="chapter_F" xrefstyle="template:Annex %n"/>.</para>
             </listitem>
           </itemizedlist>
           <section label="6.6.1.3.1" status="5" xml:id="sect_6.6.1.3.1">
@@ -6025,7 +6220,7 @@
             <para xml:id="para_b6e8d36d-60c1-4f89-a404-a4be88f3c724">The message body may also include details about the processing of attributes by the service.</para>
             <para xml:id="para_c7405761-a2bd-491b-a5c9-408f874e84b6">The message body shall also include details of failures that are not associated with a specific SOP Instance.</para>
             <para xml:id="para_e49388da-4058-4e06-83d8-f32bb7d2d421">
-<xref linkend="table_6.6.1-2" xrefstyle="select: label"/> defines the Attributes for referencing SOP Instances that are contained in a Store Instances Response Module in the response message body.</para>
+              <xref linkend="table_6.6.1-2" xrefstyle="select: label"/> defines the Attributes for referencing SOP Instances that are contained in a Store Instances Response Module in the response message body.</para>
             <table frame="box" label="6.6.1-2" rules="all" xml:id="table_6.6.1-2">
               <caption>Store Instances Response Module Attributes</caption>
               <thead>
@@ -6066,8 +6261,8 @@
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_6dac9fff-8f03-4c67-8c7d-44f4b22b5ce9">The URL where the Study is available for retrieval via a WADO-RS Retrieve Study service.</para>
                     <note>
-<para xml:id="para_a14d38f5-1ec5-4a6f-a5c5-e0a820f51ede">The VR of this attribute has changed from UT to UR.</para>
-</note>
+                      <para xml:id="para_a14d38f5-1ec5-4a6f-a5c5-e0a820f51ede">The VR of this attribute has changed from UT to UR.</para>
+                    </note>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -6089,7 +6284,7 @@
                   <td align="left" colspan="4" rowspan="1">
                     <para xml:id="para_d5fece3f-a887-49d3-999c-e15e82efde48">
                       <emphasis role="italic">&gt;<olink targetdoc="PS3.3" targetptr="table_10-11" xrefstyle="select: docname label quotedtitle"/>
-</emphasis>
+                      </emphasis>
                     </para>
                   </td>
                 </tr>
@@ -6127,7 +6322,7 @@
                   <td align="left" colspan="4" rowspan="1">
                     <para xml:id="para_b07f16ad-9286-486b-9d07-70c78bc7f90e">
                       <emphasis role="italic">&gt;<olink targetdoc="PS3.3" targetptr="table_10-11" xrefstyle="select: docname label quotedtitle"/>
-</emphasis>
+                      </emphasis>
                     </para>
                   </td>
                 </tr>
@@ -6144,8 +6339,8 @@
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_3babff8f-5561-421a-9aaf-209e016b8aaf">The URL where the SOP Instance is available for retrieval via a WADO-RS service.</para>
                     <note>
-<para xml:id="para_21b6655c-00bd-438b-82da-32927a76a00c">The VR of this attribute has changed from UT to UR.</para>
-</note>
+                      <para xml:id="para_21b6655c-00bd-438b-82da-32927a76a00c">The VR of this attribute has changed from UT to UR.</para>
+                    </note>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -6283,7 +6478,7 @@
               <section label="6.6.1.3.2.1.1" status="7" xml:id="sect_6.6.1.3.2.1.1">
                 <title>Warning Reason</title>
                 <para xml:id="para_72dac4bd-0502-41cf-9665-5aa8f552a190">
-<xref linkend="table_6.6.1-3" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Warning Reason (0008,1196):</para>
+                  <xref linkend="table_6.6.1-3" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Warning Reason (0008,1196):</para>
                 <table frame="box" label="6.6.1-3" rules="all" xml:id="table_6.6.1-3">
                   <caption>Store Instances Response Warning Reason Values</caption>
                   <thead>
@@ -6361,7 +6556,7 @@
               <section label="6.6.1.3.2.1.2" status="7" xml:id="sect_6.6.1.3.2.1.2">
                 <title>Failure Reason</title>
                 <para xml:id="para_bffa65be-8a0b-4d67-ba52-d24660eca54e">
-<xref linkend="table_6.6.1-4" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Failure Reason (0008,1197). Implementation specific warning and error codes shall be defined in the conformance statement:</para>
+                  <xref linkend="table_6.6.1-4" xrefstyle="select: label"/> defines the semantics for which the associated value shall be used for the Failure Reason (0008,1197). Implementation specific warning and error codes shall be defined in the conformance statement:</para>
                 <table frame="box" label="6.6.1-4" rules="all" xml:id="table_6.6.1-4">
                   <caption>Store Instances Response Failure Reason Values</caption>
                   <thead>
@@ -6707,13 +6902,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <listitem>
               <para xml:id="para_27fa0c03-58f7-4b48-8aa6-d87a82e6685a">limit={limit}</para>
               <para xml:id="para_1a382031-f07b-4c46-96f3-7973a1f11273">The “limit” parameter value is an unsigned integer, which specifies the maximum
-                number of results the origin server should return. If the “limit” parameter is not
-                present, its value is 50.</para>
+                number of results the origin server shall return. If the “limit” parameter is not
+                present the origin server shall return the maximum number of results in a single response that it supports.</para>
             </listitem>
             <listitem>
               <para xml:id="para_47401d38-c09a-476b-b273-76ca86c82a5b">offset={offset}</para>
               <para xml:id="para_7fe825cd-e68f-4cf5-9725-f34782401c12">The “offset” parameter value is an unsigned integer, which specifies the number of
-                results the origin server should skip before the first returned result. If the “offset”
+                results the origin server shall skip before the first returned result. If the “offset”
                 query parameter is not present, its value is 0.</para>
             </listitem>
           </itemizedlist>
@@ -6820,13 +7015,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <para xml:id="para_f5f73a0a-2f76-4e09-aae5-8f3d753b1d35">is the length of the returned results. It is equal to the minimum of:</para>
                 <variablelist>
                   <varlistentry>
-                    <term>M-offset</term>
+                    <term>M - offset</term>
                     <listitem>
 <para xml:id="para_8cfcfc72-36be-41e3-b3b0-78ec90c4cd4c">the length of available matches starting at offset,</para>
 </listitem>
                   </varlistentry>
                   <varlistentry>
-                    <term>smax–offset</term>
+                    <term>smax - offset</term>
                     <listitem>
 <para xml:id="para_c85efede-6a0f-440b-91e4-a65acb63ff4f">the length before reaching smax, and</para>
 </listitem>
@@ -7751,7 +7946,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_50708b2d-c0a4-4de1-9a78-00a9c3fca134">200</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_083149e0-25df-443d-b77a-7e937a217b02">OK</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -9118,7 +9313,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_401dd52a-1610-40e0-94e1-c14bb0e3be78">200</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_a9088b53-cc6e-457b-9c7d-281d4f6122b2">OK</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -12622,9 +12817,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_4efc8814-d0ec-4f1c-b3d0-807a70137bbe">Application Entity</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_44384aa8-5ee9-4013-801b-630cee9ccf07">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_44384aa8-5ee9-4013-801b-630cee9ccf07">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12635,9 +12828,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_a1328f02-ea45-4921-9c56-602021d9955e">Age String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_683ec3d7-62bb-45b1-9de9-57940ac6dab5">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_683ec3d7-62bb-45b1-9de9-57940ac6dab5">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12648,9 +12839,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_ace88bfa-026b-4227-9d9a-4b328c956dcb">Attribute Tag</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_b6cd5f9d-ab96-4a2c-9635-50aa82c7556f">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_b6cd5f9d-ab96-4a2c-9635-50aa82c7556f">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12661,9 +12850,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_00b5dd1a-77e6-4e70-af27-a8ff7991df1c">Code String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_f5986bce-357c-421c-8e65-ea17a13d145d">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_f5986bce-357c-421c-8e65-ea17a13d145d">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12674,9 +12861,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_3b0232e9-3a86-46fe-9e92-2427ad9002b5">Date</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_b673987d-a98b-4cd9-ac6a-c3ef52fe17d8">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_b673987d-a98b-4cd9-ac6a-c3ef52fe17d8">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12684,12 +12869,10 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_e4e8f917-e8ef-4e7d-b5b8-72f215f98179">DS</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_088d3637-eaf9-4004-8ae2-ab1e598027c5">Decimal</para>
+                <para xml:id="para_088d3637-eaf9-4004-8ae2-ab1e598027c5">Decimal String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_fb941f0b-25b8-45c6-9542-85953c51a4d5">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_fb941f0b-25b8-45c6-9542-85953c51a4d5">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12700,9 +12883,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_6412ff9e-2c48-4fe0-a63f-56df77659241">Date Time</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_02b94a76-ed88-400d-8b25-315450afdbd9">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_02b94a76-ed88-400d-8b25-315450afdbd9">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12713,9 +12894,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_31f8e462-dec0-4a62-9c3e-ad2685736431">Floating Point Single</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_8a0e4e02-fd6f-4762-8aa7-21aa96b06c18">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_8a0e4e02-fd6f-4762-8aa7-21aa96b06c18">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12726,9 +12905,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_0bb232e9-149b-4020-a8f5-0773b4f236de">Floating Point Double</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_0df4d292-04b1-4742-a7c7-f656d0d9d777">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_0df4d292-04b1-4742-a7c7-f656d0d9d777">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12739,9 +12916,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_cd017b6d-d87e-4de5-8000-33d6a8bd4cef">Integer String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_dea6fd02-9c86-47ef-8048-a6373e438014">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_dea6fd02-9c86-47ef-8048-a6373e438014">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12752,9 +12927,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_177698fd-5f26-47fc-b8d3-ade80d11ba51">Long String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_78de27f8-8e1b-4e02-add1-8118e1bc378f">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_78de27f8-8e1b-4e02-add1-8118e1bc378f">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12765,9 +12938,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_67fd9105-e872-498c-9ead-05272fbc8387">Long Text</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_3d3e208d-9b9e-4665-beac-4f0984aaee31">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_3d3e208d-9b9e-4665-beac-4f0984aaee31">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12778,10 +12949,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_36cfbe4e-9e59-43c3-8784-51bdc37685ac">Other Byte</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_529e0293-ae59-437b-bf98-a653f0f30302">
-<emphasis role="italic">Base64</emphasis> encoded
-        <emphasis role="italic">octet-stream</emphasis>
-</para>
+                <para xml:id="para_529e0293-ae59-437b-bf98-a653f0f30302">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12792,10 +12960,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_e1314f65-60a6-45f6-93bf-782f7212379b">Other Double</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_82f4ac33-56bc-4b10-aba5-55d9dc262d73">
-<emphasis role="italic">Base64</emphasis> encoded
-        <emphasis role="italic">octet-stream</emphasis>
-</para>
+                <para xml:id="para_82f4ac33-56bc-4b10-aba5-55d9dc262d73">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12806,10 +12971,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_75a9b9fb-af78-4ffe-a135-bdde8ac636b6">Other Float</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_8575a922-f9b1-433d-a051-2cc4ad2b2e8a">
-<emphasis role="italic">Base64</emphasis> encoded
-        <emphasis role="italic">octet-stream</emphasis>
-</para>
+                <para xml:id="para_8575a922-f9b1-433d-a051-2cc4ad2b2e8a">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12820,10 +12982,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_31a38aba-27aa-44eb-8a52-990b8fc35041">Other Long</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_8eb12e2f-a208-4644-9ded-624f6b5fdb0a">
-                  <emphasis role="italic">Base64</emphasis> encoded
-                  <emphasis role="italic">octet-stream</emphasis>
-                </para>
+                <para xml:id="para_8eb12e2f-a208-4644-9ded-624f6b5fdb0a">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12834,10 +12993,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_484da0e9-b501-4476-b01c-e2fc4726270d">Other Word</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_83b48553-9e93-40b9-8b45-82bcd9793ab7">
-<emphasis role="italic">Base64</emphasis> encoded
-        <emphasis role="italic">octet-stream</emphasis>
-</para>
+                <para xml:id="para_83b48553-9e93-40b9-8b45-82bcd9793ab7">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12848,10 +13004,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_d607f199-a398-4607-8ec9-356c8a633431">Person Name</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_016be3db-0159-4d9b-b0a6-c0bd49e39a6d">
-<emphasis role="italic">Object</emphasis> containing Person Name component groups as
-        <emphasis role="italic">strings (see <xref linkend="sect_F.2.2" xrefstyle="select: label"/>)</emphasis>
-</para>
+                <para xml:id="para_016be3db-0159-4d9b-b0a6-c0bd49e39a6d">Object containing Person Name component groups as strings (see <xref linkend="sect_F.2.2" xrefstyle="select: label"/>)</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12862,9 +13015,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_66ea5f33-727d-43ff-b229-e838eee430be">Short String</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_f96dc693-1ec8-49eb-80da-382312af7e89">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_f96dc693-1ec8-49eb-80da-382312af7e89">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12875,9 +13026,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_48e4228e-1925-4e53-8e2d-3a6661211d06">Signed Long</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_48d5413a-1e47-4d78-beb1-123282aaeb03">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_48d5413a-1e47-4d78-beb1-123282aaeb03">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12885,11 +13034,10 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_d66e52f7-b0e6-4795-8bb8-9e2ff14c4656">SQ</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1a44f726-93ea-4efe-97e2-1f28ba29ba30">Sequence</para>
+                <para xml:id="para_1a44f726-93ea-4efe-97e2-1f28ba29ba30">Sequence of Items</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_2421c77b-d766-4aa1-8c4e-744b17b77b71">
-<emphasis role="italic">Array</emphasis> containing DICOM JSON Objects</para>
+                <para xml:id="para_2421c77b-d766-4aa1-8c4e-744b17b77b71">Array containing DICOM JSON Objects</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12900,9 +13048,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_36046926-e472-4459-8d81-5f714b722363">Signed Short</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_561cd130-042b-400a-8d1c-896e49bfd3a1">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_561cd130-042b-400a-8d1c-896e49bfd3a1">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12913,9 +13059,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_26c32d2e-14e2-4553-8e70-498e839b7d46">Short Text</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_76c6f3d9-9e91-444d-9a1e-0c261f55887b">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_76c6f3d9-9e91-444d-9a1e-0c261f55887b">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12926,9 +13070,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_6bb082b3-6e06-4cd1-8d8b-7901bbab7a7f">Time</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_569cd27a-2b4a-4a31-9afe-771e240ce456">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_569cd27a-2b4a-4a31-9afe-771e240ce456">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12939,9 +13081,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_8c20a6c3-dcd9-42dc-ac7c-5ac0841ee9fb">Unlimited Characters</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1f470fbc-cf0f-4f64-b0cd-3669df1e169f">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_1f470fbc-cf0f-4f64-b0cd-3669df1e169f">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12949,12 +13089,10 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_5e6f7481-e453-4aba-be08-92721ca26077">UI</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1ca81993-d2b1-477d-90d0-fd3cbbb6bac5">UID</para>
+                <para xml:id="para_1ca81993-d2b1-477d-90d0-fd3cbbb6bac5">Unique Identifier (UID)</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_dd1a46ea-685a-46dd-8324-d1329e48fbbc">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_dd1a46ea-685a-46dd-8324-d1329e48fbbc">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12965,9 +13103,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_5b386362-6ed7-482b-9668-9b8ba790a0fe">Unsigned Long</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_a8cfe5dd-9094-477b-a0ae-38fd74790552">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_a8cfe5dd-9094-477b-a0ae-38fd74790552">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12978,10 +13114,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_8037c191-754d-4d31-bfb8-a40e71b60206">Unknown</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1b61eec1-3422-47ed-8920-eff19351971e">
-<emphasis role="italic">Base64</emphasis> encoded
-                  <emphasis role="italic">octet-stream</emphasis>
-</para>
+                <para xml:id="para_1b61eec1-3422-47ed-8920-eff19351971e">Base64 encoded octet-stream</para>
               </td>
             </tr>
             <tr valign="top">
@@ -12989,12 +13122,10 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_5b0d282b-0079-4fc9-aff5-20df2ddf63a4">UR</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_736f7647-c56d-4448-977f-570cf12093c4">URI</para>
+                <para xml:id="para_736f7647-c56d-4448-977f-570cf12093c4">Universal Resource Identifier or Universal Resource Locator (URI/URL)</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_b8fb7540-b32a-4805-8e31-1dced66b7014">
-<emphasis role="italic">String</emphasis>
-</para>
+                <para xml:id="para_b8fb7540-b32a-4805-8e31-1dced66b7014">String</para>
               </td>
             </tr>
             <tr valign="top">
@@ -13005,9 +13136,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_2c6b38f1-1cfb-41b7-bfbb-6717ce9e1d31">Unsigned Short</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_a71a3ab4-1052-4355-a2e3-e76ae04f0be9">
-                  <emphasis role="italic">Number</emphasis>
-                </para>
+                <para xml:id="para_a71a3ab4-1052-4355-a2e3-e76ae04f0be9">Number</para>
               </td>
             </tr>
             <tr valign="top">
@@ -13018,9 +13147,7 @@ This is the binary JPEG payload for the second image.
                 <para xml:id="para_160f7488-f713-4e53-88a3-4293dc390b2d">Unlimited Text</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_0e05f5fd-7267-4a3f-ac2f-1a0e146d492c">
-                  <emphasis role="italic">String</emphasis>
-                </para>
+                <para xml:id="para_0e05f5fd-7267-4a3f-ac2f-1a0e146d492c">String</para>
               </td>
             </tr>
           </tbody>

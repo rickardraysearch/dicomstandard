@@ -2,8 +2,8 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="242px" viewBox="0 0 502 242" enable-background="new 0 0 502 242" xml:space="preserve">
-
+	 width="502px" height="248px" viewBox="0 0 502 248" enable-background="new 0 0 502 248" xml:space="preserve">
+        
 <defs>
 	<style type="text/css">
 	text {
@@ -14,142 +14,151 @@
 
 <g>
    <desc>
-	PS3.5 Part 5: Data Structures and Encoding
+	PS 3.5 Part 5: Data Structures and Encoding
    </desc>
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500" height="240"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="246"/>
 	<g>
-		<rect x="72.268" y="31.957" fill="#CCDEF0" stroke="#010101" stroke-miterlimit="1" width="358" height="194"/>
+		
+			<rect x="65.731" y="36.441" fill="#CCDEF0" stroke="#010101" stroke-width="1.0187" stroke-miterlimit="1" width="370" height="194.792"/>
 		<g>
-			<rect x="306.719" y="152.324" fill="#FFFFFF" width="104.781" height="13.03"/>
-			<rect x="306.527" y="139.799" fill="#939598" width="104.973" height="13.03"/>
-			<rect x="306.527" y="165.858" fill="#FFFFFF" width="104.973" height="13.031"/>
-			<rect x="306.719" y="86.769" fill="#E6E7E8" width="104.975" height="13.03"/>
-			<rect x="306.719" y="73.739" fill="#FFFFFF" width="104.781" height="13.03"/>
-			<rect x="306.719" y="112.829" fill="#BCBEC0" width="104.975" height="13.029"/>
-			<rect x="306.719" y="99.799" fill="#D1D3D4" width="104.781" height="13.03"/>
-			<rect x="306.719" y="125.858" fill="#A7A9AC" width="104.781" height="13.031"/>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 84.4385)" font-size="10">Pixel 1</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 84.4385)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 84.4385)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 97.3496)" font-size="10">Pixel 2</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 97.3496)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 97.3496)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 110.4312)" font-size="10">Pixel 3</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 110.4312)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 110.4312)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 123.2197)" font-size="10">Pixel 4</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 123.2197)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 123.2197)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 136.4912)" font-size="10">Pixel 5</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 136.4912)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 136.4912)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 347.1826 149.7646)" font-size="10">Pixel 6</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 311.0762 149.7646)" font-size="10">MSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 391.6562 149.7646)" font-size="10">LSb</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 358.4453 161.8066)" font-size="10">...</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 358.4453 175.0771)" font-size="10">...</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 278.6055 84.1865)" fill="#ED1C24" font-size="9">byte 0</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 278.6055 110.729)" fill="#ED1C24" font-size="9">byte 2</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 277.9727 97.0977)" fill="#ED1C24" font-size="9">byte 1</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 278.6055 136.7891)" fill="#ED1C24" font-size="9">byte 4</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 277.9727 123.5176)" fill="#ED1C24" font-size="9">byte 3</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 277.9727 150.0625)" fill="#ED1C24" font-size="9">byte 5</text>
-			</g>
-			<rect x="306.719" y="73.739" fill="none" stroke="#010101" stroke-miterlimit="1" width="104.781" height="104.782"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="165.423" x2="411.5" y2="165.423"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="152.325" x2="411.5" y2="152.325"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="139.228" x2="411.5" y2="139.228"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="126.13" x2="411.5" y2="126.13"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="113.032" x2="411.5" y2="113.032"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="99.934" x2="411.5" y2="99.934"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="306.719" y1="86.836" x2="411.5" y2="86.836"/>
+			<text transform="matrix(1 0 0 1 65.7314 27.4854)" font-size="12">8 Bit Pixel Data Byte Stream (VR = OW; 8 bits allocated, high bit of 7)</text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 199.9639 202.9824)"><tspan x="0" y="0" font-size="10">MSb = Most Significant Bit</tspan><tspan x="0" y="12" font-size="10">LSb = Least Significant Bit</tspan></text>
+			<text transform="matrix(1 0 0 1 203.9248 206.3418)"><tspan x="0" y="0" font-size="8">MSb = Most Significant Bit</tspan><tspan x="0" y="9.6" font-size="8">LSb = Least Significant Bit</tspan></text>
 		</g>
 		<g>
-			<text transform="matrix(0.8815 0 0 1 71.7329 24.9082)" font-size="10">8 Bit Pixel Data Byte Stream (8 bits allocated, high bit of 7)</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 302.5156 48.1929)" font-size="10">Little Endian Transfer Syntax</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 389.5977 69.3716)" font-size="10">1</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 402.627 69.3716)" font-size="10">0</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 376.957 69.3716)" font-size="10">2</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 363.7539 69.3716)" font-size="10">3</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 350.5469 69.3716)" font-size="10">4</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 337.3457 69.3716)" font-size="10">5</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 310.877 69.3716)" font-size="10">7</text>
-		</g>
-		<g>
-			<text transform="matrix(0.8815 0 0 1 323.998 69.3716)" font-size="10">6</text>
+			<rect x="207.538" y="162.506" fill="#FFFFFF" width="104.781" height="13.085"/>
+			<rect x="207.347" y="149.93" fill="#939598" width="104.973" height="13.084"/>
+			<rect x="207.347" y="176.097" fill="#FFFFFF" width="104.973" height="13.084"/>
+			<rect x="207.538" y="96.683" fill="#E6E7E8" width="104.975" height="13.083"/>
+			<rect x="207.538" y="83.6" fill="#FFFFFF" width="104.781" height="13.083"/>
+			<rect x="207.538" y="122.849" fill="#BCBEC0" width="104.975" height="13.084"/>
+			<rect x="207.538" y="109.766" fill="#D1D3D4" width="104.781" height="13.083"/>
+			<rect x="207.538" y="135.934" fill="#A7A9AC" width="104.781" height="13.084"/>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 92.937)" font-size="10">Pixel 1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 92.3774)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 92.3774)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 106.02)" font-size="10">Pixel 2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 105.4609)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 105.4609)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 119.1035)" font-size="10">Pixel 3</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 118.5439)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 118.5439)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 132.1875)" font-size="10">Pixel 4</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 131.627)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 131.627)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 145.2695)" font-size="10">Pixel 5</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 144.7109)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 144.7109)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 246.2227 159.2656)" font-size="10">Pixel 6</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 210.2842 158.707)" font-size="8">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.6465 158.707)" font-size="8">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 258.7695 171.8418)" font-size="10">...</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 258.7695 185.4336)" font-size="10">...</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.9717 92.6567)" fill="#ED1C24" font-size="9">byte 0</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.9717 118.8232)" fill="#ED1C24" font-size="9">byte 2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.3379 105.7402)" fill="#ED1C24" font-size="9">byte 1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.9717 144.9902)" fill="#ED1C24" font-size="9">byte 4</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.3379 131.9062)" fill="#ED1C24" font-size="9">byte 3</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 177.3379 158.9863)" fill="#ED1C24" font-size="9">byte 5</text>
+			</g>
+			
+				<rect x="207.538" y="83.6" fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" width="104.781" height="105.211"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="175.659" x2="312.319" y2="175.659"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="162.508" x2="312.319" y2="162.508"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="149.357" x2="312.319" y2="149.357"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="136.206" x2="312.319" y2="136.206"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="123.053" x2="312.319" y2="123.053"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="109.902" x2="312.319" y2="109.902"/>
+			
+				<line fill="none" stroke="#010101" stroke-width="1.002" stroke-miterlimit="1" x1="207.538" y1="96.75" x2="312.319" y2="96.75"/>
+			<g>
+				<text transform="matrix(1 0 0 1 195.7275 57.9463)" font-size="10">Little Endian Transfer Syntax</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 290.3623 79.2109)" font-size="9">1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 303.3936 79.2109)" font-size="9">0</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 277.7236 79.2109)" font-size="9">2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 264.5186 79.2109)" font-size="9">3</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 251.3135 79.2109)" font-size="9">4</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 238.1104 79.2109)" font-size="9">5</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 211.6436 79.2109)" font-size="9">7</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 224.7627 79.2109)" font-size="9">6</text>
+			</g>
 		</g>
 	</g>
 </g>

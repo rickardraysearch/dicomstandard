@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2016c - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2016d - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2643,6 +2643,28 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b5e19b35-f6d9-4d46-85e5-1970fc766e98">1.2.840.10008.5.1.4.1.1.200.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a638ce9f-7753-426d-85d2-06bec6fe728d">CT Defined Procedure Protocol Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4116615f-70ed-4a9f-8950-c42fd53dbcb2">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_7c02a9cb-3650-4fb6-9b3f-57450ad76fca">1.2.840.10008.5.1.4.1.1.200.2</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e6d0babb-827b-4e38-a97e-55b513824ef5">CT Performed Procedure Protocol Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3cc2e65f-68aa-416c-ae1c-5057a6cd49e1">Transfer</para>
+            </td>
+          </tr>     
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_64eca0dd-e400-43c0-b56e-2d531ee29c50">1.2.840.10008.5.1.4.1.1.481.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2815,6 +2837,39 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_07305381-bfb7-44fb-a65c-a424c8439462">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f5d7a386-1403-4166-989d-cd2c0067692f">1.2.840.10008.5.1.4.20.1</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2b3e8c49-10ad-4dc1-9c3a-fbc457a26641">Defined Procedure Protocol Information Model - FIND</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_08705b18-b611-4064-975a-bf70aa0cf54c">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_fa558e3d-3dc8-439b-b487-796c4a1bbf9a">1.2.840.10008.5.1.4.20.2</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4156c7f9-1780-4a97-99cb-97a06a704e6d">Defined Procedure Protocol Information Model - MOVE</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f0123603-bb76-423d-9fc9-1f6e0723acbf">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e58f5fd5-40f6-4b2a-bc4b-e250a46f3eef">1.2.840.10008.5.1.4.20.3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2f2fe0f8-59ed-408e-8a2e-8979bdc239d8">Defined Procedure Protocol Information Model - GET</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_db32d926-51ff-4cd4-8cc7-7c115ab6fc1c">Query/Retrieve</para>
             </td>
           </tr>
           <tr valign="top">
@@ -7328,7 +7383,9 @@
                   <tbody>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_75b43001-101c-4615-9439-9a79dbe19a8e">Scheduled Procedure Step</para>
+                        <para xml:id="para_75b43001-101c-4615-9439-9a79dbe19a8e">
+<emphasis role="bold">Scheduled Procedure Step</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7338,7 +7395,9 @@
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_e1380f4a-5515-4c37-ac04-a19bad7e1fab">(0040,0100)</para>
                       </td>
-                      <td align="center" colspan="1" rowspan="1"/>
+                      <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_a4412783-7847-48ed-8b72-460d2e4a4778">SQ</para>
+                      </td>
                       <td align="center" colspan="1" rowspan="1"/>
                       <td align="center" colspan="1" rowspan="1"/>
                       <td align="center" colspan="1" rowspan="1"/>
@@ -7347,7 +7406,7 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_2a943b3b-0116-40b3-98a0-3a8d9406d3a4">&gt;Scheduled Station AET</para>
+                        <para xml:id="para_2a943b3b-0116-40b3-98a0-3a8d9406d3a4">&gt;Scheduled Station AE Title</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_0d3d22a0-e26a-4669-935c-32a8ceb90b3a">(0040,0001)</para>
@@ -7591,7 +7650,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_5533fc8a-4feb-4670-95d3-2706ad9ec760">Requested Procedure</para>
+                        <para xml:id="para_5533fc8a-4feb-4670-95d3-2706ad9ec760">
+<emphasis role="bold">Requested Procedure</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7738,7 +7799,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_d210f179-5700-4ae8-bb1d-c30cef564964">Imaging Service Request</para>
+                        <para xml:id="para_d210f179-5700-4ae8-bb1d-c30cef564964">
+<emphasis role="bold">Imaging Service Request</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7813,7 +7876,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_bb9b5874-b7e9-4c47-9cca-13fbea031742">Visit Identification</para>
+                        <para xml:id="para_bb9b5874-b7e9-4c47-9cca-13fbea031742">
+<emphasis role="bold">Visit Identification</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7836,7 +7901,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_6c8bd790-5964-43d5-9368-b6dcc28b9013">Visit Status</para>
+                        <para xml:id="para_6c8bd790-5964-43d5-9368-b6dcc28b9013">
+<emphasis role="bold">Visit Status</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7861,7 +7928,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_05a595a9-754a-4f73-8533-d0305783f7cf">Visit Admission</para>
+                        <para xml:id="para_05a595a9-754a-4f73-8533-d0305783f7cf">
+<emphasis role="bold">Visit Admission</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -7886,12 +7955,14 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_da24bd91-95bf-4076-9cff-37c2daa8caf0">Patient Identification</para>
+                        <para xml:id="para_da24bd91-95bf-4076-9cff-37c2daa8caf0">
+<emphasis role="bold">Patient Identification</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4a33b51d-1599-4e22-8951-67355f0dfe61">Patient Name</para>
+                        <para xml:id="para_4a33b51d-1599-4e22-8951-67355f0dfe61">Patient's Name</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_6d37f6e4-6701-45fa-bd12-43980a675a6b">(0010,0010)</para>
@@ -7939,7 +8010,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_4d065123-a0e6-400c-b880-68d3d3113449">Patient Demographic</para>
+                        <para xml:id="para_4d065123-a0e6-400c-b880-68d3d3113449">
+<emphasis role="bold">Patient Demographic</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
@@ -8014,7 +8087,7 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c6f1d33a-b1fd-46c4-8d06-e1258b15198f">Confidentiality constraint on patient data</para>
+                        <para xml:id="para_c6f1d33a-b1fd-46c4-8d06-e1258b15198f">Confidentiality Constraint on Patient Data Description</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_5278719c-caae-413e-8c67-c5e35aceee52">(0040,3001)</para>
@@ -8034,7 +8107,9 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="8" rowspan="1">
-                        <para xml:id="para_9def0a5b-f40a-462a-8f0d-4a56d2204a7f">Patient Medical</para>
+                        <para xml:id="para_9def0a5b-f40a-462a-8f0d-4a56d2204a7f">
+<emphasis role="bold">Patient Medical</emphasis>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">

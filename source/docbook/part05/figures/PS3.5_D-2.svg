@@ -2,8 +2,8 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="427px" viewBox="0 0 502 427" enable-background="new 0 0 502 427" xml:space="preserve">
-
+	 width="502px" height="412px" viewBox="0 0 502 412" enable-background="new 0 0 502 412" xml:space="preserve">
+        
 <defs>
 	<style type="text/css">
 	text {
@@ -14,185 +14,172 @@
 
 <g>
    <desc>
-	PS3.5 Part 5: Data Structures and Encoding
+	PS 3.5 Part 5: Data Structures and Encoding
    </desc>
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500" height="425"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="410"/>
 	<g>
+		
+			<polygon fill="#FFFFFF" stroke="#4F8ABE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" points="
+			220.179,221.373 220.179,190.92 250.253,190.92 250.253,166.417 283.179,206.907 250.253,247.416 250.253,221.373 		"/>
 		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 313.0098 25.2588)"><tspan x="0" y="0" font-size="11">Concatenated Pixel Cells</tspan><tspan x="0" y="13.2" font-size="11">After Splitting Into 16 bit Words</tspan><tspan x="0" y="26.4" font-size="11">for Transfer</tspan></text>
+				<text transform="matrix(1 0 0 1 57.7183 24.6396)" font-size="12">Concatenated Pixel Cells</text>
+			</g>
+			<rect x="59.839" y="66.353" fill="#CCDEF0" stroke="#000000" width="126.004" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 95.896 79.7012)" font-size="11">Pixel Cell i-1</text>
 			</g>
 			<g>
-				<rect x="295.375" y="156.969" fill="#86B2D8" stroke="#000000" width="84.896" height="36"/>
-				<rect x="380.271" y="156.969" fill="#B2CEE7" stroke="#000000" width="83.178" height="36"/>
-				<rect x="421.478" y="246.969" fill="#86B2D8" stroke="#000000" width="42.822" height="36"/>
-				<rect x="295.375" y="66.969" fill="#B2CEE7" stroke="#000000" width="42.822" height="36"/>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 401.5049 170.3203)" font-size="11">Pixel Cell i</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 312.1709 170.3203)" font-size="11">Pixel Cell i+1</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 424.3242 279.9873)" font-size="11">MSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 383.3242 189.3203)" font-size="11">MSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 315.459 99.3203)" font-size="11">LSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 360.125 189.3203)" font-size="11">LSb</text>
-				</g>
-				<rect x="295.394" y="246.969" fill="#6799C8" stroke="#000000" width="126" height="36"/>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 331.4512 260.3203)" font-size="11">Pixel Cell i+2</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 299.9375 279.3203)" font-size="11">MSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 397.7383 279.3203)" font-size="11">LSb</text>
-				</g>
-				<rect x="337.448" y="66.969" fill="#CCDEF0" stroke="#000000" width="126" height="36"/>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 373.5049 80.3203)" font-size="11">Pixel Cell i-1</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 341.9922 99.3203)" font-size="11">MSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 439.791 99.3203)" font-size="11">LSb</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 295.3945 293.9619)" font-size="11">15</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 458.9062 293.9619)" font-size="11">1</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 295.3945 203.3018)" font-size="11">15</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 458.9062 203.3018)" font-size="11">1</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 295.3945 113.7222)" font-size="11">15</text>
-				</g>
-				<g>
-					<text transform="matrix(0.8815 0 0 1 458.9062 113.7222)" font-size="11">1</text>
-				</g>
+				<text transform="matrix(1 0 0 1 64.3828 98.7012)" font-size="9">MSb</text>
 			</g>
-		</g>
-		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 69.0308 25.2588)" font-size="11">Concatenated Pixel Cells</text>
+				<text transform="matrix(1 0 0 1 165.855 98.7012)" font-size="9">LSb</text>
+			</g>
+			<rect x="59.839" y="156.353" fill="#B2CEE7" stroke="#000000" width="126.004" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 95.896 169.7012)" font-size="11">Pixel Cell i</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 64.3828 188.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 165.855 188.7012)" font-size="9">LSb</text>
+			</g>
+			<rect x="59.839" y="246.354" fill="#86B2D8" stroke="#000000" width="126.004" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 95.896 259.7012)" font-size="11">Pixel Cell i+1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 64.3828 278.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 165.855 278.7012)" font-size="9">LSb</text>
+			</g>
+			<rect x="59.839" y="336.354" fill="#6799C8" stroke="#000000" width="126.004" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 95.896 349.7012)" font-size="11">Pixel Cell i+2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 64.3828 368.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 165.855 368.7012)" font-size="9">LSb</text>
 			</g>
 			<g>
 				<g>
-					<rect x="60.201" y="66.969" fill="#CCDEF0" stroke="#000000" width="126.004" height="36"/>
+					<path fill="none" stroke="#000000" d="M164.956,43.746c25.909,5.412,43.389,10.769,43.389,22.524
+						c0,4.883-5.943,10.97-12.654,15.759"/>
 					<g>
-						<text transform="matrix(0.8815 0 0 1 96.2583 80.3203)" font-size="11">Pixel Cell i-1</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 64.7451 99.3203)" font-size="11">MSb</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 162.5454 99.3203)" font-size="11">LSb</text>
+						<polygon points="195.737,79.188 189.715,85.847 198.26,83.092 						"/>
 					</g>
 				</g>
+			</g>
+			<g>
 				<g>
-					<rect x="60.201" y="156.969" fill="#B2CEE7" stroke="#000000" width="126.004" height="36"/>
+					<path fill="none" stroke="#000000" d="M59.838,77.091c-13.971,5.607-22.499,13.085-22.499,21.297
+						c0,17.397,38.279,31.502,85.5,31.502v-0.008c47.222,0,85.506,9.208,85.506,26.605c0,4.883-5.943,10.97-12.654,15.759"/>
 					<g>
-						<text transform="matrix(0.8815 0 0 1 96.2583 170.3203)" font-size="11">Pixel Cell i</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 64.7451 189.3203)" font-size="11">MSb</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 162.5454 189.3203)" font-size="11">LSb</text>
+						<polygon points="195.737,169.405 189.715,176.065 198.26,173.31 						"/>
 					</g>
 				</g>
+			</g>
+			<g>
 				<g>
-					<rect x="60.201" y="246.969" fill="#86B2D8" stroke="#000000" width="126.004" height="36"/>
+					<path fill="none" stroke="#000000" d="M59.838,167.309c-13.971,5.607-22.499,13.085-22.499,21.297
+						c0,17.397,38.279,31.501,85.5,31.501V220.1c47.222,0,85.506,9.211,85.506,26.607c0,4.883-5.942,10.97-12.654,15.759"/>
 					<g>
-						<text transform="matrix(0.8815 0 0 1 96.2583 260.3203)" font-size="11">Pixel Cell i+1</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 64.7451 279.3203)" font-size="11">MSb</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 162.5454 279.3203)" font-size="11">LSb</text>
+						<polygon points="195.737,259.624 189.715,266.283 198.26,263.528 						"/>
 					</g>
 				</g>
+			</g>
+			<g>
 				<g>
-					<rect x="60.201" y="336.969" fill="#6799C8" stroke="#000000" width="126.004" height="36"/>
+					<path fill="none" stroke="#000000" d="M59.838,257.527c-13.971,5.607-22.499,13.084-22.499,21.297
+						c0,17.396,38.279,31.502,85.5,31.502v-0.008c47.222,0,85.506,9.209,85.506,26.607c0,4.884-5.943,10.969-12.654,15.758"/>
 					<g>
-						<text transform="matrix(0.8815 0 0 1 96.2583 350.3203)" font-size="11">Pixel Cell i+2</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 64.7451 369.3203)" font-size="11">MSb</text>
-					</g>
-					<g>
-						<text transform="matrix(0.8815 0 0 1 162.5454 369.3203)" font-size="11">LSb</text>
+						<polygon points="195.737,349.842 189.715,356.502 198.26,353.746 						"/>
 					</g>
 				</g>
+			</g>
+			<g>
 				<g>
+					<path fill="none" stroke="#000000" d="M59.838,347.744c-13.971,5.607-22.499,13.086-22.499,21.297
+						c0,11.192,15.841,21.021,39.714,26.609"/>
 					<g>
-						<path fill="none" stroke="#000000" d="M165.318,44.361c25.909,5.412,43.389,15.665,43.389,27.421
-							c0,6.316-5.046,12.198-13.733,17.129"/>
-						<path d="M195.506,88.609l2.211,1.231l-0.04,0.078l-3.757,0.522c-1.202,0.372-2.403,0.743-3.605,1.114
-							c0.936-0.842,1.87-1.683,2.805-2.524l2.374-2.957l0.083-0.005L195.506,88.609z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path fill="none" stroke="#000000" d="M60.2,77.707c-13.971,5.607-22.499,13.085-22.499,21.297
-							c0,17.397,38.279,31.502,85.5,31.502v-0.008c47.222,0,85.506,14.104,85.506,31.502c0,6.316-5.046,12.198-13.733,17.129"/>
-						<path d="M195.506,178.827l2.211,1.231l-0.04,0.078l-3.757,0.522c-1.202,0.372-2.403,0.743-3.605,1.114
-							c0.936-0.842,1.87-1.683,2.805-2.524l2.374-2.957l0.083-0.005L195.506,178.827z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path fill="none" stroke="#000000" d="M60.2,167.925c-13.971,5.607-22.499,13.085-22.499,21.297
-							c0,17.397,38.279,31.502,85.5,31.502v-0.008c47.222,0,85.506,14.104,85.506,31.502c0,6.316-5.046,12.198-13.733,17.129"/>
-						<path d="M195.506,269.045l2.211,1.231l-0.04,0.078l-3.757,0.522c-1.202,0.372-2.403,0.743-3.605,1.114
-							c0.936-0.842,1.87-1.683,2.805-2.524l2.374-2.957l0.083-0.005L195.506,269.045z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path fill="none" stroke="#000000" d="M60.2,258.143c-13.971,5.607-22.499,13.085-22.499,21.297
-							c0,17.397,38.279,31.502,85.5,31.502v-0.008c47.222,0,85.506,14.104,85.506,31.502c0,6.316-5.046,12.198-13.733,17.129"/>
-						<path d="M195.506,359.263l2.211,1.231l-0.04,0.078l-3.757,0.522c-1.202,0.372-2.403,0.743-3.605,1.114
-							c0.936-0.842,1.87-1.683,2.805-2.524l2.374-2.957l0.083-0.005L195.506,359.263z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<g>
-							<path fill="none" stroke="#000000" d="M60.2,348.36c-13.971,5.607-22.499,13.085-22.499,21.297
-								c0,12.244,18.959,22.856,46.651,28.07"/>
-							<path d="M83.751,397.614l-0.892-2.367l0.081-0.035l3.205,2.028c1.157,0.493,2.314,0.985,3.472,1.479
-								c-1.258,0.038-2.515,0.076-3.771,0.115l-3.724,0.724l-0.065-0.05L83.751,397.614z"/>
-						</g>
+						<polygon points="75.021,397.509 83.99,397.111 76.023,392.97 						"/>
 					</g>
 				</g>
 			</g>
 		</g>
 		<g>
-			
-				<polygon fill="#FFFFFF" stroke="#4F8ABE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" points="
-				220.541,221.989 220.541,191.536 250.615,191.536 250.615,167.032 283.541,207.523 250.615,248.032 250.615,221.989 			"/>
-		</g>
-		<g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 348.1445 394.668)"><tspan x="0" y="0" font-size="11">MSb = Most Significant Bit</tspan><tspan x="0" y="13.199" font-size="11">LSb = Least Significant Bit</tspan></text>
+				<text transform="matrix(1 0 0 1 296.6855 24.6396)"><tspan x="0" y="0" font-size="12">Concatenated Pixel Cells</tspan><tspan x="0" y="14.4" font-size="12">After Splitting Into 16 bit Words</tspan><tspan x="0" y="28.8" font-size="12">for Transfer</tspan></text>
+			</g>
+			<rect x="295.031" y="156.353" fill="#86B2D8" stroke="#000000" stroke-width="1.0006" width="85" height="36"/>
+			<rect x="379.938" y="156.353" fill="#B2CEE7" stroke="#000000" stroke-width="1.0049" width="84" height="36"/>
+			<rect x="421.115" y="246.354" fill="#86B2D8" stroke="#000000" width="42.822" height="36"/>
+			<rect x="295.031" y="66.353" fill="#B2CEE7" stroke="#000000" width="42.822" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 401.1426 169.7012)" font-size="11">Pixel Cell i</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 311.8086 169.7012)" font-size="11">Pixel Cell i+1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 424.8193 278.7002)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 383.8193 188.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 318.7676 98.7012)" font-size="9">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 360.6191 188.7012)" font-size="9">LSb</text>
+			</g>
+			<rect x="295.031" y="246.354" fill="#6799C8" stroke="#000000" width="126" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 331.0879 259.7012)" font-size="11">Pixel Cell i+2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 299.0859 278.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 401.0469 278.7012)" font-size="9">LSb</text>
+			</g>
+			<rect x="337.938" y="66.353" fill="#CCDEF0" stroke="#000000" width="126" height="36"/>
+			<g>
+				<text transform="matrix(1 0 0 1 373.1426 79.7012)" font-size="11">Pixel Cell i-1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 342.4863 98.7012)" font-size="9">MSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 443.1016 98.7012)" font-size="9">LSb</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.0312 293.3428)" font-size="11">15</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 458.5449 293.3428)" font-size="11">1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.0312 202.6826)" font-size="11">15</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 458.5449 202.6826)" font-size="11">1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 295.0312 113.103)" font-size="11">15</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 458.5449 113.103)" font-size="11">1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 370.3242 360.0742)"><tspan x="0" y="0" font-size="8">MSb = Most Significant Bit</tspan><tspan x="0" y="9.6" font-size="8">LSb = Least Significant Bit</tspan></text>
 			</g>
 		</g>
 	</g>

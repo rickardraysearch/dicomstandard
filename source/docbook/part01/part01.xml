@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2016c - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2016d - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1249,17 +1249,17 @@
         </listitem>
         <listitem>
           <para xml:id="para_0da85449-f995-46bf-8f21-05e694a2fce2">
-            <quote>… conformant to the DICOM &lt;name&gt; Web Service [as &lt;an Origin-server | a User-agent&gt;], as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
+            <quote>… conformant to the DICOM &lt;name&gt; Web Service [as &lt;an Origin-server | a User-agent&gt;] [for the &lt;name&gt; SOP Class], as specified in DICOM <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>: Web Services.</quote>
           </para>
         </listitem>
         <listitem>
           <para xml:id="para_4eba59c8-396b-4d33-ac89-e1b0e07543eb">
-            <quote>… conformant to DICOM Application Hosting [as a &lt;Hosting System | Hosted Application&gt;], as specified in DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>: Application Hosting.</quote>
+            <quote>… conformant to DICOM Application Hosting [as a &lt;Hosting System | Hosted Application&gt;] for the &lt;name&gt; SOP Class, as specified in DICOM <olink targetdoc="PS3.19" targetptr="PS3.19" xrefstyle="select: labelnumber"/>: Application Hosting.</quote>
           </para>
         </listitem>
         <listitem>
           <para xml:id="para_5ed5702a-47bb-4ed7-a952-85d0a757bef1">
-            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile [as a File Set &lt;Creator | Updater | Reader&gt;] [&lt;name&gt; SOP Class], as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>: Media Storage Application Profiles.</quote>
+            <quote>… conformant to the DICOM &lt;identifier&gt; Application Profile [as a File Set &lt;Creator | Updater | Reader&gt;] [for the &lt;name&gt; SOP Class], as specified in DICOM <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/>: Media Storage Application Profiles.</quote>
           </para>
         </listitem>
         <listitem>
@@ -1276,6 +1276,7 @@
             while others may require explicit specification of SOP Classes in the references.</para>
         </listitem>
         <listitem>
+          <para xml:id="para_f73fd703-de73-428f-ab0f-a66e1624a132">Examples:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_60d781e7-4e16-4994-97c9-c3510467f774">

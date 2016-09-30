@@ -3,13 +3,13 @@
 lbdir="$1"
 dftdir="$2"
 
-for dftfilepath in ${dftdir}/cp*.xml
+for dftfilepath in ${dftdir}/cp*dft*.xml
 do
 	if [ -z `echo "${dftfilepath}" | grep "_changes"` ]
 	then
 		dftfile=`basename "${dftfilepath}"`
 		lbfile=`echo "${dftfile}" | sed -e 's/_dft[0-9]*_/_lb_/'`
-		#echo "Comparing ${lbfile} with ${dftfile}"
+		echo "Comparing ${lbfile} with ${dftfile}"
 		lbfilepath="${lbdir}/${lbfile}"
 		if [ -f "${lbfilepath}" ]
 		then

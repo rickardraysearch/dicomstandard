@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.11" version="5.0" xml:id="PS3.11">
   <title>PS3.11</title>
-  <subtitle>DICOM PS3.11 2016c - Media Storage Application Profiles</subtitle>
+  <subtitle>DICOM PS3.11 2016d - Media Storage Application Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2236,10 +2236,12 @@
                   <para xml:id="para_ab5533f2-1ca6-4a80-8f74-84f5fe06ef38">MONOCHROME2</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_cb7cd602-5ee1-465a-bda0-7f1d073e90e6">Uncompressed RLE Lossless Image Compression</para>
+                  <para xml:id="para_cb7cd602-5ee1-465a-bda0-7f1d073e90e6">Uncompressed RLE</para>
+<para xml:id="para_f8e87ae4-75f1-45c4-9e0b-5b699272ab25">Lossless Image Compression</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_54e9a5fe-f87e-41f6-a533-a84f31b9959f">1.2.840.10008.1.2.11.2.840.10008.1.2.5</para>
+                  <para xml:id="para_54e9a5fe-f87e-41f6-a533-a84f31b9959f">1.2.840.10008.1.2.1</para>
+<para xml:id="para_b0c77b38-ab38-4cd1-b74f-5ca5b622bf3e">1.2.840.10008.1.2.5</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -2247,10 +2249,12 @@
                   <para xml:id="para_df20ab76-869c-49f9-9cbe-f005f3661bdc">RGB</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_7869ca6e-aa21-4a0b-8b82-0b02d26109bc">Uncompressed RLE Lossless Image Compression</para>
+                  <para xml:id="para_7869ca6e-aa21-4a0b-8b82-0b02d26109bc">Uncompressed</para>
+<para xml:id="para_1ffe6de5-d7cb-4463-8448-b71c2f6458d3">RLE Lossless Image Compression</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_5558ab0c-5813-42ef-a866-e2a7751174bb">1.2.840.10008.1.2.11.2.840.10008.1.2.5</para>
+                  <para xml:id="para_5558ab0c-5813-42ef-a866-e2a7751174bb">1.2.840.10008.1.2.1</para>
+<para xml:id="para_17a281c2-2552-44d4-ba5e-b8dcc401df7b">1.2.840.10008.1.2.5</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -2258,10 +2262,12 @@
                   <para xml:id="para_0f5f5f2d-378a-4f1b-8d84-397dc66fe779">PALETTE COLOR</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_ee5c3414-0cac-4a59-b368-16d1a07edb68">Uncompressed RLE Lossless Image Compression</para>
+                  <para xml:id="para_ee5c3414-0cac-4a59-b368-16d1a07edb68">Uncompressed</para>
+<para xml:id="para_87109394-4f34-4a1a-9f73-81a7fa5462af">RLE Lossless Image Compression</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_f9d3564e-03d0-4ab4-bc13-43ac32890918">1.2.840.10008.1.2.11.2.840.10008.1.2.5</para>
+                  <para xml:id="para_f9d3564e-03d0-4ab4-bc13-43ac32890918">1.2.840.10008.1.2.1</para>
+<para xml:id="para_f44352b4-fb90-4859-a700-2276df45d809">1.2.840.10008.1.2.5</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -2280,10 +2286,12 @@
                   <para xml:id="para_9ddd6911-e5ab-4954-9eed-51e2b3fb8fc4">YBR_FULL_422</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_9f3703cc-e159-49e6-9897-657b1d1a22a3">Uncompressed JPEG Lossy</para>
+                  <para xml:id="para_9f3703cc-e159-49e6-9897-657b1d1a22a3">Uncompressed</para>
+<para xml:id="para_c6d0c3e0-fb1b-4d90-bb11-3aed6795aa2b">JPEG Lossy</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_a87b5c44-8d0f-4cc2-b731-426c05bc5bdc">1.2.840.10008.1.2.11.2.840.10008.1.2.4.50</para>
+                  <para xml:id="para_a87b5c44-8d0f-4cc2-b731-426c05bc5bdc">1.2.840.10008.1.2.1</para>
+<para xml:id="para_af9c3eb3-8747-4711-9b3b-764f7ed00019">1.2.840.10008.1.2.4.50</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -2291,10 +2299,12 @@
                   <para xml:id="para_8d458109-b4af-4527-8643-9676d45f4d95">YBR_PARTIAL_422</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d21ae9d7-3b04-4e9f-b1a5-9381b18ce91b">Uncompressed JPEG Lossy</para>
+                  <para xml:id="para_d21ae9d7-3b04-4e9f-b1a5-9381b18ce91b">Uncompressed</para>
+<para xml:id="para_e947205f-66a2-4d7d-9e97-abe06b6573d3">JPEG Lossy</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_71cb8ba4-eaae-4eda-a2e1-2e26ced8d097">1.2.840.10008.1.2.11.2.840.10008.1.2.4.50</para>
+                  <para xml:id="para_71cb8ba4-eaae-4eda-a2e1-2e26ced8d097">1.2.840.10008.1.2.1</para>
+<para xml:id="para_45d2bcac-dda1-4a67-a4f8-89cc82b936a6">1.2.840.10008.1.2.4.50</para>
                 </td>
               </tr>
             </tbody>

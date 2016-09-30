@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2016c - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2016d - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -821,7 +821,7 @@
               <para xml:id="para_58352c33-ead1-4309-a7d6-904b0e2b6ac2">1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_864b9c42-a030-4f0f-bcde-f128bce4aafc">Four bytes containing the character string "DICM". This Prefix is intended to be used to recognize that this File is or not a DICOM File.</para>
+              <para xml:id="para_864b9c42-a030-4f0f-bcde-f128bce4aafc">Four bytes containing the character string "DICM". This Prefix is intended to be used to recognize that this File is or is not a DICOM File.</para>
             </td>
           </tr>
           <tr valign="top">

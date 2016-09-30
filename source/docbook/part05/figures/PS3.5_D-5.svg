@@ -2,8 +2,8 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="487px" viewBox="0 0 502 487" enable-background="new 0 0 502 487" xml:space="preserve">
-
+	 width="502px" height="247px" viewBox="0 0 502 247" enable-background="new 0 0 502 247" xml:space="preserve">
+        
 <defs>
 	<style type="text/css">
 	text {
@@ -14,236 +14,238 @@
 
 <g>
    <desc>
-	PS3.5 Part 5: Data Structures and Encoding
+	PS 3.5 Part 5: Data Structures and Encoding
    </desc>
 </g>
 
 <g>
 	<rect x="1" y="1" fill="#F5EED6" width="500" height="245"/>
 	<g>
+		<path fill="#CCDEF0" stroke="#010101" stroke-width="0.992" stroke-miterlimit="1" d="M11.67,34.581h478.66v195H11.67V34.581z"/>
 		<g>
-			<path fill="#CCDEF0" stroke="#010101" stroke-miterlimit="1" d="M12.152,31.062h478.66v198.16H12.152V31.062z"/>
-			<rect x="75.286" y="154.651" fill="#FFFFFF" width="157.365" height="13.03"/>
-			<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="76.337" x2="22.895" y2="89.367"/>
-			<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="232.638" y1="89.367" x2="232.638" y2="76.337"/>
+			<text transform="matrix(1 0 0 1 11.6699 25.625)" font-size="12">Example: CT Pixel Data Value in Memory</text>
+		</g>
+		<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="232.156" y1="98.522" x2="232.156" y2="85.492"/>
+		<g>
+			<text transform="matrix(1 0 0 1 201.4746 202.083)"><tspan x="0" y="0" font-size="8">MSB = Most Significant Byte</tspan><tspan x="0" y="9.601" font-size="8">LSB = Least Significant Byte</tspan></text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 235.9453 107.6592)" font-size="10">Word 0</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 235.9453 120.9302)" font-size="10">Word 1</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 235.9453 134.2012)" font-size="10">Word 2</text>
+		</g>
+		<g>
+			<rect x="74.803" y="163.805" fill="#FFFFFF" width="157.365" height="13.029"/>
+			<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="85.492" x2="22.413" y2="98.522"/>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 88.4712 49.5542)" font-size="10">Big Endian Machine</text>
+				<text transform="matrix(1 0 0 1 82.7202 58.7056)" font-size="10">Big Endian Machine</text>
+			</g>
+			<rect x="22.413" y="98.655" fill="#86B2D8" width="52.391" height="13.03"/>
+			<rect x="74.803" y="98.655" fill="#FFFFFF" width="157.353" height="13.03"/>
+			<rect x="22.413" y="111.686" fill="#86B2D8" width="52.391" height="13.03"/>
+			<rect x="74.803" y="111.686" fill="#FFFFFF" width="157.365" height="13.03"/>
+			<rect x="22.413" y="124.716" fill="#86B2D8" width="52.391" height="13.028"/>
+			<rect x="74.803" y="124.716" fill="#FFFFFF" width="157.365" height="13.028"/>
+			<rect x="22.413" y="137.744" fill="#86B2D8" width="52.391" height="13.029"/>
+			<rect x="74.803" y="137.744" fill="#FFFFFF" width="157.365" height="13.029"/>
+			<rect x="22.413" y="150.773" fill="#86B2D8" width="52.391" height="13.031"/>
+			<rect x="74.803" y="150.773" fill="#FFFFFF" width="157.365" height="13.031"/>
+			<rect x="22.413" y="163.805" fill="#86B2D8" width="52.391" height="13.029"/>
+			<g>
+				<text transform="matrix(1 0 0 1 147.6914 107.6592)" fill="#ED1C24" font-size="10">byte address 1</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 196.6162 204.3438)"><tspan x="0" y="0" font-size="10">MSB = Most Significant Byte</tspan><tspan x="0" y="12" font-size="10">LSB = Least Significant Byte</tspan></text>
-			</g>
-			<rect x="22.895" y="89.5" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="75.286" y="89.5" fill="#FFFFFF" width="157.353" height="13.03"/>
-			<rect x="22.895" y="102.53" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="75.286" y="102.53" fill="#FFFFFF" width="157.365" height="13.03"/>
-			<rect x="22.895" y="115.561" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="75.286" y="115.561" fill="#FFFFFF" width="157.365" height="13.03"/>
-			<rect x="22.895" y="128.59" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="75.286" y="128.59" fill="#FFFFFF" width="157.365" height="13.03"/>
-			<rect x="22.895" y="141.621" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="75.286" y="141.621" fill="#FFFFFF" width="157.365" height="13.03"/>
-			<rect x="22.895" y="154.651" fill="#86B2D8" width="52.391" height="13.03"/>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 154.9502 98.5078)" fill="#ED1C24" font-size="9">byte address 1</text>
+				<text transform="matrix(1 0 0 1 147.6914 120.9302)" fill="#ED1C24" font-size="10">byte address 3</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 154.9502 111.7788)" fill="#ED1C24" font-size="9">byte address 3</text>
+				<text transform="matrix(1 0 0 1 147.6914 134.2012)" fill="#ED1C24" font-size="10">byte address 5</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 154.9502 125.0503)" fill="#ED1C24" font-size="9">byte address 5</text>
+				<text transform="matrix(1 0 0 1 42.2773 107.6592)" fill="#ED1C24" font-size="10">byte address 0</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 49.5361 98.5078)" fill="#ED1C24" font-size="9">byte address 0</text>
+				<text transform="matrix(1 0 0 1 42.2773 120.9302)" fill="#ED1C24" font-size="10">byte address 2</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 49.5361 111.7788)" fill="#ED1C24" font-size="9">byte address 2</text>
+				<text transform="matrix(1 0 0 1 42.2773 134.2012)" fill="#ED1C24" font-size="10">byte address 4</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 49.5361 125.0503)" fill="#ED1C24" font-size="9">byte address 4</text>
+				<text transform="matrix(1 0 0 1 176.3218 147.3965)" font-size="10">...</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 177.2979 138.2456)" font-size="10">...</text>
+				<text transform="matrix(1 0 0 1 176.3218 160.668)" font-size="10">...</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 177.2979 151.5166)" font-size="10">...</text>
+				<text transform="matrix(1 0 0 1 210.0308 94.2842)" font-size="9">1</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 239.2432 98.5078)" font-size="10">Word 0</text>
+				<text transform="matrix(1 0 0 1 223.061 94.2842)" font-size="9">0</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 239.2432 111.7788)" font-size="10">Word 1</text>
+				<text transform="matrix(1 0 0 1 197.3901 94.2842)" font-size="9">2</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 239.2432 125.0503)" font-size="10">Word 2</text>
+				<text transform="matrix(1 0 0 1 184.187 94.2842)" font-size="9">3</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 210.5649 85.1328)" font-size="10">1</text>
+				<text transform="matrix(1 0 0 1 170.981 94.2842)" font-size="9">4</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 223.5947 85.1328)" font-size="10">0</text>
+				<text transform="matrix(1 0 0 1 157.7788 94.2842)" font-size="9">5</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 197.9243 85.1328)" font-size="10">2</text>
+				<text transform="matrix(1 0 0 1 89.353 94.2842)" fill="#312A35" font-size="9">10</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 184.7212 85.1328)" font-size="10">3</text>
+				<text transform="matrix(1 0 0 1 23.8457 94.2842)" font-size="9">15</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 171.5151 85.1328)" font-size="10">4</text>
+				<text transform="matrix(1 0 0 1 36.9678 94.2842)" font-size="9">14</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 158.313 85.1328)" font-size="10">5</text>
+				<text transform="matrix(1 0 0 1 50.0874 94.2842)" font-size="9">13</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 89.938 85.1328)" fill="#312A35" font-size="10">10</text>
+				<text transform="matrix(1 0 0 1 63.208 94.2842)" font-size="9">12</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 24.4307 85.1328)" font-size="10">15</text>
+				<text transform="matrix(1 0 0 1 76.3276 94.2842)" font-size="9">11</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 37.5527 85.1328)" font-size="10">14</text>
+				<text transform="matrix(1 0 0 1 105.0708 94.2842)" font-size="9">9</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 50.6724 85.1328)" font-size="10">13</text>
+				<text transform="matrix(1 0 0 1 118.1909 94.2842)" font-size="9">8</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 63.793 85.1328)" font-size="10">12</text>
+				<text transform="matrix(1 0 0 1 131.311 94.2842)" font-size="9">7</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 76.9126 85.1328)" font-size="10">11</text>
+				<text transform="matrix(1 0 0 1 144.4321 94.2842)" font-size="9">6</text>
+			</g>
+			<rect x="22.413" y="98.655" fill="none" stroke="#010101" stroke-miterlimit="1" width="209.756" height="78.179"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="163.799" x2="232.168" y2="163.799"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="150.781" x2="232.168" y2="150.781"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="137.744" x2="232.168" y2="137.744"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="124.709" x2="232.168" y2="124.709"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.413" y1="111.691" x2="232.168" y2="111.691"/>
+			<g>
+				<text transform="matrix(1 0 0 1 65.5669 82.8345)" font-size="10">MSB</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 105.605 85.1328)" font-size="10">9</text>
+				<text transform="matrix(1 0 0 1 170.7056 82.8345)" font-size="10">LSB</text>
 			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 118.7251 85.1328)" font-size="10">8</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 131.8452 85.1328)" font-size="10">7</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 144.9658 85.1328)" font-size="10">6</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 11.7554 26.2695)" font-size="10">Example 1: CT Pixel Data Value in Memory</text>
-			</g>
-			<rect x="22.895" y="89.5" fill="none" stroke="#010101" stroke-miterlimit="1" width="209.756" height="78.18"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="154.645" x2="232.651" y2="154.645"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="141.627" x2="232.651" y2="141.627"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="128.59" x2="232.651" y2="128.59"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="115.554" x2="232.651" y2="115.554"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="22.895" y1="102.537" x2="232.651" y2="102.537"/>
 			
-				<line fill="none" stroke="#003468" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="8,4,2,4" x1="127.676" y1="67.256" x2="127.676" y2="175.836"/>
-			<rect x="324.301" y="154.651" fill="#FFFFFF" width="157.363" height="13.03"/>
-			<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="76.337" x2="271.91" y2="89.367"/>
-			<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="481.652" y1="89.367" x2="481.652" y2="76.337"/>
+				<line fill="none" stroke="#003468" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="8,4,2,4" x1="127.193" y1="76.411" x2="127.193" y2="184.99"/>
+		</g>
+		<g>
+			<rect x="323.818" y="163.805" fill="#FFFFFF" width="157.363" height="13.029"/>
+			<line fill="#6799C8" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="85.492" x2="271.428" y2="98.522"/>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 334.543 49.5542)" font-size="10">Little Endian Machine</text>
+				<text transform="matrix(1 0 0 1 328.3965 58.7056)" font-size="10">Little Endian Machine</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 315.8613 73.6831)" font-size="10">MSB</text>
+				<text transform="matrix(1 0 0 1 314.0957 82.8345)" font-size="10">MSB</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 420.8359 73.6831)" font-size="10">LSB</text>
+				<text transform="matrix(1 0 0 1 419.2344 82.8345)" font-size="10">LSB</text>
+			</g>
+			<rect x="271.428" y="98.655" fill="#86B2D8" width="52.391" height="13.03"/>
+			<rect x="323.818" y="98.655" fill="#FFFFFF" width="157.352" height="13.03"/>
+			<rect x="271.428" y="111.686" fill="#86B2D8" width="52.391" height="13.03"/>
+			<rect x="323.818" y="111.686" fill="#FFFFFF" width="157.363" height="13.03"/>
+			<rect x="271.428" y="124.716" fill="#86B2D8" width="52.391" height="13.028"/>
+			<rect x="323.818" y="124.716" fill="#FFFFFF" width="157.363" height="13.028"/>
+			<rect x="271.428" y="137.744" fill="#86B2D8" width="52.391" height="13.029"/>
+			<rect x="323.818" y="137.744" fill="#FFFFFF" width="157.363" height="13.029"/>
+			<rect x="271.428" y="150.773" fill="#86B2D8" width="52.391" height="13.031"/>
+			<rect x="323.818" y="150.773" fill="#FFFFFF" width="157.363" height="13.031"/>
+			<rect x="271.428" y="163.805" fill="#86B2D8" width="52.391" height="13.029"/>
+			<g>
+				<text transform="matrix(1 0 0 1 396.7031 107.6592)" fill="#ED1C24" font-size="10">byte address 0</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 67.333 73.6831)" font-size="10">MSB</text>
+				<text transform="matrix(1 0 0 1 396.7031 120.9302)" fill="#ED1C24" font-size="10">byte address 2</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 172.3076 73.6831)" font-size="10">LSB</text>
-			</g>
-			<rect x="271.91" y="89.5" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="324.301" y="89.5" fill="#FFFFFF" width="157.352" height="13.03"/>
-			<rect x="271.91" y="102.53" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="324.301" y="102.53" fill="#FFFFFF" width="157.363" height="13.03"/>
-			<rect x="271.91" y="115.561" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="324.301" y="115.561" fill="#FFFFFF" width="157.363" height="13.03"/>
-			<rect x="271.91" y="128.59" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="324.301" y="128.59" fill="#FFFFFF" width="157.363" height="13.03"/>
-			<rect x="271.91" y="141.621" fill="#86B2D8" width="52.391" height="13.03"/>
-			<rect x="324.301" y="141.621" fill="#FFFFFF" width="157.363" height="13.03"/>
-			<rect x="271.91" y="154.651" fill="#86B2D8" width="52.391" height="13.03"/>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 403.9629 98.5078)" fill="#ED1C24" font-size="9">byte address 0</text>
+				<text transform="matrix(1 0 0 1 396.7031 134.2012)" fill="#ED1C24" font-size="10">byte address 4</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 403.9629 111.7788)" fill="#ED1C24" font-size="9">byte address 2</text>
+				<text transform="matrix(1 0 0 1 291.2891 107.6592)" fill="#ED1C24" font-size="10">byte address 1</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 403.9629 125.0503)" fill="#ED1C24" font-size="9">byte address 4</text>
+				<text transform="matrix(1 0 0 1 291.2891 120.9302)" fill="#ED1C24" font-size="10">byte address 3</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 298.5488 98.5078)" fill="#ED1C24" font-size="9">byte address 1</text>
+				<text transform="matrix(1 0 0 1 291.2891 134.2012)" fill="#ED1C24" font-size="10">byte address 5</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 298.5488 111.7788)" fill="#ED1C24" font-size="9">byte address 3</text>
+				<text transform="matrix(1 0 0 1 425.334 147.3965)" font-size="10">...</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 298.5488 125.0503)" fill="#ED1C24" font-size="9">byte address 5</text>
+				<text transform="matrix(1 0 0 1 425.334 160.668)" font-size="10">...</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 426.3105 138.2456)" font-size="10">...</text>
+				<text transform="matrix(1 0 0 1 446.4023 94.2842)" font-size="9">2</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 426.3105 151.5166)" font-size="10">...</text>
+				<text transform="matrix(1 0 0 1 433.1992 94.2842)" font-size="9">3</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 459.5762 85.1328)" font-size="10">1</text>
+				<text transform="matrix(1 0 0 1 419.9922 94.2842)" font-size="9">4</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 472.6074 85.1328)" font-size="10">0</text>
+				<text transform="matrix(1 0 0 1 406.791 94.2842)" font-size="9">5</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 446.9375 85.1328)" font-size="10">2</text>
+				<text transform="matrix(1 0 0 1 338.3652 94.2842)" fill="#312A35" font-size="9">10</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 433.7324 85.1328)" font-size="10">3</text>
+				<text transform="matrix(1 0 0 1 272.8574 94.2842)" font-size="9">15</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 420.5273 85.1328)" font-size="10">4</text>
+				<text transform="matrix(1 0 0 1 285.9805 94.2842)" font-size="9">14</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 407.3242 85.1328)" font-size="10">5</text>
+				<text transform="matrix(1 0 0 1 299.0996 94.2842)" font-size="9">13</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 338.9512 85.1328)" fill="#312A35" font-size="10">10</text>
+				<text transform="matrix(1 0 0 1 312.2207 94.2842)" font-size="9">12</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 273.4434 85.1328)" font-size="10">15</text>
+				<text transform="matrix(1 0 0 1 325.3398 94.2842)" font-size="9">11</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 286.5645 85.1328)" font-size="10">14</text>
+				<text transform="matrix(1 0 0 1 354.082 94.2842)" font-size="9">9</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 299.6855 85.1328)" font-size="10">13</text>
+				<text transform="matrix(1 0 0 1 367.2031 94.2842)" font-size="9">8</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 312.8047 85.1328)" font-size="10">12</text>
+				<text transform="matrix(1 0 0 1 380.3223 94.2842)" font-size="9">7</text>
 			</g>
 			<g>
-				<text transform="matrix(0.8815 0 0 1 325.9258 85.1328)" font-size="10">11</text>
+				<text transform="matrix(1 0 0 1 393.4434 94.2842)" font-size="9">6</text>
 			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 354.6172 85.1328)" font-size="10">9</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 367.7363 85.1328)" font-size="10">8</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 380.8574 85.1328)" font-size="10">7</text>
-			</g>
-			<g>
-				<text transform="matrix(0.8815 0 0 1 393.9766 85.1328)" font-size="10">6</text>
-			</g>
-			<rect x="271.91" y="89.5" fill="none" stroke="#010101" stroke-miterlimit="1" width="209.754" height="78.18"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="154.645" x2="481.664" y2="154.645"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="141.627" x2="481.664" y2="141.627"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="128.59" x2="481.664" y2="128.59"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="115.554" x2="481.664" y2="115.554"/>
-			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.91" y1="102.537" x2="481.664" y2="102.537"/>
+			<rect x="271.428" y="98.655" fill="none" stroke="#010101" stroke-miterlimit="1" width="209.754" height="78.179"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="163.799" x2="481.182" y2="163.799"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="150.781" x2="481.182" y2="150.781"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="137.744" x2="481.182" y2="137.744"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="124.709" x2="481.182" y2="124.709"/>
+			<line fill="none" stroke="#010101" stroke-miterlimit="1" x1="271.428" y1="111.691" x2="481.182" y2="111.691"/>
 			
-				<line fill="none" stroke="#003468" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="8,4,2,4" x1="376.691" y1="67.256" x2="376.691" y2="175.836"/>
+				<line fill="none" stroke="#003468" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" stroke-dasharray="8,4,2,4" x1="376.209" y1="76.411" x2="376.209" y2="184.99"/>
+			<g>
+				<text transform="matrix(1 0 0 1 472.0723 95.6489)" font-size="9">0</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 459.043 95.6489)" font-size="9">1</text>
+			</g>
+			<line fill="#FFFFFF" stroke="#010101" stroke-miterlimit="1" x1="481.17" y1="99.887" x2="481.17" y2="86.857"/>
 		</g>
 	</g>
 </g>

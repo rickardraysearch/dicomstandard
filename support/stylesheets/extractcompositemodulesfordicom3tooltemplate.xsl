@@ -144,7 +144,7 @@
 					and docbook:thead/docbook:tr/docbook:th[2]/docbook:para = 'Tag'
 					and docbook:thead/docbook:tr/docbook:th[3]/docbook:para = 'Type'
 					and docbook:thead/docbook:tr/docbook:th[4]/docbook:para = 'Attribute Description'">
-			<xsl:variable name="macro"><xsl:value-of select="substring-before(translate(normalize-space(docbook:caption),' -',''),'Attributes')"/></xsl:variable> <!-- leave macro in name, unlikle module -->
+			<xsl:variable name="macro"><xsl:value-of select="substring-before(translate(normalize-space(docbook:caption),' -',''),'Attributes')"/></xsl:variable> <!-- leave macro in name, unlike module -->
 			<xsl:text>DefineMacro=</xsl:text>
 			<xsl:value-of select="$quote"/>
 			<xsl:value-of select="$macro"/>
