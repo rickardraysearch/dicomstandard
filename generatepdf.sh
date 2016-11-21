@@ -47,3 +47,8 @@ XEP/xep -fo "output/fo/part${part}.fo" -pdf "output/pdf/part${part}.pdf"
 
 # embed all fonts and make tagged PDF ...
 #/usr/local/AHFormatterV61/run.sh -tpdf -peb 2 -i lib/ahf/AHFormatter.xml -d "output/fo/part${part}.fo" -o "/tmp/part${part}_ahf.pdf"
+
+# object-streams=generate makes the difference in reducing size, when ENABLE_ACCESSIBILITY is true in xep.xml to create tagged pdf; stream-data=compress makes no difference and is the default
+mv "output/pdf/part${part}.pdf" "output/pdf/part${part}.pdf.bak"
+qpdf --object-streams=generate --stream-data=compress --linearize "output/pdf/part${part}.pdf.bak" "output/pdf/part${part}.pdf"
+rm "output/pdf/part${part}.pdf.bak"

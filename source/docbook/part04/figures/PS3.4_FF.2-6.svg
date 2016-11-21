@@ -2,7 +2,7 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502.001px" height="92px" viewBox="0 0 502.001 92" enable-background="new 0 0 502.001 92" xml:space="preserve">
+	 width="502.001px" height="137px" viewBox="0 0 502.001 137" enable-background="new 0 0 502.001 137" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -19,59 +19,39 @@
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500.001" height="90"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500.001" height="135"/>
 	<g>
+		<path fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" d="M299.039,114.559"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="215.436,46.915 255.631,46.915 255.631,41.106 
+			266.318,51.105 255.631,61.106 255.631,54.771 215.436,54.771 		"/>
+		<g>
+			<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="117.28,46.915 157.476,46.915 157.476,41.106 
+				168.163,51.105 157.476,61.106 157.476,54.771 117.28,54.771 			"/>
+			<g>
+				<text transform="matrix(1 0 0 1 119.9316 52.7769)" font-size="6">Scalar value</text>
+			</g>
+		</g>
+		<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="337.703,57.218 337.703,44.468 374.033,44.468 
+			374.033,41.106 384.721,51.105 374.033,61.106 374.033,57.218 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 339.9072 52.7773)" font-size="6">RGB</text>
+		</g>
+		<g>
+			<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="299.039,85.896 299.039,114.559 374.033,114.559 
+				374.033,120.895 384.721,110.893 374.033,100.895 374.033,106.703 306.895,106.703 306.895,85.896 			"/>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 340.1631 112.5684)" font-size="6">Alpha</text>
+		</g>
 		
-			<rect x="279.322" y="15.787" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="50" height="50"/>
+			<rect x="267.703" y="16.106" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="70" height="70"/>
 		<g>
-			<text transform="matrix(1 0 0 1 286.9395 36.1646)"><tspan x="0" y="0" font-size="6">Palette Color</tspan><tspan x="8.841" y="6.291" font-size="6">RGBA</tspan><tspan x="11.676" y="12.582" font-size="6">LUT</tspan></text>
+			<text transform="matrix(1 0 0 1 285.3203 46.4863)"><tspan x="0" y="0" font-size="6">Palette Color</tspan><tspan x="8.841" y="6.291" font-size="6">RGBA</tspan><tspan x="11.676" y="12.581" font-size="6">LUT</tspan></text>
 		</g>
 		
-			<rect x="188.906" y="31.787" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="46" height="18"/>
+			<rect x="169.347" y="42.106" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="46" height="18"/>
 		<g>
-			<text transform="matrix(1 0 0 1 195.1963 39.3096)"><tspan x="0" y="0" font-size="6">Extract Most</tspan><tspan x="-3.006" y="6.291" font-size="6">Significant Bits</tspan></text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 334.0938 38.4648)" font-size="6">RGB</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 332.9219 73.3809)" font-size="6">Alpha</text>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="235.156" y1="40.787" x2="272.068" y2="40.787"/>
-				<g>
-					<polygon fill="#005695" points="270.483,43.111 279.156,40.787 270.483,38.463 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="142.406" y1="40.787" x2="181.819" y2="40.787"/>
-				<g>
-					<polygon fill="#005695" points="180.233,43.111 188.906,40.787 180.233,38.463 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 144.4424 38.4648)" font-size="6">Scalar value</text>
-		</g>
-		<g>
-			<g>
-				<polyline fill="none" stroke="#005695" stroke-miterlimit="1" points="304.322,66.214 304.322,76.214 352.506,76.214 				"/>
-				<g>
-					<polygon fill="#005695" points="350.921,78.538 359.594,76.214 350.921,73.89 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-				
-					<line fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" x1="329.594" y1="40.787" x2="352.506" y2="40.787"/>
-				<g>
-					<polygon fill="#005695" points="350.921,43.111 359.594,40.787 350.921,38.463 					"/>
-				</g>
-			</g>
+			<text transform="matrix(1 0 0 1 175.6362 49.6318)"><tspan x="0" y="0" font-size="6">Extract Most</tspan><tspan x="-3.006" y="6.291" font-size="6">Significant Bits</tspan></text>
 		</g>
 	</g>
 </g>

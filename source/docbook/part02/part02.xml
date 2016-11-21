@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2016d - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2016e - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2573,6 +2573,17 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a753a5c3-c3a4-4e5f-a78f-ee1bea75b496">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_211594e6-437c-44a3-b678-8943af76440a">1.2.840.10008.5.​1.​4.​1.​1.​88.​72</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_476595d1-68c8-49bc-b44b-1d9bf74cccf4">Simplified Adult Echo SR Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5f07c2ae-5f53-4586-842c-ae5e3411e77b">Transfer</para>
             </td>
           </tr>
           <tr valign="top">

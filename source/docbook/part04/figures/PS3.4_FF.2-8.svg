@@ -2,7 +2,7 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502.001px" height="122px" viewBox="0 0 502.001 122" enable-background="new 0 0 502.001 122" xml:space="preserve">
+	 width="502.001px" height="167px" viewBox="0 0 502.001 167" enable-background="new 0 0 502.001 167" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -19,141 +19,89 @@
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500.001" height="120"/>
+	<rect x="1" y="1" fill="#F5EED6" width="500.001" height="165"/>
 	<g>
-		
-			<rect x="229.009" y="39.732" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="50" height="50"/>
 		<g>
-			<text transform="matrix(1 0 0 1 238.6304 63.6543)"><tspan x="0" y="0" font-size="6">Compositor</tspan><tspan x="3.832" y="5.491" font-size="6">Function</tspan></text>
+			<text transform="matrix(1 0 0 1 177.98 55.4971)" font-size="6">Weight-1</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 286.1055 55.9746)"><tspan x="0" y="0" font-size="6">Unclamped</tspan><tspan x="8.674" y="6.291" font-size="6">RGB</tspan></text>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="121.127" y1="44.879" x2="149.812" y2="44.879"/>
-				<g>
-					<polygon fill="#005695" points="148.623,46.622 155.127,44.879 148.623,43.136 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 125.0186 42.6309)" font-size="6">Alpha-1</text>
+			<text transform="matrix(1 0 0 1 177.98 107.4951)" font-size="6">Weight-2</text>
 		</g>
 		<g>
 			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="121.127" y1="57.353" x2="149.812" y2="57.353"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="174.146" y1="57.498" x2="204.855" y2="57.498"/>
 				<g>
-					<polygon fill="#005695" points="148.623,59.096 155.127,57.353 148.623,55.609 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 123.8467 55.1772)" font-size="6">Alpha-2</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 198.5337 47.3306)" font-size="6">Weight-1</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 165.96 22.0806)" font-size="6">RGB-1</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 165.96 103.0801)" font-size="6">RGB-2</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 198.5337 75.6641)" font-size="6">Weight-2</text>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="121.127" y1="73.573" x2="149.812" y2="73.573"/>
-				<g>
-					<polygon fill="#005695" points="148.623,75.316 155.127,73.573 148.623,71.83 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 123.8467 71.4736)" font-size="6">Alpha-1</text>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="121.127" y1="85.944" x2="149.812" y2="85.944"/>
-				<g>
-					<polygon fill="#005695" points="148.623,87.688 155.127,85.944 148.623,84.201 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 125.0186 84.0195)" font-size="6">Alpha-2</text>
-		</g>
-		<g>
-			<g>
-				<line fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" x1="279.28" y1="64.732" x2="316.192" y2="64.732"/>
-				<g>
-					<polygon fill="#005695" points="314.607,67.057 323.28,64.732 314.607,62.408 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-				<polyline fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" points="120.47,105.236 253.002,105.236 
-					253.002,96.82 				"/>
-				<g>
-					<polygon fill="#005695" points="255.326,98.405 253.002,89.732 250.678,98.405 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-				<polyline fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" points="120.47,24.229 253.002,24.229 
-					253.002,32.645 				"/>
-				<g>
-					<polygon fill="#005695" points="250.678,31.06 253.002,39.732 255.326,31.06 					"/>
-				</g>
-			</g>
-		</g>
-		<g>
-			<g>
-				
-					<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="1" x1="194.92" y1="50.732" x2="225.501" y2="50.732"/>
-				<g>
-					<polygon points="224.708,51.895 229.045,50.732 224.708,49.57 					"/>
+					<polygon points="203.27,59.822 211.943,57.498 203.27,55.174 					"/>
 				</g>
 			</g>
 		</g>
 		
-			<rect x="155.127" y="39.732" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="40" height="22"/>
+			<rect x="134.353" y="41.498" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="40" height="32"/>
 		<g>
-			<text transform="matrix(1 0 0 1 161.7881 49.2554)"><tspan x="0" y="0" font-size="6">Weighting</tspan><tspan x="5.171" y="6.291" font-size="6">LUT 1</tspan></text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 357.5293 61.3306)" font-size="6">RGB</text>
+			<text transform="matrix(1 0 0 1 141.0166 56.0234)"><tspan x="0" y="0" font-size="6">Weighting</tspan><tspan x="5.171" y="6.291" font-size="6">LUT 1</tspan></text>
 		</g>
 		<g>
 			<g>
-				<line fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" x1="353.53" y1="64.732" x2="374.442" y2="64.732"/>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="174.146" y1="109.497" x2="204.855" y2="109.497"/>
 				<g>
-					<polygon fill="#005695" points="372.857,67.057 381.53,64.732 372.857,62.408 					"/>
+					<polygon points="203.27,111.821 211.943,109.497 203.27,107.173 					"/>
 				</g>
 			</g>
 		</g>
 		
-			<rect x="323.53" y="53.732" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="30" height="22"/>
+			<rect x="134.353" y="93.497" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="40" height="32"/>
 		<g>
-			<text transform="matrix(1 0 0 1 329.8613 66.4004)" font-size="6">Clamp</text>
+			<text transform="matrix(1 0 0 1 141.0166 108.0225)"><tspan x="0" y="0" font-size="6">Weighting</tspan><tspan x="5.171" y="6.29" font-size="6">LUT 2</tspan></text>
+		</g>
+		<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="282.718,89.608 282.718,76.858 332.627,76.858 
+			332.627,73.497 343.314,83.496 332.627,93.497 332.627,89.608 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,151.521 254.085,151.521 254.085,130.194 
+			257.979,130.194 247.971,119.507 237.966,130.194 241.33,130.194 241.33,138.771 85.873,138.771 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,94.306 122.396,94.306 122.396,88.497 
+			133.083,98.495 122.396,108.497 122.396,102.161 85.873,102.161 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 88.5239 100.168)" font-size="6">Alpha-1</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,116.306 122.396,116.306 122.396,110.497 
+			133.083,120.495 122.396,130.497 122.396,124.161 85.873,124.161 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 88.5239 122.167)" font-size="6">Alpha-2</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,42.307 122.396,42.307 122.396,36.498 
+			133.083,46.497 122.396,56.498 122.396,50.162 85.873,50.162 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 88.5239 48.1685)" font-size="6">Alpha-1</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,64.307 122.396,64.307 122.396,58.498 
+			133.083,68.497 122.396,78.498 122.396,72.162 85.873,72.162 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 88.5239 70.1685)" font-size="6">Alpha-2</text>
 		</g>
 		<g>
-			<g>
-				
-					<line fill="none" stroke="#000000" stroke-width="0.5" stroke-miterlimit="1" x1="194.92" y1="78.732" x2="225.501" y2="78.732"/>
-				<g>
-					<polygon points="224.708,79.895 229.045,78.732 224.708,77.57 					"/>
-				</g>
-			</g>
+			<text transform="matrix(1 0 0 1 284.9209 85.168)" font-size="6">Unclamped RGB</text>
+		</g>
+		<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="374.252,89.608 374.252,76.858 405.44,76.858 
+			405.44,73.497 416.128,83.496 405.44,93.497 405.44,89.608 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 376.4551 85.168)" font-size="6">RGB</text>
 		</g>
 		
-			<rect x="155.127" y="67.732" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="40" height="22"/>
+			<rect x="344.242" y="48.497" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="30" height="70"/>
 		<g>
-			<text transform="matrix(1 0 0 1 161.7881 77.2559)"><tspan x="0" y="0" font-size="6">Weighting</tspan><tspan x="5.171" y="6.29" font-size="6">LUT 2</tspan></text>
+			<text transform="matrix(1 0 0 1 350.583 85.1641)" font-size="6">Clamp</text>
+		</g>
+		
+			<rect x="212.717" y="48.497" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="70" height="70"/>
+		<g>
+			<text transform="matrix(1 0 0 1 232.3389 82.4219)"><tspan x="0" y="0" font-size="6">Compositor</tspan><tspan x="3.832" y="5.49" font-size="6">Function</tspan></text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 88.7876 146.8174)" font-size="6">RGB-2</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="85.873,15.479 254.085,15.479 254.085,36.808 
+			257.979,36.808 247.971,47.495 237.966,36.808 241.33,36.808 241.33,28.23 85.873,28.23 		"/>
+		<g>
+			<text transform="matrix(1 0 0 1 88.7876 23.5269)" font-size="6">RGB-1</text>
 		</g>
 	</g>
 </g>

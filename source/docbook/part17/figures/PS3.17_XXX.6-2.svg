@@ -2,7 +2,7 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="552px" height="117px" viewBox="0 0 552 117" enable-background="new 0 0 552 117" xml:space="preserve">
+	 width="552px" height="127px" viewBox="0 0 552 127" enable-background="new 0 0 552 127" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -18,60 +18,44 @@
    </desc>
 </g>
 
-<rect x="1" y="1" fill="#F5EED6" width="550" height="115"/>
 <g>
+	<rect x="1" y="1" fill="#F5EED6" width="550" height="125"/>
 	<g>
-		<text transform="matrix(1 0 0 1 294.5557 21.2031)" font-size="6">ICC Input Profile</text>
-	</g>
-	<g>
+		<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="262.119,87.35 262.119,74.599 281.072,74.599 
+			281.072,71.237 291.76,81.237 281.072,91.238 281.072,87.35 		"/>
+		<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="353.176,87.35 353.176,74.599 391.217,74.599 
+			391.217,71.237 401.904,81.237 391.217,91.238 391.217,87.35 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="150.095,85.425 190.292,85.425 190.292,91.233 
+			200.977,81.235 190.292,71.233 190.292,77.569 150.095,77.569 		"/>
 		<g>
-			<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="168.397" y1="76.943" x2="207.31" y2="76.943"/>
+			<text transform="matrix(1 0 0 1 264.2964 82.9082)" font-size="6">RGB</text>
+		</g>
+		
+			<rect x="293.184" y="51.237" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="60" height="60.001"/>
+		<g>
+			<text transform="matrix(1 0 0 1 301.1445 21.0811)" font-size="6">ICC Input Profile</text>
+		</g>
+		<g>
 			<g>
-				<polygon fill="#005695" points="205.725,79.268 214.397,76.943 205.725,74.619 				"/>
+				<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="323.188" y1="24.665" x2="323.188" y2="43.658"/>
+				<g>
+					<polygon fill="#005695" points="320.863,42.072 323.188,50.745 325.512,42.072 					"/>
+				</g>
 			</g>
 		</g>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 172.2837 75.2666)" font-size="6">Scalar value</text>
-	</g>
-	<g>
+		<rect x="306.189" y="66.328" fill="none" width="34" height="29.82"/>
+		<text transform="matrix(1 0 0 1 314.6865 70.623)"><tspan x="0" y="0" font-size="6">Profile </tspan><tspan x="-6.674" y="7.2" font-size="6">Connection </tspan><tspan x="-0.003" y="14.4" font-size="6">Space </tspan><tspan x="-5.165" y="21.6" font-size="6">Transform</tspan></text>
 		<g>
-			<line fill="none" stroke="#005695" stroke-miterlimit="1" x1="316.565" y1="25.03" x2="316.565" y2="44.022"/>
-			<g>
-				<polygon fill="#005695" points="314.241,42.437 316.565,51.109 318.89,42.437 				"/>
-			</g>
+			<text transform="matrix(1 0 0 1 152.7461 82.9092)" font-size="6">Scalar value</text>
 		</g>
-	</g>
-	
-		<rect x="215.294" y="51.108" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="50" height="50"/>
-	<g>
-		<text transform="matrix(1 0 0 1 270.0649 73.7812)" font-size="6">RGB</text>
-	</g>
-	<g>
+		
+			<rect x="202.099" y="51.233" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="60" height="60"/>
 		<g>
-			<line fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" x1="265.565" y1="76.108" x2="288.478" y2="76.108"/>
-			<g>
-				<polygon fill="#005695" points="286.893,78.433 295.565,76.108 286.893,73.784 				"/>
-			</g>
+			<text transform="matrix(1 0 0 1 218.9219 75.8184)"><tspan x="0" y="0" font-size="6">One Input</tspan><tspan x="9.469" y="7.891" font-size="8">➜</tspan><tspan x="4.674" y="14.182" font-size="6">RBGA</tspan></text>
 		</g>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 339.8906 73.7812)" font-size="6">PCS Values</text>
-	</g>
-	<g>
 		<g>
-			<line fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" x1="337.565" y1="76.108" x2="376.515" y2="76.108"/>
-			<g>
-				<polygon fill="#005695" points="374.93,78.433 383.603,76.108 374.93,73.784 				"/>
-			</g>
+			<text transform="matrix(1 0 0 1 355.6709 82.9082)" font-size="6">PCS-Values</text>
 		</g>
-	</g>
-	
-		<rect x="295.565" y="51.108" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="42" height="50"/>
-	<rect x="299.565" y="61.198" fill="none" width="34" height="29.82"/>
-	<text transform="matrix(1 0 0 1 308.0615 65.4863)"><tspan x="0" y="0" font-size="6">Profile </tspan><tspan x="-6.674" y="7.2" font-size="6">Connection </tspan><tspan x="-0.003" y="14.4" font-size="6">Space </tspan><tspan x="-5.165" y="21.6" font-size="6">Transform</tspan></text>
-	<g>
-		<text transform="matrix(1 0 0 1 227.1172 70.6816)"><tspan x="0" y="0" font-size="6">One Input</tspan><tspan x="9.469" y="7.891" font-size="8">➜</tspan><tspan x="4.674" y="14.182" font-size="6">RBGA</tspan></text>
 	</g>
 </g>
 </svg>

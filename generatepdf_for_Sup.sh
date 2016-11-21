@@ -23,3 +23,8 @@ XEP/xep -xep "${dir}/${sup}_linenumbered.xep" -pdf "${dir}/${sup}.pdf"
 rm "${dir}/${sup}.fo"
 rm "${dir}/${sup}_linenumbered.xep"
 rm "${dir}/${sup}.xep"
+
+# object-streams=generate makes the difference in reducing size, when ENABLE_ACCESSIBILITY is true in xep.xml to create tagged pdf; stream-data=compress makes no difference and is the default
+mv "${dir}/${sup}.pdf" "${dir}/${sup}.pdf.bak"
+qpdf --object-streams=generate --stream-data=compress --linearize "${dir}/${sup}.pdf.bak" "${dir}/${sup}.pdf"
+rm "${dir}/${sup}.pdf.bak"

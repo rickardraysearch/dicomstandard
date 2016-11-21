@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2016d - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2016e - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1256,6 +1256,29 @@
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_098133e1-8073-4398-ac79-f293b45def72">Extensible SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="4">
+                  <para xml:id="para_75f5d8b9-4da0-47c0-a63c-9e7eb8eeb953">Simplified Adult Echo SR</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_098cb691-5eb4-4d2f-8f71-ddb801ab20d9">Enhanced SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a2dbb695-88ae-45cd-92d3-6bbc1646b059">Comprehensive SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_23b76758-19d3-49b9-8e1b-d4637b791093">Comprehensive 3D SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_69dadf04-f8a0-4375-acd0-d0d7e6c6d187">Extensible SR</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -2963,6 +2986,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e6fd6eec-02f0-4a56-b975-4eaedc7c7c54">Simplified Adult Echo SR Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_7cee4403-e542-468e-a5e9-e5830bb1daa6">1.2.840.10008.5.​1.​4.​1.​1.​88.​72</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_681b5817-432a-4c15-88a9-a0fa5d7e0c8f">
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.17" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_01e8db9e-925b-4b06-86bf-f3914e261ce4">Content Assessment Results Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -3292,6 +3328,9 @@
             <listitem>
               <para xml:id="para_3e7cd545-565b-47be-8438-a2e211e59858">Acquisition Context SR</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_e063178e-a090-40cf-9003-364119cb9f14">Simplified Adult Echo SR</para>
+            </listitem>
           </itemizedlist>
           <para xml:id="para_3e34ef19-9a11-4d20-be2d-662df3ffcc21">
             <xref linkend="chapter_O" xrefstyle="template:Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
@@ -3461,6 +3500,18 @@
           </itemizedlist>
           <note>
             <para xml:id="para_e4683610-bc90-4244-8df9-12bfb7fdf172">This requirement means that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition and Private Attributes associated with the SOP Class will be stored and may be accessed.</para>
+          </note>
+        </section>
+        <section label="B.5.1.22" status="4" xml:id="sect_B.5.1.22">
+          <title>Raw Data Storage SOP Class</title>
+          <para xml:id="para_d333b12e-7c64-41fb-a1c4-27b15e5e0c35">For a device that is both a SCU and a SCP of the Raw Data Storage SOP Class, in addition to the behavior for the Storage Service Class specified in <xref linkend="sect_B.2.2" xrefstyle="select: label"/>, the following additional requirements are specified for the Raw Data Storage SOP Class:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_7777dd5a-a67e-4ea0-9406-31bf8b9e626a">An SCP of this SOP Class shall support Level 2 Conformance as defined in <xref linkend="sect_B.4.1" xrefstyle="select: label"/>.</para>
+            </listitem>
+          </itemizedlist>
+          <note>
+            <para xml:id="para_bc0a4c3c-5ced-4d79-a634-2253aa43c1a3">This requirement means that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition and Private Attributes associated with the SOP Class will be stored and may be accessed.</para>
           </note>
         </section>
       </section>
@@ -21288,6 +21339,32 @@
             </listitem>
           </itemizedlist>
         </section>
+        <section label="O.4.1.2" status="4" xml:id="sect_O.4.1.2">
+          <title>Ultrasound SR SOP Classes</title>
+          <para xml:id="para_8fade32d-c993-40f8-bb1f-05e4ca965425">The following shall be documented in the Conformance Statement of any SR creator implementation claiming conformance to the Simplified Adult Echo SR SOP Class as an SCU:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_89522315-d73a-46e5-b6c5-a278668dde65">A list of all the measurement codes from <olink targetdoc="PS3.16" targetptr="sect_CID_12300" xrefstyle="select: labelnumber quotedtitle"/> supported by the device for use in <olink targetdoc="PS3.16" targetptr="sect_TID_5301" xrefstyle="select: labelnumber quotedtitle"/>.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_359ce4b1-a659-4174-b86e-d3b277aee58e">A list of initial measurement codes supported by the device for use in Row 1 or 2 of <olink targetdoc="PS3.16" targetptr="sect_TID_5302" xrefstyle="select: labelnumber quotedtitle"/>.</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_5872f7e0-ce35-48d2-86b2-fd1f204fb817">Optionally, a table of the <olink targetdoc="PS3.16" targetptr="sect_TID_5302" xrefstyle="select: labelnumber"/> post-coordinated modifer values associated with each measurement code.</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+            <listitem>
+              <para xml:id="para_6a075501-7970-4280-89a6-9c7341cfe496">A list of any extension codes added to
+                <olink targetdoc="PS3.16" targetptr="sect_CID_12301" xrefstyle="select: labelnumber quotedtitle"/>,
+                <olink targetdoc="PS3.16" targetptr="sect_CID_12304" xrefstyle="select: labelnumber quotedtitle"/>,
+                <olink targetdoc="PS3.16" targetptr="sect_CID_12305" xrefstyle="select: labelnumber quotedtitle"/>,
+                <olink targetdoc="PS3.16" targetptr="sect_CID_12307" xrefstyle="select: labelnumber quotedtitle"/>,
+                <olink targetdoc="PS3.16" targetptr="sect_CID_12227" xrefstyle="select: labelnumber quotedtitle"/>.
+              </para>
+            </listitem>
+          </itemizedlist>
+        </section>
       </section>
       <section label="O.4.2" status="3" xml:id="sect_O.4.2">
         <title>Conformance Statement for an SCP</title>
@@ -27500,7 +27577,7 @@
             <para xml:id="para_9eb3d995-9533-4d33-9843-14c90e55644a">The range shall include all frames between the specified times including any frames at the specified times.</para>
             <para xml:id="para_948ea1ea-7456-45ca-9187-ed9183fe139f">The range may be expanded as a consequence of the format in which the information is stored. Where such expansion occurs, any embedded audio data shall be similarly selected. Under all circumstances, the returned Composite SOP Instance shall retain the relationship between image and audio data.</para>
             <note>
-              <para xml:id="para_66107f94-b1bc-4d06-81f2-da9155b6d1a3">For MPEG-2 and MPEG-4 AVC/H.264 this would be to the nearest surrounding Key Frames.</para>
+              <para xml:id="para_66107f94-b1bc-4d06-81f2-da9155b6d1a3">For MPEG-2, MPEG-4 AVC/H.264 and HEVC/H.265 this would be to the nearest surrounding Key Frames.</para>
             </note>
             <para xml:id="para_975c167b-50ab-4137-a621-14e3141fa6a5">For JPEG 2000 Part 2, this would be to nearest surrounding precinct or tile boundary</para>
             <para xml:id="para_b17892b7-6137-45df-b800-4d25e0581e8c">Time Range shall only be used to specify extraction from SOP instances where the times of frames can be ascertained using one or more of the following Attributes:</para>
@@ -45638,7 +45715,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_ee8ed08c-92f4-43cc-a433-38bb32123397">Manufacturer</para>
+                  <para xml:id="para_ee8ed08c-92f4-43cc-a433-38bb32123397">&gt;Manufacturer</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_12563c6f-ca47-41f9-ada9-55dd541f718c">(0008,0070)</para>
@@ -45655,7 +45732,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_dfc85f43-48bb-4cd3-b0ab-aeb09a7c376a">Manufacturer's Related Model Group</para>
+                  <para xml:id="para_dfc85f43-48bb-4cd3-b0ab-aeb09a7c376a">&gt;Manufacturer's Related Model Group</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_3cd59574-58ce-40fc-bdcd-c8a0aebb6cf7">(0008,0222)</para>
@@ -45672,7 +45749,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_85919ceb-f133-4994-aba1-75cbb100c756">Manufacturer's Model Name</para>
+                  <para xml:id="para_85919ceb-f133-4994-aba1-75cbb100c756">&gt;Manufacturer's Model Name</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_06d117fb-7904-48aa-83c3-bfb0608b80ef">(0008,1090)</para>
@@ -45689,7 +45766,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_2f1c739b-ba7b-4b59-8c47-7e35239ce4a7">Software Versions</para>
+                  <para xml:id="para_2f1c739b-ba7b-4b59-8c47-7e35239ce4a7">&gt;Software Versions</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_344285b2-db0c-40d3-b5b5-d57742511ada">(0018,1020)</para>
