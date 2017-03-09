@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2016e - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2017a - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -4791,7 +4791,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               <para xml:id="para_50f301b9-956b-496f-91bc-08526c749fd6">&gt;&gt;</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4c0e356e-0b29-4c7a-b1ca-d4935a19706a">ps3‑20:accessionNumber</para>
+              <para xml:id="para_4c0e356e-0b29-4c7a-b1ca-d4935a19706a">ps3-20:accessionNumber</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d5ab92b7-b92a-4940-8cdc-e7036be70eba">1..1</para>
@@ -22245,7 +22245,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               <para xml:id="para_c82280ca-ba50-40d7-b61f-cc8715f68b2f">SHALL</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5d6c4b3f-361c-4f2f-b208-1851da71fdbb">(113015, DCM, "Series" )</para>
+              <para xml:id="para_5d6c4b3f-361c-4f2f-b208-1851da71fdbb">
+<olink targetdoc="PS3.16" targetptr="DCM_113015">(113015, DCM, "Series")</olink>
+</para>
             </td>
             <td align="left" colspan="1" rowspan="1"/>
           </tr>
@@ -25253,7 +25255,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_3ccd7444-a84c-48e2-9b7a-03932ddafa29">
-                    <emphasis role="italic">(123014, DCM,"Target Region")</emphasis>
+                    <emphasis role="italic">
+<olink targetdoc="PS3.16" targetptr="DCM_123014">(123014, DCM, "Target Region")</olink>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25426,7 +25430,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_1128e56e-032a-4a6e-8e71-e2e574b46c7d">
-                    <emphasis role="italic">(G-C0E3, SRT, "Finding Site")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25436,7 +25442,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_9aeb4907-940a-4731-b42e-d2e64ab51d4e">
-                    <emphasis role="italic">(G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT,"Laterality")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25734,7 +25742,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_b4e54a81-30bc-4d76-95fb-40c59ad55ac0">
-                    <emphasis role="italic">(G-C0E3, SRT, "Finding Site")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25744,7 +25754,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_a718e1e6-d125-4fcf-b838-c2358770ac16">
-                    <emphasis role="italic">(G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT,"Laterality")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25754,7 +25766,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_eef04666-4de9-44c5-82ab-833372a5b3aa">
-                    <emphasis role="italic">(G-C036, SRT, "Measurement Method")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25764,7 +25778,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_2eff334e-9123-4558-a9ee-e5100c7d866d">
-                    <emphasis role="italic">(G-A1F8, SRT, "Topographical modifier")</emphasis>
+                    <emphasis role="italic">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25916,7 +25932,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_5070ee02-6ab0-4e8c-9b44-c0971d1ef408">
-                    <emphasis role="italic">(123014, DCM,"Target Region")</emphasis>
+                    <emphasis role="italic">
+<olink targetdoc="PS3.16" targetptr="DCM_123014">(123014, DCM, "Target Region")</olink>
+</emphasis>
                   </para>
                 </td>
               </tr>
@@ -25986,7 +26004,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_498f079b-a83c-4ce8-b576-9f49150e7bf0">
-                    <emphasis role="italic">(111532, DCM,"Pregnancy Status")</emphasis>
+                    <emphasis role="italic">
+<olink targetdoc="PS3.16" targetptr="DCM_111532">(111532, DCM, "Pregnancy Status")</olink>
+</emphasis>
                   </para>
                 </td>
               </tr>

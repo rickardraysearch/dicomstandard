@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2016e - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2017a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1514,12 +1514,12 @@
 </para>
               <para xml:id="para_66463394-a3e4-4c20-bf91-faf8f462fa20">DICOM Prefix <emphasis role="bold">[DICM]</emphasis>
 </para>
-              <para xml:id="para_4a66aa39-2588-4f6f-982e-9961a0544df6">Group Length</para>
+              <para xml:id="para_4a66aa39-2588-4f6f-982e-9961a0544df6">File Meta Information Group Length</para>
               <para xml:id="para_92f47c54-8f64-44fa-b105-6d72060152bc">File Meta-Information Version <emphasis role="bold">[0001]</emphasis>
 </para>
-              <para xml:id="para_06e03c92-ec3e-4b75-bbbf-4729e3d54f59">SOP Class UID <emphasis role="bold">[1.2.840.10008.1.3.10]</emphasis>
+              <para xml:id="para_06e03c92-ec3e-4b75-bbbf-4729e3d54f59">Media Storage SOP Class UID <emphasis role="bold">[1.2.840.10008.1.3.10]</emphasis>
 </para>
-              <para xml:id="para_ceeea93a-7b7a-48d4-b801-871499e0759c">SOP Instance UID <emphasis role="bold">[1.2.840.23856.36.45.3]</emphasis>
+              <para xml:id="para_ceeea93a-7b7a-48d4-b801-871499e0759c">Media Storage SOP Instance UID <emphasis role="bold">[1.2.840.23856.36.45.3]</emphasis>
 </para>
               <para xml:id="para_0ab44a79-cf75-4541-b1b7-30ebda7c4376">Transfer Syntax UID <emphasis role="bold">[1.2.840.10008.1.1]</emphasis>
 </para>
@@ -1596,7 +1596,7 @@
               <para xml:id="para_c2672c1e-7e6c-42f9-a823-c708ed1f364e">...</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_506d97ae-4b5c-4550-8443-0fc627353319">Offset of the next Dir. Record in Dir. Entity (not shown in example)</para>
+              <para xml:id="para_506d97ae-4b5c-4550-8443-0fc627353319">Offset of the next Directory Record in Directory Entity (not shown in example)</para>
               <para xml:id="para_191de2f7-e22f-41c1-a569-95ff997773e0">Record In-use Flag <emphasis role="bold">[FFFFH]</emphasis>
 </para>
               <para xml:id="para_7dd57a3d-7f90-4b2a-83b2-2a88c4cbb467">Offset of Referenced Lower Level Directory Entity <emphasis role="bold">{2299}</emphasis>
@@ -1635,7 +1635,7 @@
           <tr valign="top">
             
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a5d949c8-568e-4225-bd6f-ef1d5faf9fca">Item Del. Tag</para>
+              <para xml:id="para_a5d949c8-568e-4225-bd6f-ef1d5faf9fca">Item Delimitation Tag</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e96b7337-8a2a-44e6-82b7-7470c3898f55">FFFE,E00D</para>
@@ -1677,7 +1677,7 @@
               <para xml:id="para_7d8c4dc8-a27c-444a-8d2e-1335a2cf5e68">...</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5fbb259e-03e0-49fc-b0c4-cd8c015ff80a">Offset of the next Dir. Record in Dir. Entity (not shown in example)</para>
+              <para xml:id="para_5fbb259e-03e0-49fc-b0c4-cd8c015ff80a">Offset of the next Directory Record in Directory Entity (not shown in example)</para>
               <para xml:id="para_fc5d4a47-e5c8-4584-a7e4-2323a8025768">Record In-use Flag <emphasis role="bold">[0FFFFH]</emphasis>
 </para>
               <para xml:id="para_49b7f677-0f30-426e-985c-30953fa038eb">Offset of Referenced Lower Level Directory Entity <emphasis role="bold">{2681}</emphasis>
@@ -1717,7 +1717,7 @@
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1"/>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_de8647a7-e423-4633-a338-b1e7c051c972">Item Del. Tag</para>
+              <para xml:id="para_de8647a7-e423-4633-a338-b1e7c051c972">Item Delimitation Tag</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_8e185efe-1ef5-4568-b583-5c90f33541f6">FFFE,E00D</para>
@@ -1759,7 +1759,7 @@
               <para xml:id="para_cf4a3eb4-dc15-4e05-a59c-3d721179a6b8">...</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f38f071b-4319-41c9-b205-bd19de45537e">Offset of the next Dir. Record in Dir. Entity <emphasis role="bold">{3419}</emphasis>
+              <para xml:id="para_f38f071b-4319-41c9-b205-bd19de45537e">Offset of the next Directory Record in Directory Entity <emphasis role="bold">{3419}</emphasis>
 </para>
               <para xml:id="para_cf677b6d-821b-418f-a681-724e2432cde9">Record In-use Flag <emphasis role="bold">[FFFFH]</emphasis>
 </para>
@@ -1818,7 +1818,7 @@
           <tr valign="top">
             
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d893d373-03ee-475b-a695-bde1acd183ad">Item Del. Tag</para>
+              <para xml:id="para_d893d373-03ee-475b-a695-bde1acd183ad">Item Delimitation Tag</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_345cab00-0f05-4448-bf72-5ecea19b47af">FFFE,E00D</para>
@@ -1860,7 +1860,7 @@
               <para xml:id="para_c147b753-751c-4d3b-8631-485da66cd4b9">...</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ce1d9776-6fad-4f9f-8d67-2ca76fd2071a">Offset of the next Dir. Record in Dir. Entity (not shown in example)</para>
+              <para xml:id="para_ce1d9776-6fad-4f9f-8d67-2ca76fd2071a">Offset of the next Directory Record in Directory Entity (not shown in example)</para>
               <para xml:id="para_dd21f362-b38c-42fb-a3c0-f40ef07728e2">Record In-use Flag <emphasis role="bold">[FFFFH]</emphasis>
 </para>
               <para xml:id="para_07fd5d0a-1d51-4f4d-9f41-a30f2d0419d3">Offset of Referenced Lower Level Directory Entity <emphasis role="bold">[00000000H]</emphasis>...</para>
@@ -1916,7 +1916,7 @@
           <tr valign="top">
             
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8cd12861-f885-4da3-bf1e-8eaf5ff17f48">Item Del. Tag</para>
+              <para xml:id="para_8cd12861-f885-4da3-bf1e-8eaf5ff17f48">Item Delimitation Tag</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_6ecd8951-5684-4d2e-9f05-9ca47cd47704">FFFE,E00D</para>
@@ -1958,7 +1958,7 @@
               <para xml:id="para_c59eb6ca-4da3-4952-b67e-a827e8161c11">...</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6e7a9963-83ea-4fa4-bd08-3ac941161532">Offset of the next Dir. Record in Dir. Entity <emphasis role="bold">{00000000H}</emphasis>
+              <para xml:id="para_6e7a9963-83ea-4fa4-bd08-3ac941161532">Offset of the next Directory Record in Directory Entity <emphasis role="bold">{00000000H}</emphasis>
 </para>
               <para xml:id="para_07a2b613-0f47-420d-8739-bef3842f5b95">Record In-use Flag <emphasis role="bold">[FFFFH]</emphasis>
 </para>
@@ -1990,7 +1990,7 @@
           <tr valign="top">
             
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e63ad0fe-6f0b-48b2-a8ab-68e6778e8bf9">Item Del. Tag</para>
+              <para xml:id="para_e63ad0fe-6f0b-48b2-a8ab-68e6778e8bf9">Item Delimitation Tag</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b87e4b04-5443-4918-a80c-48492a91ae3a">FFFE,E00D</para>

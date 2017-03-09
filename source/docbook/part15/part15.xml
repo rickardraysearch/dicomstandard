@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2016e - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2017a - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -106,7 +106,7 @@
   <para xml:id="para_79edbad2-56c0-4233-9c15-470a25e54820">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model</para>
   <para xml:id="para_2b8ff8ea-4b8e-4c7a-9649-749550ed7210">ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
   <para xml:id="para_cd042748-82dd-4f43-ae86-d93b354fc1c2">ISO/TR 8509, Information Processing Systems - Open Systems Interconnection - Service Conventions</para>
-  <para xml:id="para_ae181f72-8095-48d1-aacd-3320a56eab70">ISO 8649:1987, Information Processing Systems ‑ Open Systems Interconnection ‑ Service Definition for the Association Control Service Element</para>
+  <para xml:id="para_ae181f72-8095-48d1-aacd-3320a56eab70">ISO 8649:1987, Information Processing Systems - Open Systems Interconnection - Service Definition for the Association Control Service Element</para>
   <para xml:id="para_59fca22e-5348-4bbc-a859-cfb2f8d63f34">Integrated Secure Communication Layer V1.00 MEDIS-DC</para>
   <para xml:id="para_2ca019ac-27e1-44ce-841e-c228bfb1da18">ITU-T Recommendation X.509 (03/00) "Information technology - Open Systems Interconnection - The directory: Public-key and attribute certificate frameworks"</para>
   <note>
@@ -157,7 +157,7 @@
   <section label="3.1" status="2" xml:id="sect_3.1">
     <title>Reference Model Definitions</title>
   
-  <para xml:id="para_0f6e7085-8eca-4dd2-877d-c74bed72e97f">This part of the Standard makes use of the following terms defined in ISO 7498‑1:</para>
+  <para xml:id="para_0f6e7085-8eca-4dd2-877d-c74bed72e97f">This part of the Standard makes use of the following terms defined in ISO 7498-1:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
 <para xml:id="para_63725740-d6f5-4d37-8da2-b654a5b0f661">Application Entity</para>
@@ -1258,7 +1258,7 @@ DICOMObjectDescriptionContents =
     element StudyIDs {
       attribute UID { token }
     }*
-  },
+  }?,
   element Encrypted { xsd:boolean }?,
   element Anonymized { xsd:boolean }?
 
@@ -1737,7 +1737,7 @@ start = message
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_e90d1cee-0915-4868-a69e-98cb49b2dfb9">The UIDs of SOP classes referred to in this participant object.</para>
-        <para xml:id="para_e6b380c3-3ff7-470d-8c99-5fecee51fe2d">Required if ParticipantObjectIDTypeCode is (110180, DCM, "Study Instance UID") and any of the optional fields (AccessionNumber, ContainsMPPS, NumberOfInstances, ContainsSOPInstances,Encrypted,Anonymized) are present in this Participant Object. May be present if ParticipantObjectIDTypeCode is (110180, DCM, "Study Instance UID") even though none of the optional fields are present.</para>
+        <para xml:id="para_e6b380c3-3ff7-470d-8c99-5fecee51fe2d">Required if ParticipantObjectIDTypeCode is <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink> and any of the optional fields (AccessionNumber, ContainsMPPS, NumberOfInstances, ContainsSOPInstances,Encrypted,Anonymized) are present in this Participant Object. May be present if ParticipantObjectIDTypeCode is <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink> even though none of the optional fields are present.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1841,7 +1841,7 @@ start = message
         <para xml:id="para_f588619d-610d-4ae5-893f-c38ef0b55e46">(DICOM extension)</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f9fabd86-00df-4871-9e0d-721bd62f990e">A Study Instance UID, which may be used when the ParticipantObjectIDTypeCode is not (110180, DCM, "Study Instance UID").</para>
+        <para xml:id="para_f9fabd86-00df-4871-9e0d-721bd62f990e">A Study Instance UID, which may be used when the ParticipantObjectIDTypeCode is not <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>.</para>
       </td>
     </tr>
   </tbody>
@@ -1851,7 +1851,7 @@ start = message
   
   <para xml:id="para_66a88433-eb1c-4f61-ba45-ec52c4251afb">If the participant is a person, then the User ID shall be the identifier used for that person on this particular system, in the form of loginName@domain-name.</para>
   <para xml:id="para_a9854eb8-a3a1-4583-9094-358f899d4ef2">If the participant is an identifiable process, the UserID selected shall be one of the identifiers used in the internal system logs. For example, the User ID may be the process ID as used within the local operating system in the local system logs. If the participant is a node, then User ID may be the node name assigned by the system administrator. Other participants such as threads, relocatable processes, web service end-points, web server dispatchable threads, etc. will have an appropriate identifier. The implementation shall document in the conformance statement the identifiers used, see <xref linkend="sect_A.6" xrefstyle="select: label"/>. The purpose of this requirement is to allow matching of the audit log identifiers with internal system logs on the reporting systems. .</para>
-  <para xml:id="para_f79205fb-3c37-4814-935f-5aa129274796">When importing or exporting data, e.g., by means of media, the UserID field is used both to identify people and to identify the media itself. When the Role ID Code is EV(110154, DCM, "Destination Media") or EV(110155, DCM, "Source Media"), the UserID may be:</para>
+  <para xml:id="para_f79205fb-3c37-4814-935f-5aa129274796">When importing or exporting data, e.g., by means of media, the UserID field is used both to identify people and to identify the media itself. When the Role ID Code is EV<olink targetdoc="PS3.16" targetptr="DCM_110154">(110154, DCM, "Destination Media")</olink> or EV<olink targetdoc="PS3.16" targetptr="DCM_110155">(110155, DCM, "Source Media")</olink>, the UserID may be:</para>
   <orderedlist numeration="loweralpha">
 <listitem>
 <para xml:id="para_3132cdfd-616a-40cc-bdaa-5a8164fee101">a URI (the preferred form) identifying the source or destination,</para>
@@ -1875,7 +1875,7 @@ start = message
   <para xml:id="para_027de0f2-b08c-4746-b7be-69565327721a">AETITLES=
   <emphasis role="italic">aetitle1;aetitle2;…</emphasis>
 </para>
-  <para xml:id="para_3fab9fc3-cc72-4090-9a21-289cd44188d6">When importing or exporting data, e.g., by means of media, the Alternative UserID field is used either to identify people or to identify the media itself. When the Role ID Code is (110154, DCM, "Destination Media") or (110155, DCM, "Source Media"), the Alternative UserID may be any machine readable identifications on the media, such as media serial number, volume label, or DICOMDIR SOP Instance UID.</para>
+  <para xml:id="para_3fab9fc3-cc72-4090-9a21-289cd44188d6">When importing or exporting data, e.g., by means of media, the Alternative UserID field is used either to identify people or to identify the media itself. When the Role ID Code is <olink targetdoc="PS3.16" targetptr="DCM_110154">(110154, DCM, "Destination Media")</olink> or <olink targetdoc="PS3.16" targetptr="DCM_110155">(110155, DCM, "Source Media")</olink>, the Alternative UserID may be any machine readable identifications on the media, such as media serial number, volume label, or DICOMDIR SOP Instance UID.</para>
   </section>
 <section label="A.5.2.3" status="4" xml:id="sect_A.5.2.3">
     <title>Username</title>
@@ -1945,7 +1945,8 @@ start = message
         <para xml:id="para_6100445d-4343-4af9-bae5-0253efdcf78e">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_6fb78132-169f-4910-ab72-d1f5cc467946">EV (110100, DCM,"Application Activity")</para>
+        <para xml:id="para_6fb78132-169f-4910-ab72-d1f5cc467946">EV <olink targetdoc="PS3.16" targetptr="DCM_110100">(110100, DCM, "Application Activity")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1990,8 +1991,10 @@ start = message
         <para xml:id="para_6a72093f-979a-4e82-8208-6b082e4c281c">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_479c6123-575f-48f3-94cf-09afe4a1d466">DT (110120, DCM, "Application Start")</para>
-        <para xml:id="para_0b084312-7d3f-42a9-a916-e87c441a9e88">DT (110121, DCM, "Application Stop")</para>
+        <para xml:id="para_479c6123-575f-48f3-94cf-09afe4a1d466">DT <olink targetdoc="PS3.16" targetptr="DCM_110120">(110120, DCM, "Application Start")</olink>
+</para>
+        <para xml:id="para_0b084312-7d3f-42a9-a916-e87c441a9e88">DT <olink targetdoc="PS3.16" targetptr="DCM_110121">(110121, DCM, "Application Stop")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2050,7 +2053,8 @@ start = message
         <para xml:id="para_6c183f62-2f69-402f-a05b-43195aad884a">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_7a7a2ac3-3dc4-41c3-a1e4-af1508bb9ad4">EV (110150, DCM, "Application")</para>
+        <para xml:id="para_7a7a2ac3-3dc4-41c3-a1e4-af1508bb9ad4">EV <olink targetdoc="PS3.16" targetptr="DCM_110150">(110150, DCM, "Application")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2131,7 +2135,8 @@ start = message
         <para xml:id="para_a9137ee3-0769-4865-a17e-abe080ba4e66">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_80d162fb-9f5d-4412-98f0-0dd0b18282b3">EV (110151, DCM, "Application Launcher")</para>
+        <para xml:id="para_80d162fb-9f5d-4412-98f0-0dd0b18282b3">EV <olink targetdoc="PS3.16" targetptr="DCM_110151">(110151, DCM, "Application Launcher")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2197,7 +2202,8 @@ start = message
         <para xml:id="para_d07f9691-8cb1-4f83-9bb9-5261811066d5">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f2f64133-5cef-40ad-b565-c2e26349c1bf">EV (110101, DCM, "Audit Log Used")</para>
+        <para xml:id="para_f2f64133-5cef-40ad-b565-c2e26349c1bf">EV <olink targetdoc="PS3.16" targetptr="DCM_110101">(110101, DCM, "Audit Log Used")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2564,7 +2570,8 @@ start = message
         <para xml:id="para_c19302ae-108e-4431-9c44-b07b547a0ac5">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1f04b6c1-1e2f-48dc-b1d4-9130bbdce3ee">EV (110102, DCM, "Begin Transferring DICOM Instances")</para>
+        <para xml:id="para_1f04b6c1-1e2f-48dc-b1d4-9130bbdce3ee">EV <olink targetdoc="PS3.16" targetptr="DCM_110102">(110102, DCM, "Begin Transferring DICOM Instances")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2667,7 +2674,8 @@ start = message
         <para xml:id="para_2e744154-1b0f-4bf9-96f1-89eec92afb07">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_376e9446-5131-452f-9bc4-e14b1d5c22ff">EV (110153, DCM, "Source Role ID")</para>
+        <para xml:id="para_376e9446-5131-452f-9bc4-e14b1d5c22ff">EV <olink targetdoc="PS3.16" targetptr="DCM_110153">(110153, DCM, "Source Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2748,7 +2756,8 @@ start = message
         <para xml:id="para_debd92b4-0ca0-46c0-a839-d9efddcb5e58">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_22a5a7c9-6227-4567-a656-d452de180029">EV (110152, DCM, "Destination Role ID")</para>
+        <para xml:id="para_22a5a7c9-6227-4567-a656-d452de180029">EV <olink targetdoc="PS3.16" targetptr="DCM_110152">(110152, DCM, "Destination Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -2899,7 +2908,8 @@ start = message
         <para xml:id="para_3c373b77-0963-4eb7-bcb8-f59117c4710a">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_2722d90d-34b0-454a-b667-af894271dc18">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_2722d90d-34b0-454a-b667-af894271dc18">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3185,7 +3195,8 @@ start = message
         <para xml:id="para_b20357a2-8fe4-4ad9-b466-789fe018f03a">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8adf976f-09ae-4288-8d80-9d327290e313">EV (110106, DCM, "Export")</para>
+        <para xml:id="para_8adf976f-09ae-4288-8d80-9d327290e313">EV <olink targetdoc="PS3.16" targetptr="DCM_110106">(110106, DCM, "Export")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3289,7 +3300,8 @@ start = message
         <para xml:id="para_05883ef0-850d-4a2b-bbd1-9aa0d69857a0">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_2b44032a-65d4-42da-8fb5-ea7acacbee38">EV (110152, DCM, "Destination Role ID")</para>
+        <para xml:id="para_2b44032a-65d4-42da-8fb5-ea7acacbee38">EV <olink targetdoc="PS3.16" targetptr="DCM_110152">(110152, DCM, "Destination Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3371,7 +3383,8 @@ start = message
         <para xml:id="para_46699521-02ec-4b2e-84dd-24b921ea8abd">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_9bdcb2dc-34a8-4e59-8655-2260cfeb21ae">EV (110153, DCM, "Source Role ID")</para>
+        <para xml:id="para_9bdcb2dc-34a8-4e59-8655-2260cfeb21ae">EV <olink targetdoc="PS3.16" targetptr="DCM_110153">(110153, DCM, "Source Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3454,7 +3467,8 @@ start = message
         <para xml:id="para_186e1489-2843-4001-a0e5-5ac75ea8c994">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_7e5b7a19-a06b-41c0-b5c9-cfad11a7fc81">EV (110154, DCM, "Destination Media")</para>
+        <para xml:id="para_7e5b7a19-a06b-41c0-b5c9-cfad11a7fc81">EV <olink targetdoc="PS3.16" targetptr="DCM_110154">(110154, DCM, "Destination Media")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3547,7 +3561,8 @@ start = message
         <para xml:id="para_63fb6bc4-10fb-457c-b9e4-f336e2f1e09f">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_546a370b-122e-47b3-a8ac-f9dee307f93f">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_546a370b-122e-47b3-a8ac-f9dee307f93f">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3850,7 +3865,8 @@ start = message
         <para xml:id="para_783a186f-99b9-4dd3-ad78-3f352fb1a532">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_dac17dbe-d529-41e1-b71a-c30ad7c3aef4">EV (110107, DCM, "Import")</para>
+        <para xml:id="para_dac17dbe-d529-41e1-b71a-c30ad7c3aef4">EV <olink targetdoc="PS3.16" targetptr="DCM_110107">(110107, DCM, "Import")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -3954,7 +3970,8 @@ start = message
         <para xml:id="para_25f3c823-c008-4ca7-b816-b8c309a9b188">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_26e102b4-c24b-4cb4-96cb-1c66937a571e">EV (110152, DCM, "Destination Role ID")</para>
+        <para xml:id="para_26e102b4-c24b-4cb4-96cb-1c66937a571e">EV <olink targetdoc="PS3.16" targetptr="DCM_110152">(110152, DCM, "Destination Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4037,7 +4054,8 @@ start = message
         <para xml:id="para_bd298d8a-a412-4562-ae9e-ecc0492eb5eb">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_232bec67-bcb7-4585-b601-48f4f2dddbcf">EV (110155, DCM, "Source Media")</para>
+        <para xml:id="para_232bec67-bcb7-4585-b601-48f4f2dddbcf">EV <olink targetdoc="PS3.16" targetptr="DCM_110155">(110155, DCM, "Source Media")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4143,7 +4161,8 @@ start = message
         <para xml:id="para_bf0bbdf7-c372-4957-b8e8-bed3c3eecea0">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_943cd055-65f2-43aa-94c9-75d28fe18f31">EV (110153, DCM, "Source Role ID")</para>
+        <para xml:id="para_943cd055-65f2-43aa-94c9-75d28fe18f31">EV <olink targetdoc="PS3.16" targetptr="DCM_110153">(110153, DCM, "Source Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4213,7 +4232,8 @@ start = message
         <para xml:id="para_63b2cb23-2ee1-4d54-a36a-006efdecb057">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3980b371-cb5c-47c5-b5fe-67e15da7ae91">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_3980b371-cb5c-47c5-b5fe-67e15da7ae91">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4470,7 +4490,7 @@ start = message
     <title>DICOM Instances Accessed</title>
   
   <para xml:id="para_63d61577-37e5-416f-9f50-59d4a1f4c5ac">This message describes the event of DICOM SOP Instances being viewed, utilized, updated, or deleted. This message shall only include information about a single patient and can be used to summarize all activity for several studies for that patient. This message records the studies to which the instances belong, not the individual instances.</para>
-  <para xml:id="para_7f622f1a-c948-4fce-bf06-0445172f75fd">If all instances within a study are deleted, then the EV(110105, DCM, "DICOM Study Deleted") event shall be used, see <xref linkend="sect_A.5.3.8" xrefstyle="select: label"/>.</para>
+  <para xml:id="para_7f622f1a-c948-4fce-bf06-0445172f75fd">If all instances within a study are deleted, then the EV<olink targetdoc="PS3.16" targetptr="DCM_110105">(110105, DCM, "DICOM Study Deleted")</olink> event shall be used, see <xref linkend="sect_A.5.3.8" xrefstyle="select: label"/>.</para>
     <table frame="box" label="A.5.3.6-1" rules="all" xml:id="table_A.5.3.6-1">
     <caption>Audit Message for DICOM Instances Accessed</caption>
     <thead>
@@ -4501,7 +4521,8 @@ start = message
         <para xml:id="para_d772302f-4e63-4be8-99b4-b6142b1eb285">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_50781651-8080-4421-9b3e-9303672cb776">EV (110103, DCM, "DICOM Instances Accessed")</para>
+        <para xml:id="para_50781651-8080-4421-9b3e-9303672cb776">EV <olink targetdoc="PS3.16" targetptr="DCM_110103">(110103, DCM, "DICOM Instances Accessed")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4679,7 +4700,8 @@ start = message
         <para xml:id="para_2a5d4379-bca1-43a0-8fea-4747781331cf">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_681a4b2c-0afd-4689-acde-abe3487f5021">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_681a4b2c-0afd-4689-acde-abe3487f5021">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4969,7 +4991,8 @@ start = message
         <para xml:id="para_ad58a90b-b5a6-44eb-a824-a01f9130dba9">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f2f9c1fb-a554-41f6-9168-95d6e507dc8c">EV (110104, DCM, "DICOM Instances Transferred")</para>
+        <para xml:id="para_f2f9c1fb-a554-41f6-9168-95d6e507dc8c">EV <olink targetdoc="PS3.16" targetptr="DCM_110104">(110104, DCM, "DICOM Instances Transferred")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -5076,7 +5099,8 @@ start = message
         <para xml:id="para_6223ae61-1b16-466f-891a-4079198c42d0">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8027f1b5-fd8d-499c-aa1e-192ad7bf6ae8">EV (110153, DCM, "Source Role ID")</para>
+        <para xml:id="para_8027f1b5-fd8d-499c-aa1e-192ad7bf6ae8">EV <olink targetdoc="PS3.16" targetptr="DCM_110153">(110153, DCM, "Source Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -5157,7 +5181,8 @@ start = message
         <para xml:id="para_25951589-510e-4e36-899d-69d9379842ee">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1685eae5-6831-4d3d-80da-107b5bed8543">EV (110152, DCM, "Destination Role ID")</para>
+        <para xml:id="para_1685eae5-6831-4d3d-80da-107b5bed8543">EV <olink targetdoc="PS3.16" targetptr="DCM_110152">(110152, DCM, "Destination Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -5308,7 +5333,8 @@ start = message
         <para xml:id="para_44ba967a-6e7a-4a5f-923d-695bd871a032">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_99d1a89d-96f4-458e-84f8-8f8b4b2892d0">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_99d1a89d-96f4-458e-84f8-8f8b4b2892d0">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -5595,7 +5621,8 @@ start = message
         <para xml:id="para_f84c10bb-2c19-4107-9320-049ad841fae9">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_33d2f973-0f3e-48e5-aa85-f387a6077f63">EV (110105, DCM, "DICOM Study Deleted")</para>
+        <para xml:id="para_33d2f973-0f3e-48e5-aa85-f387a6077f63">EV <olink targetdoc="PS3.16" targetptr="DCM_110105">(110105, DCM, "DICOM Study Deleted")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -5768,7 +5795,8 @@ start = message
         <para xml:id="para_9daf6086-50f6-466a-b46c-7fa9c0f9a8b6">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_998c27bf-1127-4aec-9f13-6beb75a91a4e">EV (110180, DCM, "Study Instance UID")</para>
+        <para xml:id="para_998c27bf-1127-4aec-9f13-6beb75a91a4e">EV <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6058,7 +6086,8 @@ start = message
         <para xml:id="para_bfe44196-4aee-4412-8a3b-5418403ef8d2">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_a22b7537-7613-4530-914a-5bd9311f3692">EV (110108, DCM, "Network Entry")</para>
+        <para xml:id="para_a22b7537-7613-4530-914a-5bd9311f3692">EV <olink targetdoc="PS3.16" targetptr="DCM_110108">(110108, DCM, "Network Entry")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6102,7 +6131,8 @@ start = message
         <para xml:id="para_10a8b0ae-ff87-4a87-8f2a-ebe00e42bea6">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_b97d41d7-ccc4-43be-bbee-ab12df8039f7">EV (110124, DCM, "Attach")EV (110125, DCM, "Detach")</para>
+        <para xml:id="para_b97d41d7-ccc4-43be-bbee-ab12df8039f7">EV <olink targetdoc="PS3.16" targetptr="DCM_110124">(110124, DCM, "Attach")</olink>EV <olink targetdoc="PS3.16" targetptr="DCM_110125">(110125, DCM, "Detach")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6248,7 +6278,8 @@ start = message
         <para xml:id="para_1834d3c7-5562-4295-b5aa-3fa922361a33">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_d6cba1f7-0f12-412c-82a1-f1488d90a0e5">EV (110112, DCM, "Query")</para>
+        <para xml:id="para_d6cba1f7-0f12-412c-82a1-f1488d90a0e5">EV <olink targetdoc="PS3.16" targetptr="DCM_110112">(110112, DCM, "Query")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6351,7 +6382,8 @@ start = message
         <para xml:id="para_3118387b-8510-4b54-8e7e-646aa76b214a">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_c459b004-300f-423c-b2ed-e3e1c63a3b65">EV (110153, DCM, "Source Role ID")</para>
+        <para xml:id="para_c459b004-300f-423c-b2ed-e3e1c63a3b65">EV <olink targetdoc="PS3.16" targetptr="DCM_110153">(110153, DCM, "Source Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6432,7 +6464,8 @@ start = message
         <para xml:id="para_be098bce-e4a5-4414-9ba2-484f33415777">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_44c3f53d-f23d-48d2-9a79-ddf61372a74b">EV (110152, DCM, "Destination Role ID")</para>
+        <para xml:id="para_44c3f53d-f23d-48d2-9a79-ddf61372a74b">EV <olink targetdoc="PS3.16" targetptr="DCM_110152">(110152, DCM, "Destination Role ID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6583,7 +6616,8 @@ start = message
         <para xml:id="para_14eac641-b549-4fa5-b76e-66c6c3586cbb">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_4583bbf9-f48a-421f-8a04-52edd14566a1">DT (110181, DCM, "SOP Class UID")</para>
+        <para xml:id="para_4583bbf9-f48a-421f-8a04-52edd14566a1">DT <olink targetdoc="PS3.16" targetptr="DCM_110181">(110181, DCM, "SOP Class UID")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6605,7 +6639,7 @@ start = message
         <para xml:id="para_8eb4b665-5b96-4700-819e-ec1b8b5151f4">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_7df1d044-a75c-4a2d-b7fc-15170443b3b9">If the ParticipantObjectIDTypeCode is (110181, DCM, "SOP Class UID"), then this field shall hold the UID of the SOP Class being queried</para>
+        <para xml:id="para_7df1d044-a75c-4a2d-b7fc-15170443b3b9">If the ParticipantObjectIDTypeCode is <olink targetdoc="PS3.16" targetptr="DCM_110181">(110181, DCM, "SOP Class UID")</olink>, then this field shall hold the UID of the SOP Class being queried</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6627,7 +6661,7 @@ start = message
         <para xml:id="para_17659d79-1c30-4d22-8dd6-d4193d9ed2b1">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_89c0a88f-db41-4f5a-94cb-3e75859c5b40">If the ParticipantObjectIDTypeCode is (110181, DCM, "SOP Class UID"), then this field shall hold the Dataset of the DICOM query, xs:base64Binary encoded. Otherwise, it shall be the query in the format of the protocol used.</para>
+        <para xml:id="para_89c0a88f-db41-4f5a-94cb-3e75859c5b40">If the ParticipantObjectIDTypeCode is <olink targetdoc="PS3.16" targetptr="DCM_110181">(110181, DCM, "SOP Class UID")</olink>, then this field shall hold the Dataset of the DICOM query, xs:base64Binary encoded. Otherwise, it shall be the query in the format of the protocol used.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -6638,7 +6672,8 @@ start = message
         <para xml:id="para_c073d38d-53cc-4247-9153-e17f3746526b">MC</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_e8c1c378-bb1a-4703-91a8-9d579fde793c">Required if the ParticipantObjectIDTypeCode is (110181, DCM, "SOP Class UID")</para>
+        <para xml:id="para_e8c1c378-bb1a-4703-91a8-9d579fde793c">Required if the ParticipantObjectIDTypeCode is <olink targetdoc="PS3.16" targetptr="DCM_110181">(110181, DCM, "SOP Class UID")</olink>
+</para>
         <para xml:id="para_49f2b246-07ba-4afa-b87f-4ee3cae14eaf">A ParticipantObjectDetail element with the XML attribute "TransferSyntax" shall be present. The value of the Transfer Syntax attribute shall be the UID of the transfer syntax of the query. The element contents shall be xs:base64Binary encoding. The Transfer Syntax shall be a DICOM Transfer Syntax.</para>
       </td>
     </tr>
@@ -6760,7 +6795,8 @@ start = message
         <para xml:id="para_d349f2f5-5010-48df-8cb1-7bd13a9e6071">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f3b49b08-bf93-4716-880c-57a3c9819e4c">EV (110113, DCM, "Security Alert")</para>
+        <para xml:id="para_f3b49b08-bf93-4716-880c-57a3c9819e4c">EV <olink targetdoc="PS3.16" targetptr="DCM_110113">(110113, DCM, "Security Alert")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -7017,7 +7053,7 @@ start = message
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_49b8e81e-c66e-4662-a08c-a700dd8e3dae">Defined Terms:</para>
-        <para xml:id="para_124d0112-bdb2-4dd5-9bb7-de43ef237517">12 = URI(110182, DCM, "Node ID") = Node Identifier</para>
+        <para xml:id="para_124d0112-bdb2-4dd5-9bb7-de43ef237517">12 = URI<olink targetdoc="PS3.16" targetptr="DCM_110182">(110182, DCM, "Node ID")</olink> = Node Identifier</para>
       </td>
     </tr>
     <tr valign="top">
@@ -7040,7 +7076,7 @@ start = message
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_2263783b-689b-4fe7-84fa-1bc74dc0ed1b">For a ParticipantObjectIDTypeCode of 12 (URI), then this value shall be the URI of the file or other resource that is the subject of the alert.</para>
-        <para xml:id="para_6c7b430c-9eed-4b42-ba0b-d8de5a5bd5b6">For a ParticipantObjectIDTypeCode of (110182, DCM, "Node ID") then the value shall include the identity of the node that is the subject of the alert either in the form ofnode_name@domain_nameor as an IP address.</para>
+        <para xml:id="para_6c7b430c-9eed-4b42-ba0b-d8de5a5bd5b6">For a ParticipantObjectIDTypeCode of <olink targetdoc="PS3.16" targetptr="DCM_110182">(110182, DCM, "Node ID")</olink> then the value shall include the identity of the node that is the subject of the alert either in the form ofnode_name@domain_nameor as an IP address.</para>
         <para xml:id="para_7cca6ab2-10d0-4e94-a29e-3a7a0287686e">Otherwise, the value shall be an identifier of the type specified by ParticipantObjectIDTypeCode of the subject of the alert.</para>
       </td>
     </tr>
@@ -7195,7 +7231,8 @@ start = message
         <para xml:id="para_ae242932-1587-4fbc-be92-22d2c9bbc2e3">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_61ca1586-1094-441f-ba91-1cf004a0ff3e">EV (110114, DCM, "User Authentication")</para>
+        <para xml:id="para_61ca1586-1094-441f-ba91-1cf004a0ff3e">EV <olink targetdoc="PS3.16" targetptr="DCM_110114">(110114, DCM, "User Authentication")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -7240,8 +7277,10 @@ start = message
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_b3d2b953-9700-4cd6-88a0-fc08c0795c16">Defined Terms:</para>
-        <para xml:id="para_2e76cdb0-8409-4fd2-bb1d-b792c8ff3305">EV (110122, DCM, "Login")</para>
-        <para xml:id="para_dc8eac5f-70c9-4b27-8843-1151d4483643">EV (110123, DCM, "Logout")</para>
+        <para xml:id="para_2e76cdb0-8409-4fd2-bb1d-b792c8ff3305">EV <olink targetdoc="PS3.16" targetptr="DCM_110122">(110122, DCM, "Login")</olink>
+</para>
+        <para xml:id="para_dc8eac5f-70c9-4b27-8843-1151d4483643">EV <olink targetdoc="PS3.16" targetptr="DCM_110123">(110123, DCM, "Logout")</olink>
+</para>
       </td>
     </tr>
     <tr valign="top">

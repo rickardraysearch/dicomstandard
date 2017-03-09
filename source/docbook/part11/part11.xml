@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.11" version="5.0" xml:id="PS3.11">
   <title>PS3.11</title>
-  <subtitle>DICOM PS3.11 2016e - Media Storage Application Profiles</subtitle>
+  <subtitle>DICOM PS3.11 2017a - Media Storage Application Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -2236,8 +2236,8 @@
                   <para xml:id="para_ab5533f2-1ca6-4a80-8f74-84f5fe06ef38">MONOCHROME2</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_cb7cd602-5ee1-465a-bda0-7f1d073e90e6">Uncompressed RLE</para>
-<para xml:id="para_f8e87ae4-75f1-45c4-9e0b-5b699272ab25">Lossless Image Compression</para>
+                  <para xml:id="para_cb7cd602-5ee1-465a-bda0-7f1d073e90e6">Uncompressed</para>
+                  <para xml:id="para_f8e87ae4-75f1-45c4-9e0b-5b699272ab25">RLE Lossless Image Compression</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_54e9a5fe-f87e-41f6-a533-a84f31b9959f">1.2.840.10008.1.2.1</para>
@@ -2548,7 +2548,7 @@
       <title>Clinical Context</title>
       <para xml:id="para_f30fa33a-5801-4fbe-b5b6-2d362499a0b6">This Application Profile facilitates the interchange of images and related data on CD-R, DVD-RAM and BD media. Typical interchange would be between acquisition devices, archives and workstations.</para>
       <para xml:id="para_25d54b95-2d64-4ba8-9893-1b2002f20511">This Application Profile facilitates the creation of a multi-modality medium for image interchange, useful for clinical, patient record, teaching and research applications, within and between institutions.</para>
-      <para xml:id="para_db833263-4cb5-4db3-a8e1-8728c77f61e5">This profile is intended only for general purpose applications. It is not intended as a replacement for specific Application Profiles that may be defined for a particular clinical context. The latter may support compression transfer syntaxes, limitations on the form and content of SOP Class instances, and specific media choices that preclude the use of the General Purpose Interchange Profile.</para>
+      <para xml:id="para_db833263-4cb5-4db3-a8e1-8728c77f61e5">This profile is intended only for general purpose applications. It is not intended as a replacement for specific Application Profiles that may be defined for a particular clinical context. The latter may support compression Transfer Syntaxes, limitations on the form and content of SOP Class instances, and specific media choices that preclude the use of the General Purpose Interchange Profile.</para>
       <note>
         <para xml:id="para_fbcde129-808e-45d4-a14b-e9fc600ef739">The creation of a CD, DVD-RAM or BD is considerably more complex than the reading thereof. Therefore the clinical context for this Application profile is likely to be asymmetric, with a sophisticated File Set Creator and relatively simple File Set Readers.</para>
       </note>
@@ -6048,7 +6048,7 @@
             </tr>
           </tbody>
         </table>
-        <para xml:id="para_ddc9064b-1efd-4a44-90d5-dcdf0fee1a96">Equipment claiming conformance to these Application Profiles shall list the subset of Media Storage SOP Classes and transfer syntaxes that it supports in its Conformance Statement.</para>
+        <para xml:id="para_ddc9064b-1efd-4a44-90d5-dcdf0fee1a96">Equipment claiming conformance to these Application Profiles shall list the subset of Media Storage SOP Classes and Transfer Syntaxes that it supports in its Conformance Statement.</para>
       </section>
       <section label="L.3.2" status="3" xml:id="sect_L.3.2">
         <title>Medium Format</title>

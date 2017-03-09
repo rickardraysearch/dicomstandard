@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2016e - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2017a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -27623,7 +27623,7 @@
             <para xml:id="para_717c8bec-8339-4517-a512-ff33dbae1ba0">The new Composite Instance shall include the Frame Extraction Module, which shall contain appropriate Attributes from the identifier of the C-GET or C-MOVE request that caused this instance to be created. If the Frame Extraction Module already exists in the source Composite Instance, then a new item shall be appended as an additional item into the Frame Extraction Sequence.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_832d415d-70a2-4220-8cb5-0006dcbeae62">The new Composite Instance shall contain the Contributing Equipment Sequence (0018,A001). If the source Composite Object contains the Contributing Equipment Sequence, then a new Item shall be appended to the copy of the sequence in the new Composite Instance, and if the source Composite Object does not contain the Contributing Equipment Sequence, then it shall be created, containing one new Item. In either case, the new Item shall describe the equipment that is extracting the frames, and the Purpose of Reference Code Sequence (0040,A170) within the Item shall be (109105, DCM, "Frame Extracting Equipment").</para>
+            <para xml:id="para_832d415d-70a2-4220-8cb5-0006dcbeae62">The new Composite Instance shall contain the Contributing Equipment Sequence (0018,A001). If the source Composite Object contains the Contributing Equipment Sequence, then a new Item shall be appended to the copy of the sequence in the new Composite Instance, and if the source Composite Object does not contain the Contributing Equipment Sequence, then it shall be created, containing one new Item. In either case, the new Item shall describe the equipment that is extracting the frames, and the Purpose of Reference Code Sequence (0040,A170) within the Item shall be <olink targetdoc="PS3.16" targetptr="DCM_109105">(109105, DCM, "Frame Extracting Equipment")</olink>.</para>
           </listitem>
         </itemizedlist>
         <note>
@@ -44183,7 +44183,7 @@
             <para xml:id="para_6ffeba06-2180-4d14-8e6a-4b257e9a2bda">reference to an image depicting the view described by the Presentation State</para>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_e8bff42f-c6fb-4dd4-8f22-4fea9be1e778">Each Volumetric Presentation State corresponds to a single view (equivalent to an Image Box in a Hanging Protocol or Structured Display). If multiple Volumetric Presentation States are intended to be displayed together (e.g. a set of orthogonal MPR views) these Presentation States can be grouped by assigning them to a Display Collection. However, any detailed information about how a set of views should be presented can only be described by a Structured Display instance or a Hanging Protocol.</para>
+        <para xml:id="para_e8bff42f-c6fb-4dd4-8f22-4fea9be1e778">Each Volumetric Presentation State corresponds to a single view (equivalent to an Image Box in a Hanging Protocol or Structured Display). If multiple Volumetric Presentation States are intended to be displayed together (e.g., a set of orthogonal MPR views) these Presentation States can be grouped by assigning them to a Display Collection. However, any detailed information about how a set of views should be presented can only be described by a Structured Display instance or a Hanging Protocol.</para>
         <para xml:id="para_1db16453-e7eb-43fb-8528-42082550a0e6">The Planar MPR Volumetric Presentation State refers to the multi-planar geometry and grayscale or color image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to presentation values (P-Values) or Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device.</para>
         <para xml:id="para_8744e9d6-d61a-48c5-804e-0ab0c83e150e">The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
         <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this standard.</para>
@@ -44474,7 +44474,7 @@
             <para xml:id="para_7a4e8492-2a4e-4b15-9dc8-e0e2694ba521">Anatomic Region Sequence (0008,2218) specifies the anatomic region covered by the Volumetric Presentation State</para>
           </listitem>
           <listitem>
-            <para xml:id="para_237f880a-b16a-43a8-9258-3085647efabc">View Code Sequence (0054,0220) describes the view of the anatomic region of interest (e.g. Coronal, Oblique transverse, etc.)</para>
+            <para xml:id="para_237f880a-b16a-43a8-9258-3085647efabc">View Code Sequence (0054,0220) describes the view of the anatomic region of interest (e.g., Coronal, Oblique transverse, etc.)</para>
           </listitem>
           <listitem>
             <para xml:id="para_8cc93141-1d5a-4483-af50-f33ba0356397">Presentation Display Collection UID (0070,1101) identifies the Presentation State as one of a set of views intended to be displayed together</para>

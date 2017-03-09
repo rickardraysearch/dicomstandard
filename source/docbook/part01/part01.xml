@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2016e - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2017a - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1233,8 +1233,9 @@
       invoked:</para>
     <para xml:id="para_803149b0-2dba-41e7-a472-4a25b1c89d71">NEMA PS3 / ISO 12052, Digital Imaging and Communications in Medicine (DICOM) Standard,
       National Electrical Manufacturers Association, Rosslyn, VA, USA (available free at <link xl:href="http://medical.nema.org/"/>)</para>
+    <para xml:id="para_7a2a65fd-ab52-4916-a401-f4ac4a314556">The requirements of this section do not override the requirement to provide a DICOM Conformance Statement as described in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
     <para xml:id="para_ac213f23-6621-4a16-b519-c5846ef26809">The following forms are preferred for references to units of conformance to the
-      Standard:</para>
+      Standard when they are made outside the context of a DICOM Conformance Statement (e.g., in customer requirements):</para>
     <para xml:id="para_75989daf-c499-4f83-bf67-5ef4e16f85ed">
       <itemizedlist>
         <listitem>
@@ -1297,6 +1298,15 @@
               </para>
             </listitem>
           </itemizedlist>
+        </listitem>
+        <listitem>
+          <para xml:id="para_635b6cb1-9ebe-42b2-a3f3-5230adb7b6c5">Such references are not permitted in lieu of a Conformance Statement for a product.
+            For example, a product that reads or creates DICOM interchange media is required to have a Conformance Statement
+            (as described in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>)
+            that enumerates the Media Application Profiles it implements.
+            A statement in some other format, or a document that describes that a product supports recording of files of a particular SOP Class defined in
+            <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>,
+            is not sufficient as an alternative to a Conformance Statement. </para>
         </listitem>
       </orderedlist>
     </note>

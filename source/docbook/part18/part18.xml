@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2016e - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2017a - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -2057,7 +2057,7 @@
                   <para xml:id="para_71343ee3-1c1c-484d-930b-d54ca61780f1">1.2.840.10008.1.2.4.100</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_66cdf38f-6899-40d5-a67e-fc64731901a3">MPEG2 Main Profile @ Main Level</para>
+                  <para xml:id="para_66cdf38f-6899-40d5-a67e-fc64731901a3">MPEG2 Main Profile / Main Level</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_beec600d-ac66-47a9-8de7-074e48ccbc13">optional</para>
@@ -2074,7 +2074,7 @@
                   <para xml:id="para_629841b2-4a6e-45d5-8b69-2afca2f249de">1.2.840.10008.1.2.4.101</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_78f2849d-6552-45ce-ab1e-e3772e7e028b">MPEG2 Main Profile @ High Level</para>
+                  <para xml:id="para_78f2849d-6552-45ce-ab1e-e3772e7e028b">MPEG2 Main Profile / High Level</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_0cb58414-4e42-474e-ab0c-d9bd489970a5">optional</para>
@@ -2565,7 +2565,7 @@
                   <para xml:id="para_aa49a952-24db-446a-9bbe-ded9eb23396d">1.2.840.10008.1.2.4.100</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_dc80a636-ff9c-410a-8a9f-d5bdfef2c2b3">MPEG2 Main Profile @ Main Level</para>
+                  <para xml:id="para_dc80a636-ff9c-410a-8a9f-d5bdfef2c2b3">MPEG2 Main Profile / Main Level</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_8d203c97-6bd9-48f2-ac4e-fc68b8dfc678">optional</para>
@@ -2576,7 +2576,7 @@
                   <para xml:id="para_d9532f0b-b40e-4222-b1b8-95085669a7a2">1.2.840.10008.1.2.4.101</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_8d72febe-a3ea-46d3-ae92-e64a1bb226ed">MPEG2 Main Profile @ High Level</para>
+                  <para xml:id="para_8d72febe-a3ea-46d3-ae92-e64a1bb226ed">MPEG2 Main Profile / High Level</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_357bae24-e5db-4f11-9444-0a53dd8e4a25">default</para>
@@ -2825,7 +2825,7 @@
 ]]></programlisting>
             <para xml:id="para_47b15bed-5245-430b-a8b1-239cc7b8833d">Support for the transfer syntax and charset media type parameters is required for RS services.</para>
             <para xml:id="para_ce6896f4-2669-49f5-b2db-e6574a0ba0ec">Support for the transfer syntax and charset media type parameters is optional for the WS Services.</para>
-            <para xml:id="para_3690fc78-058e-42ad-a632-5da6de4528dd">Support for the "transfer-syntax" and "charset" parameters is forbidden for URI Services (i.e. they may not present in the request or the response).</para>
+            <para xml:id="para_3690fc78-058e-42ad-a632-5da6de4528dd">Support for the "transfer-syntax" and "charset" parameters is forbidden for URI Services (i.e., they may not present in the request or the response).</para>
           </section>
         </section>
       </section>
@@ -11627,6 +11627,1614 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </section>
       </section>
     </section>
+
+  <section label="6.10" status="2" xml:id="sect_6.10">
+    <title>RS Non-patient Instance (NPI) Storage</title>
+    <para xml:id="para_13820a12-668b-40ec-bd87-6ab07fcbd5a3">The RS Non-Patient Instance (NPI) Storage Services define a set of RESTful transactions that enable a user agent to retrieve, store, and search an origin server for instances that are not related to a patient.</para>
+    <para xml:id="para_618f7f6d-79a3-49e8-9c70-431532999b5e">An NPI Service manages a collection of resources belonging to the categories specified in
+      <xref linkend="sect_6.10.1" xrefstyle="select: label"/>.
+      All NPI Storage Service origin servers shall support the Retrieve Capabilities, Retrieve, and Search transactions. Support for the Store transaction is optional. All NPI Storage Service user agents one or more of the Retrieve Capabilities, Retrieve, Store, or Search transactions.</para>
+    <section label="6.10.1" status="3" xml:id="sect_6.10.1">
+      <title>Resources</title>
+      <para xml:id="para_5933be21-e7f5-4625-b60b-7e441c127b12">An NPI Service manages resources from the same NPI Category. The target resource URIs have the following templates:</para>
+      <informaltable frame="void" rules="none">
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ceddb63b-c9f9-452e-a201-3d4b7bbe96f3">/{npi-name}</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_782ae21e-69bc-43fb-9541-bd23b823c7a6">/{npi-name}/{uid}</para>
+            </td>
+          </tr>
+        </tbody>
+      </informaltable>
+      <para xml:id="para_28dffd85-4a6b-4810-9575-9f1230ead262">Where</para>
+      <informaltable frame="void" rules="none">
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cb8643d8-886f-44d5-99da-5fa3622a7906">npi-name</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9ed7ce9c-e1ce-4d41-a214-4c06c31510a1">= "color-palettes"</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eb00bd58-22c6-4db9-a7bf-5955770c7b21"/>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_1418ddf7-3a8a-48f5-b4c1-f3f14575b5fe">/ "defined-procedure-protocols"</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_204364f6-1d5f-423a-8397-0a24d1e78c66"/>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9d1caa35-0b41-4324-9f7b-5c505c37716d">/ "hanging-protocols"</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c5a0ee1b-ee95-41e5-8a94-68e33bde9e81"/>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_db9773c1-5b36-445c-b7ff-cc3e9eaffe4d">/ "implant-templates"</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b54abbce-d293-4b36-9833-c240f25d6789">uid</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3d2597a4-1d83-4742-8b07-e5ddfcb9b502">; is the Unique Identifier of an NPI Instance</para>
+            </td>
+          </tr>
+        </tbody>
+      </informaltable>
+      <para xml:id="para_08d3a251-8c29-445a-aa2a-4378e4ee7f8f">
+<xref linkend="table_6.10.1-1" xrefstyle="select: label"/> contains the templates for the NPI Resource Categories.
+        It also includes the <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> Section in which the corresponding IOD is defined.</para>
+      <table frame="box" label="6.10.1-1" rules="all" xml:id="table_6.10.1-1">
+        <caption>Resource Categories, URI Templates and Descriptions</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_b2e3f528-3af2-42a3-9819-34c6b536ca74">Resource Category</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_eb18e67e-5df8-4843-af87-a2c363c1a390">URI Template and Description</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_6fd0d0cf-f3c2-4617-9e8c-87f9d1995ed1">IOD</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_73c62f24-fe03-42ec-ad76-1933162a0719">Storage Class</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_7ad3c163-5117-4fe3-b937-bccf48755808">Information Model</para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_1969bc81-b001-47f1-98c4-4d5e17165ebe">Color Palette</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2b3591be-f3ff-4d4a-b774-fb02fdcb377f">/color-palettes{/uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3e44b8ef-ab1a-4abb-8a15-fab01e50220a">
+<olink targetdoc="PS3.3" targetptr="sect_A.58" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2970d25a-6612-47e2-8088-50aaf5264002">
+<olink targetdoc="PS3.4" targetptr="chapter_GG" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_03266afb-e1fc-4530-b191-12eb64127dda">
+<olink targetdoc="PS3.4" targetptr="sect_X.1.3" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_31468331-619e-40c9-88d6-6c7b4b15f61a">Defined Procedure Protocol</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_fa9b39bb-dc04-46c0-9f67-b059fdd45487">/defined-procedure-protocols{/uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_1fd65c8c-96ee-4f4a-9dc0-20fdedc9b7c1">
+<olink targetdoc="PS3.3" targetptr="sect_A.82" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_40cee59e-cefe-4304-96f3-6ee532f56fbb">
+<olink targetdoc="PS3.4" targetptr="chapter_GG" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_95350933-436b-48e4-bf62-1d2c14ff0e95">
+<olink targetdoc="PS3.4" targetptr="sect_HH.1.3" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c009b012-dd8c-4783-a7b5-38907a324f39">Hanging Protocol</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_92b11fb5-9ccc-4244-87d1-435bba4e669f">/hanging-protocols{/uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b1a3bda1-d638-49c3-8381-38e01b400ab4">
+<olink targetdoc="PS3.3" targetptr="sect_A.44" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9655c0f9-ea45-4153-b01e-a25bf602b581">
+<olink targetdoc="PS3.4" targetptr="chapter_GG" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ba942590-7851-4564-a4d1-ba890fa27c96">
+<olink targetdoc="PS3.4" targetptr="sect_U.1.3" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_190862d0-dd6e-44ce-a67f-d578d009c087">Implant Template</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_df790338-e569-4dba-912b-e19321954a12">/implant-templates{/uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4f3b5edd-6f0c-4c9d-b6c8-61141c5c48c0">
+<olink targetdoc="PS3.3" targetptr="sect_A.61" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5a464971-cf8d-454f-b31d-863867ccd29a">
+<olink targetdoc="PS3.4" targetptr="chapter_GG" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5648f225-9534-4882-a0b6-9242865bdb47">
+<olink targetdoc="PS3.4" targetptr="sect_BB.1.3" xrefstyle="select: docname labelnumber"/>
+</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <para xml:id="para_e07efe51-06e0-43a5-ada8-b784544b19d8">The NPI SOP Classes are listed in <olink targetdoc="PS3.4" targetptr="table_GG.3-1" xrefstyle="select: docname label"/>.</para>
+    </section>
+    <section label="6.10.2" status="3" xml:id="sect_6.10.2">
+      <title>General Query Parameters</title>
+      <para xml:id="para_d591aa0a-b4ab-4301-b631-23bef433dd92">The Query Parameters in this section can be used with all NPI transactions.</para>
+      <section label="6.10.2.1" status="4" xml:id="sect_6.10.2.1">
+        <title>Accept</title>
+        <para xml:id="para_e526995b-28b4-4b0f-84d2-61953747d415">The origin server shall support the Accept query parameter for all NPI transactions. See <xref linkend="sect_6.1.1.5"/>.</para>
+      </section>
+      <section label="6.10.2.2" status="4" xml:id="sect_6.10.2.2">
+        <title>Character Set</title>
+        <para xml:id="para_8c599d5d-a69b-4924-9fba-f32252c08ec5">The origin server shall support the Charset query parameter for all NPI transactions. See <xref linkend="sect_6.1.2.2"/>.</para>
+      </section>
+    </section>
+    <section label="6.10.3" status="3" xml:id="sect_6.10.3">
+      <title>Transactions</title>
+      <para xml:id="para_20a6f707-ddeb-4fdb-9ec7-3b634573ddad">The NPI Service defines the transactions listed in <xref linkend="table_6.10.3-1" xrefstyle="select: label"/>
+</para>
+      <table frame="box" label="6.10.3-1" rules="all" xml:id="table_6.10.3-1">
+        <caption>NPI Service Transactions</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="2">
+              <para xml:id="para_ac2dc79b-381e-4a53-86ee-d15f0ac4cc18">
+                <emphasis role="bold">Transaction</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="2">
+              <para xml:id="para_c485382b-6c9c-4f7d-ac51-59c7ef064e0d">
+                <emphasis role="bold">Method</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="2">
+              <para xml:id="para_5eebdd3f-4869-4f6e-95c6-04658d092255">
+                <emphasis role="bold">Resource</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="2" rowspan="1">
+              <para xml:id="para_5d91d73f-ff53-4bbe-96ff-40cba3be9216">
+                <emphasis role="bold">Payload</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="2">
+              <para xml:id="para_0dc2655a-f0bc-4ef5-83d8-343c4a3f87b8">
+                <emphasis role="bold">Description</emphasis>
+              </para>
+            </th>
+          </tr>
+          <tr valign="top">
+            <th align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c6261822-cd07-4b19-bff0-fb7bec3c9ed9">Request</para>
+            </th>
+            <th align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cc7ffa98-beb6-4311-b10b-972632816363">
+                <emphasis role="bold">Response</emphasis>
+              </para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_156c2327-9f4e-4b0c-976c-f4bb09e5d99e">RetrieveCapabilities</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_dcc9c1d1-0647-4b7e-a687-47ef1bfc7802">OPTIONS</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b77b8531-6695-4049-acc7-1a4049af3aaf">/</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c5327d85-4971-4a8b-9796-58048324f553">N/A</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_fda89919-251c-4676-89cc-5ee6d460020e">Capabilities Description</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5ed02599-8e78-457d-bbee-dca8da637f60">Retrieves a description of the capabilities of the NPI Service, including transactions, resources, query parameters, etc.</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_efdab87a-91a5-467d-8b87-fbfcc537229e">Retrieve</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_10e82498-93a2-4665-9ce0-96c20416d77a">GET</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_87c088a6-0028-466a-ac8e-1f2e5718441f">/{npi-name}/{uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_98e369a5-ec42-45a7-9d52-739e1f25f147">N/A</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_475494ea-00a9-4e4e-a64d-da9dca546e88">Instance and/or Status Report</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4cd782b5-96f4-4205-9d48-3155e7287d7c">Retrieves an Instance, specified by the target resource in an Acceptable DICOM Media Type.</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b0076f80-1cc7-4224-8f63-a8eceb1eb1e4">Store</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_45cf3d4c-7453-4265-b755-3f81f45c1373">POST</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_269485cf-bff3-4133-a3f3-4b7ddc39ca21">/{npi-name}{/uid}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_de226ebf-ceb5-4244-9bfc-ccd25eb7a996">Instance(s)</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d87f74f6-5a23-463d-b159-fcefc5c12a0d">Status Report</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_748e8438-f50a-4cf1-ac32-76ad8b954abd">Stores one or more DICOM Instances in a DICOM media type, contained in the request payload, in the location referenced by the target resource URL.</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f9a21d3b-a367-433a-99ac-3d3edf8cc4a6">Search</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8792fbae-4585-4b9c-b587-df7fef42fcfc">GET</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d68ffa12-c3e2-4bdf-8e06-bfd00e59dc47">/{npi-name}</para>
+              <para xml:id="para_e8d1af03-a287-403a-bd20-b94513fa9f48">?{params*}</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_aef2baa4-5373-4210-873c-a6b4d9a14bf7">N/A</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_03d15b72-1705-47ae-866b-b512a2c8b7d9">Result(s) and/or Status Report</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_500cad97-52c7-4662-a6f1-1cfd4b5563e7">Searches the target resource for Instances that match the search parameters and returns a list of matches in an Acceptable DICOM Media Type.</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <para xml:id="para_c64177e5-d7b6-4e6f-8a14-148dc32c0f01">The npi-name specifies the type of resource(s) contained in the payload.</para>
+      <para xml:id="para_3956e2e0-b7ea-4a62-af3a-dc436734b0df">
+<xref linkend="table_6.10.3-2" xrefstyle="select: label"/> shows the target resources permitted for each transaction.</para>
+      <table frame="box" label="6.10.3-2" rules="all" xml:id="table_6.10.3-2">
+        <caption>Resources by Transaction</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_0d61a78d-e23c-4604-8fed-872d2fcdb979">
+                <emphasis role="bold">Resource</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_cf35fc84-a47d-4961-befa-44d283c6146d">
+                <emphasis role="bold">URI</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_582ccdf8-7969-4389-b801-26d8d4e9304d">
+                <emphasis role="bold">Retrieve</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_510b4dee-bbdf-472e-b484-fb3ff0f9e8de">
+                <emphasis role="bold">Store</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_3e2cb39b-002f-4e4c-9ee8-4c111656cbd5">
+                <emphasis role="bold">Search</emphasis>
+              </para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_f9c0e8be-d662-4d3a-a178-fe66197b2c1b">
+                <emphasis role="bold">Capabilities</emphasis>
+              </para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d3a24916-2aac-4211-87d6-e56ab00a7b8a">NPI Service</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e8c51093-8fd5-4a96-9f3d-d0c361a719a4">/</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_f85deb81-a2cf-4d51-92b2-5f024630051e">X</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eadd2054-d30d-464c-a07e-7bbce17c1cdf">All Instances</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_91b87b7e-1779-4aa6-8233-67082cdff977">/{npi-name}</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_f7d20a97-fe5f-4ad3-9b85-b89829528fd7">X</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_aa6909f6-2024-4f29-afc2-2eb9be8d63f9">X</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1"/>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ad79ef0d-ff02-4c9f-a050-cd888f5c0967">Instance</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e5ba3f6e-e5e4-4054-8174-08cbde96d070">/{npi-name}/{uid}</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_fd538db7-aa73-40bd-81cd-4d33987c6bd2">X</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+              <para xml:id="para_3ac0e241-c909-4b02-9201-84d85c568200">X</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+          </tr>
+        </tbody>
+      </table>
+      <section label="6.10.3.1" status="4" xml:id="sect_6.10.3.1">
+        <title>Retrieve Capabilities Transaction</title>
+        <para xml:id="para_ae11a5c9-4caa-43f5-9d46-b66433be7d9c">The Retrieve Capabilities transaction retrieves a machine-readable description of the NPI service implemented by an origin server. The response contains a machine-readable Capabilities Description. The Capabilities Description describes the transactions, resources, representations, etc. that are supported by the service(s).</para>
+        <para xml:id="para_c22892bb-8385-46bb-8af5-d7cec69de864">An origin server implementation of an NPI Service shall support the Retrieve Capabilities transaction.</para>
+        <section label="6.10.3.1.1" status="5" xml:id="sect_6.10.3.1.1">
+          <title>Request</title>
+          <para xml:id="para_67e90499-4356-4493-9ab2-8867c184f3e4">The Retrieve Capabilities request uses the OPTIONS method and has the following format:</para>
+          <programlisting><![CDATA[
+    OPTIONS SP / SP version CRLF
+    Accept: 1#media-type CRLF
+    *(header-field CRLF)
+    CRLF
+]]></programlisting>
+          <section label="6.10.3.1.1.1" status="6" xml:id="sect_6.10.3.1.1.1">
+            <title>Resource</title>
+            <para xml:id="para_1057669a-16f2-49af-8300-8aa8a6d9a05a">The target URL shall reference the Base URI ("/") of the service.</para>
+          </section>
+          <section label="6.10.3.1.1.2" status="6" xml:id="sect_6.10.3.1.1.2">
+            <title>Query Parameters</title>
+            <para xml:id="para_7e816271-a220-443a-a785-2b30f112bb91">There are no additional Query Parameters.</para>
+          </section>
+          <section label="6.10.3.1.1.3" status="6" xml:id="sect_6.10.3.1.1.3">
+            <title>Request Header Fields</title>
+            <para xml:id="para_d6d0db00-4e8a-4bad-9007-d56fa0bb1cc9">
+<xref linkend="table_6.10.3.1.1.3-1" xrefstyle="select: label"/> shows the most common Mandatory, Conditional, and Optional header fields for this transaction.</para>
+            <table frame="box" label="6.10.3.1.1.3-1" rules="all" xml:id="table_6.10.3.1.1.3-1">
+              <caption>Request Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_aeced6e3-d042-4575-acab-57903160a147">Header Fields</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b3a34c28-608a-4df0-9639-b80eb4a47d0a">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5604a37b-65f1-48e0-9d6a-b453b9bcc3ef">Usage</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0ce5c1a1-b589-4c8b-b2ff-05edb557a3b7">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_071231cd-710c-47a0-8975-97820b208d77">Accept</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a4f7afa5-12ad-4c53-8705-1440d6bfbdb8">media-range</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_29f2469c-a1ac-4e35-aa70-e1418d46033e">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8aa7f1c5-8776-453e-b759-b02f143bcbe7">See <xref linkend="sect_6.1.1.7" xrefstyle="select: labelnumber"/>.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a8aafbe5-e47a-40c5-8be6-db233c60d99e">Accept-Charset</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_bbacf8a8-b64e-47ba-89c2-0fa7c9515d09">1#charset</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d916aa73-09df-4078-84ee-a7e9a50235d6">O</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ee06f50f-b779-4548-bf4f-9e1bcd51d6e2">See <xref linkend="sect_6.1.2.3" xrefstyle="select: labelnumber"/>.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.1.1.4" status="6" xml:id="sect_6.10.3.1.1.4">
+            <title>Request Payload</title>
+            <para xml:id="para_396c1ccc-5f69-4789-88bb-7680d83d01e5">The request has no payload.</para>
+          </section>
+        </section>
+        <section label="6.10.3.1.2" status="5" xml:id="sect_6.10.3.1.2">
+          <title>Behavior</title>
+          <para xml:id="para_fea53454-17f3-4348-8e26-a71323c88f2a">The origin server shall return a machine-readable description of its capabilities in an Acceptable Media Type.</para>
+        </section>
+        <section label="6.10.3.1.3" status="5" xml:id="sect_6.10.3.1.3">
+          <title>Response</title>
+          <para xml:id="para_cddcb135-109b-4e6b-bb05-339e63922609">The format of the response is as follows:</para>
+          <programlisting><![CDATA[
+    version SP status-code SP reason-phrase CRLF
+    Content-Type: media-type CRLF
+    *(header-field CRLF)
+    CRLF
+    payload
+]]></programlisting>          
+          <section label="6.10.3.1.3.1" status="6" xml:id="sect_6.10.3.1.3.1">
+            <title>Status Codes</title>
+            <para xml:id="para_71789f9b-0d61-4bdf-ac81-633aa7df150b">A success response shall have a status code of 200 (OK) or 204 (No Content).</para>
+            <para xml:id="para_37e6e4ec-ce00-493b-9d29-79e013fba7fd">A failure response shall have a 400 or 500 level status code.</para>
+          </section>
+          <section label="6.10.3.1.3.2" status="6" xml:id="sect_6.10.3.1.3.2">
+            <title>Response Header Fields</title>
+            <table frame="box" label="6.10.3.1.3.2-1" rules="all" xml:id="table_6.10.3.1.3.2-1">
+              <caption>Response Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_19fc42b9-ef99-4095-bda4-4fc0d7874030">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7abba4b1-db46-4e71-84fc-5f8a9000dbb0">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_21fe384b-0b8f-4b11-8de6-9535cb062af5">Usage</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_719fee0a-7d81-4a86-bff2-25b5ce5a54a8">Requirements</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_380526d3-a092-4080-a038-e98ae95b1385">Content-Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b555dc13-b376-4f27-bc18-ba8116809958">media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d5a41235-316c-4b42-9e08-b21293e100fd">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a0b491a1-51c9-4fae-bbf5-b7d02bc9b701">Content-Length</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ef4d687c-3143-4862-88d8-c32f45c4c196">uint</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9fc1c0f8-3a8d-460c-a53c-c20e5fd87bf7">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_66a91a7a-cdd8-42f9-b21e-98dfe3bddf84">Shall be present if no transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6f8d1c25-db22-4aaa-9fa2-32132a433460">Transfer-Encoding</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_382f650a-2029-4fe4-950b-357508f8d7e9">encoding</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0649a428-ab95-4e4b-ba07-fbf0af04e534">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ab51bb06-3b72-4a99-85da-39990ecc5d2f">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a53af92f-36e1-45fe-bf99-9a7f43739c34">ETag</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2e381a5a-3e61-4331-9a4b-435ecfcad897">entity-tag</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_885932d4-917e-4cd1-98ac-0b9411e8d9c5">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d4e63c85-c4a6-43ed-a5db-0178bf09f1c8">Shall be present if the response status code is 200.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.1.3.3" status="6" xml:id="sect_6.10.3.1.3.3">
+            <title>Response Payload</title>
+            <para xml:id="para_34cc0690-25c3-4d25-992c-743ae36ea3db">A success response shall have a payload containing a Capabilities Description in the Selected Media Type.</para>
+            <para xml:id="para_7b12bbb0-c68b-4609-9874-64586f1797b1">A failure response shall have a payload describing the error.</para>
+          </section>
+        </section>
+      </section>
+      <section label="6.10.3.2" status="4" xml:id="sect_6.10.3.2">
+        <title>Retrieve Transaction</title>
+        <para xml:id="para_370e595f-af4d-44a1-b47a-0316368f053f">The Retrieve transaction retrieves the target NPI resource in a DICOM Media Type.</para>
+        <section label="6.10.3.2.1" status="5" xml:id="sect_6.10.3.2.1">
+          <title>Request</title>
+          <para xml:id="para_65eb7c15-248f-414f-95cb-c944b21286ef">The Retrieve request has the following syntax:</para>
+          <programlisting><![CDATA[
+    GETSP /{npi-name}/{uid} SP version CRLF
+    Accept: 1#dicom-media-type CRLF
+    [If-None-Match: entity-tag CRLF]
+    *(header-field CRLF)
+    CRLF
+]]></programlisting>
+          <section label="6.10.3.2.1.1" status="6" xml:id="sect_6.10.3.2.1.1">
+            <title>Resources</title>
+            <para xml:id="para_d5f750b8-b5bd-452c-9453-e9d4cb993e0a">The target URL shall reference one of the resources shown in <xref linkend="table_6.10.3.2.1.1-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_3f783052-932e-4854-b66c-17f22b35fc47">An origin server shall specify all supported npi-names in its Conformance Statement and in its response to the Retrieve Capabilities transaction.</para>
+            <table frame="box" label="6.10.3.2.1.1-1" rules="all" xml:id="table_6.10.3.2.1.1-1">
+              <caption>Resources and URI Templates</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ff707126-dd7c-4391-93c2-ce4977190cd9">Resource</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d2e0443d-4f37-4508-8f74-c3513cc8be76">URI Template</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5614c6c6-85ac-44a6-9e13-854fc7b6c4ee">Instance</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0065d592-3f52-4789-a38c-1c5aa4d51202">/{npi-name}/{uid}</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.2.1.2" status="6" xml:id="sect_6.10.3.2.1.2">
+            <title>Query Parameters</title>
+            <para xml:id="para_27973e0b-cecb-48a2-bfe7-0a6c35f13c15">There are no additional query parameters.</para>
+          </section>
+          <section label="6.10.3.2.1.3" status="6" xml:id="sect_6.10.3.2.1.3">
+            <title>Request Header Fields</title>
+            <para xml:id="para_c8d75efc-8225-47d5-9512-2f69143eaea6">
+<xref linkend="table_6.10.3.2.1.3-1" xrefstyle="select: label"/> shows the most common Mandatory, Conditional, and common Optional header fields for this transaction.</para>
+            <table frame="box" label="6.10.3.2.1.3-1" rules="all" xml:id="table_6.10.3.2.1.3-1">
+              <caption>Request Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d9e5c961-362e-4d55-bb7a-40bcf3e40ec3">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_1d5984e3-82be-4f2f-9ea7-e432b714f11b">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0fc1b3be-26b4-47f0-b370-088b4b1c3c5f">Usage</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2da9a8ee-f2ea-4a90-acd9-114b799042a6">Accept</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_71679395-edcf-46f4-9278-f7776b8e4511">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_74fb61cd-4c2e-48fc-b91f-47b2a0f652ea">M</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.2.1.4" status="6" xml:id="sect_6.10.3.2.1.4">
+            <title>Request Payload</title>
+            <para xml:id="para_2b188cb6-0015-45aa-854b-af8f012023a3">The request shall have no payload.</para>
+          </section>
+        </section>
+        <section label="6.10.3.2.2" status="5" xml:id="sect_6.10.3.2.2">
+          <title>Behavior</title>
+          <para xml:id="para_c67febfa-78ee-4ec1-9561-23ad48cb2b99">The origin server shall try to locate the target resource and if found, return it in an Acceptable DICOM Media Type.</para>
+        </section>
+        <section label="6.10.3.2.3" status="5" xml:id="sect_6.10.3.2.3">
+          <title>Response</title>
+          <para xml:id="para_54c529a3-f3df-4b13-b9d9-be4f5e8fe033">The response has the following syntax:</para>
+          <programlisting><![CDATA[
+    version SP status-code SP reason-phrase CRLF
+    Content-Type: dicom-media-type CRLF
+    [ETag: entity-tag CRLF]
+    [Last-Modified: HTTP-date CRLF]
+    *(header-field CRLF)
+    CRLF
+    Payload
+]]></programlisting>          
+          <section label="6.10.3.2.3.1" status="6" xml:id="sect_6.10.3.2.3.1">
+            <title>Status Codes</title>
+            <para xml:id="para_ae3687a6-a62d-4265-8773-9c2390ecefe4">The response shall have an appropriate status code. <xref linkend="table_6.10.3.2.3.1-1" xrefstyle="select: label"/> contains the most common status codes for this transaction.</para>
+             <table frame="box" label="6.10.3.2.3.1-1" rules="all" xml:id="table_6.10.3.2.3.1-1">
+              <caption>Status Codes</caption>
+               <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_14f5bbaa-cd73-4159-9ac9-2862a9957bcb">Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_18ceb7d2-c271-49aa-bb25-2dfc64902ab9">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b108fcad-5e90-47d3-9766-c0a200ca70ae">200 (OK)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d6ace181-91b0-42e7-961b-896492400908">Indicates that the instance was successfully retrieved.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5c8533af-abef-4013-abea-ec4b1e52e093">304 (Not Modified)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_1e08f37d-75ad-48ff-b65b-c648800a8163">Indicates that the user agent's current representation is up to date, so no payload was returned. This status code shall only be returned for a Conditional Retrieve request containing an If-None-Match header field.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_36266eab-9096-4510-8312-00d4cc50612d">400 (Bad Request)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0422d871-c9a6-4fae-b9b4-bf4385e05ea9">Indicates that the origin server did not store any of the representations contained in the request payload because of errors in the request message. For example, an invalid Query Parameter or an invalid SOP instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_77eefb39-4d14-4421-9362-8e0ca9bf643f">404 (Not Found)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_23fad9f6-74dd-4d64-9b4c-9ae39ddb547d">Indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists. For example, an unsupported IOD, or SOP Instance not on server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5297c114-fa92-488f-befb-a859dc2954bb">406 (Unsupported</para>
+                    <para xml:id="para_36001394-78df-4b09-bb5a-86c21e623402">Media Type)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_292eb943-a3fd-482f-bb30-91a680ac2f58">Indicates that the origin server does not support any of the Acceptable Media Types.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <para xml:id="para_7349a99c-3938-4081-be4a-7f515cf102b9">See <xref linkend="biblio_RFC_7231"/> <link xl:href="http://tools.ietf.org/html/rfc7231#section-6">Section 6</link>.</para>
+          </section>
+          <section label="6.10.3.2.3.2" status="6" xml:id="sect_6.10.3.2.3.2">
+            <title>Response Header Fields</title>
+            <table frame="box" label="6.10.3.2.3.2-1" rules="all" xml:id="table_6.10.3.2.3.2-1">
+              <caption>Request Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_3a2c3274-9f14-4d8e-a543-7abed6d3cd76">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8bf364a5-e23c-4ae5-abe7-57016c9138c7">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_078781f1-6429-4bdb-972e-c22dc5a530b1">Usage</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_a139fa32-858e-4c20-8e7c-ae3bea47b6f1">Requirements</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_eed0983c-4835-4086-8dd0-f8cb79f683bc">Content-Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7fe6f69b-3792-4bb8-b901-6cb7e4335a2c">dicom-media-type</para>
+                  </td>
+                 <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4c1cfe1a-16a3-43e8-b3fe-e744efc53dfc">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_40ebdb69-641f-4106-96fc-f2a93d06ec70">Content-Length</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_cfb3f43b-ce3b-4331-913c-86cd1d3393c7">uint</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8f65bcc0-458b-408f-827c-da91515c24c4">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_79818405-d241-4b95-bfde-4b902af604d3">Shall be present if no transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7c73a989-cec3-45a6-b92a-4c6616f5201e">Transfer-Encoding</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3f2117bf-fd87-43df-a26e-6fc77c92ad08">encoding</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_461a6e36-bcd3-4758-9dca-0433d2e57a2c">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_878aadc5-849d-495c-916a-05bb6b814810">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_18561142-cc33-4779-86b8-2e25439e557b">ETag</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f049c30f-c490-4c77-b5b9-8218e126f7d0">entity-tag</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_1e09e72d-3a83-4fb8-b554-9402ebe28bea">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a499ee70-7367-488d-a872-81beaaa3b340">Shall be present if the response status code is 200 or 204.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.2.3.3" status="6" xml:id="sect_6.10.3.2.3.3">
+            <title>Response Payload</title>
+            
+            <para xml:id="para_1fdb0b23-1f47-4982-b7c5-6157f728630c">A success response shall have a payload containing the DICOM instance specified by the target resource.</para>
+            <para xml:id="para_612d19b4-ab28-45e8-aae4-217bbf88c27b">A failure response shall have a payload describing the error.</para>
+          </section>
+        </section>
+      </section>
+      <section label="6.10.3.3" status="4" xml:id="sect_6.10.3.3">
+        <title>Store Transaction</title>
+        
+        <para xml:id="para_2c74c4c4-eb25-4f58-98e9-5bf221871757">This transaction requests that the origin server store the representations of the NPIs contained in the request payload so that they may be retrieved in the future using the Instance UIDs.</para>
+        <section label="6.10.3.3.1" status="5" xml:id="sect_6.10.3.3.1">
+          <title>Request</title>
+          
+          <para xml:id="para_7a2591e9-d717-44e0-9ea5-28a93a56ae10">Transactions in this service use the POST method. The request syntax is:</para>
+          <programlisting><![CDATA[
+    POST SP /{npi-name} {/uid} SP version CRLF
+    Content-Type: dicom-media-type CRLF
+    *(header-field CRLF)
+    CRLF
+    payload
+]]></programlisting>
+          <section label="6.10.3.3.1.1" status="6" xml:id="sect_6.10.3.3.1.1">
+            <title>Resources</title>
+            <para xml:id="para_acd5a9dc-468b-4ceb-af3a-992d488919ad">The target URL shall reference one of the resources shown in <xref linkend="table_6.10.3.3.1.1-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_2c16b4c3-08af-4ad4-9015-977bc04dcd59">An origin server shall specify all supported npi-names in its Conformance Statement and in its response to the Retrieve Capabilities transaction.</para>
+            <table frame="box" label="6.10.3.3.1.1-1" rules="all" xml:id="table_6.10.3.3.1.1-1">
+              <caption>Resources and URI Templates</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ed09ecce-ade4-4ebe-804d-154859cbfea6">Resource</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5daa021c-15d6-4f8a-ac63-b5789c8daf08">URI Template</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f11f1d7d-dbdc-4382-9784-35f1e83ed74a">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4e5eb0d6-3681-4c98-a7b4-bf4c19964ae7">All Instances</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7866eb11-09ef-4f66-9f75-7d66b7387957">/{npi-name}</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5cf83f86-a910-446a-b3d4-89b23bde8195">Stores representations of a set of Instances.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_37342a89-6b96-4796-aa7c-9715dec8c180">Instance</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b93f4f94-18f2-4301-941f-5fab983df2fc">/{npi-name} {/uid}</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f1a79c2f-d066-44bb-a7aa-32b27d34be35">Stores a representation of a single Instance with a UID equal to uid.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.3.1.2" status="6" xml:id="sect_6.10.3.3.1.2">
+            <title>Query Parameters</title>
+            
+            <para xml:id="para_d6a90772-21b0-45f2-9270-1a3e6622e958">There are no additional Query Parameters.</para>
+          </section>
+          <section label="6.10.3.3.1.3" status="6" xml:id="sect_6.10.3.3.1.3">
+            <title>Request Header Fields</title>
+            <table frame="box" label="6.10.3.3.1.3-1" rules="all" xml:id="table_6.10.3.3.1.3-1">
+              <caption>Store Request Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5212be29-6491-43d4-83ba-a34fa8baf2ec">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7493b26d-2e6c-43d1-a513-c98d51be6f3d">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_6d3de70e-ceb8-4035-8819-7e9793ca7fc6">Usage</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2e2fc094-d8e2-4531-9141-1d5575a7a962">Requirements</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f072324f-5788-47f7-8b11-db0e46f88a03">Content-Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c073178b-b4a5-41a8-ba0e-35f7492ef06e">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_343bdf61-1c4b-4453-85b5-4d10e66cca22">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4519b132-2fe2-4ff4-8b62-d9f6509fadc2">Accept</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3c0536bd-a48e-4f30-890d-2b00703c8ff0">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_3d712864-1353-4964-b3b1-1e247b54015e">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_86ca3ecb-db1e-4add-818d-7660e923399e">Content-Length</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a58c2315-2513-4659-b21e-ed9bb3a85e8a">uint</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_699408ca-6a90-408c-ae05-fab27881ee41">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_63afcfa3-5fae-48f3-b8bc-80b4bdfef4ef">Shall be present if no transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f7ec410b-e1c5-4d32-89a1-ad5fc1dc1d2c">Transfer-Encoding</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4c9f4210-fa45-400a-9be4-cd5e865e6597">encoding</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7af6f4be-05ff-4bc3-8dcc-096e5f4d3b0d">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_96446698-2f5e-4ec2-a2b9-46ade3fcbf0c">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.3.1.4" status="6" xml:id="sect_6.10.3.3.1.4">
+            <title>Request Payload</title>
+            
+            <para xml:id="para_934c066b-4b02-4738-9037-c2c5c8a98091">The request payload shall be present and shall contain one or more representations in the DICOM Media Type specified by the Content-Type header field of the message, or for multipart payloads the Content-Type header field of each part.</para>
+          </section>
+        </section>
+        <section label="6.10.3.3.2" status="5" xml:id="sect_6.10.3.3.2">
+          <title>Behavior</title>
+          
+          <para xml:id="para_7d304c7b-4c0f-4288-b887-eae9e3dc6a80">The origin server stores the representations contained in the request payload so that they may be retrieved later using the Retrieve transaction.</para>
+          <para xml:id="para_5ef8e532-0c84-4707-be53-c52ddb516994">Before storing the representations, the origin server may coerce data elements.</para>
+          <para xml:id="para_f51935f9-910d-40e8-88e0-57e01f2f547a">If any element is coerced, the Original Attribute Sequence (0400,0561) (see <olink targetdoc="PS3.3" targetptr="sect_C.12.1" xrefstyle="select: docname labelnumber"/>) shall be included in the stored DICOM instances. Both the Original Attribute Sequence and the response shall describe the modifications.</para>
+        </section>
+        <section label="6.10.3.3.3" status="5" xml:id="sect_6.10.3.3.3">
+          <title>Response</title>
+          
+          <para xml:id="para_fea45f7c-821c-4a84-83e8-de19d39fb550">The response shall have the following syntax:</para>
+          <programlisting><![CDATA[
+    version SP status-code SP reason-phrase CRLF
+    *(header-field CRLF)
+    CRLF
+    [Status Report]
+]]></programlisting>
+          <section label="6.10.3.3.3.1" status="6" xml:id="sect_6.10.3.3.3.1">
+            <title>Status Codes</title>
+            <para xml:id="para_372f467c-8da8-4031-8831-f31a1bc138e5">The response shall have an appropriate status code. <xref linkend="table_6.10.3.3.3.1-1" xrefstyle="select: label"/> contains the most common status codes for this transaction.</para>
+             <table frame="box" label="6.10.3.3.3.1-1" rules="all" xml:id="table_6.10.3.3.3.1-1">
+              <caption>Common Status Codes</caption>
+               <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_70bcef19-3260-4c6d-bddd-fc10462ddd44">Status Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_807e1f43-9af6-4677-a42d-3634d7b60093">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_02b2971d-eb3b-4c87-b1f0-aab19eee769d">200 (OK)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_fedf8b70-e970-403e-983d-eceb05ea16cb">Indicates that the origin server successfully stored or created at least one of the representations contained in the request payload and is returning a response payload.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_423b17fe-c70e-4bbf-a20e-c9e9c5b728f2">201 (Created)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_fc845adf-ff1e-4580-bdc3-44e868e3a291">Indicates that the origin server successfully created at least one of the representations contained in the request payload and may be returning a response payload.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4ead66fe-1864-42ef-a975-9f6f59791dd2">202 (Accepted)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7ff14451-3f0e-4821-b133-d18d6f0e03d9">Indicates that the origin server successfully validated the request message, but has not yet stored or created the representations in the request payload. The origin server may or may not have validated the payload.</para>
+                    <para xml:id="para_59accccd-99a7-487b-841c-aef703b551e0">The user agent can use a Query or Retrieve transaction later to determine if the request has completed.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_e67e847e-1baa-439e-9364-abbbbd9fb039">204 (No Content)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_68e500f8-14ea-41c8-94ac-86e050158509">Indicates that the origin server successfully stored all the representations contained in the request payload without any modifications and is not returning a response payload.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_97f54af3-f05b-43b1-918b-9a61635257c6">400 (Bad Request)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_99f814b8-8d5f-4895-bd5f-711212ff531d">Indicates that the origin server did not store any of the representations contained in the request payload because of errors in the request message. For example, an invalid Query Parameter or an invalid SOP instance.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_02df1084-ee09-4235-9260-5ee0da17da2e">404 (Not Found)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4cc817b9-2d9d-4de9-93b3-4f0f14297f57">Indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists. For example, an unsupported IOD, or SOP Instance not on server.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f7d7856a-0aab-4c70-9889-752f10139ab0">409 (Conflict)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6ada6cad-d233-4fcd-ac8b-ceaada8f21db">Indicates that the request could not be completed due to a conflict with the current state of the target resource.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f7bed2d0-2c2f-4291-855a-e7668b9c0670">415 (Unsupported Media Type)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_498d9de6-d5d9-409a-912b-3300b1a25755">Indicates that the origin server does not support the media type specified in the Content-Type header field of the request, and none of the representations contained in the request were processed or stored.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.3.3.2" status="6" xml:id="sect_6.10.3.3.3.2">
+            <title>Response Header Fields</title>
+            <table frame="box" label="6.10.3.3.3.2-1" rules="all" xml:id="table_6.10.3.3.3.2-1">
+              <caption>Store Response Header Fields</caption>
+                <thead>
+                  <tr valign="top">
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_48242c3d-73d5-465a-bcef-885713ade681">Header Field</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_3c1b546b-df82-47a6-ae28-e3b81b82249e">Value</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_5baaef2e-6ad0-41d0-8ecd-cad76b6b1510">Usage</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_a204a190-85f0-486d-b527-1df9b526d059">Requirements</para>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_41bcc1eb-7a02-4e78-a7a8-908702bdf194">Content-Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_badcb1cd-2e69-42a1-8a85-c237f70e407d">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7897cc9b-d804-434b-99d3-a9cfad4c2d13">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_776dd9ac-59cc-48cd-8819-2136aa31b9aa">Content-Length</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_48156b55-0cf3-4002-8c29-f6318e189425">uint</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ae55c715-28f7-4dbc-acbb-29f551d48076">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_1ba1fb65-923b-42ea-b5a4-a5bc33b25a7e">Shall be present if no transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f7ba604c-6a5f-47a6-8e5c-59e598599ada">Transfer-Encoding</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_216aee70-d8e7-4ffc-8353-c5ebc45925bf">encoding</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0a4e7c98-509e-46d7-8602-7cdd21b84296">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_86df9ee9-2f17-42b5-a801-9b02b42a6ace">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.3.3.3" status="6" xml:id="sect_6.10.3.3.3.3">
+            <title>Response Payload</title>
+            
+            <para xml:id="para_60f15939-cfd6-43ee-aebc-caba180186e7">If the origin server failed to store or modified any representations in the request payload, the response payload shall contain a Status Report describing any additions, modifications, or deletions to the stored representations. The Status Report may also describe any warnings or other useful information.</para>
+          </section>
+        </section>
+      </section>
+      <section label="6.10.3.4" status="4" xml:id="sect_6.10.3.4">
+        <title>Search Transaction</title>
+        
+        <para xml:id="para_9b4ea7d1-fc7d-41a7-a356-662109792c58">The Search transaction searches the collection of NPI Instances contained in the target resource. The search criteria are specified in the query parameters. Each match includes the default and requested attributes from the matching Instance. A successful response returns a list describing the matching Instances.</para>
+        <section label="6.10.3.4.1" status="5" xml:id="sect_6.10.3.4.1">
+          <title>Request</title>
+          <para xml:id="para_060a6b96-4a23-4093-9c6f-008a68f36ce3">The Search transaction uses the GET method and has the following syntax:</para>
+          <programlisting><![CDATA[
+    GET SP /{npi-name} {?parameter*} SP version CRLF
+    Accept: 1#dicom-media-type CRLF
+    *(header-field CRLF)
+    CRLF
+]]></programlisting>
+          <section label="6.10.3.4.1.1" status="6" xml:id="sect_6.10.3.4.1.1">
+            <title>Resources</title>
+            <para xml:id="para_6a65d535-479e-4af4-8ddc-77cc83bc4c6e">The target URL shall reference one of the resources shown in <xref linkend="table_6.10.3.4.1.1-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_36aae662-70f1-4217-b286-44a2c7fdc8e6">An origin server shall specify all supported npi-names in its Conformance Statement and in its response to the Retrieve Capabilities transaction.</para>
+            <table frame="box" label="6.10.3.4.1.1-1" rules="all" xml:id="table_6.10.3.4.1.1-1">
+              <caption>Resources and URI Templates</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_66394424-c79f-452b-af1a-95c02853228e">Resource</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_babb1290-402d-4a50-a89c-72fbc9ba071a">URI Template</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4a8b2753-5599-40e4-8e1d-15fcf97ca1f6">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d8bc3244-98fb-445e-b19a-a78055b69f20">All Instances</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_e6e15902-60d9-4675-875c-3c2d67358061">/{npi-name}</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_55272529-0db2-4aa2-8fa3-59e473c4efb2">Searches a collection of NPI Instances</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.4.1.2" status="6" xml:id="sect_6.10.3.4.1.2">
+            <title>Query Parameters</title>
+            <para xml:id="para_f2d7a677-e0ab-429d-a076-9963909bfb3d">The parameters in the query component of the target URL specify the matching criteria, the attribute values to be returned, and the results to be returned. The URI template for the query parameters is:</para>
+            <programlisting><![CDATA[
+    {?parameter*} = "?" {&amp;match*} {&amp;include*} {&amp;offset} {&amp;limit}
+]]></programlisting>
+            <para xml:id="para_e45cad5a-a23b-4063-9c7d-31db73461582">See <xref linkend="sect_6.7.1.1"/> for a description of the syntax of Search Query Parameters.</para>
+            <section label="6.10.3.4.1.2.1" status="7" xml:id="sect_6.10.3.4.1.2.1">
+              <title>Attributes and Behaviors</title>
+              <para xml:id="para_31bb3f5d-f9a0-4fed-81f5-e1ec9c225a92">For each Resource Category the origin server supports, it shall support the behaviors and matching key attributes specified in the corresponding sections in
+                <xref linkend="table_6.10.3.4.1.2.1-1" xrefstyle="select: label"/>.</para>
+              <table frame="box" label="6.10.3.4.1.2.1-1" rules="all" xml:id="table_6.10.3.4.1.2.1-1">
+                <caption>NPI Resource Search Attributes</caption>
+                <thead>
+                  <tr valign="top">
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_31bab0c0-4cc3-4f6a-8155-297d1fdad4b1">Resource Category</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_94d618f0-bbcf-4d71-8562-0c005130a457">Defined Attributes and Matching Key Types</para>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_21e527d1-931f-4360-a49a-0c9e9a66e0ff">Color Palette</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_fbd6c345-1074-4e77-8b4d-b69e453e08e2">
+<olink targetdoc="PS3.4" targetptr="sect_X.6.1.2" xrefstyle="select: docname labelnumber"/>
+</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_d24ca019-1750-4f66-bb6f-65811adb4638">Defined Procedure Protocol</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_f205bba0-004b-419b-aefe-715e35346c0c">
+<olink targetdoc="PS3.4" targetptr="sect_HH.6.1.2" xrefstyle="select: docname labelnumber"/>
+</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_78dddf57-6bf7-40f6-84a4-21f484a7baf8">Hanging Protocol</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_971c97f3-6df1-4a60-91d7-c2a6559ac977">
+<olink targetdoc="PS3.4" targetptr="sect_U.6.1.2" xrefstyle="select: docname labelnumber"/>
+</para>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_96010f46-b123-4ad0-8ac4-e6e53860b60f">Implant Template</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_160664b7-bba9-4da8-8b08-0b4b69c8800e">
+<olink targetdoc="PS3.4" targetptr="sect_BB.6.1.2" xrefstyle="select: docname labelnumber"/>
+</para>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+          <section label="6.10.3.4.1.3" status="6" xml:id="sect_6.10.3.4.1.3">
+            <title>Request Header Fields</title>
+            <table frame="box" label="6.10.3.4.1.3-1" rules="all" xml:id="table_6.10.3.4.1.3-1">
+              <caption>Search Request Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d13d2552-a703-4a51-b29b-a45376af9641">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9f94da3f-5a8b-411d-8d9a-b187a0feb051">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_787dc00a-4e70-4d0d-80ca-3a79d847b96b">Usage</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0b2dc519-b4e6-4231-863e-ea94a88cd07f">Accept</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0c5ad03f-3c08-45b7-a7e0-80907a76b4da">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_e19cb2bc-7e29-4db3-a05e-649a1abbf76e">M</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.4.1.4" status="6" xml:id="sect_6.10.3.4.1.4">
+            <title>Request Payload</title>
+            <para xml:id="para_849a264f-8031-4820-82da-ef584b96509c">The request has no payload.</para>
+          </section>
+        </section>
+        <section label="6.10.3.4.2" status="5" xml:id="sect_6.10.3.4.2">
+          <title>Behavior</title>
+          <para xml:id="para_cc72e2f6-0e7d-492c-85a1-391e45f0b645">The origin server shall perform the search indicated by the request, using the matching behavior specified in
+            <xref linkend="sect_6.7.1.2" xrefstyle="select: label"/> and in the corresponding sections in
+            <xref linkend="table_6.10.3.4.1.2.1-1" xrefstyle="select: label"/>,
+            and return a response containing the search results, or an appropriate Status Report.</para>
+          <para xml:id="para_73b11212-4564-41ea-a213-0a372de75170">The rules for search results are specified in <xref linkend="sect_6.7.1.2" xrefstyle="select: label"/>.</para>
+        </section>
+        <section label="6.10.3.4.3" status="5" xml:id="sect_6.10.3.4.3">
+          <title>Response</title>
+          <para xml:id="para_15295174-150d-406a-ae54-88009ca46af8">A success response shall have a status code of 200 (OK) and a payload containing the search results in the Selected Media Type.</para>
+          <para xml:id="para_ad670244-ae77-4e56-8197-961d3578253c">A failure response shall contain a Status Report describing the error(s) encountered.</para>
+          <section label="6.10.3.4.3.1" status="6" xml:id="sect_6.10.3.4.3.1">
+            <title>Status Codes</title>
+            <para xml:id="para_33450cb5-8ac4-43b8-a608-02ce0ddd1999">The response shall have an appropriate status code.
+              <xref linkend="table_6.10.3.4.3.1-1" xrefstyle="select: label"/> contains the most common status codes for this transaction.</para>
+            <table frame="box" label="6.10.3.4.3.1-1" rules="all" xml:id="table_6.10.3.4.3.1-1">
+              <caption>Common Status Codes</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d283ae87-b328-4f98-8090-ef8316204528">Status Code</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b50c61cf-1a59-4373-845d-16a5e470cd28">Description</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8b412067-e423-4773-b871-104b3235b5bf">200 (OK)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_601b1257-abb3-4c83-83f3-dea5959a4812">Indicates that the origin server found and returned at least one resource matching the request.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a40a7501-0708-4376-8850-bd1c5c5f339a">400 (Bad Request)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_e4a9e843-ec58-463a-8eb2-c73665e7c085">Indicates that the origin server did not return any search results because of errors in the request message.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_30dc906f-0894-48e8-8b09-ef51abda758c">404 (Not Found)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b73b0cdb-a7a9-4b60-9097-1e6e60d23182">Indicates that the origin server did not find any resources matching the request, or is not willing to disclose that any exist.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_40c0cad6-f6bf-46b5-9d89-c141ab1446a6">406 (Unsupported Media Type)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_82a0b6ec-4887-4bd9-aa09-ecc7ea365aac">Indicates that the origin server does not support any of the Acceptable Media Types.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_98cd7ce7-cbdd-4f03-8fea-4f8529064b9f">409 (Conflict)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_fcc8b6e8-34fb-49ab-9495-fc65fb7d55aa">Indicates that the request could not be completed due to a conflict with the current state of the target resource.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.4.3.2" status="6" xml:id="sect_6.10.3.4.3.2">
+            <title>Response Header Fields</title>
+            
+            <para xml:id="para_007740a3-5ad6-4955-909c-1fae2519b6f0">Table : </para>
+            <table frame="box" label="6.10.3.15" rules="all" xml:id="table_6.10.3.15">
+              <caption>Search Response Header Fields</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f2c907fc-7046-4b5a-a94f-f05aa1248be4">Header Field</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_272a05df-9b09-47d2-bd99-96601e729f98">Value</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_865ebfb9-f750-4b1b-a298-177d9a34d60a">Usage</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8740f441-32f5-48fd-9463-df85f1033541">Requirement</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2a9df9f1-97eb-43d2-bed9-030bdbe5693a">Content-Type</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8078a068-353f-4d4f-9570-8832c4d11371">dicom-media-type</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9498c4d6-56ea-44a7-8cbb-de368ee2d1c1">M</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_51c0d81c-cf37-4dce-8a92-ad6dae193101">Content-Length</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3a6f4cdc-a7d4-4eee-ac4c-0bd994fd9dcd">uint</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c0a31d41-440e-4941-a251-776817b1fb9d">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_49498fed-5370-4347-9faf-9df9c95bd4a9">Shall be present if no transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_204fceac-96d0-4f73-938d-9e7a0652a0f5">Transfer-Encoding</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_662d7aa0-20ab-4b63-961e-0c87d6b2fc0c">encoding</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9cef39d7-f27d-4ac2-95ba-727f028310f7">C</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7470610a-1dad-468c-9fc2-1471131e5718">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section label="6.10.3.4.3.3" status="6" xml:id="sect_6.10.3.4.3.3">
+            <title>Response Payload</title>
+            <para xml:id="para_21daf1dc-b9b8-4058-88c6-f4aa7f6f9847">A success response payload shall contain Search results.</para>
+            <para xml:id="para_aef2d2cd-1d53-4b2e-b1c8-7242b8b587f7">A failure response payload shall contain a Status Report describing any failures, warnings or other useful information.</para>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section label="6.10.4" status="3" xml:id="sect_6.10.4">
+      <title>Media Types</title>
+      <para xml:id="para_c1d3d2cc-0e2a-4f81-95b5-a2723ece47cd">The origin server shall support the media types listed as Default or Required in
+        <xref linkend="table_6.10.4-1" xrefstyle="select: label"/> for all NPI transactions.</para>
+      <table frame="box" label="6.10.4-1" rules="all" xml:id="table_6.10.4-1">
+        <caption>Default, Required, and Optional Media Types</caption>
+        <thead>
+          <tr valign="top">
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_8e5cf2a2-b116-4776-8f97-395e655dfce9">Media Type</para>
+            </th>
+            <th align="center" colspan="1" rowspan="1">
+              <para xml:id="para_32a2520b-889b-4181-8ac8-e950974c6470">Usage</para>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d22a0d76-f1e7-4a32-a1b9-1c988c0f3966">application/dicom</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c74a3cb1-4c6e-4591-95b2-3bd76563c749">Required</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b444e4f5-f0f6-4610-b2fa-dc70098b3584">application/dicom+json</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9941d4ad-4478-470b-a55d-092b346918ae">Default</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_29382bdc-f46b-45f8-ae05-bd9b8680a7ef">multipart/related; type="application/dicom+xml"</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_bfc88320-0d96-44e8-bcf0-2ebb884da89c">Optional</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section label="6.10.5" status="3" xml:id="sect_6.10.5">
+      <title>Conformance</title>
+      <para xml:id="para_7ab829d5-380c-4ba4-a541-a85e24f202eb">The origin server shall support the transactions listed as Required in <xref linkend="table_6.10.5-1" xrefstyle="select: label"/>.</para>
+             <table frame="box" label="6.10.5-1" rules="all" xml:id="table_6.10.5-1">
+              <caption>Required and Optional Transactions</caption>
+              <thead>
+                <tr valign="top">
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0b5a7762-46e2-4b62-b8b3-9640cd26c14b">Transaction</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_873aeeac-9afc-4d96-867c-309c77be9ac6">Support</para>
+                  </th>
+                  <th align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c4d1f3b4-3fdc-45cf-8dc7-b08a1094969b">Section</para>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5c820923-38aa-43a3-be4c-5960455324f6">Retrieve Capabilities</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eb014756-2aac-4575-a99d-330b6fb9457c">Required</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c838e45f-8508-4911-afbe-63d249cd63e6">
+<xref linkend="sect_6.10.3.1" xrefstyle="select: labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d61a9263-7c5e-469a-8db1-f06e4e1ea7aa">Retrieve</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8fb3b5ca-a3ae-47d9-981c-1077e27a09cc">Required</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5e65080c-82c6-49f9-b4f8-1add0fe95ddd">
+<xref linkend="sect_6.10.3.2" xrefstyle="select: labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_22b6a4d6-7539-4450-990e-a804987c7c74">Store</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_33aa460f-6030-4c38-8718-d5f2e8990ce0">Optional</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_93329e41-ccfd-45eb-9088-34f8ce4221d8">
+<xref linkend="sect_6.10.3.3" xrefstyle="select: labelnumber"/>
+</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_fd3acbe1-fc1d-46ee-9d2a-cb79f3fff854">Search</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ffbb0d06-783c-4b8c-8622-dd0e59e44b9d">Required</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9a8d2cbf-cef5-4da3-a18a-3b631c7ef232">
+<xref linkend="sect_6.10.3.4" xrefstyle="select: labelnumber"/>
+</para>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <para xml:id="para_23da066e-f269-45cb-bd30-d86d8e0bf40f">Implementations shall specify in their Conformance Statement (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>) and the Capabilities Description (see <xref linkend="sect_6.8.1.2" xrefstyle="select: label"/>):</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_b8c06f7a-4c03-4582-88c5-7fee8fedc8f8">The implementations role: origin server, user agent, or both</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_48fc42aa-021c-4ed7-945b-b43085792935">The supported resources (IODs) for each role</para>
+        </listitem>
+      </itemizedlist>
+      <para xml:id="para_30f205bc-03a9-4fef-84b0-77b85d249a25">In addition, for each supported transaction they shall specify:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_33655af5-ad79-4981-bf88-4685f6d43921">The supported Query Parameters, including optional attributes, if any</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_c52b42cb-1676-4d69-bbc3-47f75fe12a66">The supported DICOM Media Types</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_136db27a-e72a-45dd-8798-d44df1e791bc">The supported character sets (if other than UTF-8)</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
     <title>Object Types</title>
@@ -11881,7 +13489,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </listitem>
         <listitem>
 <para xml:id="para_9e607b88-7a83-4d15-84aa-3ab488aa840d">
-<xref linkend="biblio_RFC_3986"/> does not permit an empty query component, i.e. if the "?" appears in the URI then there must be some legal query parameters in the URI.</para>
+<xref linkend="biblio_RFC_3986"/> does not permit an empty query component, i.e., if the "?" appears in the URI then there must be some legal query parameters in the URI.</para>
 </listitem>
         <listitem>
 <para xml:id="para_631da9ac-be97-4b2e-a0d2-d8bd21b8bbe6">The &lt;qchar&gt; rule defined above is the &lt;pchar&gt; rule of <xref linkend="biblio_RFC_3986"/>, which defines the legal character for the query component, minus the characters "="" and "&amp;".</para>

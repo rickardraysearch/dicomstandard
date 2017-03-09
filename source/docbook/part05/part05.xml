@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2016e - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2017a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -808,7 +808,8 @@
       <varlistentry>
         <term>CEN TC251</term>
         <listitem>
-          <para xml:id="para_379ad37c-3576-4add-9bc4-87dcdc4e8c8c">Comite Europeen de Normalisation - Technical Committee 251 - Healthcare Informatics</para>
+          <para xml:id="para_379ad37c-3576-4add-9bc4-87dcdc4e8c8c">
+<foreignphrase xml:lang="fr">Comité Européen de Normalisation</foreignphrase> - Technical Committee 251 - Healthcare Informatics</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -1090,7 +1091,7 @@
                 <para xml:id="para_8fbc4d8a-482d-49eb-8c60-799854d6aecc">The Unicode Standard includes a substantial discussion of the recommended means for display and print for characters that lack font support. These same recommendations may apply to the mechanisms for unsupported character sets.</para>
                 <para xml:id="para_b935f381-0359-4fc4-afe5-1105c76696df">The machine should print or display such characters by replacing all unknown characters with the four characters "\nnn", where "nnn" is the three digit octal representation of each byte.</para>
                 <para xml:id="para_5cab5efc-85ec-4373-b997-4d74dd896372">An example of this for an ASCII based machine would be as follows:</para>
-                <para xml:id="para_c56427bd-3697-4734-98d5-c20be23ceb81">Character String: Günther Encoded representation: 04/07 15/12 06/14 07/04 06/08 06/05 07/02ASCII based machine: G\374nther</para>
+                <para xml:id="para_c56427bd-3697-4734-98d5-c20be23ceb81">Character String: <foreignphrase xml:lang="de">Günther</foreignphrase> Encoded representation: 04/07 15/12 06/14 07/04 06/08 06/05 07/02ASCII based machine: G\374nther</para>
                 <para xml:id="para_385c7e6f-3897-4972-ac79-f981fef4014e">Implementations may also encounter Control Characters that they have no means to print or display. The machine may print or display such Control Characters by replacing the Control Character with the four characters "\nnn", where "nnn" is the three digit octal representation of each byte.</para>
               </listitem>
               <listitem>
@@ -1507,7 +1508,7 @@
                     <para xml:id="para_d46e39cc-cdfa-42e1-b9c8-de559b171268">See also DT VR in this table.</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_b8208da4-1132-455c-bb65-1e5fa04387f1">Dates before year 1582, e.g. used for dating historical or archeological items, are interpreted as proleptic Gregorian calendar dates, unless otherwise specified.</para>
+                    <para xml:id="para_b8208da4-1132-455c-bb65-1e5fa04387f1">Dates before year 1582, e.g., used for dating historical or archeological items, are interpreted as proleptic Gregorian calendar dates, unless otherwise specified.</para>
                   </listitem>
                 </orderedlist>
               </note>
@@ -1529,7 +1530,7 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_127e50f3-f533-4908-925e-918721f61459">A string of characters representing either a fixed point number or a floating point number. A fixed point number shall contain only the characters 0-9 with an optional leading "+" or "-" and an optional "." to mark the decimal point. A floating point number shall be conveyed as defined in ANSI X3.9, with an "E" or "e" to indicate the start of the exponent. Decimal Strings may be padded with leading or trailing spaces. Embedded spaces are not allowed.</para>
               <note>
-                <para xml:id="para_16e85eaf-9363-438f-8377-24fb3a38faab">Data Elements with multiple values using this VR may not be properly encoded if Explicit-VR transfer syntax is used and the VL of this attribute exceeds 65534 bytes.</para>
+                <para xml:id="para_16e85eaf-9363-438f-8377-24fb3a38faab">Data Elements with multiple values using this VR may not be properly encoded if Explicit-VR Transfer Syntax is used and the VL of this attribute exceeds 65534 bytes.</para>
               </note>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2497,21 +2498,21 @@
     <section label="7.2" status="2" xml:id="sect_7.2">
       <title>Group Length</title>
       <para xml:id="para_6bd08183-dd74-4f1d-b6a0-b89c9108bb85">Group Length (gggg,0000) Standard Data Elements have been retired. See PS3.5-2007.</para>
-      <para xml:id="para_bfa1c83e-e646-4a00-966a-aa9aca360306">All implementations shall be able to parse Group Length elements, and may discard and not insert or re-insert them; if present they shall be consistent with the encoding of the Data Set even if the transfer syntax is changed resulting in a change in the actual length of a group of elements. No implementation shall require the presence of Group Length elements.</para>
+      <para xml:id="para_bfa1c83e-e646-4a00-966a-aa9aca360306">All implementations shall be able to parse Group Length elements, and may discard and not insert or re-insert them; if present they shall be consistent with the encoding of the Data Set even if the Transfer Syntax is changed resulting in a change in the actual length of a group of elements. No implementation shall require the presence of Group Length elements.</para>
       <note>
         <orderedlist numeration="arabic">
           <listitem>
             <para xml:id="para_e3f1b1e5-fb75-424a-90f8-a54472b79198">Elements in groups 0, 2, 4 and 6 are not Standard Data Elements. Mandatory requirements for Group Length for groups 0 and 2 are specified elsewhere in the standard.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_7b87bd2c-482b-41dc-a981-95b807922129">It is recommended that Group Length elements be removed during storage or transfer in order to avoid the risk of inconsistencies arising during coercion of data element values and changes in transfer syntax.</para>
+            <para xml:id="para_7b87bd2c-482b-41dc-a981-95b807922129">It is recommended that Group Length elements be removed during storage or transfer in order to avoid the risk of inconsistencies arising during coercion of data element values and changes in Transfer Syntax.</para>
           </listitem>
         </orderedlist>
       </note>
     </section>
     <section label="7.3" status="2" xml:id="sect_7.3">
       <title>Little Endian Byte Ordering</title>
-      <para xml:id="para_fe41f7af-a4ee-4a9f-8e74-e115224086d3">All unretired Transfer Syntaxes in DICOM require the use of Little Endian Byte Ordering.</para>
+      <para xml:id="para_fe41f7af-a4ee-4a9f-8e74-e115224086d3">All nonretired Transfer Syntaxes in DICOM require the use of Little Endian Byte Ordering.</para>
       <para xml:id="para_a38977c0-90cf-409a-8aad-1f9573e4e862">Little Endian byte ordering is defined as follows:</para>
       <itemizedlist>
         <listitem>
@@ -3102,6 +3103,9 @@
             <listitem>
               <para xml:id="para_6cd536a0-085e-44ba-b4ec-c8aec705a572">Different Items may reserve the same block of Private Data Elements for different private creators. This is necessary to allow the nesting of Data Sets collected from multiple sources into folders.</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_9665aefa-3958-479d-a71f-ca5556376029">The recommended convention for referencing a Private Data Element is (gggg,xxee,"pcde"), where gggg is the group number, xx is the string “xx”, ee is the element number within a reserved block, and pcde is the quoted value of the Private Creator Data Element that reserved the block, e.g., (0029,xx43,"Acme_CT_Parameters"). Alternatively, when a block of Private Data Elements is being described, one may factor out the description of the Private Creator Data Element value, e.g., Private Creator Data Element (0029,00xx) = "Acme_CT_Parameters", and (0029,xx43), (0029,xx44), etc.</para>
+            </listitem>
           </orderedlist>
         </note>
       </section>
@@ -3263,7 +3267,7 @@
       </note>
       <para xml:id="para_6287384f-06a5-47f6-ab74-625074661b31">If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
       <note>
-        <para xml:id="para_b50189ee-a299-4737-bea1-c0510c91ffe1">Depending on the transfer syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Basic Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
+        <para xml:id="para_b50189ee-a299-4737-bea1-c0510c91ffe1">Depending on the Transfer Syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Basic Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
       </note>
       <section label="8.2.1" status="3" xml:id="sect_8.2.1">
         <title>JPEG Image Compression</title>
@@ -3312,10 +3316,10 @@
         </note>
       </section>
       <section label="8.2.2" status="3" xml:id="sect_8.2.2">
-        <title>Run Length Encoding Compression</title>
-        <para xml:id="para_85ca0802-972c-4db3-bc67-7f344dc8aeb8">DICOM provides a mechanism for supporting the use of Run Length Encoding (RLE) Compression, which is a byte oriented lossless compression scheme through the encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of this Standard). <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines RLE Compression and its Transfer Syntax.</para>
+        <title>Run Length Encoding Image Compression</title>
+        <para xml:id="para_85ca0802-972c-4db3-bc67-7f344dc8aeb8">DICOM provides a mechanism for supporting the use of Run Length Encoding (RLE) Image Compression, which is a byte oriented lossless compression scheme through the encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of this Standard). <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines RLE Image Compression and its Transfer Syntax.</para>
         <note>
-          <para xml:id="para_68100f7a-9340-4d87-af3f-2f6950af6a3f">The RLE Compression algorithm described in <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> is the compression used in the TIFF 6.0 specification known as the "PackBits" scheme.</para>
+          <para xml:id="para_68100f7a-9340-4d87-af3f-2f6950af6a3f">The RLE Image Compression algorithm described in <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> is the compression used in the TIFF 6.0 specification known as the "PackBits" scheme.</para>
         </note>
         <para xml:id="para_f46aa917-6020-441c-a144-02b3a06c3e39">The use of the DICOM Encapsulated Format to support RLE Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the compressed data.</para>
         <note>
@@ -3348,7 +3352,7 @@
               <para xml:id="para_e40960fc-63dd-45b0-8ed7-993b40cbd763">See also the notes in <xref linkend="sect_8.2.1" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_7eacfba3-42dd-43d0-b47f-45efb2fb200b">No Photometric Interpretation specific for JPEG-LS is currently defined in DICOM. Annex F of ISO 14495-2 describes a "Sample transformation for inverse colour transform" and a marker segment to encode its parameters, but this is not known to have been implemented. Common practice is to compress the RGB components unconverted, which sacrifices compression performance, and send the Photometric Interpretation as RGB. Though the YBR_RCT Photometric Interpretation and component conversion could theoretically be used, in the absence of DC shifting it results in signed values to be encoded, which are not supported by JPEG-LS.</para>
+              <para xml:id="para_7eacfba3-42dd-43d0-b47f-45efb2fb200b">No Photometric Interpretation specific for JPEG-LS is currently defined in DICOM. Annex F of ISO 14495-2 describes a <foreignphrase xml:lang="en-GB">"Sample transformation for inverse colour transform"</foreignphrase> and a marker segment to encode its parameters, but this is not known to have been implemented. Common practice is to compress the RGB components unconverted, which sacrifices compression performance, and send the Photometric Interpretation as RGB. Though the YBR_RCT Photometric Interpretation and component conversion could theoretically be used, in the absence of DC shifting it results in signed values to be encoded, which are not supported by JPEG-LS.</para>
             </listitem>
             <listitem>
               <para xml:id="para_1510f0e0-33b0-4e0e-9d66-73f03399a37b">If JPEG-LS Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from any other Photometric Interpretation to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
@@ -3394,8 +3398,8 @@
         <para xml:id="para_2b48c289-0ee9-4ec6-9685-99e6a1a9a16f">The value of Planar Configuration (0028,0006) is irrelevant since the manner of encoding components is specified in the JPEG 2000 standard, hence it shall be set to 0.</para>
       </section>
       <section label="8.2.5" status="3" xml:id="sect_8.2.5">
-        <title>MPEG2 Main Profile / Main Level Image Compression</title>
-        <para xml:id="para_1f5ce4d4-99d8-4263-8e07-fe67a269ef76">DICOM provides a mechanism for supporting the use of MPEG2 Main Profile / Main Level Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 Main Profile / Main Level Standard.</para>
+        <title>MPEG2 Main Profile / Main Level Video Compression</title>
+        <para xml:id="para_1f5ce4d4-99d8-4263-8e07-fe67a269ef76">DICOM provides a mechanism for supporting the use of MPEG2 Main Profile / Main Level Video Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 Main Profile / Main Level Standard.</para>
         <note>
           <para xml:id="para_c7cb7067-a7ee-4fc4-ba28-177d332921ba">MPEG2 compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG2 Main Profile / Main Level are also beyond the scope of this standard.</para>
         </note>
@@ -3574,8 +3578,8 @@
         </note>
       </section>
       <section label="8.2.6" status="3" xml:id="sect_8.2.6">
-        <title>MPEG2 Main Profile / High Level Image Compression</title>
-        <para xml:id="para_2bd0d799-f7d2-4866-83d4-fd1bbb3819cb">MPEG2 Main Profile / High Level corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG2 Main Profile / High Level Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 Main Profile / High Level Standard.</para>
+        <title>MPEG2 Main Profile / High Level Video Compression</title>
+        <para xml:id="para_2bd0d799-f7d2-4866-83d4-fd1bbb3819cb">MPEG2 Main Profile / High Level corresponds to what is commonly known as HDTV ('High Definition Television'). DICOM provides a mechanism for supporting the use of MPEG2 Main Profile / High Level Video Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG2 Main Profile / High Level Standard.</para>
         <note>
           <para xml:id="para_2c1d1db8-092d-4e8a-a1c4-d30dc53fdfb2">MPEG2 compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG2 Main Profile / High Level are also beyond the scope of this standard.</para>
         </note>
@@ -3732,10 +3736,10 @@
               <para xml:id="para_0479ef10-cdaa-4ad7-a169-df48c49f6b11">Examples of screen resolutions supported by MPEG2 Main Profile / High Level are shown in Table 8-y. Frame rates of 50 Hz and 60 Hz (progressive) at the maximum resolution of 1080 by 1920 are not supported by Main Profile / High Level. Interlace at the maximum resolution is supported at a field rate of 50 Hz or 60 Hz, which corresponds to a frame rate of 25 Hz or 30 Hz respectively as described in Table 8-y.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_ced238be-ef1c-4c8e-8f85-7fd48f684a1c">An MPEG2 Main Profile / High Level decoder is able to decode bit streams conforming to lower levels. These include the 1080 by 1440 bit streams of MP@H-14, and the Main Level bit streams used in the existing MPEG2 Main Profile / Main Level transfer syntax in the Visible Light IOD.</para>
+              <para xml:id="para_ced238be-ef1c-4c8e-8f85-7fd48f684a1c">An MPEG2 Main Profile / High Level decoder is able to decode bit streams conforming to lower levels. These include the 1080 by 1440 bit streams of MP@H-14, and the Main Level bit streams used in the existing MPEG2 Main Profile / Main Level Transfer Syntax in the Visible Light IOD.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_978feb86-eeef-447a-8b97-27e37ba46441">MP@H-14 is not supported by this transfer syntax.</para>
+              <para xml:id="para_978feb86-eeef-447a-8b97-27e37ba46441">MP@H-14 is not supported by this Transfer Syntax.</para>
             </listitem>
             <listitem>
               <para xml:id="para_650fa15f-c23f-42a0-9d8e-84be137f7e06">The restriction of DAR to 16:9 is required to ensure interoperability because of limitations in commonly available hardware chip set implementations for MPEG2 Main Profile / High Level.</para>
@@ -3970,13 +3974,13 @@
             <para xml:id="para_cd8a94cf-2a14-481e-919c-bea2000d8d02">Pixel Aspect Ratio (0028,0034) shall be absent. This corresponds to a 'Sampling Aspect Ratio' (SAR) of 1:1.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_9f6199c0-53da-449c-93e0-19c616ebbcc6">The possible values for Rows (0028,0010), Columns (0028,0011), Cine Rate (0018,0040), and Frame Time (0018,1063) or Frame Time Vector (0018,1065) depend on the used transfer syntax.</para>
+            <para xml:id="para_9f6199c0-53da-449c-93e0-19c616ebbcc6">The possible values for Rows (0028,0010), Columns (0028,0011), Cine Rate (0018,0040), and Frame Time (0018,1063) or Frame Time Vector (0018,1065) depend on the used Transfer Syntax.</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_2d08b7a4-ee6b-4e49-9045-36a0497567c1">For MPEG-4 AVC/H.264 High Profile / Level 4.1 transfer syntax, the values for these data elements shall be compliant with the High Profile / Level 4.1 of the MPEG-4 AVC/H.264 standard (<xref linkend="biblio_ISOIEC14496-10"/>) and restricted to a square pixel aspect ratio.</para>
+                <para xml:id="para_2d08b7a4-ee6b-4e49-9045-36a0497567c1">For MPEG-4 AVC/H.264 High Profile / Level 4.1 Transfer Syntax, the values for these data elements shall be compliant with the High Profile / Level 4.1 of the MPEG-4 AVC/H.264 standard (<xref linkend="biblio_ISOIEC14496-10"/>) and restricted to a square pixel aspect ratio.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_601240e1-a68f-43c0-9419-1a0d433c8d22">For MPEG-4 AVC/H.264 BD-compatible High Profile / Level 4.1 transfer syntax, the values for these data elements shall be as specified in <xref linkend="table_8-4" xrefstyle="select: label"/>.</para>
+                <para xml:id="para_601240e1-a68f-43c0-9419-1a0d433c8d22">For MPEG-4 AVC/H.264 BD-compatible High Profile / Level 4.1 Transfer Syntax, the values for these data elements shall be as specified in <xref linkend="table_8-4" xrefstyle="select: label"/>.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -4275,9 +4279,9 @@
         <title>MPEG-4 AVC/H.264 High Profile / Level 4.2 Video Compression</title>
         <para xml:id="para_0857d3a8-89d3-4fa6-99df-d010578a607b">DICOM provides a mechanism for supporting the use of MPEG-4 AVC/H.264 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines Transfer Syntaxes that reference the MPEG-4 AVC/H.264 Standard.</para>
         <note>
-          <para xml:id="para_82d93ddc-5e67-4256-8e12-f7e272fdd797">MPEG-4 AVC/H.264 compression / High Profile compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g. compression ratio) for MPEG-4 AVC/H.264 High Profile / Level 4.2 are also beyond the scope of this standard.</para>
+          <para xml:id="para_82d93ddc-5e67-4256-8e12-f7e272fdd797">MPEG-4 AVC/H.264 compression / High Profile compression is inherently lossy. The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for MPEG-4 AVC/H.264 High Profile / Level 4.2 are also beyond the scope of this standard.</para>
         </note>
-        <para xml:id="para_1cd0da6b-94af-4eda-9f4e-3a4b71727169">The use of the DICOM Encapsulated Format to support MPEG-4 AVC/H.264 compressed pixel data requires that the Data Elements that are related to the Pixel Data encoding (e.g. Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream, with some specific exceptions noted here. The Pixel Data characteristics included in the MPEG-4 AVC/H.264 bit stream shall be used to decode the compressed data stream.</para>
+        <para xml:id="para_1cd0da6b-94af-4eda-9f4e-3a4b71727169">The use of the DICOM Encapsulated Format to support MPEG-4 AVC/H.264 compressed pixel data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream, with some specific exceptions noted here. The Pixel Data characteristics included in the MPEG-4 AVC/H.264 bit stream shall be used to decode the compressed data stream.</para>
         <note>
            <para xml:id="para_a11f89e6-4849-4d7e-a930-62ab9e4fb12c">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
@@ -4600,7 +4604,7 @@
       </section>
       <section label="8.2.12" status="3" xml:id="sect_8.2.12">
         <title>Constraints for Audio Data Integration in AVC and HEVC Compressed Bit Streams</title>
-        <para xml:id="para_88682449-4b24-4563-b182-5e007e77a319">This section describes the constraints pertaining to the presence of audio data alongside pixel data in DICOM objects. It affects the following pixel data encapsulation transfer syntaxes:</para>
+        <para xml:id="para_88682449-4b24-4563-b182-5e007e77a319">This section describes the constraints pertaining to the presence of audio data alongside pixel data in DICOM objects. It affects the following pixel data encapsulation Transfer Syntaxes:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_98f79947-138e-417e-b1fc-4e97f2f99f76">MPEG-4 AVC/H.264 High Profile / Level 4.1</para>
@@ -4624,7 +4628,7 @@
             <para xml:id="para_9296d0fd-402e-40be-958a-e0a21ea1b3e9">HEVC/H.265 Main 10 Profile / Level 5.1</para>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_0198315f-7088-48b3-806d-e83c73c30763">Any audio components present within a bit stream whose transfer syntax is among those listed above shall be interleaved in either LPCM, AC-3, AAC, MP3 or MPEG-1 Layer II audio format and shall comply with the following restrictions:</para>
+        <para xml:id="para_0198315f-7088-48b3-806d-e83c73c30763">Any audio components present within a bit stream whose Transfer Syntax is among those listed above shall be interleaved in either LPCM, AC-3, AAC, MP3 or MPEG-1 Layer II audio format and shall comply with the following restrictions:</para>
         <table frame="box" label="8.2.12-1" rules="all" xml:id="table_8.2.12-1">
           <caption>Allowed Audio Formats</caption>
           <thead>
@@ -4795,7 +4799,7 @@
                   <para xml:id="para_457293f8-f50d-4cc6-b878-ec771dd14d9e">MPEG-1 Layer III is standardized in Part 3 of the MPEG-1 standard (see <xref linkend="biblio_ISOIEC11172-3"/>).</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_a2d508c6-115f-4e88-b0ad-08dc68951329">Although MPEG describes each channel as including up to 5 signals (e.g. for surround effects), it is recommended to limit each of the two channels to 2 signals each one (stereo).</para>
+                  <para xml:id="para_a2d508c6-115f-4e88-b0ad-08dc68951329">Although MPEG describes each channel as including up to 5 signals (e.g., for surround effects), it is recommended to limit each of the two channels to 2 signals each one (stereo).</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -5010,8 +5014,8 @@
       </note>
     </section>
     <section label="10.4" status="2" xml:id="sect_10.4">
-      <title>Transfer Syntax For DICOM RLE Compression</title>
-      <para xml:id="para_cc5b8948-d1fa-4541-b30c-2534a3d5b432">DICOM defines the RLE Compression (see <xref linkend="chapter_G" xrefstyle="template:Annex %n"/>). This implies that:</para>
+      <title>Transfer Syntax For DICOM RLE Image Compression</title>
+      <para xml:id="para_cc5b8948-d1fa-4541-b30c-2534a3d5b432">DICOM defines the RLE Image Compression (see <xref linkend="chapter_G" xrefstyle="template:Annex %n"/>). This implies that:</para>
       <orderedlist numeration="loweralpha">
         <listitem>
           <para xml:id="para_f209e9e4-2e29-4350-8efb-fe0efe36324c">If an Application Entity issues an A-ASSOCIATE request where any offered Abstract Syntaxes is associated in one or more Presentation Contexts(s) with RLE compression Transfer Syntax, at least one of the Presentation Contexts that include this Abstract Syntax, shall include the DICOM Default Transfer Syntax (uncompressed).</para>
@@ -5044,42 +5048,42 @@
       </note>
     </section>
     <section label="10.7" status="2" xml:id="sect_10.7">
-      <title>Transfer Syntax For MPEG2 Main Profile / Main Level Image Compression</title>
-      <para xml:id="para_fcf25f04-7d66-4974-87cb-176b28f975bd">One Transfer Syntax is specified for MPEG2 Main Profile / Main Level Image Compression.</para>
+      <title>Transfer Syntax For MPEG2 Main Profile / Main Level Video Compression</title>
+      <para xml:id="para_fcf25f04-7d66-4974-87cb-176b28f975bd">One Transfer Syntax is specified for MPEG2 Main Profile / Main Level Video Compression.</para>
     </section>
     <section label="10.8" status="2" xml:id="sect_10.8">
       <title>Transfer Syntax For JPIP Referenced Pixel Data</title>
       <para xml:id="para_1967f279-a027-416a-b00a-6923ab5eb617">Two Transfer Syntaxes are specified for JPIP Referenced Pixel Data.</para>
-      <para xml:id="para_4a9891e1-b182-4004-afac-fb8bd253ec78">The persistence of the references in objects transferred with one of these transfer syntaxes is not defined. That is, applications should make no assumptions as to the timeframe when the referenced pixel data will be available. Due to the indeterminate time that the URL remains valid, it may be inappropriate to cache the URL. Because the pixel data may not have been retrieved in its entirety or full fidelity, it may be inappropriate to use this transfer syntax for the purpose of permanent storage or to reference such instances in Storage Commitment and Performed Procedure Step service classes.</para>
-      <para xml:id="para_b202511c-a303-482a-8e87-2eee81ba8a69">These transfer syntaxes shall not be used for media storage defined by <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
+      <para xml:id="para_4a9891e1-b182-4004-afac-fb8bd253ec78">The persistence of the references in objects transferred with one of these Transfer Syntaxes is not defined. That is, applications should make no assumptions as to the timeframe when the referenced pixel data will be available. Due to the indeterminate time that the URL remains valid, it may be inappropriate to cache the URL. Because the pixel data may not have been retrieved in its entirety or full fidelity, it may be inappropriate to use this Transfer Syntax for the purpose of permanent storage or to reference such instances in Storage Commitment and Performed Procedure Step service classes.</para>
+      <para xml:id="para_b202511c-a303-482a-8e87-2eee81ba8a69">These Transfer Syntaxes shall not be used for media storage defined by <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
     </section>
     <section label="10.9" status="2" xml:id="sect_10.9">
-      <title>Transfer Syntax For MPEG2 Main Profile / High Level Image Compression</title>
-      <para xml:id="para_cf5229c4-8501-440c-9fd5-1d843a441585">One Transfer Syntax is specified for MPEG2 Main Profile / High Level Image Compression.</para>
+      <title>Transfer Syntax For MPEG2 Main Profile / High Level Video Compression</title>
+      <para xml:id="para_cf5229c4-8501-440c-9fd5-1d843a441585">One Transfer Syntax is specified for MPEG2 Main Profile / High Level Video Compression.</para>
     </section>
     <section label="10.10" status="2" xml:id="sect_10.10">
-      <title>Transfer Syntax For MPEG-4 AVC/H.264 High Profile / Level 4.1 Image Compression</title>
-      <para xml:id="para_77d33916-d715-4f8f-bce9-7c20f19debf6">One Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.1 Image Compression and one Transfer Syntax is specified for MPEG-4 AVC/H.264 BD-compliant High Profile / Level 4.1. Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.1 corresponds to the ITU-T H.264 standard's profile and level specifications. Transfer Syntax MPEG-4 AVC/H.264 BD-compliant High Profile / Level 4.1 corresponds to a restricted set of spatial and temporal resolutions described Table 8-4. This Transfer Syntax limits the ITU-T H.264 High Profile / Level 4.1 to HD video formats that are supported by Blu-ray™ (BDRWP 2.B).</para>
+      <title>Transfer Syntax For MPEG-4 AVC/H.264 High Profile / Level 4.1 Video Compression</title>
+      <para xml:id="para_77d33916-d715-4f8f-bce9-7c20f19debf6">One Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.1 Video Compression and one Transfer Syntax is specified for MPEG-4 AVC/H.264 BD-compliant High Profile / Level 4.1. Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.1 corresponds to the ITU-T H.264 standard's profile and level specifications. Transfer Syntax MPEG-4 AVC/H.264 BD-compliant High Profile / Level 4.1 corresponds to a restricted set of spatial and temporal resolutions described Table 8-4. This Transfer Syntax limits the ITU-T H.264 High Profile / Level 4.1 to HD video formats that are supported by Blu-ray™ (BDRWP 2.B).</para>
     </section>
     <section label="10.11" status="2" xml:id="sect_10.11">
-      <title>Transfer Syntaxes for MPEG-4 AVC/H.264 High Profile / Level 4.2 Image Compression</title>
-      <para xml:id="para_01843028-9897-4003-a831-94b0ac8b86fa">One Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Image Compression and one Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Image Compression.
-        Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Image Compression corresponds to the ITU-T H.264 standard's profile and level specifications except that the use of frame packing formats for 3D video is not allowed as defined in <xref linkend="table_8-8" xrefstyle="select: label"/>.
-        Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Image Compression corresponds to the ITU-T H.264 standard's profile and level specifications.
+      <title>Transfer Syntaxes for MPEG-4 AVC/H.264 High Profile / Level 4.2 Video Compression</title>
+      <para xml:id="para_01843028-9897-4003-a831-94b0ac8b86fa">One Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Video Compression and one Transfer Syntax is specified for MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Video Compression.
+        Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Video Compression corresponds to the ITU-T H.264 standard's profile and level specifications except that the use of frame packing formats for 3D video is not allowed as defined in <xref linkend="table_8-8" xrefstyle="select: label"/>.
+        Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Video Compression corresponds to the ITU-T H.264 standard's profile and level specifications.
         It should be used for transmitting stereoscopic 3D content with frame packing formats as defined in <xref linkend="table_8-8" xrefstyle="select: label"/>.</para>
     </section>
     <section label="10.12" status="2" xml:id="sect_10.12">
-      <title>Transfer Syntax For MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Image Compression</title>
-      <para xml:id="para_0bde5111-955d-44c9-9ae3-77ca6df19436">One Transfer Syntax is specified for MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Image Compression.
+      <title>Transfer Syntax For MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Video Compression</title>
+      <para xml:id="para_0bde5111-955d-44c9-9ae3-77ca6df19436">One Transfer Syntax is specified for MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Video Compression.
         Transfer Syntax MPEG-4 AVC/H.264 Stereo High Profile corresponds to the ITU-T H.264 standard's profile and level specifications.</para>
     </section>
     <section label="10.13" status="3" xml:id="sect_10.13">
-      <title>Transfer Syntax for HEVC/H.265 Main Profile / Level 5.1 Image Compression</title>
-      <para xml:id="para_5119e8de-f068-4c28-9a62-e1ecae19b57d">One Transfer Syntax is specified for HEVC/H.265 Main Profile / Level 5.1 ImageCompression. Transfer Syntax HEVC/H.265 Main Profile corresponds to the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard's profile and level specifications.</para>
+      <title>Transfer Syntax for HEVC/H.265 Main Profile / Level 5.1 Video Compression</title>
+      <para xml:id="para_5119e8de-f068-4c28-9a62-e1ecae19b57d">One Transfer Syntax is specified for HEVC/H.265 Main Profile / Level 5.1 Video Compression. Transfer Syntax HEVC/H.265 Main Profile corresponds to the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard's profile and level specifications.</para>
     </section>
     <section label="10.14" status="3" xml:id="sect_10.14">
-      <title>Transfer Syntax for HEVC/H.265 Main 10 Profile / Level 5.1 Image Compression</title>
-      <para xml:id="para_3f19e318-3ba1-4850-bd28-ae8b75d2e03d">One Transfer Syntax is specified for HEVC/H.265 Main 10 Profile / Level 5.1 ImageCompression. Transfer Syntax HEVC/H.265 Main 10 Profile corresponds to the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard's profile and level specifications.</para>
+      <title>Transfer Syntax for HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression</title>
+      <para xml:id="para_3f19e318-3ba1-4850-bd28-ae8b75d2e03d">One Transfer Syntax is specified for HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression. Transfer Syntax HEVC/H.265 Main 10 Profile corresponds to the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard's profile and level specifications.</para>
     </section>
   </chapter>
   <chapter label="A" status="1" xml:id="chapter_A">
@@ -5132,7 +5136,7 @@
             <listitem>
               <para xml:id="para_c87a6541-f99e-47ad-88c4-8735aadf3872">LUT Data (0028,3006) has the Value Representation US or OW and shall be encoded in Little Endian.</para>
               <note>
-                <para xml:id="para_4354db2b-de94-477c-87f8-31c64f335b0d">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. A VR of OW has been added to support explicit VR transfer syntaxes. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case.</para>
+                <para xml:id="para_4354db2b-de94-477c-87f8-31c64f335b0d">Previous versions of the Standard did not specify the encoding of these Data Elements in this Part, but specified a VR of US or SS in PS3.6-1998. A VR of OW has been added to support explicit VR Transfer Syntaxes. Moreover this element is always unsigned, therefore the VR of SS has been removed. The actual encoding of the values and their byte order would be identical in each case.</para>
               </note>
             </listitem>
           </itemizedlist>
@@ -5311,7 +5315,7 @@
                         <para xml:id="para_5ccae5c0-f6b7-40a9-8094-e645485c04ce">The OL Value Representation is not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32, since OL was added to the standard after the encoding of Pixel Data had been established</para>
                       </listitem>
                       <listitem>
-                        <para xml:id="para_a1684f41-b0ab-48c9-aed1-50999a8181fd">That is, as if the transfer syntax were Explicit VR Little Endian.</para>
+                        <para xml:id="para_a1684f41-b0ab-48c9-aed1-50999a8181fd">That is, as if the Transfer Syntax were Explicit VR Little Endian.</para>
                       </listitem>
                     </orderedlist>
                   </note>
@@ -6037,9 +6041,9 @@
         <para xml:id="para_822bfd5b-306d-43cf-95fe-9123126b697d">If images with Photometric Interpretation (0028,0004) YBR_FULL_422 or YBR_PARTIAL_422, are encoded with JPEG coding Process 1 (non hierarchical with Huffman coding), identified by DICOM Transfer Syntax UID "1.2.840.10008.1.2.4.50"the minimum compressible unit is YYCBCR, where Y, CB, and CR are 8 by 8 blocks of pixel values. The data stream encodes two Y blocks followed by the corresponding CB and CR blocks.</para>
       </section>
       <section label="A.4.2" status="3" xml:id="sect_A.4.2">
-        <title>RLE Compression</title>
+        <title>RLE Image Compression</title>
         <para xml:id="para_51630298-8d0b-4278-a3cb-1d87f0f09fe9">
-<xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines a RLE Compression Transfer Syntax. This transfer Syntax is identified by the UID value "1.2.840.10008.1.2.5". If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each frame shall be encoded in one and only one Fragment (see <xref linkend="sect_8.2" xrefstyle="select: label"/>).</para>
+<xref linkend="chapter_G" xrefstyle="template:Annex %n"/> defines a RLE Image Compression Transfer Syntax. This transfer Syntax is identified by the UID value "1.2.840.10008.1.2.5". If the object allows multi-frame images in the pixel data field, then each frame shall be encoded separately. Each frame shall be encoded in one and only one Fragment (see <xref linkend="sect_8.2" xrefstyle="select: label"/>).</para>
       </section>
       <section label="A.4.3" status="3" xml:id="sect_A.4.3">
         <title>JPEG-LS Image Compression</title>
@@ -6101,7 +6105,7 @@
         <note>
           <para xml:id="para_46c6bcc3-6c74-4385-bb7d-5d3edfeb0f86">The role of the JP2 file format header is fulfilled by the non-pixel data attributes in the DICOM Data Set.</para>
         </note>
-        <para xml:id="para_50ce9107-5cf2-43ff-a7f5-371626bc3094">The International Standards Organization ISO/IEC JTC1 has also developed JPEG 2000 Part 2 (<xref linkend="biblio_ISOIEC15444-2"/>), which includes Extensions to the compression techniques described in Part 1 of the JPEG 200 Standard. Annex J of JPEG 2000 Part 2 describes extensions to the ICT and RCT multiple component transformations allowed in Part 1. Two types of multiple component transformations are defined in Annex J of Part 2 of JPEG 2000:</para>
+        <para xml:id="para_50ce9107-5cf2-43ff-a7f5-371626bc3094">The International Standards Organization ISO/IEC JTC1 has also developed JPEG 2000 Part 2 (<xref linkend="biblio_ISOIEC15444-2"/>), which includes Extensions to the compression techniques described in Part 1 of the JPEG 2000 Standard. Annex J of JPEG 2000 Part 2 describes extensions to the ICT and RCT multiple component transformations allowed in Part 1. Two types of multiple component transformations are defined in Annex J of Part 2 of JPEG 2000:</para>
         <orderedlist numeration="arabic">
           <listitem>
             <para xml:id="para_36180de9-4f92-412d-8c8e-b7ded7c249d3">Array based multiple component transforms that form linear combinations of components to reduce the correlation between components. Array based transforms include prediction based transformations such as DPCM as well as more complicated transformations such as the KLT. These array based transformations can be implemented reversibly or irreversibly.</para>
@@ -6137,7 +6141,7 @@
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_304f83b1-70ff-412d-9b90-d4beaec20e83">The 3<superscript>rd</superscript> dimension transformations that are described in this Supplement are treated in Part 2 of JPEG 2000 as direct extensions to the color component transformations (RGB to YUV) that are described in Part 1 of JPEG 2000. For this reason, each image or frame in the sequence is called a "component". Although the term component is used as a generic term to identify an element of the 3<superscript>rd</superscript> dimension, no restriction is made or implied that the transformations in this Supplement apply only to multi-component (or multiple color channel) data. To compress a volumetric data set using this transfer syntax, each frame of the DICOM image is treated as a component of a multi-component image.</para>
+              <para xml:id="para_304f83b1-70ff-412d-9b90-d4beaec20e83">The 3<superscript>rd</superscript> dimension transformations that are described in this Supplement are treated in Part 2 of JPEG 2000 as direct extensions to the color component transformations (RGB to YUV) that are described in Part 1 of JPEG 2000. For this reason, each image or frame in the sequence is called a "component". Although the term component is used as a generic term to identify an element of the 3<superscript>rd</superscript> dimension, no restriction is made or implied that the transformations in this Supplement apply only to multi-component (or multiple color channel) data. To compress a volumetric data set using this Transfer Syntax, each frame of the DICOM image is treated as a component of a multi-component image.</para>
             </listitem>
             <listitem>
               <para xml:id="para_372c4bc2-fdd0-475a-904a-aad205b8320d">The progressive nature of the JPEG 2000 code stream allows for the decompression of the image before the complete image has been transferred. If a Storage SCP truncates the code stream by aborting the association, the instance has not been completely transferred and hence should not persist unless different UIDs are assigned (even though it may have been transiently used for display purposes).</para>
@@ -6152,9 +6156,9 @@
         </note>
       </section>
       <section label="A.4.5" status="3" xml:id="sect_A.4.5">
-        <title>MPEG2 Image Compression</title>
+        <title>MPEG2 Video Compression</title>
         <para xml:id="para_3eba3581-f657-4587-8f95-8650f5249d78">The International Standards Organization ISO/IEC MPEG2 has developed an International Standard, <xref linkend="biblio_ISOIEC13818-2"/> 'Information Technology - Generic coding of moving pictures and associated audio information: video -- part 2', referred to as "MPEG-2".</para>
-        <para xml:id="para_c0b400f3-aec8-4109-80dc-791633140232">A DICOM Transfer Syntax for MPEG2 Image Compression shall be identified by a UID value of either:</para>
+        <para xml:id="para_c0b400f3-aec8-4109-80dc-791633140232">A DICOM Transfer Syntax for MPEG2 Video Compression shall be identified by a UID value of either:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_5fae2fb4-e642-40de-b57f-80ffe546020b">1.2.840.10008.1.2.4.100 corresponding to MPEG2 Main Profile / Main Level option of the ISO/IEC MPEG2 Video standard</para>
@@ -6167,7 +6171,7 @@
       <section label="A.4.6" status="2" xml:id="sect_A.4.6">
         <title>MPEG-4 AVC/H.264 High Profile / Level 4.1 Video Compression</title>
         <para xml:id="para_f58b29a0-d09e-44df-9fc1-ddcbf283db5a">The International Standards Organization ISO/IEC MPEG4 has developed an International Standard, <xref linkend="biblio_ISOIEC14496-10"/> (MPEG-4 Part 10), for the video compression of generic coding of moving pictures and associated audio information. This standard is jointly maintained and has identical technical content as the ITU-T H.264 standard.</para>
-        <para xml:id="para_e3741454-6f7f-488a-98e9-0cca205dd497">A DICOM Transfer Syntax for MPEG-4 AVC/H.264 Image Compression shall be identified by a UID value of either:</para>
+        <para xml:id="para_e3741454-6f7f-488a-98e9-0cca205dd497">A DICOM Transfer Syntax for MPEG-4 AVC/H.264 Video Compression shall be identified by a UID value of either:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_d2a74ea5-fce5-4810-b874-9e501cbd1f85">1.2.840.10008.1.2.4.102 corresponding to the MPEG-4 AVC/H.264 High Profile / Level 4.1 of the ITU-T H.264 Video standard</para>
@@ -6182,7 +6186,7 @@
         <para xml:id="para_f250018c-01d5-4180-8279-1f792cc8b654">The International Standards Organization ISO/IEC MPEG4 has developed an International Standard, <xref linkend="biblio_ISOIEC14496-10"/> (MPEG-4 Part 10),
           for the video compression of generic coding of moving pictures and associated audio information. This standard is jointly maintained
           and has identical technical content as the ITU-T H.264 standard.</para>
-        <para xml:id="para_998a7c3a-d89e-4540-8a5f-a970bcc533c0">A DICOM Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Image Compression shall be identified by a UID value of:</para>
+        <para xml:id="para_998a7c3a-d89e-4540-8a5f-a970bcc533c0">A DICOM Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 2D Video Compression shall be identified by a UID value of:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_c8faa9b3-a055-433a-b1fc-bb33c093d329">1.2.840.10008.1.2.4.104 corresponding to the MPEG-4 AVC/H.264 High Profile / Level 4.2 of the ITU-T H.264 Video standard
@@ -6190,7 +6194,7 @@
               <xref linkend="table_8-8" xrefstyle="select: label"/>.</para>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_5c446da5-2c9a-4ebf-987c-2f3725d80fe8">A DICOM Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Image Compression shall be identified by a UID value of:</para>
+        <para xml:id="para_5c446da5-2c9a-4ebf-987c-2f3725d80fe8">A DICOM Transfer Syntax MPEG-4 AVC/H.264 High Profile / Level 4.2 for 3D Video Compression shall be identified by a UID value of:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_561b9e67-0279-4bcf-bb6a-58f392b0b865">1.2.840.10008.1.2.4.105 corresponding to the MPEG-4 AVC/H.264 High Profile / Level 4.2 of the ITU-T H.264 Video standard.
@@ -6203,7 +6207,7 @@
         <para xml:id="para_f0c12be8-7e68-4d13-853c-8ec3d2dd3c84">The International Standards Organization ISO/IEC MPEG4 has developed an International Standard, <xref linkend="biblio_ISOIEC14496-10"/> (MPEG-4 Part 10),
           for the video compression of generic coding of moving pictures and associated audio information.
           This standard is jointly maintained and has identical technical content as the ITU-T H.264 standard.</para>
-        <para xml:id="para_fd72e768-7953-42e2-8bad-e750becf724f">A DICOM Transfer Syntax for MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Image Compression shall be identified by a UID value of:</para>
+        <para xml:id="para_fd72e768-7953-42e2-8bad-e750becf724f">A DICOM Transfer Syntax for MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 Video Compression shall be identified by a UID value of:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_1b8e40d3-a935-4258-b8e8-a8e22af8110b">1.2.840.10008.1.2.4.106 corresponding to the MPEG-4 AVC/H.264 Stereo High Profile / Level 4.2 of the ITU-T H.264 Video standard.</para>
@@ -6213,7 +6217,7 @@
       <section label="A.4.9" status="3" xml:id="sect_A.4.9">
         <title>HEVC/H.265 Main Profile / Level 5.1 Video Compression</title>
         <para xml:id="para_f63fecff-47fe-4e4f-a706-1bd9ebf4f6c5">The International Standards Organization ISO/IEC MPEG has developed an International Standard, <xref linkend="biblio_ISOIEC23008-2"/> (HEVC), for the video compression of generic coding of moving pictures and associated audio information. This standard is jointly maintained and has identical technical content as the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard.</para>
-        <para xml:id="para_b28f5b2d-734a-48ec-ad9d-1aed38bee69f">A DICOM Transfer Syntax for HEVC/H.265 Main Profile / Level 5.1 Image Compression shall be identified by a UID value of:</para>
+        <para xml:id="para_b28f5b2d-734a-48ec-ad9d-1aed38bee69f">A DICOM Transfer Syntax for HEVC/H.265 Main Profile / Level 5.1 Video Compression shall be identified by a UID value of:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_6d3ecb08-d93f-47e6-a3c4-13aa0815db57">1.2.840.10008.1.2.4.107 corresponding to the HEVC/H.265 Main Profile / Level 5.1 of the <xref linkend="biblio_ISOIEC23008-2"/> HEVC Video standard.</para>
@@ -6223,7 +6227,7 @@
       <section label="A.4.10" status="3" xml:id="sect_A.4.10">
         <title>HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression</title>
         <para xml:id="para_b28b604d-591f-4633-adc2-eb17b8a1b2c0">The International Standards Organization ISO/IEC MPEG has developed an International Standard, <xref linkend="biblio_ISOIEC23008-2"/> (HEVC), for the video compression of generic coding of moving pictures and associated audio information. This standard is jointly maintained and has identical technical content as the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard.</para>
-        <para xml:id="para_ac367f71-0941-4c74-8442-501bd7e79ef2">A DICOM Transfer Syntax for HEVC/H.265 Main 10 Profile / Level 5.1 Image Compression shall be identified by a UID value of:</para>
+        <para xml:id="para_ac367f71-0941-4c74-8442-501bd7e79ef2">A DICOM Transfer Syntax for HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression shall be identified by a UID value of:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_6398d205-00c7-47fd-9f4a-4dcf987f6263">1.2.840.10008.1.2.4.108 corresponding to the HEVC/H.265 Main 10 Profile / Level 5.1 of the <xref linkend="biblio_ISOIEC23008-2"/> HEVC Video standard.</para>
@@ -6243,7 +6247,7 @@
             <para xml:id="para_2c450bfd-49ab-4db9-9bc7-9b72dd52859d">The Pixel Data in Pixel Data (7FE0,0010), Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) is not handled in any special manner. The pixel data is first encoded as sequential uncompressed frames without encapsulation, and then is handled as part of the byte stream fed to the "deflate" compressor in the same manner as the value of any other attribute.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_4601a1d2-e004-43f4-a04c-4c7de6e616b7">This transfer syntax is particularly useful for compression of objects without pixel data, such as structured reports. It is not particularly effective at image compression, since any benefit obtained from compressing the non-pixel data is offset by less effective compression of the much larger pixel data.</para>
+            <para xml:id="para_4601a1d2-e004-43f4-a04c-4c7de6e616b7">This Transfer Syntax is particularly useful for compression of objects without pixel data, such as structured reports. It is not particularly effective at image compression, since any benefit obtained from compressing the non-pixel data is offset by less effective compression of the much larger pixel data.</para>
           </listitem>
           <listitem>
             <para xml:id="para_17f16857-2181-4d32-9562-9489e2735fc1">A freely available reference implementation of the "deflate" compressor may be found in the zlib package, which may be downloaded from <link xl:href="http://www.zlib.net/"/>.</para>
@@ -6262,10 +6266,10 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_8e52de53-8fe1-476e-a825-7bd000722d5f">This requirement to support the (uncompressed) Explicit VR Little Endian Transfer Syntax is in order to ensure full-fidelity exchange of VR information in the case that the Association Acceptor does not support the Deflated Explicit VR Little Endian Transfer Syntax. The requirement specified in <xref linkend="sect_10.1" xrefstyle="select: label"/> of this part, that the Default Implicit VR Little Endian Transfer Syntax be supported by all implementations except those that only have access to lossy compressed pixel data, is not waived. In other words, an implementation must support all three transfer syntaxes.</para>
+            <para xml:id="para_8e52de53-8fe1-476e-a825-7bd000722d5f">This requirement to support the (uncompressed) Explicit VR Little Endian Transfer Syntax is in order to ensure full-fidelity exchange of VR information in the case that the Association Acceptor does not support the Deflated Explicit VR Little Endian Transfer Syntax. The requirement specified in <xref linkend="sect_10.1" xrefstyle="select: label"/> of this part, that the Default Implicit VR Little Endian Transfer Syntax be supported by all implementations except those that only have access to lossy compressed pixel data, is not waived. In other words, an implementation must support all three Transfer Syntaxes.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_cc946581-9067-494a-8f18-a84588d2b88e">There are no such "baseline" requirements on media, since such requirements are at the discretion of the Media Application Profile. Furthermore, sufficient object "management" information should be present in the DICOMDIR even if an individual application cannot decompress an instance encoded with the deflated transfer syntax.</para>
+            <para xml:id="para_cc946581-9067-494a-8f18-a84588d2b88e">There are no such "baseline" requirements on media, since such requirements are at the discretion of the Media Application Profile. Furthermore, sufficient object "management" information should be present in the DICOMDIR even if an individual application cannot decompress an instance encoded with the deflated Transfer Syntax.</para>
           </listitem>
         </orderedlist>
       </note>
@@ -7803,8 +7807,8 @@
     <title>Encapsulated RLE Compressed Images (Normative)</title>
     <section label="G.1" status="2" xml:id="sect_G.1">
       <title>Summary</title>
-      <para xml:id="para_7226cecc-0aa5-498e-975c-007d2681a11e">This annex describes how to apply RLE Compression to an image or an individual frame of a multi-frame image. This method can be used for any image, independent of the values of the data elements that describe the image (i.e., Photometric Interpretation (0028,0004) and Bits Stored (0028,0101)).</para>
-      <para xml:id="para_0084df9f-c291-4be8-8bda-031ec29b65b3">RLE Compression consists of the following steps:</para>
+      <para xml:id="para_7226cecc-0aa5-498e-975c-007d2681a11e">This annex describes how to apply RLE Image Compression to an image or an individual frame of a multi-frame image. This method can be used for any image, independent of the values of the data elements that describe the image (i.e., Photometric Interpretation (0028,0004) and Bits Stored (0028,0101)).</para>
+      <para xml:id="para_0084df9f-c291-4be8-8bda-031ec29b65b3">RLE Image Compression consists of the following steps:</para>
       <orderedlist numeration="arabic">
         <listitem>
           <para xml:id="para_c1e48d1f-ca2b-4340-b3af-15d6390099c9">The image is converted to a sequence of Composite Pixel Codes (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
@@ -8663,10 +8667,14 @@
           <para xml:id="para_871557b5-99d7-4c1b-99d4-de18c7313164">Character String:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_8d924363-eca1-4712-9bd9-c24e2a1c8b0f">Yamada^Tarou=山田^太郎=やまだ^たろう</para>
+              <para xml:id="para_8d924363-eca1-4712-9bd9-c24e2a1c8b0f">
+<foreignphrase xml:lang="jp">Yamada^Tarou=山田^太郎=やまだ^たろう</foreignphrase>
+</para>
             </listitem>
             <listitem>
-              <para xml:id="para_6b3c74ea-47c6-4312-8a12-e17dbcfe2bf0">Yamada^Tarou= ESC 02/04 04/02 山田 ESC 02/08 04/02 ^ ESC 02/04 04/02 太郎 ESC 02/08 04/02 = ESC 02/04 04/02 やまだ ESC 02/08 04/02 ^ ESC 02/04 04/02 たろう ESC 02/08 04/02</para>
+              <para xml:id="para_6b3c74ea-47c6-4312-8a12-e17dbcfe2bf0">
+<foreignphrase xml:lang="jp">Yamada^Tarou= ESC 02/04 04/02 山田 ESC 02/08 04/02 ^ ESC 02/04 04/02 太郎 ESC 02/08 04/02 = ESC 02/04 04/02 やまだ ESC 02/08 04/02 ^ ESC 02/04 04/02 たろう ESC 02/08 04/02</foreignphrase>
+</para>
             </listitem>
           </itemizedlist>
           <para xml:id="para_7a52fefe-955a-4b64-a1b3-db998f6667ee">Encoded representation:</para>
@@ -8681,8 +8689,10 @@
           <itemizedlist mark="none">
             <listitem>
               <para xml:id="para_00d74f12-a4bb-44f5-8d4b-64592144d6ac">
+<foreignphrase xml:lang="jp">
                 <computeroutput>Yamada^Tarou=\033$B;3ED\033(B^\033$BB@O:\033(B=\033$B$d$^$@\033(B^\033$B$?$m$&amp;\033(B</computeroutput>
-              </para>
+              </foreignphrase>
+</para>
             </listitem>
           </itemizedlist>
         </example>
@@ -8875,10 +8885,14 @@
           <para xml:id="para_daf64476-e1b9-41df-a7b7-2fbb939942c5">Character String:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_c5d9cddc-fa0d-4325-8a92-922c84e08256">ヤマダ^タロウ=山田^太郎=やまだ^たろう</para>
+              <para xml:id="para_c5d9cddc-fa0d-4325-8a92-922c84e08256">
+<foreignphrase xml:lang="jp">ヤマダ^タロウ=山田^太郎=やまだ^たろう</foreignphrase>
+</para>
             </listitem>
             <listitem>
-              <para xml:id="para_27f83a98-925d-4cc7-82f6-367937de90ec">ヤマダ^タロウ= ESC 02/04 04/02 山田 ESC 02/08 04/10 ^ ESC 02/04 04/02 太郎 ESC 02/08 04/10 = ESC 02/04 04/02 やまだ ESC 02/08 04/10 ^ ESC 02/04 04/02 たろう ESC 02/08 04/10</para>
+              <para xml:id="para_27f83a98-925d-4cc7-82f6-367937de90ec">
+<foreignphrase xml:lang="jp">ヤマダ^タロウ= ESC 02/04 04/02 山田 ESC 02/08 04/10 ^ ESC 02/04 04/02 太郎 ESC 02/08 04/10 = ESC 02/04 04/02 やまだ ESC 02/08 04/10 ^ ESC 02/04 04/02 たろう ESC 02/08 04/10</foreignphrase>
+</para>
             </listitem>
           </itemizedlist>
           <para xml:id="para_5ffb33a3-5259-44b3-9d34-e2476083a91a">Encoded representation:</para>
@@ -9166,10 +9180,14 @@
         <para xml:id="para_56597a39-2944-4e95-bc39-348d2cd7c52d">Character String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_84a42e38-2191-4bb5-be64-6a945c3be6b7">Hong^Gildong=洪^吉洞=홍^길동</para>
+            <para xml:id="para_84a42e38-2191-4bb5-be64-6a945c3be6b7">
+<foreignphrase xml:lang="kr">Hong^Gildong=洪^吉洞=홍^길동</foreignphrase>
+</para>
           </listitem>
           <listitem>
-            <para xml:id="para_36366b1c-75b4-4a2f-9cac-7e33eaae730f">Hong^Gildong= ESC 02/04 02/09 04/03 洪 ^ ESC 02/04 02/09 04/03 吉洞 = ESC 02/04 02/09 04/03 홍 ^ ESC 02/04 02/09 04/03 길동</para>
+            <para xml:id="para_36366b1c-75b4-4a2f-9cac-7e33eaae730f">
+<foreignphrase xml:lang="kr">Hong^Gildong= ESC 02/04 02/09 04/03 洪 ^ ESC 02/04 02/09 04/03 吉洞 = ESC 02/04 02/09 04/03 홍 ^ ESC 02/04 02/09 04/03 길동</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_f9e0991e-d429-41c5-8a19-47d3d359a77f">Encoded representation:</para>
@@ -9184,8 +9202,10 @@
         <itemizedlist mark="none">
           <listitem>
             <para xml:id="para_e6b028f4-468d-4f96-92fb-0054f7ad1189">
+<foreignphrase xml:lang="kr">
               <computeroutput>Hong^Gildong=\033$) C\373\363^\033$)C\321\316\324\327=\033$)C\310\253^\033$)C\261\346\265\277</computeroutput>
-            </para>
+            </foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
       </example>
@@ -9214,16 +9234,16 @@
         <para xml:id="para_4d3fe02a-a1b5-4224-94ad-5efb06a5c052">Character String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_ed67042a-2b1d-4ea0-85f4-5af748b25796">The first line includes 한글.</para>
-            <para xml:id="para_ecc429a1-9ab9-488c-be85-b1cb6237d37d">The second line includes 한글, too.</para>
+            <para xml:id="para_ed67042a-2b1d-4ea0-85f4-5af748b25796">The first line includes <foreignphrase xml:lang="kr">한글</foreignphrase>.</para>
+            <para xml:id="para_ecc429a1-9ab9-488c-be85-b1cb6237d37d">The second line includes <foreignphrase xml:lang="kr">한글</foreignphrase>, too.</para>
             <para xml:id="para_cadcc021-4d01-41a1-9b9e-d486a8c6edef">The third line</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_e430cb9c-d960-42ce-b34b-220cdfda70fc">Encoded String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_beea9ae7-f273-41ba-b866-b32aab3143bd">ESC 02/04 02/09 04/03 The first line includes 한글.</para>
-            <para xml:id="para_f7ca8460-285d-4d8f-9a8e-6366e0b8c696">ESC 02/04 02/09 04/03 The second line includes 한글, too.</para>
+            <para xml:id="para_beea9ae7-f273-41ba-b866-b32aab3143bd">ESC 02/04 02/09 04/03 The first line includes <foreignphrase xml:lang="kr">한글</foreignphrase>.</para>
+            <para xml:id="para_f7ca8460-285d-4d8f-9a8e-6366e0b8c696">ESC 02/04 02/09 04/03 The second line includes <foreignphrase xml:lang="kr">한글</foreignphrase>, too.</para>
             <para xml:id="para_5b0708a6-e8de-4ae8-bd44-635b664a6f42">The third line</para>
           </listitem>
         </itemizedlist>
@@ -9426,7 +9446,9 @@
         <para xml:id="para_26296a1d-e02f-4b71-8a6f-df30fed5fd96">Text string:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_60143efd-cc97-474e-9804-a819bc5a3a92">Wang^XiaoDong=王^小東=</para>
+            <para xml:id="para_60143efd-cc97-474e-9804-a819bc5a3a92">
+<foreignphrase xml:lang="zh-CN">Wang^XiaoDong=王^小東=</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_80656632-f8e0-4529-a027-afd853ec7f01">Character encoded representation is:</para>
@@ -9449,13 +9471,16 @@
           <para xml:id="para_254a8ebf-c716-40dd-88e7-63949c7cdb0b">The underlined bytes correspond to the Unicode code points for the Chinese characters:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_39176dfd-dd60-4904-bbf0-d2cce3757ca1">王 (U+738B)</para>
+              <para xml:id="para_39176dfd-dd60-4904-bbf0-d2cce3757ca1">
+<foreignphrase xml:lang="zh-CN">王</foreignphrase> (U+738B)</para>
             </listitem>
             <listitem>
-              <para xml:id="para_57795b09-8783-4155-a0b7-44f7f34e0dc2">小 (U+5C0F)</para>
+              <para xml:id="para_57795b09-8783-4155-a0b7-44f7f34e0dc2">
+<foreignphrase xml:lang="zh-CN">小</foreignphrase> (U+5C0F)</para>
             </listitem>
             <listitem>
-              <para xml:id="para_bf70f91b-c840-493a-9b3c-39f536ea764c">東 (U+6771)</para>
+              <para xml:id="para_bf70f91b-c840-493a-9b3c-39f536ea764c">
+<foreignphrase xml:lang="zh-CN">東</foreignphrase> (U+6771)</para>
             </listitem>
           </itemizedlist>
           <para xml:id="para_2b5254b6-5828-4d34-846c-d8f880233624">and the corresponding UTF-8 encodings are:</para>
@@ -9484,8 +9509,8 @@
         <para xml:id="para_48bfe601-33bb-42cd-86ea-10bde3931588">Text string:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_5884de79-a7cf-424a-bf2d-7c63a32f402a">The first line includes 中文.</para>
-            <para xml:id="para_db10c6b9-f747-4b78-99b6-64904de5b4f0">The second line includes 中文, too.</para>
+            <para xml:id="para_5884de79-a7cf-424a-bf2d-7c63a32f402a">The first line includes <foreignphrase xml:lang="zh-CN">中文</foreignphrase>.</para>
+            <para xml:id="para_db10c6b9-f747-4b78-99b6-64904de5b4f0">The second line includes <foreignphrase xml:lang="zh-CN">中文</foreignphrase>, too.</para>
             <para xml:id="para_3c26a5df-358f-4359-8b5f-2ba09055da98">The third line.</para>
           </listitem>
         </itemizedlist>
@@ -9509,10 +9534,12 @@
           <para xml:id="para_2add63f0-1276-4973-af50-04d52ba3a899">The underlined byte codes correspond to the Unicode code points for the Chinese characters:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_43e37dfc-02a4-4d77-87e6-d804592dc1c0">中 (U+4E2D) 0xe4 0xb8 0xad</para>
+              <para xml:id="para_43e37dfc-02a4-4d77-87e6-d804592dc1c0">
+<foreignphrase xml:lang="zh-CN">中</foreignphrase> (U+4E2D) 0xe4 0xb8 0xad</para>
             </listitem>
             <listitem>
-              <para xml:id="para_4188d342-11e4-4b8b-bfc4-1710db78ec00">文 (U+6587) 0xe6 0x96 0x87</para>
+              <para xml:id="para_4188d342-11e4-4b8b-bfc4-1710db78ec00">
+<foreignphrase xml:lang="zh-CN">文</foreignphrase> (U+6587) 0xe6 0x96 0x87</para>
             </listitem>
           </itemizedlist>
         </note>
@@ -9535,7 +9562,9 @@
         <para xml:id="para_eca04670-0003-49de-a67b-edc5c65b47e0">Text string:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_183a407d-09ad-4c96-ad02-07db90656396">Wang^XiaoDong=王^小东=</para>
+            <para xml:id="para_183a407d-09ad-4c96-ad02-07db90656396">
+<foreignphrase xml:lang="zh-CN">Wang^XiaoDong=王^小东=</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_a2e7a651-5f48-4e3c-b500-d46a54090da2">Character encoded representation is:</para>
@@ -9547,16 +9576,19 @@
           </listitem>
         </itemizedlist>
         <note>
-          <para xml:id="para_1dea57e1-73e8-4474-9a4b-65e11f3149f7">The GB18030 encodings for the chinese characters used here are:</para>
+          <para xml:id="para_1dea57e1-73e8-4474-9a4b-65e11f3149f7">The GB18030 encodings for the Chinese characters used here are:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_fda8e0bb-c475-42b2-b56d-d9abd3ae281a">王 (CDF5 in GB18030)</para>
+              <para xml:id="para_fda8e0bb-c475-42b2-b56d-d9abd3ae281a">
+<foreignphrase xml:lang="zh-CN">王</foreignphrase> (CDF5 in GB18030)</para>
             </listitem>
             <listitem>
-              <para xml:id="para_2d022d17-49fe-43a3-ae98-b9b7e12fd330">小 (D0A1 in GB18030)</para>
+              <para xml:id="para_2d022d17-49fe-43a3-ae98-b9b7e12fd330">
+<foreignphrase xml:lang="zh-CN">小</foreignphrase> (D0A1 in GB18030)</para>
             </listitem>
             <listitem>
-              <para xml:id="para_2d8375bc-5e8b-4297-8b9c-d226049cab5f">东 (B6AB in GB18030)</para>
+              <para xml:id="para_2d8375bc-5e8b-4297-8b9c-d226049cab5f">
+<foreignphrase xml:lang="zh-CN">东</foreignphrase> (B6AB in GB18030)</para>
             </listitem>
           </itemizedlist>
         </note>
@@ -9576,8 +9608,8 @@
         <para xml:id="para_7ee51c0d-4cb4-478e-9a28-64b765c77b41">Text string:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_599e9fee-b861-4329-b662-8184cee820bd">The first line includes 中文.</para>
-            <para xml:id="para_25287dd4-c158-41eb-b7bf-a57f260ac89a">The second line includes 中文, too.</para>
+            <para xml:id="para_599e9fee-b861-4329-b662-8184cee820bd">The first line includes <foreignphrase xml:lang="zh-CN">中文</foreignphrase>.</para>
+            <para xml:id="para_25287dd4-c158-41eb-b7bf-a57f260ac89a">The second line includes <foreignphrase xml:lang="zh-CN">中文</foreignphrase>, too.</para>
             <para xml:id="para_f839fd3c-3ad3-4912-b9c5-dadb445db692">The third line.</para>
           </listitem>
         </itemizedlist>
@@ -9601,10 +9633,12 @@
           <para xml:id="para_8b666985-ed08-4916-ad52-58f32e9d6854">The underlined byte codes correspond to the GB18030 encodings for the Chinese characters used:</para>
           <itemizedlist mark="none">
             <listitem>
-              <para xml:id="para_c1db477f-6bad-4a39-b002-f632a7ecd6e7">中 (D6D0 in GB18030)</para>
+              <para xml:id="para_c1db477f-6bad-4a39-b002-f632a7ecd6e7">
+<foreignphrase xml:lang="zh-CN">中</foreignphrase> (D6D0 in GB18030)</para>
             </listitem>
             <listitem>
-              <para xml:id="para_8b1624f1-9024-45dc-8581-3becbb2d90fc">文 (CEC4 in GB18030)</para>
+              <para xml:id="para_8b1624f1-9024-45dc-8581-3becbb2d90fc">
+<foreignphrase xml:lang="zh-CN">文</foreignphrase> (CEC4 in GB18030)</para>
             </listitem>
           </itemizedlist>
         </note>
@@ -9691,13 +9725,17 @@
         <para xml:id="para_4d8df0ad-eb60-471e-8cf8-44f4e5816636">Character String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_12d3cdfe-2449-4d7e-9d5f-fb29a2f2b008">Zhang^XiaoDong=张^小东=</para>
+            <para xml:id="para_12d3cdfe-2449-4d7e-9d5f-fb29a2f2b008">
+<foreignphrase xml:lang="zh-CN">Zhang^XiaoDong=张^小东=</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_91f9f489-6c00-4085-a9fe-d9d1e2ba077e">Encoded String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_37322db2-8520-42a1-ac49-53c07efeab37">Zhang^XiaoDong= ESC 02/04 02/09 04/01 张^ESC 02/04 02/09 04/01小东 =</para>
+            <para xml:id="para_37322db2-8520-42a1-ac49-53c07efeab37">
+<foreignphrase xml:lang="zh-CN">Zhang^XiaoDong= ESC 02/04 02/09 04/01 张^ESC 02/04 02/09 04/01小东 =</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_cf80d3d8-4618-418e-8cb4-d73f080e2b50">Character encoded representation (GB2312) is:</para>
@@ -9756,17 +9794,23 @@
         <para xml:id="para_22887d49-14b6-493c-96c0-615b6a6a3b79">Character String (with CR LF after each line):</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_3ef651db-a3e2-4045-809c-733b65db6ca0">1) 第一行文字。</para>
-            <para xml:id="para_e0999ab3-4d10-4857-9ffa-3af5d44b3608">2) 第二行文字。</para>
-            <para xml:id="para_3e597d58-a468-43c8-b7be-36b225bbdebf">3) 第三行文字。</para>
+            <para xml:id="para_3ef651db-a3e2-4045-809c-733b65db6ca0">1) <foreignphrase xml:lang="zh-CN">第一行文字。</foreignphrase>
+</para>
+            <para xml:id="para_e0999ab3-4d10-4857-9ffa-3af5d44b3608">2) <foreignphrase xml:lang="zh-CN">第二行文字。</foreignphrase>
+</para>
+            <para xml:id="para_3e597d58-a468-43c8-b7be-36b225bbdebf">3) <foreignphrase xml:lang="zh-CN">第三行文字。</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_abd7a025-0425-4a88-83b3-52788d893595">Encoded String:</para>
         <itemizedlist mark="none">
           <listitem>
-            <para xml:id="para_0120425a-79cb-43d3-9b18-415af249c4ea">1) ESC 02/04 02/09 04/01 第一行文字。</para>
-            <para xml:id="para_a5470955-b418-4b83-b83b-b8f288672f78">2) ESC 02/04 02/09 04/01 第二行文字。</para>
-            <para xml:id="para_bda5d5c8-cf95-4120-9c04-fed7a6117f3c">3) ESC 02/04 02/09 04/01 第三行文字。</para>
+            <para xml:id="para_0120425a-79cb-43d3-9b18-415af249c4ea">1) ESC 02/04 02/09 04/01 <foreignphrase xml:lang="zh-CN">第一行文字。</foreignphrase>
+</para>
+            <para xml:id="para_a5470955-b418-4b83-b83b-b8f288672f78">2) ESC 02/04 02/09 04/01 <foreignphrase xml:lang="zh-CN">第二行文字。</foreignphrase>
+</para>
+            <para xml:id="para_bda5d5c8-cf95-4120-9c04-fed7a6117f3c">3) ESC 02/04 02/09 04/01 <foreignphrase xml:lang="zh-CN">第三行文字。</foreignphrase>
+</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_57ba7e94-d23b-4de4-917d-2832fd11a8e3">Character encoded representation (GB2312):</para>

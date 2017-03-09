@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2016e - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2017a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2016</year>
+      <year>2017</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -84,6 +84,12 @@
   <chapter label="2" xml:id="chapter_2">
     <title>Normative References</title>
     <para xml:id="para_34485576-301f-4230-bb3c-3d48bb4d0b86">The following standards contain provisions, which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <para xml:id="para_d25645c2-e48c-4ec8-986a-7353f5cd8cff">ISO 7498-1 Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
+    <para xml:id="para_508c6091-835c-4bb7-bebb-e26cfae20e38">ISO 8649:1988 Information Processing Systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE).</para>
+    <para xml:id="para_3db34468-59e2-4469-8bf0-f4ba1fac6e99">ISO 8822:1988 Information Processing Systems - Open Systems Interconnection - Connection oriented presentation service definition.</para>
+    <para xml:id="para_d2bde75c-bd33-4782-87b5-dc9893cb111e">ISO/IEC 10646-1:2000 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 1: Architecture and Basic Multilingual Plane</para>
+    <para xml:id="para_a2eb71b4-c940-468c-9088-6b8182187748">ISO/IEC 10646-1:2000/Amd 1:2002 Mathematical symbols and other characters</para>
+    <para xml:id="para_c8e70f2b-bbe8-43af-8ca0-b5b4d2392909">ISO/IEC 10646-2:2001 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 2: Supplementary Planes</para>
     <bibliography>
       <biblioentry xml:id="biblio_ISODirectives2">
         <abbrev>ISO/IEC Directives, Part 2</abbrev>
@@ -98,12 +104,6 @@
         </bibliosource>
       </biblioentry>
     </bibliography>
-    <para xml:id="para_d25645c2-e48c-4ec8-986a-7353f5cd8cff">ISO 7498-1 Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
-    <para xml:id="para_508c6091-835c-4bb7-bebb-e26cfae20e38">ISO 8649:1988 Information Processing Systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE).</para>
-    <para xml:id="para_3db34468-59e2-4469-8bf0-f4ba1fac6e99">ISO 8822:1988 Information Processing Systems - Open Systems Interconnection - Connection oriented presentation service definition.</para>
-    <para xml:id="para_d2bde75c-bd33-4782-87b5-dc9893cb111e">ISO/IEC 10646-1:2000 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 1: Architecture and Basic Multilingual Plane</para>
-    <para xml:id="para_a2eb71b4-c940-468c-9088-6b8182187748">ISO/IEC 10646-1:2000/Amd 1:2002 Mathematical symbols and other characters</para>
-    <para xml:id="para_c8e70f2b-bbe8-43af-8ca0-b5b4d2392909">ISO/IEC 10646-2:2001 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 2: Supplementary Planes</para>
   </chapter>
   <chapter label="3" xml:id="chapter_3">
     <title>Definitions</title>
@@ -11473,7 +11473,7 @@
                 <td align="center" colspan="1" rowspan="1"/>
               </tr>
               <tr valign="top">
-                <td align="left" colspan="1" rowspan="2">
+                <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_9d027eb4-38b1-4354-b392-34c0c6a7b3d8">DICOM Application Configuration Management</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -45461,7 +45461,7 @@
     </section>
   </chapter>
   <chapter label="H" xml:id="chapter_H">
-    <title>DICOM Conformance Statement Medication‑System‑Gateway (Informative)</title>
+    <title>DICOM Conformance Statement Medication-System-Gateway (Informative)</title>
     <para xml:id="para_bb205905-4696-4263-95bd-6417432bc1ad">Disclaimer:</para>
     <para xml:id="para_27ed22c1-2a5f-4c0c-a869-b8ee39d2d954">This document is an example DICOM Conformance Statement for a fictional device called EXAMPLE-MEDICATION-SYSTEM-GATEWAY, which is a networked computer system used to provide radiology systems with access to a pharmacy system and a medication administration record system.</para>
     <para xml:id="para_27d5a114-ab89-4fbc-bc19-f6276890119a">As stated in the annex title, this document is truly informative, and not normative. A conformance statement of an actual product might implement additional services and options as appropriate for its specific purpose. In addition, an actual product might implement the services described in a different manner and, for example, with different characteristics and/or sequencing of activities. In other words, this conformance statement example does not intend to standardize a particular manner that a product might implement DICOM functionality.</para>
@@ -46253,12 +46253,16 @@
                   <tbody>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_18fc54bd-d64b-489d-9e9b-eba417e1fc8d">(G-D705, SRT, "Volume")</para>
+                        <para xml:id="para_18fc54bd-d64b-489d-9e9b-eba417e1fc8d">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=118565006" xl:show="new">(G-D705, SRT, "Volume")</link>
+</para>
                       </td>
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_8489e057-19fe-4ae7-8def-5a65d2e93883">(G-C52F, SRT, "Active Ingredient")</para>
+                        <para xml:id="para_8489e057-19fe-4ae7-8def-5a65d2e93883">
+<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=127489000" xl:show="new">(G-C52F, SRT, "Active Ingredient")</link>
+</para>
                       </td>
                     </tr>
                   </tbody>
@@ -48213,7 +48217,7 @@
             <para xml:id="para_e14594b6-f0a8-402a-89b4-4350053cef53">If the URI Retrieve specifies no transfer syntax that is supported by the archive, the SOP Instance will be returned using the Implicit VR Little Endian Transfer Syntax.</para>
           </section>
           <section label="I.4.2.2.2" xml:id="sect_I.4.2.2.2">
-            <title>WADO-WS Retrieve Rendered Imaging Document Set</title>
+            <title>WADO-URI Retrieve Rendered Imaging Document Set</title>
             <table frame="box" label="I.4.2-6" rules="all" xml:id="table_I.4.2-6">
               <caption>WADO-URI Retrieve Rendered Imaging Documents Specification</caption>
               <thead>
