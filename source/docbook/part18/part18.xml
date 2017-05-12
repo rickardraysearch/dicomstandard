@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2017a - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2017b - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -76,11 +76,11 @@
           <author>
             <orgname>ISO/IEC</orgname>
           </author>
-          <date>2011/04</date>
-          <edition>6.0</edition>
+          <date>2016/05</date>
+          <edition>7.0</edition>
           <title>Rules for the structure and drafting of International Standards</title>
           <bibliosource>
-            <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+            <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
           </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC2022">
@@ -14303,7 +14303,7 @@ This is the binary JPEG payload for the second image.
       "vr": "UI",
       "Value": [ "1.2.392.200036.9116.2.2.2.1762893313.1029997326.945873" ]
     }
-  }
+  },
   {
     "0020000D" : {
       "vr": "UI",
@@ -15655,7 +15655,7 @@ This is the binary JPEG payload for the second image.
     {   // Result 1
         "00080005": {
             "vr": "CS",
-            "Value": [ "ISO_IR192" ]
+            "Value": [ "ISO_IR 192" ]
         },
         "00080020": {
             "vr": "DT",
@@ -15771,7 +15771,7 @@ This is the binary JPEG payload for the second image.
     {   // Result 2
         "00080005": {
             "vr": "CS",
-            "Value": [ "ISO_IR192" ]
+            "Value": [ "ISO_IR 192" ]
         },
         "00080020": {
             "vr": "DT",

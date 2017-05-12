@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2017a - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2017b - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -96,11 +96,11 @@
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>2011/04</date>
-        <edition>6.0</edition>
+        <date>2016/05</date>
+        <edition>7.0</edition>
         <title>Rules for the structure and drafting of International Standards</title>
         <bibliosource>
-          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
     </bibliography>
@@ -1294,7 +1294,7 @@
               <para xml:id="para_cf3884ec-3a4b-43ba-a132-627dff4d1dba">1.2.840.10008.1.42</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a0f77728-e2ea-4298-add0-a7171cf80472">Substance Administration Logging</para>
+              <para xml:id="para_a0f77728-e2ea-4298-add0-a7171cf80472">Substance Administration Logging SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_aeec47e2-d0cd-400a-b2ae-14d952ad62ba">Workflow Management</para>
@@ -1481,7 +1481,7 @@
               <para xml:id="para_2f874f36-ae4f-4940-8b98-daf1b66e58e4">1.2.840.10008.5.1.1.33</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_59834e2b-5ea3-43a5-a53e-2c14d73956c1">Media Creation Management SOP Class UID</para>
+              <para xml:id="para_59834e2b-5ea3-43a5-a53e-2c14d73956c1">Media Creation Management SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_22377b51-5eac-4c98-85bb-40201f3038b1">Print Management</para>
@@ -1492,7 +1492,7 @@
               <para xml:id="para_df795edd-8d5e-40e5-bd45-e8580b342619">1.2.840.10008.5.1.4.1.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_bcdf224e-4016-460f-879e-2db7a3cf6ae1">Computed Radiography Image Storage</para>
+              <para xml:id="para_bcdf224e-4016-460f-879e-2db7a3cf6ae1">Computed Radiography Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0490d2f6-c740-4a85-958a-a32633d7950e">Transfer</para>
@@ -1503,7 +1503,7 @@
               <para xml:id="para_adb6e9d3-165e-4ec1-8ae4-7532fd60c96b">1.2.840.10008.5.1.4.1.1.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_af676564-15dc-4f40-8440-5e9d029e7a8c">Digital X-Ray Image Storage - For Presentation</para>
+              <para xml:id="para_af676564-15dc-4f40-8440-5e9d029e7a8c">Digital X-Ray Image Storage - For Presentation SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_64048293-1cb3-4369-9602-017771db5c76">Transfer</para>
@@ -1514,7 +1514,7 @@
               <para xml:id="para_b5fb5c88-2f7b-46a8-a615-67c31e46265c">1.2.840.10008.5.1.4.1.1.1.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9c8c6783-e9bc-412c-8253-5127d83a1141">Digital X-Ray Image Storage - For Processing</para>
+              <para xml:id="para_9c8c6783-e9bc-412c-8253-5127d83a1141">Digital X-Ray Image Storage - For Processing SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4c28d22c-3383-4181-b926-b56f7dc1156f">Transfer</para>
@@ -1525,7 +1525,7 @@
               <para xml:id="para_a306c4d3-03d1-43b3-afe2-f07a1f047269">1.2.840.10008.5.1.4.1.1.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4be157c7-904d-4738-af46-3c5b76cb0af1">Digital Mammography X-Ray Image Storage - For Presentation</para>
+              <para xml:id="para_4be157c7-904d-4738-af46-3c5b76cb0af1">Digital Mammography X-Ray Image Storage - For Presentation SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_99a02bb3-5d56-4ef6-aaf3-d601702583c5">Transfer</para>
@@ -1536,7 +1536,7 @@
               <para xml:id="para_75b8e03c-e8be-4cb0-99c1-caefdcd44bd0">1.2.840.10008.5.1.4.1.1.1.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_50b20d3f-4519-42c8-aaaa-63cd4257bd28">Digital Mammography X-Ray Image Storage - For Processing</para>
+              <para xml:id="para_50b20d3f-4519-42c8-aaaa-63cd4257bd28">Digital Mammography X-Ray Image Storage - For Processing SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_fdd20ca8-b1f8-4f57-8a8d-cd434b89268a">Transfer</para>
@@ -1547,7 +1547,7 @@
               <para xml:id="para_29695088-67d8-4f32-bde3-2bb2eee2af20">1.2.840.10008.5.1.4.1.1.1.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a544c4b3-432f-4958-972c-0cbf1c221bcc">Digital Intra-oral X-Ray Image Storage - For Presentation</para>
+              <para xml:id="para_a544c4b3-432f-4958-972c-0cbf1c221bcc">Digital Intra-oral X-Ray Image Storage - For Presentation SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_32a3cad9-a8aa-41fd-8acc-93df3ee321d3">Transfer</para>
@@ -1558,7 +1558,7 @@
               <para xml:id="para_c61b54ef-7e11-4f06-b132-c74431cf6fb8">1.2.840.10008.5.1.4.1.1.1.3.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d244da35-3de5-4970-a3cb-b55d53302164">Digital Intra-oral X-Ray Image Storage - For Processing</para>
+              <para xml:id="para_d244da35-3de5-4970-a3cb-b55d53302164">Digital Intra-oral X-Ray Image Storage - For Processing SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_76b66621-42bd-40ea-ab9f-61ce9049b2c2">Transfer</para>
@@ -1569,7 +1569,7 @@
               <para xml:id="para_9fabaa75-6b6c-4498-9936-5b4af6a384af">1.2.840.10008.5.1.4.1.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ea674032-e7c0-4d96-92ef-83c11834c5ad">CT Image Storage</para>
+              <para xml:id="para_ea674032-e7c0-4d96-92ef-83c11834c5ad">CT Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_322755c4-2a13-4252-99fe-c195b2e955aa">Transfer</para>
@@ -1580,7 +1580,7 @@
               <para xml:id="para_9adecff3-22fe-4e98-96b9-9b1a7225f27c">1.2.840.10008.5.1.4.1.1.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c7644299-5a67-4705-92dc-e7a9e0fd7f61">Enhanced CT Image Storage</para>
+              <para xml:id="para_c7644299-5a67-4705-92dc-e7a9e0fd7f61">Enhanced CT Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5dbf0222-ccdf-435e-a7db-6c58fcf43892">Transfer</para>
@@ -1591,7 +1591,7 @@
               <para xml:id="para_258cecb5-e206-46c6-afbf-9713e4a7a71b">1.2.840.10008.5.1.4.1.1.3.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_27f03586-7949-4e93-a4a4-215383b05255">Ultrasound Multi-frame Image Storage</para>
+              <para xml:id="para_27f03586-7949-4e93-a4a4-215383b05255">Ultrasound Multi-frame Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0db5ea78-3bfa-4369-86cd-de751593c3ae">Transfer</para>
@@ -1602,7 +1602,7 @@
               <para xml:id="para_f2b70ba3-f8ab-453c-8157-9fdc3c4dfb04">1.2.840.10008.5.1.4.1.1.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c78b8f94-c571-41fd-b402-48498895235a">MR Image Storage</para>
+              <para xml:id="para_c78b8f94-c571-41fd-b402-48498895235a">MR Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b898c2c3-c1e5-4ae0-9007-118953487708">Transfer</para>
@@ -1613,7 +1613,7 @@
               <para xml:id="para_f86e0e7f-1097-4c14-a544-bb34bbab5f34">1.2.840.10008.5.1.4.1.1.4.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1f099f89-393a-45ff-bb63-5f88de17aea9">Enhanced MR Image Storage</para>
+              <para xml:id="para_1f099f89-393a-45ff-bb63-5f88de17aea9">Enhanced MR Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c6208288-e6a2-4fef-be46-d78312390037">Transfer</para>
@@ -1624,7 +1624,7 @@
               <para xml:id="para_d528a685-a3ac-41d3-9c67-4782171888ac">1.2.840.10008.5.1.4.1.1.4.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3e239759-d903-4477-ae4f-1755465fa97b">MR Spectroscopy Storage</para>
+              <para xml:id="para_3e239759-d903-4477-ae4f-1755465fa97b">MR Spectroscopy Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_beffa58e-87ab-463c-b932-5c956f41d0f9">Transfer</para>
@@ -1646,7 +1646,7 @@
               <para xml:id="para_28875763-7942-4f4d-b4bc-aed34c2f1ac1">1.2.840.10008.5.1.4.1.1.6.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_346d2526-9855-4bb5-b5b0-d8343b919d89">Ultrasound Image Storage</para>
+              <para xml:id="para_346d2526-9855-4bb5-b5b0-d8343b919d89">Ultrasound Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_33086c75-c031-4435-a4b2-710e866b9afe">Transfer</para>
@@ -1657,7 +1657,7 @@
               <para xml:id="para_90674c05-f9c5-4596-9da1-40cd5fa5859f">1.2.840.10008.5.1.4.1.1.6.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_64716fa5-b943-446b-ac2c-8ca05cec32de">Enhanced US Volume Storage</para>
+              <para xml:id="para_64716fa5-b943-446b-ac2c-8ca05cec32de">Enhanced US Volume Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_68bfdcfc-e8ad-409e-ad53-92103a099d4d">Transfer</para>
@@ -1668,7 +1668,7 @@
               <para xml:id="para_6e2d9c01-fea6-460d-841a-83c1fc0d0d22">1.2.840.10008.5.1.4.1.1.7</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a43f831e-c36e-447a-92ad-4eaa827bf3db">Secondary Capture Image Storage</para>
+              <para xml:id="para_a43f831e-c36e-447a-92ad-4eaa827bf3db">Secondary Capture Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1d8bced1-ff07-4b9b-b970-3575b5d20e98">Transfer</para>
@@ -1679,7 +1679,7 @@
               <para xml:id="para_420d5b83-76fa-4f34-86d1-857c4e7bba99">1.2.840.10008.5.1.4.1.1.7.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b59739a2-90af-4fd9-82ba-9693506d33ca">Multi-frame Single Bit Secondary Capture Image Storage</para>
+              <para xml:id="para_b59739a2-90af-4fd9-82ba-9693506d33ca">Multi-frame Single Bit Secondary Capture Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e3dfc917-1918-45e0-b9fa-30a9a3400668">Transfer</para>
@@ -1690,7 +1690,7 @@
               <para xml:id="para_a5aa5d0a-c224-4876-bb50-fa3446776446">1.2.840.10008.5.1.4.1.1.7.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7bfe7afd-cda7-4d20-9200-81c5b2f33638">Multi-frame Grayscale Byte Secondary Capture Image Storage</para>
+              <para xml:id="para_7bfe7afd-cda7-4d20-9200-81c5b2f33638">Multi-frame Grayscale Byte Secondary Capture Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e57032aa-cbc5-48e9-920b-b045e79b5e8e">Transfer</para>
@@ -1701,7 +1701,7 @@
               <para xml:id="para_3e739331-ba0b-4b76-8368-b16b49bc273a">1.2.840.10008.5.1.4.1.1.7.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_87ddc80f-6a1b-4944-a347-7559237bff0f">Multi-frame Grayscale Word Secondary Capture Image Storage</para>
+              <para xml:id="para_87ddc80f-6a1b-4944-a347-7559237bff0f">Multi-frame Grayscale Word Secondary Capture Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_17ca6111-48e7-436e-a204-a3914e2299eb">Transfer</para>
@@ -1712,7 +1712,7 @@
               <para xml:id="para_d11317ab-ae79-4c58-be77-7fdc917bb8a6">1.2.840.10008.5.1.4.1.1.7.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_414dab79-bebe-44ff-8b18-ed70f6a507b3">Multi-frame True Color Secondary Capture Image Storage</para>
+              <para xml:id="para_414dab79-bebe-44ff-8b18-ed70f6a507b3">Multi-frame True Color Secondary Capture Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c73c1640-02ee-40e6-8818-216a2509b4c9">Transfer</para>
@@ -1723,7 +1723,7 @@
               <para xml:id="para_27517ffd-d64a-419b-857d-04e90b63e264">1.2.840.10008.5.1.4.1.1.9.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7909ebd5-138b-4593-b6c4-b11711dbc6bb">12-lead ECG Waveform Storage</para>
+              <para xml:id="para_7909ebd5-138b-4593-b6c4-b11711dbc6bb">12-lead ECG Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f9a29e13-33fd-4ba0-8fce-3c69243fa879">Transfer</para>
@@ -1734,7 +1734,7 @@
               <para xml:id="para_396429f0-875a-4f65-be9b-c74d38aff1c6">1.2.840.10008.5.1.4.1.1.9.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_924778a1-5a25-4fc5-b585-a5a025d3d225">General ECG Waveform Storage</para>
+              <para xml:id="para_924778a1-5a25-4fc5-b585-a5a025d3d225">General ECG Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_cb6228b5-2755-4f83-b5d5-b26567c933a6">Transfer</para>
@@ -1745,7 +1745,7 @@
               <para xml:id="para_7f92ccbd-5518-44ec-8172-0850414d8a4f">1.2.840.10008.5.1.4.1.1.9.1.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d0ecced1-275b-44cd-886b-0314c8be2273">Ambulatory ECG Waveform Storage</para>
+              <para xml:id="para_d0ecced1-275b-44cd-886b-0314c8be2273">Ambulatory ECG Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_db79caa7-7b7a-4870-be28-5977f5350e50">Transfer</para>
@@ -1756,7 +1756,7 @@
               <para xml:id="para_8f2b51bc-54a4-430d-8f27-94aae27aef1d">1.2.840.10008.5.1.4.1.1.9.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3d8ae954-8506-49a0-a162-16c9ec0f3644">Hemodynamic Waveform Storage</para>
+              <para xml:id="para_3d8ae954-8506-49a0-a162-16c9ec0f3644">Hemodynamic Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_17e6fb3e-3081-42cc-848b-78b2d30741c9">Transfer</para>
@@ -1767,7 +1767,7 @@
               <para xml:id="para_69608e81-cb3e-4896-81d5-9bc40808589a">1.2.840.10008.5.1.4.1.1.9.3.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d136b2c2-ff4d-41dc-af2f-f78acd0a1c36">Cardiac Electrophysiology Waveform Storage</para>
+              <para xml:id="para_d136b2c2-ff4d-41dc-af2f-f78acd0a1c36">Cardiac Electrophysiology Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_979847b0-dea1-41e3-bb22-31a3b8c41fda">Transfer</para>
@@ -1778,7 +1778,7 @@
               <para xml:id="para_7c7f2d98-d33b-4ceb-a9e1-a996d5b65d0b">1.2.840.10008.5.1.4.1.1.9.4.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b91f275c-f60d-4938-b026-0d51cf2606d3">Basic Voice Audio Waveform Storage</para>
+              <para xml:id="para_b91f275c-f60d-4938-b026-0d51cf2606d3">Basic Voice Audio Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_34a61dd3-048c-48ea-ae8d-78dfa95fbcca">Transfer</para>
@@ -1789,7 +1789,7 @@
               <para xml:id="para_23a3bb73-e1e3-4c3b-8357-1072a93a198c">1.2.840.10008.5.1.4.1.1.9.4.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9129611a-365d-4716-95bc-4c433e200258">General Audio Waveform Storage</para>
+              <para xml:id="para_9129611a-365d-4716-95bc-4c433e200258">General Audio Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c276e392-a4bf-49bf-9b4f-05b83849b2e2">Transfer</para>
@@ -1800,7 +1800,7 @@
               <para xml:id="para_17422ed8-7dae-47ac-a96c-2d3728071ab0">1.2.840.10008.5.1.4.1.1.9.5.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e1e62eca-21d1-4cfc-9abe-1cd5d7444dc8">Arterial Pulse Waveform Storage</para>
+              <para xml:id="para_e1e62eca-21d1-4cfc-9abe-1cd5d7444dc8">Arterial Pulse Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_eb0bcf67-9d53-4599-9d63-c62f62c3c6fd">Transfer</para>
@@ -1811,7 +1811,7 @@
               <para xml:id="para_b685beb8-cc8e-477b-8995-24485977a829">1.2.840.10008.5.1.4.1.1.9.6.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_81f4115f-31ff-4765-bcac-3f90c55ee98b">Respiratory Waveform Storage</para>
+              <para xml:id="para_81f4115f-31ff-4765-bcac-3f90c55ee98b">Respiratory Waveform Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_eb82a7be-3488-478f-89ac-9df11dae6d0d">Transfer</para>
@@ -1866,7 +1866,7 @@
               <para xml:id="para_70eccecd-73e1-4d56-bf3a-f882686295a6">1.2.840.10008.5.1.4.1.1.11.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f2db7a3f-b841-4478-8428-e599085c125f">XA/XRF Grayscale Softcopy Presentation State Storage</para>
+              <para xml:id="para_f2db7a3f-b841-4478-8428-e599085c125f">XA/XRF Grayscale Softcopy Presentation State Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_9ce381ce-cc0c-40f8-a870-f008ebc300af">Transfer</para>
@@ -1896,10 +1896,54 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_befe68ed-784c-4672-ad3c-2dc93b21559c">1.2.840.10008.​5.​1.​4.​1.​1.​11.​8</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eae7e203-f210-408f-a90e-53308ca247b0">Advanced Blending Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a0539db9-1c86-4297-9fff-4f8b628ac481">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9d12b452-63c5-4420-8397-322c1feb5667">1.2.840.10008.​5.​1.​4.​1.​1.​11.​9</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_36784cb3-1138-4d3e-8f67-1d968d4b1c3f">Volume Rendering Volumetric Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5d7c5d79-26c6-4b17-addb-e7779457a7ad">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c99d8df4-1dcf-4f51-91b7-f9a9b3415440">1.2.840.10008.​5.​1.​4.​1.​1.​11.​10</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a83856e4-1f9a-4c6d-99b1-5e5e3b5c8eff">Segmented Volume Rendering Volumetric Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f4cf4066-72ea-440a-9f1e-76c2d9ad02b4">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_dc3175a0-5634-4300-88ab-78e2cb2242bc">1.2.840.10008.​5.​1.​4.​1.​1.​11.​11</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_456e5d60-a739-40b2-8b67-0df565ef7c16">Multiple Volume Rendering Volumetric Presentation State Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_362c9c1b-207e-452d-bab7-00ec3ba651ec">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7527ea11-c5da-4de7-be6a-42bac9e7ec38">1.2.840.10008.5.1.4.1.1.12.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fec05bbc-1205-494e-9c05-dfd1b20cf6d2">X-Ray Angiographic Image Storage</para>
+              <para xml:id="para_fec05bbc-1205-494e-9c05-dfd1b20cf6d2">X-Ray Angiographic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1f1cc58d-77f2-4ea7-abe8-73666b514214">Transfer</para>
@@ -1910,7 +1954,7 @@
               <para xml:id="para_b15a88e3-0011-4ec0-9df1-503ca1b5f7e6">1.2.840.10008.5.1.4.1.1.12.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_87713e2e-628e-485b-ab3e-7d18021b249e">Enhanced XA Image Storage</para>
+              <para xml:id="para_87713e2e-628e-485b-ab3e-7d18021b249e">Enhanced XA Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_02dd6e6f-0742-4018-b148-942eb2a6bc0d">Transfer</para>
@@ -1921,7 +1965,7 @@
               <para xml:id="para_9b618d64-4694-40f4-88f9-14ec369d2213">1.2.840.10008.5.1.4.1.1.12.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_099c0e11-a431-49a6-b765-cfd3cfd89b10">X-Ray Radiofluoroscopic Image Storage</para>
+              <para xml:id="para_099c0e11-a431-49a6-b765-cfd3cfd89b10">X-Ray Radiofluoroscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5a66009b-4203-4b80-9812-6ef83ee8c590">Transfer</para>
@@ -1932,7 +1976,7 @@
               <para xml:id="para_f9490f7f-cd6a-4f7d-925e-5224b2531d4e">1.2.840.10008.5.1.4.1.1.12.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_12f8bdcc-7286-4c5b-9578-456d40df2575">Enhanced XRF Image Storage</para>
+              <para xml:id="para_12f8bdcc-7286-4c5b-9578-456d40df2575">Enhanced XRF Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2fa709fd-f924-42e7-ad73-dd4aa7500d22">Transfer</para>
@@ -1943,7 +1987,7 @@
               <para xml:id="para_9ee9cf42-eb63-4014-99ae-1ad442c9c59f">1.2.840.10008.5.1.4.1.1.13.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a052b31f-782f-41ed-bf44-183b0d98097e">X-Ray 3D Angiographic Image Storage</para>
+              <para xml:id="para_a052b31f-782f-41ed-bf44-183b0d98097e">X-Ray 3D Angiographic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e6133619-6397-4f73-8d54-996d269cc29f">Transfer</para>
@@ -1954,7 +1998,7 @@
               <para xml:id="para_9cdbd3f1-5ccd-4319-8792-0aa5bb189df0">1.2.840.10008.5.1.4.1.1.13.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b021cef8-ea32-4a39-9ac4-deef4393f876">X-Ray 3D Craniofacial Image Storage</para>
+              <para xml:id="para_b021cef8-ea32-4a39-9ac4-deef4393f876">X-Ray 3D Craniofacial Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7e978eb5-67e0-4f42-8aee-681a029ebee5">Transfer</para>
@@ -1965,7 +2009,7 @@
               <para xml:id="para_4256d21a-1d6f-424c-bf0a-c98a2d7ddd24">1.2.840.10008.5.1.4.1.1.13.1.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8f93d5a0-b5ad-4adc-a65e-126cd2397df7">Breast Tomosynthesis Image Storage</para>
+              <para xml:id="para_8f93d5a0-b5ad-4adc-a65e-126cd2397df7">Breast Tomosynthesis Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4b6afe9d-a03f-4b5c-9d09-13b7b8231489">Transfer</para>
@@ -1976,7 +2020,7 @@
               <para xml:id="para_f7ac9143-456e-47a7-b009-8a8c0e3bbeb4">1.2.840.10008.5.1.4.1.1.13.1.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3772562d-8bc9-4fcd-8369-108b6be28bc5">Breast Projection X-Ray Image Storage - For Presentation</para>
+              <para xml:id="para_3772562d-8bc9-4fcd-8369-108b6be28bc5">Breast Projection X-Ray Image Storage - For Presentation SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_35c93a9e-4938-482d-8483-3b138e4da89c">Transfer</para>
@@ -1987,7 +2031,7 @@
               <para xml:id="para_747c9451-25ad-4d77-af11-846eb2f7675f">1.2.840.10008.5.1.4.1.1.13.1.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2ece7511-f6b9-4b9a-92de-0b56a47e6553">Breast Projection X-Ray Image Storage - For Processing</para>
+              <para xml:id="para_2ece7511-f6b9-4b9a-92de-0b56a47e6553">Breast Projection X-Ray Image Storage - For Processing SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_48523188-24b0-465e-a384-65bc553f60ce">Transfer</para>
@@ -1998,7 +2042,7 @@
               <para xml:id="para_2729140a-241e-4159-b5c8-5e8e100b47e9">1.2.840.10008.5.1.4.1.1.14.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_22da694c-326e-491b-a777-6e2f1701bd58">Intravascular Optical Coherence Tomography Image Storage - For Presentation</para>
+              <para xml:id="para_22da694c-326e-491b-a777-6e2f1701bd58">Intravascular Optical Coherence Tomography Image Storage - For Presentation SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_3417a65e-c663-4dec-bd5f-6040cf032928">Transfer</para>
@@ -2009,7 +2053,7 @@
               <para xml:id="para_f18e356b-c2bd-4bb5-abef-2aa9bc6888c9">1.2.840.10008.5.1.4.1.1.14.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_39eb8384-6eb0-4fe1-8076-db3f94c75346">Intravascular Optical Coherence Tomography Image Storage - For Processing</para>
+              <para xml:id="para_39eb8384-6eb0-4fe1-8076-db3f94c75346">Intravascular Optical Coherence Tomography Image Storage - For Processing SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_96e1f2fb-9700-463c-8139-8ca9b776ec87">Transfer</para>
@@ -2020,7 +2064,7 @@
               <para xml:id="para_a449f345-242d-4a73-ad38-6d3d4f240d5b">1.2.840.10008.5.1.4.1.1.20</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_424eb104-7d38-48c9-a854-05ee400d5684">Nuclear Medicine Image Storage</para>
+              <para xml:id="para_424eb104-7d38-48c9-a854-05ee400d5684">Nuclear Medicine Image Storage SOP Classe</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_887440a5-ad38-4431-99bf-0bfe8f2e9a29">Transfer</para>
@@ -2042,7 +2086,7 @@
               <para xml:id="para_a0aabea8-70a9-4e0c-a694-7c32bd0398f2">1.2.840.10008.5.1.4.1.1.66</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a989b06a-6436-4b0b-a8f9-fb330a9f4b97">Raw Data Storage</para>
+              <para xml:id="para_a989b06a-6436-4b0b-a8f9-fb330a9f4b97">Raw Data Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4ad03789-fa18-4420-ac42-e2efe3db6eb7">Transfer</para>
@@ -2053,7 +2097,7 @@
               <para xml:id="para_e5625447-2c28-4dd5-8998-4660ac705fd9">1.2.840.10008.5.1.4.1.1.66.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_88739dac-ce0f-46d5-b08b-2a2523410f2b">Spatial Registration Storage</para>
+              <para xml:id="para_88739dac-ce0f-46d5-b08b-2a2523410f2b">Spatial Registration Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_ecc66db7-05fd-4e93-bf84-e84b5710e937">Transfer</para>
@@ -2064,7 +2108,7 @@
               <para xml:id="para_8582996e-80ea-4421-9652-dfcd24d24f24">1.2.840.10008.5.1.4.1.1.66.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7bd41cb4-9c3c-44e8-8528-dc65cc4fbe51">Spatial Fiducials Storage</para>
+              <para xml:id="para_7bd41cb4-9c3c-44e8-8528-dc65cc4fbe51">Spatial Fiducials Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d42807e6-cf97-4c9b-ae9c-d2adabd54c5b">Transfer</para>
@@ -2075,7 +2119,7 @@
               <para xml:id="para_36014ac3-74cc-46a8-b3c3-130277f20d12">1.2.840.10008.5.1.4.1.1.66.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d8a54d24-a173-4a29-ab35-8c6a8a22d2d0">Deformable Spatial Registration SOP Class</para>
+              <para xml:id="para_d8a54d24-a173-4a29-ab35-8c6a8a22d2d0">Deformable Spatial Registration Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_40c326e5-2563-476c-9c06-53fef28f7848">Transfer</para>
@@ -2086,7 +2130,7 @@
               <para xml:id="para_e0d92c6d-7d44-42bc-b8e9-78bb47cf1b36">1.2.840.10008.5.1.4.1.1.66.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a3703ae2-cf5c-48a6-bec6-25d74412cda6">Segmentation SOP Class</para>
+              <para xml:id="para_a3703ae2-cf5c-48a6-bec6-25d74412cda6">Segmentation Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d1524ad8-681a-4231-8e59-280eaa911ab4">Transfer</para>
@@ -2097,7 +2141,7 @@
               <para xml:id="para_4fe45482-113c-4f44-a920-48efd7d7eb2f">1.2.840.10008.5.1.4.1.1.66.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6dd165e8-f06d-4183-b40f-d5ea25ac2b02">Surface Segmentation Storage</para>
+              <para xml:id="para_6dd165e8-f06d-4183-b40f-d5ea25ac2b02">Surface Segmentation Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c4679f7e-3c5a-4c45-abd3-af082eb607e4">Transfer</para>
@@ -2108,7 +2152,7 @@
               <para xml:id="para_d6c34cbe-e159-4a6f-a890-814610d48481">1.2.840.10008.5.1.4.1.1.66.6</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_0f3410f3-8df0-49cd-bdd5-d9633d8cf192">Tractography Results Storage</para>
+              <para xml:id="para_0f3410f3-8df0-49cd-bdd5-d9633d8cf192">Tractography Results Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_413e1be5-bf87-415e-9b38-cc82bbd27e72">Transfer</para>
@@ -2118,7 +2162,7 @@
               <para xml:id="para_77cf7085-3f08-454e-bf40-c6b35e315b8d">1.2.840.10008.5.1.4.1.1.67</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ae4b92eb-0e96-4a79-b2eb-9cc08594e0b5">Real World Value Mapping Storage</para>
+              <para xml:id="para_ae4b92eb-0e96-4a79-b2eb-9cc08594e0b5">Real World Value Mapping Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a6136c10-4914-4fed-ae6b-117d2e372bb8">Transfer</para>
@@ -2129,7 +2173,7 @@
               <para xml:id="para_b00bf08d-5f79-48d9-98be-21089b48a5a9">1.2.840.10008.5.1.4.1.1.68.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_88a37fb1-44fe-4247-a842-ade27c8efed1">Surface Scan Mesh Storage</para>
+              <para xml:id="para_88a37fb1-44fe-4247-a842-ade27c8efed1">Surface Scan Mesh Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b6309362-ca48-4d2d-aa4a-8062ed275111">Transfer</para>
@@ -2140,7 +2184,7 @@
               <para xml:id="para_2d160af2-c3fc-4d44-8113-0d722bcbe851">1.2.840.10008.5.1.4.1.1.68.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8c3a29ca-a92c-40f0-9690-194a18806aef">Surface Scan Point Cloud Storage</para>
+              <para xml:id="para_8c3a29ca-a92c-40f0-9690-194a18806aef">Surface Scan Point Cloud Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f42cfe66-d35b-4211-baa7-3210456f7c04">Transfer</para>
@@ -2151,7 +2195,7 @@
               <para xml:id="para_c14aaae2-99b2-4c92-bc86-e4fc56866c19">1.2.840.10008.5.1.4.1.1.77.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2b43a7c2-8a0f-4e27-8653-0456ae718cea">VL Endoscopic Image Storage</para>
+              <para xml:id="para_2b43a7c2-8a0f-4e27-8653-0456ae718cea">VL Endoscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2774f966-0d93-452b-bff6-85fe85d36b95">Transfer</para>
@@ -2162,7 +2206,7 @@
               <para xml:id="para_0b9fe11a-1237-49af-9507-e0f7184ea856">1.2.840.10008.5.1.4.1.1.77.1.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_18e94493-5898-490d-a830-d0796dc668a5">Video Endoscopic Image Storage</para>
+              <para xml:id="para_18e94493-5898-490d-a830-d0796dc668a5">Video Endoscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d3bfaf21-800e-4caf-b282-7e5ab5767cfb">Transfer</para>
@@ -2173,7 +2217,7 @@
               <para xml:id="para_90ffb7e5-2df6-449d-8160-621293a14717">1.2.840.10008.5.1.4.1.1.77.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5fdf592e-ef60-410c-81ae-4950207ec37d">VL Microscopic Image Storage</para>
+              <para xml:id="para_5fdf592e-ef60-410c-81ae-4950207ec37d">VL Microscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1e07fabf-e913-47f0-ae49-db8c63fa62c0">Transfer</para>
@@ -2184,7 +2228,7 @@
               <para xml:id="para_613318f0-2d64-41e1-a5b7-0ecacd315ec3">1.2.840.10008.5.1.4.1.1.77.1.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6c59e3c0-3006-4a17-994f-6619fd6c9dfb">Video Microscopic Image Storage</para>
+              <para xml:id="para_6c59e3c0-3006-4a17-994f-6619fd6c9dfb">Video Microscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_ca8efe0a-123c-492d-90f3-bca61798460a">Transfer</para>
@@ -2195,7 +2239,7 @@
               <para xml:id="para_d5e7dd12-e2d0-4258-8e9b-8219805aa83c">1.2.840.10008.5.1.4.1.1.77.1.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3269b50b-5ccd-46db-8f7b-499d2d0f2bda">VL Slide-Coordinates Microscopic Image Storage</para>
+              <para xml:id="para_3269b50b-5ccd-46db-8f7b-499d2d0f2bda">VL Slide-Coordinates Microscopic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7621918b-7057-48c0-b162-984500866a76">Transfer</para>
@@ -2206,7 +2250,7 @@
               <para xml:id="para_bf3624b7-2b6b-4dad-b5d9-632a33964132">1.2.840.10008.5.1.4.1.1.77.1.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_021ba51e-1982-4e90-a3ba-0b1c32ecea18">VL Photographic Image Storage</para>
+              <para xml:id="para_021ba51e-1982-4e90-a3ba-0b1c32ecea18">VL Photographic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_53daf2b7-9836-4673-8140-c756d4af7fb1">Transfer</para>
@@ -2217,7 +2261,7 @@
               <para xml:id="para_1b553cf0-65d2-4758-a2ed-6ef27101b3aa">1.2.840.10008.5.1.4.1.1.77.1.4.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b2d37a46-97ef-4703-bfae-bcc99d7e7ac1">Video Photographic Image Storage</para>
+              <para xml:id="para_b2d37a46-97ef-4703-bfae-bcc99d7e7ac1">Video Photographic Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5f71d20a-db6d-49a4-bea9-fca2aefa70e2">Transfer</para>
@@ -2228,7 +2272,7 @@
               <para xml:id="para_a3fd635b-a4e5-45b8-a3a1-4ef25da318d7">1.2.840.10008.5.1.4.1.1.77.1.5.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c39668e5-b9a9-4b4d-8332-acbd4b86b1b2">Ophthalmic Photography 8 Bit Image Storage</para>
+              <para xml:id="para_c39668e5-b9a9-4b4d-8332-acbd4b86b1b2">Ophthalmic Photography 8 Bit Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a0569a73-dec1-4f89-ba00-cb1a18fdbd4e">Transfer</para>
@@ -2239,7 +2283,7 @@
               <para xml:id="para_b77e0d52-4ece-4ecf-a75b-a06c5fba7214">1.2.840.10008.5.1.4.1.1.77.1.5.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_681debec-1482-4fda-b42a-c93e92e0725d">Ophthalmic Photography 16 Bit Image Storage</para>
+              <para xml:id="para_681debec-1482-4fda-b42a-c93e92e0725d">Ophthalmic Photography 16 Bit Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0ebd0e92-7817-4c3e-8ab6-a963a92aafa4">Transfer</para>
@@ -2250,7 +2294,7 @@
               <para xml:id="para_926991da-d845-4178-adec-7aa8c308529d">1.2.840.10008.5.1.4.1.1.77.1.5.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b972419b-511d-402b-a114-7bdd6a914659">Stereometric Relationship Storage</para>
+              <para xml:id="para_b972419b-511d-402b-a114-7bdd6a914659">Stereometric Relationship Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f61e3af1-57b8-4f43-8ec7-11ea0094fee9">Transfer</para>
@@ -2261,7 +2305,7 @@
               <para xml:id="para_47f550f9-11e1-488c-b97a-7c0d0c92369d">1.2.840.10008.5.1.4.1.1.77.1.5.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_fbd0fc84-2010-4746-a2d4-323a274c1cc4">Ophthalmic Tomography Image Storage</para>
+              <para xml:id="para_fbd0fc84-2010-4746-a2d4-323a274c1cc4">Ophthalmic Tomography Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4f246550-147a-41d4-9812-775a283e1aeb">Transfer</para>
@@ -2272,7 +2316,7 @@
               <para xml:id="para_e73968d3-6b69-48ea-b38d-f4e8514bb187">1.2.840.10008.5.1.4.1.1.77.1.5.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ae2c220d-2d6b-46f6-873b-b70b718375d7">Wide Field Ophthalmic Photography Stereographic Projection Image Storage</para>
+              <para xml:id="para_ae2c220d-2d6b-46f6-873b-b70b718375d7">Wide Field Ophthalmic Photography Stereographic Projection Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_21c6c202-ef88-4ffd-b4eb-590d5c53f937">Transfer</para>
@@ -2283,7 +2327,7 @@
               <para xml:id="para_f99d0f27-d626-4bba-813b-ff188f8d8107">1.2.840.10008.5.1.4.1.1.77.1.5.6</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_69339a3a-cc4e-4f93-a75e-eac425ff273c">Wide Field Ophthalmic Photography 3D Coordinates Image Storage</para>
+              <para xml:id="para_69339a3a-cc4e-4f93-a75e-eac425ff273c">Wide Field Ophthalmic Photography 3D Coordinates Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_66b4fbb6-21b3-4929-8095-e029b7262d84">Transfer</para>
@@ -2291,10 +2335,32 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ce5987fa-beae-4b51-8c79-a4ac6befe718">1.2.840.10008.5.1.4.1.1.77.1.5.7</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_5d0c99e0-900b-4e74-9914-a459f80c6972">Ophthalmic Optical Coherence Tomography En Face Image Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_ff547dfb-7aa5-42af-930a-d399ff87d657">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_67bbc9ed-19d4-4463-ac8b-a2dff4a5ef24">1.2.840.10008.5.1.4.1.1.77.1.5.8</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_4342063f-131a-40e0-8133-85afcc43aa4a">Ophthalmic Optical Coherence Tomography B-scan Volume Analysis Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_381fdda0-1d96-4d87-a619-00ff273e0520">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_17d8a243-fcd4-4f40-888c-9dddbe3b47ee">1.2.840.10008.5.1.4.1.1.77.1.6</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_29561896-1f9b-4a0b-96e4-d660578e4bce">VL Whole Slide Microscopy Image Storage</para>
+              <para xml:id="para_29561896-1f9b-4a0b-96e4-d660578e4bce">VL Whole Slide Microscopy Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_cddde718-9e39-48f9-ab50-6930ba3d1996">Transfer</para>
@@ -2305,7 +2371,7 @@
               <para xml:id="para_4502e6de-b7e5-42b6-b032-b5e980537aa1">1.2.840.10008.5.1.4.1.1.78.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2d827ad9-cd6e-4502-b676-5b2b4ca314b0">Lensometry Measurements Storage</para>
+              <para xml:id="para_2d827ad9-cd6e-4502-b676-5b2b4ca314b0">Lensometry Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1a27ca91-421c-42d0-bcde-99b70dd1019a">Transfer</para>
@@ -2316,7 +2382,7 @@
               <para xml:id="para_b44071c4-636a-41f0-9132-f3d59ec78968">1.2.840.10008.5.1.4.1.1.78.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c8eab59f-50ae-4b9e-aae6-0d581531e975">Autorefraction Measurements Storage</para>
+              <para xml:id="para_c8eab59f-50ae-4b9e-aae6-0d581531e975">Autorefraction Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_57a2c9dd-5e43-44f0-94ae-64301de17c22">Transfer</para>
@@ -2327,7 +2393,7 @@
               <para xml:id="para_e7a4434a-136f-4a3c-a603-958f1c5620aa">1.2.840.10008.5.1.4.1.1.78.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b347c240-7fc5-4d4c-b3dd-a7392e37c8de">Keratometry Measurements Storage</para>
+              <para xml:id="para_b347c240-7fc5-4d4c-b3dd-a7392e37c8de">Keratometry Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0efd1dfc-bebd-478f-a837-89c129c346bd">Transfer</para>
@@ -2338,7 +2404,7 @@
               <para xml:id="para_6a8eade4-67fc-424e-b5a5-f329da089151">1.2.840.10008.5.1.4.1.1.78.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_69ba3650-b506-4808-9ee6-22845ce781c0">Subjective Refraction Measurements Storage</para>
+              <para xml:id="para_69ba3650-b506-4808-9ee6-22845ce781c0">Subjective Refraction Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_167f2554-9be9-4f73-a5d8-19d022367dce">Transfer</para>
@@ -2349,7 +2415,7 @@
               <para xml:id="para_1e7c09f1-f9fd-4dc5-a845-64053f70c5c8">1.2.840.10008.5.1.4.1.1.78.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a846f394-9574-4199-b602-4d76a8974539">Visual Acuity Measurements Storage</para>
+              <para xml:id="para_a846f394-9574-4199-b602-4d76a8974539">Visual Acuity Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_581bddb4-6913-414b-b49f-8b1b456835b6">Transfer</para>
@@ -2360,7 +2426,7 @@
               <para xml:id="para_9f282111-cc96-44e3-b1cd-98ea3053e67d">1.2.840.10008.5.1.4.1.1.78.6</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_75fb591a-eee6-411a-9742-4c0c8adc300f">Spectacle Prescription Report Storage</para>
+              <para xml:id="para_75fb591a-eee6-411a-9742-4c0c8adc300f">Spectacle Prescription Report Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_6e93fdb4-796c-427e-8b86-3d874a36f167">Transfer</para>
@@ -2371,7 +2437,7 @@
               <para xml:id="para_ef75b22e-bdbb-489b-94df-44ee651f020d">1.2.840.10008.5.1.4.1.1.78.7</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_daeaf6f6-da65-4e2e-960b-71b575016642">Ophthalmic Axial Measurements Storage</para>
+              <para xml:id="para_daeaf6f6-da65-4e2e-960b-71b575016642">Ophthalmic Axial Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_bb0cf652-2d49-4ebb-a7dc-9ad2cf3a0e3b">Transfer</para>
@@ -2382,7 +2448,7 @@
               <para xml:id="para_047520c6-1116-484b-a996-956ae261a6a1">1.2.840.10008.5.1.4.1.1.78.8</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f78d57d5-3842-4035-b804-2854b57bd105">Intraocular Lens Calculations Storage</para>
+              <para xml:id="para_f78d57d5-3842-4035-b804-2854b57bd105">Intraocular Lens Calculations Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5f5ffe7e-6350-4017-a1d1-ead05f0ab2bb">Transfer</para>
@@ -2404,7 +2470,7 @@
               <para xml:id="para_bc990f6f-d093-492d-a8e1-89d85d29df19">1.2.840.10008.5.1.4.1.1.80.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9e175b75-183c-4426-bd57-1bbe94f7ba2d">Ophthalmic Visual Field Static Perimetry Measurements Storage</para>
+              <para xml:id="para_9e175b75-183c-4426-bd57-1bbe94f7ba2d">Ophthalmic Visual Field Static Perimetry Measurements Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_aa2728ce-3240-4b86-b9bd-2873523aa85c">Transfer</para>
@@ -2415,7 +2481,7 @@
               <para xml:id="para_b5a3a9dc-8346-424f-af08-87c56f230c7a">1.2.840.10008.5.1.4.1.1.81.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f1277ea0-bc67-488d-b023-c60b7eb82549">Ophthalmic Thickness Map Storage</para>
+              <para xml:id="para_f1277ea0-bc67-488d-b023-c60b7eb82549">Ophthalmic Thickness Map Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2ba04801-2053-4aef-89aa-6b96e53c3b42">Transfer</para>
@@ -2426,7 +2492,7 @@
               <para xml:id="para_c1024e82-b57b-4dfe-a2e3-4051393540bc">1.2.840.10008.5.1.4.1.1.82.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_edb4fe64-7fdd-49f3-86da-f209d1edb568">Corneal Topography Map Storage</para>
+              <para xml:id="para_edb4fe64-7fdd-49f3-86da-f209d1edb568">Corneal Topography Map Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_9ab5641b-139c-462d-b49a-037128c0d76e">Transfer</para>
@@ -2437,7 +2503,7 @@
               <para xml:id="para_948067aa-5b33-494e-9b16-41e8486c2cd4">1.2.840.10008.5.1.4.1.1.88.11</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6f705498-0e58-46f4-bee5-77c25f4b7122">Basic Text SR</para>
+              <para xml:id="para_6f705498-0e58-46f4-bee5-77c25f4b7122">Basic Text SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_75a83633-a61d-4366-8e63-63eb119b2b51">Transfer</para>
@@ -2448,7 +2514,7 @@
               <para xml:id="para_afe8d085-87d8-464e-9ad5-4137604384de">1.2.840.10008.5.1.4.1.1.88.22</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8a97a45c-c221-4852-8dfe-cd2a5648916b">Enhanced SR</para>
+              <para xml:id="para_8a97a45c-c221-4852-8dfe-cd2a5648916b">Enhanced SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_24526749-8c39-4bd0-bc45-2dfa6db0cc5b">Transfer</para>
@@ -2459,7 +2525,7 @@
               <para xml:id="para_ec26db23-101b-4430-a742-32ecb7119069">1.2.840.10008.5.1.4.1.1.88.33</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d9e2dae8-a424-4e22-bafd-692926a82c1c">Comprehensive SR</para>
+              <para xml:id="para_d9e2dae8-a424-4e22-bafd-692926a82c1c">Comprehensive SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2b0fe799-e1eb-45f0-b55a-69b9150cbd2b">Transfer</para>
@@ -2470,7 +2536,7 @@
               <para xml:id="para_83f8659d-154b-4af9-9746-6ba783728add">1.2.840.10008.5.1.4.1.1.88.34</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b4e15689-81ef-4c0d-9cf3-0fbe0f761cb4">Comprehensive 3D SR</para>
+              <para xml:id="para_b4e15689-81ef-4c0d-9cf3-0fbe0f761cb4">Comprehensive 3D SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_339607cd-3006-4a0b-aeee-add22deeda51">Transfer</para>
@@ -2481,7 +2547,7 @@
               <para xml:id="para_d7fc614e-1d94-43b3-b3ac-d13cc9fb1433">1.2.840.10008.5.1.4.1.1.88.40</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5303510a-ecb4-4ef8-ac56-36ab61648984">Procedure Log Storage</para>
+              <para xml:id="para_5303510a-ecb4-4ef8-ac56-36ab61648984">Procedure Log Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f173fe6a-f334-465d-b16e-d251adaf9913">Transfer</para>
@@ -2492,7 +2558,7 @@
               <para xml:id="para_c1de5132-32b9-4ea3-a7b7-37c9c8d10cf9">1.2.840.10008.5.1.4.1.1.88.50</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a3250d35-83e6-4213-961c-1c27bc43d415">Mammography CAD SR</para>
+              <para xml:id="para_a3250d35-83e6-4213-961c-1c27bc43d415">Mammography CAD SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5c9ee261-1e1e-40a5-bb40-e4f8bd7e6a4b">Transfer</para>
@@ -2503,7 +2569,7 @@
               <para xml:id="para_496f36a1-4965-43ae-a9ac-bcb50866e9d9">1.2.840.10008.5.1.4.1.1.88.59</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_22e71cc8-ff29-4f42-8fe4-83d61b6ac442">Key Object Selection Document</para>
+              <para xml:id="para_22e71cc8-ff29-4f42-8fe4-83d61b6ac442">Key Object Selection Document Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_9d7c10e7-8c6f-4936-ab55-79b7541432ab">Transfer</para>
@@ -2514,7 +2580,7 @@
               <para xml:id="para_35b7ac03-972d-4083-9425-c8a343918f9f">1.2.840.10008.5.1.4.1.1.88.65</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_8cb89b1e-a9df-4656-8e58-fbb49e995de1">Chest CAD SR</para>
+              <para xml:id="para_8cb89b1e-a9df-4656-8e58-fbb49e995de1">Chest CAD SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_6dc8b324-cb18-47c0-9e1f-dac0a5e68a14">Transfer</para>
@@ -2525,7 +2591,7 @@
               <para xml:id="para_1547b011-275d-4269-be94-bbb2293b84d2">1.2.840.10008.5.1.4.1.1.88.67</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d9287c8f-0ae8-4caa-8a83-14ac9fe895d5">X-Ray Radiation Dose SR</para>
+              <para xml:id="para_d9287c8f-0ae8-4caa-8a83-14ac9fe895d5">X-Ray Radiation Dose SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d5528640-9fc1-4ea7-9b6a-dd5ec54e004a">Transfer</para>
@@ -2536,7 +2602,7 @@
               <para xml:id="para_e18985ba-465d-4ab7-a243-f02f3b4df837">1.2.840.10008.5.1.4.1.1.88.68</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_19565035-aa8c-42e2-a752-2632d20be148">Radiopharmaceutical Radiation Dose SR</para>
+              <para xml:id="para_19565035-aa8c-42e2-a752-2632d20be148">Radiopharmaceutical Radiation Dose SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1d0f5414-4d7b-4984-882a-553941a23420">Transfer</para>
@@ -2547,7 +2613,7 @@
               <para xml:id="para_734f4591-710a-4331-9c70-4929d42b4e21">1.2.840.10008.5.1.4.1.1.88.69</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e60efc68-bd45-4681-86b6-262fbcdd1481">Colon CAD SR</para>
+              <para xml:id="para_e60efc68-bd45-4681-86b6-262fbcdd1481">Colon CAD SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0a13cd5e-9929-4a0f-a4c0-8f46c3e1e0f0">Transfer</para>
@@ -2558,7 +2624,7 @@
               <para xml:id="para_a3c27286-2627-4800-a49f-8f80ea14a91e">1.2.840.10008.5.1.4.1.1.88.70</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3c2bc414-44d3-443b-ad2e-b4dfd106f5f5">Implantation Plan SR Document Storage</para>
+              <para xml:id="para_3c2bc414-44d3-443b-ad2e-b4dfd106f5f5">Implantation Plan SR Document Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4f008748-357e-4276-a260-97b286a6e572">Transfer</para>
@@ -2580,10 +2646,21 @@
               <para xml:id="para_211594e6-437c-44a3-b678-8943af76440a">1.2.840.10008.5.​1.​4.​1.​1.​88.​72</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_476595d1-68c8-49bc-b44b-1d9bf74cccf4">Simplified Adult Echo SR Storage</para>
+              <para xml:id="para_476595d1-68c8-49bc-b44b-1d9bf74cccf4">Simplified Adult Echo SR Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5f07c2ae-5f53-4586-842c-ae5e3411e77b">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cbeafb98-e86f-4f32-9d68-7be87b2cb5a7">1.2.840.10008.5.​1.​4.​1.​1.​88.​73</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_62bb82cf-7b87-4f19-a4f7-03cdebaacde3">Patient Radiation Dose SR Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_888d364e-7d18-4ff4-9a4e-905e343fb0bb">Transfer</para>
             </td>
           </tr>
           <tr valign="top">
@@ -2624,7 +2701,7 @@
               <para xml:id="para_c882eb6d-a344-4b60-ac45-6d109a404878">1.2.840.10008.5.1.4.1.1.128</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_49cf86d5-286f-4e18-9e51-ea46a4d41e93">Positron Emission Tomography Image Storage</para>
+              <para xml:id="para_49cf86d5-286f-4e18-9e51-ea46a4d41e93">Positron Emission Tomography Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c1febf68-d766-41f3-af02-e684e862dde0">Transfer</para>
@@ -2635,7 +2712,7 @@
               <para xml:id="para_f189ebfc-fae4-4176-8b83-1b3527913a9c">1.2.840.10008.5.1.4.1.1.130</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f817a018-3984-4f44-8117-c1173f5c18fb">Enhanced PET Image Storage</para>
+              <para xml:id="para_f817a018-3984-4f44-8117-c1173f5c18fb">Enhanced PET Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5e1ab939-4950-43a0-adbd-153008e5eeb0">Transfer</para>
@@ -2646,7 +2723,7 @@
               <para xml:id="para_a536d637-49d3-4c74-bab1-cde611132f50">1.2.840.10008.5.1.4.1.1.131</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_af7ac9d4-3b97-425a-854b-69ec7e462221">Basic Structured Display Storage</para>
+              <para xml:id="para_af7ac9d4-3b97-425a-854b-69ec7e462221">Basic Structured Display Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2ab02da0-4ed0-4a35-acf7-90f304816b03">Transfer</para>
@@ -2657,7 +2734,7 @@
               <para xml:id="para_b5e19b35-f6d9-4d46-85e5-1970fc766e98">1.2.840.10008.5.1.4.1.1.200.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a638ce9f-7753-426d-85d2-06bec6fe728d">CT Defined Procedure Protocol Storage</para>
+              <para xml:id="para_a638ce9f-7753-426d-85d2-06bec6fe728d">CT Defined Procedure Protocol Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4116615f-70ed-4a9f-8950-c42fd53dbcb2">Transfer</para>
@@ -2668,7 +2745,7 @@
               <para xml:id="para_7c02a9cb-3650-4fb6-9b3f-57450ad76fca">1.2.840.10008.5.1.4.1.1.200.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e6d0babb-827b-4e38-a97e-55b513824ef5">CT Performed Procedure Protocol Storage</para>
+              <para xml:id="para_e6d0babb-827b-4e38-a97e-55b513824ef5">CT Performed Procedure Protocol Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_3cc2e65f-68aa-416c-ae1c-5057a6cd49e1">Transfer</para>
@@ -2679,7 +2756,7 @@
               <para xml:id="para_64eca0dd-e400-43c0-b56e-2d531ee29c50">1.2.840.10008.5.1.4.1.1.481.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_a3478d18-d14c-4ad3-adda-5cde92940e00">RT Image Storage</para>
+              <para xml:id="para_a3478d18-d14c-4ad3-adda-5cde92940e00">RT Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_03a1aae3-6292-4936-9998-ee3a6c5701b7">Transfer</para>
@@ -2690,7 +2767,7 @@
               <para xml:id="para_b779a814-2ab7-4d17-a519-5310c571a20f">1.2.840.10008.5.1.4.1.1.481.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b4627aa8-e19f-4c56-9f77-3c59ebeec95f">RT Dose Storage</para>
+              <para xml:id="para_b4627aa8-e19f-4c56-9f77-3c59ebeec95f">RT Dose Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_eca3494b-4b89-4d80-85a6-2a299d2ba459">Transfer</para>
@@ -2701,7 +2778,7 @@
               <para xml:id="para_e81bf516-cddd-4082-9b3f-8d2247303154">1.2.840.10008.5.1.4.1.1.481.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_3c687cb2-c408-46fb-bd2a-3d364c1cef92">RT Structure Set Storage</para>
+              <para xml:id="para_3c687cb2-c408-46fb-bd2a-3d364c1cef92">RT Structure Set Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_55da14ea-4384-45c3-80bc-1f1da1003cab">Transfer</para>
@@ -2712,7 +2789,7 @@
               <para xml:id="para_ca37842e-3ad6-41ff-b7ad-044b3a5eec9f">1.2.840.10008.5.1.4.1.1.481.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_53558f58-7d0c-449b-9d85-0f13c403fb9f">RT Beams Treatment Record Storage</para>
+              <para xml:id="para_53558f58-7d0c-449b-9d85-0f13c403fb9f">RT Beams Treatment Record Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_86c235fe-1f3b-4bcb-a585-f671d26fd4e1">Transfer</para>
@@ -2723,7 +2800,7 @@
               <para xml:id="para_981f1bd2-3484-4e79-aae4-1d166a98ba14">1.2.840.10008.5.1.4.1.1.481.5</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_355fb7e7-84a4-462b-b268-922c368cb192">RT Plan Storage</para>
+              <para xml:id="para_355fb7e7-84a4-462b-b268-922c368cb192">RT Plan Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_ffb0323b-412a-474f-85eb-cf9cec90ea7d">Transfer</para>
@@ -2734,7 +2811,7 @@
               <para xml:id="para_e1e685b9-aa9c-4267-a5e2-96f0908101a6">1.2.840.10008.5.1.4.1.1.481.6</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c4f4412f-3fe5-4205-9fe0-75f403ad4f4a">RT Brachy Treatment Record Storage</para>
+              <para xml:id="para_c4f4412f-3fe5-4205-9fe0-75f403ad4f4a">RT Brachy Treatment Record Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7334a9b3-4660-411f-ba38-d8d67baff8f2">Transfer</para>
@@ -2745,7 +2822,7 @@
               <para xml:id="para_891286ab-b7d8-420d-998f-63175513a37a">1.2.840.10008.5.1.4.1.1.481.7</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6cc0e2b5-7ad2-4304-b603-842320c08444">RT Treatment Summary Record Storage</para>
+              <para xml:id="para_6cc0e2b5-7ad2-4304-b603-842320c08444">RT Treatment Summary Record Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7dcb0a17-6478-4da4-87d6-64db8e898256">Transfer</para>
@@ -2756,7 +2833,7 @@
               <para xml:id="para_a9e4393c-0f78-428f-ab09-ee9feb1c7d96">1.2.840.10008.5.1.4.1.2.1.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_e17aba6b-dba3-48fe-a607-851754636614">Patient Root Query/Retrieve Information Model - FIND</para>
+              <para xml:id="para_e17aba6b-dba3-48fe-a607-851754636614">Patient Root Query/Retrieve Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_500c5ade-39d1-4cb4-b692-4119fb0c7a07">Query/Retrieve</para>
@@ -2767,7 +2844,7 @@
               <para xml:id="para_46ac4697-bb61-4394-9caf-a4f6af04e109">1.2.840.10008.5.1.4.1.2.1.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_1219095e-ec67-4662-952f-aea3c698f36e">Patient Root Query/Retrieve Information Model - MOVE</para>
+              <para xml:id="para_1219095e-ec67-4662-952f-aea3c698f36e">Patient Root Query/Retrieve Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d540df38-f92b-4c22-9566-664a30963b5f">Query/Retrieve</para>
@@ -2778,7 +2855,7 @@
               <para xml:id="para_c2051a9d-ec88-4c3d-bab7-25a9167c694d">1.2.840.10008.5.1.4.1.2.1.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d752d059-3af5-40d2-904e-e004023ad421">Patient Root Query/Retrieve Information Model - GET</para>
+              <para xml:id="para_d752d059-3af5-40d2-904e-e004023ad421">Patient Root Query/Retrieve Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b1f91a7d-e6dc-43be-8645-2356bb901749">Query/Retrieve</para>
@@ -2789,7 +2866,7 @@
               <para xml:id="para_afeaf8dc-32fd-4e61-8348-a09b92da9790">1.2.840.10008.5.1.4.1.2.2.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_7e8d9f39-0feb-4eca-ab59-10d9bc6d05e9">Study Root Query/Retrieve Information Model - FIND</para>
+              <para xml:id="para_7e8d9f39-0feb-4eca-ab59-10d9bc6d05e9">Study Root Query/Retrieve Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_cd3c90db-7b7b-4f2c-b1d5-e1634a2f815f">Query/Retrieve</para>
@@ -2800,7 +2877,7 @@
               <para xml:id="para_628efa3d-962f-4d8e-9212-5f6be08a7c39">1.2.840.10008.5.1.4.1.2.2.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6038922b-f27a-4d00-a5ec-f345906fa33d">Study Root Query/Retrieve Information Model - MOVE</para>
+              <para xml:id="para_6038922b-f27a-4d00-a5ec-f345906fa33d">Study Root Query/Retrieve Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f2802dd2-d153-4b17-b044-6c11fb37533d">Query/Retrieve</para>
@@ -2811,7 +2888,7 @@
               <para xml:id="para_3b67dcd1-8e25-420b-8032-d0cde717db20">1.2.840.10008.5.1.4.1.2.2.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_44df34dc-dabf-47b7-917d-f0ba1d5d49da">Study Root Query/Retrieve Information Model - GET</para>
+              <para xml:id="para_44df34dc-dabf-47b7-917d-f0ba1d5d49da">Study Root Query/Retrieve Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c719e76e-27d5-4ff7-9dd6-72907d834daf">Query/Retrieve</para>
@@ -2822,7 +2899,7 @@
               <para xml:id="para_ed5b1262-02fa-4b7d-b96d-b5bc7837825a">1.2.840.10008.5.1.4.1.2.4.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ac40e81d-4300-4a87-ae00-9cbeefc7c51c">Composite Instance Root Retrieve - MOVE</para>
+              <para xml:id="para_ac40e81d-4300-4a87-ae00-9cbeefc7c51c">Composite Instance Root Retrieve - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1e0b9355-827e-42df-b8a3-4e2645b871db">Query/Retrieve</para>
@@ -2833,7 +2910,7 @@
               <para xml:id="para_52774179-21a0-4ed4-9d10-f9e1a22a71d0">1.2.840.10008.5.1.4.1.2.4.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_073c0498-dd44-4a6f-ab50-c0feb60f02ca">Composite Instance Root Retrieve - GET</para>
+              <para xml:id="para_073c0498-dd44-4a6f-ab50-c0feb60f02ca">Composite Instance Root Retrieve - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a026b6b4-b5c2-429e-a7aa-338d3c15ff76">Query/Retrieve</para>
@@ -2844,7 +2921,7 @@
               <para xml:id="para_77ac11dd-2111-4b66-9f6e-11ec637c229d">1.2.840.10008.5.1.4.1.2.5.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_dcadbe1f-bb75-465e-bec8-07391ac7e4cb">Composite Instance Retrieve Without Bulk Data - GET</para>
+              <para xml:id="para_dcadbe1f-bb75-465e-bec8-07391ac7e4cb">Composite Instance Retrieve Without Bulk Data - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_07305381-bfb7-44fb-a65c-a424c8439462">Query/Retrieve</para>
@@ -2855,7 +2932,7 @@
               <para xml:id="para_f5d7a386-1403-4166-989d-cd2c0067692f">1.2.840.10008.5.1.4.20.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2b3e8c49-10ad-4dc1-9c3a-fbc457a26641">Defined Procedure Protocol Information Model - FIND</para>
+              <para xml:id="para_2b3e8c49-10ad-4dc1-9c3a-fbc457a26641">Defined Procedure Protocol Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_08705b18-b611-4064-975a-bf70aa0cf54c">Query/Retrieve</para>
@@ -2866,7 +2943,7 @@
               <para xml:id="para_fa558e3d-3dc8-439b-b487-796c4a1bbf9a">1.2.840.10008.5.1.4.20.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4156c7f9-1780-4a97-99cb-97a06a704e6d">Defined Procedure Protocol Information Model - MOVE</para>
+              <para xml:id="para_4156c7f9-1780-4a97-99cb-97a06a704e6d">Defined Procedure Protocol Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f0123603-bb76-423d-9fc9-1f6e0723acbf">Query/Retrieve</para>
@@ -2877,7 +2954,7 @@
               <para xml:id="para_e58f5fd5-40f6-4b2a-bc4b-e250a46f3eef">1.2.840.10008.5.1.4.20.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2f2fe0f8-59ed-408e-8a2e-8979bdc239d8">Defined Procedure Protocol Information Model - GET</para>
+              <para xml:id="para_2f2fe0f8-59ed-408e-8a2e-8979bdc239d8">Defined Procedure Protocol Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_db32d926-51ff-4cd4-8cc7-7c115ab6fc1c">Query/Retrieve</para>
@@ -2888,7 +2965,7 @@
               <para xml:id="para_5b70d2eb-7135-48b7-bac2-3468edbbc322">1.2.840.10008.5.1.4.31</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ef8bbb24-d182-4514-b630-1ee7180ef753">Modality Worklist Information Model - FIND</para>
+              <para xml:id="para_ef8bbb24-d182-4514-b630-1ee7180ef753">Modality Worklist Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_51f1eea2-6241-4fb4-b0d4-2869edc1c136">Workflow Management</para>
@@ -2902,7 +2979,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_311beeae-de8f-4194-a8d1-41722aa59cad">
-                <emphasis role="italic">General Purpose Worklist Information Model - FIND (Retired)</emphasis>
+                <emphasis role="italic">General Purpose Worklist Information Model - FIND SOP Class (Retired)</emphasis>
               </para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -3022,7 +3099,7 @@
               <para xml:id="para_0c4bce39-b6d8-450c-a7e4-268112ef2069">1.2.840.10008.5.1.4.34.7</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_c153c687-6e11-4597-833c-24939483f93f">RT Beams Delivery Instruction Storage</para>
+              <para xml:id="para_c153c687-6e11-4597-833c-24939483f93f">RT Beams Delivery Instruction Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0912830b-3e05-4769-9ca2-b295b4ca5a1c">Transfer</para>
@@ -3033,7 +3110,7 @@
               <para xml:id="para_fa9e6562-2a19-4284-96c9-83252f1d6a14">1.2.840.10008.5.1.4.34.8</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b7adca88-4e43-4065-937d-33738c1f315f">RT Conventional Machine Verification</para>
+              <para xml:id="para_b7adca88-4e43-4065-937d-33738c1f315f">RT Conventional Machine Verification SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_2204d176-7169-44f9-8535-7a4ea10785f4">Workflow Management</para>
@@ -3044,7 +3121,7 @@
               <para xml:id="para_9a173ad0-84bb-4c09-8eb5-34a0ffb35467">1.2.840.10008.5.1.4.34.9</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b856d7d5-67b1-4132-9cf7-e47c086563d1">RT Ion Machine Verification</para>
+              <para xml:id="para_b856d7d5-67b1-4132-9cf7-e47c086563d1">RT Ion Machine Verification SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_00710475-745f-4a8f-af89-980b3f12f8fd">Workflow Management</para>
@@ -3055,7 +3132,7 @@
               <para xml:id="para_a4c1a2fa-8286-4c0e-b46c-74f528b0a040">1.2.840.10008.5.1.4.34.10</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_92908ac0-6177-426a-b16c-b2ba3966c1d2">RT Brachy Application Setup Delivery Instruction Storage</para>
+              <para xml:id="para_92908ac0-6177-426a-b16c-b2ba3966c1d2">RT Brachy Application Setup Delivery Instruction Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_13c8ccf8-0312-4691-a0cb-5b19b5355808">Transfer</para>
@@ -3066,7 +3143,7 @@
               <para xml:id="para_1b7dfdf6-4af5-4d45-912f-dc2600641787">1.2.840.10008.5.1.4.37.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cea0acaf-c5c1-4be5-9b96-8b351a06ee06">General Relevant Patient Information Query</para>
+              <para xml:id="para_cea0acaf-c5c1-4be5-9b96-8b351a06ee06">General Relevant Patient Information Query SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a69f612a-6dc3-4562-8943-ad52985b6408">Query/Retrieve</para>
@@ -3077,7 +3154,7 @@
               <para xml:id="para_e87366e3-3285-4721-a888-1ea78eaed47f">1.2.840.10008.5.1.4.37.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_07e22af0-01e2-4bb8-9b57-e83b1698ddd3">Breast Imaging Relevant Patient Information Query</para>
+              <para xml:id="para_07e22af0-01e2-4bb8-9b57-e83b1698ddd3">Breast Imaging Relevant Patient Information Query SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_457236f3-8f41-43db-b627-662e70d1a43d">Query/Retrieve</para>
@@ -3088,7 +3165,7 @@
               <para xml:id="para_5b0a9064-7f3b-4731-a9d1-b0787d75c238">1.2.840.10008.5.1.4.37.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_f4b23c97-361d-4ab1-b0af-735597d36bf2">Cardiac Relevant Patient Information Query</para>
+              <para xml:id="para_f4b23c97-361d-4ab1-b0af-735597d36bf2">Cardiac Relevant Patient Information Query SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d0416da3-6968-4fff-b50c-8699543da281">Query/Retrieve</para>
@@ -3099,7 +3176,7 @@
               <para xml:id="para_1a565c09-cf5a-4793-bba0-ce3ea81f882d">1.2.840.10008.5.1.4.38.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_61a56cbf-2a96-4771-a177-17042d59fe51">Hanging Protocol Storage</para>
+              <para xml:id="para_61a56cbf-2a96-4771-a177-17042d59fe51">Hanging Protocol Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5132a338-5db4-4e53-9ad7-d8754c1cebe2">Transfer</para>
@@ -3110,7 +3187,7 @@
               <para xml:id="para_1fd27df9-770c-4713-b1b8-f53523b393ca">1.2.840.10008.5.1.4.38.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_67616814-c39b-4f43-bc9d-5295e99907e5">Hanging Protocol Information Model - FIND</para>
+              <para xml:id="para_67616814-c39b-4f43-bc9d-5295e99907e5">Hanging Protocol Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_1567e860-376a-46b0-8ab1-a6b8de99e9e7">Query/Retrieve</para>
@@ -3121,7 +3198,7 @@
               <para xml:id="para_f31ccc3d-f053-442a-97c8-c707f221143f">1.2.840.10008.5.1.4.38.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_25b0bc22-4811-4a8f-82f2-9fc7fc168ad0">Hanging Protocol Information Model - MOVE</para>
+              <para xml:id="para_25b0bc22-4811-4a8f-82f2-9fc7fc168ad0">Hanging Protocol Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_49837e23-41e2-4187-995d-0d9d5a1c1485">Query/Retrieve</para>
@@ -3132,7 +3209,7 @@
               <para xml:id="para_2e6af134-b423-4c95-9880-c958ba7ad3b8">1.2.840.10008.5.1.4.39.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_5166dcf2-a3cc-4076-b246-d09d02ea9f72">Color Palette Storage</para>
+              <para xml:id="para_5166dcf2-a3cc-4076-b246-d09d02ea9f72">Color Palette Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5d69aa27-3ee3-4b9a-b335-218cf41a0406">Transfer</para>
@@ -3143,7 +3220,7 @@
               <para xml:id="para_25a2cd20-ef52-4b27-897b-5d0536972035">1.2.840.10008.5.1.4.39.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_aa176ca4-eebc-4ec7-9519-c617dd7c9d42">Color Palette Information Model - FIND</para>
+              <para xml:id="para_aa176ca4-eebc-4ec7-9519-c617dd7c9d42">Color Palette Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_aef0fa0b-126c-4f6c-8fe4-96c6c2d56dbf">Query/Retrieve</para>
@@ -3154,7 +3231,7 @@
               <para xml:id="para_60fd1801-027c-4a9c-95ed-18c515daedf0">1.2.840.10008.5.1.4.39.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2c0d315f-4e22-45ca-85d9-afebedfadd03">Color Palette Information Model - MOVE</para>
+              <para xml:id="para_2c0d315f-4e22-45ca-85d9-afebedfadd03">Color Palette Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_195f37e4-d9cd-4ac7-9791-3d666b5caae7">Query/Retrieve</para>
@@ -3165,7 +3242,7 @@
               <para xml:id="para_58fcc2f5-823e-4169-8a9d-f9099796e6c1">1.2.840.10008.5.1.4.39.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_deb24851-54e2-4912-87a0-5ee45054efd0">Color Palette Information Model - GET</para>
+              <para xml:id="para_deb24851-54e2-4912-87a0-5ee45054efd0">Color Palette Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_12d3ba7c-5509-4963-ae66-f4f96772a3ed">Query/Retrieve</para>
@@ -3176,7 +3253,7 @@
               <para xml:id="para_1aea3412-b677-4365-b5b3-0574ba6aed86">1.2.840.10008.5.1.4.41</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_ece28e26-d2b5-45b2-918f-8da2eb3f9671">Product Characteristics Query</para>
+              <para xml:id="para_ece28e26-d2b5-45b2-918f-8da2eb3f9671">Product Characteristics Query SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_35d200b6-1f4c-4f4c-8c1a-822679b64ac6">Query/Retrieve</para>
@@ -3187,7 +3264,7 @@
               <para xml:id="para_b916afd7-9d54-46a1-a289-2d8c84ce24b6">1.2.840.10008.5.1.4.42</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_38c0998e-2d9f-488d-b0d0-386106aab2ee">Substance Approval Query</para>
+              <para xml:id="para_38c0998e-2d9f-488d-b0d0-386106aab2ee">Substance Approval Query SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_4adec67d-7d10-497d-a28f-58382f9f4c62">Query/Retrieve</para>
@@ -3198,7 +3275,7 @@
               <para xml:id="para_2a7b3cd2-17a8-4e37-be8f-ffb07639ca14">1.2.840.10008.5.1.4.43.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_4c94a54b-6eaa-4a13-9d01-f7acfe39729e">Generic Implant Template Storage</para>
+              <para xml:id="para_4c94a54b-6eaa-4a13-9d01-f7acfe39729e">Generic Implant Template Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_47b3daaa-2f2b-4217-9183-9af67da5216c">Transfer</para>
@@ -3209,7 +3286,7 @@
               <para xml:id="para_6555e499-4666-4fee-a7b8-09e7602af180">1.2.840.10008.5.1.4.43.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_91a66d4c-2827-40c2-8295-afcda43c73f5">Generic Implant Template Information Model - FIND</para>
+              <para xml:id="para_91a66d4c-2827-40c2-8295-afcda43c73f5">Generic Implant Template Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_198ebc46-d5d9-46f4-ba67-1b36318c8899">Query / Retrieve</para>
@@ -3220,7 +3297,7 @@
               <para xml:id="para_df20cd21-a695-4901-a5be-e861e5aa68eb">1.2.840.10008.5.1.4.43.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_d05793ac-d051-469b-9593-efbd219bb01e">Generic Implant Template Information Model - MOVE</para>
+              <para xml:id="para_d05793ac-d051-469b-9593-efbd219bb01e">Generic Implant Template Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_b2531906-3d0a-485d-8aad-1622015e5626">Query / Retrieve</para>
@@ -3231,7 +3308,7 @@
               <para xml:id="para_2bd18cfe-b372-4b61-8108-79d3a981293f">1.2.840.10008.5.1.4.43.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_9f5a52bf-1a5e-4ba7-9eb1-13f1255b2a80">Generic Implant Template Information Model - GET</para>
+              <para xml:id="para_9f5a52bf-1a5e-4ba7-9eb1-13f1255b2a80">Generic Implant Template Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_5740baf3-56bd-4b89-8db5-8ada62758814">Query / Retrieve</para>
@@ -3242,7 +3319,7 @@
               <para xml:id="para_d5e428c7-b90f-47f1-8674-6db8b7623264">1.2.840.10008.5.1.4.44.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_df326afa-40fa-4543-98a8-5ecb65802591">Implant Assembly Template Storage</para>
+              <para xml:id="para_df326afa-40fa-4543-98a8-5ecb65802591">Implant Assembly Template Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_dd5c2657-2973-41a9-be1c-4bb8d68f5914">Transfer</para>
@@ -3253,7 +3330,7 @@
               <para xml:id="para_430bd1d5-db1a-4a71-a2a9-972aff61cae5">1.2.840.10008.5.1.4.44.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_350a003d-742f-4a79-a1d1-c658433d83c4">Implant Assembly Template Information Model - FIND</para>
+              <para xml:id="para_350a003d-742f-4a79-a1d1-c658433d83c4">Implant Assembly Template Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_26d087ee-ea79-41d8-b15e-5eb88d2a576c">Query / Retrieve</para>
@@ -3264,7 +3341,7 @@
               <para xml:id="para_7b27606f-8bef-492b-9abb-a31b0d32e9ca">1.2.840.10008.5.1.4.44.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_552f2c3f-6b96-4038-a3a7-30a87778a078">Implant Assembly Template Information Model - MOVE</para>
+              <para xml:id="para_552f2c3f-6b96-4038-a3a7-30a87778a078">Implant Assembly Template Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_427bb884-c85d-4478-bd0e-b1e16325966f">Query / Retrieve</para>
@@ -3275,7 +3352,7 @@
               <para xml:id="para_191223d8-585d-49d4-bf70-50f08bc337e8">1.2.840.10008.5.1.4.44.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_dbf68c93-e1f9-4122-82d3-cf35f422743c">Implant Assembly Template Information Model - GET</para>
+              <para xml:id="para_dbf68c93-e1f9-4122-82d3-cf35f422743c">Implant Assembly Template Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_ae69f7bc-87cf-416a-b9ee-963542b9454b">Query / Retrieve</para>
@@ -3286,7 +3363,7 @@
               <para xml:id="para_8eeab8fc-a542-4ebd-a0b1-998ff3b8d877">1.2.840.10008.5.1.4.45.1</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_301d77b2-3b3b-4b27-8755-2318cbf2f6e5">Implant Template Group Storage</para>
+              <para xml:id="para_301d77b2-3b3b-4b27-8755-2318cbf2f6e5">Implant Template Group Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_517aff2a-bdee-42a0-a22d-204bbd693877">Transfer</para>
@@ -3297,7 +3374,7 @@
               <para xml:id="para_cd752770-4639-4c79-898b-78cf53eb08e6">1.2.840.10008.5.1.4.45.2</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_2fddc05e-5048-4090-840b-58288a44a732">Implant Template Group Information Model - FIND</para>
+              <para xml:id="para_2fddc05e-5048-4090-840b-58288a44a732">Implant Template Group Information Model - FIND SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_dcf35506-6154-4946-9630-34ac4bc56992">Query / Retrieve</para>
@@ -3308,7 +3385,7 @@
               <para xml:id="para_9d839bb6-5814-4401-a39a-8e2664eb6d12">1.2.840.10008.5.1.4.45.3</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_dce47c82-14d8-4b35-98e5-4a0e20f1ecbf">Implant Template Group Information Model - MOVE</para>
+              <para xml:id="para_dce47c82-14d8-4b35-98e5-4a0e20f1ecbf">Implant Template Group Information Model - MOVE SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_850ce0f1-548c-4bff-875d-54a5a0a5947e">Query / Retrieve</para>
@@ -3319,7 +3396,7 @@
               <para xml:id="para_5a73f8d5-1de8-4428-8600-8ff74f5176fb">1.2.840.10008.5.1.4.45.4</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_cacfef64-c737-4c17-a6b2-27a38769a99f">Implant Template Group Information Model - GET</para>
+              <para xml:id="para_cacfef64-c737-4c17-a6b2-27a38769a99f">Implant Template Group Information Model - GET SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c0a76a89-8fe1-44dd-a2cb-0b99dc019f01">Query / Retrieve</para>

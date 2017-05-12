@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2017a - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2017b - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -86,17 +86,68 @@
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>2011/04</date>
-        <edition>6.0</edition>
+        <date>2016/05</date>
+        <edition>7.0</edition>
         <title>Rules for the structure and drafting of International Standards</title>
         <bibliosource>
-          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
+      <biblioentry xml:id="biblio_ISO7498-1">
+        <abbrev>ISO 7498-1</abbrev>
+        <author>
+          <orgname>ISO</orgname>
+        </author>
+        <date>1994</date>
+        <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+      </biblioentry>
+      <biblioentry xml:id="biblio_ISO8509">
+        <abbrev>ISO/TR 8509</abbrev>
+        <author>
+          <orgname>ISO</orgname>
+        </author>
+        <title>Information Processing Systems - Open Systems Interconnection - Service Conventions</title>
+        <releaseinfo>
+          <remark>ISO/TR 8509 has been withdrawn. See ISO/IEC 2382-26:1993 Information technology - Vocabulary - Part 26: Open systems interconnection</remark>
+        </releaseinfo>
+      </biblioentry>
+      <biblioentry xml:id="biblio_RFC_7230">
+        <abbrev>RFC7230</abbrev>
+        <author>
+          <orgname>IETF</orgname>
+        </author>
+        <date>June 2014</date>
+        <title>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</title>
+        <bibliosource>
+          <link xl:href="http://tools.ietf.org/html/rfc7230"/>
+        </bibliosource>
+      </biblioentry>
+      <biblioentry xml:id="biblio_PorterDuff_1984">
+        <abbrev>Porter and Duff 1984</abbrev>
+        <biblioset relation="journal">
+          <title>Computer Graphics</title>
+        </biblioset>
+        <biblioset relation="article">
+          <authorgroup>
+            <author>
+              <personname>Porter, Thomas</personname>
+            </author>
+            <author>
+              <personname>Duff, Tom</personname>
+            </author>
+          </authorgroup>
+          <date>1984</date>
+          <volumenum>18</volumenum>
+          <issuenum>3</issuenum>
+          <pagenums>253-259</pagenums>
+          <title>Compositing Digital Images</title>
+          <biblioid class="doi">10.1145/800031.808606</biblioid>
+          <bibliosource>
+            <link xl:href="http://keithp.com/~keithp/porterduff/p253-porter.pdf"/>
+          </bibliosource>
+        </biblioset>
+      </biblioentry>
     </bibliography>
-    <para xml:id="para_70c21431-7e21-480f-b83d-5672236d8337">ISO 7498-1 Information Processing Systems-Open Systems Interconnection- Basic Reference Model</para>
-    <para xml:id="para_08b7c573-ec37-4cd1-8ecd-4ff95c16bfc3">ISO/TR 8509 Information Processing Systems-Open Systems Interconnection- Service Conventions</para>
-    <para xml:id="para_3992adf7-77e5-4642-ae51-5c999926d129">IETF RFC7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</para>
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
@@ -1329,6 +1380,29 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="4">
+                  <para xml:id="para_9362b27e-56c5-4f11-80ea-83eb6db044c2">Patient Radiation Dose SR</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_d9c4185a-1292-4cdc-a866-6912836a824f">Enhanced SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1cbde88f-f5fd-4e23-b95b-8088dcb61bbf">Comprehensive SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_504a4a36-993c-46a5-a7a6-4876125052c6">Comprehensive 3D SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_d1ce024e-7a0a-4232-8d5b-76de86ecc63b">Extensible SR</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="4">
                   <para xml:id="para_da59d18a-e2a9-4f86-b899-9bed49f88d16">Acquisition Context SR</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -1417,6 +1491,8 @@
       <para xml:id="para_cc9f3c9d-4220-4e98-8393-282ed19fbe07">Similarly, no semantics are attached to the closing of an Association, such as the end of a Study or Performed Procedure Step.</para>
       <section label="B.4.1" status="3" xml:id="sect_B.4.1">
         <title>Conformance as an SCP</title>
+        <section label="B.4.1.1" status="4" xml:id="sect_B.4.1.1">
+          <title>Levels of Conformance</title>
         <para xml:id="para_17668caf-5a55-4035-9778-0ba0787d92cd">Three levels of conformance to the Storage SOP Classes as an SCP may be provided:</para>
         <itemizedlist>
           <listitem>
@@ -1432,9 +1508,23 @@
         <note>
           <para xml:id="para_ed6fab43-d6bb-4b0f-b029-dd961ca9fbf5">A Level 2 SCP may discard (not store) Type 3 Attributes that are empty (zero length and no Value), since the meaning of an empty Type 3 Attribute is the same as absence of the Attribute. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> definition of "Type 3 Optional Data Elements".</para>
         </note>
-        <para xml:id="para_be36e27d-1dc5-4483-b4c0-6e49d5108baf">An SCP that claims conformance to Level 2 (Full) support of the Storage Service Class may accept any Presentation Context negotiation of a SOP Class that specifies the Storage Service Class during the SOP Class Common Extended Negotiation, without asserting conformance to that SOP Class in its Conformance Statement.</para>
+        </section>
+        <section label="B.4.1.2" status="4" xml:id="sect_B.4.1.2">
+          <title>Support of Additional SOP Classes</title>
+        <para xml:id="para_be36e27d-1dc5-4483-b4c0-6e49d5108baf">An SCP that claims conformance to Level 2 (Full) support of the Storage Service Class
+          may accept any Presentation Context negotiation of a SOP Class that specifies the Storage Service Class during the SOP Class Common Extended Negotiation
+          (see <xref linkend="sect_B.3.1.3" xrefstyle="select: label"/>), without asserting conformance to that SOP Class in its Conformance Statement.</para>
         <note>
-          <para xml:id="para_1d76572a-da00-4d9c-a47c-c8bf607f21bc">The SCP may support storage of all SOP Classes of the Storage Service Class, preserving all Attributes as a Level 2 SCP.</para>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_1d76572a-da00-4d9c-a47c-c8bf607f21bc">The SCP may support storage of all SOP Classes of the Storage Service Class, preserving all Attributes as a Level 2 SCP.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_05ba3e4a-6920-4a66-8853-dd6177d6c66d">This Extended Negotiation allows an SCP to determine that a private SOP Class
+                (per <olink targetdoc="PS3.2" targetptr="sect_3.11.5" xrefstyle="select: docname label quotedtitle"/>)
+                in a proposed Presentation Context follows the semantics of the Storage Service Class, and may be handled accordingly.</para>
+            </listitem>
+          </orderedlist>
         </note>
         <para xml:id="para_0bf42adc-095d-4a4c-9db2-37635ca6435a">An SCP that claims conformance to Level 2 (Full) support of a Related General SOP Class may accept any Presentation Context negotiation of a SOP Class that specifies that Related General SOP Class during the SOP Class Common Extended Negotiation, without asserting conformance to that specialized SOP Class in its Conformance Statement.</para>
         <note>
@@ -1445,10 +1535,20 @@
             <listitem>
               <para xml:id="para_d5c61a52-682f-4469-bad6-7ed151962489">The SCP may handle instances of such specialized SOP Classes using the semantics of the Related General SOP Class, but preserving all additional (potentially Type 1 or 2) Attributes as a Level 2 SCP.</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_5b3f556e-5dfa-4426-a623-e5f42508a4b3">An SCP that has access to the current content of <xref linkend="table_B.5-1" xrefstyle="select: label"/>
+                might use that to determine acceptance of proposed Presentation Context SOP Classes.
+                This allows an SCP, even without Extended Negotiation, to be able to identify all standard SOP Classes of the Storage Service Class.
+                Access to <xref linkend="table_B.5-1" xrefstyle="select: label"/> may be through private means,
+                or to the publication of PS3 on the web site of the DICOM Standards Committee.
+                This provides an automated alternative to manually editing a table of supported Storage SOP Classes.</para>
+            </listitem>
           </orderedlist>
         </note>
-        <para xml:id="para_99147e5c-f569-4458-89e5-be9a13536928">Level 2 (Full) Storage SCP Conformance is required for support of the Enhanced Multi-Frame Image Conversion Extended Negotiation of the Query/Retrieve Service Class, since effective use of that option requires the storage of Type 3 Attributes. See <xref linkend="sect_C.3.5" xrefstyle="select: label"/> New Instance Creation for Enhanced Multi-frame Image Conversion.</para>
-        <para xml:id="para_905f79de-5e44-499f-9761-14e44608b74f">At any level of conformance, the SCP of the Storage Service Class may modify the values of certain Attributes in order to coerce the SOP Instance into the Query Model of the SCP. The Attributes that may be modified are shown in <xref linkend="table_B.4-1" xrefstyle="select: label"/>.</para>
+        </section>
+        <section label="B.4.1.3" status="4" xml:id="sect_B.4.1.3">
+          <title>Coercion of Attributes</title>
+          <para xml:id="para_905f79de-5e44-499f-9761-14e44608b74f">At any level of conformance, the SCP of the Storage Service Class may modify the values of certain Attributes in order to coerce the SOP Instance into the Query Model of the SCP. The Attributes that may be modified are shown in <xref linkend="table_B.4-1" xrefstyle="select: label"/>.</para>
         <table frame="box" label="B.4-1" rules="all" xml:id="table_B.4-1">
           <caption>Attributes Subject to Coercion</caption>
           <thead>
@@ -1472,6 +1572,22 @@
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_f638e4e9-ba6b-4eda-ad88-75b4a9b54cd9">(0010,0020)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_893e750d-3f20-4dd8-8e03-f3031b5bea28">Issuer of Patient ID</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_dfbad1dd-afd2-4996-ae57-c13b44132921">(0010,0021)</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3ecebc25-15c7-48d8-a9a4-6df2769d0474">Other Patient IDs Sequence</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e4c3cdb7-6258-4127-b486-e8966137608b">(0010,1002)</para>
               </td>
             </tr>
             <tr valign="top">
@@ -1513,7 +1629,10 @@
             </listitem>
           </orderedlist>
         </note>
-        <para xml:id="para_f27c2475-7315-4cbd-b3e3-8afdec12479e">Three levels of Digital Signature support are defined for an SCP that claims conformance to Level 2 (Full) storage support:</para>
+        </section>
+        <section label="B.4.1.4" status="4" xml:id="sect_B.4.1.4">
+          <title>Levels of Digital Signature</title>
+          <para xml:id="para_f27c2475-7315-4cbd-b3e3-8afdec12479e">Three levels of Digital Signature support are defined for an SCP that claims conformance to Level 2 (Full) storage support:</para>
         <itemizedlist>
           <listitem>
             <para xml:id="para_caa995dc-29fe-48c3-96be-016181f6f644">Signature Level 1. SCP may not preserve Digital Signatures and does not replace them.</para>
@@ -1525,6 +1644,7 @@
             <para xml:id="para_b7ac6c03-2e10-488d-946a-6fc682e6681f">Signature Level 3. SCP does preserve the integrity of incoming Digital Signatures (i.e., is bit-preserving and stores and retrieves all Attributes regardless of whether they are defined in the IOD).</para>
           </listitem>
         </itemizedlist>
+        </section>
       </section>
       <section label="B.4.2" status="3" xml:id="sect_B.4.2">
         <title>Conformance as an SCU</title>
@@ -1579,6 +1699,9 @@
             </listitem>
             <listitem>
               <para xml:id="para_34f2988d-874d-4ccb-bf2c-85042711adb6">The optional elements that will be discarded (if any) shall be listed for each IOD supported.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_53235b77-de46-4440-b780-a39cf5ac3aa0">The mechanisms by which additional SOP Classes are dynamically supported, as defined by <xref linkend="sect_B.4.1.2" xrefstyle="select: label"/>, shall be stated.</para>
             </listitem>
             <listitem>
               <para xml:id="para_7dd6b41d-fa8d-4a22-b2ae-3911335e60bf">The Conformance Statement shall document the policies concerning the Attribute Lossy Image Compression (0028,2110).</para>
@@ -2165,6 +2288,58 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_eacf9e44-6fd6-4707-bb23-a53d567be2dc">Advanced Blending Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e0628da8-fdba-4532-a541-bbfd26dcab8a">1.2.840.10008.5.1.4.1.1.11.8</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_12970d00-47a9-4bbc-a91d-789c8f54422b">
+                <olink targetdoc="PS3.3" targetptr="sect_A.33.7" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c4aaaf2f-65ee-4d9f-acf0-029177e05b15">Volume Rendering Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_25daae4c-5ac5-4035-897e-cf8edd1892b5">1.2.840.10008.5.1.4.1.1.11.9</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8de0d168-15a2-40b9-97c3-124ed05814e6">
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2ada1061-0699-4823-b1a4-444ec4360b87">Segmented Volume Rendering Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_9a3be6bd-74fd-4553-9c5e-2a71d95716ce">1.2.840.10008.5.1.4.1.1.11.10</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_885daf34-daf2-4bd8-99cf-32e27f9c168f">
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_2f697221-a942-4e07-8231-d92f5c22cb65">Multiple Volume Rendering Volumetric Presentation State Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8d26a287-50c1-4a6e-a0f0-7f0a97c596d7">1.2.840.10008.5.1.4.1.1.11.11</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_116f510c-b2c0-4f17-847b-1735f490db0f">
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_90667a84-4fcd-4558-8786-b4f4cc4e2c05">X-Ray Angiographic Image Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2635,6 +2810,32 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8d521f7e-d2f5-4ef2-9598-ffbb0cf1b47a">Ophthalmic Optical Coherence Tomography En Face Image Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f20ba13a-f1d8-4a52-8d2b-e02962ea89e6">1.2.840.10008.5.1.4.1.1.77.1.5.7</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d0634c35-afe7-4ed9-893f-ce20709123c1">
+                <olink targetdoc="PS3.3" targetptr="sect_A.83" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_870ad8c5-a5ce-4399-b80b-030204dc0ada">Ophthalmic Optical Coherence Tomography B-scan Volume Analysis Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_276a4772-3d21-47b6-9421-aa9551bab3e7">1.2.840.10008.5.1.4.1.1.77.1.5.8</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_8ca74857-c926-47c5-95ff-3b4a5ad0f0a6">
+                <olink targetdoc="PS3.3" targetptr="sect_A.84" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a94d0177-2e58-454e-be95-92d9bb08fffa">VL Whole Slide Microscopy Image Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -2999,6 +3200,19 @@
           </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_cbadc5d1-c112-4f1f-9328-294c4da60e66">Patient Radiation Dose SR Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d54cbce2-b858-44a0-b802-060a11db3325">1.2.840.10008.5.​1.​4.​1.​1.​88.​73</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_6e9e207a-4caf-447b-a3cc-d7c4c38f87aa">
+                <olink targetdoc="PS3.3" targetptr="sect_A.35.18" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_01e8db9e-925b-4b06-86bf-f3914e261ce4">Content Assessment Results Storage</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
@@ -3314,6 +3528,9 @@
               <para xml:id="para_379fc474-a0f3-4a27-8f70-d0e88f8e1182">Radiopharmaceutical Radiation Dose SR</para>
             </listitem>
             <listitem>
+              <para xml:id="para_6466b8c3-ac38-4436-9fee-e2dba2297645">Patient Radiation Dose SR</para>
+            </listitem>
+            <listitem>
               <para xml:id="para_b971032b-5595-43b6-a38e-020ec6da9178">Spectacle Prescription Report</para>
             </listitem>
             <listitem>
@@ -3473,7 +3690,7 @@
         </section>
         <section label="B.5.1.19" status="4" xml:id="sect_B.5.1.19">
           <title>Planar MPR Volumetric Presentation State Storage SOP Classes</title>
-          <para xml:id="para_a746b5d5-88a7-41c7-b2c5-440fa11dbf1f">The requirements of <xref linkend="chapter_FF" xrefstyle="template:Annex %n"/> apply to the following SOP Classes:</para>
+          <para xml:id="para_a746b5d5-88a7-41c7-b2c5-440fa11dbf1f">The requirements of <xref linkend="sect_FF.2.1.1" xrefstyle="select: label"/> apply to the following SOP Classes:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_5fa20001-fd81-48a4-832a-6c869e05b371">Grayscale Planar MPR Volumetric Presentation State Storage</para>
@@ -3482,8 +3699,8 @@
               <para xml:id="para_f99e78a2-e249-4180-903c-83ee777b78b2">Compositing Planar MPR Volumetric Presentation State Storage</para>
             </listitem>
           </itemizedlist>
-          <para xml:id="para_20032327-9a10-4066-8a27-7c03a04ba0a8">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of MONOCHROME for Pixel Presentation (0008,9205) and shall have only a single item in the Volumetric Presentation State Input Sequence (0070,1201).</para>
-          <para xml:id="para_a2912829-bba5-4739-a9e4-4b35b636aafc">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class shall use the Planar MPR Volumetric Presentation State IOD with an Enumerated Value of TRUE COLOR for Pixel Presentation (0008,9205).</para>
+          <para xml:id="para_20032327-9a10-4066-8a27-7c03a04ba0a8">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class shall use the <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/> with an Enumerated Value of MONOCHROME for Pixel Presentation (0008,9205) and shall have only a single item in the Volumetric Presentation State Input Sequence (0070,1201).</para>
+          <para xml:id="para_a2912829-bba5-4739-a9e4-4b35b636aafc">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class shall use the <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/> with an Enumerated Value of TRUE COLOR for Pixel Presentation (0008,9205).</para>
         </section>
         <section label="B.5.1.20" status="4" xml:id="sect_B.5.1.20">
           <title>Content Assessment Results Storage SOP Classes</title>
@@ -3513,6 +3730,33 @@
           <note>
             <para xml:id="para_bc0a4c3c-5ced-4d79-a634-2253aa43c1a3">This requirement means that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition and Private Attributes associated with the SOP Class will be stored and may be accessed.</para>
           </note>
+        </section>
+        <section label="B.5.1.23" status="4" xml:id="sect_B.5.1.23">
+          <title>Enhanced Multi-Frame Image SOP Classes</title>
+          <para xml:id="para_99147e5c-f569-4458-89e5-be9a13536928">An SCP of any of the Enhanced Multi-Frame Image SOP Classes
+            that makes SOP Instances available through the Enhanced Multi-Frame Image Conversion Extended Negotiation of the Query/Retrieve Service Class
+            (see <xref linkend="sect_C.3.5" xrefstyle="select: label quotedtitle"/>) shall provide Level 2 (Full) Storage SCP Conformance.</para>
+          <note>
+            <para xml:id="para_9d6de318-d8b1-4c80-ae99-b8a4fd12b00f">Effective use of the Image Conversion option requires the storage of Type 3 Attributes.</para>
+          </note>
+        </section>
+        <section label="B.5.1.24" status="4" xml:id="sect_B.5.1.24">
+          <title>Volume Rendering Volumetric Presentation State Storage SOP Classes</title>
+          <para xml:id="para_6a81423b-1702-4a0c-8a30-befcadc4a13f">The requirements of <xref linkend="sect_FF.2.1.2" xrefstyle="select: label"/> apply to the following SOP Classes:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_837306eb-82f7-4e69-bde6-4b22fcc224aa">Volume Rendering Volumetric Presentation State SOP Class</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_8ae1c546-e220-407b-814c-9b8eb4b404a9">Segmented Volume Rendering Volumetric Presentation State SOP Class</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_ba88f0fc-96a9-48e4-9f77-a60f68c8d405">Multiple Volume Rendering Volumetric Presentation State SOP Class</para>
+            </listitem>
+          </itemizedlist>
+          <para xml:id="para_03244862-e024-4938-b804-890abcced795">The Volume Rendering Volumetric Presentation State Storage SOP Class shall use the <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/> and include a single item in Volumetric Presentation State Input Sequence (0070,1201) and a single item in Volume Stream Sequence (0070,1A08). Also, the value of Crop (0070,1204) shall be NO.</para>
+          <para xml:id="para_5e5eda63-b901-4ff5-a5ed-d09e24f08d1f">The Segmented Volume Rendering Volumetric Presentation State Storage SOP Class shall use the <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/> and include a single item in Volume Stream Sequence (0070,1A08).</para>
+          <para xml:id="para_3c8197a1-411b-474c-bd75-01fd87860cf3">The Multiple Volume Rendering Volumetric Presentation State Storage SOP Class shall use the <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/> and include two or more items in Volume Stream Sequence (0070,1A08).</para>
         </section>
       </section>
     </section>
@@ -4969,7 +5213,14 @@
               <para xml:id="para_a3f47d4c-e529-4570-9fec-12efc1ada2e4">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the default character repertoire.</para>
               <para xml:id="para_1edaed3a-3c6c-4552-9b6e-c40720103ec5">The Unique Keys at each level of the hierarchy and the values allowable for the level of the retrieval shall be defined in the SOP Class definition for the Query/Retrieve Information Model.</para>
               <note>
-                <para xml:id="para_6d8041a1-ddce-405f-8cd1-62f80f38b5bd">In the non-Relational behavior, more than one entity may be retrieved if the Query/Retrieve Level is IMAGE, SERIES or STUDY, using List of UID matching, but only Single Value Matching value may be specified for Patient ID (0010,0020).</para>
+                <orderedlist>
+                  <listitem>
+                    <para xml:id="para_6d8041a1-ddce-405f-8cd1-62f80f38b5bd">In the non-Relational behavior, more than one entity may be retrieved if the Query/Retrieve Level is IMAGE, SERIES or STUDY, using List of UID matching, but only Single Value Matching value may be specified for Patient ID (0010,0020).</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_747fe14b-eaf2-4098-aecf-bbe0af5de66f">The issuer of the Patient ID (0010,0020) is implicit; there is no provision to send the Issuer of Patient ID (0010,0021). When there is a possibility of ambiguity of the Patient ID (0010,0020) value, a STUDY level retrieval should be used instead of a PATIENT level retrieval.</para>
+                  </listitem>
+                </orderedlist>
               </note>
             </section>
             <section label="C.4.2.1.4.2" status="6" xml:id="sect_C.4.2.1.4.2">
@@ -5431,7 +5682,14 @@
               <para xml:id="para_1aaf7e8b-71eb-4059-9844-cefc89366596">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the default character repertoire.</para>
               <para xml:id="para_036fc38a-4a9b-4b4a-bea4-f9d17a6d1c33">The Unique Keys at each level of the hierarchy and the values allowable for the level of the retrieval shall be defined in the SOP Class definition for the Query/Retrieve Information Model.</para>
               <note>
-                <para xml:id="para_4e023ce5-e7d6-4dec-8d00-5fb7ad079a1b">In the non-Relational behavior, more than one entity may be retrieved if the Query/Retrieve Level is IMAGE, SERIES or STUDY, using List of UID matching, but only Single Value Matching value may be specified for Patient ID (0010,0020).</para>
+                <orderedlist>
+                  <listitem>
+                    <para xml:id="para_4e023ce5-e7d6-4dec-8d00-5fb7ad079a1b">In the non-Relational behavior, more than one entity may be retrieved if the Query/Retrieve Level is IMAGE, SERIES or STUDY, using List of UID matching, but only Single Value Matching value may be specified for Patient ID (0010,0020).</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_df0e5830-08a2-4bd6-b6e2-ac25e5f8b6dd">The issuer of the Patient ID (0010,0020) is implicit; there is no provision to send the Issuer of Patient ID (0010,0021). When there is a possibility of ambiguity of the Patient ID (0010,0020) value, a STUDY level retrieval should be used instead of a PATIENT level retrieval.</para>
+                  </listitem>
+                </orderedlist>
               </note>
             </section>
             <section label="C.4.3.1.3.2" status="6" xml:id="sect_C.4.3.1.3.2">
@@ -6440,7 +6698,10 @@
                   <para xml:id="para_5bfa1d1e-cc8c-4173-ae6f-cb4339c74d83">A description of the Attributes of this Information Model is contained in <xref linkend="sect_C.3" xrefstyle="select: label"/> of this part.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_b97ecfe2-e273-4a43-a0ba-84068d07de17">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified.</para>
+                  <para xml:id="para_b97ecfe2-e273-4a43-a0ba-84068d07de17">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified. The scope of uniqueness of the Patient ID may be specified using the Issuer of Patient ID (0010,0021).</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_d2b53feb-1daa-4d31-9dee-cc53ac699dd3">Previously, Other Patient IDs (0010,1000) was included in this table. This Attribute have been retired. See PS3.4 2017a.</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -6567,10 +6828,10 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_7b4c9be0-1ce4-488a-86f3-6ad799c97906">Other Patient IDs</para>
+                    <para xml:id="para_7b4c9be0-1ce4-488a-86f3-6ad799c97906">Other Patient IDs Sequence</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_8e010345-0c95-4de7-a180-731b9bc0d4b2">(0010,1000)</para>
+                    <para xml:id="para_8e010345-0c95-4de7-a180-731b9bc0d4b2">(0010,1002)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_8a94790e-9898-4d37-a194-2150949f6ec4">O</para>
@@ -6666,7 +6927,7 @@
                   <para xml:id="para_06c29767-65e3-47f4-9db9-05246e6dd4c1">A description of the Attributes of this Information Model is contained in <xref linkend="sect_C.3" xrefstyle="select: label"/> of this Part.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_de5be2fe-54bc-4399-b4cb-993996039a7f">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified.</para>
+                  <para xml:id="para_de5be2fe-54bc-4399-b4cb-993996039a7f">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified. The scope of uniqueness of the Patient ID may be specified using the Issuer of Patient ID (0010,0021).</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -7628,7 +7889,10 @@
                   <para xml:id="para_2537c953-f8d7-4674-b063-3d81b1d1c980">A description of the Attributes of this Information Model is contained in <xref linkend="sect_C.3" xrefstyle="select: label"/>.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_f0eebf0f-8e37-4738-b2af-e3a2400c6cd5">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified.</para>
+                  <para xml:id="para_f0eebf0f-8e37-4738-b2af-e3a2400c6cd5">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified. The scope of uniqueness of the Patient ID may be specified using the Issuer of Patient ID (0010,0021).</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_a24cb1aa-34fe-41c0-bc10-58f7c2c84a4d">Previously, Other Patient IDs (0010,1000) was included in this table. This Attribute have been retired. See PS3.4 2017a.</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -7964,10 +8228,10 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_dc79fc8d-f3af-4a33-a597-5718b8232dc7">Other Patient IDs</para>
+                    <para xml:id="para_dc79fc8d-f3af-4a33-a597-5718b8232dc7">Other Patient IDs Sequence</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_f1db0db8-356b-471d-8d68-d9c611541945">(0010,1000)</para>
+                    <para xml:id="para_f1db0db8-356b-471d-8d68-d9c611541945">(0010,1002)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_22157ce9-6b91-40b1-9e2a-1281f91d4cb0">O</para>
@@ -9169,6 +9433,83 @@
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b20fcfa2-92f0-4135-9ba3-30f24dd3e3f3">Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_88a6151b-83b8-4d1a-8f06-c0a9f31e98b8">Other Patient IDs Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_41d35328-af27-4033-8195-fa433d30674c">(0010,1002)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5e5549f1-4aa5-4c5a-bb8e-318e6e1e79a9">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ddc94083-8cdc-4001-ae75-e4c0f7a37b3b">Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2746fe46-a65c-4684-a812-fa17a528477a">&gt;Patient ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_3a6de137-81db-4f2a-8e5c-9a1d08d13dfb">(0010,0020)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_6beaa2e6-a952-4434-9720-24e146b6ee0a">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8ad494de-8f37-45f3-a280-59c89a74e82d">Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_bf560136-1b3d-4b84-a34f-e1a9ba103009">&gt;Issuer of Patient ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_33cb732e-97d6-4f63-806c-1e9cdbb3251c">(0010,0021)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_50879ebc-33b1-4476-b1c0-7a87e292c4f2">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9a6f7214-8e89-46b0-9092-bc18b3fb3b66">Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5fb09243-f896-4224-aef8-c10f160d3b0a">&gt;Issuer of Patient ID Qualifiers Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c480749d-cf04-4130-94ef-467524dd5976">(0010,0024)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f676b5c6-434d-4055-a1cf-fd0c65b57b7c">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_783fd7d5-6df0-4f5d-97dd-5308a2a4d7c2">Not allowed</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3436073a-14c1-4451-888e-a13b4d64655d">
+<emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
+</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2038462b-8e57-4f9f-ac33-1af5a4a06867"/>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_1100d961-fca1-4916-a4cb-2abb619e2e89">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_259b613b-afeb-49a5-ae32-5b9a59a9c207">Not allowed</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
@@ -11042,6 +11383,52 @@
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_5e047273-2859-412a-8325-2f49874ffe4c">3/3</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_61e854a4-370f-4500-8a52-3e609f24e7b4">&gt;Patient ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_10646866-15cf-453f-a71f-5b4c13a9ab26">(0010,0020)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_5cd38dd7-9cd8-448b-837b-3de4e00ea2de">3/3</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b0c490c5-49c0-4af6-a3a3-50fb0a0f54e6">&gt;Issuer of Patient ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b82d703a-5d88-4992-8f4d-852a737a5772">(0010,0021)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_cc2124a3-362b-4e9b-ad90-0c0fa6282341">3/3</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_7c4489ec-5484-4fd1-8569-922f2e211455">&gt;Issuer of Patient ID Qualifiers Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_07cbf9c7-9c67-44d1-a92a-c75a83eef026">(0010,0024)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b8ddcea0-49c9-4acf-a7e6-c2411152d427">3/3</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f6c4581d-4389-4c48-af63-212c39a5184d">
+<emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
+</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_39215491-7008-436c-9cb9-e29f70b63944"/>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9f054a23-c403-4914-97b8-edafa2f319d4">3/3</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -16918,6 +17305,9 @@
               <para xml:id="para_e2a1b8fe-2a55-4089-964c-736aca368fdf">Radiopharmaceutical Radiation Dose SR</para>
             </listitem>
             <listitem>
+              <para xml:id="para_df28cccc-147f-486e-919a-9534945a1224">Patient Radiation Dose SR</para>
+            </listitem>
+            <listitem>
               <para xml:id="para_9f9da368-cf66-48e8-8184-3112e8ed1b51">Spectacle Prescription Report</para>
             </listitem>
             <listitem>
@@ -19708,6 +20098,21 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_814df009-0f3c-427f-ad90-bc7199d3d6c2">Issuer of Accession Number Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7bb0ff87-9fb0-4875-9d51-b0a4d802d6f8">(0008,0051)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f91dee58-e864-49fe-96af-6ba45489baad">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_a06e2046-63fc-41d6-b5dc-72b8741031e7">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_5f4cca41-1d89-4f15-b3d2-c6fc97614aa5">Requesting Physician</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
@@ -19771,6 +20176,21 @@
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_17e5f066-323e-4a87-8dce-86db363d07e4">2</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a2140e88-8897-471c-8b15-554a7ef15034">Issuer of Admission ID Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_67d21770-fbd5-4099-a531-58b2f16b0fe4">(0038,0014)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_aec6edcc-2c24-43c8-9606-a3e94ce6d3b6">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0f90e230-e63e-4100-8a1d-cf96f9144b7d">3</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
@@ -19978,6 +20398,57 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_43317220-2918-43f9-b048-fb730d24222c">Issuer of Patient ID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7108691b-f570-4a48-9b05-2cb73a513ca4">(0010,0021)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_0a91407d-6b05-482a-a883-ccf7fd05ac5d">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9c693419-a822-4408-9572-641bc57c94fc">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ac104f3e-8070-48e9-94d1-05fa8dc48e6c"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2bab7c8b-cf52-4294-b22c-9a255ae1e85d">Issuer of Patient ID Qualifiers Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_676a4d7b-5076-4544-b2e5-ac95766cb885">(0010,0024)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d370fc77-697b-4aa6-95b6-eee6630069df">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c1dceff8-ca40-41be-93c3-a8278f246185">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_23b35b36-c6db-45b7-91a7-5d1966f0f5b8"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ea187a5b-240d-44fe-894c-4932b1cef289">Other Patient IDs Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_e7abcb48-8b54-4245-a69d-b5fc452e451e">(0010,1002)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c18109c0-fa1d-4b1e-b697-9f2bb9078e80">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7da9fcf5-60c0-464d-b1cf-d3ef2552e9f0">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_567bb450-5c7b-4fca-ae56-6547c8f44c1e"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_df5e709b-b84d-405e-8779-2ae55c9066da">
                       <emphasis role="italic">All other Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.2.2" xrefstyle="select: title"/>
                       </emphasis>
@@ -20001,7 +20472,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_56363a15-5471-438e-b532-7c79ed6a614c">Patients Birth Date</para>
+                    <para xml:id="para_56363a15-5471-438e-b532-7c79ed6a614c">Patient's Birth Date</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_c04813c1-2cb1-4475-bf05-8d914ed024d2">(0010,0030)</para>
@@ -21130,6 +21601,55 @@
           <title>Edge Enhancement</title>
           <para xml:id="para_a52e9bb3-90b7-44a7-ab7c-475d6fc262b3">The Edge Enhancement transformation consists of filter operations to enhance the display of the pixel data as specified by the Attribute Display Filter Percentage of the XA/XRF Presentation State Presentation Module.</para>
         </section>
+      </section>
+      <section label="N.2.6" status="3" xml:id="sect_N.2.6">
+        <title>Advanced Blending Transformations</title>
+        <para xml:id="para_0b8b5ee6-83f5-407b-836d-2612a490aa54">The advanced blending transformation model applies to multiple color inputs and uses foreground blending or equal blending.</para>
+        <para xml:id="para_afc18214-5674-49fa-a09b-19bf99a033b6">Several transformations in this IOD affect the input prior to its use in blending as depicted in <xref linkend="figure_N.2.6-1" xrefstyle="select: label"/>.</para>
+        <para xml:id="para_26acfd62-9e52-4831-80b8-16b524d046e4">Grayscale inputs that have no associated Color LUT information shall have the normal grayscale processing and then be converted to a full color image by setting R equals G equals B.</para>
+        <para xml:id="para_5560bdc1-c53e-4a34-b558-672e185ff280">
+          <figure label="N.2.6-1" pgwide="1" xml:id="figure_N.2.6-1">
+            <title>Color and Threshold Application</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/PS3.4_N.2.6-1.svg"/>
+                <!--<imagedata fileref="part04_fromword_files/sup189_image002.png"/>-->
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </para>
+        <para xml:id="para_06ba5515-747e-4522-9bf3-8f025548804f">Padding pixels in an input are given an opacity value zero and shall be set to 0 for Red, Green, and Blue.</para>
+        <para xml:id="para_7a9f8aa0-367b-4560-9e76-f50865029531">The foreground method blends two inputs. The first input uses an opacity of Relative Opacity (0070,0403) and the second input uses an opacity of (1 - Relative Opacity (0070,0403) ).</para>
+        <para xml:id="para_3d0ce242-34e9-436a-b34f-d935e2aa859d">If both the inputs are padding values then the result is padding value.</para>
+        <para xml:id="para_085385d7-d6ad-42b9-a959-827f9f1836f3">If one of the values is padding value then the result is the non-padding value.</para>
+        <para xml:id="para_2407be95-28b7-4983-aad9-3bb6932d88b9">If both pixels have values then result is Relative Opacity * first value + (1 - Relative Opacity) * second value.</para>
+        <para xml:id="para_6e9562ff-b3bb-4a33-b102-c04eff529d61">
+          <figure label="N.2.6-2" pgwide="1" xml:id="figure_N.2.6-2">
+            <title>Foreground Blending</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/PS3.4_N.2.6-2.svg"/>
+                <!--<imagedata fileref="part04_fromword_files/sup189_image004.png"/>-->
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </para>
+        <para xml:id="para_6fede366-0355-478e-800e-f64353476cba">The Equal blending mode blends two or more inputs where for each pixel location the opacity is calculated as 1.0 divided by the number of non-padding pixels. The result pixel blends all non-padding pixels using the calculated opacity.</para>
+        <para xml:id="para_dd913709-9c4d-4d50-b774-e6845e39ee73">If an input pixel value is the padding-value then the Relative Opacity for that input pixel is zero.</para>
+        <para xml:id="para_87a2aba1-2726-466f-a3a3-0a494c8a5b05">If an input pixel value is not the padding value then the Relative Opacity for that pixel is 1 / (number of input pixels that are non-padding pixels).</para>
+        <para xml:id="para_bd04c033-36fe-46a4-8579-a74c30dae53e">The result value is the sum for all input pixels of the input pixel value * Relative Opacity.</para>
+        <para xml:id="para_e335de31-d4e6-46d5-98ea-2f2af913cb43">If all the inputs pixels are padding values then the result is padding value.</para>
+        <para xml:id="para_87030dcd-2616-47f6-92e7-9b98f91fcaf0">
+          <figure label="N.2.6-3" pgwide="1" xml:id="figure_N.2.6-3">
+            <title>Equal Blending</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="figures/PS3.4_N.2.6-3.svg"/>
+                <!--<imagedata fileref="part04_fromword_files/sup189_image006.png"/>-->
+              </imageobject>
+            </mediaobject>
+          </figure>
+        </para>
       </section>
     </section>
     <section label="N.3" status="2" xml:id="sect_N.3">
@@ -32306,7 +32826,7 @@
                     <emphasis role="italic">AE Global State is now "Global Sub. w/o Lock";</emphasis>
                   </para>
                   <para xml:id="para_2d71487c-344a-4fa3-a10b-535e1bbbbe30">
-                    <emphasis role="italic"/>No UPS state change; <emphasis role="italic"/>
+                    <emphasis role="italic">No UPS state change;</emphasis>
                   </para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -44159,32 +44679,64 @@
             <para xml:id="para_b14c5741-38e1-474d-a393-abf3bebacda0">the generation geometry of volumetric views</para>
           </listitem>
           <listitem>
+            <para xml:id="para_03b7757b-9916-4224-85ff-781e9e6970c6">shading models</para>
+          </listitem>
+          <listitem>
             <para xml:id="para_ec2d9938-3cea-4492-93de-6c38b85bf388">scalar to P-Value or RGB Value conversions</para>
           </listitem>
           <listitem>
-            <para xml:id="para_9685bce6-5303-47a7-bea4-abadb31a7810">compositing of multiple renderings</para>
+            <para xml:id="para_9685bce6-5303-47a7-bea4-abadb31a7810">compositing of multiple MPR renderings</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6cff3e81-7b18-49c5-9a00-84749e7428fd">compositing of multiple volume streams and one volume stream with segmentation</para>
           </listitem>
           <listitem>
             <para xml:id="para_56ca4076-7201-4cf1-b151-ecb7dfd2aeb0">clinical description of the specified view</para>
           </listitem>
           <listitem>
-            <para xml:id="para_165dadf1-46e0-4276-8ff2-32a0fe138071">volume and display relative annotations, including graphics, text and overlays</para>
+            <para xml:id="para_165dadf1-46e0-4276-8ff2-32a0fe138071">volume and display relative annotations, including graphics, text and overlays plus optional references to structured content providing clinical context for annotations</para>
           </listitem>
           <listitem>
             <para xml:id="para_13ae785d-c308-4335-ae0c-dcd9120eafdd">membership to a collection of related Volumetric Presentation States intended to be processed or displayed together</para>
           </listitem>
           <listitem>
-            <para xml:id="para_9126b1e6-185a-4fef-93ca-e7e6f974c527">the position within a set of related Volumetric Presentation States</para>
+            <para xml:id="para_9126b1e6-185a-4fef-93ca-e7e6f974c527">the position within a set of sequentially related Volumetric Presentation States</para>
           </listitem>
           <listitem>
             <para xml:id="para_a4d95270-ba95-4c56-989c-de5cf29b111a">animation of the view</para>
           </listitem>
           <listitem>
-            <para xml:id="para_6ffeba06-2180-4d14-8e6a-4b257e9a2bda">reference to an image depicting the view described by the Presentation State</para>
+            <para xml:id="para_6ffeba06-2180-4d14-8e6a-4b257e9a2bda">reference to an image depicting the view described by the Volumetric Presentation State</para>
           </listitem>
         </itemizedlist>
         <para xml:id="para_e8bff42f-c6fb-4dd4-8f22-4fea9be1e778">Each Volumetric Presentation State corresponds to a single view (equivalent to an Image Box in a Hanging Protocol or Structured Display). If multiple Volumetric Presentation States are intended to be displayed together (e.g., a set of orthogonal MPR views) these Presentation States can be grouped by assigning them to a Display Collection. However, any detailed information about how a set of views should be presented can only be described by a Structured Display instance or a Hanging Protocol.</para>
         <para xml:id="para_1db16453-e7eb-43fb-8528-42082550a0e6">The Planar MPR Volumetric Presentation State refers to the multi-planar geometry and grayscale or color image transformations that are to be applied in an explicitly defined manner to convert the stored image pixel data values in a Composite Image Instance to presentation values (P-Values) or Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device.</para>
+        <para xml:id="para_2b906a2a-8e6d-486f-b5c8-096f3616d4fd">The Volume Rendering Volumetric Presentation State specifies a volume rendered view of volume data. Volume Rendering is a data visualization method in which voxels (volume sample points) are assigned a color and an opacity (alpha), and a 2D view is created by accumulating a set of non-transparent samples along a ray through the volume behind each pixel of the view. Ray samples are calculated by interpolating the voxel values in the neighborhood of each sample.</para>
+        <para xml:id="para_fee39f52-91a5-4c48-a295-f38f17a8f39f">Volume Rendering generally consists of a number of steps, many of which are parametrically specified in the Volume Rendering SOP Classes. The processing steps are:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_0c1c1892-98d2-41f5-ad85-1262201e63b7">Segmentation, or separating the volume data into groups that will share a particular color palette. Segmentation objects are specified as cropping inputs to the Volumetric Presentation State.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_3cf957a4-05ab-455d-9ef9-59e5fc22d5fd">Gradient Computation, or finding edges or boundaries between different types of tissue in the volumetric data. The gradient computation method used is an implementation decision outside the scope of the Volumetric Presentation State.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_b5fa3a0f-5ac5-47ce-8ba3-04fa7ea862d0">Resampling of the volumetric data to create new samples along the imaginary ray behind each pixel in the output two-dimensional view, generally using some interpolation of the values of voxels in the neighborhood of the new sample. The interpolation method used is an implementation decision outside the scope of the Volumetric Presentation State.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_c3c70f56-7d05-48d4-a114-4088f9b0ba21">Classification of samples to assign a color and opacity to each sample.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_37ff6fbb-18d9-48f4-bb33-1134bc68e4b1">Shading or the application of a lighting model to samples indicating the effect of ambient, diffuse, and specular light on the sample.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_db7f5c50-2ea3-41b6-9c07-6d4bf6edf5c7">Compositing or the accumulation of samples on each ray into the final value of the pixel corresponding to that ray. The specific algorithms used are outside the scope of the Volumetric Presentation State.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_236511c7-a032-4661-bbe1-a3d25476ecb9">Conversion to presentation Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device.</para>
+          </listitem>
+        </itemizedlist>
+        <para xml:id="para_7cc5ad39-376e-4e22-a8a7-acb5f131a553">The result of applying a Volumetric Presentation State is not expected to be exactly reproducible on different systems. It is difficult to describe the display and rendering algorithms in enough detail in an interoperable manner such that a presentation produced at a later time is indistinguishable from that of the original presentation. While Volumetric Presentation States use established DICOM concepts of grayscale and color matching (GSDF and ICC color profiles) and provide a generic description of the different types of display algorithms possible, variations in algorithm implementations within display devices are inevitable and an exact match of volume presentation on multiple devices cannot be guaranteed. Nevertheless, reasonable consistency is provided by specification of inputs, geometric descriptions of spatial views, type of processing to be used, color mapping and blending, input fusion, and many generic rendering parameters, producing what is expected to be a clinically acceptable result.</para>
         <para xml:id="para_8744e9d6-d61a-48c5-804e-0ab0c83e150e">The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
         <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this standard.</para>
         <para xml:id="para_c597b301-390b-4b3c-9edc-6feb96d94abd">A claim of conformance as an SCP of the SOP Class implies that the SCP shall make the Presentation State available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the standard.</para>
@@ -44197,297 +44749,430 @@
     <section label="FF.2" status="2" xml:id="sect_FF.2">
       <title>Volume Transformation Processes</title>
       <section label="FF.2.1" status="3" xml:id="sect_FF.2.1">
-        <title>Planar MPR Volumetric Transformation Process</title>
-        <para xml:id="para_1ada99dc-255a-4f0d-a727-40012b303653">The Planar MPR Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data.</para>
-        <para xml:id="para_d8a7631d-50f3-4ad2-9591-eb088fd0e415">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class defines a grayscale volumetric view from a single volume input. The sequence of transformations from volumetric inputs into P-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-1" xrefstyle="select: label"/>.</para>
-        <para xml:id="para_4f310dda-39cf-43b6-bd75-2c553f151d82">
-          <figure label="FF.2-1" pgwide="1" xml:id="figure_FF.2-1">
-            <title>Grayscale Planar MPR Volumetric Pipeline</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="figures/PS3.4_FF.2-1.svg"/>
-                <!--<imagedata fileref="part04_fromword_files/image013_sup156.png"/>-->
-                <!--<imagedata fileref="sup156_fromword_files/image013.png"/>-->
-              </imageobject>
-            </mediaobject>
-          </figure>
-        </para>
-        <para xml:id="para_2c53f26d-bc7c-42ed-bae6-807d398a3db5">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class defines a true color volumetric view from one or more volume inputs. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-2" xrefstyle="select: label"/>. The actual sequence implemented may differ (such as classifying and compositing prior to creating the MPR view) but must result in similar appearance.</para>
-        <para xml:id="para_5e4e77d6-fa68-453d-8ed4-5a37eb5d08b7">
-          <figure label="FF.2-2" pgwide="1" xml:id="figure_FF.2-2">
-            <title>Compositing Planar MPR Volumetric Pipeline</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="figures/PS3.4_FF.2-2.svg"/>
-                <!--<imagedata fileref="sup156_fromword_files/image015.png"/>-->
-              </imageobject>
-            </mediaobject>
-          </figure>
-        </para>
-        <para xml:id="para_108110ec-84f7-4d8f-b004-f7a3aa5bced9">The transformations defined in the Planar MPR Volumetric Presentation State Storage SOP Classes replace those that may be defined in the Referenced Image SOP Instances. If a particular transformation is absent in a Planar MPR Volumetric Presentation State Storage SOP Classes then it shall be assumed to be an identity transformation, and any equivalent transformation, if present, in the Referenced Image SOP Instances shall NOT be used instead.</para>
-        <para xml:id="para_60484cfc-9b04-4695-8344-de12b9a58cc6">The presentation-related Attributes of the Planar MPR Volumetric Presentation State Storage SOP Classes are immutable. They shall never be modified or updated; only a derived SOP Instance with a new SOP Instance UID may be created to represent a different presentation.</para>
+        <title>Volumetric Transformations</title>
+        <para xml:id="para_108110ec-84f7-4d8f-b004-f7a3aa5bced9">The transformations defined in the Volumetric Presentation State Storage SOP Classes replace those that may be defined in the Referenced Image SOP Instances. If a particular transformation is absent in a Volume Rendering Volumetric Presentation State Storage SOP Instance, then it shall be assumed to be an identity transformation and any equivalent transformation, if present, in the Referenced Image SOP Instances shall not be used.</para>
+        <para xml:id="para_60484cfc-9b04-4695-8344-de12b9a58cc6">The presentation-related Attributes of the Volume Rendering Volumetric Presentation State Storage SOP Classes are immutable. They shall never be modified or updated; only a derived SOP Instance with a new SOP Instance UID may be created to represent a different presentation.</para>
         <section label="FF.2.1.1" status="4" xml:id="sect_FF.2.1.1">
-          <title>Volumetric Inputs, Registration and Cropping</title>
-          <para xml:id="para_445bff8d-3f58-416a-86ff-4346ef7aca72">A Volumetric Presentation State can take multiple volumes as input. A volume is defined in <olink targetdoc="PS3.3" targetptr="sect_C.11.23.1" xrefstyle="template:Section %n “%t” in PS3.3"/>. The same source data can be referenced in more than one input.</para>
-          <para xml:id="para_9e8c5c40-c6a5-46ef-8a0e-156d6a126b5d">The VOI LUT is applied to the input data.</para>
-          <para xml:id="para_e9a3446f-7a84-4d76-8ab8-f573e8b18829">The input volumes may or may not be in the Volumetric Presentation State Reference Coordinate System (VPS-RCS). If they are not, they shall be registered into the VPS-RCS.</para>
-          <para xml:id="para_997a435d-6e74-46fa-801e-d06af80e918f">The input volumes shall be cropped as specified by the value of Crop (0070,1204) and items in the Volume Cropping Sequence (0070,1301).</para>
+          <title>Planar MPR Volumetric Transformations</title>
+          <para xml:id="para_1ada99dc-255a-4f0d-a727-40012b303653">The Planar MPR Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data.</para>
+          <para xml:id="para_d8a7631d-50f3-4ad2-9591-eb088fd0e415">The Grayscale Planar MPR Volumetric Presentation State Storage SOP Class defines a grayscale volumetric view from a single volume input. The sequence of transformations from volumetric inputs into P-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-1" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_4f310dda-39cf-43b6-bd75-2c553f151d82">
+            <figure label="FF.2-1" pgwide="1" xml:id="figure_FF.2-1">
+              <title>Grayscale Planar MPR Volumetric Pipeline</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/PS3.4_FF.2-1.svg"/>
+                  <!--<imagedata fileref="part04_fromword_files/image013_sup156.png"/>-->
+                  <!--<imagedata fileref="sup156_fromword_files/image013.png"/>-->
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+          <para xml:id="para_2c53f26d-bc7c-42ed-bae6-807d398a3db5">The Compositing Planar MPR Volumetric Presentation State Storage SOP Class defines a true color volumetric view from one or more volume inputs. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2-2" xrefstyle="select: label"/>. The actual sequence implemented may differ (such as classifying and compositing prior to creating the MPR view) but must result in similar appearance.</para>
+          <para xml:id="para_5e4e77d6-fa68-453d-8ed4-5a37eb5d08b7">
+            <figure label="FF.2-2" pgwide="1" xml:id="figure_FF.2-2">
+              <title>Compositing Planar MPR Volumetric Pipeline</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/PS3.4_FF.2-2.svg"/>
+                  <!--<imagedata fileref="sup156_fromword_files/image015.png"/>-->
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+          <para xml:id="para_896d3c23-b0ff-4768-8c67-9ad60fb22ed6">The planar MPR transformation requires a volume that is in the Volumetric Presentation State Reference Coordinate System (VPS-RCS).</para>
+          <para xml:id="para_8a69b7a0-93d8-4658-aa36-32481f3a2b72">MPR generation is based on the attributes of the Multi-Planar Reconstruction Geometry Module (see <olink targetdoc="PS3.3" targetptr="sect_C.11.26.1.1" xrefstyle="template:Section %n “%t” in PS3.3"/>). If the MPR Thickness Type (0070,1502) is SLAB then the Rendering Method (0070,120D) is also used.</para>
+          <para xml:id="para_fbde1ebf-ec2b-45fb-9e91-0669b78d84b2">If Pixel Presentation (0008,9205) is MONOCHROME, then Presentation LUT Shape (2050,0020) provides the transform to output P-Values.</para>
+          <para xml:id="para_0c187e48-749c-4e83-813b-3bd6a7e08a04">If Pixel Presentation (0008,9205) is TRUE_COLOR, then Presentation State Classification Component Sequence (0070,1801) describes the conversion of each processed input into an RGB data stream, and Presentation State Compositor Component Sequence (0070,1805) describes the compositing of these separate RGBA data streams into a single RGB data stream. This single RGB data stream is then processed as described by ICC Profile (0028,2000) to produce output PCS-Values.</para>
         </section>
         <section label="FF.2.1.2" status="4" xml:id="sect_FF.2.1.2">
-          <title>Volumetric Transformations</title>
+          <title>Volume Rendering Volumetric Transformations</title>
           <section label="FF.2.1.2.1" status="5" xml:id="sect_FF.2.1.2.1">
-            <title>Planar MPR Volumetric Presentation State</title>
-            <para xml:id="para_896d3c23-b0ff-4768-8c67-9ad60fb22ed6">The planar MPR transformation requires a volume that is in the Volumetric Presentation State Reference Coordinate System (VPS-RCS).</para>
-            <para xml:id="para_8a69b7a0-93d8-4658-aa36-32481f3a2b72">MPR generation is based on the attributes of the Multi-Planar Reconstruction Geometry Module (see <olink targetdoc="PS3.3" targetptr="sect_C.11.26.1.1" xrefstyle="template:Section %n “%t” in PS3.3"/>). If the MPR Thickness Type (0070,1502) is SLAB then the Compositing Method (0070,1206) is also used.</para>
+            <title>Volume Rendering Pipelines</title>
+            <para xml:id="para_26ac20da-f208-4a02-a1d7-996c0911774f">The Volume Rendering Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data. Attributes comprising the Volume Rendering Volumetric Presentation States are defined in the context of the reference pipelines described in this section. While the reference pipelines imply a certain order of the volume rendering operations of classification, resampling, shading, and compositing, the specific order in which these operations are applied by any device claiming conformance to this standard are implementation-dependent and beyond the scope of this standard. It is the responsibility of the viewing application to transform the standard attributes into parameters appropriate for the particular order of operations implemented in the viewing application.</para>
+            <para xml:id="para_2077b9b9-7e4a-440e-9f7d-c331d2e87df2">The Volume Rendering Volumetric Presentation State Storage SOP Class defines a volumetric view from a single volume input to produce a volume rendered view. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2.1.2.1-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_020885ac-94a6-43fe-a86d-5ce87f2c30ae">
+              <figure label="FF.2.1.2.1-1" pgwide="1" xml:id="figure_FF.2.1.2.1-1">
+                <title>Volume Rendering Volumetric Pipeline</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2.1.2.1-1.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/sup190_image016.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+            <para xml:id="para_39a9f254-811c-476f-ac4d-7cc001ed416c">The Segmented Volume Rendering Volumetric Presentation State Storage SOP Class defines a volumetric view from a single volume dataset with optional segmentation croppings, each colored separately and blended into the volume to be rendered. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2.1.2.1-2" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_01bbd711-c30e-4f5c-98c1-7feb8a6460bf">There is a single item in the Volume Stream Sequence (0070,1A08) for instances of this SOP Class.</para>
+            <para xml:id="para_3e323f29-0a84-47f4-b8f7-2ec235185fc1">The classified segmented volumes shall be blended in lowest to highest priority order using B-over-A blending of the RGB data and the corresponding opacity (alpha) data. The first item in the Presentation State Classification Component Sequence (0070,1801) is the base upon which subsequent items are cropped and B-over-A blended with it.</para>
+            <para xml:id="para_472cec37-0819-4b69-9cb0-e4d8435004fc">
+              <figure label="FF.2.1.2.1-2" pgwide="1" xml:id="figure_FF.2.1.2.1-2">
+                <title>Segmented Volume Rendering Volumetric Pipeline</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2.1.2.1-2.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/sup190_image018.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+            <para xml:id="para_b6fe6008-781d-4db0-a0fb-c8620045d0e6">The Multiple Volume Rendering Volumetric Presentation State Storage SOP Class defines a volumetric view from more than one volume input. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2.1.2.1-3" xrefstyle="select: label"/>. The specific algorithms for volume rendering may differ, but must result in a similar appearance.</para>
+            <para xml:id="para_1ffc1e75-06d7-4ab7-8859-134f56c51bed">It is expected that all volume inputs are spatially registered to the Volumetric Presentation State - Reference Coordinate System. The specific step in the processing at which resampling is performed to achieve this spatial registration is an implementation decision.</para>
+            <para xml:id="para_f5e19c0f-92b8-41a8-b17c-d243a69d303d">Each item in the Volume Stream Sequence (0070,1A08) produces one input to a RGBA Compositor.</para>
+            <para xml:id="para_69a864f9-f679-4862-bbe4-96f80c42f776">
+              <figure label="FF.2.1.2.1-3" pgwide="1" xml:id="figure_FF.2.1.2.1-3">
+                <title>Multiple Volume Rendering Volumetric Pipeline</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2.1.2.1-3.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/sup190_image020.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+            <para xml:id="para_80157e9d-f236-4d97-a994-053f5b893654">Transformation to PCS-Values is performed after Volume Rendering.</para>
+          </section>
+          <section label="FF.2.1.2.2" status="5" xml:id="sect_FF.2.1.2.2">
+            <title>Volume Rendering Component</title>
+            <para xml:id="para_a8a33ccc-64ec-426f-9723-1549fe2b6829">This component transforms an RGBA volume into a volume rendered view according to the parameters in the Render Geometry Module. This component is implementation dependent, but generally includes processing steps such as gradient computation to find normals of use in the shading operation, resampling of volume data, shading according to the parameters in the Render Shading Module, and compositing of the resampled data to produce the final volume rendered view.</para>
+          </section>
+          <section label="FF.2.1.2.3" status="5" xml:id="sect_FF.2.1.2.3">
+            <title>Graphic Projection Component</title>
+            <para xml:id="para_e19d0ee3-41d4-4f27-9b35-d477c8991604">This component converts the volumetric annotation specified in the Volumetric Graphic Annotation module into a graphic overlay for the 2D volume rendered view. It is the role of this component to evaluate the volumetric graphic annotations, determine which graphics are visible in the volume rendered view, and provide graphics that are layered on the view.</para>
+            <para xml:id="para_36921d7e-afcf-409b-b194-4e01eb37a6f8">Inputs to the Graphic Projection component are:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_5b23395a-c616-4a68-8c1d-5d833255f9df">Volumetric Graphic Annotation Module</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_4ae6838c-d95f-4042-8376-5761d42afb9b">RGBA volume input to the Volume Rendering component</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_adb457a1-aca1-4c8d-b856-609e3d2ac8d0">Volume Render Geometry Module</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_ab3099f8-37ac-4360-bf4c-b6b19763bbfa">Input-specific Cropping Specification Index (0070,1205) values</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_43a3a62e-5ba2-4ea7-adba-c9893e68c8d3">Volume Cropping Module Attributes</para>
+              </listitem>
+            </itemizedlist>
+            <para xml:id="para_5a2d46f6-61cc-4fbb-a290-45833a8d7389">The Graphic Projection transform algorithm considers whether each volumetric graphic annotation is visible in the current volume rendered view, considering the volume data, Volume Render Geometry, and the value of Annotation Clipping (0070,1907).</para>
+            <para xml:id="para_315762d0-eff1-499c-91f8-a8b2c6845800">If Annotation Clipping (0070,1907) is YES, then the annotation shall be visible only if it is present in the field of view and not obscured by opaque structures that may lie between the annotation and the viewpoint. In the case of the Volumetric Presentation Input Annotation Sequence (0070,1905), annotation text shall be visible only if some part of the specified segmentation is visible.</para>
+            <para xml:id="para_0826b865-ff66-4938-b38a-0ffe685cddb4">If Annotation Clipping (0070,1907) is NO, then the annotation shall always be visible. A particular implementation may display annotations that lie behind opaque structures in a different style (such as a softer gray), but the decision to provide such display style is outside the scope of this standard.</para>
+            <para xml:id="para_38174934-9ed1-48fe-b386-1459662b9094">The output of the Graphic Projection component is displayed on the 2D presentation view in the graphic layers specified by the corresponding values of Graphic Layer (0070,0002).</para>
           </section>
         </section>
-        <section label="FF.2.1.3Volumetric" status="4" xml:id="sect_FF.2.1.3Volumetric">
-          <title>Presentation State Display</title>
-          <section label="FF.2.1.3.1" status="5" xml:id="sect_FF.2.1.3.1">
-            <title>Volumetric Presentation State Display Foundation</title>
-            <para xml:id="para_93f511c6-77d8-4721-91b7-d85a5597bdd2">The Volumetric Presentation State Display Module defines the algorithms used to transform the result of the volumetric processing on the input data into an output of P-Values or PCS-Values for display.</para>
-            <para xml:id="para_fbde1ebf-ec2b-45fb-9e91-0669b78d84b2">If Pixel Presentation (0008,9205) is MONOCHROME, then Presentation LUT Shape (2050,0020) provides the transform to output P-Values.</para>
-            <para xml:id="para_0c187e48-749c-4e83-813b-3bd6a7e08a04">If Pixel Presentation (0008,9205) is TRUE_COLOR, then Presentation State Classification Component Sequence (0070,1801) describes the conversion of each processed input into an RGB data stream, and Presentation State Compositor Component Sequence (0070,1805) describes the compositing of these separate RGBA data streams into a single RGB data stream. This single RGB data stream is then processed as described by ICC Profile (0028,2000) to produce output PCS-Values.</para>
-            <section label="FF.2.1.3.1.1" status="6" xml:id="sect_FF.2.1.3.1.1">
-              <title>Classification Component Components</title>
-              <para xml:id="para_c5fff68c-8a43-41e6-952b-6a8c89159ad5">There are two classification component types currently defined for conversion from scalar input data to RGBA. The defined components are:</para>
-              <itemizedlist>
-                <listitem>
-                  <para xml:id="para_4c932e3f-fe9a-462a-b408-3e98b9007252">One Input -&gt; RGBA: This component accepts reconstructed data from one input in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
-                  <para xml:id="para_41bbe203-d4c6-4441-bfb1-801812e49b05">
-                    <figure label="FF.2-3" pgwide="1" xml:id="figure_FF.2-3">
-                      <title>One Input -&gt; RGBA Component</title>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="figures/PS3.4_FF.2-3.svg"/>
-                          <!--<imagedata fileref="sup156_fromword_files/image017.png"/>-->
-                        </imageobject>
-                      </mediaobject>
-                    </figure>
-                  </para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_ab17c54a-6cb9-445f-bf8d-86d81b3d8c93">Two Inputs -&gt; RGBA: This component accepts reconstructed data from two inputs in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This component is used in the case where a two-dimensional color mapping needs to be performed. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
-                  <para xml:id="para_bbecc0e7-e1a2-41d9-a245-0b76e4e7d46e">
-                    <figure label="FF.2-4" pgwide="1" xml:id="figure_FF.2-4">
-                      <title>Two Inputs -&gt;RGBA Component</title>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="figures/PS3.4_FF.2-4.svg"/>
-                          <!--<imagedata fileref="sup156_fromword_files/image019.png"/>-->
-                        </imageobject>
-                      </mediaobject>
-                    </figure>
-                  </para>
-                  <note>
-                    <para xml:id="para_6ccf2208-3593-47a6-9c9d-8a2406327b6a">An example for the use of this component is to combine Ultrasound Flow Velocity and Ultrasound Flow Variance to produce a color range from red-blue based on flow velocity and adding a yellow-green tinge based on flow variance)</para>
-                  </note>
-                </listitem>
-              </itemizedlist>
-            </section>
-            <section label="FF.2.1.3.1.2" status="6" xml:id="sect_FF.2.1.3.1.2">
-              <title>Compositor Components</title>
-              <para xml:id="para_b14173b6-d2d5-40f9-aad8-43f8f78784d4">There is one compositor component type defined for compositing of two input RGBA (or one RGBA and one RGB) data sources into an RGB output. The defined component is:</para>
-              <itemizedlist>
-                <listitem>
-                  <para xml:id="para_a9bf8cbc-f6ef-4048-850b-d92f1bfb65f3">RGB Compositor: This component accepts two RGBA inputs (with one Alpha input optional) and composites the data into a single RGB output. Each item of Presentation State Compositor Component Sequence (0070,1805) specifies one RGB Compositor component:</para>
-                  <para xml:id="para_a80a7224-bae3-4a38-b254-f5845acc6032">
-                    <figure label="FF.2-5" pgwide="1" xml:id="figure_FF.2-5">
-                      <title>RGB Compositor Component</title>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="figures/PS3.4_FF.2-5.svg"/>
-                          <!--<imagedata fileref="sup156_fromword_files/image021.png"/>-->
-                        </imageobject>
-                      </mediaobject>
-                    </figure>
-                  </para>
-                </listitem>
-              </itemizedlist>
-              <para xml:id="para_1a457c88-9271-45fa-884a-75eb891ed21e">The ICC Profile Connection Space Transform operation is performed after classification and compositing to generate output PCS-values using the specified ICC Color Profile (0028,2000)</para>
-            </section>
+      </section>
+      <section label="FF.2.2" status="3" xml:id="sect_FF.2.2">
+        <title>Volumetric Inputs, Registration and Cropping</title>
+        <para xml:id="para_445bff8d-3f58-416a-86ff-4346ef7aca72">A Volumetric Presentation State can take multiple volumes as input. A volume is defined in <olink targetdoc="PS3.3" targetptr="sect_C.11.23.1" xrefstyle="template:Section %n “%t” in PS3.3"/>. The same source data can be referenced in more than one input.</para>
+        <para xml:id="para_9e8c5c40-c6a5-46ef-8a0e-156d6a126b5d">The VOI LUT encoded in the Volumetric Presentation State is applied to the input data.</para>
+        <para xml:id="para_e9a3446f-7a84-4d76-8ab8-f573e8b18829">The input volumes may or may not be in the Volumetric Presentation State Reference Coordinate System (VPS-RCS). If they are not, they shall be registered into the VPS-RCS.</para>
+        <para xml:id="para_997a435d-6e74-46fa-801e-d06af80e918f">Two methods of cropping the input volumes are provided:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_26d0ce88-b570-4ad0-8e88-aadc9e88a5ff">All inputs to the Volumetric Presentation State may be cropped using the common cropping methods specified by Global Crop (0070,120B) and items in the Volume Cropping Sequence (0070,1301).</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_6734b522-26f4-4179-abe0-1e9d524b6205">In addition, cropping may be specified independently for each input to the Volumetric Presentation State as specified by the value of Crop (0070,1204) and items in the Volume Cropping Sequence (0070,1301).</para>
+          </listitem>
+        </itemizedlist>
+        <note>
+          <para xml:id="para_2a770c6f-ec48-4145-a363-60cc90bb1c7b">Combinations of cropping methods may be specified. For example, all inputs could be cropped using global bounding box cropping in addition to another cropping method applied to one of more individual inputs to the Volumetric Presentation State.</para>
+        </note>
+      </section>
+      <section label="FF.2.3" status="3" xml:id="sect_FF.2.3">
+        <title>Volumetric Presentation State Display</title>
+        <section label="FF.2.3.1" status="4" xml:id="sect_FF.2.3.1">
+          <title>Volumetric Presentation State Display Overview</title>
+          <para xml:id="para_93f511c6-77d8-4721-91b7-d85a5597bdd2">The MPR Volumetric Presentation State Display Module defines the algorithms used to transform the result of the MultiPlanar Reconstruction volumetric processing on the input data into an output of P-Values or PCS-Values for display.</para>
+          <para xml:id="para_171ee707-73cd-4a2f-9c41-de7eb70f44dd">The Render Display Module defines the algorithms used to transform the result of the Volume Rendering processing on the input data into output RGBA values. Presentation State Classification Component Sequence (0070,1801) describes the conversion of each cropped input into an RGBA volumetric data stream. Volume Stream Sequence (0070,1209) describes RGBA volumetric data streams which are overlayed using ordered "B over A" blending into a volumetric data stream. Presentation State Compositor Component Sequence (0070,1805) describes how the “B over A” blended volumetric data streams are to be composited together into a single RGBA volumetric data stream. This single RGBA data stream is an input to the Volume Rendering component.</para>
+        </section>
+        <section label="FF.2.3.2" status="4" xml:id="sect_FF.2.3.2">
+          <title>Description of Display Components</title>
+          <section label="FF.2.3.2.1" status="5" xml:id="sect_FF.2.3.2.1">
+            <title>Classification Component Components</title>
+            <para xml:id="para_c5fff68c-8a43-41e6-952b-6a8c89159ad5">There are two classification component types currently defined for conversion from scalar input data to RGBA. The defined components are:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_4c932e3f-fe9a-462a-b408-3e98b9007252">One Input -&gt; RGBA: This component accepts reconstructed data from one input in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
+                <para xml:id="para_41bbe203-d4c6-4441-bfb1-801812e49b05">
+                  <figure label="FF.2-3" pgwide="1" xml:id="figure_FF.2-3">
+                    <title>One Input -&gt; RGBA Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2-3.svg"/>
+                        <!--<imagedata fileref="sup156_fromword_files/image017.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_ab17c54a-6cb9-445f-bf8d-86d81b3d8c93">Two Inputs -&gt; RGBA: This component accepts reconstructed data from two inputs in the Volumetric Presentation State Input Sequence (0070,1201) and generates an RGB and an Alpha output. This component is used in the case where a two-dimensional color mapping needs to be performed. This classification component would be specified in an item of the Presentation State Classification Component Sequence (0070,1801):</para>
+                <para xml:id="para_bbecc0e7-e1a2-41d9-a245-0b76e4e7d46e">
+                  <figure label="FF.2-4" pgwide="1" xml:id="figure_FF.2-4">
+                    <title>Two Inputs -&gt;RGBA Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2-4.svg"/>
+                        <!--<imagedata fileref="sup156_fromword_files/image019.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+                <note>
+                  <para xml:id="para_6ccf2208-3593-47a6-9c9d-8a2406327b6a">An example for the use of this component is to combine Ultrasound Flow Velocity and Ultrasound Flow Variance to produce a color range from red-blue based on flow velocity and adding a yellow-green tinge based on flow variance)</para>
+                </note>
+              </listitem>
+            </itemizedlist>
           </section>
-          <section label="FF.2.1.3.2" status="5" xml:id="sect_FF.2.1.3.2">
-            <title>Internal Structure of Components</title>
-            <section label="FF.2.1.3.2.1" status="6" xml:id="sect_FF.2.1.3.2.1">
-              <title>Internal Structure of Classification Components</title>
-              <para xml:id="para_7dbc0369-0c04-4c24-8212-283b115ed81b">Component Type (0070,1802) specifies the component defined in each item of Presentation State Classification Component Sequence (0070,1801), which in turn controls by conditions the rest of the content of the item to provide the necessary specification of the component. The internal structure of each component in block diagram form is as follows:</para>
-              <itemizedlist>
-                <listitem>
-                  <para xml:id="para_16960b32-7b0b-46b5-8b3c-cf19aaf77423">One Input -&gt; RGBA: Specified by Component Type (0070,1802) = ONE_TO_RGBA:</para>
-                  <para xml:id="para_98ae46c4-d0bc-45a4-af36-a6375499db9b">
-                    <figure label="FF.2-6" pgwide="1" xml:id="figure_FF.2-6">
-                      <title>Internal Structure of One Input -&gt; RGBA Component</title>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="figures/PS3.4_FF.2-6.svg"/>
-                          <!--<imagedata fileref="sup156_fromword_files/image023.png"/>-->
-                        </imageobject>
-                      </mediaobject>
-                    </figure>
-                  </para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_94af36e3-46b3-465f-876f-72ae168a7c10">Two Inputs -&gt; RGBA: If Component Type (0070,1802) = TWO_TO_RGBA:</para>
-                  <para xml:id="para_e8ac0fc4-172e-4726-a119-1ec085edd749">
-                    <figure label="FF.2-7" pgwide="1" xml:id="figure_FF.2-7">
-                      <title>Internal Structure of Two Input -&gt; RGBA Component</title>
-                      <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="figures/PS3.4_FF.2-7.svg"/>
-                          <!--<imagedata fileref="sup156_fromword_files/image025.png"/>-->
-                        </imageobject>
-                      </mediaobject>
-                    </figure>
-                  </para>
-                </listitem>
-              </itemizedlist>
-              <para xml:id="para_29f6136e-1b81-455d-8ee4-8329412deab3">The number of most significant bits extracted from each input is specified by the value of Bits Mapped to Color Lookup Table (0028,1403) in the Component Input Sequence (0070,1803) item for that input.</para>
-              <para xml:id="para_871754b6-7c27-4530-9a73-80289b470114">If Component Type (0070,1802) = TWO_TO_RGBA, there shall be two items in Component Input Sequence (0070,1803) with the first item defining the source of the most significant bits of the Palette Color Lookup Table input and the second item defining the source of the least significant bits of the Palette Color Lookup Table input</para>
-            </section>
-            <section label="FF.2.1.3.2.2" status="6" xml:id="sect_FF.2.1.3.2.2">
-              <title>Internal Structure of RGB Compositor Component</title>
-              <para xml:id="para_c62ad18a-ffd4-4206-8635-c2d210be2e86">Weighting transfer functions that compute the weighting factors used by the Compositor Function as a function of Alpha<subscript>1</subscript> and Alpha<subscript>2</subscript> values are specified as weighting look-up tables (LUTs) in the RGB Compositor component:</para>
-              <para xml:id="para_43944385-b63a-47cf-9834-1f7c023dd3bd">
-                <figure label="FF.2-8" pgwide="1" xml:id="figure_FF.2-8">
-                  <title>Internal Structure of RGB Compositor Component</title>
-                  <mediaobject>
-                    <imageobject>
-                      <imagedata fileref="figures/PS3.4_FF.2-8.svg"/>
-                      <!--<imagedata fileref="sup156_fromword_files/image027.png"/>-->
-                    </imageobject>
-                  </mediaobject>
-                </figure>
-              </para>
-              <para xml:id="para_c4a76718-0e22-4950-9202-546202654424">Because each Weighting LUT uses both Alpha values in determining a weighting factor, they allow compositing functions that would not be possible if each weighting factor were based only on that input's Alpha value. See <olink targetdoc="PS3.17" targetptr="sect_XXX.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for typical usage of the Weighting LUTs.</para>
-              <para xml:id="para_0ec8bfca-73ca-4878-a1f5-8e0191d693cc">The input bits to the Weighting LUTs are obtained by combining the two Alpha inputs, with half the input bits obtained from each Alpha input:</para>
-              <itemizedlist>
-                <listitem>
-                  <para xml:id="para_70944b16-f81f-4229-8821-034d037a0a99">In the case of the first compositor component corresponding to the first item in Presentation State Compositor Component Sequence (0070,1805), the Alpha from the classification component corresponding to the first item in the Presentation State Classification Component Sequence (0070,1805) provides the most significant bits of the Weighting LUT inputs, while the Alpha from the classification component corresponding to the second item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_4650508a-9e27-49e4-8f92-24ea3914d224">In the case of subsequent compositor components, the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs, while the most significant bits of the Weighting LUT inputs are computed as one minus the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805).</para>
-                </listitem>
-              </itemizedlist>
-              <para xml:id="para_616b9c87-c089-41df-895c-c1e6d63ce8fd">The integer outputs of the Weighting LUTs are normalized to the range 0.0 to 1.0, and the Compositor Function combines the normalized R, G, and B (each component called "Color" = C<subscript>x</subscript>) input values as follows:</para>
-              <para xml:id="para_1e5f21ad-8756-4e71-878e-ea0ff1165b6b">
-                <emphasis role="italic">C<subscript>out</subscript> = (C<subscript>1</subscript>*Weight<subscript>1</subscript>) + (C<subscript>2</subscript>*Weight<subscript>2</subscript>)</emphasis>
-              </para>
-              <para xml:id="para_951aa3dd-5b2c-4145-b72b-af5c58902aa5">The sum of the normalized Weight<subscript>1</subscript> and Weight<subscript>2</subscript> shall be no greater than 1.0.</para>
-              <para xml:id="para_d1adcc2f-52de-4dd8-90d8-73c5a99534bd">The color input values are normalized because the number of output bits from the RGB Palette Color Lookup Tables may be different in each classification component.</para>
-              <para xml:id="para_0c74d115-7d32-4f7f-87fb-55e8d4ab8a0a">The output of the compositor shall be range-limited ("clamped") to ensure that the outputs are guaranteed to be within a valid range of color values regardless of the validity of the weighting transfer functions. This isolates subsequent compositor components and the Profile Connection Space Transform from overflow errors.</para>
-            </section>
+          <section label="FF.2.3.2.2" status="5" xml:id="sect_FF.2.3.2.2">
+            <title>Compositor Components</title>
+            <para xml:id="para_b14173b6-d2d5-40f9-aad8-43f8f78784d4">There are two compositor component types defined for compositing of two input RGBA (or one RGBA and one RGB) data sources. The defined components are:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_a9bf8cbc-f6ef-4048-850b-d92f1bfb65f3">RGB Compositor: This component accepts two RGBA inputs (with one Alpha input optional) and composites the data into a single RGB output. Each item of Presentation State Compositor Component Sequence (0070,1805) specifies one RGB Compositor component:</para>
+                <para xml:id="para_a80a7224-bae3-4a38-b254-f5845acc6032">
+                  <figure label="FF.2-5" pgwide="1" xml:id="figure_FF.2-5">
+                    <title>RGB Compositor Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2-5.svg"/>
+                        <!--<imagedata fileref="sup156_fromword_files/image021.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_e0d25e53-0c8c-4fab-b56e-2770c179f30a">RGBA Compositor: This component accepts two RGBA inputs and composites the data into a single RGB output and a single Alpha output.</para>
+                <para xml:id="para_42a531b3-6615-4598-8814-36ecfc1c41b9">
+                  <figure label="FF.2.3.2.2-2" pgwide="1" xml:id="figure_FF.2.3.2.2-2">
+                    <title>RGBA Compositor Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2.3.2.2-2.svg"/>
+                        <!--<imagedata fileref="part04_fromword_files/sup190_image028.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+              </listitem>
+            </itemizedlist>
+           </section>
+        </section>
+        <section label="FF.2.3.3" status="4" xml:id="sect_FF.2.3.3">
+          <title>Internal Structure of Components</title>
+          <section label="FF.2.3.3.1" status="5" xml:id="sect_FF.2.3.3.1">
+            <title>Internal Structure of Classification Components</title>
+            <para xml:id="para_7dbc0369-0c04-4c24-8212-283b115ed81b">Component Type (0070,1802) specifies the component defined in each item of Presentation State Classification Component Sequence (0070,1801), which in turn controls by conditions the rest of the content of the item to provide the necessary specification of the component. The internal structure of each component in block diagram form is as follows:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_16960b32-7b0b-46b5-8b3c-cf19aaf77423">One Input -&gt; RGBA: Specified by Component Type (0070,1802) = ONE_TO_RGBA:</para>
+                <para xml:id="para_98ae46c4-d0bc-45a4-af36-a6375499db9b">
+                  <figure label="FF.2-6" pgwide="1" xml:id="figure_FF.2-6">
+                    <title>Internal Structure of One Input -&gt; RGBA Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2-6.svg"/>
+                        <!--<imagedata fileref="sup156_fromword_files/image023.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_94af36e3-46b3-465f-876f-72ae168a7c10">Two Inputs -&gt; RGBA: If Component Type (0070,1802) = TWO_TO_RGBA:</para>
+                <para xml:id="para_e8ac0fc4-172e-4726-a119-1ec085edd749">
+                  <figure label="FF.2-7" pgwide="1" xml:id="figure_FF.2-7">
+                    <title>Internal Structure of Two Input -&gt; RGBA Component</title>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="figures/PS3.4_FF.2-7.svg"/>
+                        <!--<imagedata fileref="sup156_fromword_files/image025.png"/>-->
+                      </imageobject>
+                    </mediaobject>
+                  </figure>
+                </para>
+              </listitem>
+            </itemizedlist>
+            <para xml:id="para_29f6136e-1b81-455d-8ee4-8329412deab3">The number of most significant bits extracted from each input is specified by the value of Bits Mapped to Color Lookup Table (0028,1403) in the Component Input Sequence (0070,1803) item for that input.</para>
+            <para xml:id="para_871754b6-7c27-4530-9a73-80289b470114">If Component Type (0070,1802) = TWO_TO_RGBA, there shall be two items in Component Input Sequence (0070,1803) with the first item defining the source of the most significant bits of the Palette Color Lookup Table input and the second item defining the source of the least significant bits of the Palette Color Lookup Table input</para>
           </section>
+          <section label="FF.2.3.3.2" status="6" xml:id="sect_FF.2.3.3.2">
+            <title>Internal Structure of RGB and RGBA Compositor Components</title>
+            <para xml:id="para_c62ad18a-ffd4-4206-8635-c2d210be2e86">Weighting transfer functions that compute the weighting factors used by the Compositor Function as a function of Alpha<subscript>1</subscript> and Alpha<subscript>2</subscript> values are specified as weighting look-up tables (LUTs) in the RGB and RGBA Compositor components. The RGB and RGBA Compositor components are identical except for the compositing of the additional Alpha component in the RGBA Compositor:</para>
+            <para xml:id="para_43944385-b63a-47cf-9834-1f7c023dd3bd">
+              <figure label="FF.2-8" pgwide="1" xml:id="figure_FF.2-8">
+                <title>Internal Structure of RGB Compositor Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2-8.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image027.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+            <para xml:id="para_1984e414-3509-4db5-ba3e-d5fac5d97764">
+              <figure label="FF.2.3.3.2-1" pgwide="1" xml:id="figure_FF.2.3.3.2-1">
+                <title>Internal Structure of RGB and Opacity Compositor Component</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2.3.3.2-1.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/sup190_image036.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+            <para xml:id="para_c4a76718-0e22-4950-9202-546202654424">Because each Weighting LUT uses both Alpha values in determining a weighting factor, they allow compositing functions that would not be possible if each weighting factor were based only on that input's Alpha value. See <olink targetdoc="PS3.17" targetptr="sect_XXX.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for typical usage of the Weighting LUTs.</para>
+            <para xml:id="para_0ec8bfca-73ca-4878-a1f5-8e0191d693cc">The input bits to the Weighting LUTs are obtained by combining the two Alpha inputs, with half the input bits obtained from each Alpha input:</para>
+            <itemizedlist>
+              <listitem>
+                <para xml:id="para_70944b16-f81f-4229-8821-034d037a0a99">In the case of the first compositor component corresponding to the first item in Presentation State Compositor Component Sequence (0070,1805), the Alpha from the classification component corresponding to the first item in the Presentation State Classification Component Sequence (0070,1805) provides the most significant bits of the Weighting LUT inputs, while the Alpha from the classification component corresponding to the second item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_4650508a-9e27-49e4-8f92-24ea3914d224">In the case of subsequent compositor components, the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805) provides the least significant bits of the Weighting LUT inputs, while the most significant bits of the Weighting LUT inputs are computed as one minus the Alpha from the classification component corresponding to the next item in the Presentation State Classification Component Sequence (0070,1805).</para>
+              </listitem>
+            </itemizedlist>
+            <para xml:id="para_616b9c87-c089-41df-895c-c1e6d63ce8fd">The integer outputs of the Weighting LUTs are normalized to the range 0.0 to 1.0, and the Compositor Function combines the normalized R, G, B and Alpha (each component called "Color" = C<subscript>x</subscript>) input values as follows:</para>
+            <para xml:id="para_1e5f21ad-8756-4e71-878e-ea0ff1165b6b">
+              <emphasis role="italic">C<subscript>out</subscript> = (C<subscript>1</subscript>*Weight<subscript>1</subscript>) + (C<subscript>2</subscript>*Weight<subscript>2</subscript>)</emphasis>
+            </para>
+            <para xml:id="para_951aa3dd-5b2c-4145-b72b-af5c58902aa5">The sum of the normalized Weight<subscript>1</subscript> and Weight<subscript>2</subscript> shall be no greater than 1.0.</para>
+            <para xml:id="para_d1adcc2f-52de-4dd8-90d8-73c5a99534bd">The color input values are normalized because the number of output bits from the RGB Palette Color Lookup Tables and the Alpha Palette Color Lookup Table may be different in each classification component.</para>
+            <para xml:id="para_0c74d115-7d32-4f7f-87fb-55e8d4ab8a0a">The output of the compositor shall be range-limited ("clamped") to ensure that the outputs are guaranteed to be within a valid range of color values regardless of the validity of the weighting transfer functions. This isolates subsequent compositor components and the Profile Connection Space Transform from overflow errors.</para>
+          </section>
+        </section>
+      </section>
+      <section label="FF.2.4" status="3" xml:id="sect_FF.2.4">
+        <title>Additional Volumetric Considerations</title>
+        <section label="FF.2.4.1" status="4" xml:id="sect_FF.2.4.1">
+          <title>Annotations in Volumetric Presentations States</title>
+          <para xml:id="para_95d96339-603e-4f03-a93e-0f60864dfc15">The Volumetric Presentation States provide two ways for annotating views:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_cb0e5bb7-f5bc-40ff-a53b-57ca67a6b952">Annotations on the Volumetric Presentation View</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_edaebfdb-967c-4ad3-b0d5-973e55d9d087">Annotations described by coordinates in the Volumetric Presentation State Reference Coordinate System (VPS-RCS) with optional references to Structured Reports providing context.</para>
+            </listitem>
+          </itemizedlist>
+          <para xml:id="para_be977d10-84d8-4a5f-99dd-05bec3c49931">Annotations on the view provide the application of free unformatted text or vector graphics as described in the <olink targetdoc="PS3.3" targetptr="sect_C.10.5" xrefstyle="template:Section %n “%t” in PS3.3"/>. Since the Graphic Annotation Module allows only the addition of graphics to the 2D view defined by the Presentation State without attached clinical meaning, Volumetric Graphic Annotations provide a mechanism to create annotations in the VPS-RCS with optional references to other objects which can have structured context attached.</para>
+          <para xml:id="para_1d0a9b68-2b4e-4881-922b-21dde929bada">Volumetric Graphic Annotations can be specified in two variants: either via Graphic Types with 3D coordinates, as defined in <olink targetdoc="PS3.3" targetptr="sect_C.18.9.1.2" xrefstyle="template:Section %n “%t” in PS3.3"/>, or via a reference to inputs of the Presentation State. The latter is intended to be used to display annotation labels for segmentations of the volume data set; for example, when a lesion has been marked via a Segmentation IOD and this segmentation is rendered together with the anatomical data.</para>
+          <para xml:id="para_0a278312-566d-43f8-9310-cd77471c0c08">Since annotations which are added via the Graphic Annotation Module are defined within the display space, they should not be used to point to clinical relevant structures which would be positioned on a different anatomy after manipulation.</para>
+          <para xml:id="para_762121c1-56cf-4e75-94e5-cb1dd3d72f4c">In contrast since Volumetric Graphic Annotations have coordinates in the VPS-RCS, applications can still show them after a user has manipulated the initial view which has been defined by the Presentation State.</para>
+          <para xml:id="para_23d038d2-08ac-4689-abdd-520b2159c151">The exact visual representation of the annotations is at the discretion of the display application, as well as the mechanisms which may be employed to ensure that Volumetric Graphic Annotations are sufficiently visible, even if the location in the volume is not visible in the current view. E.g. for a Graphic Type POINT a display application might render a crosshair at the specified position in the volume or a sphere with an arrow pointing to it instead of rendering Volumetric Graphic Annotations directly within the volume a projection of the annotations may be rendered as an overlay on top of the view.</para>
+          <para xml:id="para_1dee8bbb-a82b-470f-93dd-66c87bd84df6">However, annotations can be grouped into Graphic Layers and it is suggested that applications provide mechanisms to define rendering styles per Graphic Layer.</para>
+          <para xml:id="para_9eaae412-dd41-44c4-8e48-7531a6f87112">See <olink targetdoc="PS3.17" targetptr="sect_XXX.3.4" xrefstyle="template:Section %n “%t” in PS3.17"/> and <olink targetdoc="PS3.17" targetptr="sect_XXX.3.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for examples of Volumetric Graphic Annotations.</para>
+        </section>
+        <section label="FF.2.4.2" status="4" xml:id="sect_FF.2.4.2">
+          <title>Volumetric Animation</title>
+          <para xml:id="para_202725da-ee5b-4a44-aae0-6fc09173f584">Several different styles of animation are defined in Volumetric Presentation States. In general, an animation style will vary either the input, processing, or view geometry in order to produce a varying presentation view. This section describes each of the animation styles and how it produces an animated view.</para>
+          <section label="FF.2.4.2.1" status="5" xml:id="sect_FF.2.4.2.1">
+            <title>Input Sequence Animation</title>
+            <para xml:id="para_fa00340e-64b8-4d9d-8d24-4d0ebb8dc7c0">A Presentation Animation Style (0070,1A01) value of INPUT_SEQ indicates that Input Sequence Animation is being specified. In this animation style, a single Volumetric Presentation State is defined which includes input items in the Volumetric Presentation State Input Sequence (0070,1201) with different values of Input Sequence Position Index (0070,1203). The animated presentation view is produced by sequencing through values of Input Sequence Position Index (0070,1203) at a specified animation rate Recommended Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view from inputs that have that value of Input Sequence Position Index (0070,1203). See <xref linkend="figure_FF.3.2-1" xrefstyle="select: label"/>.</para>
+            <note>
+              <para xml:id="para_20e56749-3709-4319-b2f0-52c29edd6e70">For example, a set of inputs could be temporally related volumes of a moving anatomical structure like the heart.</para>
+            </note>
+            <para xml:id="para_54af3fea-542d-4153-83e9-8c3de03081cb">There may be more than one input item in Volumetric Presentation State Input Sequence (0070,1201) with the same value of Input Sequence Position Index (0070,1203), in which case the inputs are processed together to produce the frame of the animated view.</para>
+            <note>
+              <para xml:id="para_4191cb0b-9c1b-4f90-8ef0-db90fa0fc63d">For example, pairs of input items could represent the same volume input at a point in time with two different segmentation croppings (representing different organ structures) that are blended together into a single view.</para>
+            </note>
+            <para xml:id="para_6002b364-ca59-480d-9e89-11c54ac7023a">
+              <figure label="FF.3.2-1" pgwide="1" xml:id="figure_FF.3.2-1">
+                <title>Input Sequence Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-1.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image029.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+          </section>
+          <section label="FF.2.4.2.2" status="5" xml:id="sect_FF.2.4.2.2">
+            <title>Presentation Sequence Animation</title>
+            <para xml:id="para_c91c7521-2009-4ab5-8fc6-c95b5345c756">A Presentation Animation Style (0070,1A01) value of PRESENTATION_SEQ indicates that Presentation Sequence Animation is being specified. In this animation style, a set of Volumetric Presentation States are applied sequentially. See <xref linkend="figure_FF.3.2-2" xrefstyle="select: label"/>.</para>
+            <note>
+              <para xml:id="para_ae01ec26-e3c9-46c2-b0fa-23c5df23565f">One example of the use of presentation sequence animation is a view of a moving heart wherein a stent is at a stationary position at the center of the view. Because the geometry of each view frame is slightly different, separate Volumetric Presentation State instances are required for each view frame.</para>
+            </note>
+            <para xml:id="para_c1c1158d-2a10-47d6-aaa0-9efd3f7252bb">Each Volumetric Presentation State of the set is identified by having the same value of Presentation Sequence Collection UID (0070,1102). The order of application of these Presentation States is determined by the value of Presentation Sequence Position Index (0070,1103) defined in the Presentation State. The animated presentation view is produced by sequencing through values of presentation sequence position index at a specified animation rate Recommended Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view produced by that Volumetric Presentation State.</para>
+            <para xml:id="para_3aa19d9a-b8ff-4963-a469-8c651cf23e4f">
+              <figure label="FF.3.2-2" pgwide="1" xml:id="figure_FF.3.2-2">
+                <title>Presentation Sequence Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-2.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image031.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+          </section>
+          <section label="FF.2.4.2.3" status="5" xml:id="sect_FF.2.4.2.3">
+            <title>Crosscurve Animation</title>
+            <para xml:id="para_e7981aa3-6582-408a-a5a3-c758c3557a87">A Presentation Animation Style (0070,1A01) value of CROSSCURVE indicates that Crosscurve Animation is being specified. In this animation style, a Presentation State defines a Planar MPR view at the beginning of a curve defined in Animation Curve Sequence (0070,1A04). The Planar MPR view is stepped a distance Animation Step Size (0070,1A05) along the curve defined in Animation Curve Sequence (0070,1A04) at the rate specified by Recommended Animation Rate (0070,1A03) in steps per second. See <xref linkend="figure_FF.3.2-3" xrefstyle="select: label"/>.</para>
+            <note>
+              <para xml:id="para_5702e7ec-a691-4492-9436-5703d5e4b8a2">A typical application of this animation style is motion along a curve centered within the colon or a blood vessel.</para>
+            </note>
+            <para xml:id="para_92d6d9eb-9608-463f-9e8a-54519202b881">
+              <figure label="FF.3.2-3" pgwide="1" xml:id="figure_FF.3.2-3">
+                <title>Crosscurve Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.3.2-3.svg"/>
+                    <!--<imagedata fileref="sup156_fromword_files/image033.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+          </section>
+          <section label="FF.2.4.2.4" status="5" xml:id="sect_FF.2.4.2.4">
+            <title>Flythrough Animation</title>
+            <para xml:id="para_a9c4931a-c99b-4513-a8ec-2cb981b26b78">A Presentation Animation Style (0070,1A01) value of FLYTHROUGH indicates that Flythrough Animation is being specified. In this animation style, the Volumetric Presentation State defines an initial volume rendered view and a specified movement of the view along a path through the volume. See <xref linkend="figure_FF.2.4.2.4-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_76db85a2-2de6-4a67-81b3-36f7ca290a22">
+              <figure label="FF.2.4.2.4-1" pgwide="1" xml:id="figure_FF.2.4.2.4-1">
+                <title>Flythrough Animation</title>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="figures/PS3.4_FF.2.4.2.4-1.svg"/>
+                    <!--<imagedata fileref="part04_fromword_files/sup190_image044.png"/>-->
+                  </imageobject>
+                </mediaobject>
+              </figure>
+            </para>
+          </section>
+          <section label="FF.2.4.2.5" status="5" xml:id="sect_FF.2.4.2.5">
+            <title>Swivel Animation</title>
+            <para xml:id="para_cc34707b-5c27-4df3-a8c7-978cfc604939">A Presentation Animation Style (0070,1A01) value of SWIVEL indicates that Swivel Animation is being specified. In this animation style, a Presentation State defines an initial volume rendered using Viewpoint Position (0070,1603), Viewpoint LookAt Point (0070,1604) and Viewpoint Up Direction (0070,1605). When the animation begins, the view begins to rotate back and forth about an axis parallel to the Viewpoint Up Direction (0070,1605) that intersects the Viewpoint LookAt Point (0070,1604). The extent of the arc of rotation is defined by Swivel Range (0070,1A06) and the maximum rate of rotation is specified by Recommended Animation Rate (0070,1A03) in degrees per second, although it is recommended that the changes of direction at the ends of the swivel range be smooth which implies a slowing of the rotation as the endpoints are approached.</para>
+          </section>
+        </section>
+        <section label="FF.2.5" status="5" xml:id="sect_FF.2.5">
+          <title>Display Layout</title>
+          <para xml:id="para_db3f7078-2214-412d-bab0-6beee44b8bb3">The layout of multiple Volumetric Presentation States is not specified by the Volumetric Transformation process. However, there are attributes within Volumetric Presentation States that can influence the overall display layout.</para>
+          <para xml:id="para_23978c1d-b8d8-427f-b67e-e7df4f8d33f0">For instance:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_7a4e8492-2a4e-4b15-9dc8-e0e2694ba521">Anatomic Region Sequence (0008,2218) specifies the anatomic region covered by the Volumetric Presentation State</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_237f880a-b16a-43a8-9258-3085647efabc">View Code Sequence (0054,0220) describes the view of the anatomic region of interest (e.g., Coronal, Oblique transverse, etc.)</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_8cc93141-1d5a-4483-af50-f33ba0356397">Presentation Display Collection UID (0070,1101) identifies the Presentation State as one of a set of views intended to be displayed together</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_812bafeb-9518-4be2-a85d-e000436b5f1b">SOP Class UID (0008,0016) identifies that the Presentation State describes the volumetric view</para>
+            </listitem>
+          </itemizedlist>
+          <para xml:id="para_fb7c8a5d-650b-445f-88cb-66c96ec4855e">The use of these attributes allows a display application to create an appropriate presentation of multiple Volumetric Presentation States, whether through the application of a Hanging Protocol instance, a Structured Display instance or by means of an application-specific algorithm.</para>
+          <para xml:id="para_c5d51a92-229c-4c6d-a9b4-3df940aa40cb">For an example of their use, see <olink targetdoc="PS3.17" targetptr="chapter_XXX" xrefstyle="template:Annex %n “%t” in PS3.17"/>.</para>
         </section>
       </section>
     </section>
     <section label="FF.3" status="2" xml:id="sect_FF.3">
-      <title>Additional Volumetric Considerations</title>
-      <section label="FF.3.1" status="3" xml:id="sect_FF.3.1">
-        <title>Annotations in Volumetric Presentations States</title>
-        <para xml:id="para_95d96339-603e-4f03-a93e-0f60864dfc15">The Volumetric Presentation States provide two ways for annotating views:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_cb0e5bb7-f5bc-40ff-a53b-57ca67a6b952">Annotations on the Volumetric Presentation View</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_edaebfdb-967c-4ad3-b0d5-973e55d9d087">Annotations described by coordinates in the Volumetric Presentation State Reference Coordinate System (VPS-RCS) with optional references to Structured Reports providing context.</para>
-          </listitem>
-        </itemizedlist>
-        <para xml:id="para_be977d10-84d8-4a5f-99dd-05bec3c49931">Annotations on the view provide the application of free unformatted text or vector graphics as described in the <olink targetdoc="PS3.3" targetptr="sect_C.10.5" xrefstyle="template:Section %n “%t” in PS3.3"/>. Since the Graphic Annotation Module allows only the addition of graphics to the 2D view defined by the Presentation State without attached clinical meaning, Volumetric Graphic Annotations provide a mechanism to create annotations in the VPS-RCS with optional references to other objects which can have structured context attached.</para>
-        <para xml:id="para_1d0a9b68-2b4e-4881-922b-21dde929bada">Volumetric Graphic Annotations can be specified in two variants: either via Graphic Types with 3D coordinates, as defined in <olink targetdoc="PS3.3" targetptr="sect_C.18.9.1.2" xrefstyle="template:Section %n “%t” in PS3.3"/>, or via a reference to inputs of the Presentation State. The latter is intended to be used to display annotation labels for segmentations of the volume data set; for example, when a lesion has been marked via a Segmentation IOD and this segmentation is rendered together with the anatomical data.</para>
-        <para xml:id="para_0a278312-566d-43f8-9310-cd77471c0c08">Since annotations which are added via the Graphics Annotation Module are defined within the display space, they should not be used to point to clinical relevant structures which would be positioned on a different anatomy after manipulation.</para>
-        <para xml:id="para_762121c1-56cf-4e75-94e5-cb1dd3d72f4c">In contrast since Volumetric Graphic Annotations have coordinates in the VPS-RCS, applications can still show them after a user has manipulated the initial view which has been defined by the Presentation State.</para>
-        <para xml:id="para_23d038d2-08ac-4689-abdd-520b2159c151">The exact visual representation of the annotations is at the discretion of the display application, as well as the mechanisms which may be employed to ensure that Volumetric Graphic Annotations are sufficiently visible, even if the location in the volume is not visible in the current view. E.g. for a Graphic Type POINT a display application might render a crosshair at the specified position in the volume or a sphere with an arrow pointing to it instead of rendering Volumetric Graphic Annotations directly within the volume a projection of the annotations may be rendered as an overlay on top of the view.</para>
-        <para xml:id="para_1dee8bbb-a82b-470f-93dd-66c87bd84df6">However, annotations can be grouped into Graphics Layers and it is suggested that applications provide mechanisms to define rendering styles per Graphics Layer.</para>
-        <para xml:id="para_9eaae412-dd41-44c4-8e48-7531a6f87112">See <olink targetdoc="PS3.17" targetptr="sect_XXX.3.4" xrefstyle="template:Section %n “%t” in PS3.17"/> and <olink targetdoc="PS3.17" targetptr="sect_XXX.3.5" xrefstyle="template:Section %n “%t” in PS3.17"/> for examples of Volumetric Graphic Annotations.</para>
-      </section>
-      <section label="FF.3.2" status="3" xml:id="sect_FF.3.2">
-        <title>Volumetric Animation</title>
-        <para xml:id="para_202725da-ee5b-4a44-aae0-6fc09173f584">Several different styles of animation are defined in Volumetric Presentation States. In general, an animation style will vary either the input, processing, or view geometry in order to produce a varying presentation view. This section describes each of the animation styles and how it produces an animated view.</para>
-        <section label="FF.3.2.1" status="4" xml:id="sect_FF.3.2.1">
-          <title>Input Sequence Animation</title>
-          <para xml:id="para_fa00340e-64b8-4d9d-8d24-4d0ebb8dc7c0">A Presentation Animation Style (0070,1A01) value of INPUT_SEQ indicates that Input Sequence Animation is being specified. In this animation style, a single Volumetric Presentation State is defined which includes input items in the Volumetric Presentation State Input Sequence (0070,1201) with different values of Input Sequence Position Index (0070,1203). The animated presentation view is produced by sequencing through values of Input Sequence Position Index (0070,1203) at a specified animation rate Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view from inputs that have that value of Input Sequence Position Index (0070,1203). See <xref linkend="figure_FF.3.2-1" xrefstyle="select: label"/>.</para>
-          <note>
-            <para xml:id="para_20e56749-3709-4319-b2f0-52c29edd6e70">For example, a set of inputs could be temporally related volumes of a moving anatomical structure like the heart.</para>
-          </note>
-          <para xml:id="para_54af3fea-542d-4153-83e9-8c3de03081cb">There may be more than one input item in Volumetric Presentation State Input Sequence (0070,1201) with the same value of Input Sequence Position Index (0070,1203), in which case the inputs are processed together to produce the frame of the animated view.</para>
-          <note>
-            <para xml:id="para_4191cb0b-9c1b-4f90-8ef0-db90fa0fc63d">For example, pairs of input items could represent the same volume input at a point in time with two different segmentation croppings (representing different organ structures) that are blended together into a single view.</para>
-          </note>
-          <para xml:id="para_6002b364-ca59-480d-9e89-11c54ac7023a">
-            <figure label="FF.3.2-1" pgwide="1" xml:id="figure_FF.3.2-1">
-              <title>Input Sequence Animation</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="figures/PS3.4_FF.3.2-1.svg"/>
-                  <!--<imagedata fileref="sup156_fromword_files/image029.png"/>-->
-                </imageobject>
-              </mediaobject>
-            </figure>
-          </para>
-        </section>
-        <section label="FF.3.2.2" status="4" xml:id="sect_FF.3.2.2">
-          <title>Presentation Sequence Animation</title>
-          <para xml:id="para_c91c7521-2009-4ab5-8fc6-c95b5345c756">A Presentation Animation Style (0070,1A01) value of PRESENTATION_SEQ indicates that Presentation Sequence Animation is being specified. In this animation style, a set of Volumetric Presentation States are applied sequentially. See <xref linkend="figure_FF.3.2-2" xrefstyle="select: label"/>.</para>
-          <note>
-            <para xml:id="para_ae01ec26-e3c9-46c2-b0fa-23c5df23565f">One example of the use of presentation sequence animation is a view of a moving heart wherein a stent is at a stationary position at the center of the view. Because the geometry of each view frame is slightly different, separate Volumetric Presentation State instances are required for each view frame.</para>
-          </note>
-          <para xml:id="para_c1c1158d-2a10-47d6-aaa0-9efd3f7252bb">Each Volumetric Presentation State of the set is identified by having the same value of Presentation Sequence Collection UID (0070,1102). The order of application of these Presentation States is determined by the value of Presentation Sequence Position Index (0070,1103) defined in the Presentation State. The animated presentation view is produced by sequencing through values of presentation sequence position index at a specified animation rate Animation Rate (0070,1A03), where each value of the index produces one 'frame' of the animated view produced by that Volumetric Presentation State.</para>
-          <para xml:id="para_3aa19d9a-b8ff-4963-a469-8c651cf23e4f">
-            <figure label="FF.3.2-2" pgwide="1" xml:id="figure_FF.3.2-2">
-              <title>Presentation Sequence Animation</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="figures/PS3.4_FF.3.2-2.svg"/>
-                  <!--<imagedata fileref="sup156_fromword_files/image031.png"/>-->
-                </imageobject>
-              </mediaobject>
-            </figure>
-          </para>
-        </section>
-        <section label="FF.3.2.3" status="4" xml:id="sect_FF.3.2.3">
-          <title>Crosscurve Animation</title>
-          <para xml:id="para_e7981aa3-6582-408a-a5a3-c758c3557a87">A Presentation Animation Style (0070,1A01) value of CROSSCURVE indicates that Crosscurve Animation is being specified. In this animation style, a Presentation State defines a Planar MPR view at the beginning of a curve defined in Animation Curve Sequence (0070,1A04). The Planar MPR view is stepped a distance Animation Step Size (0070,1A05) along the curve defined in Animation Curve Sequence (0070,1A04) at the rate specified by Recommended Animation Rate (0070,1A03) in steps per second. See <xref linkend="figure_FF.3.2-3" xrefstyle="select: label"/>.</para>
-          <note>
-            <para xml:id="para_5702e7ec-a691-4492-9436-5703d5e4b8a2">A typical application of this animation style is motion along a curve centered within the colon or a blood vessel.</para>
-          </note>
-          <para xml:id="para_92d6d9eb-9608-463f-9e8a-54519202b881">
-            <figure label="FF.3.2-3" pgwide="1" xml:id="figure_FF.3.2-3">
-              <title>Crosscurve Animation</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="figures/PS3.4_FF.3.2-3.svg"/>
-                  <!--<imagedata fileref="sup156_fromword_files/image033.png"/>-->
-                </imageobject>
-              </mediaobject>
-            </figure>
-          </para>
-        </section>
-      </section>
-      <section label="FF.3.3" status="3" xml:id="sect_FF.3.3">
-        <title>Display Layout</title>
-        <para xml:id="para_db3f7078-2214-412d-bab0-6beee44b8bb3">The layout of multiple Volumetric Presentation States is not specified by the Planar MPR Volumetric Transformation Process. However, there are attributes within Volumetric Presentation States that can influence the overall display layout.</para>
-        <para xml:id="para_23978c1d-b8d8-427f-b67e-e7df4f8d33f0">For instance:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_7a4e8492-2a4e-4b15-9dc8-e0e2694ba521">Anatomic Region Sequence (0008,2218) specifies the anatomic region covered by the Volumetric Presentation State</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_237f880a-b16a-43a8-9258-3085647efabc">View Code Sequence (0054,0220) describes the view of the anatomic region of interest (e.g., Coronal, Oblique transverse, etc.)</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_8cc93141-1d5a-4483-af50-f33ba0356397">Presentation Display Collection UID (0070,1101) identifies the Presentation State as one of a set of views intended to be displayed together</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_812bafeb-9518-4be2-a85d-e000436b5f1b">SOP Class UID (0008,0016) identifies that the Presentation State describes a Planar MPR view</para>
-          </listitem>
-        </itemizedlist>
-        <para xml:id="para_fb7c8a5d-650b-445f-88cb-66c96ec4855e">The use of these attributes allows a display application to create an appropriate presentation of multiple Volumetric Presentation States, whether through the application of a Hanging Protocol instance, a Structured Display instance or by means of an application-specific algorithm.</para>
-        <para xml:id="para_c5d51a92-229c-4c6d-a9b4-3df940aa40cb">For an example of their use, see <olink targetdoc="PS3.17" targetptr="chapter_XXX" xrefstyle="template:Annex %n “%t” in PS3.17"/>.</para>
-      </section>
-    </section>
-    <section label="FF.4" status="2" xml:id="sect_FF.4">
       <title>Behavior of An SCP</title>
       <para xml:id="para_ed0eec63-75a4-4cac-99a3-53be87add250">In addition to the behavior for the Storage Service Class specified in <xref linkend="sect_B.2.2" xrefstyle="select: label quotedtitle"/>, the following additional requirements are specified for the Volumetric Presentation State Storage SOP Classes:</para>
       <itemizedlist>
@@ -44498,6 +45183,9 @@
           <para xml:id="para_6e5cc12a-1712-4ce6-8255-c6f7f749dbb4">a display device acting as an SCP of the Volumetric Presentation State Storage SOP Classes shall support the Segmentation SOP Class for cropping and the Spatial Registration SOP Class for registration.</para>
         </listitem>
         <listitem>
+          <para xml:id="para_03acb4ea-451c-4ae8-8916-ef051e73a869">a display device acting as an SCP of a Volume Rendering Volumetric Presentation State Storage SOP Class shall perform an unshaded volume rendering if the Render Shading Module is absent from the SOP Instance.</para>
+        </listitem>
+        <listitem>
           <para xml:id="para_9359e91e-10bd-4261-86b8-e6621f81b3c3">a display device acting as an SCP of the Volumetric Presentation State Storage SOP Classes is not required to support the Presentation Animation Module.</para>
         </listitem>
         <listitem>
@@ -44505,10 +45193,10 @@
         </listitem>
       </itemizedlist>
     </section>
-    <section label="FF.5" status="2" xml:id="sect_FF.5">
+    <section label="FF.4" status="2" xml:id="sect_FF.4">
       <title>Conformance</title>
       <para xml:id="para_67d7ff44-deda-41b3-ac71-46fb8b21a0d4">In addition to the Conformance Statement requirements for the Storage Service Class specified in <xref linkend="sect_B.4.3" xrefstyle="select: label quotedtitle"/>, the following additional requirements are specified for the Volumetric Presentation State Storage SOP Classes:</para>
-      <section label="FF.5.1" status="3" xml:id="sect_FF.5.1">
+      <section label="FF.4.1" status="3" xml:id="sect_FF.4.1">
         <title>Conformance Statement For An SCU</title>
         <para xml:id="para_b932157d-feac-4714-8db7-d5aa346847f3">The following behavior shall be documented in the Conformance Statement of any implementation claiming conformance to a Volumetric Presentation State Storage SOP Class as an SCU:</para>
         <itemizedlist>
@@ -44520,7 +45208,7 @@
           </listitem>
         </itemizedlist>
       </section>
-      <section label="FF.5.2" status="3" xml:id="sect_FF.5.2">
+      <section label="FF.4.2" status="3" xml:id="sect_FF.4.2">
         <title>Conformance Statement For An SCP</title>
         <para xml:id="para_81ef11e5-0fc3-4934-9480-04f7e74551c5">The following behavior shall be documented in the Conformance Statement of any implementation claiming conformance to a Volumetric Presentation State Storage SOP Class as an SCP:</para>
         <itemizedlist>

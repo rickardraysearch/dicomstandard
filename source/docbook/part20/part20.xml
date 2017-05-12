@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2017a - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2017b - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -70,11 +70,11 @@
         <author>
           <orgname>ISO/IEC</orgname>
         </author>
-        <date>2011/04</date>
-        <edition>6.0</edition>
+        <date>2016/05</date>
+        <edition>7.0</edition>
         <title>Rules for the structure and drafting of International Standards</title>
         <bibliosource>
-          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiec-dir2%7Bed6.0%7Den.pdf"/>
+          <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
     </bibliography>
@@ -16804,7 +16804,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             <para xml:id="para_20305e54-107f-4985-80ab-bec18bf4d963">to [person]</para>
             <para xml:id="para_83aeac50-f440-492f-ac0f-303d5162eb58">on [&lt;date&gt;] at [&lt;time&gt;]</para>
           </note>
-          <para xml:id="para_3ac07863-5104-41a1-8a21-90229fd28a92">The documentation may also provide a linkHtml reference to the actionable finding narrative elsewhere in the report, e.g., in the <xref linkend="sect_9.5" xrefstyle="select: labelnumber title"/> or <xref linkend="sect_9.8.4" xrefstyle="select: labelnumber title"/>section (see <xref linkend="sect_9.1.1.2" xrefstyle="select: label"/>).</para>
+          <para xml:id="para_3ac07863-5104-41a1-8a21-90229fd28a92">The documentation may also provide a linkHtml reference to the actionable finding narrative elsewhere in the report, e.g., in the <xref linkend="sect_9.5" xrefstyle="select: labelnumber title"/> or <xref linkend="sect_9.8.4" xrefstyle="select: labelnumber title"/> section (see <xref linkend="sect_9.1.1.2" xrefstyle="select: label"/>).</para>
         </section>
         <section label="9.8.10.2" status="4" xml:id="sect_9.8.10.2">
           <title>entry/act</title>
@@ -26160,7 +26160,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
       <title>Example</title>
       <section label="C.5.1" status="3" xml:id="sect_C.5.1">
         <title>DICOM SR "Basic Diagnostic Imaging Report" (TID 2000)</title>
-        <para xml:id="para_e76456eb-d2aa-4a59-87d2-a94ea2fd7cdd">The SR sample document encoding includes information on the SR document body tree depth (column 1: SR Tree Depth), nesting level for nested artifacts such as sequences and sequence items (column 2: Nesting), DICOM attribute names (column 3: Attribute), DICOM tag (column 4: Tag), the DICOM attribute value representation (Column 5: VR as specified in PS3.5), the hexadecimal value of value length (column 6: VL (hex) ) and the sample document attribute values (column 7: Value).</para>
+        <para xml:id="para_e76456eb-d2aa-4a59-87d2-a94ea2fd7cdd">The SR sample document encoding includes information on the SR document body tree depth (column 1: SR Tree Depth), nesting level for nested artifacts such as sequences and sequence items (column 2: Nesting), DICOM attribute names (column 3: Attribute), DICOM tag (column 4: Tag), the DICOM attribute value representation (Column 5: VR as specified in PS3.5), the hexadecimal value of value length (column 6: VL (hex)) and the sample document attribute values (column 7: Value).</para>
         <table frame="box" label="C.5-1" rules="all" xml:id="table_C.5-1">
           <caption>Sample document encoding</caption>
           <thead>

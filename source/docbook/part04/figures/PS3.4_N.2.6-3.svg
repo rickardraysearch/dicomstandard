@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="502px" height="432px" viewBox="0 0 502 432" enable-background="new 0 0 502 432" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.4 Service Class Specifications
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="430"/>
+	<g>
+		<rect x="90.713" y="343.221" fill="#FFFFFF" width="225.222" height="73.113"/>
+		<rect x="94.745" y="344.732" fill="none" width="183.827" height="71.602"/>
+		<text transform="matrix(0.9288 0 0 1 94.7451 350.458)"><tspan x="0" y="0" font-family="'ArialUnicodeMS'" font-size="8">Notes:</tspan><tspan x="0" y="16.399" font-family="'ArialUnicodeMS'" font-size="7">1.</tspan><tspan x="5.837" y="16.399" font-family="'ArialUnicodeMS'" font-size="7" letter-spacing="11.843">	</tspan><tspan x="20.456" y="16.399" font-family="'ArialUnicodeMS'" font-size="7">Blending Mode EQUAL</tspan><tspan x="0" y="27.8" font-family="'ArialUnicodeMS'" font-size="7">2.</tspan><tspan x="5.837" y="27.8" font-family="'ArialUnicodeMS'" font-size="7" letter-spacing="11.843">	</tspan><tspan x="20.456" y="27.8" font-family="'ArialUnicodeMS'" font-size="7">Relative Opacity = 0 if pixel is NOT contributing</tspan><tspan x="0" y="39.2" font-family="'ArialUnicodeMS'" font-size="7">3.</tspan><tspan x="5.837" y="39.2" font-family="'ArialUnicodeMS'" font-size="7" letter-spacing="11.843">	</tspan><tspan x="20.456" y="39.2" font-family="'ArialUnicodeMS'" font-size="7">Relative Opacity = 1/n* if pixel is contributing</tspan><tspan x="0" y="50.601" font-family="'ArialUnicodeMS'" font-size="7">4.</tspan><tspan x="5.837" y="50.601" font-family="'ArialUnicodeMS'" font-size="7" letter-spacing="11.843">	</tspan><tspan x="20.456" y="50.601" font-family="'ArialUnicodeMS'" font-size="7">No restriction on n</tspan><tspan x="0" y="62" font-family="'ArialUnicodeMS'" font-size="7">5.</tspan><tspan x="5.837" y="62" font-family="'ArialUnicodeMS'" font-size="7" letter-spacing="11.843">	</tspan><tspan x="20.456" y="62" font-family="'ArialUnicodeMS'" font-size="7">n* is the number of contributing pixels</tspan></text>
+		<text transform="matrix(0.9288 0 0 1 250.5889 272.7139)" fill="#FFFFFF" font-family="'ArialUnicodeMS'" font-size="10.6752">3</text>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="165.44,298.349 284.788,298.349 284.788,220.377 
+			288.944,220.377 278.261,208.967 267.581,220.377 271.173,220.377 271.173,284.739 165.44,284.739 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="165.44,45.948 284.788,45.948 284.788,120.796 
+			288.944,120.796 278.261,132.206 267.581,120.796 271.173,120.796 271.173,59.558 165.44,59.558 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="166.137,143.417 228.637,143.417 228.637,139.26 
+			240.046,149.944 228.637,160.624 228.637,157.032 166.137,157.032 		"/>
+		<g opacity="0.75">
+			<polyline fill="#FFFFFF" points="166.137,187.533 228.637,187.533 228.637,183.376 240.046,194.06 228.637,204.74 
+				228.637,201.148 166.137,201.148 			"/>
+			<g>
+				<line fill="none" stroke="#005695" stroke-linejoin="round" x1="166.137" y1="187.533" x2="167.137" y2="187.533"/>
+				
+					<line fill="none" stroke="#005695" stroke-linejoin="round" stroke-dasharray="1.9516,1.9516" x1="169.089" y1="187.533" x2="226.661" y2="187.533"/>
+				<polyline fill="none" stroke="#005695" stroke-linejoin="round" points="227.637,187.533 228.637,187.533 228.637,186.533 				
+					"/>
+				<polyline fill="none" stroke="#005695" stroke-linejoin="round" points="228.637,184.376 228.637,183.376 229.367,184.06 				
+					"/>
+				
+					<line fill="none" stroke="#005695" stroke-linejoin="round" stroke-dasharray="1.9472,1.9472" x1="230.788" y1="185.391" x2="238.605" y2="192.711"/>
+				<polyline fill="none" stroke="#005695" stroke-linejoin="round" points="239.316,193.376 240.046,194.06 239.316,194.744 				
+					"/>
+				
+					<line fill="none" stroke="#005695" stroke-linejoin="round" stroke-dasharray="1.9468,1.9468" x1="237.895" y1="196.074" x2="230.078" y2="203.391"/>
+				<polyline fill="none" stroke="#005695" stroke-linejoin="round" points="229.367,204.056 228.637,204.74 228.637,203.74 				"/>
+				<polyline fill="none" stroke="#005695" stroke-linejoin="round" points="228.637,202.148 228.637,201.148 227.637,201.148 				
+					"/>
+				
+					<line fill="none" stroke="#005695" stroke-linejoin="round" stroke-dasharray="1.9516,1.9516" x1="225.685" y1="201.148" x2="168.113" y2="201.148"/>
+				<line fill="none" stroke="#005695" stroke-linejoin="round" x1="167.137" y1="201.148" x2="166.137" y2="201.148"/>
+			</g>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 182.7236 34.1646)"><tspan x="0" y="0" font-family="'ArialUnicodeMS'" font-size="8">Relative Opacity</tspan><tspan x="0" y="7.775" font-family="'ArialUnicodeMS'" font-size="8">0 or 1/n*</tspan></text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 182.7236 139.5063)" font-family="'ArialUnicodeMS'" font-size="8">0 or 1/n*</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 182.7236 280.6396)" font-family="'ArialUnicodeMS'" font-size="8">0 or 1/n*</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="315.614,164.153 333.483,164.153 333.483,159.996 
+			344.894,170.679 333.483,181.359 333.483,177.768 315.614,177.768 		"/>
+		
+			<rect x="241.21" y="133.314" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.725" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 348.5762 168.3755)"><tspan x="0" y="0" font-family="'ArialUnicodeMS'" font-size="8">Input for Blending</tspan><tspan x="0" y="7.775" font-family="'ArialUnicodeMS'" font-size="8">or Display</tspan></text>
+		</g>
+		<g opacity="0.3">
+			<circle fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" cx="278.575" cy="170.648" r="18"/>
+			
+				<line fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="291.303" y1="157.919" x2="265.846" y2="183.375"/>
+			
+				<line fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="265.846" y1="157.921" x2="291.303" y2="183.376"/>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 268.3447 169.0181)"><tspan x="0" y="0" font-family="'ArialUnicodeMS'" font-size="8">Blend</tspan><tspan x="-13.557" y="7.775" font-family="'ArialUnicodeMS'" font-size="8">Color Images</tspan></text>
+		</g>
+		<g opacity="0.5">
+			<rect x="90.713" y="174.809" fill="#B2CEE7" width="74.728" height="74.727"/>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="165.44,248.536 165.44,249.536 
+					164.44,249.536 				"/>
+				
+					<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.9656,1.9656" x1="162.475" y1="249.536" x2="92.696" y2="249.536"/>
+				<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="91.713,249.536 90.713,249.536 
+					90.713,248.536 				"/>
+				
+					<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.9656,1.9656" x1="90.713" y1="246.57" x2="90.713" y2="176.792"/>
+				<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="90.713,175.809 90.713,174.809 
+					91.713,174.809 				"/>
+				
+					<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.9656,1.9656" x1="93.679" y1="174.809" x2="163.458" y2="174.809"/>
+				<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="164.44,174.809 165.44,174.809 
+					165.44,175.809 				"/>
+				
+					<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.9656,1.9656" x1="165.44" y1="177.775" x2="165.44" y2="247.554"/>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="90.713" y="15.666" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+			<g>
+				<text transform="matrix(1 0 0 1 102.9043 55.2563)" font-family="'ArialUnicodeMS'" font-size="8">Color Image 1</text>
+			</g>
+		</g>
+		<g>
+			<g>
+				<text transform="matrix(1 0 0 1 123.0264 214.7095)" font-family="'ArialUnicodeMS'" font-size="12">...</text>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="90.713" y="95.392" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+			<g>
+				<text transform="matrix(1 0 0 1 102.9043 134.9829)" font-family="'ArialUnicodeMS'" font-size="8">Color Image 2</text>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="90.713" y="254.845" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+			<g>
+				<text transform="matrix(1 0 0 1 102.9043 294.4365)" font-family="'ArialUnicodeMS'" font-size="8">Color Image n</text>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

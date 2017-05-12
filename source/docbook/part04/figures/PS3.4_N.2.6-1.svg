@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="552px" height="262px" viewBox="0 0 552 262" enable-background="new 0 0 552 262" xml:space="preserve">
+    
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.4 Service Class Specifications
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="550" height="260"/>
+	<g>
+		<rect x="18.53" y="186.902" fill="#FFFFFF" width="289.399" height="56.85"/>
+		<rect x="22.562" y="189.926" fill="none" width="226.529" height="56.478"/>
+		<text transform="matrix(0.9288 0 0 1 22.563 195.6504)"><tspan x="0" y="0" font-size="8">Notes:</tspan><tspan x="0" y="17.6" font-size="8">1.</tspan><tspan x="6.672" y="17.6" font-size="8" letter-spacing="10.766">	</tspan><tspan x="20.456" y="17.6" font-size="8">Convert Grayscale to RGB if no LUT is specified</tspan><tspan x="0" y="30.199" font-size="8">2.</tspan><tspan x="6.672" y="30.199" font-size="8" letter-spacing="10.766">	</tspan><tspan x="20.456" y="30.199" font-size="8">Applying Color LUT is null operation if input is RGB image</tspan><tspan x="0" y="42.799" font-size="8">3.</tspan><tspan x="6.672" y="42.799" font-size="8" letter-spacing="10.766">	</tspan><tspan x="20.456" y="42.799" font-size="8">Applying Threshold is an optional ste</tspan><tspan x="151.199" y="42.799" font-size="8">p </tspan></text>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="210.414,142.236 355.482,142.236 355.482,78.373 
+			359.639,78.373 348.955,66.964 338.275,78.373 341.867,78.373 341.867,128.626 210.414,128.626 		"/>
+		
+			<rect x="151.776" y="15.599" fill="#86B2D8" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="58.168" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 170.8555 48.0293)"><tspan x="0" y="0" font-size="8">Apply</tspan><tspan x="-8.221" y="6.715" font-size="8">Color LUT</tspan><tspan x="-6.67" y="13.431" font-size="8">(optional)</tspan></text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="94.133,87.258 111.453,87.258 111.453,45.804 
+			138.631,45.804 138.631,41.646 150.04,52.33 138.631,63.01 138.631,59.419 125.173,59.419 125.173,128.214 138.631,128.214 
+			138.631,124.624 150.04,135.303 138.631,145.986 138.631,141.83 111.453,141.83 111.453,100.869 94.133,100.869 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="210.764,46.436 223.254,46.436 223.254,42.278 
+			234.663,52.962 223.254,63.642 223.254,60.051 210.764,60.051 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="310.756,46.436 323.246,46.436 323.246,42.278 
+			334.656,52.962 323.246,63.642 323.246,60.051 310.756,60.051 		"/>
+		
+			<rect x="19.538" y="56.453" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.727" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 31.7744 92.1553)"><tspan x="0" y="0" font-size="8">Stored Values</tspan><tspan x="13.131" y="7.775" font-size="8">(RWV)</tspan></text>
+		</g>
+		
+			<rect x="235.985" y="15.597" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 256.1846 51.2998)"><tspan x="0" y="0" font-size="8">Full Color</tspan><tspan x="5.998" y="7.775" font-size="8">Image</tspan></text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="361.26,46.436 373.75,46.436 373.75,42.278 
+			385.16,52.962 373.75,63.642 373.75,60.051 361.26,60.051 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="460.887,46.436 478.756,46.436 478.756,42.278 
+			490.166,52.962 478.756,63.642 478.756,60.051 460.887,60.051 		"/>
+		
+			<rect x="386.482" y="15.597" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.725" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 401.6113 51.2998)"><tspan x="0" y="0" font-size="8">Thresholded</tspan><tspan x="0.449" y="7.775" font-size="8">Color Image</tspan></text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 495.6641 50.6572)"><tspan x="0" y="0" font-size="10">Input for</tspan><tspan x="-1.115" y="10.175" font-size="10">Blending</tspan></text>
+		</g>
+		
+			<rect x="151.776" y="98.541" fill="#86B2D8" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="58.168" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 157.751 130.9736)"><tspan x="0" y="0" font-size="8">Apply (RVW)</tspan><tspan x="5.326" y="6.715" font-size="8">Threshold</tspan><tspan x="6.438" y="13.431" font-size="8">(optional)</tspan></text>
+		</g>
+		<g>
+			<circle fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="348.994" cy="52.931" r="13.344"/>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="358.43" y1="43.494" x2="339.557" y2="62.366"/>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="339.557" y1="43.496" x2="358.43" y2="62.367"/>
+		</g>
+		<g>
+			<circle fill="#ED1C24" stroke="#000000" stroke-miterlimit="10" cx="169.212" cy="76.664" r="8.007"/>
+			<text transform="matrix(0.9288 0 0 1 166.0518 79.792)" fill="#FFFFFF" font-size="10.6752">1</text>
+		</g>
+		<g>
+			<circle fill="#F7941E" stroke="#000000" stroke-miterlimit="10" cx="192.508" cy="76.664" r="8.006"/>
+			<text transform="matrix(0.9288 0 0 1 189.6504 80.1963)" fill="#FFFFFF" font-size="10.6752">2</text>
+		</g>
+		<g>
+			<circle fill="#00AEEF" stroke="#000000" stroke-miterlimit="10" cx="180.86" cy="159.932" r="8.007"/>
+			<text transform="matrix(0.9288 0 0 1 178.4062 163.5625)" fill="#FFFFFF" font-size="10.6752">3</text>
+		</g>
+	</g>
+</g>
+</svg>

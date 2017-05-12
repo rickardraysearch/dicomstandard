@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="502px" height="362px" viewBox="0 0 502 362" enable-background="new 0 0 502 362" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.4 Service Class Specifications
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="360"/>
+	<g>
+		<rect x="90.713" y="260.793" fill="#FFFFFF" width="254.181" height="86.444"/>
+		<rect x="94.745" y="263.816" fill="none" width="232.424" height="83.421"/>
+		<text transform="matrix(0.9288 0 0 1 94.7451 269.543)" font-size="8">Notes:</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 285.9424)" font-size="7">1.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 285.9424)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 285.9424)" font-size="7">Blending Mode FOREGROUND</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 297.3418)" font-size="7">2.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 297.3418)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 297.3418)" font-size="7">Requires Relative Opacity (RO)</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 308.7422)" font-size="7">3.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 308.7422)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 308.7422)" font-size="7">Only valid with 2 input images</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 320.1426)" font-size="7">4.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 320.1426)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 320.1426)" font-size="7">Both inputs padding value </text>
+		<text transform="matrix(1 0 0 1 190.373 320.1426)" font-size="7">➜ </text>
+		<text transform="matrix(0.9288 0 0 1 198.8052 320.1426)" font-size="7">output padding value</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 331.543)" font-size="7">5.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 331.543)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 331.543)" font-size="7">One input non-padding value </text>
+		<text transform="matrix(1 0 0 1 199.0488 331.543)" font-size="7">➜ </text>
+		<text transform="matrix(0.9288 0 0 1 207.481 331.543)" font-size="7">output non-padding value</text>
+		<text transform="matrix(0.9288 0 0 1 94.7451 342.9424)" font-size="7">6.</text>
+		<text transform="matrix(0.9288 0 0 1 100.167 342.9424)" font-size="7" letter-spacing="11.843">	</text>
+		<text transform="matrix(0.9288 0 0 1 113.7446 342.9424)" font-size="7">Both inputs non-padding value </text>
+		<text transform="matrix(1 0 0 1 203.3853 342.9424)" font-size="7">➜ </text>
+		<text transform="matrix(0.9288 0 0 1 211.8174 342.9424)" font-size="7">output  RO * value1 + (1-RO) * value 2</text>
+		<text transform="matrix(0.9288 0 0 1 250.5889 237.4531)" fill="#FFFFFF" font-size="10.6752">3</text>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="165.44,208.668 284.788,208.668 284.788,176.55 
+			288.944,176.55 278.261,165.141 267.581,176.55 271.173,176.55 271.173,195.058 165.44,195.058 		"/>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="165.44,45.962 284.788,45.962 284.788,76.97 
+			288.944,76.97 278.261,88.379 267.581,76.97 271.173,76.97 271.173,59.572 165.44,59.572 		"/>
+		
+			<rect x="90.713" y="14.763" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 102.9043 54.3525)" font-size="8">Color Image 1</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 182.1289 40.8369)" font-size="8">Relative Opacity (RO)</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 176.3496 219.0703)" font-size="8">1 - Relative Opacity (RO)</text>
+		</g>
+		
+			<rect x="90.713" y="164.214" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.728" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 102.9043 203.8047)" font-size="8">Color Image 2</text>
+		</g>
+		<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="315.614,120.326 333.483,120.326 333.483,116.169 
+			344.894,126.853 333.483,137.532 333.483,133.941 315.614,133.941 		"/>
+		
+			<rect x="241.21" y="89.487" fill="#B2CEE7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="74.725" height="74.727"/>
+		<g>
+			<text transform="matrix(1 0 0 1 348.5762 124.5479)"><tspan x="0" y="0" font-size="8">Input for Blending</tspan><tspan x="0" y="7.775" font-size="8">or Display</tspan></text>
+		</g>
+		<g opacity="0.3">
+			<circle fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" cx="278.575" cy="126.821" r="18"/>
+			
+				<line fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="291.303" y1="114.093" x2="265.846" y2="139.549"/>
+			
+				<line fill="#FFFFFF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" x1="265.846" y1="114.095" x2="291.303" y2="139.55"/>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 268.3447 125.1904)"><tspan x="0" y="0" font-size="8">Blend</tspan><tspan x="-13.557" y="7.775" font-size="8">Color Images</tspan></text>
+		</g>
+	</g>
+</g>
+</svg>
