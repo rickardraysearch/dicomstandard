@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2017b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2017c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -572,12 +572,6 @@
         <term>WADO-URI</term>
         <listitem>
           <para xml:id="para_4a3fc33b-ae37-4ec3-b870-0bef1f9c1ccd">Web Access to DICOM Objects by URI</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>WADO-WS</term>
-        <listitem>
-          <para xml:id="para_f00e9ea9-15ac-41d8-85d2-880605c45b15">Web Access to DICOM Objects by Web Services (WS*)</para>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -2750,7 +2744,18 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_3cc2e65f-68aa-416c-ae1c-5057a6cd49e1">Transfer</para>
             </td>
-          </tr>     
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_45acfb4f-5014-49fc-806e-ee41f1fdc076">1.2.840.10008.5.1.4.1.1.200.3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3a9f448c-92cd-47b6-9bfb-a6b5fae34a9d">Protocol Approval Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_a88bcc58-fe44-4721-8778-3680d0050618">Transfer</para>
+            </td>
+          </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_64eca0dd-e400-43c0-b56e-2d531ee29c50">1.2.840.10008.5.1.4.1.1.481.1</para>
@@ -2958,6 +2963,39 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_db32d926-51ff-4cd4-8cc7-7c115ab6fc1c">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0d6b056d-0880-4b12-88d1-3c7c69e97ed0">1.2.840.10008.5.1.4.1.1.200.4</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_0bbe1d53-efa6-4981-8e0c-708f6edb5fa5">Protocol Approval Information Model - FIND SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_7e7e5acd-e6e8-42d9-abc0-17d9696a6354">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_b7a66736-422f-4936-bdfd-378f0c759c59">1.2.840.10008.5.1.4.1.1.200.5</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_d3449590-9be0-4bb1-aaf0-8600f7f9ed19">Protocol Approval Information Model - MOVE SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_de06b4f4-0fc4-478b-8f71-f295ba74fc8a">Query/Retrieve</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_73c30594-d425-4dbb-900b-d5e47fbdb7d7">1.2.840.10008.5.1.4.1.1.200.6</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c1cce626-7210-462e-b279-84f589ee85c6">Protocol Approval Information Model - GET SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_106a56aa-849e-4ab0-abc3-331f049ecfd4">Query/Retrieve</para>
             </td>
           </tr>
           <tr valign="top">
@@ -4891,13 +4929,11 @@
         </section>
         <section label="A.4.2.2" xml:id="sect_A.4.2.2">
           <title>"Application Entity &lt;1&gt;"</title>
-          <para xml:id="para_0d7f15a9-74b3-485b-9247-47ffdbb02528">An Application Entity that supports the WADO transport services shall have the following sections:</para>
+          <para xml:id="para_0d7f15a9-74b3-485b-9247-47ffdbb02528">An Application Entity that supports Web services shall have the following sections:</para>
           <para xml:id="para_937a77f5-bac8-45b2-8554-6a63d1f34a1f">Details of this specific Application Entity shall be specified under this section.</para>
           <section label="A.4.2.2.1" xml:id="sect_A.4.2.2.1">
-            <title> WADO-WS Specifications</title>
-            <para xml:id="para_fbccdabb-e3e0-4d67-bd76-1fdad2e754e2">All WADO WS services that are supported shall be listed. Other WADO WS services that are not supported may be indicated.</para>
-            <para xml:id="para_65c69149-7577-409f-9009-f39c6d5798cf">For each supported service, the parameters and restrictions on those parameters shall be described.</para>
-            <para xml:id="para_b93d56b3-1fd4-45ef-b7f2-26b8d5a92756">Any connection policies such as restrictions on the number of connections, support for asynchronous WS requests, etc. shall be described.</para>
+            <title>Retired</title>
+            <para xml:id="para_e194b1ae-7d6c-4532-8640-541451b5e0b1">See PS3.2-2017b.</para>
           </section>
           <section label="A.4.2.2.2" xml:id="sect_A.4.2.2.2">
             <title>WADO-URI Specifications</title>
@@ -47759,7 +47795,7 @@
     </section>
     <section label="I.1" status="2" xml:id="sect_I.1">
       <title>Conformance Statement Overview</title>
-      <para xml:id="para_fdff7726-8756-4850-bd66-bedd2a4967dd">This fictional product EXAMPLE-WADO-SERVICE implements the WADO-URI services, the WADO WS services and the WADO RS services for access to DICOM SOP Instances that are stored on an EXAMPLE-PACS-ARCHIVE. The EXAMPLE-WADO-SERVICE is only available as a plug in option for the EXAMPLE-PACS-ARCHIVE. All of the networking, database, and other services are provided by the EXAMPLE-PACS-ARCHIVE. This conformance claim refers to the conformance claim for the EXAMPLE-PACS-ARCHIVE for all such services.</para>
+      <para xml:id="para_fdff7726-8756-4850-bd66-bedd2a4967dd">This fictional product EXAMPLE-WADO-SERVICE implements the WADO-URI services and the WADO RS services for access to DICOM SOP Instances that are stored on an EXAMPLE-PACS-ARCHIVE. The EXAMPLE-WADO-SERVICE is only available as a plug in option for the EXAMPLE-PACS-ARCHIVE. All of the networking, database, and other services are provided by the EXAMPLE-PACS-ARCHIVE. This conformance claim refers to the conformance claim for the EXAMPLE-PACS-ARCHIVE for all such services.</para>
       <para xml:id="para_f777c8fe-86fe-49ed-bb14-7daabe6bf054">
 <xref linkend="table_I.1-1" xrefstyle="select: label"/> provides an overview of the network services supported by EXAMPLE-WADO-SERVICE.</para>
       <table frame="box" label="I.1-1" rules="all" xml:id="table_I.1-1">
@@ -47780,13 +47816,6 @@
         <tbody>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b3ab4bff-c8c1-4452-8dfd-9ed43b9fc022">WADO</para>
-            </td>
-            <td align="center" colspan="1" rowspan="1"/>
-            <td align="center" colspan="1" rowspan="1"/>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7a10b9a7-52a3-4fcd-af34-e7ef0d72d803">WADO - URI - Retrieve Imaging Document</para>
             </td>
             <td align="center" colspan="1" rowspan="1">
@@ -47805,28 +47834,6 @@
             </td>
             <td align="center" colspan="1" rowspan="1">
               <para xml:id="para_eb13809d-0518-4c91-a9f1-db23a7cdcdf5">Yes</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_717eb678-0adf-461f-986c-28c6f9632862">WADO - WS - Retrieve Imaging Document Set</para>
-            </td>
-            <td align="center" colspan="1" rowspan="1">
-              <para xml:id="para_bf416c8d-fabf-4c30-abc5-bd1bd932c73f">No</para>
-            </td>
-            <td align="center" colspan="1" rowspan="1">
-              <para xml:id="para_c21c0af3-50b1-4a30-87ee-ef9be857df30">Yes</para>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_6ecca872-efee-4611-a08c-0ed34c0ee152">WADO - WS - Retrieve Rendered Imaging Document Set</para>
-            </td>
-            <td align="center" colspan="1" rowspan="1">
-              <para xml:id="para_d8862c0b-b1f2-41fe-b74e-a34e6a50158e">No</para>
-            </td>
-            <td align="center" colspan="1" rowspan="1">
-              <para xml:id="para_4848d662-9a11-41bf-9e2c-a1a7db315926">Yes</para>
             </td>
           </tr>
           <tr valign="top">
@@ -47955,21 +47962,7 @@
             </tr>
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_360c6f8d-7b8c-424b-999c-f68fcfdce362">1.3</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_66580a1f-7e40-418c-9b86-4865d7829280">August 20, 2011</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_3f8b3291-b172-46c9-8c81-014a320fadff">WG 6</para>
-              </td>
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_58d44ed6-95b6-4623-9b95-b14019d781c2">WADO-WS Final Text</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_10a7e93d-2cb6-4f88-ba4f-5814200bcda0">1.4</para>
+                <para xml:id="para_10a7e93d-2cb6-4f88-ba4f-5814200bcda0">1.3</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_b0200cb1-cf69-465f-bc47-2fd204f5e2b1">February 6, 2013</para>
@@ -48024,9 +48017,10 @@
       </section>
       <section label="I.4.2" xml:id="sect_I.4.2">
         <title>AE Specifications</title>
-        <para xml:id="para_64ebed8b-14a9-43b1-97ad-d8b5946ee420">This AE complies with <olink targetdoc="PS3.18" targetptr="chapter_6" xrefstyle="select: docname label"/>, specifications for WS, RS and URI access.</para>
+        <para xml:id="para_64ebed8b-14a9-43b1-97ad-d8b5946ee420">This AE complies with <olink targetdoc="PS3.18" targetptr="chapter_6" xrefstyle="select: docname label"/>, specifications for RS and URI access.</para>
         <section label="I.4.2.1" xml:id="sect_I.4.2.1">
           <title>WADO-WS Specifications</title>
+          <para xml:id="para_80f9b5f9-55df-4ea8-a043-53d520644d48">DICOM has retired the WADO-WS Service. See PS3.2-2017b. This product still supports this service as described here.</para>
           <section label="I.4.2.1.1" xml:id="sect_I.4.2.1.1">
             <title>WADO-WS Retrieve Imaging Document Set</title>
             <table frame="box" label="I.4.2-1" rules="all" xml:id="table_I.4.2-1">
@@ -48840,6 +48834,7 @@
         </section>
         <section label="I.4.4.2" xml:id="sect_I.4.4.2">
           <title>WS Interface</title>
+          <para xml:id="para_1fba3d0e-b2b3-40bf-9a4d-0efa354b1d29">DICOM has retired the WADO-WS Service. See PS3.2-2017b. This product still supports this service as described here.</para>
           <para xml:id="para_00f8f051-cdc1-440d-9f6e-db653294d918">The EXAMPLE-WADO-SERVICE can be configured to respond on either one or two service endpoints. Each endpoint offers both of the services.</para>
           <para xml:id="para_dbecb20b-14dd-453c-a1f3-2d0f8e3864bf">The WSDL file to be used by clients is made available at the location http://&lt;servername&gt;/EXAMPLE-WADO-SERVICE?WSDL.</para>
         </section>
@@ -48855,12 +48850,12 @@
     </section>
     <section label="I.6" status="2" xml:id="sect_I.6">
       <title>Support of Character Sets</title>
-      <para xml:id="para_471bbeda-b2f3-4915-82ce-844d0151d389">All EXAMPLE-WADO-SERVICEs support Unicode UTF-8 for all WS transactions. The EXAMPLE-WADO-SERVICE does not convert character sets when returning SOP Instances using DICOM encoding. The original DICOM encoded character sets are preserved. When a PDF encoding is returned, character set conversion is performed and the PDF is returned with a UTF-8 encoding. JPEG renderings, will also utilize UTF-8 encoding for internal labels.</para>
+      <para xml:id="para_471bbeda-b2f3-4915-82ce-844d0151d389">All EXAMPLE-WADO-SERVICEs support Unicode UTF-8 for all Web Services transactions. The EXAMPLE-WADO-SERVICE does not convert character sets when returning SOP Instances using DICOM encoding. The original DICOM encoded character sets are preserved. When a PDF encoding is returned, character set conversion is performed and the PDF is returned with a UTF-8 encoding. JPEG renderings, will also utilize UTF-8 encoding for internal labels.</para>
       <para xml:id="para_8a9b66e5-61a4-4bc9-b7cc-c68954ff181b">See conformance claim for EXAMPLE-PACS-ARCHIVE for character sets used within the DICOM instances.</para>
     </section>
     <section label="I.7" status="2" xml:id="sect_I.7">
       <title>Security</title>
-      <para xml:id="para_c3e0ba0e-fb98-4387-bd96-c1192b4fde33">EXAMPLE-WADO-SERVICE supports transport level security measures for URI and RS access, and the WS-Security services for WS access.</para>
+      <para xml:id="para_c3e0ba0e-fb98-4387-bd96-c1192b4fde33">EXAMPLE-WADO-SERVICE supports transport level security measures for all Web Services.</para>
       <para xml:id="para_0749111b-560c-4166-99e8-ab51277cec02">The EXAMPLE-WADO-SERVICE supports the following transport level security measures:</para>
       <itemizedlist>
         <listitem>

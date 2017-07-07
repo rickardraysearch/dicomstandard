@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2017b - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2017c - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -522,12 +522,6 @@
         <term>WADO-URI</term>
         <listitem>
           <para xml:id="para_065d1572-aceb-41c8-b52c-72bce2a4850f">Web Access to DICOM Objects by URI</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>WADO-WS</term>
-        <listitem>
-          <para xml:id="para_14cc1188-89d9-4e20-a03f-98d0b117d043">Web Access to DICOM Objects by Web Services (WS*)</para>
         </listitem>
       </varlistentry>
     </variablelist>

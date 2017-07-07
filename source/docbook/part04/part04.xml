@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2017b - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2017c - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1493,157 +1493,148 @@
         <title>Conformance as an SCP</title>
         <section label="B.4.1.1" status="4" xml:id="sect_B.4.1.1">
           <title>Levels of Conformance</title>
-        <para xml:id="para_17668caf-5a55-4035-9778-0ba0787d92cd">Three levels of conformance to the Storage SOP Classes as an SCP may be provided:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_1255c406-f1c0-4c2a-aeb5-03e44aca6a00">Level 0 (Local). Level 0 conformance indicates that a user-defined subset of the Attributes of the image will be stored, and all others will be discarded. This subset of the Attributes shall be defined in the Conformance Statement of the implementer.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_b569ee77-7456-43fc-bb56-e4129aa96891">Level 1 (Base). Level 1 conformance indicates that all Type 1 and 2 Attributes defined in the IOD associated with the SOP Class will be stored, and may be accessed. All other elements may be discarded. The SCP may, but is not required to validate that the Attributes of the SOP Instance meets the requirements of the IOD.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_6c397464-0597-4292-b0a6-81bda4dc5b96">Level 2 (Full). Level 2 conformance indicates that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition associated with the SOP Class, as well as any Standard Extended Attributes (including Private Attributes) included in the SOP Instance, will be stored and may be accessed. The SCP may, but is not required to validate that the Attributes of the SOP Instance meet the requirements of the IOD.</para>
-          </listitem>
-        </itemizedlist>
-        <note>
-          <para xml:id="para_ed6fab43-d6bb-4b0f-b029-dd961ca9fbf5">A Level 2 SCP may discard (not store) Type 3 Attributes that are empty (zero length and no Value), since the meaning of an empty Type 3 Attribute is the same as absence of the Attribute. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> definition of "Type 3 Optional Data Elements".</para>
-        </note>
+          <para xml:id="para_17668caf-5a55-4035-9778-0ba0787d92cd">Three levels of conformance to the Storage SOP Classes as an SCP may be provided:</para>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_1255c406-f1c0-4c2a-aeb5-03e44aca6a00">Level 0 (Local). Level 0 conformance indicates that a user-defined subset of the Attributes of the image will be stored, and all others will be discarded. This subset of the Attributes shall be defined in the Conformance Statement of the implementer.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_b569ee77-7456-43fc-bb56-e4129aa96891">Level 1 (Base). Level 1 conformance indicates that all Type 1 and 2 Attributes defined in the IOD associated with the SOP Class will be stored, and may be accessed. All other elements may be discarded. The SCP may, but is not required to validate that the Attributes of the SOP Instance meets the requirements of the IOD.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_6c397464-0597-4292-b0a6-81bda4dc5b96">Level 2 (Full). Level 2 conformance indicates that all Type 1, Type 2, and Type 3 Attributes defined in the Information Object Definition associated with the SOP Class, as well as any Standard Extended Attributes (including Private Attributes) included in the SOP Instance, will be stored and may be accessed. The SCP may, but is not required to validate that the Attributes of the SOP Instance meet the requirements of the IOD.</para>
+            </listitem>
+          </itemizedlist>
+          <note>
+            <para xml:id="para_ed6fab43-d6bb-4b0f-b029-dd961ca9fbf5">A Level 2 SCP may discard (not store) Type 3 Attributes that are empty (zero length and no Value), since the meaning of an empty Type 3 Attribute is the same as absence of the Attribute. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> definition of "Type 3 Optional Data Elements".</para>
+          </note>
         </section>
         <section label="B.4.1.2" status="4" xml:id="sect_B.4.1.2">
           <title>Support of Additional SOP Classes</title>
-        <para xml:id="para_be36e27d-1dc5-4483-b4c0-6e49d5108baf">An SCP that claims conformance to Level 2 (Full) support of the Storage Service Class
-          may accept any Presentation Context negotiation of a SOP Class that specifies the Storage Service Class during the SOP Class Common Extended Negotiation
-          (see <xref linkend="sect_B.3.1.3" xrefstyle="select: label"/>), without asserting conformance to that SOP Class in its Conformance Statement.</para>
-        <note>
-          <orderedlist>
-            <listitem>
-              <para xml:id="para_1d76572a-da00-4d9c-a47c-c8bf607f21bc">The SCP may support storage of all SOP Classes of the Storage Service Class, preserving all Attributes as a Level 2 SCP.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_05ba3e4a-6920-4a66-8853-dd6177d6c66d">This Extended Negotiation allows an SCP to determine that a private SOP Class
-                (per <olink targetdoc="PS3.2" targetptr="sect_3.11.5" xrefstyle="select: docname label quotedtitle"/>)
-                in a proposed Presentation Context follows the semantics of the Storage Service Class, and may be handled accordingly.</para>
-            </listitem>
-          </orderedlist>
-        </note>
-        <para xml:id="para_0bf42adc-095d-4a4c-9db2-37635ca6435a">An SCP that claims conformance to Level 2 (Full) support of a Related General SOP Class may accept any Presentation Context negotiation of a SOP Class that specifies that Related General SOP Class during the SOP Class Common Extended Negotiation, without asserting conformance to that specialized SOP Class in its Conformance Statement.</para>
-        <note>
-          <orderedlist>
-            <listitem>
-              <para xml:id="para_31e79d54-3540-4489-9729-422cc590f6a6">The term "specialized" in this section is used generically, including both Implementation-defined Specialized SOP Classes and Standard SOP Classes specified in <xref linkend="table_B.3-3" xrefstyle="select: label"/>.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_d5c61a52-682f-4469-bad6-7ed151962489">The SCP may handle instances of such specialized SOP Classes using the semantics of the Related General SOP Class, but preserving all additional (potentially Type 1 or 2) Attributes as a Level 2 SCP.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_5b3f556e-5dfa-4426-a623-e5f42508a4b3">An SCP that has access to the current content of <xref linkend="table_B.5-1" xrefstyle="select: label"/>
-                might use that to determine acceptance of proposed Presentation Context SOP Classes.
-                This allows an SCP, even without Extended Negotiation, to be able to identify all standard SOP Classes of the Storage Service Class.
-                Access to <xref linkend="table_B.5-1" xrefstyle="select: label"/> may be through private means,
-                or to the publication of PS3 on the web site of the DICOM Standards Committee.
-                This provides an automated alternative to manually editing a table of supported Storage SOP Classes.</para>
-            </listitem>
-          </orderedlist>
-        </note>
+          <para xml:id="para_be36e27d-1dc5-4483-b4c0-6e49d5108baf">An SCP that claims conformance to Level 2 (Full) support of the Storage Service Class may accept any Presentation Context negotiation of a SOP Class that specifies the Storage Service Class during the SOP Class Common Extended Negotiation (see <xref linkend="sect_B.3.1.3" xrefstyle="select: label"/>), without asserting conformance to that SOP Class in its Conformance Statement.</para>
+          <note>
+            <orderedlist>
+              <listitem>
+                <para xml:id="para_1d76572a-da00-4d9c-a47c-c8bf607f21bc">The SCP may support storage of all SOP Classes of the Storage Service Class, preserving all Attributes as a Level 2 SCP.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_05ba3e4a-6920-4a66-8853-dd6177d6c66d">This Extended Negotiation allows an SCP to determine that a private SOP Class (per <olink targetdoc="PS3.2" targetptr="sect_3.11.5" xrefstyle="select: docname label quotedtitle"/>) in a proposed Presentation Context follows the semantics of the Storage Service Class, and may be handled accordingly.</para>
+              </listitem>
+            </orderedlist>
+          </note>
+          <para xml:id="para_0bf42adc-095d-4a4c-9db2-37635ca6435a">An SCP that claims conformance to Level 2 (Full) support of a Related General SOP Class may accept any Presentation Context negotiation of a SOP Class that specifies that Related General SOP Class during the SOP Class Common Extended Negotiation, without asserting conformance to that specialized SOP Class in its Conformance Statement.</para>
+          <note>
+            <orderedlist>
+              <listitem>
+                <para xml:id="para_31e79d54-3540-4489-9729-422cc590f6a6">The term "specialized" in this section is used generically, including both Implementation-defined Specialized SOP Classes and Standard SOP Classes specified in <xref linkend="table_B.3-3" xrefstyle="select: label"/>.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_d5c61a52-682f-4469-bad6-7ed151962489">The SCP may handle instances of such specialized SOP Classes using the semantics of the Related General SOP Class, but preserving all additional (potentially Type 1 or 2) Attributes as a Level 2 SCP.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_5b3f556e-5dfa-4426-a623-e5f42508a4b3">An SCP that has access to the current content of <xref linkend="table_B.5-1" xrefstyle="select: label"/> might use that to determine acceptance of proposed Presentation Context SOP Classes. This allows an SCP, even without Extended Negotiation, to be able to identify all standard SOP Classes of the Storage Service Class. Access to <xref linkend="table_B.5-1" xrefstyle="select: label"/> may be through private means, or to the publication of PS3 on the web site of the DICOM Standards Committee. This provides an automated alternative to manually editing a table of supported Storage SOP Classes.</para>
+              </listitem>
+            </orderedlist>
+          </note>
         </section>
         <section label="B.4.1.3" status="4" xml:id="sect_B.4.1.3">
           <title>Coercion of Attributes</title>
           <para xml:id="para_905f79de-5e44-499f-9761-14e44608b74f">At any level of conformance, the SCP of the Storage Service Class may modify the values of certain Attributes in order to coerce the SOP Instance into the Query Model of the SCP. The Attributes that may be modified are shown in <xref linkend="table_B.4-1" xrefstyle="select: label"/>.</para>
-        <table frame="box" label="B.4-1" rules="all" xml:id="table_B.4-1">
-          <caption>Attributes Subject to Coercion</caption>
-          <thead>
-            <tr valign="top">
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_807bea58-38b0-45aa-9b7a-827ec0fc2d86">
-                  <emphasis role="bold">Attribute Name</emphasis>
-                </para>
-              </th>
-              <th align="center" colspan="1" rowspan="1">
-                <para xml:id="para_6e81c531-8f9b-45d5-97c6-283dc161f305">
-                  <emphasis role="bold">Tag</emphasis>
-                </para>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_4a5a5735-ec0c-4576-85c1-7a794000686e">Patient ID</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_f638e4e9-ba6b-4eda-ad88-75b4a9b54cd9">(0010,0020)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_893e750d-3f20-4dd8-8e03-f3031b5bea28">Issuer of Patient ID</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_dfbad1dd-afd2-4996-ae57-c13b44132921">(0010,0021)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_3ecebc25-15c7-48d8-a9a4-6df2769d0474">Other Patient IDs Sequence</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_e4c3cdb7-6258-4127-b486-e8966137608b">(0010,1002)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_056e93d8-3eaa-4084-bf8f-22a62bd16d7e">Study Instance UID</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_6b4b77bb-2303-4f14-852c-5b79a5a260b6">(0020,000D)</para>
-              </td>
-            </tr>
-            <tr valign="top">
-              <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_a453820b-c39b-4ee6-82a9-4f0589f7211a">Series Instance UID</para>
-              </td>
-              <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_f808cc2b-6b18-4f26-b263-e85fc7ddc609">(0020,000E)</para>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <para xml:id="para_0017122d-3bc6-425e-8ffe-d28cbf8ee3f6">The SCP of the Storage Service Class may modify the values of Code Sequence Attributes to convert from one coding scheme into another. This includes changing from deprecated values of Coding Scheme Designator (0008,0102) or Code Value (0008,0100) to currently valid values.</para>
-        <para xml:id="para_6c782cae-7139-4abf-8489-e28131c74eb1">If an SCP performs such a modification, it shall return a C-STORE response with a status of Warning.</para>
-        <note>
-          <orderedlist>
-            <listitem>
-              <para xml:id="para_7e9b5bcb-9acb-45c5-95ea-993a045b862e">Modification of these Attributes may be necessary if the SCP is also an SCP of a Query/Retrieve SOP Classes. These SOP Classes are described in this Standard. For example, an MR scanner may be implemented to generate Study Instance UIDs for images generated on the MR. When these images are sent to an archive that is HIS/RIS aware, it may choose to change the UID of the study assigned to the study by the PACS. The mechanism by which it performs this coercion is implementation dependent.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_6c71cbf6-d7fe-4d58-b5ef-f6d4095f3825">An SCP may, for instance, convert Coding Scheme Designator values "SNM3" to "SRT", in accordance with the DICOM conventions for SNOMED (see <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>).</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_082208bc-cb4c-40c5-abaf-4f11f87560dc">Modification of Attributes that may be used to reference a SOP Instance by another SOP Instance (such as Study Instance UID and Series Instance UID Attributes) will make that reference invalid. Modification of these Attributes is strongly discouraged.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_004f556e-ca18-4aa3-9162-4bb57cf27a6b">Other Attributes may be modified/corrected by an SCP of a Storage SOP Class.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_3a10b626-e69d-47d6-bb7b-468ccf7c94b4">Modification of Attributes may affect digital signatures referencing the content of the SOP Instance.</para>
-            </listitem>
-          </orderedlist>
-        </note>
+          <table frame="box" label="B.4-1" rules="all" xml:id="table_B.4-1">
+            <caption>Attributes Subject to Coercion</caption>
+            <thead>
+              <tr valign="top">
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_807bea58-38b0-45aa-9b7a-827ec0fc2d86">
+                    <emphasis role="bold">Attribute Name</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_6e81c531-8f9b-45d5-97c6-283dc161f305">
+                    <emphasis role="bold">Tag</emphasis>
+                  </para>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_4a5a5735-ec0c-4576-85c1-7a794000686e">Patient ID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f638e4e9-ba6b-4eda-ad88-75b4a9b54cd9">(0010,0020)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_893e750d-3f20-4dd8-8e03-f3031b5bea28">Issuer of Patient ID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_dfbad1dd-afd2-4996-ae57-c13b44132921">(0010,0021)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_3ecebc25-15c7-48d8-a9a4-6df2769d0474">Other Patient IDs Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e4c3cdb7-6258-4127-b486-e8966137608b">(0010,1002)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_056e93d8-3eaa-4084-bf8f-22a62bd16d7e">Study Instance UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_6b4b77bb-2303-4f14-852c-5b79a5a260b6">(0020,000D)</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a453820b-c39b-4ee6-82a9-4f0589f7211a">Series Instance UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f808cc2b-6b18-4f26-b263-e85fc7ddc609">(0020,000E)</para>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <para xml:id="para_0017122d-3bc6-425e-8ffe-d28cbf8ee3f6">The SCP of the Storage Service Class may modify the values of Code Sequence Attributes to convert from one coding scheme into another. This includes changing from deprecated values of Coding Scheme Designator (0008,0102) or Code Value (0008,0100) to currently valid values.</para>
+          <para xml:id="para_6c782cae-7139-4abf-8489-e28131c74eb1">If an SCP performs such a modification, it shall return a C-STORE response with a status of Warning.</para>
+          <note>
+            <orderedlist>
+              <listitem>
+                <para xml:id="para_7e9b5bcb-9acb-45c5-95ea-993a045b862e">Modification of these Attributes may be necessary if the SCP is also an SCP of a Query/Retrieve SOP Classes. These SOP Classes are described in this Standard. For example, an MR scanner may be implemented to generate Study Instance UIDs for images generated on the MR. When these images are sent to an archive that is HIS/RIS aware, it may choose to change the UID of the study assigned to the study by the PACS. The mechanism by which it performs this coercion is implementation dependent.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_6c71cbf6-d7fe-4d58-b5ef-f6d4095f3825">An SCP may, for instance, convert Coding Scheme Designator values "SNM3" to "SRT", in accordance with the DICOM conventions for SNOMED (see <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>).</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_082208bc-cb4c-40c5-abaf-4f11f87560dc">Modification of Attributes that may be used to reference a SOP Instance by another SOP Instance (such as Study Instance UID and Series Instance UID Attributes) will make that reference invalid. Modification of these Attributes is strongly discouraged.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_004f556e-ca18-4aa3-9162-4bb57cf27a6b">Other Attributes may be modified/corrected by an SCP of a Storage SOP Class.</para>
+              </listitem>
+              <listitem>
+                <para xml:id="para_3a10b626-e69d-47d6-bb7b-468ccf7c94b4">Modification of Attributes may affect digital signatures referencing the content of the SOP Instance.</para>
+              </listitem>
+            </orderedlist>
+          </note>
         </section>
         <section label="B.4.1.4" status="4" xml:id="sect_B.4.1.4">
           <title>Levels of Digital Signature</title>
           <para xml:id="para_f27c2475-7315-4cbd-b3e3-8afdec12479e">Three levels of Digital Signature support are defined for an SCP that claims conformance to Level 2 (Full) storage support:</para>
-        <itemizedlist>
-          <listitem>
-            <para xml:id="para_caa995dc-29fe-48c3-96be-016181f6f644">Signature Level 1. SCP may not preserve Digital Signatures and does not replace them.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_d802e867-508d-419b-875e-8fcbcb0dc2fe">Signature Level 2. SCP does not preserve the integrity of incoming Digital Signatures, but does validate the signatures of SOP Instances being stored, takes implementation-specific measures for insuring the integrity of data stored, and will add replacement Digital Signatures before sending SOP Instances elsewhere.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_b7ac6c03-2e10-488d-946a-6fc682e6681f">Signature Level 3. SCP does preserve the integrity of incoming Digital Signatures (i.e., is bit-preserving and stores and retrieves all Attributes regardless of whether they are defined in the IOD).</para>
-          </listitem>
-        </itemizedlist>
+          <itemizedlist>
+            <listitem>
+              <para xml:id="para_caa995dc-29fe-48c3-96be-016181f6f644">Signature Level 1. SCP may not preserve Digital Signatures and does not replace them.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_d802e867-508d-419b-875e-8fcbcb0dc2fe">Signature Level 2. SCP does not preserve the integrity of incoming Digital Signatures, but does validate the signatures of SOP Instances being stored, takes implementation-specific measures for insuring the integrity of data stored, and will add replacement Digital Signatures before sending SOP Instances elsewhere.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_b7ac6c03-2e10-488d-946a-6fc682e6681f">Signature Level 3. SCP does preserve the integrity of incoming Digital Signatures (i.e., is bit-preserving and stores and retrieves all Attributes regardless of whether they are defined in the IOD).</para>
+            </listitem>
+          </itemizedlist>
         </section>
       </section>
       <section label="B.4.2" status="3" xml:id="sect_B.4.2">
@@ -3733,9 +3724,7 @@
         </section>
         <section label="B.5.1.23" status="4" xml:id="sect_B.5.1.23">
           <title>Enhanced Multi-Frame Image SOP Classes</title>
-          <para xml:id="para_99147e5c-f569-4458-89e5-be9a13536928">An SCP of any of the Enhanced Multi-Frame Image SOP Classes
-            that makes SOP Instances available through the Enhanced Multi-Frame Image Conversion Extended Negotiation of the Query/Retrieve Service Class
-            (see <xref linkend="sect_C.3.5" xrefstyle="select: label quotedtitle"/>) shall provide Level 2 (Full) Storage SCP Conformance.</para>
+          <para xml:id="para_99147e5c-f569-4458-89e5-be9a13536928">An SCP of any of the Enhanced Multi-Frame Image SOP Classes that makes SOP Instances available through the Enhanced Multi-Frame Image Conversion Extended Negotiation of the Query/Retrieve Service Class (see <xref linkend="sect_C.3.5" xrefstyle="select: label quotedtitle"/>) shall provide Level 2 (Full) Storage SCP Conformance.</para>
           <note>
             <para xml:id="para_9d6de318-d8b1-4c80-ae99-b8a4fd12b00f">Effective use of the Image Conversion option requires the storage of Type 3 Attributes.</para>
           </note>
@@ -9499,8 +9488,8 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_3436073a-14c1-4451-888e-a13b4d64655d">
-<emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
-</para>
+                      <emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
+                    </para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_2038462b-8e57-4f9f-ac33-1af5a4a06867"/>
@@ -11421,8 +11410,8 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_f6c4581d-4389-4c48-af63-212c39a5184d">
-<emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
-</para>
+                      <emphasis role="italic">&gt;&gt;All other Attributes of the Issuer of Patient ID Qualifiers Sequence</emphasis>
+                    </para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_39215491-7008-436c-9cb9-e29f70b63944"/>
@@ -21875,13 +21864,7 @@
               </itemizedlist>
             </listitem>
             <listitem>
-              <para xml:id="para_6a075501-7970-4280-89a6-9c7341cfe496">A list of any extension codes added to
-                <olink targetdoc="PS3.16" targetptr="sect_CID_12301" xrefstyle="select: labelnumber quotedtitle"/>,
-                <olink targetdoc="PS3.16" targetptr="sect_CID_12304" xrefstyle="select: labelnumber quotedtitle"/>,
-                <olink targetdoc="PS3.16" targetptr="sect_CID_12305" xrefstyle="select: labelnumber quotedtitle"/>,
-                <olink targetdoc="PS3.16" targetptr="sect_CID_12307" xrefstyle="select: labelnumber quotedtitle"/>,
-                <olink targetdoc="PS3.16" targetptr="sect_CID_12227" xrefstyle="select: labelnumber quotedtitle"/>.
-              </para>
+              <para xml:id="para_6a075501-7970-4280-89a6-9c7341cfe496">A list of any extension codes added to <olink targetdoc="PS3.16" targetptr="sect_CID_12301" xrefstyle="select: labelnumber quotedtitle"/>, <olink targetdoc="PS3.16" targetptr="sect_CID_12304" xrefstyle="select: labelnumber quotedtitle"/>, <olink targetdoc="PS3.16" targetptr="sect_CID_12305" xrefstyle="select: labelnumber quotedtitle"/>, <olink targetdoc="PS3.16" targetptr="sect_CID_12307" xrefstyle="select: labelnumber quotedtitle"/>, <olink targetdoc="PS3.16" targetptr="sect_CID_12227" xrefstyle="select: labelnumber quotedtitle"/>. </para>
             </listitem>
           </itemizedlist>
         </section>
@@ -36828,7 +36811,7 @@
                 <tr valign="top">
                   <td align="left" colspan="9" rowspan="1">
                     <para xml:id="para_686e842b-b4e3-47f4-9a52-9d2b58ae832a">
-                      <emphasis role="italic">Include <xref linkend="table_CC.2.5-2e" xrefstyle="select: label quotedtitle"/>
+                      <emphasis role="italic">&gt;Include <xref linkend="table_CC.2.5-2e" xrefstyle="select: label quotedtitle"/>
                       </emphasis>
                     </para>
                   </td>
@@ -44736,7 +44719,8 @@
             <para xml:id="para_236511c7-a032-4661-bbe1-a3d25476ecb9">Conversion to presentation Profile Connection Space values (PCS-Values) when an image is displayed on a softcopy device.</para>
           </listitem>
         </itemizedlist>
-        <para xml:id="para_7cc5ad39-376e-4e22-a8a7-acb5f131a553">The result of applying a Volumetric Presentation State is not expected to be exactly reproducible on different systems. It is difficult to describe the display and rendering algorithms in enough detail in an interoperable manner such that a presentation produced at a later time is indistinguishable from that of the original presentation. While Volumetric Presentation States use established DICOM concepts of grayscale and color matching (GSDF and ICC color profiles) and provide a generic description of the different types of display algorithms possible, variations in algorithm implementations within display devices are inevitable and an exact match of volume presentation on multiple devices cannot be guaranteed. Nevertheless, reasonable consistency is provided by specification of inputs, geometric descriptions of spatial views, type of processing to be used, color mapping and blending, input fusion, and many generic rendering parameters, producing what is expected to be a clinically acceptable result.</para>
+        <para xml:id="para_7cc5ad39-376e-4e22-a8a7-acb5f131a553">The result of applying a Volumetric Presentation State is not expected to be exactly reproducible on different systems. It is difficult to describe the display and rendering algorithms in enough detail in an interoperable manner such that a presentation produced at a later time is indistinguishable from that of the original presentation. While Volumetric Presentation States use established DICOM concepts of grayscale and color matching (GSDF and ICC color profiles) and provide a generic description of the different types of display algorithms possible, variations in algorithm implementations within display devices are inevitable and an exact match of volume presentation on multiple devices cannot be guaranteed. Nevertheless, reasonable consistency is provided by specification of inputs, geometric descriptions of spatial views, type of processing to be used, color mapping and blending, input fusion, and many generic
+          rendering parameters, producing what is expected to be a clinically acceptable result.</para>
         <para xml:id="para_8744e9d6-d61a-48c5-804e-0ab0c83e150e">The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
         <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this standard.</para>
         <para xml:id="para_c597b301-390b-4b3c-9edc-6feb96d94abd">A claim of conformance as an SCP of the SOP Class implies that the SCP shall make the Presentation State available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the standard.</para>
@@ -44961,7 +44945,7 @@
                 </para>
               </listitem>
             </itemizedlist>
-           </section>
+          </section>
         </section>
         <section label="FF.2.3.3" status="4" xml:id="sect_FF.2.3.3">
           <title>Internal Structure of Components</title>
@@ -45372,6 +45356,19 @@
               </para>
             </td>
           </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_320cd50a-6451-48fc-8d11-bfed8dd10964">Protocol Approval Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_825be1d9-7e2f-42df-8559-bf827c047acc">1.2.840.10008.5.1.4.1.1.200.3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_3f0cceb6-412e-4d31-93fc-b4dd63231c98">
+                <olink targetdoc="PS3.3" targetptr="sect_A.82.3.1" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -45617,6 +45614,10 @@
         <para xml:id="para_66854872-5ccc-4875-8e11-a181a9e2d560">An implementation that conforms to the CT Defined Procedure Protocol Storage SOP Class as an SCP shall not modify constraints for which the value of the Modifiable Constraint Flag (0082,0038) is NO.</para>
         <para xml:id="para_66de01ed-4144-489c-aaf5-4070931dcf2c">Modifying protocol constraints changes the semantics of a CT Defined Procedure Protocol Storage SOP Instance.</para>
       </section>
+      <section label="GG.6.5" status="3" xml:id="sect_GG.6.5">
+        <title>Protocol Approval Storage SOP Class</title>
+        <para xml:id="para_88eeda2d-a80e-4c16-8d7c-64cf9165950a">Approvals are based on assertions. Receipt or generation of an assertion will interact with organizational authentication and authorization policies. For example, an approval may be received by mistake as part of the transfer of a patient record.</para>
+      </section>
     </section>
   </chapter>
 
@@ -45720,7 +45721,7 @@
         <section label="HH.6.1.2" status="4" xml:id="sect_HH.6.1.2">
           <title>Defined Procedure Protocol Attributes</title>
           <para xml:id="para_2c21a224-4242-43f9-89c5-ed25f793750e">
-<xref linkend="table_HH.6-1" xrefstyle="select: label"/> defines the Attributes of the Defined Procedure Protocol Information Model.</para>
+            <xref linkend="table_HH.6-1" xrefstyle="select: label"/> defines the Attributes of the Defined Procedure Protocol Information Model.</para>
           <table frame="box" label=" HH.6-1" rules="all" xml:id="table_HH.6-1">
             <caption>Attributes for the Defined Procedure Protocol Information Model</caption>
             <thead>
@@ -45756,8 +45757,8 @@
               <tr valign="top">
                 <td align="left" colspan="5" rowspan="1">
                   <para xml:id="para_16222692-9a72-49b8-8813-528c91f48853">
-<emphasis role="bold">SOP Common</emphasis>
-</para>
+                    <emphasis role="bold">SOP Common</emphasis>
+                  </para>
                 </td>
               </tr>
               <tr valign="top">
@@ -45810,8 +45811,8 @@
               <tr valign="top">
                 <td align="left" colspan="5" rowspan="1">
                   <para xml:id="para_bbe9acd5-dccc-4357-b185-bd14dfc5fb74">
-<emphasis role="bold">Protocol Context</emphasis>
-</para>
+                    <emphasis role="bold">Protocol Context</emphasis>
+                  </para>
                 </td>
               </tr>
               <tr valign="top">
@@ -46326,8 +46327,8 @@
               <tr valign="top">
                 <td align="left" colspan="5" rowspan="1">
                   <para xml:id="para_46faa88a-a465-44f8-a907-79560444dcb5">
-<emphasis role="bold">Clinical Trial Context</emphasis>
-</para>
+                    <emphasis role="bold">Clinical Trial Context</emphasis>
+                  </para>
                 </td>
               </tr>
               <tr valign="top">
@@ -46367,8 +46368,8 @@
               <tr valign="top">
                 <td align="left" colspan="5" rowspan="1">
                   <para xml:id="para_d9bdb9b3-6984-456f-928b-c46709fd94a1">
-<emphasis role="bold">Equipment Specification</emphasis>
-</para>
+                    <emphasis role="bold">Equipment Specification</emphasis>
+                  </para>
                 </td>
               </tr>
               <tr valign="top">
@@ -46487,8 +46488,8 @@
               <tr valign="top">
                 <td align="left" colspan="5" rowspan="1">
                   <para xml:id="para_6fa4c854-f092-455c-8812-4a3c5626956f">
-<emphasis role="bold">Patient Positioning</emphasis>
-</para>
+                    <emphasis role="bold">Patient Positioning</emphasis>
+                  </para>
                 </td>
               </tr>
               <tr valign="top">
@@ -46680,13 +46681,13 @@
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_23cf7d28-35f1-4076-8d5f-91677875d0f5">
-<emphasis role="bold">SOP Class Name</emphasis>
-</para>
+                    <emphasis role="bold">SOP Class Name</emphasis>
+                  </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_29cf768c-4dd1-4fd2-bfae-3bc3594f4da1">
-<emphasis role="bold">SOP Class UID</emphasis>
-</para>
+                    <emphasis role="bold">SOP Class UID</emphasis>
+                  </para>
                 </th>
               </tr>
             </thead>
@@ -46713,6 +46714,964 @@
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_1ccb7291-36d6-4077-ab27-b9a2567e92b3">1.2.840.10008.5.1.4.20.3</para>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+  </chapter>
+  <chapter label="II" status="1" xml:id="chapter_II">
+    <title>Protocol Approval Query/retrieve Service Classes</title>
+    <section label="II.1" status="2" xml:id="sect_II.1">
+      <title>Overview</title>
+      <section label="II.1.1" status="3" xml:id="sect_II.1.1">
+        <title>Scope</title>
+        <para xml:id="para_95a463c4-107c-468b-90b7-82122c0f39ea">The Protocol Approval Query/Retrieve Service Classes define application-level classes-of-service that facilitate access to Protocol Approval composite objects.</para>
+      </section>
+      <section label="II.1.2" status="3" xml:id="sect_II.1.2">
+        <title>Conventions</title>
+        <para xml:id="para_111fc88e-583f-4ebd-8a0f-956104bbc26e">Key Attributes serve two purposes; they may be used as Matching Key Attributes or as Return Key Attributes. Matching Key Attributes may be used for matching (criteria to be used in the C-FIND request to determine whether an entity matches the query). Return Key Attributes may be used to specify desired return Attributes (what elements in addition to the Matching Key Attributes have to be returned in the C-FIND response).</para>
+        <note>
+          <para xml:id="para_e7498f42-1a91-445f-a718-1c90d08a637e">Matching Keys are typically used in an SQL 'where' clause. Return Keys are typically used in an SQL 'select' clause to convey the Attribute values.</para>
+        </note>
+        <para xml:id="para_abcdd0c0-cad5-477a-8b50-0f123deb6330">Matching Key Attributes may be of Type "required" (R) or "optional" (O). Return Key Attributes may be of Type 1, 1C, 2, 2C, 3 as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="template:%n Data Structure and Semantics"/>.</para>
+      </section>
+      <section label="II.1.3" status="3" xml:id="sect_II.1.3">
+        <title>Query/Retrieve Information Model</title>
+        <para xml:id="para_a8ab3ce5-ec00-423e-8de2-ecc8bb77975c">In order to serve as an SCP of the Protocol Approval Query/Retrieve Service Class, a DICOM AE possesses information about the Attributes of a number of Protocol Approval composite SOP Instances. The information is organized into an Information Model. The Information Models for the different SOP Classes specified in this Annex are defined in <xref linkend="sect_II.6" xrefstyle="select: label"/>.</para>
+      </section>
+      <section label="II.1.4" status="3" xml:id="sect_II.1.4">
+        <title>Service Definition</title>
+        <para xml:id="para_5f9e4bc3-9210-4aa6-86dd-661a4c3282ac">Two peer DICOM AEs implement a SOP Class of a Protocol Approval Query/Retrieve Service Class with one serving in the SCU role and one serving in the SCP role. SOP Classes of the Protocol Approval Query/Retrieve Service Classes are implemented using the DIMSE-C C-FIND, C-MOVE and C-GET services as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="template:%n Message Exchange Protocol"/>.</para>
+        <para xml:id="para_854b4213-f10f-4aee-ad9f-e9728385d39d">An SCP of this SOP Class shall support Level-2 conformance as defined in <xref linkend="sect_B.4.1" xrefstyle="select: label"/>.</para>
+        <para xml:id="para_033e277f-d673-431a-9db0-e13abc92f1ae">The semantics of the C-FIND service are the same as those defined in the Service Definition of the Basic Worklist Management Service Class.</para>
+        <para xml:id="para_bd8316a3-547b-481b-8b60-6b5f8734fc15">The semantics of the C-MOVE service are the same as those defined in the Service Definition of the Query/Retrieve Service Class, with the exception that there is only one level of retrieval.</para>
+        <para xml:id="para_aad39ead-0efc-4a0e-8619-c88022dbbfb6">The semantics of the C-GET service are the same as those defined in the Service Definition of the Query/Retrieve Service Class, with the exception that there is only one level of retrieval.</para>
+      </section>
+    </section>
+    <section label="II.2" status="2" xml:id="sect_II.2">
+      <title>Protocol Approval Information Models Definitions</title>
+      <para xml:id="para_2f83ae99-7d1f-4157-afad-59c035347de4">The Protocol Approval Information Models are identified by the SOP Class negotiated at Association establishment time. Each SOP Class is composed of both an Information Model and a DIMSE-C Service Group.</para>
+      <para xml:id="para_d944b5d6-67f3-47d3-834e-9b0014cc6a58">The Protocol Approval Information Models are defined in <xref linkend="sect_II.6" xrefstyle="select: label"/>, with the Entity-Relationship Model Definition and Key Attributes Definition analogous to those defined in the Worklist Information Model Definition of the Basic Worklist Management Service.</para>
+    </section>
+    <section label="II.3" status="2" xml:id="sect_II.3">
+      <title>Protocol Approval Information Models</title>
+      <para xml:id="para_9686099f-354d-4c51-bb21-f362a1af2fad">The Protocol Approval Information Models are based upon a one level entity:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_b2c843a2-484f-4ff1-8b4b-a39fb2908bb8">Protocol Approval object instance.</para>
+        </listitem>
+      </itemizedlist>
+      <para xml:id="para_6dea8bab-36d1-4505-8ff8-3c809b46c9e9">The Protocol Approval object instance contains Attributes associated with the Approval IE of the Composite IODs as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="template:%n Information Object Definitions"/>.</para>
+    </section>
+    <section label="II.4" status="2" xml:id="sect_II.4">
+      <title>DIMSE-C Service Groups</title>
+      <section label="II.4.1" status="3" xml:id="sect_II.4.1">
+        <title>C-FIND Operation</title>
+        <para xml:id="para_e52f2076-7268-4bf1-a9db-aeb2f2c3421e">See the C-FIND Operation definition for the Basic Worklist Management Service Class (<xref linkend="sect_K.4.1" xrefstyle="select: label"/>) , and substitute "Approval" for "Worklist". The "Worklist" Search Method shall be used.</para>
+        <para xml:id="para_6c904fce-3b11-4c4e-bd70-0050931fd5e2">The SOP Class UID identifies the Protocol Approval Information Model against which the C-FIND is to be performed. The Key Attributes and values allowable for the query are defined in the SOP Class definitions for the Protocol Approval Information Model.</para>
+        <section label="II.4.1.1" status="4" xml:id="sect_II.4.1.1">
+          <title>Service Class User Behavior</title>
+          <para xml:id="para_c2613c64-40dc-40fc-b4db-8ce21e420f2a">No SOP Class specific SCU behavior is defined.</para>
+        </section>
+        <section label="II.4.1.2" status="4" xml:id="sect_II.4.1.2">
+          <title>Service Class Provider Behavior</title>
+          <para xml:id="para_1672a10e-6836-4892-b471-d99a36572a9a">No SOP Class specific SCP behavior is defined.</para>
+        </section>
+      </section>
+      <section label="II.4.2" status="3" xml:id="sect_II.4.2">
+        <title>C-MOVE Operation</title>
+        <para xml:id="para_5e24d01f-8c44-4c50-89e3-fc33554a023d">See the C-MOVE Operation definition for the Query/Retrieve Service Class (<xref linkend="sect_C.4.2" xrefstyle="select: label"/>). No Extended Behavior or Relational-Retrieve is defined for the Protocol Approval Query/Retrieve Service Classes.</para>
+        <para xml:id="para_370404d9-f6d2-42d6-a63b-697f63e80f5f">Query/Retrieve Level (0008,0052) is not relevant to the Protocol Approval Query/Retrieve Service Classes, and therefore shall not be present in the Identifier. The only Unique Key Attribute of the Identifier shall be SOP Instance UID (0008,0018). The SCU shall supply one UID or a list of UIDs.</para>
+        <note>
+          <para xml:id="para_ec481915-be93-4560-82e5-52d4451a4629">More than one entity may be retrieved, using List of UID matching.</para>
+        </note>
+      </section>
+      <section label="II.4.3" status="3" xml:id="sect_II.4.3">
+        <title>C-GET Operation</title>
+        <para xml:id="para_c4139d1a-7ba1-454a-9f6c-bd8cd53a8f81">See the C-GET Operation definition for the Query/Retrieve Service Class (<xref linkend="sect_C.4.2" xrefstyle="select: label"/>). No Extended Behavior or Relational-Retrieve is defined for the Protocol Approval Query/Retrieve Service Classes.</para>
+        <note>
+          <para xml:id="para_e461b020-e318-4b68-aae9-1ed9d90cd4ef">More than one entity may be retrieved, using List of UID matching.</para>
+        </note>
+      </section>
+    </section>
+    <section label="II.5" status="2" xml:id="sect_II.5">
+      <title>Association Negotiation</title>
+      <para xml:id="para_f401c97a-5280-4ea3-b292-e05f15c48708">See the Association Negotiation definition for the Basic Worklist Management Service Class (<xref linkend="sect_K.5" xrefstyle="select: label"/>).</para>
+    </section>
+    <section label="II.6" status="2" xml:id="sect_II.6">
+      <title>SOP Class Definitions</title>
+      <section label="II.6.1" status="3" xml:id="sect_II.6.1">
+        <title>Protocol Approval Information Model</title>
+        <section label="II.6.1.1" status="4" xml:id="sect_II.6.1.1">
+          <title>E/R Models</title>
+          <para xml:id="para_babe6c71-bcd5-41d5-97de-44de0a09f6ce">The Protocol Approval Information Model consists of a single entity. In response to a given C-FIND request, the SCP shall send one C-FIND response per matching Protocol Approval Instance.</para>
+          <para xml:id="para_680cc5ba-9ba9-48bc-8254-d112f581195b">
+            <figure label="II.6-1" pgwide="1" xml:id="figure_II.6-1">
+              <title>Protocol Approval Information Model E/R Diagram</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="figures/PS3.4_II.6-1.svg"/>
+                </imageobject>
+              </mediaobject>
+            </figure>
+          </para>
+        </section>
+        <section label="II.6.1.2" status="4" xml:id="sect_II.6.1.2">
+          <title>Protocol Approval Attributes</title>
+          <para xml:id="para_ec8a1333-1f3d-4954-9dc6-773e9f9a9cf0">
+<xref linkend="table_II.6-1" xrefstyle="select: label"/> defines the Attributes of the Protocol Approval Information Model.</para>
+          <note>
+            <para xml:id="para_8105e583-f926-48ab-94c0-679a15ea43d8">Since protocol approvals are generally relevant only in the context of the protocol instance being approved, many searches will be looking for approvals that list a particular protocol instance in the Approval Subject Sequence (0044,0109).</para>
+          </note>
+          <table frame="box" label="II.6-1" rules="all" xml:id="table_II.6-1">
+            <caption>Attributes for the Protocol Approval Information Model</caption>
+            <thead>
+              <tr valign="top">
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_b969aa04-9ba3-4953-872c-0169f8f1acf8">
+                    <emphasis role="bold">Description / Module</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9359db82-28c8-4671-93ea-ce19f732992c">
+                    <emphasis role="bold">Tag</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_754ca251-bb38-43fa-b341-c4b2bcc0ccd0">
+                    <emphasis role="bold">Matching Key Type</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_74160219-29b3-40ab-92e4-70ec6e6e412f">
+                    <emphasis role="bold">Return Key Type</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_afac6116-b8e5-47c1-b00b-84a0abc49c01">
+                    <emphasis role="bold">Remark / Matching Type</emphasis>
+                  </para>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td align="left" colspan="5" rowspan="1">
+                  <para xml:id="para_d640960d-024e-4f0b-8024-8a1f75371f6e">
+                    <emphasis role="bold">SOP Common</emphasis>
+                  </para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_c793a03c-a2e7-4aa0-a687-d00c9ddd37c7">Specific Character Set</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_56326b6c-b8f7-4a80-844b-b9c762b67ad9">(0008,0005)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c0e19c9a-f8ad-48c7-b2e9-2d360bb9e60f">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_0b18d015-580f-49ec-bcbc-582ded3e066e">1C</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_b66da951-27fe-47ac-bbf7-e2306dd2f142">This Attribute is required if expanded or replacement character sets are used. See <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> and <xref linkend="sect_C.4.1.1" xrefstyle="select: label"/>.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_e21f0b0a-e122-4031-9e81-8c515c75b7b4">SOP Class UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3e030ae5-52ce-4f9b-82df-e9f777aa498b">(0008,0016)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_6ea0e192-ac18-4e54-83ce-2bec6fc14eab">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d1a8216a-f45d-4609-8b3b-6f8accc8ea78">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_cd4e92cf-b961-48e6-882b-32b3391ec101">SOP Instance UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f2c74f22-034a-4b50-a317-f8cc54abc4b4">(0008,0018)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a5ed3ad6-9e4e-492a-a907-0aac71e7db99">U</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c0c74685-4d11-4d8f-8688-f16f3ff44f42">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_950d1c1e-7cb4-4f12-98f5-19b98ae8f994">Instance Creation Date</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f60c9acb-d892-45f4-95f1-822cb500e5ed">(0008,0012)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_b2700258-5d62-4baf-841b-c5b3e5ea0327">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_b593028b-1f84-4bf7-9502-7532a63ab475">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_3affcc24-984e-4ea2-a13e-a2403abb2d46">Shall be retrieved with Single Value or Range Matching.</para>
+                  <para xml:id="para_4de4dcab-9958-4d63-90da-1fab77f0d905">See Instance Creation Time for further details.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_11a667bb-6909-4b39-9ea1-e633f9e50069">Instance Creation Time</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_70aff635-694b-4f37-8053-8811a139156b">(0008,0013)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f81353cd-fb0f-40fa-8e2c-439a244268bb">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ab39f464-4acf-4adc-bfe6-a500872030f3">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_22aaf24f-5d82-4dab-a1d8-b9ef6794d41a">Shall be retrieved with Single Value or Range Matching.</para>
+                  <para xml:id="para_985d33cc-cacb-4e06-a908-ea2f000bf717">If both Instance Creation Date and Instance Creation Time are specified for Range Matching, they are to be treated as as if they were a single DateTime Attribute e.g.,the date range July 5 to July 7 and the time range 10am to 6pm specifies the time period starting on July 5, 10am until July 7, 6pm.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="5" rowspan="1">
+                  <para xml:id="para_1de59374-d1f8-48bb-8073-cdd08fff803b">
+                    <emphasis role="bold">Protocol Approval</emphasis>
+                  </para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_e361d47f-6ad5-473c-8d47-1dac577883b1">Approval Subject Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_5484228e-75d1-4955-9336-357236ff7436">(0044,0109)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_740949c6-eff9-4b02-88cb-eb6a75ce6130">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3a0a4343-4534-405b-95d0-d9beee2e377c">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1ad689fd-f35a-4565-bc0b-9d927d3f968e">&gt;Referenced SOP Class UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e497f739-8b90-4905-8147-76a8a9c1c1ff">(0008,1150)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_0a44dc77-f24e-488e-910c-31a547d654af">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_18b6b6cb-c4e0-4777-b0d3-3fb63c0b528d">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_836bf3fd-a4f2-4c1b-b413-ba5ac3e1d659">Shall be retrieved with List of UID Matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_b458cc48-b8d2-41d9-9968-1f97c74c8d84">&gt;Referenced SOP Instance UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_4ad3e1f6-f2a3-4456-b864-e5a595d31225">(0008,1155)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_fd0351c6-f021-475e-8d46-7046615b7763">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a82d187b-addc-4f1b-bb86-d24e6a9b4d43">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_e9fcb832-3fdc-4fa3-8e26-38b4b4e7bbac">Shall be retrieved with List of UID Matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_f0bbc9ae-b21f-4228-88e1-f7ece314d4c4">Approval Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e8182d41-445d-4a89-b9b5-b35a53a9208e">(0044,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_df9fe5d1-ede6-4439-9c69-cc16715c5d51">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c0114daf-5b1b-41de-add7-c8436ae7681f">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_b9eff972-e753-4a7b-9d36-fe95d90781b7">&gt;Assertion Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_11ecbf7b-073d-473a-9bb1-b901fc06f44e">(0044,0101)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f21f89fb-81f2-47ef-b7ca-a955760fe04e">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1c368006-cbf4-4906-92a3-37a484d2630e">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_afa1c501-0aaf-4c37-8628-40cb9091293e">&gt;&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f3fa0cf7-76c6-420a-b220-85f392910904">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_891e241f-31df-46f3-8d8b-592cb0473403">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1b32ad06-8056-4ccf-a68e-32df6698b21d">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_dedb911d-aa82-41b1-b881-a0cc3261f985">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_ed631e45-2215-49db-a55c-d7f25589994a">&gt;&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_152a02f0-e30c-4814-abda-9f615597c553">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_527f82d4-040c-4c91-8f9a-96c85db71a1c">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_673bb391-422b-4f03-b3f1-bc59054bca90">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_fe5bbf14-2f01-4f06-bf1c-d08fe93f2b6c">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_700f953e-f6dc-4f7b-a6b0-87e7721097c2">&gt;&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a5a6edb6-3d4d-4218-9739-6e547dea0b08">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e2661dd1-13f7-42e5-8ac7-79920afe3eb9">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_dc2ef74c-5029-45ff-9584-3db731ae4771">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_269ee007-0d48-4870-9cda-d6309416e930">&gt;Assertion UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1a52344f-0a94-4662-b09e-5e7e3c8bab5e">(0044,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_814b3f7f-81c4-4517-a518-976a28ab4afb">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a1bb9c80-0908-4e51-b2e7-a0310fd86705">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_9c47de1d-0c75-4e2f-8c85-2ac4404329a3">&gt;Asserter Identification Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f128b0af-e9af-45a4-8ed7-17143aa0df19">(0044,0103)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7bd8f9d2-87f2-4a84-b439-01dcb8b8f74d">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_800c70c1-3700-4ada-b649-69662be04e3b">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1eacbe7f-b7b8-41e9-b9b8-65471b8ac9ac">&gt;&gt;Observer Type</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c8eecb42-c119-4338-8fdc-2fb25ea74661">(0040,A084)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f693e8d5-a4d1-4cce-ba3e-15e151e96bc1">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a98e358d-cb5e-46d6-a247-e5d3f72055c9">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_bee46ef2-c7ae-495a-aa91-2ef5b6f79772">&gt;&gt;Person Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_90efade0-d516-4f3f-a63f-b845807cf541">(0040,A123)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_8dd74c5f-e751-495c-aa48-5aa672fe14b4">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3974b764-dd09-4c4c-970e-6da7230b6690">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_2a31ffd5-d533-4a5c-9faa-7c97a98aa03c">&gt;&gt;Person Idenfication Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3d61dfff-1cea-48c1-9bd1-b76d498033ad">(0040,1101)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d38b3073-6d17-4aeb-9465-e9f64c7d88bb">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_00b3dd6d-5b5a-45df-8cb6-cbe9d8316526">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_312b2370-b32e-4b40-8629-84f2717ec050">&gt;&gt;&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_5f97f304-8dcc-424d-a246-6d03ad2353d4">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a154a0b6-da8c-4ca1-ac0d-f5d243d0d7a1">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1214fb9a-0c50-404f-b6f1-36b56c2cecd0">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_aa34aa7a-dbc4-49fc-803d-fa0de5adafc3">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1b25695f-bf3e-4d9e-b066-b2f28af5c5a7">&gt;&gt;&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_39746278-53a8-40f9-af83-886e9392f2d2">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c846f180-6b63-4c09-b73a-d89a2f544972">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3b4473e2-03be-4847-9300-c081cf4d9f59">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_9547c718-08dd-469b-9350-c96dbb3ca68d">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_bb4aa826-4bed-4c9f-8319-d4efb86374fc">&gt;&gt;&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_44617697-3657-4b32-9410-042d76211d48">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9b8db086-4b9b-4eb3-b6ef-1266b6313e39">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2744dc1b-eb04-412a-8086-626da1289698">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_2a8dbd8c-8978-4dba-b593-90c9c694bca3">&gt;&gt;Organizational Role Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7e410d33-dd41-475c-bc40-86a213073327">(0044,010A)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_33e4b825-594a-4639-a382-96ac5d415e5c">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d7d04cd6-20c1-4f1a-821a-4bb1ad30fb05">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1711d40f-0b8f-46ff-ba17-108cd7ef46a2">&gt;&gt;&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_bb243e7d-9c25-4373-bd5c-dc15c6d90ba5">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_a6a1dcc3-e8fc-4ec4-a0e6-1e40fbf8acbe">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c890cb4c-0540-4872-adde-4777d2db148f">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_3c03871a-8a93-47cd-a86c-ac6503b62758">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_3cf2744b-e435-47a0-97e7-5ceb00761849">&gt;&gt;&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_84658732-2b12-46b4-a6c6-fb068bb7a9f9">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_faca154d-b251-4459-a414-1bc3d29fcef5">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e165be10-588b-4d89-b334-81d4e40d081a">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_450dbac0-4276-4166-b3d9-3434ace5a825">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_e7941cb1-178f-4262-b97c-f98fee4e820e">&gt;&gt;&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_34a6eb52-4099-45e0-901b-dab18c26cd7d">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e9ffdeb3-66d4-4efc-9010-0aae8171fa5c">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c77564e1-c409-4a24-ad8e-35ac85c9a0c8">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_8dad664d-9a9f-4d91-ba97-89e330d8eabb">&gt;&gt;Station Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_22cb590a-342c-4de7-86e4-786dd9fca436">(0008,1010)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_dbb388be-cbeb-4224-bbde-79e6811d69fc">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_90ef2f58-5a03-499c-b88f-3173859b8e96">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a8bfba23-e1d3-43ec-a5e2-a8c60195983f">&gt;&gt;Device UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7f23deff-efe0-4184-8fc8-fcd893ec6e31">(0018,1002)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_d848458d-468b-47a5-b367-9286438be7ac">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_48c50272-bac1-4047-aa99-f0211ca66eb2">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_98153c6f-cd6f-4e63-8dd7-cd5e93962849">&gt;&gt;Manufacturer</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_3b5c713b-13bd-4880-b87e-0efe76590a09">(0008,0070)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_07e19e94-7a64-4464-b7a0-ccc7f86eff4d">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f96293a4-8a39-4fac-84e9-a4d9c1c51c6e">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a56a757f-f5c2-411f-8c15-6cbd47b5e37e">&gt;&gt;Manufacturer's Model Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_646c7fdd-d5e8-47e4-8037-a939704d5100">(0008,1090)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ef8ce498-9ea7-483b-ba83-f5f69fbe4bfd">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_177235d5-010a-472c-a457-9371ffd6b5d1">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_62e7afec-97fb-44d6-8952-17c8567726ca">&gt;&gt;Station AE Title</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_52ef4171-0d1c-4434-9a05-ef9d23c45226">(0008,0055)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9f3c813c-aa2b-459e-a48d-5189c4584277">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_353e4a4f-b62d-4e2d-b9bd-d10487b07d95">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_f961c8bc-d661-487c-abda-86c540113e2f">&gt;&gt;Institution Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9f7d8b63-3a03-4bf6-a19b-997aedf3ddb3">(0008,0080)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_6fb1c18d-a5bd-499b-8e29-c05288561a55">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c54e2a81-a7bc-4bcd-9f1e-b23114f15dc9">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_d45ea2ac-55e5-4274-8525-2e2e40564c36">&gt;&gt;Institution Code Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_fc554c3e-bb4b-40ae-910a-49a6ec7b5105">(0008,0082)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_4fe70d96-ce6e-4375-8145-f2ab2e226e59">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_11136956-8bdb-48ed-be48-852064f7a384">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_2c37bf4f-57c3-4ad9-8a8f-94159a6e8b36">&gt;&gt;&gt;Code Value</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_b3473123-a47b-4e5c-a5a1-29159c9e9c91">(0008,0100)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9bf08618-96bd-44aa-96f9-c48dd16b49b9">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_40307e42-04b3-433f-850f-53fea6620518">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_8232006f-9a37-4e2d-8ac4-240bd8b8ea72">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_012e358c-93fe-4e2d-a476-9ee7d6af50b4">&gt;&gt;&gt;Coding Scheme Designator</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ae5363f8-c3f7-4a62-a751-334c68936a0d">(0008,0102)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_56d25a98-148c-4cf2-9a80-5d5eb06e4bf1">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_39fc80a6-e6ca-480b-ac73-a015d99761ec">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_23395015-dff0-4f3e-bfe5-55f18d6ce99f">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_4cdb1741-3749-4e66-b098-9c39a8d8f14b">&gt;&gt;&gt;Code Meaning</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_559eca58-80d0-4bd9-aca4-8614e848ee09">(0008,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_13e9a66b-f28a-4be4-b89e-ad312d83d5dc">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1fa63b7a-67b8-4694-9db9-0ab2a9efde2c">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_0f32ebdd-e460-4fc0-b3ec-e68804c61a00">&gt;&gt;Institutional Department Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_967c1107-236d-409b-b2b1-84e0bd784a3e">(0008,1040)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c1b218fd-4bb7-48de-9ec0-e818edfb9da0">U</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_434f592b-8e1a-4f48-a4b6-de10f2584a04">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_c6e09819-c15d-4c92-ade5-07789c205de1">&gt;Assertion DateTime</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_94fdc482-95fa-4b4d-b2e6-38f533128619">(0044,0104)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_198d53be-77cd-49fe-929e-3012d9b624b4">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_bd4802cd-7d51-4ef1-9101-9806bf3d16af">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_a8270d0c-97e7-4935-98ee-58e5384f8753">This Attribute shall be retrieved with Single Value or Range Matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_2abdae5b-15b7-4544-8d96-7694fe2519d3">&gt;Assertion Expiration DateTime</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_645d25f7-0cf3-42bb-933e-585073f38298">(0044,0105)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2225a3dd-8f33-4409-b2a3-30c43e241987">R</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_5c5e91c1-a5b1-4bd5-9bd4-e42c7b94be27">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_9a10f512-5a34-4774-afeb-d08f8f5b9800">This Attribute shall be retrieved with Single Value or Range Matching.</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_9b287778-11ad-47ad-ab7c-7c153fa45058">&gt;Assertion Comments</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ab3c5ab7-1af5-480b-b46f-6316964cb287">(0044,0106)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_68d2ba61-430f-4aca-b274-4b37b9194cc3">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2be02cd5-5893-4fe3-9320-8706f968b569">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_55375ef9-be61-4fe1-ba5a-90729bed5874">&gt;Related Assertion Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_45a0bd07-7c7b-44f0-a19b-a7794fa7918e">(0044,0107)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_1848d810-8f3d-411f-9c7a-84f899024f70">U</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_f712c915-0cc1-4de8-9376-1040eae1f98c">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_294606e9-8df1-428e-a79e-11cba8cacfb4">&gt;&gt;Referenced Assertion UID</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_c9dbed2a-f841-4851-bf00-56e8a1dec2f3">(0044,0108)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_fadeb8b9-9b2a-4516-a77c-b3c43393a61d">U</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_639aeca5-5610-4584-b44d-a6a917884a23">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="5" rowspan="1">
+                  <para xml:id="para_aeda2b5e-0cad-4163-a567-65f56ea7fea1">
+                    <emphasis role="bold">Enhanced General Equipment</emphasis>
+                  </para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_ac0fb158-584a-4e12-927d-0f46bf7d5ce8">Manufacturer</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7e383ae5-a70b-4cd9-bbe5-8caf01729152">(0008,0070)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_47c9efe9-e3fd-4eaf-9941-a01c693341aa">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2076a334-c2c0-4932-b16e-edee31eead29">1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_66dc3b75-55c5-45ad-8a8f-b124b2e1ce60">Manufacturer's Model Name</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_7dc82ea1-077e-41bc-b844-294df6decb7c">(0008,1090)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_30c78c10-cc3f-4fda-8aa7-41479f30f463">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_69ae9507-bbde-449e-809f-03aeed495bf1">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_2ca92567-04cf-4188-80f9-041a9507b665">Software Versions</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_83786fed-bf5c-4482-bb98-a6a7e635d19c">(0018,1020)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_2d837042-f250-46e1-869c-6fadbc2ebfb1">-</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_dfd1b211-7a3b-4c3c-a73b-80f8195ba0d1">2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1"/>
+              </tr>
+            </tbody>
+          </table>
+          <note>
+            <para xml:id="para_c64338ed-7321-41f7-9975-0a4d63c19538">The Enhanced General Equipment Module describes the equipment that created the Protocol Approval instance, not the equipment on which a referenced Protocol will be performed.</para>
+          </note>
+        </section>
+        <section label="II.6.1.3" status="4" xml:id="sect_II.6.1.3">
+          <title>Conformance Requirements</title>
+          <para xml:id="para_10a6eb88-e253-411f-9c25-083cd503909c">An implementation may conform to one or more of the Protocol Approval Query/Retrieve SOP Classes as an SCU or SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+          <section label="II.6.1.3.1" status="5" xml:id="sect_II.6.1.3.1">
+            <title>SCU Conformance</title>
+            <section label="II.6.1.3.1.1" status="6" xml:id="sect_II.6.1.3.1.1">
+              <title>C-FIND SCU Conformance</title>
+              <para xml:id="para_d7381057-ed38-4de3-a857-80f8045e268d">An implementation that conforms to the Protocol Approval Information Model - FIND SOP Class shall support queries against the Protocol Approval Information Model using the C-FIND SCU Behavior described for the Basic Worklist Management Service Class (see <xref linkend="sect_K.4.1.2" xrefstyle="select: label"/> and <xref linkend="sect_II.4.1" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_5d2bc370-acc3-40e3-9044-8246a03d3166">An implementation that conforms to the Protocol Approval Information Model - FIND SOP Class as an SCU shall state in its Conformance Statement whether it requests Type 3 Return Key Attributes, and shall list these Optional Return Key Attributes.</para>
+              <para xml:id="para_8e46bf02-e06b-4b4f-8229-45e4313f3b7e">An implementation that conforms to the Protocol Approval Information Model - FIND SOP Class as an SCU shall state in its Conformance Statement how it makes use of Specific Character Set (0008,0005) when encoding queries and interpreting responses.</para>
+            </section>
+            <section label="II.6.1.3.1.2" status="6" xml:id="sect_II.6.1.3.1.2">
+              <title>C-MOVE SCU Conformance</title>
+
+              <para xml:id="para_3fe7cebe-4547-4b19-89e9-ea44bba03614">An implementation that conforms to the Protocol Approval Information Model - MOVE SOP Class as an SCU shall support transfers against the Protocol Approval Information Model, using the C-MOVE SCU baseline behavior described for the Query/Retrieve Service Class (see <xref linkend="sect_C.4.2.2.1" xrefstyle="select: label"/> and <xref linkend="sect_II.4.2" xrefstyle="select: label"/>).</para>
+            </section>
+            <section label="II.6.1.3.1.3" status="6" xml:id="sect_II.6.1.3.1.3">
+              <title>C-GET SCU Conformance</title>
+              <para xml:id="para_6c63c94e-9ea6-4c54-b720-a4d2c35ac661">An implementation that conforms to the Protocol Approval Information Model - GET SOP Class as an SCU shall support transfers against the Protocol Approval Information Model, using the C-GET SCU baseline behavior described for the Query/Retrieve Service Class (see <xref linkend="sect_C.4.3.2" xrefstyle="select: label"/>).</para>
+            </section>
+          </section>
+          <section label="II.6.1.3.2" status="5" xml:id="sect_II.6.1.3.2">
+            <title>SCP Conformance</title>
+            <section label="II.6.1.3.2.1" status="6" xml:id="sect_II.6.1.3.2.1">
+              <title>C-FIND SCP Conformance</title>
+              <para xml:id="para_2312f2e6-452b-46a0-ba4f-84d3af0ec647">An implementation that conforms to the Protocol Approval Information Model - FIND SOP Class as an SCP shall support queries against the Protocol Approval Information Model, using the C-FIND SCP Behavior described for the Basic Worklist Management Service Class (see <xref linkend="sect_K.4.1.3" xrefstyle="select: label"/>).</para>
+              <note>
+                <para xml:id="para_7e0c7ca6-c5bb-4e48-8863-a4cc5f8e882c">The contents of the Referenced SOP Instance UID (0008,1155) in the Approval Subject Sequence (0044,0109) would be useful to index since querying for approvals of a specific Protocol instance will be very common.</para>
+              </note>
+              <para xml:id="para_91e1c06b-8359-401a-a8ea-e448cf986679">An implementation that conforms to the Protocol Approval Information Model - FIND SOP Class as an SCP shall state in its Conformance Statement:</para>
+              <itemizedlist>
+                <listitem>
+                  <para xml:id="para_c251032e-84e8-45f0-b5a5-e52fef137097">whether it supports Type 3 Return Key Attributes, and shall list these Optional Return Key Attributes.</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_1583d04c-5ad4-4f96-a34d-f2d9a02bdf6a">how it makes use of Specific Character Set (0008,0005) when interpreting queries, performing matching and encoding responses.</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_1e742d0a-1cb0-4d82-933a-20bf9f624389">any behaviors that involve not returning matching instances (e.g. not returning an older approval instance that has been superceded/overridden by a newer approval instance).</para>
+                </listitem>
+              </itemizedlist>
+            </section>
+            <section label="II.6.1.3.2.2" status="6" xml:id="sect_II.6.1.3.2.2">
+              <title>C-MOVE SCP Conformance</title>
+              <para xml:id="para_9a016031-2baf-4f85-bfa8-5cb8e75731fd">An implementation that conforms to the Protocol Approval Information Model - MOVE SOP Class as an SCP shall support transfers against the Protocol Approval Information Model, using the C-MOVE SCP baseline behavior described for the Query/Retrieve Service Class (see <xref linkend="sect_C.4.2.3.1" xrefstyle="select: label"/>).</para>
+              <para xml:id="para_d1a31425-8fdd-4b55-b9f8-89debf9fd730">An implementation that conforms to the Protocol Approval Information Model - MOVE SOP Class as an SCP, which generates transfers using the C-MOVE operation, shall state in its Conformance Statement appropriate Storage Service Class, under which it shall support the C-STORE sub-operations generated by the C-MOVE.</para>
+            </section>
+            <section label="II.6.1.3.2.3" status="6" xml:id="sect_II.6.1.3.2.3">
+              <title>C-GET SCP Conformance</title>
+              <para xml:id="para_def8d9fb-ccb7-482a-a894-dfd16e6e5dc8">An implementation that conforms to the Protocol Approval Information Model - GET SOP Class as an SCP shall support retrievals against the Protocol Approval Information Model using the C-GET SCP baseline behavior described for the Query/Retrieve Service Class in <xref linkend="sect_C.4.3.3" xrefstyle="select: label"/>.</para>
+            </section>
+          </section>
+        </section>
+        <section label="II.6.1.4" status="4" xml:id="sect_II.6.1.4">
+          <title>SOP Classes</title>
+          <para xml:id="para_ece9944c-09d6-48fd-9414-4bbce41770a0">The SOP Classes of the Protocol Approval Query/Retrieve Service Class identify the Information Models, and the DIMSE-C operations supported.</para>
+          <table frame="box" label="II.6.1.4-1" rules="all" xml:id="table_II.6.1.4-1">
+            <caption>Protocol Approval SOP Classes</caption>
+            <thead>
+              <tr valign="top">
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_ec9b4382-96a8-458d-b003-92f8a83b860e">
+                    <emphasis role="bold">SOP Class Name</emphasis>
+                  </para>
+                </th>
+                <th align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_e6545a6b-c01f-4e49-9a7e-688461b8df4c">
+                    <emphasis role="bold">SOP Class UID</emphasis>
+                  </para>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_1d95f9e4-939a-4ac9-814f-2a48b8527b3a">Protocol Approval Information Model - FIND</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_addaa732-f558-48f7-acab-40bd53a3cf4f">1.2.840.10008.5.1.4.1.1.200.4</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_5d5f0d55-b571-461e-b30b-5fcbcf2f577c">Protocol Approval Information Model - MOVE</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_897c6397-5f67-4693-b06d-9cd5e1b52bac">1.2.840.10008.5.1.4.1.1.200.5</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_b1c669a0-c694-45b1-9a0e-abc917874a76">Protocol Approval Information Model - GET</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_8885fa87-a12b-4807-8ad5-dbed4c60d9b8">1.2.840.10008.5.1.4.1.1.200.6</para>
                 </td>
               </tr>
             </tbody>

@@ -22,41 +22,30 @@
 	<rect x="1" y="1" fill="#F5EED6" width="650" height="350"/>
 	<g>
 		<g>
+			<polyline fill="#CCDEF0" points="371.043,290.385 499.626,310.387 309.053,223.037 231.887,248.635 282.559,276.619 
+				287.223,277.345 			"/>
+			<polygon fill="#CCDEF0" points="308.807,223.137 308.807,39.403 231.887,184.287 231.887,248.635 			"/>
+			<polyline fill="#CCDEF0" points="499.452,163.541 499.452,310.602 308.807,223.137 308.807,39.403 499.452,78.616 
+				499.452,133.978 			"/>
 			<g>
-				<line fill="none" stroke="#000000" stroke-width="0.75" x1="229.604" y1="114.112" x2="38.128" y2="173.836"/>
-				<g>
-					<polygon points="228.157,112.966 234.044,112.727 229.065,115.878 					"/>
-				</g>
-				<g>
-					<polygon points="38.667,172.07 33.688,175.221 39.575,174.982 					"/>
-				</g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" x1="499.452" y1="162.401" x2="499.452" y2="309.703"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" x1="499.452" y1="78.616" x2="499.452" y2="133.475"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" x1="499.452" y1="309.703" x2="371.043" y2="290.385"/>
+				
+					<line fill="none" stroke="#58595B" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" x1="309.053" y1="223.037" x2="499.452" y2="309.703"/>
+				
+					<line fill="none" stroke="#58595B" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" x1="309.053" y1="223.037" x2="231.887" y2="248.635"/>
+				
+					<line fill="none" stroke="#58595B" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" x1="309.053" y1="223.037" x2="309.053" y2="39.403"/>
+				<polygon fill="none" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" points="499.452,78.616 308.807,39.403 
+					231.887,184.287 282.739,208.098 				"/>
+				<polygon fill="none" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" points="231.887,184.287 
+					282.739,208.098 282.739,276.758 231.887,248.635 				"/>
 			</g>
 		</g>
-		<g>
-			<rect x="311.246" y="27.467" fill="none" width="105.063" height="14.08"/>
-			<text transform="matrix(1 0 0 1 311.2471 34.624)"><tspan x="0" y="0" font-size="10">(X</tspan><tspan x="10" y="3" font-size="8">left</tspan><tspan x="20.672" y="0" font-size="10">, Y</tspan><tspan x="32.898" y="3" font-size="8">top</tspan><tspan x="44.02" y="0" font-size="10">, Distance</tspan><tspan x="88.482" y="3" font-size="8">far</tspan><tspan x="97.818" y="0" font-size="10">)</tspan></text>
-		</g>
-		<g>
-			<rect x="503.444" y="310.454" fill="none" width="120.836" height="14.079"/>
-			<text transform="matrix(1 0 0 1 503.4443 317.6123)"><tspan x="0" y="0" font-size="10">(X</tspan><tspan x="10" y="3" font-size="8">right</tspan><tspan x="25.562" y="0" font-size="10">, Y</tspan><tspan x="37.789" y="3" font-size="8">bottom</tspan><tspan x="62.246" y="0" font-size="10">, Distance</tspan><tspan x="106.709" y="3" font-size="8">far</tspan><tspan x="116.045" y="0" font-size="10">)</tspan></text>
-		</g>
-		<g>
-			
-				<polyline fill="#CCDEF0" stroke="#808285" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" points="
-				371.043,290.385 499.626,310.387 309.053,223.037 231.887,248.635 282.559,276.619 287.223,277.345 			"/>
-			
-				<polygon fill="#CCDEF0" stroke="#808285" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" points="
-				308.807,223.137 308.807,39.403 231.887,184.287 231.887,248.635 			"/>
-			
-				<polyline fill="#CCDEF0" stroke="#808285" stroke-width="0.75" stroke-linejoin="bevel" stroke-miterlimit="10" stroke-dasharray="4,3" points="
-				499.452,163.541 499.452,310.602 308.807,223.137 308.807,39.403 499.452,78.616 499.452,133.978 			"/>
-		</g>
-		<polygon fill="none" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" points="499.452,78.616 308.807,39.403 
-			231.887,184.287 282.739,208.098 		"/>
-		<polyline fill="none" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" points="499.452,133.978 499.452,78.616 
-			282.739,208.098 282.739,276.656 287.222,277.358 		"/>
-		<polygon fill="none" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" points="231.887,184.287 282.739,208.098 
-			282.739,276.758 231.887,248.635 		"/>
 		<g>
 			<line fill="none" stroke="#000000" stroke-width="0.75" x1="251.46" y1="227.396" x2="261.315" y2="232.809"/>
 			<line fill="none" stroke="#000000" stroke-width="0.75" x1="256.256" y1="223.646" x2="256.256" y2="236.027"/>
@@ -69,16 +58,16 @@
 			<line fill="none" stroke="#00AEEF" stroke-width="0.75" stroke-dasharray="4,2,1,2" x1="282.739" y1="215.941" x2="190.888" y2="262.402"/>
 		
 			<line fill="none" stroke="#00AEEF" stroke-width="0.75" stroke-dasharray="4,2,1,2" x1="470.572" y1="120.005" x2="438.914" y2="136.175"/>
+		
+			<line fill="none" stroke="#00AEEF" stroke-width="0.75" stroke-dasharray="4,2,1,2" x1="438.914" y1="136.175" x2="282.739" y2="215.941"/>
 		<circle fill="#636466" stroke="#000000" stroke-linejoin="bevel" stroke-miterlimit="10" cx="438.526" cy="135.304" r="5.555"/>
 		<g>
 			<rect x="446.342" y="138.304" fill="none" width="107.412" height="22.001"/>
-			<text transform="matrix(1 0 0 1 448.627 145.4609)"><tspan x="0" y="0" font-size="10">Viewpoint LookAt Point</tspan><tspan x="23.066" y="12" font-size="10">(0070, 1604)</tspan></text>
+			<text transform="matrix(1 0 0 1 448.627 145.4609)"><tspan x="0" y="0"  font-size="10">Viewpoint LookAt Point</tspan><tspan x="23.066" y="12"  font-size="10">(0070, 1604)</tspan></text>
 		</g>
-		
-			<line fill="none" stroke="#00AEEF" stroke-width="0.75" stroke-dasharray="4,2,1,2" x1="438.914" y1="136.175" x2="282.739" y2="215.941"/>
 		<g>
 			<rect x="287.386" y="277.868" fill="none" width="127.45" height="14.079"/>
-			<text transform="matrix(1 0 0 1 287.3857 285.0244)"><tspan x="0" y="0" font-size="10">(X</tspan><tspan x="10" y="3" font-size="8">right</tspan><tspan x="25.562" y="0" font-size="10">, Y</tspan><tspan x="37.789" y="3" font-size="8">bottom</tspan><tspan x="62.246" y="0" font-size="10">, Distance</tspan><tspan x="106.709" y="3" font-size="8">near</tspan><tspan x="122.721" y="0" font-size="10">)</tspan></text>
+			<text transform="matrix(1 0 0 1 287.3857 285.0225)"><tspan x="0" y="0"  font-size="10">(X</tspan><tspan x="10" y="3"  font-size="8">right</tspan><tspan x="25.562" y="0"  font-size="10">, Y</tspan><tspan x="37.789" y="3"  font-size="8">bottom</tspan><tspan x="62.246" y="0"  font-size="10">, Distance</tspan><tspan x="106.709" y="3"  font-size="8">near</tspan><tspan x="122.721" y="0"  font-size="10">)</tspan></text>
 		</g>
 		<circle cx="309.114" cy="39.375" r="2.5"/>
 		<circle cx="498.929" cy="309.703" r="2.5"/>
@@ -110,33 +99,33 @@
 		</g>
 		<g>
 			<rect x="84.728" y="201.035" fill="none" width="107.412" height="22.002"/>
-			<text transform="matrix(1 0 0 1 90.9805 208.1855)"><tspan x="0" y="0" font-size="10">Viewpoint Up Direction</tspan><tspan x="44.448" y="12" font-size="10">(0070, 1605)</tspan></text>
+			<text transform="matrix(1 0 0 1 90.9805 208.1855)"><tspan x="0" y="0"  font-size="10">Viewpoint Up Direction</tspan><tspan x="44.448" y="12"  font-size="10">(0070, 1605)</tspan></text>
 		</g>
 		<g>
 			<rect x="79.897" y="255.72" fill="none" width="89.294" height="22.002"/>
-			<text transform="matrix(1 0 0 1 83.6963 262.8701)"><tspan x="0" y="0" font-size="10">Viewpoint Position</tspan><tspan x="12.502" y="12" font-size="10">(0070, 1603)</tspan></text>
+			<text transform="matrix(1 0 0 1 83.6963 262.8691)"><tspan x="0" y="0"  font-size="10">Viewpoint Position</tspan><tspan x="12.502" y="12"  font-size="10">(0070, 1603)</tspan></text>
 		</g>
 		<g>
 			<rect x="129.922" y="125.324" fill="#F5EED6" width="55.261" height="16.857"/>
 			<g>
 				<rect x="128.877" y="128.809" fill="none" width="57.269" height="14.08"/>
-				<text transform="matrix(1 0 0 1 133.4053 135.9609)"><tspan x="0" y="0" font-size="10">Distance</tspan><tspan x="38.906" y="3" font-size="8">far</tspan></text>
+				<text transform="matrix(1 0 0 1 133.4053 135.96)"><tspan x="0" y="0"  font-size="10">Distance</tspan><tspan x="38.906" y="3"  font-size="8">far</tspan></text>
 			</g>
 		</g>
 		<g>
 			<rect x="72.643" y="167.276" fill="#F5EED6" width="55.261" height="16.858"/>
 			<g>
 				<rect x="71.598" y="170.763" fill="none" width="57.269" height="14.078"/>
-				<text transform="matrix(1 0 0 1 72.7861 177.9131)"><tspan x="0" y="0" font-size="10">Distance</tspan><tspan x="38.906" y="3" font-size="8">near</tspan></text>
+				<text transform="matrix(1 0 0 1 72.7861 177.9131)"><tspan x="0" y="0"  font-size="10">Distance</tspan><tspan x="38.906" y="3"  font-size="8">near</tspan></text>
 			</g>
 		</g>
 		<g>
 			<rect x="120.374" y="302.509" fill="none" width="136.723" height="11.001"/>
-			<text transform="matrix(1 0 0 1 123.1562 309.6562)" font-size="10">Viewpoint Coordinate System</text>
+			<text transform="matrix(1 0 0 1 123.1562 309.6543)"  font-size="10">Viewpoint Coordinate System</text>
 		</g>
-		<text transform="matrix(1 -0.0019 0.0019 1 155.0137 291.3574)" fill="#00AEEF" font-size="12">+Z</text>
-		<text transform="matrix(1 -0.0019 0.0019 1 193.333 231.3672)" fill="#0DB14B" font-size="12">+Y</text>
-		<text transform="matrix(1 -0.0019 0.0019 1 217.1177 275.1348)" fill="#ED1C24" font-size="12">+X</text>
+		<text transform="matrix(1 -0.0019 0.0019 1 155.0137 291.3555)" fill="#00AEEF"  font-size="12">+Z</text>
+		<text transform="matrix(1 -0.0019 0.0019 1 193.333 231.3652)" fill="#0DB14B"  font-size="12">+Y</text>
+		<text transform="matrix(1 -0.0019 0.0019 1 217.1177 275.1328)" fill="#ED1C24"  font-size="12">+X</text>
 		<polygon opacity="0.6" fill="#FFFFFF" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="205.851,278.359 
 			198.506,280.719 176.476,269.257 184.777,267.47 		"/>
 		<polygon opacity="0.6" fill="#DCDDDE" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="205.903,278.13 
@@ -195,6 +184,25 @@
 			<line fill="none" stroke="#939598" stroke-width="0.25" stroke-dasharray="4,2,1,2" x1="282.739" y1="208.098" x2="190.888" y2="262.402"/>
 		
 			<line fill="none" stroke="#939598" stroke-width="0.25" stroke-dasharray="4,2,1,2" x1="231.887" y1="184.287" x2="179.937" y2="283.104"/>
+		<g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-width="0.75" x1="229.604" y1="114.112" x2="38.128" y2="173.836"/>
+				<g>
+					<polygon points="228.157,112.966 234.044,112.727 229.065,115.878 					"/>
+				</g>
+				<g>
+					<polygon points="38.667,172.07 33.688,175.221 39.575,174.982 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<rect x="503.444" y="310.454" fill="none" width="120.836" height="14.079"/>
+			<text transform="matrix(1 0 0 1 503.4443 317.6104)"><tspan x="0" y="0"  font-size="10">(X</tspan><tspan x="10" y="3"  font-size="8">right</tspan><tspan x="25.562" y="0"  font-size="10">, Y</tspan><tspan x="37.789" y="3"  font-size="8">bottom</tspan><tspan x="62.246" y="0"  font-size="10">, Distance</tspan><tspan x="106.709" y="3"  font-size="8">far</tspan><tspan x="116.045" y="0"  font-size="10">)</tspan></text>
+		</g>
+		<g>
+			<rect x="311.246" y="27.467" fill="none" width="105.063" height="14.08"/>
+			<text transform="matrix(1 0 0 1 311.2471 34.624)"><tspan x="0" y="0"  font-size="10">(X</tspan><tspan x="10" y="3"  font-size="8">left</tspan><tspan x="20.672" y="0"  font-size="10">, Y</tspan><tspan x="32.898" y="3"  font-size="8">top</tspan><tspan x="44.02" y="0"  font-size="10">, Distance</tspan><tspan x="88.482" y="3"  font-size="8">far</tspan><tspan x="97.818" y="0"  font-size="10">)</tspan></text>
+		</g>
 	</g>
 </g>
 </svg>

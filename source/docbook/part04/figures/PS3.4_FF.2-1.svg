@@ -22,16 +22,16 @@
 	<rect x="1" y="1" fill="#F5EED6" width="550" height="175"/>
 	<g>
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="43.5" y1="95.832" x2="508.5" y2="95.832">
-			<stop  offset="0.4812" style="stop-color:#8ACA8B"/>
-			<stop  offset="0.5594" style="stop-color:#C3E2C1"/>
+			<stop  offset="0.505" style="stop-color:#8ACA8B"/>
+			<stop  offset="0.53" style="stop-color:#C3E2C1"/>
 		</linearGradient>
 		<rect x="43.5" y="31.13" fill="url(#SVGID_1_)" width="465" height="129.403"/>
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 129.5186 26.3384)" font-size="10">3D Voxel Data</text>
+				<text transform="matrix(1 0 0 1 129.5186 26.3374)"  font-size="10">3D Voxel Data</text>
 			</g>
 			<g>
-				<text transform="matrix(1 0 0 1 365.0781 25.3301)" font-size="10">2D Pixel Data</text>
+				<text transform="matrix(1 0 0 1 365.0781 25.3291)"  font-size="10">2D PixelData</text>
 			</g>
 			<g>
 				<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="364.723,110.604 402.4,110.604 402.4,106.709 
@@ -47,12 +47,12 @@
 				<polyline fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="52.294,109.648 99.562,109.648 99.562,103.84 
 					110.249,113.838 99.562,123.84 99.562,117.504 52.294,117.504 				"/>
 				<g>
-					<text transform="matrix(1 0 0 1 367.584 115.9678)" font-size="6">P-Values</text>
+					<text transform="matrix(1 0 0 1 367.584 115.9668)"  font-size="6">P-Values</text>
 				</g>
 				<polygon fill="#FFFFFF" stroke="#005695" stroke-linejoin="round" points="451.341,110.145 489.019,110.145 489.019,106.25 
 					499.706,113.84 489.019,121.428 489.019,118.064 451.341,118.064 				"/>
 				<g>
-					<text transform="matrix(1 0 0 1 454.2021 115.9678)" font-size="6">PCS-Values</text>
+					<text transform="matrix(1 0 0 1 454.2021 115.9668)"  font-size="6">PCS-Values</text>
 				</g>
 				<g>
 					<g>
@@ -66,52 +66,52 @@
 				
 					<rect x="111.21" y="102.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="30" height="22"/>
 				<g>
-					<text transform="matrix(1 0 0 1 114.5205 115.5078)" font-size="6">VOI LUT</text>
+					<text transform="matrix(1 0 0 1 114.5205 115.5059)"  font-size="6">VOI LUT</text>
 				</g>
 				
 					<rect x="159.766" y="102.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.8441" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="38" height="22"/>
 				<g>
-					<text transform="matrix(1 0 0 1 169.5928 112.7637)"><tspan x="0" y="0" font-size="6">Spatial</tspan><tspan x="-6.835" y="5.49" font-size="6">Registration</tspan></text>
+					<text transform="matrix(1 0 0 1 169.5928 112.7627)"><tspan x="0" y="0"  font-size="6">Spatial</tspan><tspan x="-6.835" y="5.491"  font-size="6">Registration</tspan></text>
 				</g>
 				<g>
 					
 						<rect x="369.905" y="66.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.8441" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="38" height="22"/>
 					<g>
-						<text transform="matrix(1 0 0 1 378.4033 76.7637)"><tspan x="0" y="0" font-size="6">Graphic</tspan><tspan x="-3.841" y="5.491" font-size="6">Annotation</tspan></text>
+						<text transform="matrix(1 0 0 1 378.4033 76.7627)"><tspan x="0" y="0"  font-size="6">Graphic</tspan><tspan x="-3.841" y="5.491"  font-size="6">Annotation</tspan></text>
 					</g>
 				</g>
 				<g>
 					
 						<rect x="260.978" y="41.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.8441" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="38" height="22"/>
 					<g>
-						<text transform="matrix(1 0 0 1 267.4746 51.7637)"><tspan x="0" y="0" font-size="6">MPR and</tspan><tspan x="-0.835" y="5.491" font-size="6">Projection</tspan></text>
+						<text transform="matrix(1 0 0 1 267.4746 51.7627)"><tspan x="0" y="0"  font-size="6">MPR and</tspan><tspan x="-0.835" y="5.491"  font-size="6">Projection</tspan></text>
 					</g>
 				</g>
 				
 					<rect x="413.926" y="102.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.8441" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="38" height="22"/>
 				<g>
-					<text transform="matrix(1 0 0 1 422.4219 112.7637)"><tspan x="0" y="0" font-size="6">Graphic</tspan><tspan x="3" y="5.49" font-size="6">Layer</tspan></text>
+					<text transform="matrix(1 0 0 1 422.4219 112.7627)"><tspan x="0" y="0"  font-size="6">Graphic</tspan><tspan x="3" y="5.491"  font-size="6">Layer</tspan></text>
 				</g>
 				
 					<rect x="216.329" y="102.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="30" height="22"/>
 				<g>
-					<text transform="matrix(1 0 0 1 219.1548 115.5088)" font-size="6">Cropping</text>
+					<text transform="matrix(1 0 0 1 219.1548 115.5078)"  font-size="6">Cropping</text>
 				</g>
 				
 					<rect x="264.979" y="102.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="30" height="22"/>
 				<g>
-					<text transform="matrix(1 0 0 1 273.311 115.5088)" font-size="6">MPR</text>
+					<text transform="matrix(1 0 0 1 273.311 115.5078)"  font-size="6">MPR</text>
 				</g>
 				<g>
-					<text transform="matrix(1 0 0 1 58.8535 137.5273)"><tspan x="0" y="0" font-size="6">Input Specific</tspan><tspan x="0" y="9.29" font-size="6">Parameters</tspan></text>
+					<text transform="matrix(1 0 0 1 58.8535 137.5254)"><tspan x="0" y="0"  font-size="6">Input Specific</tspan><tspan x="0" y="9.291"  font-size="6">Parameters</tspan></text>
 				</g>
 				<g>
-					<text transform="matrix(1 0 0 1 58.8535 49.6235)" font-size="6">Volume Graphics Input</text>
+					<text transform="matrix(1 0 0 1 58.8535 49.6226)"  font-size="6">Volume Graphics Input</text>
 				</g>
 				
 					<rect x="313.723" y="99.84" fill="#B2CEE7" stroke="#010101" stroke-width="0.8461" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="51" height="28"/>
 				<g>
-					<text transform="matrix(1 0 0 1 332.5557 107.2734)"><tspan x="0" y="0" font-size="6">MPR</tspan><tspan x="-7.505" y="5.49" font-size="6">Volumetric</tspan><tspan x="-10.178" y="10.98" font-size="6">Presentation</tspan><tspan x="-11.009" y="16.472" font-size="6">State Display</tspan></text>
+					<text transform="matrix(1 0 0 1 332.5557 107.2725)"><tspan x="0" y="0"  font-size="6">MPR</tspan><tspan x="-7.505" y="5.491"  font-size="6">Volumetric</tspan><tspan x="-10.178" y="10.981"  font-size="6">Presentation</tspan><tspan x="-11.009" y="16.472"  font-size="6">State Display</tspan></text>
 				</g>
 				<g>
 					<g>
@@ -154,7 +154,7 @@
 					</g>
 				</g>
 				<g>
-					<text transform="matrix(1 0 0 1 58.8535 115.5078)" font-size="6">Volume 1 Input</text>
+					<text transform="matrix(1 0 0 1 58.8535 115.5059)"  font-size="6">Volume 1 Input</text>
 				</g>
 			</g>
 		</g>

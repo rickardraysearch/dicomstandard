@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2017b - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2017c - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -3220,6 +3220,21 @@
     <section label="8.2" status="2" xml:id="sect_8.2">
       <title>Native or Encapsulated Format Encoding</title>
       <para xml:id="para_f9b54410-31ad-4044-9be0-651dd86c84b3">Pixel data conveyed in the Pixel Data (7FE0,0010) may be sent either in a Native (uncompressed) Format or in an Encapsulated Format (e.g., compressed) defined outside the DICOM standard.</para>
+      <para xml:id="para_1767d1f2-fcf4-46b9-a6fa-21b2e61e9b5d">If Pixel Data (7FE0,0010) is sent in a Native Format, then the Photometric Interpretation (0028,0004) shall be other than:</para>
+      <itemizedlist>
+        <listitem>
+          <para xml:id="para_774003a0-209a-48f5-af47-8e9300923ac7">YBR_RCT</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_27a4a868-af1f-459a-8812-7fa85c078cd9">YBR_ICT</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_03cacdb3-b82e-42e2-abe3-be054301c5f2">YBR_PARTIAL_420</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <para xml:id="para_14b7aa28-e3b2-4f0f-ae44-6c1be9f58fce">These values are not permitted because they are not encodable in an uncompressed form.</para>
+      </note>
       <para xml:id="para_7bc14864-77a5-4409-8ec0-c246cace4681">Pixel Data conveyed in the Float Pixel Data (7FE0,0008) or Double Float Pixel Data (7FE0,0009) shall be in a Native (uncompressed) Format if encoded in a Standard Transfer Syntax.</para>
       <note>
         <orderedlist>
@@ -3290,12 +3305,308 @@
         <note>
           <para xml:id="para_80e3247d-ca00-45fb-9c75-56d6805533ad">The DICOM conformance statement shall differentiate whether or not the implementation is capable of simply receiving or receiving and processing JPEG encoded images (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>).</para>
         </note>
-        <para xml:id="para_4bcb841e-c6bf-4e26-82a5-3fad3c942da0">The use of the DICOM Encapsulated Format to support JPEG Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG Interchange Format shall be used to decode the compressed data stream.</para>
+        <para xml:id="para_4bcb841e-c6bf-4e26-82a5-3fad3c942da0">The use of the DICOM Encapsulated Format to support JPEG Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream.</para>
+        <para xml:id="para_e85c4e05-8672-41cc-b179-25140f06e76c">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from <olink targetdoc="PS3.3" targetptr="sect_C.7.6.3.1.2" xrefstyle="select: docname label"/>) are specified in <xref linkend="table_8.2.1-1" xrefstyle="select: label"/> and <xref linkend="table_8.2.1-2" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
+        <table frame="box" label="8.2.1-1" rules="all" xml:id="table_8.2.1-1">
+          <caption>
+<emphasis role="bold">
+<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG Lossy Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
+</emphasis>
+</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a7d246d9-3778-4932-8b2a-82d8a8dc168b">Photometric Interpretation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fd49f3b7-cad2-4bab-a7ae-770361959347">Transfer Syntax</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_76506fba-44e8-4da7-a10e-e9beb79fbfd3">Transfer Syntax UID</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_456f2265-a5c3-4a15-8965-11973122f4f5">Samples per Pixel</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f86eeeaa-f979-4b04-a1f7-b6729586f999">Planar Configuration</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_eda82aae-bc04-44f8-99ed-ddbeed92c344">Pixel Representation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_bbbb3826-f6bf-4a4a-baf7-de9256760236">Bits Allocated</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cef69c9e-3d58-4158-8fa4-16db44257d04">Bits Stored</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_943ad4aa-2971-4f80-9b14-ff0be535be65">High Bit</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_06313e0f-d1d7-4cd8-8498-3754925681c0">MONOCHROME1</para>
+                <para xml:id="para_e1bf87e1-46f4-4018-8dd5-786488b6ea1b">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7dae7ef7-2568-4fd3-9318-3b8dc615dd46">JPEG Baseline</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d4aab92e-7d0c-4176-a018-0b959b76057b">1.2.840.10008.1.2.4.50</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f4881ca5-e2f9-433a-b069-41b186f503f6">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9a3fb788-7faf-4931-b350-38d502d4ecb6">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e938c494-e0e0-4b3c-9bd4-641b9ef15d87">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_57f94afe-e261-40ea-b2f0-0ad993e7c7de">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_08fca125-a23a-49f2-b179-d616c6efd80b">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f58c0385-f5d6-4cce-80cc-72a461979262">7</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_11870e59-7644-439f-a511-c42db55ded28">MONOCHROME1</para>
+                <para xml:id="para_230cf81e-635b-4ab2-81eb-1165754c7fef">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_f45cc0bc-573b-4fe0-9e67-6f342ebe1224">JPEG Extended</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_1d698b55-e3b4-4a5a-b879-44f9aab6d8e4">1.2.840.10008.1.2.4.51</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_663e7a5f-0817-4de5-bae0-f50680b70bb0">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3f6558ca-be73-447e-a1e4-9558cc44a2e0">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_ecf77926-d06e-4ed6-a9d9-55bec9630ea4">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_541957b7-58b4-4385-872c-0b0560a852f4">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1bc421c9-d998-42cf-bafe-c3c68a09850c">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a8350cfa-1280-4517-b7f5-172f1690d2eb">7</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_197d9691-a705-49c5-9b19-ed864aa82415">MONOCHROME1</para>
+                <para xml:id="para_594bd44f-97d2-4914-9d1a-9183814c3135">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b1bd452a-09cf-4792-9516-77f404530a0b">JPEG Extended</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_f435ebde-6ddf-4a26-825f-9358c0777751">1.2.840.10008.1.2.4.51</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_bea28c2d-d5e3-4374-ac34-aaf9901744c8">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_006a053d-8240-4a0b-a0c7-443ca8ae6f5e">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_bb5ed856-00f5-4260-bee5-9b53358f9691">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8895f4ee-07ea-4350-ab71-fb8f6d2889b3">16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_57f38d9c-5fe2-41e7-a93f-f7554f8de271">12</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_69110862-0332-4b29-8dbf-c81b02defe81">11</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_2af116cd-cdcb-4d6c-ba69-0c56967a88c2">YBR_FULL_422</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+               <para xml:id="para_8f836445-dbe9-42a1-831d-d17c75e084f3">JPEG Baseline</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+               <para xml:id="para_366ccc69-3761-4eb9-96ce-8c4698039430">1.2.840.10008.1.2.4.50</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_29e3a35b-26d7-48f5-8be9-73dc65756704">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8829d1de-e453-43fc-9c82-c23ebdb02e9c">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_464971a3-3698-45b6-85d6-d11191ff9e86">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_acdb439e-5b2d-4c10-bdba-115508ecd27b">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e5954653-58d7-462c-8806-03e8fb831474">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_98c2777c-1138-4e1c-98b9-7e9a519502c5">7</para>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+        <table frame="box" label="8.2.1-2" rules="all" xml:id="table_8.2.1-2">
+          <caption>
+<emphasis role="bold">
+<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG Lossless Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
+</emphasis>
+</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fc2d258a-29ab-4297-b0cc-004585b87ab6">Photometric Interpretation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_09dc880b-c6d8-447a-b3f0-3f2ed4963257">Transfer Syntax</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e3f59c6b-a6ca-4c79-aeb1-3dcc802b533d">Transfer Syntax UID</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_37ef8219-d5cc-4af7-879f-5b01973471dd">Samples per Pixel</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e81e5c35-ab28-4ee1-a0a2-21546d55f02c">Planar Configuration</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_47d577ae-4207-40ca-a2f0-62ed1955e993">Pixel Representation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_20ecfe7c-81cb-43c2-b841-4eb2df26bc97">Bits Allocated</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3541a82d-e480-424e-99cf-8e5750a734d5">Bits Stored</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c2954b63-8874-4cf2-a499-d14810a896ce">High Bit</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a6921f95-72d8-4719-9a19-871911ea8422">MONOCHROME1</para>
+                <para xml:id="para_e34c73e4-38a6-4572-80e1-8901113f8daf">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_079f2d09-c539-4d91-a44c-bad4658b33c8">JPEG Lossless, Non-Hierarchical</para>
+                <para xml:id="para_45a5e156-21ca-4bf0-9c9f-ec2afc5ec924">JPEG Lossless, Non-Hierarchical, SV1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_9f150637-8044-47d1-a5c1-b666a6fa563a">1.2.840.10008.1.2.4.57</para>
+                <para xml:id="para_03f94dae-23f2-49a9-b0b2-4156d929043e">1.2.840.10008.1.2.4.70</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4a139fae-7dcf-4bbf-b712-04c773404533">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a7cd9ba0-5683-45ef-87c0-9e30f7c62bac">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d463d992-9339-4bff-b494-926fe8e83ed8">0 or 1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_170d404f-b606-4fae-aec2-8d7310fa4bb3">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b8ef92e7-18d5-487b-bbdd-df53ba92d8b7">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_febea6ce-dcb4-4a81-a4dc-0051d5450373">0-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3735041e-8f90-4ff0-a34d-4f1d31d2a5ac">PALETTE COLOR</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_229ef4fe-2fb6-4736-abc4-99b1714382f0">JPEG Lossless, Non-Hierarchical</para>
+                <para xml:id="para_9676f134-5881-4638-9247-27f7f4ae1758">JPEG Lossless, Non-Hierarchical, SV1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_f7fdc91b-eed7-434f-9bb2-46fce548cc3d">1.2.840.10008.1.2.4.57</para>
+                <para xml:id="para_939c086a-6f33-4d65-9e6f-2ceb219e5902">1.2.840.10008.1.2.4.70</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cddcfefe-c25f-4c60-994c-a6ec204260ab">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_69a59093-a886-4487-baeb-80ca52eb613a">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_546ffadc-8174-4933-b8c2-154ef277a9ba">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f086b011-fe41-428b-bb11-1e94cc27f9ad">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7df81375-e56e-44df-ac70-3e0d9f8a6380">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6422b522-ce76-43d4-a4ef-314bb1a5dc53">0-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_88156f50-11f9-42dc-ba0b-dd884dbf4fb7">YBR_FULL</para>
+                <para xml:id="para_6318ce11-b3ce-4913-a94b-5e13c2bf10ac">RGB</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a33d1334-8e81-4fb7-8491-b66bf1b7439d">JPEG Lossless, Non-Hierarchical</para>
+                <para xml:id="para_764b8a43-d0c0-499e-a630-a714b0ebe7b6">JPEG Lossless, Non-Hierarchical, SV1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c7d47145-683f-4674-a86f-021e7a138d01">1.2.840.10008.1.2.4.57</para>
+                <para xml:id="para_e4d49879-5b98-4dc8-8115-eecf68064306">1.2.840.10008.1.2.4.70</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_61bb5100-71ee-468e-b5d9-2173c7bb6885">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5ad99581-9f2b-4aec-aeec-e3c3d3e6e56b">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_87e3131c-4ef6-432d-8dee-a2ccd233a509">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1832dee8-9eaf-40cc-ae75-0d0a0ebe91b5">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8737a20b-2aaa-4ccd-a755-0a89e436815c">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_37e995a2-4bbb-4e54-bea6-ed2f28e8d7a3">0-15</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <para xml:id="para_c2ac8f4a-9824-420f-a861-6a1c61719ee7">The Pixel Data characteristics included in the JPEG Interchange Format shall be used to decode the compressed data stream.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
               <para xml:id="para_651e0fda-0843-4bef-b448-30495fd6330f">These requirements were formerly specified in terms of the "uncompressed pixel data from which the compressed data stream was derived". However, since the form of the "original" uncompressed data stream could vary between different implementations, this requirement is now specified in terms of consistency with what is encapsulated.</para>
-              <para xml:id="para_07617cc6-a4a9-4751-9435-7b496910168d">When decompressing, should the characteristics explicitly specified in the compressed data stream (e.g., spatial subsampling or number of components or planar configuration) be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+              <para xml:id="para_07617cc6-a4a9-4751-9435-7b496910168d">When decompressing, should the characteristics explicitly specified in the compressed data stream (e.g., spatial subsampling or number of components or planar configuration) be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
             </listitem>
             <listitem>
               <para xml:id="para_6424f9ef-dfaa-40ff-9ca9-109d42a93363">Those characteristics not explicitly specified in the compressed data stream (e.g., the color space of the compressed components, which is not specified in the JPEG Interchange Format), or implied by the definition of the compression scheme (e.g., always unsigned in JPEG), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR_FULL_422" would describe the color space that is commonly used to lossy compress images using JPEG. It is unusual to use an RGB color space for lossy compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved.</para>
@@ -3322,6 +3633,134 @@
           <para xml:id="para_68100f7a-9340-4d87-af3f-2f6950af6a3f">The RLE Image Compression algorithm described in <xref linkend="chapter_G" xrefstyle="template:Annex %n"/> is the compression used in the TIFF 6.0 specification known as the "PackBits" scheme.</para>
         </note>
         <para xml:id="para_f46aa917-6020-441c-a144-02b3a06c3e39">The use of the DICOM Encapsulated Format to support RLE Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the compressed data.</para>
+        <para xml:id="para_d65635ee-be9b-4ec5-afe2-2d54380611e8">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.2-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
+        <table frame="box" label="8.2.2-1" rules="all" xml:id="table_8.2.2-1">
+          <caption>
+<emphasis role="bold">
+<emphasis role="underline">Valid Values of Pixel Data Related Attributes for RLE Compression using Standard Photometric Interpretations</emphasis>
+</emphasis>
+</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9498f082-afd7-4d92-96e8-f673102f896d">Photometric Interpretation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_043ab0e7-9013-41e1-9489-aeb5f9ba1d6a">Samples per Pixel</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_0d9e77f4-fbb6-4483-a0b4-19ef3678f3f6">Planar Configuration</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7d86a88a-7806-40b2-8075-112b9d811c54">Pixel Representation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3822907e-10a3-4159-836b-91b3ab6fc73d">Bits Allocated</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fa6cc296-d46e-4731-a240-0c5a29f1aabf">Bits Stored</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_72c26f34-9f0c-4eff-bfc2-102029c8eaa4">High Bit</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_2571e683-4742-4c4f-9d68-a864b5557428">MONOCHROME1</para>
+                <para xml:id="para_8fd1c4f0-bfb2-47c2-81e1-ebd5c0a39d04">MONOCHROME2</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2e209ffb-1435-4ed0-b5ed-b2e5bd5333f8">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3c831d8a-cb79-4a03-8658-1c22b3070b57">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_594d6351-af64-429f-a212-4014281aa105">0 or 1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_37d05e51-16fa-4a62-9170-717430e91bfd">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_da080a8d-0471-4fa5-8d8c-54270dd4828c">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3f2b6659-a8d6-4d53-aa05-015652b870f5">0-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_433c1b2c-e69a-4e5b-a7f6-fb6c1976dfc3">PALETTE COLOR</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c5390d6d-cff2-4724-b077-e9439cd78a18">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fd684e8d-9442-4d64-b669-007de8a10829">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_57274047-f337-474b-b71c-21eb3916db79">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_202459e8-e491-43f6-a7fb-25b5cede1ed8">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_01a07bd3-5bcd-49c4-b2bd-7ef9116c0eef">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_093b5316-aff3-4e7f-895a-6a56a43c1863">0-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_40e5ecfd-7329-42eb-864d-7016fc2639f2">YBR_FULL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_03f5c942-430f-4737-87a5-08a4eaf9898a">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_547ae630-0bcd-4541-985b-29d832bf73ea">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8b149c18-e49a-4667-9d79-bd5595245670">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a51cee16-dec5-472a-838a-0e22252c2431">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7ef79b6f-e965-4293-bbd3-05906f788b9f">1-8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_30eea63a-d371-4ab5-978a-22a1f6db8ec1">0-7</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_4f3046da-87d6-4f67-bd01-0bae9cab3ba8">RGB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_24c3d1c5-0809-4c54-91df-c87306a5e472">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fd43d5bc-2292-437e-967e-e3ef1578d0b9">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_345b2ba3-7ffe-4840-a78c-f38c256c07ea">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c03e1579-23ba-4963-a2e4-141b31f25352">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_57514f92-4054-4539-99a1-b7d92a6ced19">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f3f87a75-8f23-48e9-9ab4-17030667af53">0-15</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
@@ -3346,16 +3785,183 @@
           <para xml:id="para_c0ca469e-6703-4121-a744-14e04ae8ce0f">The context where the usage of lossy (near-lossless) compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for JPEG-LS lossy (near-lossless) compression is also beyond the scope of this standard.</para>
         </note>
         <para xml:id="para_573ea007-d4e1-4c07-a82a-2d6b13d109eb">The use of the DICOM Encapsulated Format to support JPEG-LS Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG-LS Interchange Format shall be used to decode the compressed data stream.</para>
+        <para xml:id="para_5976cf65-a31f-4316-8505-601ebc3b7401">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.3-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
+        <table frame="box" label="8.2.3-1" rules="all" xml:id="table_8.2.3-1">
+          <caption>
+<emphasis role="bold">
+<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG-LS Compression using Standard Photometric Interpretations</emphasis>
+</emphasis>
+</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5614a946-aaf0-4cc9-969a-7e97cbac7118">Photometric Interpretation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_282729ba-af3b-48e4-94ac-01a42fe3a826">Transfer Syntax</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fe69eb9f-0071-4972-b4ba-5bb90ec081b7">Transfer Syntax UID</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cb1006ca-9c60-4062-824c-db15cea5ebb8">Samples per Pixel</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_42a5bf49-c61b-40bc-bef8-84246c581007">Planar Configuration</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_153bc552-d052-431f-9db6-d8ff2deb4aa1">Pixel Representation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3392603f-b982-4cc1-9bdb-fc78d7c4e971">Bits Allocated</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8151c9db-bb77-48a9-b544-464edd77946c">Bits Stored</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_30a9d51a-51aa-4942-9e6e-aeb75cd062da">High Bit</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_79c646c6-64ec-4bb2-937f-18fc5efda3c6">MONOCHROME1</para>
+                <para xml:id="para_c59f3f67-cb5b-4d4c-8b14-2d63de97bde6">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_78580c17-1197-4ad1-b639-d6a210771b42">JPEG-LS Lossless</para>
+                <para xml:id="para_892f86d3-2c80-4c11-ae2c-e56ca11512ea">JPEG-LS Lossy (Near-Lossless)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_cbf4a833-709c-444a-ba1a-e9be7da89f8f">1.2.840.10008.1.2.​4.​80</para>
+                <para xml:id="para_35544077-233c-42be-88ed-fd1072bb7bc6">1.2.840.10008.1.2.​4.​81</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7bc1c147-9f8b-42ac-834c-1eed4e5deb97">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_261ccf2c-94df-4f13-826c-13f1b388857e">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e02a5158-ffcd-4010-ad63-eff07576d960">0 or 1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_09291f71-a537-4cbf-939e-d1559f7dbf38">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5972ddaf-1761-4184-9555-7e6145ed8921">2-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_67f87c56-c5d3-45c3-87a0-f4c6be879e88">1-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_56364724-ae54-4cc9-a1b8-81f7921a0fbe">PALETTE COLOR</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a35bb2df-a5b3-4d38-8d57-646f8e6b9143">JPEG-LS Lossless</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_1313c4f0-dfe5-4133-86b7-2934ea12f7db">1.2.840.10008.1.2.​4.​80</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e0cbb0cd-84b5-4346-9c43-4471699f8e94">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fb1e894a-ac2c-4947-9e8b-a6dd9b54e3b5">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_0a62d444-ac08-40fc-b0c5-333284e9598c">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9d1ca959-a91a-4f54-8611-63879351c653">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4951654c-47d1-4583-b1be-96e0788220bb">2-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_940c5556-998a-47d2-a2d0-0946e8c3eb57">1-15</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_cff8ff5e-f778-4a65-820f-1ff150f37714">YBR_FULL</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c5b7c170-7678-400a-977b-24c454b0b4e0">JPEG-LS Lossless</para>
+                <para xml:id="para_0b89882a-8389-4447-abb6-71923eb1923f">JPEG-LS Lossy (Near-Lossless)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_141f2a0a-9c1a-48e6-b563-ee213bb33a0e">1.2.840.10008.1.2.​4.​80</para>
+                <para xml:id="para_c22e7b68-7dfb-4dd7-bf2f-aa72614d86c3">1.2.840.10008.1.2.​4.​81</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7384f6e0-d83a-48ce-8cf5-a5ffb59acc94">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b816ec37-4e76-4b33-a3fe-d4fad4ca9003">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_98e148f9-c2f4-4095-9db1-cb313492e911">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2be96511-88be-4f5d-840a-400e9a4ca1fa">8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3c5f94c3-336f-4046-bfb7-901f9cae1369">2-8</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3d9f4f89-eef3-4d6c-91a2-9a066cbb8209">1-7</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_01ce45b2-ec24-4ccd-8fac-cad20ba44beb">RGB</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_5e69964a-1cb8-4dbc-a326-811f19ea2697">JPEG-LS Lossless</para>
+                <para xml:id="para_dbc0a1bf-c0a5-42a9-8d7a-9042d58a1b7d">JPEG-LS Lossy (Near-Lossless)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e6ec1acf-8ef9-443d-aa9a-6f053e08c559">1.2.840.10008.1.2.​4.​80</para>
+                <para xml:id="para_7224edd7-2bb4-476f-8402-99a3576467d2">1.2.840.10008.1.2.​4.​81</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_0aaeedaf-043d-4b16-b1bf-c766cf01c8be">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cd9e6af4-39eb-4895-b294-d75178b5663c">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b383ed94-b4ba-4bf7-bf6a-a59ddfb77ceb">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c3d84f94-2ff8-4229-9793-e0c47956e7c9">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_36b36dd3-845a-45e6-a277-b6946bd608be">2-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c9b84225-3167-43ff-bba9-b4df864bc830">1-15</para>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
               <para xml:id="para_e40960fc-63dd-45b0-8ed7-993b40cbd763">See also the notes in <xref linkend="sect_8.2.1" xrefstyle="select: label"/>.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_7eacfba3-42dd-43d0-b47f-45efb2fb200b">No Photometric Interpretation specific for JPEG-LS is currently defined in DICOM. Annex F of ISO 14495-2 describes a <foreignphrase xml:lang="en-GB">"Sample transformation for inverse colour transform"</foreignphrase> and a marker segment to encode its parameters, but this is not known to have been implemented. Common practice is to compress the RGB components unconverted, which sacrifices compression performance, and send the Photometric Interpretation as RGB. Though the YBR_RCT Photometric Interpretation and component conversion could theoretically be used, in the absence of DC shifting it results in signed values to be encoded, which are not supported by JPEG-LS.</para>
+              <para xml:id="para_7eacfba3-42dd-43d0-b47f-45efb2fb200b">No color transformation Photometric Interpretation specific for JPEG-LS is currently defined in DICOM. Annex F of ISO 14495-2 describes a <foreignphrase xml:lang="en-GB">"Sample transformation for inverse colour transform"</foreignphrase> and a marker segment to encode its parameters, but this is not known to have been implemented. Common practice is to compress the RGB components unconverted, which sacrifices compression performance, and send the Photometric Interpretation as RGB. Though the YBR_RCT Photometric Interpretation and component conversion could theoretically be used, in the absence of DC shifting it results in signed values to be encoded, which are not supported by JPEG-LS.</para>
             </listitem>
             <listitem>
               <para xml:id="para_1510f0e0-33b0-4e0e-9d66-73f03399a37b">If JPEG-LS Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from any other Photometric Interpretation to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_b61815a9-f533-4ae7-92f4-8add6d4310d6">The lower limit of 2 on Bits Stored (0028,0101) reflects the minimum JPEG-LS sample precision of 2.</para>
             </listitem>
           </orderedlist>
          </note>
@@ -3367,10 +3973,233 @@
           <para xml:id="para_80ad309d-34ab-4927-9e16-8720489de547">The context where the usage of lossy compression of medical images is clinically acceptable is beyond the scope of the DICOM Standard. The policies associated with the selection of appropriate compression parameters (e.g., compression ratio) for JPEG 2000 lossy compression are also beyond the scope of this standard.</para>
         </note>
         <para xml:id="para_b8bb4636-3e99-4465-86d3-207414bb06a5">The use of the DICOM Encapsulated Format to support JPEG 2000 Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG 2000 bit stream shall be used to decode the compressed data stream.</para>
+        <para xml:id="para_97016112-b006-4f38-8ab5-2a3fe84802dd">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.4-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
+        <table frame="box" label="8.2.4-1" rules="all" xml:id="table_8.2.4-1">
+          <caption>
+<emphasis role="bold">
+<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG 2000 Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
+</emphasis>
+</caption>
+          <thead>
+            <tr valign="top">
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_35459f36-f10b-4394-a1ff-3c3d17390cd0">Photometric Interpretation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9862e1ce-b92f-4aae-87b7-c3144e3d4ffd">Transfer Syntax</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e2aec428-4649-4e8b-8c12-53e68a4a8c75">Transfer Syntax UID</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_aa415c66-8591-4ca1-80e3-ba87452adb65">Samples per Pixel</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5ef10fcd-48bf-4370-bc2c-b5b6cb46c4eb">Planar Configuration</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a899853b-ede1-4880-8cb7-8a082a7c5466">Pixel Representation</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b9b49268-11f3-432d-840f-ca42b1ee5e73">Bits Allocated</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7db87f1d-ca80-4caa-a4a0-037b27e1e167">Bits Stored</para>
+              </th>
+              <th align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d84053a1-54bc-446e-81bd-b0b908771ccc">High Bit</para>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_16c240c9-28ce-4ae3-8f69-f5d97ab83591">MONOCHROME1</para>
+                <para xml:id="para_7cc96afd-0ebb-47a4-9e14-03250aa5b058">MONOCHROME2</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_17d2e1f8-9cdc-49b2-a21c-b1601acfd9f5">JPEG 2000 (Lossless Only)</para>
+                <para xml:id="para_ff5c01d5-9833-4def-94c2-f056111e868f">JPEG 2000</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_8b641476-7e40-4e9a-b0b2-83772114571d">1.2.840.10008.1.2.​4.​90</para>
+                <para xml:id="para_a6db3b63-ad11-4848-9c4a-ebe4f9ec973d">1.2.840.10008.1.2.​4.​91</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_ea57ed1e-ee8a-4cdd-900d-0f68de3fd328">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4a5df3bc-c8f0-45ac-a5fc-ba2f58aec4eb">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3aa61a0f-8f00-4be6-87a6-e70cc09ede1c">0 or 1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3f6cee1e-045f-4064-b8bf-6d4b4f7d5f6c">8, 16, 24, 32 or 40</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_73f00d00-8eb9-46ad-82a6-99b600dbef2f">1-38</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_84648432-7845-48b2-a4fb-43b53007b813">0-37</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d4dc64d9-52b2-4884-a36d-52dacb670f86">PALETTE COLOR</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a46dfe18-3634-4911-a2bf-7d35417c69e2">JPEG 2000 (Lossless Only)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_1635000b-f50f-46ec-bbb8-15ee71b0dc9e">1.2.840.10008.1.2.​4.​90</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_429bb8b2-b569-4c49-8df8-6f4a6a80f413">1</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_0ecc50a9-2e90-4d82-81ca-01193f01b0f2">absent</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_819c3c16-c6aa-4107-9e7d-704507866c1e">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_37a0f877-7d8d-49cb-ac77-0317c115cd42">8 or 16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_30f57a3a-d896-4053-81a6-0a56a6974d28">1-16</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fdf16c43-4618-44ad-b2a4-feee75840c6e">0-15</para>
+              </td>
+            </tr>    <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e03a8539-6991-4f28-98cb-3ee92acc85b9">YBR_RCT</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_84dddd64-a1cf-488e-b6d7-c2e41ad5067f">JPEG 2000 (Lossless Only)</para>
+                <para xml:id="para_f7d4c34b-0db8-4827-9295-b6cafdfe4b86">JPEG 2000</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_0dec6996-d462-4a84-97e2-1d5ab3edff14">1.2.840.10008.1.2.​4.​90</para>
+                <para xml:id="para_78328edd-16d7-4b6e-93bb-748956aeef38">1.2.840.10008.1.2.​4.​91</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_00a93500-8c13-4e58-ad5f-f40b70edcaa6">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_84397e4d-a848-4546-861d-f82c37cabda6">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8f339a30-199e-48e4-aafe-fc265cdd1d26">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3ba7e3b1-b74d-498c-bf09-46fe5e5dea59">8, 16, 24, 32 or 40</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5f7f16b0-b549-48b2-9e0d-975bb72af52e">1-38</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4fafeadc-bdf7-4f74-b50c-d21e394d52c6">0-37</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a63776b4-993e-49c3-be41-1728dca36c7a">YBR_ICT</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_eb2572d8-27e6-4d29-97a9-38ebcbba11f3">JPEG 2000</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_ef483df6-2b49-46c5-a7ed-53e9d4f80720">1.2.840.10008.1.2.4.91</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c9c4ce94-427c-447a-b740-98f7566e8953">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_de2ed178-0f00-403b-9bdf-9119e3411a76">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4b4698ba-ffb1-4d9c-b539-aa8d2682642c">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_755cf1d4-9c4f-42ae-9210-b5dea3f8642c">8, 16, 24, 32 or 40</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1da8a624-18a7-447e-b482-365c6e10af0d">1-38</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_10e3b01a-35ae-4b89-930c-af44089288d0">0-37</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_0c1d7688-0053-4680-863a-d8bdf5e31e1a">RGB</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fc6dbc64-b91f-4836-98cd-3ffcc82c9918">JPEG 2000 (Lossless Only)</para>
+                <para xml:id="para_18ccd3ea-b762-4f61-b82c-cdd76193a597">JPEG 2000</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3e7e7961-1e52-491d-a1cc-f0e51cb8d35e">1.2.840.10008.1.2.​4.​90</para>
+                <para xml:id="para_2ae97037-c28a-4b42-a2bd-0f3f3b71a53b">1.2.840.10008.1.2.​4.​91</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b0ed4cbc-9003-41d8-ad96-5d7192aa7f9e">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_41295474-3f69-4f77-8afb-3f5e6de63a0c">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c1d28b66-4390-48f3-93b8-359e3d10f943">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1f1ae7ae-9ec7-40a2-8f99-efd06623e9d6">8, 16, 24, 32 or 40</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_ec88d6cd-5f47-4ee3-9700-5a7ec63d7fb8">1-38</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_540dce22-3115-497d-9f16-e14d8387e594">0-37</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a378332d-c41d-44d2-b3a6-c633b76e9da4">YBR_FULL</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a725b70b-7405-45ea-bb3b-3f99833655a5">JPEG 2000 (Lossless Only)</para>
+                <para xml:id="para_97a7fb96-25b0-4592-9a47-e36809672daf">JPEG 2000</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7297b7fa-e579-4144-8b22-9a79eef16943">1.2.840.10008.1.2.​4.​90</para>
+                <para xml:id="para_26b04ca1-626f-44b2-bf5d-e1529cb2e166">1.2.840.10008.1.2.​4.​91</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5cd010d9-b3b7-41f9-9e7f-0608bd0bb176">3</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e534fdd9-5e5e-4ac1-9b6b-4579adc44f35">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f4630f8f-0623-499e-89c2-fb26bede4da1">0</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_72196ac2-2cad-4179-95bc-54aa44c7d346">8, 16, 24, 32 or 40</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6c8cba46-c7fc-47e5-bcb3-23c9328b4723">1-38</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2b791323-4f7f-4328-8548-6996ec8bcabf">0-37</para>
+              </td>
+            </tr>
+          </tbody>
+        </table> 
         <note>
           <para xml:id="para_0e5c196d-7b04-42b4-9c18-22c0162d12ca">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_307b3170-88ee-4604-b4c4-958a8cc15009">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <para xml:id="para_307b3170-88ee-4604-b4c4-958a8cc15009">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <para xml:id="para_db847fdd-ca67-4516-bb90-45d161167bee">The JPEG 2000 bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation [ISO 15444-1 Annex G], if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). If the JPEG 2000 Part 1 reversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_RCT. If the JPEG 2000 Part 1 irreversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_ICT.</para>
         <note>
           <orderedlist numeration="arabic">
@@ -3378,7 +4207,7 @@
               <para xml:id="para_08197219-168c-4756-88fc-be63881c1cbf">For example, single component may be present, and the Photometric Interpretation (0028,0004) may be MONOCHROME2.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_832bcbc5-922e-43d1-9f35-4cba78b53059">The application of a JPEG 2000 Part 1 reversible multi-component transformation is signaled in the JPEG 2000 bitstream by a value of 1 rather than 0 in the SGcod Multiple component transformation type of the COD marker segment [ISO 15444-1 Table A.17]. No other value of Photometric Interpretation than YBR_RCT or YBR_ICT is permitted when SGcod Multiple component transformation type is 1.</para>
+              <para xml:id="para_832bcbc5-922e-43d1-9f35-4cba78b53059">The application of a JPEG 2000 Part 1 reversible multi-component transformation is signaled in the JPEG 2000 bit stream by a value of 1 rather than 0 in the SGcod Multiple component transformation type of the COD marker segment [ISO 15444-1 Table A.17]. No other value of Photometric Interpretation than YBR_RCT or YBR_ICT is permitted when SGcod Multiple component transformation type is 1.</para>
             </listitem>
             <listitem>
               <para xml:id="para_0a77cfd2-db8f-40f4-8d23-3a10092406af">Though it would be unusual, would not take advantage of correlation between the red, green and blue components, and would not achieve effective compression, a Photometric Interpretation of RGB could be specified as long as no multi-component transformation [ISO 15444-1 Annex G] was specified by the JPEG 2000 bit stream. Alternative methods of decorrelation of the color components than those specified in [ISO 15444-1 Annex G] are permitted as defined in PS3.3, such as a Photometric Interpretation of YBR_FULL; this may be useful when converting existing YBR_FULL Pixel Data (e.g., in a different Transfer Syntax) without further loss.</para>
@@ -3387,14 +4216,17 @@
 <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> may constrain the values of Photometric Interpretation for specific IODs.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_9146fe8f-7760-48f7-8a52-9c1dbf1ca927">Despite the application of a multi-component color transformation and its reflection in the Photometric Interpretation attribute, the "color space" remains undefined. There is currently no means of conveying "standard color spaces" either by fixed values (such as sRGB) or by ICC profiles. Note in particular that the JP2 file header is not sent in the JPEG 2000 bitstream that is encapsulated in DICOM.</para>
+              <para xml:id="para_9146fe8f-7760-48f7-8a52-9c1dbf1ca927">Despite the application of a multi-component color transformation and its reflection in the Photometric Interpretation attribute, the "color space" remains undefined. There is currently no means of conveying "standard color spaces" either by fixed values (such as sRGB) or by ICC profiles. Note in particular that the JP2 file header is not sent in the JPEG 2000 bit stream that is encapsulated in DICOM.</para>
             </listitem>
             <listitem>
               <para xml:id="para_e8f7c114-fe18-4f0d-a9f3-6b8367bfb3b2">If JPEG 2000 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_ICT or YBR_RCT to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
             </listitem>
+            <listitem>
+              <para xml:id="para_3cbb0823-4c0f-4d89-b88b-7664eea9ef5d">The upper limit of 40 on Bits Allocated (0028,0100) and 38 on Bits Stored (0028,0101) reflects the maximum JPEG 2000 sample precision of 38 and the DICOM requirement to describe Bits Allocated (0028,0100) as multiples of bytes (octets).</para>
+            </listitem>
           </orderedlist>
         </note>
-        <para xml:id="para_a89ecd90-af2d-401e-99e6-e7ac76600d56">The JPEG 2000 bitstream is capable of encoding both signed and unsigned pixel values, hence the value of Pixel Representation (0028,0103) may be either 0 or 1 depending on what has been encoded (as specified in the SIZ marker segment in the precision and sign of component parameter).</para>
+        <para xml:id="para_a89ecd90-af2d-401e-99e6-e7ac76600d56">The JPEG 2000 bit stream is capable of encoding both signed and unsigned pixel values, hence the value of Pixel Representation (0028,0103) may be either 0 or 1 for monochrome Photometric Interpretations depending on what has been encoded (as specified in the SIZ marker segment in the precision and sign of component parameter).</para>
         <para xml:id="para_2b48c289-0ee9-4ec6-9685-99e6a1a9a16f">The value of Planar Configuration (0028,0006) is irrelevant since the manner of encoding components is specified in the JPEG 2000 standard, hence it shall be set to 0.</para>
       </section>
       <section label="8.2.5" status="3" xml:id="sect_8.2.5">
@@ -3407,7 +4239,7 @@
         <note>
           <para xml:id="para_afa32905-415a-4f71-98b1-67e8ea4aba49">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_9d54ce83-fbe6-44d9-a910-4c3eae7443be">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <para xml:id="para_9d54ce83-fbe6-44d9-a910-4c3eae7443be">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <para xml:id="para_c268bcf7-3ff6-4626-af47-8aab8feb28ff">The MPEG2 Main Profile / Main Level bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation, if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). MPEG2 Main Profile / Main Level applies an irreversible multi-component transformation, so DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_PARTIAL_420 in the case of multi-component data, and MONOCHROME2 in the case of single component data (even though the MPEG2 bit stream itself is always encoded as three components, one luminance and two chrominance).</para>
         <note>
           <orderedlist>
@@ -3550,7 +4382,7 @@
         <note>
           <para xml:id="para_9708519f-0fc8-4c8b-91f7-10773a783c8f">The Basic Offset Table is not used because MPEG2 contains its own mechanism for describing navigation of frames. To enable decoding of only a part of the sequence, MPEG2 manages a header in any group of pictures (GOP) containing a time_code - a 25-bit integer containing the following: drop_frame_flag, time_code_hours, time_code_minutes, marker_bit, time_code_seconds and time_code_pictures.</para>
         </note>
-        <para xml:id="para_54b32ddd-2a81-407e-9e5d-7aa488550609">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
+        <para xml:id="para_54b32ddd-2a81-407e-9e5d-7aa488550609">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
         <para xml:id="para_72d7f028-ebc5-45f1-a1b4-9c2d077c7e19">Any audio components present within the MPEG bit stream shall comply with the following restrictions:</para>
         <itemizedlist>
           <listitem>
@@ -3587,7 +4419,7 @@
         <note>
           <para xml:id="para_49d5c0fa-e261-4974-8d53-d8428ad857b0">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_550767c3-9efa-4014-be77-38e3779c1b6b">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <para xml:id="para_550767c3-9efa-4014-be77-38e3779c1b6b">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <note>
           <para xml:id="para_893ba67a-05cf-46bd-ad44-72ec2989f1e3">If MPEG2 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
         </note>
@@ -3927,7 +4759,7 @@
         <note>
           <para xml:id="para_f4e331a8-771d-46a8-9bf1-dbe3d3029ca8">The Basic Offset Table is not used because MPEG2 contains its own mechanism for describing navigation of frames. To enable decoding of only a part of the sequence, MPEG2 manages a header in any group of pictures (GOP) containing a time_code - a 25-bit integer containing the following: drop_frame_flag, time_code_hours, time_code_minutes, marker_bit, time_code_seconds and time_code_pictures.</para>
         </note>
-        <para xml:id="para_6219217f-1e4b-465a-b2f7-0863618c465b">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
+        <para xml:id="para_6219217f-1e4b-465a-b2f7-0863618c465b">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>).</para>
         <para xml:id="para_09cbb0bf-f4b6-4d08-94c6-ac09266f9425">Any audio components present within the MPEG2 Main Profile / High Level bit stream shall comply with the restrictions as for MPEG2 Main Profile / Main Level as stated in <xref linkend="sect_8.2.5" xrefstyle="select: label"/>.</para>
       </section>
       <section label="8.2.7" status="3" xml:id="sect_8.2.7">
@@ -3940,7 +4772,7 @@
         <note>
            <para xml:id="para_189b7ade-5a0e-4b48-a83c-a2735266ee5a">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_1e5e3340-6432-49d9-8cdf-21c44d306380">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+        <para xml:id="para_1e5e3340-6432-49d9-8cdf-21c44d306380">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <note>
           <para xml:id="para_10b66283-59e0-410b-bd94-c1ca64a0eec1">If MPEG-4 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
         </note>
@@ -4272,7 +5104,7 @@
         <note>
           <para xml:id="para_64b3560c-0f8b-4916-9515-6500ed260053">If a video stream exceeds the maximum length of one fragment (approximately 4 GB), it may be sent as multiple SOP Instances, but each SOP Instance will contain an independent and playable bit stream, and not depend on the encoded bit stream in other (previous) instances. The manner in which such separate instances are related is not specified in the standard, but mechanisms such as grouping into the same Series, and references to earlier instances using Referenced Image Sequence may be used.</para>
         </note>
-        <para xml:id="para_93e08e1e-89db-4979-be11-b382f2b31514">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
+        <para xml:id="para_93e08e1e-89db-4979-be11-b382f2b31514">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/>  and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
         <para xml:id="para_835e9db2-8467-431c-bc8f-b05d1cd4b2bd">Any audio components included in the data container shall follow the constraints detailed in <xref linkend="sect_8.2.12" xrefstyle="select: label title"/>.</para>
       </section>
       <section label="8.2.8" status="3" xml:id="sect_8.2.8">
@@ -4285,7 +5117,7 @@
         <note>
            <para xml:id="para_a11f89e6-4849-4d7e-a930-62ab9e4fb12c">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_ec946e84-eec7-4e63-91e3-4ab0581cda27">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed data set might be encoded.</para>
+        <para xml:id="para_ec946e84-eec7-4e63-91e3-4ab0581cda27">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <note>
           <para xml:id="para_6627d6a9-29a0-42ad-b465-1769e704f609">If MPEG-4 Compressed Pixel Data is decompressed and re-encoded in Native (uncompressed) form, then the Data Elements that are related to the Pixel Data encoding are updated accordingly. If color components are converted from YBR_PARTIAL_420 to RGB during decompression and Native re-encoding, the Photometric Interpretation will be changed to RGB in the Data Set with the Native encoding.</para>
         </note>
@@ -4459,7 +5291,7 @@
         <para xml:id="para_00cb5f03-0371-4f8c-a5ac-c79fa8121517">DICOM provides a mechanism for supporting the use of MPEG-4 AVC/H.264 Image Compression through the Encapsulated Format (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> defines a Transfer Syntax that references the MPEG-4 AVC/H.264 Standard.</para>
         <para xml:id="para_12d2862d-103f-46b9-bb79-2f01ae1a5f6f">MPEG-4 AVC/H.264 Stereo High Profile can achieve better compression by additionally making use of prediction between the base and dependent stereoscopic views. The base view frames make use of intra and inter prediction as in MPEG-4 AVC/H.264 High Profile. This makes it possible for decoders which do not know how to decode the stereoscopic data to decode only the base view. The dependent view is encoded to make use of redundancy due to prediction based upon similarities between the base and the dependent views.</para>
         <para xml:id="para_a68a28a7-4ba4-4837-aabf-e33f7c478d79">MPEG-4 AVC/H.264 Stereo High Profile makes use of the Level table A-1 of the MPEG-4 specification to set through-put limits. The properties required by the MPEG-4 AVC/H.264 Stereo High Profile Compression are identical to the properties defined in <xref linkend="sect_8.2.8" xrefstyle="select: label"/>, except that Stereo Pairs Present (0022,0028) shall always be YES.</para>
-        <para xml:id="para_5355fb11-4566-456b-a2e1-b77d808b6f20">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
+        <para xml:id="para_5355fb11-4566-456b-a2e1-b77d808b6f20">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
         <para xml:id="para_0f648eaf-655c-4f69-82dd-0945ad6e06b7">Any audio components included in the data container shall follow the constraints detailed in <xref linkend="sect_8.2.12" xrefstyle="select: label title"/>.</para>
       </section>
       <section label="8.2.10" status="3" xml:id="sect_8.2.10">
@@ -4472,7 +5304,7 @@
               <para xml:id="para_7dd1c8b4-a8e0-4185-8af2-5f7e4dc4ad24">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_7089107c-7682-48e4-a7da-9863253c0142">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+              <para xml:id="para_7089107c-7682-48e4-a7da-9863253c0142">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
             </listitem>
           </orderedlist>
         </note>
@@ -4529,7 +5361,7 @@
         <note>
           <para xml:id="para_8be5cd5e-a7d2-461c-9d47-38cf9262c101">The recipient is expected to concatenate the fragments while decoding them. This allows for essentially unlimited length streams; the only limit imposed is the maximum size of frames (0028,0008) which is 2^31-1.</para>
         </note>
-        <para xml:id="para_cac4370a-0915-4c8e-9344-5aae10b8844e">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
+        <para xml:id="para_cac4370a-0915-4c8e-9344-5aae10b8844e">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
         <para xml:id="para_f9a7c68b-44f4-499a-a477-99c7a13d4627">Any audio components included in the data container shall follow the constraints detailed in <xref linkend="sect_8.2.12" xrefstyle="select: label title"/>.</para>
       </section>
       <section label="8.2.11" status="3" xml:id="sect_8.2.11">
@@ -4542,7 +5374,7 @@
               <para xml:id="para_c81d7049-de34-42fe-a614-1c154d3850e2">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_1693618b-1de9-4c36-84de-c945b03033bb">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded.</para>
+              <para xml:id="para_1693618b-1de9-4c36-84de-c945b03033bb">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
             </listitem>
           </orderedlist>
         </note>
@@ -4599,7 +5431,7 @@
         <note>
           <para xml:id="para_357dc601-83dc-4917-a3f3-de898714f3b3">The recipient is expected to concatenate the fragments while decoding them. This allows for essentially unlimited length streams; the only limit imposed is the maximum size of frames (0028,0008) which is 2^31-1.</para>
         </note>
-        <para xml:id="para_78f2ef6d-dc85-4a5d-a1ea-b204a859e2b3">The container format for the video bitstream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
+        <para xml:id="para_78f2ef6d-dc85-4a5d-a1ea-b204a859e2b3">The container format for the video bit stream shall be MPEG-2 Transport Stream, a.k.a. MPEG-TS (see <xref linkend="biblio_ISOIEC13818-1"/>) or MPEG-4, a.k.a. MP4 container (see <xref linkend="biblio_ISOIEC14496-12"/> and <xref linkend="biblio_ISOIEC14496-14"/>). The PTS/DTS of the transport stream shall be used in the MPEG coding.</para>
         <para xml:id="para_ba783f8e-62d4-4907-abb1-ae865a0c5206">Any audio components included in the data container shall follow the constraints detailed in <xref linkend="sect_8.2.12" xrefstyle="select: label title"/>.</para>
       </section>
       <section label="8.2.12" status="3" xml:id="sect_8.2.12">
@@ -6089,7 +6921,7 @@
             </note>
           </listitem>
         </orderedlist>
-        <para xml:id="para_525df055-a70d-441c-b1fa-c99e89a05d2c">Only the features defined in JPEG 2000 Part 1 (<xref linkend="biblio_ISOIEC15444-1"/>) are permitted for these two Transfer Syntaxes. Additional features and extensions that may be defined in other parts of JPEG 2000 shall not be included in the compressed bitstream unless they can be decoded or ignored without loss of fidelity by all Part 1 compliant implementations.</para>
+        <para xml:id="para_525df055-a70d-441c-b1fa-c99e89a05d2c">Only the features defined in JPEG 2000 Part 1 (<xref linkend="biblio_ISOIEC15444-1"/>) are permitted for these two Transfer Syntaxes. Additional features and extensions that may be defined in other parts of JPEG 2000 shall not be included in the compressed bit stream unless they can be decoded or ignored without loss of fidelity by all Part 1 compliant implementations.</para>
         <para xml:id="para_6a575c82-97de-48ef-9064-e55217019356">If the object allows multi-frame images in the pixel data field, then for these JPEG 2000 Part 1 Transfer Syntaxes, each frame shall be encoded separately. Each fragment shall contain encoded data from a single frame.</para>
         <note>
           <orderedlist numeration="arabic">
@@ -6101,7 +6933,7 @@
             </listitem>
           </orderedlist>
         </note>
-        <para xml:id="para_bcca5500-399e-49de-af34-42a0062b49c5">For all images, including all frames of a multi-frame image, the JPEG 2000 bitstream specified in <xref linkend="biblio_ISOIEC15444-1"/> shall be used. The optional JP2 file format header shall NOT be included.</para>
+        <para xml:id="para_bcca5500-399e-49de-af34-42a0062b49c5">For all images, including all frames of a multi-frame image, the JPEG 2000 bit stream specified in <xref linkend="biblio_ISOIEC15444-1"/> shall be used. The optional JP2 file format header shall NOT be included.</para>
         <note>
           <para xml:id="para_46c6bcc3-6c74-4385-bb7d-5d3edfeb0f86">The role of the JP2 file format header is fulfilled by the non-pixel data attributes in the DICOM Data Set.</para>
         </note>
@@ -6132,7 +6964,7 @@
             </orderedlist>
           </listitem>
         </orderedlist>
-        <para xml:id="para_60ff91a3-5ce4-4b1d-b0e9-647cc0b4a2c3">Only the multiple component transformation extensions defined in Annex J of JPEG 2000 Part 2 (<xref linkend="biblio_ISOIEC15444-2"/>) are permitted for these two Transfer Syntaxes. Additional features and extensions that may be defined in other Annexes of JPEG 2000 Part 2 shall not be included in the compressed bitstream.</para>
+        <para xml:id="para_60ff91a3-5ce4-4b1d-b0e9-647cc0b4a2c3">Only the multiple component transformation extensions defined in Annex J of JPEG 2000 Part 2 (<xref linkend="biblio_ISOIEC15444-2"/>) are permitted for these two Transfer Syntaxes. Additional features and extensions that may be defined in other Annexes of JPEG 2000 Part 2 shall not be included in the compressed bit stream.</para>
         <note>
           <para xml:id="para_e69aa706-2eb4-4225-a499-482bd9cfef68">the arbitrary wavelet transformations, as defined in Annex H of JPEG 2000 Part 2 (<xref linkend="biblio_ISOIEC15444-2"/>) are not allowed for these two Transfer Syntaxes. The only wavelet transformations that are allowed to be used as multiple component transformations are the reversible 5-3 wavelet transformation and the irreversible 9-7 wavelet transformation, as defined in Annex F of JPEG 2000 Part 1 (<xref linkend="biblio_ISOIEC15444-1"/>).</para>
         </note>
@@ -6141,7 +6973,7 @@
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_304f83b1-70ff-412d-9b90-d4beaec20e83">The 3<superscript>rd</superscript> dimension transformations that are described in this Supplement are treated in Part 2 of JPEG 2000 as direct extensions to the color component transformations (RGB to YUV) that are described in Part 1 of JPEG 2000. For this reason, each image or frame in the sequence is called a "component". Although the term component is used as a generic term to identify an element of the 3<superscript>rd</superscript> dimension, no restriction is made or implied that the transformations in this Supplement apply only to multi-component (or multiple color channel) data. To compress a volumetric data set using this Transfer Syntax, each frame of the DICOM image is treated as a component of a multi-component image.</para>
+              <para xml:id="para_304f83b1-70ff-412d-9b90-d4beaec20e83">The 3<superscript>rd</superscript> dimension transformations that are described in this Supplement are treated in Part 2 of JPEG 2000 as direct extensions to the color component transformations (RGB to YUV) that are described in Part 1 of JPEG 2000. For this reason, each image or frame in the sequence is called a "component". Although the term component is used as a generic term to identify an element of the 3<superscript>rd</superscript> dimension, no restriction is made or implied that the transformations in this Supplement apply only to multi-component (or multiple color channel) data. To compress a volumetric Data Set using this Transfer Syntax, each frame of the DICOM image is treated as a component of a multi-component image.</para>
             </listitem>
             <listitem>
               <para xml:id="para_372c4bc2-fdd0-475a-904a-aad205b8320d">The progressive nature of the JPEG 2000 code stream allows for the decompression of the image before the complete image has been transferred. If a Storage SCP truncates the code stream by aborting the association, the instance has not been completely transferred and hence should not persist unless different UIDs are assigned (even though it may have been transiently used for display purposes).</para>
@@ -7830,7 +8662,14 @@
       <para xml:id="para_6d3dcdf2-e9ae-4170-a5da-3168ac985140">If the Composite Pixel Code is not an integral number of bytes in size, sufficient Most Significant zero bits are added to make it an integral byte size. This is known as the Padded Composite Pixel Code.</para>
       <para xml:id="para_4b175cb6-fe3d-487b-a2c3-89bb68342b28">The first Segment is generated by stripping off the most significant byte of each Padded Composite Pixel Code and ordering these bytes sequentially. The second Segment is generated by repeating this process on the stripped Padded Composite Pixel Code continuing until the last Pixel Segment is generated by ordering the least significant byte of each Padded Component Pixel Code sequentially.</para>
       <note>
-        <para xml:id="para_e077ba60-fc25-41b5-8058-45dabdd41a7f">If Photometric Interpretation (0028, 0004) equals RGB and Bits Allocated equals 8, then three Segments are generated. The first one holds all the Red values, the second all the Green values, and the third all the Blue values.</para>
+        <orderedlist>
+          <listitem>
+            <para xml:id="para_e077ba60-fc25-41b5-8058-45dabdd41a7f">If Photometric Interpretation (0028, 0004) equals RGB and Bits Allocated equals 8, then three Segments are generated. The first one holds all the Red values, the second all the Green values, and the third all the Blue values.</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_16bd5512-a42f-47ce-9ddf-98806465f1d7">The use of separate segments implies that the Planar Configuration (0028,0006) will always be 1 for RLE compressed images.</para>
+          </listitem>
+        </orderedlist>
       </note>
     </section>
     <section label="G.3" status="2" xml:id="sect_G.3">

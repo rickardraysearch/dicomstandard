@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2017b - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2017c - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1138,8 +1138,9 @@
   <note>
     <para xml:id="para_f7aec1d3-858b-4a0b-af2c-d497a108517a">This schema can be converted into an equivalent XML schema or other electronic format. It includes some modifications to the RFC3881 schema that reflect field experience with audit message requirements. It extends the RFC3881 schema.</para>
   </note>
-    <section label="A.5.1-1" xml:id="para_A.5.1-1">
+    <section label="A.5.1.1" xml:id="sect_A.5.1.1">
       <title>Audit Message Schema</title>
+      <para xml:id="para_64ddd571-7a1a-4582-b127-85ae11eed89a">The following is the content of the audit schema:</para>
     <programlisting><![CDATA[datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 # This defines the coded value type. The comment shows a pattern that can be used to further
@@ -1343,12 +1344,731 @@ start = message
 ]]>
     </programlisting>
     </section>
+    <section label="A.5.1.2" status="4" xml:id="sect_A.5.1.2">
+    <title>Codes Used Within The Schema</title>
+  <para xml:id="para_f09dd3e1-8541-464e-b06b-3f9f6061ebca">The following value sets are defined in the audit schema above. These are not coded terminology. They are values whose meaning depends upon their use at the proper location within the message.</para>
+  <section label="A.5.1.2.1" status="5" xml:id="sect_A.5.1.2.1">
+    <title>Audit Source Type Code</title>
+  <para xml:id="para_1cbf3fee-b911-4dd0-92fb-44ccfc9bd9ba">The Audit Source Type Code values specify the type of source where an event originated. Codes from coded terminologies and implementation defined codes can also be used for the AuditSourceTypeCode.</para>
+    <table frame="box" label="A.5.1.2.1-1" rules="all" xml:id="table_A.5.1.2.1-1">
+    <caption>Audit Source Type Code Values</caption>
+    <thead>
+      <tr valign="top">
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_69f1fb4b-787e-4084-b762-3bae4cd56029">Value</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_56eebc58-8b4e-4f9a-acdf-95104d17fed2">Meaning</para>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_74f44ecb-d5e2-4afc-adff-c95a8b1d10be">1</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e2db1f5c-3bd5-420f-a2c4-93698e784f05">End-user interface</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_39ec36d3-1134-47da-af55-16972aa8adc5">2</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e50b156f-cd3e-4cb0-a6e6-a7fe21300d31">Data acquisition device or instrument</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e791a463-1733-456b-8302-9f77dc0ab0a8">3</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_11efe581-9637-4136-9826-53fd939e618b">Web server process tier in a multi-tier system</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2b2cf7ea-741f-488c-943a-198a82ddb551">4</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_11f53c60-d72a-4338-ba4a-83d321771eaa">Application server process tier in a multi-tier system</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e116cb2a-9d28-4ea7-880c-5c1ea01adfae">5</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_aae58161-dd16-4950-b817-88dfe09746a4">Application server process tier in a multi-tier system</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4336d8ae-60c2-4d79-b273-ac255b4267cb">6</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_a62e380c-a6ca-4ca2-8f26-f3f64eaefbb6">Security server, e.g., a domain controller</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_123fd859-cd6c-4248-9f85-6ac7d20b3249">7</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_712b0495-f637-43f0-9db6-7260a42a9743">ISO level 1-3 network component</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_07dde84a-356a-4941-8871-1369fa5eb273">8</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_97257c29-1ecd-4f0a-9a9c-3e4b7ea2b3f7">ISO level 4-6 operating software</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4da3802e-37a5-4218-a1c9-6512243724b5">9</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_25880344-d957-4215-86d6-6e2f98e94e38">External source, other or unknown type</para>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </section>
+<section label="A.5.1.2.2" status="5" xml:id="sect_A.5.1.2.2">
+    <title>Participant Object Type Code Role</title>
+  <para xml:id="para_fc99cc77-a902-4368-abc9-e6089e4da0c5">The Participant Object Type Code Role is an attribute of the ParticipantObjectIdentification, and is not extensible. This attribute may be omitted or one of the following values assigned. Coded terminologies are not supported.</para>
+  <para xml:id="para_27250edf-5d2a-45f1-a783-22574a1f19ea">Table  </para>
+  <table frame="box" label="A.5.1.2.2-1" rules="all" xml:id="table_A.5.1.2.2-1">
+    <caption>Participant Object Type Code Roles</caption>
+    <thead>
+      <tr valign="top">
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_1f636b56-af4a-4be5-a3ea-7698a2095f45">Value</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_3d1d9332-b19d-470a-84ed-c057d95a6c31">Meaning</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_c070b663-a980-4578-965b-6d8e8f1f1e24">Likely associated Participant Object Type Code</para>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2f37dd8d-95ed-49e8-82d5-7eddd343a027">1</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_c2e78756-2ba1-468e-be61-7fd98be3625c">Patient</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_ac6e97f9-351d-4a55-ad7e-7aab14697f9a">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f09a9888-b64d-42f7-b9a3-bde31ae156b6">2</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d87487d5-87a0-4d70-8343-70cfb4c13cc6">Location</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d6438730-af99-43fd-a627-1227f94f1e62">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_6d412a83-a386-4548-bcd6-398a06984f10">3</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_09c8f9ef-d8b6-4267-b470-b2a87c1201a9">Report</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_77fe242e-bfbe-47c7-8d69-c59675ea767c">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0ec3cad8-2912-4bcf-94e8-37543e5347b1">4</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_26d95391-8966-499d-a6ea-74d2cb3fd5de">Resource</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_81cf5311-0d48-4b4a-b066-4e7e189f8be5">1 - Person, or</para>
+          <para xml:id="para_af28f43c-f091-4f1f-bf01-05e74911615e">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7452364a-eccc-43ba-89ae-cb472620381c">5</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_a1619d48-47f2-400d-b3c2-ede4bc2aca1a">Master File</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f670f22d-381c-4517-af11-2a8f032bc8c9">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_06307f8b-1b5f-4e12-b2b8-2fde58ea52c9">6</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4836be46-61e0-47e2-8d19-9a5a54336313">User</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_647f161b-492c-48f1-9033-3d95f56898c0">1 - Person, or</para>
+          <para xml:id="para_1325bd2f-3e12-4640-b5b8-2e50ee0ab31b">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_12180084-0e19-4ccb-b0fc-f78f0b8093e3">7</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_8eb6e79d-aa9f-423a-8896-df538cb69346">List</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b75c51ae-1530-4a67-a83c-23497406f56d">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_eb987656-744d-453b-b16c-5a65bb5f19d9">8</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_01be0a2a-ccc1-4f19-a290-8645221183c1">Doctor</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_3b046783-9415-4d8e-957e-6b9df34511c3">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_92866cf5-a9c7-4519-b4a9-43e15b4f0d39">9</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_527bdfb5-fb0a-44c2-bcf0-c6977792d7d2">Subscriber</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_36eda6b9-f506-4c8c-aab1-01cd076a5a7c">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b375a484-79e5-444b-9e84-a5dd524fa501">10</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_ba1dece5-b2db-4978-8092-1b115fbd195f">Guarantor</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f3a545fa-1fec-4174-a13e-e24ef98935c3">1 - Person, or</para>
+          <para xml:id="para_c748e666-0228-4ba9-bb33-09571967c173">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_5f302b2d-8d2a-4c03-aae5-c45aa6e18f53">11</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e0f630db-2393-4a5c-812f-4e8116a19cee">Security User Entity</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7569f2a6-300e-48a1-ba82-199a646bbe79">1 - Person, or</para>
+          <para xml:id="para_546f4b53-a252-4c56-86df-a89c6494922a">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2d5facf6-01c7-4093-8090-bc3e4cbc432b">12</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_44ccb03b-68b4-4d0b-9dd3-ecdf98220670">Security User Group</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_770c7458-68f6-4fc6-ad63-3be56bd9c5fd">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_788d7c58-f4ea-4194-912b-adeff5f4a5f9">13</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_580153ec-c962-48e9-9569-dc20466d70c2">Security Resource</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_9ff8e7b2-1e53-44f8-af68-07ab6cc3b074">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_bc8fb417-d2b7-4ecc-9bcf-1739e3927030">14</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_5f31c737-f47e-4709-bcc0-851bc29fd223">Security Granularity Definition</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d212289f-fcde-4247-8e9a-6b68a6e2c0f9">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_13174d29-3c53-403e-9ceb-23bc062c5b97">15</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_320fc0ed-3a19-4c75-bde5-b1d29d64ab09">Provider</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4ddf2456-da72-4c2c-8dd7-9cfebc6164a6">1 - Person, or</para>
+          <para xml:id="para_c9b258d4-416c-4d93-83ad-cd477d014c3d">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_395510ef-ad3f-4e80-a7dc-50f1162d9e0b">16</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2b93ba6d-1c22-43b9-8e25-200a2a09d1ce">Data Destination</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4d72fd02-aa55-4a27-bf62-e84153f3416b">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_6eb48014-216e-4240-8fa3-145032e2d379">17</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_5b1af86a-b867-41b7-99eb-0ed441cb818d">Data Repository</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_243c4847-12cb-487f-a7c0-ec8dfbc36082">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7dd79745-8312-4ecd-b25d-2cd998c7848c">18</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_723c18d9-e4f3-47a2-94c9-c5c1a1a5d42d">Schedule</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_c54a466a-ea10-41b9-9c1e-0f284529c393">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_54bd9470-aafb-4f6b-b0e2-f6d72ffa3f23">19</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_8aaab0c7-ddbc-45d5-9d38-9555e998efb6">Customer</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0e561697-e2d8-42a4-8c67-d8d37d2d8b41">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_675176e9-da93-4bf3-b890-45dccecbc7af">20</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_df57c7c2-42d7-4449-9bfd-1853abe7b05e">Job</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_abff914c-550f-44db-9fc3-6ce4142e4ca9">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_87c83dd6-9ff3-495a-af7a-8f78afc5ef85">21</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d81f01a2-38f4-4b0b-92ab-1edafb48d8e1">Job Stream</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_9eed2cd8-a0f9-4613-9c67-3c868595916f">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0259bd57-2294-4098-bc54-db5dcaaf839a">22</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e653d221-8213-46db-b278-99cccaf99ef0">Table</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e46ccac8-e53c-4de0-aea0-3d1eaf1e92cc">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_08eaf71e-e8d0-4947-b7c7-f89681d0cfa4">23</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d559c880-3c4e-488f-8ad5-daf429c733e2">Routing Criteria</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_83117a26-1197-497a-b756-0a4cae5d0a4c">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_1fe4b192-e020-4af8-be15-5e28ea4ad67a">24</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f03195d2-f445-4e9c-9b3d-3b320c110c25">Query</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7d4692ce-1616-458a-8280-0cc1f979be7a">2 - System Object</para>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </section>
+<section label="A.5.1.2.3" status="5" xml:id="sect_A.5.1.2.3">
+    <title>Participant Object Data Life Cycle</title>
+  <para xml:id="para_1b4865b0-5b56-4d6a-b3dc-68ac99b3876e">The Participant Object Data Life Cycle is an attribute of the ParticipantObjectIdentification, and is not extensible. This attribute may be omitted or one of the following values assigned. Coded terminologies are not supported.</para>
+  <table frame="box" label="A.5.1.2.3-1" rules="all" xml:id="table_A.5.1.2.3-1">
+    <caption>Participant Object Data Life Cycle Values</caption>
+    <thead>
+      <tr valign="top">
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d0e1c681-04c0-4149-ad2e-5a3ce70c8d63">Value</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_aea7e5e9-4c1d-415b-8193-d5fac95e2ecd">Meaning</para>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_dbf72428-126c-4b99-97c7-0aa7cb9deae4">1</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_cfa082f4-4567-431d-8672-acd19070f29c">Origination or Creation</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_33671728-8a6c-422b-b829-9805bf43eeae">2</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e3558a04-f2dd-4614-9849-e396a4ab7af0">Import or Copy from original</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_ed330a2a-c277-4ff8-92eb-accd944343bd">3</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b51893d7-20f4-4add-b08b-fd2c65b02abe">Amendment</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_dcc18acf-4fd3-4689-afb0-72c51af454f4">4</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_67f4d349-6404-4db4-b317-1171260e45df">Verification</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_516670b6-f3b7-4062-bccd-c2bcba381dbd">5</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_69093639-a385-45f6-a2a7-bcc38100647d">Translation</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_70a8d24a-885a-458b-8bad-f50d2ec9cdf2">6</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_6d88264e-dd04-4a99-8974-1105b400a9e0">Access or Use</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0ef5eaa6-2f3a-4833-a115-137d1c7e063e">7</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2ab683f3-fb07-4c11-a76d-b6ed2ef79aa4">De-identification</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_59ddefe3-07d1-4efd-b72b-56ee0402c922">8</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_5bf109e6-ba45-47c2-9674-08dc6eadc8c4">Aggregation, summarization, derivation</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2ade4960-8f78-4b91-80a1-50d99d9c490c">9</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7a15094e-32b2-44d7-8900-0a1edb4b0faf">Report</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_128629bc-fedc-45a8-84e2-8da90cd60009">10</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d94f016e-d318-4311-b4e6-5012d99c7fac">Export or Copy to target</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_69c9b218-a35d-4fc1-a3f7-892c9c979ce6">11</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_26f4f51d-5678-444f-830c-4652742bb847">Disclosure</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0119dfc9-204e-4512-a7c7-018c125204fe">12</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_2ad42994-c18c-4aee-848b-3949010cc664">Receipt of Disclosure</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_17bf919c-da84-4935-8f51-2c2133666bd4">13</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_63d34f50-4c3e-4115-9bd1-415f3d275c00">Archiving</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_9b1eb515-4520-491e-b8d1-aa065df5068c">14</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_e2c7d00a-aef4-4ac0-8766-d8ae240d8ee0">Logical Deletion</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_77f8aa7e-e2ff-4804-a13d-3a0ea747141f">15</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f541d3b0-d0c7-4a84-a02a-c5421af3e459">Permanent erasure or physical destruction</para>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </section>
+<section label="A.5.1.2.4" status="5" xml:id="sect_A.5.1.2.4">
+    <title>Participant Object ID Type Code</title>
+  <para xml:id="para_03c7c27b-c253-4379-a2dc-33ee0bd9021f">The Participant Object ID Type Code describes the identifier that is contained in Participant Object ID. Codes from coded terminologies and implementation defined codes can also be used for the ParticipantObjectTypeCodeRole.</para>
+  <table frame="box" label="A.5.1.2.4-1" rules="all" xml:id="table_A.5.1.2.4-1">
+    <caption>Participant Object ID Type Code Values</caption>
+    <thead>
+      <tr valign="top">
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_c78e8677-47fb-48b9-9718-dae6b263598d">Value</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_80010d0f-3e02-42f0-a1e6-86a26ce29feb">Meaning</para>
+        </th>
+        <th align="left" colspan="1" rowspan="1">
+          <para xml:id="para_505838a4-747a-4382-a057-318b9684c312">Likely associated Participant Object Type Code</para>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_11ecfcdc-8fe0-415c-ad17-bf8462aa8571">1</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_0605cfd3-7670-4ef5-afbb-7f3d9fb6657b">Medical Record Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_bb256caf-05fe-4bba-afe1-905c410bcaf2">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_5cc42d29-7c94-4782-8f9c-717691126e4b">2</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_7a6ded6b-089a-406a-8b56-4e9601d79fbf">Patient Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_ae37cfde-eb5a-412f-840d-d6d5cb06d0e9">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_86729e26-ed4b-425d-a711-4193c460415b">3</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_bfb0a104-752c-4b9a-bfe3-9e713cdc8d66">Encounter Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_824b95c9-c8a1-44a8-974f-0c7d5f5e31e7">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_cfe80e63-a0cd-4185-99f8-c7cf003aecfa">4</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_9f2cdb6e-18b1-4924-b188-eaeb3d3e3f25">Enrollee Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d26a9d42-7410-4eb5-ae92-9c679bba1f67">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_415b7983-2190-49b2-bbdb-f06aa77232c4">5</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_31d2b1df-77fe-46a0-a267-d483ceaa69e5">Social Security Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_c20ebfdc-462b-4cf5-9202-fa5cd1f6bb1b">1 - Person</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_809c9e6d-0e5e-4813-95c7-750aed801f2a">6</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_269ed1fb-92df-4a87-afd9-e272b95bbb1c">Account Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b41e25ac-2304-4d18-b544-209e4da81de8">1 - Person, or</para>
+          <para xml:id="para_2cc04e39-1db9-42a4-b390-4d9828e31402">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_70a347c3-0e80-464f-9047-b3fd96b6d4f7">7</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d499a167-eec1-4d14-9d9a-aad8b0a94586">Guarantor Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_242a0e7b-cd8a-4d37-9d3e-ab327938227a">1 - Person, or</para>
+          <para xml:id="para_105be10b-9f6c-44f5-be88-4fc01974769f">3 - Organization</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_582782e4-8f75-4a90-995b-405a6a4e9ff6">8</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_8b59f82b-a96d-4bb8-aa24-15a03c310baf">Report Name</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f500eb72-f51b-4a27-863f-85884d5a7e0f">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4914c095-6ac4-4fb0-8cdf-4b026c096673">9</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_d877e121-fc0c-47e1-a5e7-10603a3dd772">Report Number</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b3770bcd-b13a-46d0-bdea-f945e9248c84">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_58902f34-b20f-4a27-b4f2-dab02d51e73f">10</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_56242809-444e-4193-894c-548dbd48d617">Search Criteria</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_572ddd04-363e-41ed-8508-c02f2d8e60da">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_a2ce74a6-31bb-4680-a5b6-a9be9cd1b50a">11</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_dd4982a9-5348-4f81-bed0-20cf4d421cd4">User Identifier</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_4b7f5513-f13d-4aaa-bc6c-14d055f6a358">1 - Person, or</para>
+          <para xml:id="para_43b19106-c958-4e0d-9ae1-1b2aebe4d025">2 - System Object</para>
+        </td>
+      </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_8d510752-5eff-43e3-9231-a54a80863898">12</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_a194ff9e-0eb1-46fd-bf00-9803ac2544a0">URI</para>
+        </td>
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_b6f649e1-a574-4df4-80c8-659faf6e07fa">2 - System Object</para>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+</section>
+
   </section>
 <section label="A.5.2" status="3" xml:id="sect_A.5.2">
     <title>General Message Format Conventions</title>
   
-  <para xml:id="para_4764a4fc-01bc-48ba-921b-fd7eb84abf41">The following table lists the primary fields from the message schema specified in A.5.1, with additional instructions, conventions, and restrictions on how DICOM applications shall fill in the field values. Please refer to RFC3881 for the complete definition and specification of fields taken from the schema specified therein. In addition, the following table lists the additional fields that are part of DICOM-specific extensions in the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>). The fields names are only those leaf elements and attributes that are specialized or extended for this profile. Note that these fields may be enclosed in other XML elements, as specified by the schema.</para>
-    <table frame="box" label="A.5.2-1" rules="all" xml:id="table_A.5.2-1">
+  <para xml:id="para_4764a4fc-01bc-48ba-921b-fd7eb84abf41">The following table lists the primary fields from the message schema specified in A.5.1, with additional instructions, conventions, and restrictions on how DICOM applications shall fill in the field values.
+    The field names are leaf elements and attributes that are in the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>).
+    Note that these fields may be enclosed in other XML elements, as specified by the schema.</para>
+  <note>
+    <para xml:id="para_4139839c-db23-401d-a650-9fd7d94615d0">This schema, codes, and content were originally derived from RFC3881.
+      RFC3881 is not being maintained or updated by the IETF, and has gradually diverged from the DICOM schema and codes.
+      Other documents exist that refer to RFC3881 as the underlying standard.
+      RFC3881 does not include corrections and additions to the audit schema made in DICOM since 2004.</para>
+  </note>
+  <para xml:id="para_dd19b47b-01e3-47ad-ad33-49e992412a89">In subsequent tables the following notation Is used for optionality:</para>
+  <variablelist>
+    <varlistentry>
+<term>M</term>
+<listitem>
+<para xml:id="para_634e71c9-2490-40e8-882e-c7bbebd1e445">This element or attribute is mandatory</para>
+</listitem>
+</varlistentry>
+    <varlistentry>
+<term>U</term>
+<listitem>
+<para xml:id="para_31308398-8253-40fc-82dd-d4bea3944ed2">This element or attribute is user optional. The creator may include it or omit it.</para>
+</listitem>
+</varlistentry>
+    <varlistentry>
+<term>MC</term>
+<listitem>
+<para xml:id="para_19b93d19-6b06-4073-af48-73afc82f1440">This element or attribute is mandatory if a specified condition is true.</para>
+</listitem>
+</varlistentry>
+    <varlistentry>
+<term>UC</term>
+<listitem>
+<para xml:id="para_0f45c097-3333-4047-b471-79d9cc45c27f">This element or attribute may be present only if a specified condition is true, if the user chooses to include it.</para>
+</listitem>
+</varlistentry>
+  </variablelist>
+     <table frame="box" label="A.5.2-1" rules="all" xml:id="table_A.5.2-1">
     <caption>General Message Format</caption>
     <thead>
       <tr valign="top">
@@ -1360,7 +2080,7 @@ start = message
           <para xml:id="para_7b784edc-c9ff-4321-a2fd-3dc819196755">Opt.</para>
         </th>
         <th align="center" colspan="1" rowspan="1">
-          <para xml:id="para_0a3d7c06-c980-4040-b2cf-3fb4a82d1b19">Description from RFC3881</para>
+          <para xml:id="para_0a3d7c06-c980-4040-b2cf-3fb4a82d1b19">Description</para>
         </th>
         <th align="center" colspan="1" rowspan="1">
           <para xml:id="para_84ced2d9-55b1-4047-b30f-d18bd104c3d5">Additional Conditions on Field Format/Value</para>
@@ -1380,11 +2100,12 @@ start = message
         <para xml:id="para_c88dcaf9-23cd-49fa-b735-4f7e85edc173">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_527c2e77-f638-46de-8e9b-5ed253cd7c5c">"Identifier for a specific audited event …"</para>
+        <para xml:id="para_527c2e77-f638-46de-8e9b-5ed253cd7c5c">Identifier for a specific audited event.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_e4e57964-8ff2-48f2-ba57-da144e409a89">The identifier for the family of event. E.g., "User Authentication".</para>
-        <para xml:id="para_b3073941-834e-404e-94fa-f8036e10f924">Extended by DICOM using DCID (400)</para>
+        <para xml:id="para_b3073941-834e-404e-94fa-f8036e10f924">D<olink targetdoc="PS3.16" targetptr="sect_CID_400" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1395,10 +2116,41 @@ start = message
         <para xml:id="para_ef8e53d3-599f-4ab2-ab2a-e1c168d56ed3">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_70b3b9bf-15f3-4ca7-b6b6-841d5320d345">"Indicator for type of action performed during the event that generated the audit."</para>
+        <para xml:id="para_70b3b9bf-15f3-4ca7-b6b6-841d5320d345">Indicator for type of action performed during the event that generated the audit.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3ca17274-7b5f-4c1a-a16a-361db5a146b5">See Schema</para>
+        <variablelist spacing="compact">
+          <varlistentry>
+<term>C</term>
+<listitem>
+<para xml:id="para_a57bb73c-bca7-4309-8580-19d6e7d5d14c">Create a new database object, such as Placing an Order</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>R</term>
+<listitem>
+<para xml:id="para_190046a1-7333-4dbf-8c19-fac5f1afe41f">Read/View/Print/Query Display or print data, such as a Doctor Census</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>U</term>
+<listitem>
+<para xml:id="para_e210e59b-97d8-4015-b68c-5189617f9501">Update data, such as Revise Patient Information</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>D</term>
+<listitem>
+<para xml:id="para_8f60eb06-67da-428e-9c93-92afc64a6547">Delete items, such as a master file record</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>E</term>
+<listitem>
+<para xml:id="para_96832d09-563c-4680-9a84-d465059cd82d">Perform a system or application function such as log-on, program execution, or use of an object's method</para>
+</listitem>
+</varlistentry>
+        </variablelist>
       </td>
     </tr>
     <tr valign="top">
@@ -1409,7 +2161,7 @@ start = message
         <para xml:id="para_abfbae00-1eb8-45cc-9e5f-d7b6bf293bb6">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1ca12292-2392-4549-865b-d29f5ca6295a">"Universal coordinated time (UTC), i.e., a date/time specification that is unambiguous as to local time zones."</para>
+        <para xml:id="para_1ca12292-2392-4549-865b-d29f5ca6295a">Universal coordinated time (UTC), i.e., a date/time specification that is unambiguous as to local time zones.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_1e60b9c1-b572-4cbf-8998-e25a63e751ec">The time at which the audited event occurred.See <xref linkend="sect_A.5.2.5" xrefstyle="select: label"/>
@@ -1424,9 +2176,35 @@ start = message
         <para xml:id="para_c3707a09-45c1-4b17-bdb0-345b5dbc0032">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_297f815e-7db6-4960-8999-2ecaf6eb2a98">"Indicates whether the event succeeded or failed."</para>
+        <para xml:id="para_297f815e-7db6-4960-8999-2ecaf6eb2a98">Indicates whether the event succeeded or failed.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
+        <variablelist spacing="compact">
+          <varlistentry>
+<term>0</term>
+<listitem>
+<para xml:id="para_c3a60334-b7f6-490f-932a-3c00f8f1efa3">Success</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>4</term>
+<listitem>
+<para xml:id="para_8265ed6e-85dd-4547-8562-df3a9a78114a">Minor failure; action restarted, e.g., invalid password with first retry</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>8</term>
+<listitem>
+<para xml:id="para_720aacd7-41f5-4be3-85e5-0be51dc7a344">Serious failure; action terminated, e.g., invalid password with excess retries</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>12</term>
+<listitem>
+<para xml:id="para_2c73f1e8-82b4-4085-a300-1a2355534a23">Major failure; action made unavailable, e.g., user account disabled due to excessive invalid log-on attempts</para>
+</listitem>
+</varlistentry>
+        </variablelist>
         <para xml:id="para_479d1fb0-68fe-49e5-9760-615a4f16b278">When a particular event has some aspects that succeeded and some that failed, then one message shall be generated for successful actions and one message for the failed actions (i.e., not a single message with mixed results).</para>
       </td>
     </tr>
@@ -1438,11 +2216,12 @@ start = message
         <para xml:id="para_1214b70b-ac4b-4e05-8625-014f0875092e">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_a3dec6f8-1af5-44db-b74c-70c23a17e942">"Identifier for the category of event."</para>
+        <para xml:id="para_a3dec6f8-1af5-44db-b74c-70c23a17e942">Identifier for the category of event.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_4ff51559-4e5a-4861-b539-74f0f77cf8d0">The specific type(s) within the family applicable to the event, e.g., "User Login".</para>
-        <para xml:id="para_c8fd2466-a658-49e8-956e-4bdb112ed6cf">Extended by DICOM using DCID (401)</para>
+        <para xml:id="para_c8fd2466-a658-49e8-956e-4bdb112ed6cf">D<olink targetdoc="PS3.16" targetptr="sect_CID_401" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1456,11 +2235,10 @@ start = message
         <para xml:id="para_59f311c6-84c6-49ec-9ca3-f70f93813c72">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_220b51c9-60a0-47cc-a7ed-edb810ae00c7">"Unique identifier for the user actively participating in the event."</para>
+        <para xml:id="para_220b51c9-60a0-47cc-a7ed-edb810ae00c7">Unique identifier for the user actively participating in the event.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_44aab9fe-4214-4685-bcba-f0e5e75a3529">See <xref linkend="sect_A.5.2.1" xrefstyle="select: label"/>
-</para>
+        <para xml:id="para_44aab9fe-4214-4685-bcba-f0e5e75a3529">See <xref linkend="sect_A.5.2.1" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1471,11 +2249,10 @@ start = message
         <para xml:id="para_6f793c6a-68b9-4057-a4b4-3fbc39588928">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_949ba071-1644-4f93-9055-886809d13c3c">"Alternative unique identifier for the user."</para>
+        <para xml:id="para_949ba071-1644-4f93-9055-886809d13c3c">Alternative unique identifier for the user.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8bbf337c-6f6d-4306-b167-74aebe669334">See <xref linkend="sect_A.5.2.2" xrefstyle="select: label"/>
-</para>
+        <para xml:id="para_8bbf337c-6f6d-4306-b167-74aebe669334">See <xref linkend="sect_A.5.2.2" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1486,11 +2263,10 @@ start = message
         <para xml:id="para_b1ce24d1-493c-4969-baee-a6a60ad39f33">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_9cbb4fd1-93ff-40b8-8712-e53ec0f82f15">"The human-meaningful name for the user."</para>
+        <para xml:id="para_9cbb4fd1-93ff-40b8-8712-e53ec0f82f15">The human-meaningful name for the user.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_dd3c2805-f165-4976-9484-cbf0a8572466">See <xref linkend="sect_A.5.2.3" xrefstyle="select: label"/>
-</para>
+        <para xml:id="para_dd3c2805-f165-4976-9484-cbf0a8572466">See <xref linkend="sect_A.5.2.3" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1501,7 +2277,7 @@ start = message
         <para xml:id="para_54eeeb40-60a1-4a1c-9750-7c9f0d77f7d5">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_5e99d13e-3ad6-4898-a441-241ca87cae95">"Indicator that the user is or is not the requestor, or initiator, for the event being audited."</para>
+        <para xml:id="para_5e99d13e-3ad6-4898-a441-241ca87cae95">Indicator that the user is or is not the requestor, or initiator, for the event being audited.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_59f78965-ac13-48eb-b895-3c88b0a26581">Used to identify which of the participants initiated the transaction being audited. If the audit source cannot determine which of the participants is the requestor, then the field shall be present with the value FALSE in all participants.</para>
@@ -1516,11 +2292,14 @@ start = message
         <para xml:id="para_95c4ca2f-8cad-4cb3-ba22-6703363405db">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_c49195d4-04ca-4e4e-95ce-d421be2abecb">"Specification of the role(s) the user plays when performing the event, as assigned in role-based access control security."</para>
+        <para xml:id="para_c49195d4-04ca-4e4e-95ce-d421be2abecb">Specification of the role(s) the user plays when performing the event, as assigned in role-based access control security.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1985aff5-244e-4590-92d7-c75a1a973ca1">Extended by DICOM using DCID (402)</para>
-        <para xml:id="para_92cee170-01e2-4db0-b1fd-8f14bd54edb6">Usage of this field is refined in the individual message descriptions below. Other additional roles may also be present, since this is a multi-valued field.</para>
+        <para xml:id="para_1985aff5-244e-4590-92d7-c75a1a973ca1">D<olink targetdoc="PS3.16" targetptr="sect_CID_402" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
+        <note>
+          <para xml:id="para_92cee170-01e2-4db0-b1fd-8f14bd54edb6">Usage of this field is refined in the individual message descriptions below. Other additional roles may also be present, since this is a multi-valued field.</para>
+        </note>
       </td>
     </tr>
     <tr valign="top">
@@ -1531,11 +2310,10 @@ start = message
         <para xml:id="para_e002d700-67ab-49ee-af2e-cb38b4dc80f1">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3f3c64f5-d3ce-40a1-bac5-61afdd84e245">"An identifier for the type of network access point …"</para>
+        <para xml:id="para_3f3c64f5-d3ce-40a1-bac5-61afdd84e245">An identifier for the type of network access point.</para>
       </td>
       <td align="left" colspan="1" rowspan="2">
-        <para xml:id="para_9032548b-51dc-4ce9-b0f9-543669b6b167">See <xref linkend="sect_A.5.2.4" xrefstyle="select: label"/>
-</para>
+        <para xml:id="para_9032548b-51dc-4ce9-b0f9-543669b6b167">See <xref linkend="sect_A.5.2.4" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1546,7 +2324,7 @@ start = message
         <para xml:id="para_e921a06b-e7c3-42a8-b0d1-cf63115a574e">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_c58a5044-8be1-48ba-a17d-571954a58f42">"An identifier for the network access point of the user device This could be a device id, IP address, or some other identifier associated with a device."</para>
+        <para xml:id="para_c58a5044-8be1-48ba-a17d-571954a58f42">An identifier for the network access point of the user device This could be a device id, IP address, or some other identifier associated with a device.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1560,7 +2338,7 @@ start = message
         <para xml:id="para_0d4813d4-75d5-4de0-9762-f1884d38ec7e">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8c3af334-6433-45b1-b441-34f1c9ce2a1a">"Logical source location within the healthcare enterprise network, e.g., a hospital or other provider location within a multi-entity provider group."</para>
+        <para xml:id="para_8c3af334-6433-45b1-b441-34f1c9ce2a1a">Logical source location within the healthcare enterprise network, e.g., a hospital or other provider location within a multi-entity provider group.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_9bb86700-1e78-467a-a8cd-1582f434115e">Serves to further qualify the Audit Source ID, since Audit Source ID is not required to be globally unique.</para>
@@ -1574,7 +2352,7 @@ start = message
         <para xml:id="para_b3c922b6-116a-435b-8e66-cb3444a36469">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f978c2e6-bcba-4666-b459-63ede2f54577">"Identifier of the source …"</para>
+        <para xml:id="para_f978c2e6-bcba-4666-b459-63ede2f54577">Identifier of the source.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_44145990-6299-471a-98d4-ac03ff73f9af">The identification of the system that detected the auditable event and created this audit message. Although often the audit source is one of the participants, it could also be an external system that is monitoring the activities of the participants (e.g., an add-on audit-generating device).</para>
@@ -1588,10 +2366,10 @@ start = message
         <para xml:id="para_47d13ea7-06d4-4fe9-8943-e830a3fe4ddd">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3af1282e-57c5-47c8-a6b6-6825fb5dbe80">"Code specifying the type of source …"</para>
+        <para xml:id="para_3af1282e-57c5-47c8-a6b6-6825fb5dbe80">Code specifying the type of source.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1c9733d9-8d2b-4ca6-8e68-aa9be47e2866">Used as defined in RFC3881.</para>
+        <para xml:id="para_1c9733d9-8d2b-4ca6-8e68-aa9be47e2866">See <xref linkend="sect_A.5.1.2.1" xrefstyle="select: label"/>.</para>
         <para xml:id="para_2531abb4-bd0a-4350-bfd4-f6e82c1c1ccf">E.g., an acquisition device might use "2" (data acquisition device), a PACS/RIS system might use "4 "(application server process).</para>
       </td>
     </tr>
@@ -1606,10 +2384,35 @@ start = message
         <para xml:id="para_ef5b8bff-9ba6-4e38-bf5e-d498de96d596">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_453d51b5-f6f2-4d08-a97a-f152e9694f50">"Code for the participant object type being audited. This value is distinct from the user's role or any user relationship to the participant object."</para>
+        <para xml:id="para_453d51b5-f6f2-4d08-a97a-f152e9694f50">Code for the participant object type being audited. This value is distinct from the user's role or any user relationship to the participant object.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_0081a151-58a8-45b9-a863-b18aa11c0403">Used as defined in RFC3881</para>
+        <variablelist spacing="compact">
+          <varlistentry>
+<term>1</term>
+<listitem>
+<para xml:id="para_b6913d57-7b79-4909-abd6-9ab58480aa8b">Person</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>2</term>
+<listitem>
+<para xml:id="para_dcb2f459-2c6e-43d5-8dd2-eb89e593fad8">System Object</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>3</term>
+<listitem>
+<para xml:id="para_ca428a79-2893-4731-9db4-6241f6a2cc27">Organization</para>
+</listitem>
+</varlistentry>
+          <varlistentry>
+<term>4</term>
+<listitem>
+<para xml:id="para_6fa8a030-bcbf-4b36-b8cb-41c344ffecd3">Other</para>
+</listitem>
+</varlistentry>
+        </variablelist>
       </td>
     </tr>
     <tr valign="top">
@@ -1620,10 +2423,10 @@ start = message
         <para xml:id="para_cc62814b-dd02-4e2d-b63f-9df701740d5e">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_36cd0006-1dd5-4380-9bea-6f62a8757134">"Code representing the functional application role of Participant Object being audited."</para>
+        <para xml:id="para_36cd0006-1dd5-4380-9bea-6f62a8757134">Code representing the functional application role of Participant Object being audited.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_a0de1edf-ad90-444e-b5df-26331e013397">Used as defined in RFC3881</para>
+        <para xml:id="para_a0de1edf-ad90-444e-b5df-26331e013397">See <xref linkend="sect_A.5.1.2.2" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1634,10 +2437,10 @@ start = message
         <para xml:id="para_f91e6d39-b30f-44c7-9704-7cb4edc311fe">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_5330b033-3791-4ad1-a449-daf348c2e1f1">"Identifier for the data life-cycle stage for the participant object. This can be used to provide an audit trail for data, over time, as it passes through the system."</para>
+        <para xml:id="para_5330b033-3791-4ad1-a449-daf348c2e1f1">Identifier for the data life-cycle stage for the participant object. This can be used to provide an audit trail for data, over time, as it passes through the system.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3116a5d7-6ad1-4639-b205-59608a8f9ed1">Used as defined in RFC3881.</para>
+        <para xml:id="para_3116a5d7-6ad1-4639-b205-59608a8f9ed1">See <xref linkend="sect_A.5.1.2.3" xrefstyle="select: label"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1648,10 +2451,14 @@ start = message
         <para xml:id="para_e650982c-d8ad-48c1-b19c-08b076090c0c">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_29d33046-fed7-44a6-bb40-acb07a3ff8da">"Describes the identifier that is contained in Participant Object ID."</para>
+        <para xml:id="para_29d33046-fed7-44a6-bb40-acb07a3ff8da">Describes the identifier that is contained in Participant Object ID.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_3084b452-694e-4830-b803-1e22f4b7704f">Values may be drawn from those listed in RFC3881 and DCID (404), as specified in the individual message descriptions.</para>
+        <para xml:id="para_3084b452-694e-4830-b803-1e22f4b7704f">See <xref linkend="sect_A.5.1.2.4" xrefstyle="select: label"/> and <olink targetdoc="PS3.16" targetptr="sect_CID_404" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
+        <note>
+          <para xml:id="para_58abe1ba-2824-452f-85a8-c831c67168c9">Usage of this field is refined in the individual message descriptions below. Multiple roles may also be present, since this is a multi-valued field.</para>
+        </note>
       </td>
     </tr>
     <tr valign="top">
@@ -1662,10 +2469,10 @@ start = message
         <para xml:id="para_c6bcf165-6ed1-4a5d-8c2b-f3aab8a5a7da">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_e5a40829-24e6-4064-9026-2d88eb8a503c">"Denotes policy-defined sensitivity for the Participant Object ID such as VIP, HIV status, mental health status, or similar topics."</para>
+        <para xml:id="para_e5a40829-24e6-4064-9026-2d88eb8a503c">Denotes policy-defined sensitivity for the Participant Object ID such as VIP, HIV status, mental health status, or similar topics.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_e36acc7d-1062-42f7-a1d0-5cafa1898f07">Used as defined in RFC3881.</para>
+        <para xml:id="para_e36acc7d-1062-42f7-a1d0-5cafa1898f07">Locally defined terms.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1676,7 +2483,7 @@ start = message
         <para xml:id="para_9b0ed094-f199-4923-8c77-3acd9e212480">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8411c7ca-0109-44d7-834f-f88436aeaace">"Identifies a specific instance of the participant object."</para>
+        <para xml:id="para_8411c7ca-0109-44d7-834f-f88436aeaace">Identifies a specific instance of the participant object.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_441b3106-b9fe-4259-bd37-fe6044809f7c">Usage refined by individual message descriptions</para>
@@ -1690,7 +2497,7 @@ start = message
         <para xml:id="para_d2fb1e23-47d0-4938-b84b-5b8fa327667e">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_b3990fcd-d954-4345-88c5-913618d45892">"An instance-specific descriptor of the Participant Object ID audited, such as a person's name."</para>
+        <para xml:id="para_b3990fcd-d954-4345-88c5-913618d45892">An instance-specific descriptor of the Participant Object ID audited, such as a person's name.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_f3581154-84cc-4db1-9f29-d643c9c99f93">Usage refined by individual message descriptions</para>
@@ -1704,7 +2511,7 @@ start = message
         <para xml:id="para_b17c5038-65e7-4187-addc-df30e6ea8440">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_d30f4aab-1f78-4598-82f0-853c76d6d0e6">"The actual query for a query-type participant object."</para>
+        <para xml:id="para_d30f4aab-1f78-4598-82f0-853c76d6d0e6">The actual query for a query-type participant object.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_c531cc2e-b8a2-4208-8406-8a0fe79aef43">Usage refined by individual message descriptions</para>
@@ -1718,13 +2525,11 @@ start = message
         <para xml:id="para_8762e31a-4ce8-4e1e-bf3a-a20ae904f5ad">U</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_a5ee031c-014a-41e8-83d0-cb2e32c218a6">"Implementation-defined data about specific details of the object accessed or used."</para>
+        <para xml:id="para_a5ee031c-014a-41e8-83d0-cb2e32c218a6">Implementation-defined data about specific details of the object accessed or used.</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_fd2ecc89-3bf7-47ef-8479-43e18d375ca8">Used as defined in RFC3881.</para>
-        <note>
-<para xml:id="para_41e8307b-f970-4e0b-9821-a76559d28c42">The value field is xs:base64Binary encoded, making this attribute suitable for conveying binary data.</para>
-</note>
+        <para xml:id="para_fd2ecc89-3bf7-47ef-8479-43e18d375ca8"/>
+        <para xml:id="para_41e8307b-f970-4e0b-9821-a76559d28c42">This element is a Type-value pair. The "type" attribute is an implementation-defined text string. The "value" attribute is base 64 encoded data. The value is suitable for conveying binary data.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -1735,7 +2540,7 @@ start = message
         <para xml:id="para_735dfdc8-065e-4189-baea-c8eee94c07e0">MC</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_2c055e43-efbf-4ea5-86d9-92b0bedca859">(DICOM extension)</para>
+        <para xml:id="para_2c055e43-efbf-4ea5-86d9-92b0bedca859"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_e90d1cee-0915-4868-a69e-98cb49b2dfb9">The UIDs of SOP classes referred to in this participant object.</para>
@@ -1750,7 +2555,7 @@ start = message
         <para xml:id="para_6aeaf8e9-4423-47e5-a195-8b2263c7baf2">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_e45ca9bd-2df1-441a-bb7c-3b9398a4e1d1">(DICOM extension)</para>
+        <para xml:id="para_e45ca9bd-2df1-441a-bb7c-3b9398a4e1d1"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_12b11f80-7ff2-430f-89a4-7dc46c5b5f59">An Accession Number(s) associated with this participant object.</para>
@@ -1764,7 +2569,7 @@ start = message
         <para xml:id="para_384e4ab4-2331-4b1a-8a86-2414b26172c1">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_8d4e77ca-482b-44d4-80ee-c39c74496ccf">(DICOM extension)</para>
+        <para xml:id="para_8d4e77ca-482b-44d4-80ee-c39c74496ccf"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_3c4a6c3e-317c-40c2-864a-03280946affc">An MPPS Instance UID(s) associated with this participant object.</para>
@@ -1778,7 +2583,7 @@ start = message
         <para xml:id="para_db4eb9bb-c8f5-414e-9cd9-7e9f0df91ca4">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_fee41b78-d1e5-428a-887e-5e27187bf40c">(DICOM extension)</para>
+        <para xml:id="para_fee41b78-d1e5-428a-887e-5e27187bf40c"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_dccfe881-a71b-44dd-8512-ee53a31a67ab">The number of SOP Instances referred to by this participant object.</para>
@@ -1792,7 +2597,7 @@ start = message
         <para xml:id="para_52f782e1-1120-488d-9823-3d37b201eea8">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_044979e4-0085-412f-8eb2-8c2e3ffe8a5e">(DICOM extension)</para>
+        <para xml:id="para_044979e4-0085-412f-8eb2-8c2e3ffe8a5e"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_7d365512-5c81-4713-becf-8bf253d00848">SOP Instance UID value(s)</para>
@@ -1809,7 +2614,7 @@ start = message
         <para xml:id="para_8fbe630a-baf2-45d8-af57-28cc6a961afe">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_18e22efd-24ae-44d5-874f-6033c731dd01">(DICOM extension)</para>
+        <para xml:id="para_18e22efd-24ae-44d5-874f-6033c731dd01"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_790b6ac7-2db5-4bec-b9e9-294b6d58e69a">A single value of True or False indicating whether or not the data was encrypted.</para>
@@ -1826,7 +2631,7 @@ start = message
         <para xml:id="para_32c90e85-5f5b-4ef5-9d20-a1d21c822684">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_1ce7b1ea-6ec9-4a77-991c-938969027a7d">(DICOM extension)</para>
+        <para xml:id="para_1ce7b1ea-6ec9-4a77-991c-938969027a7d"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_dda76d79-3497-4245-b5d1-3fd9a4fde535">A single value of True or False indicating whether or not all patient identifying information was removed from the data</para>
@@ -1840,7 +2645,7 @@ start = message
         <para xml:id="para_9808065e-55b6-4fc7-996a-a84a05f23ea1">U</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_f588619d-610d-4ae5-893f-c38ef0b55e46">(DICOM extension)</para>
+        <para xml:id="para_f588619d-610d-4ae5-893f-c38ef0b55e46"/>
       </td>
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_f9fabd86-00df-4871-9e0d-721bd62f990e">A Study Instance UID, which may be used when the ParticipantObjectIDTypeCode is not <olink targetdoc="PS3.16" targetptr="DCM_110180">(110180, DCM, "Study Instance UID")</olink>.</para>
@@ -3822,7 +4627,8 @@ start = message
         <para xml:id="para_3b26c7aa-46c8-4b86-8d8e-dacdb992304e">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_27edc8ac-5166-482f-a2aa-376941b9459b">Values selected from DCID (405)</para>
+        <para xml:id="para_27edc8ac-5166-482f-a2aa-376941b9459b">Values selected from D<olink targetdoc="PS3.16" targetptr="sect_CID_405" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4386,7 +5192,7 @@ start = message
         <para xml:id="para_ffda41da-6f8d-496b-bf31-0c1d3463fc57">MC</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_94a796cf-1399-4f36-bc5e-e40293e342a6">Shall be present if Net Access Point Type Code is present. Shall use fields as specified in RFC3881.</para>
+        <para xml:id="para_94a796cf-1399-4f36-bc5e-e40293e342a6">Shall be present if Net Access Point Type Code is present.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -4408,7 +5214,8 @@ start = message
         <para xml:id="para_e92e027a-6802-48f1-9d9c-d043a30dbfc8">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_6c0c6945-ea89-4d7c-aeb1-832806e8bf4f">Values selected from DCID (405)</para>
+        <para xml:id="para_6c0c6945-ea89-4d7c-aeb1-832806e8bf4f">Values selected from D<olink targetdoc="PS3.16" targetptr="sect_CID_405" xrefstyle="select: labelnumber quotedtitle"/>
+</para>
       </td>
     </tr>
     <tr valign="top">
@@ -7149,7 +7956,7 @@ start = message
         <para xml:id="para_cab28617-ca1f-4f59-bb09-9aebf4554469">M</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_564dd3c0-4919-47e6-bfd8-deb08dd23f3b">Values selected from DCID( 403)</para>
+        <para xml:id="para_564dd3c0-4919-47e6-bfd8-deb08dd23f3b">Values selected from D<olink targetdoc="PS3.16" targetptr="sect_CID_403" xrefstyle="select: labelnumber quotedtitle"/>.</para>
       </td>
     </tr>
     <tr valign="top">
@@ -8828,7 +9635,7 @@ start = message
   </note>
   <para xml:id="para_e9fb7e42-c64e-45bc-b8e5-efee041fbb22">The PRI field shall be set using the facility value of 10 (security/authorization messages). Most messages should have the severity value of 5 (normal but significant), although applications may choose other values if that is appropriate to the more detailed information in the audit message. This means that for most audit messages the PRI field will contain the value "&lt;85&gt;".</para>
   <para xml:id="para_6d32aeb9-7ff0-416e-ab17-1a0afd1816a1">The MSGID field in the HEADER of the SYSLOG-MSG shall be set. The value "DICOM+RFC3881" may be used for messages that comply with this profile.</para>
-  <para xml:id="para_b8a55fdd-0a95-423f-addc-ed02a0e661f5">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC3881 format, as extended in the audit trail message format profile.</para>
+  <para xml:id="para_b8a55fdd-0a95-423f-addc-ed02a0e661f5">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>).</para>
   <para xml:id="para_7c3c0f0e-b0c1-4cff-9eef-09368f73b3ae">The syslog message shall be created and transmitted as described in RFC5424.</para>
   <para xml:id="para_682c6207-727e-46af-8fb6-94cc1fc9bc26">Any implementation that claims conformance to this Security Profile shall describe in its conformance statement:</para>
   <orderedlist numeration="loweralpha">
@@ -8854,7 +9661,7 @@ start = message
   <para xml:id="para_e8649e42-cad6-4f90-9ab4-d07e8384a694">The underlying UDP transport might not accept messages longer than the MTU size minus the UDP header length. This may result in longer syslog messages being truncated. When these messages are truncated the resulting XML may be incorrect. Because of this potential for truncated messages and other security concerns, the transmission of syslog messages over TLS may be preferred (see <xref linkend="sect_A.6" xrefstyle="select: label"/>).</para>
   <para xml:id="para_f235e963-dfeb-4e2e-8e44-f73980f0187b">The PRI field shall be set using the facility value of 10 (security/authorization messages). Most messages should have the severity value of 5 (normal but significant), although applications may choose values of 4 (warning condition) if that is appropriate to the more detailed information in the audit message. This means that for most audit messages the PRI field will contain the value "&lt;85&gt;". Audit repositories shall be prepared to deal appropriately with any incoming PRI value.</para>
   <para xml:id="para_e5faa060-4af1-41ea-923e-e3ceed479b2d">The MSGID field in the HEADER of the SYSLOG-MSG shall be set. The value "DICOM+RFC3881" may be used for messages that comply with this profile.</para>
-  <para xml:id="para_a89bdb4b-efcb-4bc0-8532-ffcec32cd8b9">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the RFC3881 format, as extended in this profile.</para>
+  <para xml:id="para_a89bdb4b-efcb-4bc0-8532-ffcec32cd8b9">The MSG field of the SYSLOG-MSG shall be present and shall be an XML structure following the DICOM Audit Message Schema (see <xref linkend="sect_A.5.1" xrefstyle="select: label"/>).</para>
   <para xml:id="para_826f25d8-71f8-4f3d-9784-2d5081ff2706">The syslog message shall be created and transmitted as described in RFC5424.</para>
   <para xml:id="para_e22f58f0-913f-4f9d-bdfb-97e437aa6701">Any implementation that claims conformance to this Security Profile shall describe in its conformance statement:</para>
   <orderedlist numeration="loweralpha">
@@ -10681,34 +11488,6 @@ start = message
     </tr>
     <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_6d0023fb-ccd9-4902-8445-ea39595cefee">Context Group Extension Creator UID</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_a6a8e54d-5f36-40c2-98c6-785ed3aa808b">(0008,010D)</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_37579bb4-62a9-4820-b887-c6eaa3b8faad">N</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_a4960b05-c30b-47eb-8396-1e81fcc3e308">Y</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_0de543d9-da40-434a-97cd-d22efe54b8e4">U</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_4cc24b9d-7c15-492e-ac63-7eb3bf54a352">K</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_d9368954-d32e-4144-bcbe-7c9e6c71b1b0">Contrast Bolus Agent</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
@@ -10781,34 +11560,6 @@ start = message
       </td>
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_d8b951e3-afde-45de-8596-bbdc4f32bde4">Creator Version UID</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_43922691-c481-434a-93ff-0a07a2ff4804">(0008,9123)</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_9a3ad9a0-31b4-4057-9dba-20d34c04de2d">N</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_875a92bc-7447-4c39-8355-93505360d126">Y</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_515bbcc8-fe89-46e5-905c-cf641f07099c">U</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_c35cbce9-17a6-4caa-8903-2667b486dfe1">K</para>
-      </td>
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
@@ -19299,6 +20050,759 @@ start = message
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_df3cefa0-3034-4123-8012-2ac3d2b8dea8">Scale Slope</para>
+              </td>
+            </tr>
+                        <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fa98d4e1-ba60-4f0c-b92d-7aa91bafcbd2">(0119,xx00)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3d1d64fd-a0cd-4252-b14d-9b81ecd615cb">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_537ffe7d-3ab6-4acd-844d-0448366ab4dc">LO</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_76c71cf1-e823-41e8-92bd-2b49dcb36ccf">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_daed5bc5-aa17-43d1-afdb-ad2563c4a636">Acoustic Meta Information Version</para>
+              </td>
+            </tr>
+              <tr valign="top">
+                  <td align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_2c9169c4-e4ca-43b0-b684-892cf95dd1ad">(0119,xx01)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_004270aa-953b-4099-b239-00fde1607974">SIEMENS Ultrasound SC2000</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_4186ca28-fd8d-4589-914e-7ad83fa2125f">OB</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_7b3c118c-cb3d-4d45-9cb1-5a614aa6b46f">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_e59e9a43-f38d-4a34-8dd0-61352a4d5f03">Common Acoustic Meta Information</para>
+                  </td>
+              </tr>
+                          <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e6202d74-c65b-4b94-8aca-d8560c50d1ba">(0119,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e9b04935-b16e-4827-b986-0f7be1747814">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_45e218d8-0197-4dc9-85ba-388850861090">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3dcdea4f-8d71-4de9-ab8a-97b99a18166d">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_92d74b24-7d95-439b-bb6e-713c7a4836f4">Multi Stream Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a741376a-d13a-4942-bf49-fc647d76fb10">(0119,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_718f785f-be1b-4c17-a529-2440a0fc11ae">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7b840e29-8f5b-43e6-b33f-504cf04395fd">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3aa4b0ac-a2a7-467b-ab81-bb4dd0bc434a">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_8862e8e4-8c20-4d66-af60-f4a29f9028ab">Acoustic Data Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_be5f8423-75d7-460b-9c24-55bb4035cbf0">(0119,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_f3391dd7-0dcc-4ff8-b413-94718897a478">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4f7d90a2-57d0-4820-8495-ff1bf737c82a">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_dc8fe350-e51a-4680-8c32-991f327895dc">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a9ed3cb2-5799-4e8e-aa6f-a1a27d025b3d">Per Transaction Acoustic Control Information</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_665bd93e-07ea-4538-baaf-f0c624bfc46e">(0119,xx05)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_3d25e294-c0ed-4888-ae5a-e7d179b5c666">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_67a9e52a-82de-4f32-8788-8a62eae24a7b">UL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9888861b-9786-4b10-a015-eabca97722fa">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e2b61792-e749-4554-82c7-4f5446d875ab">Acoustic Data Offset</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e9e2a1d8-c14b-4eda-8200-f215017d01a6">(0119,xx06)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_cb45650e-99f5-44e6-83f3-7f3b4bff8b29">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_34fab6d0-8c74-4b61-b582-3e2a5d106620">UL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5da00562-3923-47eb-8c49-b2b89bd2fb11">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_61cb6b36-9f77-4b68-89ab-9bf113742377">Acoustic Data Length</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9b20bf44-fb26-4b51-8396-b39069c0cc47">(0119,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_339c8475-6f46-43a3-9f9f-8ec73b8c8ce1">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6f26919f-33e2-4607-b374-63966004ccb7">UL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1ea61a6f-e84c-42ac-9c84-274d3abd9fad">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_1b9eb3a4-ce97-4ddf-8685-7ac58ff5e855">Footer Offset</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f5320383-e63b-45c7-a393-03ddef392e18">(0119,xx08)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c71df741-228e-4e53-b475-e0278e37f58f">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_92a37078-a826-44fc-a1c4-3ada5b19c155">UL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_790438da-78d5-4607-b607-ce02d2307fb1">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_558c294e-384c-4af2-bb4f-f529744878ca">Footer Length</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_a4954701-48fd-42af-bffd-c2ba4e852aeb">(0119,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d3d681a4-1d81-4eb9-bbdf-b18e6282ba7c">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b87be063-a73d-45ae-be26-86a9c2944fcd">SS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9fa73fa5-a16b-4913-9f43-2e8605e78d3b">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_0dbe789a-f950-49c1-ada9-6bb6c10f9fcd">Acoustic Stream Number</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_09a29ee3-1cf2-4e0a-97a4-63c1088cb57d">(0119,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_59702b5c-51d3-4c0a-a772-baf33ed1fa60">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_620d6778-b3f4-4cca-9d11-a8379c0f01dc">SH</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c1cfe4c6-633a-4f01-b8e0-ca0e71bc7a73">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_610f07ca-9552-4d22-8648-c8007ea1aa9f">Acoustic Stream Type</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_47479a56-c6ca-4a84-a9ad-763360a75183">(0119,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_ead616cd-c166-489f-adee-f9654a4f4402">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_72daaf38-372c-47c7-9ac4-440852ad0525"/>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cf52b603-cdd3-41b0-9866-12303a05be6f">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e749876b-ef7a-4a94-b502-81bf91499d11">Stage Timer Time</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2b3977d0-4754-44ce-b57e-f4b1b57e6141">(0119,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fa5287ed-226b-4a87-8f17-3a1c190f711e">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8ec3e3d9-6e9b-430f-a9f5-2bb7a590ff73"/>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_67db85c4-550f-427b-b685-f4c72eed8bb2">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_59b9a07b-c6de-4cb4-bbbf-0e91fb9775f0">Stop Watch Time</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_19ae28cd-693e-4d00-9a18-a191cd590af6">(0119,xx13)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_586dddec-7a11-4b3a-bff4-0d90abfd51da">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_51048300-18ed-475f-aab8-4c457010b913">IS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6a570823-4edb-44c4-883b-5e837ebfb15e">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_bf1ea9d3-cc24-4c48-b24e-2c32dbdd4e06">Volume Rate</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2c87e854-648b-4d57-8c8c-edb9c8514eb6">(0119,xx21)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d52dddc4-f5db-4c90-a2bf-9f3cb05c417f">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_350276b5-7306-4522-bfb7-2f28a6063c4b">SH</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5f3e3328-dbdd-438b-b1cf-b8818fbbef18">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_8232fad4-910b-4d19-b2e0-90e155eda906"/>
+              </td>
+            </tr>
+
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_20b5ad8a-eba0-447c-b7bd-322f05476c21">(0129,xx00)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e127247e-e06a-46e4-b6e3-cd3b41b143b6">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1d15d432-0282-490c-a2ff-03c9862524c6">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d0f497a5-519d-40c8-b87e-cee08f807842">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a6184b2c-7b36-418f-855b-6af16c20bc29">MPR View Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f1eee3f0-701f-44ef-8b18-0d4ecb88adf4">(0129,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7308a16f-c3b1-4028-9584-8f639eb1e42b">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_c5bac947-8af5-4d37-8289-37d061870a07">UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4d6466bb-2d3f-49d0-bea6-d297617fa0ea">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e0a0f11e-30da-4ec1-8844-f0017a51f35e">Bookmark UID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fbd355ad-1dbe-44c2-8ae8-2ac91d4847be">(0129,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d3cc32ba-5c5a-4e5f-9d67-2f84fcf2dca8">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cd107e00-7f5d-4068-8603-13c576b02ceb"/>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_44cb7d0d-ab29-4f80-a08b-e3eb2122c749">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d70caaf2-6778-4a65-901f-a8ae685cac58">Plane Origin Vector</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_ef29b6ee-fbad-42b5-b28b-a4ef2efdd0a2">(0129,xx04)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_31fa6369-2b12-4c4d-829c-e7a3d38d1966">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7ac4dc96-0269-48cd-84b4-e4b93a7a9458"/>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_8803c927-ec0c-4d7a-81fa-41a345eef9fd">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_31a10ba2-0eb2-44ea-8086-be3a1d78c661">Row Vector</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b825a5ab-e99e-46fd-9768-94b8bd8641a9">(0129,xx05)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_708ddbbd-5482-439d-a6a0-264d701eaf18">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d6de09d1-e2db-4731-9cf3-26242a39e19c"/>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5958872c-abf5-4ea2-97e4-200b35819c45">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7a63527d-dd36-4e87-80ca-26b022d32ec0">Column Vector</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4f594f9a-a845-4c1f-8f32-0629a658b671">(0129,xx06)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b06f835b-fac1-4662-ab15-dd7b749e6055">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_480a221e-bb19-4e1d-aae7-2398713cb0d3">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_44c018f3-85f5-4478-b4ad-688874a2356f">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_d2a39b42-9746-4046-851c-cae26fa352c3">Visualization Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f27ef0f1-4207-409f-9ba1-fef6036e2c57">(0129,xx07)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a0aa4676-56b8-428f-8e6c-c1d8c318bc52">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6255aada-1088-44d5-8757-4862fc12b9e9">UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_abb3000d-1fef-4d9e-b52b-5924492e7b3e">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fe4a7b6e-fe61-44e0-83bc-10a40a21e55b">Bookmark UID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_02d772db-80bc-4278-b068-08c919c25922">(0129,xx08)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_9bafb603-c577-476c-9ec1-bfd4441fbcb6">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_699790fb-d6a1-4ba3-9854-14d5b4c6dc75">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_308c86ba-e9a1-4d28-a4af-8065a55c9528">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_729427fb-02db-4ec5-b1a6-e04785084eb3">Visualization Information</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_785c2f71-a55e-4395-9f39-4f5c9ecdcd60">(0129,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_8b7cafeb-b33b-487a-9971-6c7f0c50445c">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b39c940a-ddbe-4c90-abf1-f67cf6b015cf">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_82aadf23-4901-41dc-8fea-6f64777da5ea">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_4a8a556d-df5c-4e1e-a1fb-8fb48fa4378d">Application State Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_902e3b5d-ebac-4fca-8bc3-ccd8e5f9b1ee">(0129,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_88ea089a-9431-42a0-a598-b21e0ed12931">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_40525cc1-8ecf-4c70-b09d-81ab305d424d">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_0d4df1b3-6745-4b5d-ba45-4a32d7d9b1f7">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c8deef0f-21f5-41ba-a315-ddff2abbc1b0">Application State Information</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_01ea828d-d0cc-4194-beaf-dc75197b1d1a">(0129,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7be58f9f-5131-47b2-8917-7358e5d0c69b">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_7f1cb4bd-2f67-4abb-a65d-12298fe72db9">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_409a24a4-c4c8-471f-958a-523af2b57c5b">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_75b2ec68-f54d-429c-8ce0-30640ccbfbf1">Referenced Bookmark Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d1754819-cc20-4601-8a99-5195d8a84c83">(0129,xx12)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_329dfcd5-ec00-4538-8e78-9ad7a92e1dc3">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_244c23dd-b979-41a6-8d89-4d91c8070ee3">UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_df4d0f5b-472f-4d27-8b15-f9e7fd956238">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7be934ce-9beb-4138-bb3b-a3738b01518e">Referenced Bookmark UID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d14698f4-1058-475f-b567-8c785328aedb">(0129,xx20)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_1a4652b1-8c8f-4cc6-88ed-d93bbdba4be3">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f109a9a1-77df-4705-85d9-cb00c7aee3c5">SQ</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cac817fe-5222-471c-bb06-5c51343e1936">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_18b90359-d47d-4dbf-a119-592f4210e737">Cine Parameters Sequence</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_04ac1aba-d6de-42b3-a9f1-674e58b47638">(0129,xx21)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_bc81969f-4aa8-4986-923c-801f8ac65d09">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_32c4a20a-e434-4aa7-a6c5-09b5c183c08e">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_32c9b815-2294-4aa0-a2aa-5dbd1ca6e01b">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e850f223-084a-4e51-9b65-359c5efe3d2b">Cine Parameters Schema</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_06feb66b-a797-423c-ab89-da891b4d70e6">(0129,xx22)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_100caf97-1f16-4e5d-af55-3465c9099456">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_37ce2deb-a2a0-4117-b61d-b487df1d662b">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_81fa6c52-0aee-489b-98f6-f25fc3b21444">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_af835ca5-4931-431c-9643-f1118b072d16">Values of Cine Parameters</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_b08f1bc5-7f98-4bf6-91d2-77a1cf0b8d0e">(0129,xx29)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_35f98965-0962-4bda-8091-0d34335e1fe2">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cf062fa4-6d88-40b6-91bb-91bd8e70db60">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f859db99-1674-49ef-bf75-35b277514b0a">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e6471908-5bbe-4fd0-8fbe-138f13bace4f"/>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_df1b6fbf-1825-4222-b965-2b2e180348d6">(0129,xx30)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_6fd1b1b1-8e64-42d6-ae33-242b6c2b9814">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1ce54204-b2d4-4951-bede-c6b7f0cdc99a">CS</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e56b02d4-be4c-41a8-b714-f777c96aecae">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_669cb0a6-c93b-4819-9075-c865cad9a56c">Raw Data Object Type</para>
+              </td>
+            </tr>
+
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d95524ef-3021-40c9-8afc-8fa967e4b5b7">(0139,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_2c4d38e6-73da-43dc-bb6d-c1868d5d0fe4">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4b824c01-33e3-46b6-8655-6222fb7e3802">SL</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_1ac39b76-f60a-4f9a-9456-3613fac9340c">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b09fa8d7-1df3-4757-9156-e131976cd443">Physio Capture ROI</para>
+              </td>
+            </tr>
+
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f24d8828-3546-479d-aa8a-2e05172bc5d6">(0149,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_7ff74c4f-fd0a-4cca-ac37-8e81254070d8">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_3f2161cf-72f3-45f5-b1ec-027939fe9b92">FD</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_145d70a0-98e4-4d0b-8b56-a0e86a1b30d9">1-n</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a0e0999f-4101-49df-8081-fb6f5a87ab04">Vector of BROI Points</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4c49abee-9b99-425f-a6ea-9602356a8aae">(0149,xx02)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_9918226d-5874-441f-a1b5-b970036e79a7">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6b4f0cee-0405-460b-a44f-0dcfe97707e9">FD</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_08e8b6b1-1a3b-4dfc-b237-11dcd3929578">1-n</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_44c8b1b9-f18a-4c29-b6c0-1229f5d165bd">Start/End Timestamps of Strip Stream</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_ac49cd6c-4775-4a17-96a3-14d58ccc42f0">(0149,xx03)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fc46f918-5555-4953-9f55-c92efe0165dd">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_755f7ba0-f9e3-4a15-be64-946e8e5e5ef8">FD</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_f75f0c34-d20c-4214-a07f-bff83ae2a1ad">1-n</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c3b35ca3-787a-4913-b3a2-38715b42d1d3">Timestamps of Visible R-waves</para>
+              </td>
+            </tr>
+
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_97c0c7fd-9397-49e0-9f6e-3fc7ef1ba7cd">(7FD1,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_56f5c539-18de-43ec-8a69-5cd024f715a2">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cb17434a-bb39-47dc-bab8-8675bf60dea7">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_22444379-a313-4ace-8657-81836a5e4d81">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_356a0c7b-6df1-415c-aa7c-1d3c237d2957">Acoustic Image and Footer Data</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_43f8de9b-0321-4672-8582-742a0e7c6854">(7FD1,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_50f76633-6253-4077-a86f-df9d2b8c0dd3">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_84d0f063-bc77-4280-a8c1-272da91bbf51">UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_54341b8d-daf3-4427-ae8d-070157d48be4">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_cb212b98-a3c5-491a-a674-65a04f25dd05">Volume Version ID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_bbf00504-5548-4969-8b3f-9b837cd8e2f8">(7FD1,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b51fc6d2-03fc-4a1f-9cfe-34308311e91d">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_da270b1a-ff73-49df-a1ad-dc3d27f10a2d">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_d54d8741-f98d-42a0-bb00-9695d63b30be">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_c6532cb1-5452-4504-b3e0-c4d2cc4dac3b">Volume Payload</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_06ace8e1-8efe-4b9c-8aad-dc8683a5f517">(7FD1,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_87c74885-1408-49f1-9647-a1d26ab0e195">SIEMENS Ultrasound SC2000</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_97c63adb-e45b-472d-8e26-dde438494482">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_33e1a752-1ad1-4914-be6b-2819a420cb49">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_27fb7d32-83b5-465f-9eac-7bfcbfe80300">After Payload</para>
+              </td>
+            </tr>
+
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5b898e63-2202-4277-8af7-cb6f8ff663a1">(7FD1,xx01)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b8711107-33e3-40a4-9e86-5c295902f747">SIEMENS SYNGO ULTRA-SOUND TOYON DATA STREAMING</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_eeb92f16-c9ae-4ce5-bad4-46fe9270056d">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_672f2697-32f2-4664-8ada-9c9006a9e3e5">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_882818ac-f142-40d0-9d98-910eef6bbff3">Padding</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_9274af25-1a22-4df2-8b37-528f1c5f0491">(7FD1,xx09)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_73856fa9-62c5-43ce-983f-d0c9d725c836">SIEMENS SYNGO ULTRA-SOUND TOYON DATA STREAMING</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_5d74d7fe-2a8e-4427-a6d6-809d58dd2503">UI</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fe5e6eda-b6d9-48f3-b059-c38859972d62">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_f4520330-a971-4723-9a7d-e17b98c411fd">Version ID</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e6079ea2-7698-44c9-9f5c-81a40ee1e992">(7FD1,xx10)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_b75bda96-5d50-49a1-bbf5-c078b90f4146">SIEMENS SYNGO ULTRA-SOUND TOYON DATA STREAMING</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_2ee6b51e-6e3d-42e3-9180-e5718cac8917">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_6353e615-144d-4dd0-9592-4852fe3de6b0">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_05845f3c-db32-448d-9084-177a67f9fca3">Volume Payload</para>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_64d409e9-e051-4d34-af2c-f7f0d1d2491f">(7FD1,xx11)</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_e83eb31b-1f0c-4ff8-9350-2ba903cc6167">SIEMENS SYNGO ULTRA-SOUND TOYON DATA STREAMING</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_e08e451f-75ab-4ab4-b906-82b90d1bb593">OB</para>
+              </td>
+              <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_4256fd4e-fc40-4053-90de-8f4395d321c9">1</para>
+              </td>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fa75bbb7-0318-4f77-900f-875393f939b8">After Payload</para>
               </td>
             </tr>
           </tbody>
