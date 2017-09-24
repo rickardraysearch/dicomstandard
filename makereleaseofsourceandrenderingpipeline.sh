@@ -141,7 +141,7 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	wordexport/part20/part20_fromword_files \
 	support/stylesheets/extractcompositeiodsfordicom3tooltemplate.xsl \
 	support/stylesheets/extractcompositemodulesfordicom3tooltemplate.xsl \
-	support/stylesheets/extractcontextgroupdsforpixelmed.xsl \
+	support/stylesheets/extractcontextgroupsforpixelmed.xsl \
 	support/stylesheets/extractdcmconceptswithoutdefinitionforcp.xsl \
 	support/stylesheets/extractdcmdefinitionsasowl.xsl \
 	support/stylesheets/extractselectedcontextgroupsforXDSeventcodelist.xsl \

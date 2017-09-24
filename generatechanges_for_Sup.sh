@@ -6,7 +6,7 @@ changefile="$3"
 
 rm -f "${changefile}"
 
-cd DeltaXML-DocBook-Compare-3_0_4_w
+cd DeltaXML-DocBook-Compare
 java -Xmx2g -jar deltaxml-docbook.jar compare \
  "${oldsourcefile}" \
  "${newsourcefile}" \

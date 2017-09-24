@@ -6,8 +6,12 @@ priordir="${HOME}/Documents/Medical/stuff/medical.nema.org/MEDICAL/Dicom/${prior
 
 rm -f "source/docbook/part${part}/part${part}_changes.xml"
 
-cd DeltaXML-DocBook-Compare-3_0_4_w
-java -Xmx4g -jar deltaxml-docbook.jar compare \
+cd DeltaXML-DocBook-Compare
+java \
+ -Xmx8g \
+ -XX:-UseGCOverheadLimit \
+ -jar deltaxml-docbook.jar \
+ compare \
  "${priordir}/part${part}/part${part}.xml" \
  "../source/docbook/part${part}/part${part}.xml" \
  "../source/docbook/part${part}/part${part}_changes.xml"

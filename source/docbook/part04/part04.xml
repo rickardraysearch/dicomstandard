@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2017c - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2017d - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2013,7 +2013,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f3fd5250-7dff-4711-a520-e21284af51d5">
-                <olink targetdoc="PS3.3" targetptr="sect_A.8" xrefstyle="select: title"/>
+                <olink targetdoc="PS3.3" targetptr="sect_A.8.1" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -2260,7 +2260,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0a9d2383-e314-46a4-b6d4-d2e1b66a9580">
-                <olink targetdoc="PS3.3" targetptr="sect_A.80.1.1" xrefstyle="select: title"/>
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -2273,7 +2273,7 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_3f472819-5ae7-456d-bb15-cbfb25d84219">
-                <olink targetdoc="PS3.3" targetptr="sect_A.80.1.1" xrefstyle="select: title"/>
+                <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -4078,85 +4078,89 @@
               </listitem>
             </orderedlist>
           </note>
-          <para xml:id="para_1f9a6aae-93b6-4973-b456-b962790c75c2">The Timezone Offset From UTC (0008,0201) Attribute may be present in the Identifier but is not matched if Timezone query adjustment is negotiated. If Timezone query adjustment is negotiated, it specifies how date and time Attribute values are interpreted in the Request and Response Identifiers if those values lack a specific time zone offset specification.</para>
+          <para xml:id="para_1f9a6aae-93b6-4973-b456-b962790c75c2">The Timezone Offset From UTC (0008,0201) Attribute may be present in the Identifier but is not matched if Timezone query adjustment is negotiated. If Timezone query adjustment is negotiated, it specifies how Attribute values of VR of DT and TM (including related Attribute values of VR of DA, if present) are interpreted in the Request and Response Identifiers if those values lack a specific time zone offset specification.</para>
           <section label="C.2.2.2.1" status="5" xml:id="sect_C.2.2.2.1">
             <title>Single Value Matching</title>
             <para xml:id="para_33957686-3953-4a04-b30a-6cfc1938bbf3">If the value specified for a Key Attribute in a request is non-zero length and if it is:</para>
             <orderedlist numeration="loweralpha">
               <listitem>
-                <para xml:id="para_4f144eb2-7834-4b2d-a635-829ecef27cb1">not a date or time or datetime, contains no wild card characters</para>
+                <para xml:id="para_4f144eb2-7834-4b2d-a635-829ecef27cb1">not of VR of DA, TM or DT and contains no wild card characters</para>
               </listitem>
               <listitem>
-                <para xml:id="para_ab1103ab-b157-43b4-9ef5-661084ad010f">a date or time or datetime, contains a single date or time or datetime with no "-"</para>
+                <para xml:id="para_ab1103ab-b157-43b4-9ef5-661084ad010f">of VR of DA, TM or DT and contains a single value with no "-"</para>
               </listitem>
             </orderedlist>
-            <para xml:id="para_cbd0128a-7ff8-4271-b4e7-e9c379d0a883">then single value matching shall be performed. Except for Attributes with a PN Value Representation, only entities with values that match exactly the value specified in the request shall match. This matching is case-sensitive, i.e., sensitive to the exact encoding of the key Attribute value in character sets where a letter may have multiple encodings (e.g., based on its case, its position in a word, or whether it is accented).</para>
-            <para xml:id="para_d18005af-0769-4870-bbec-b6aebd090adf">For Attributes with a PN Value Representation (e.g., Patient Name (0010,0010)), an application may perform literal matching that is either case-sensitive, or that is insensitive to some or all aspects of case, position, accent, or other character encoding variants.</para>
-            <note>
-              <orderedlist>
-                <listitem>
-                  <para xml:id="para_1387596f-a203-4ce9-b0f7-f901a1aa8b0c">For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; wild card matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_d25cd1f5-2dd6-44cf-bdd6-977eb0e875e5">Using attributes with VR of AE, LO, PN and SH as matching keys will not allow single value matching on values that contain characters "*" and "?" - such queries will always be treated as queries with wildcard matching.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_56b21161-be4f-465b-9153-493a4e5bdd8b">Attributes with VR of ST, LT and UT are intended for conveying narrative text and may contain wildcard characters "*" and "?". Attempts to match on a string explicitly containing "*" or "?" will be treated as wildcard matching and thus may return multiple results rather than a single one. </para>
-                </listitem>
-              </orderedlist>
-            </note>
-            <para xml:id="para_ef61aabe-1c74-445e-a239-45b34a3b0d58">If extended negotiation of fuzzy semantic matching rather than literal matching of PN Value Representation is successful, not only may matching be insensitive to case, position, accent, and character encoding, but in addition other techniques such as phonetic matching may be applied.</para>
-            <para xml:id="para_ef9427f0-57bd-468c-8bdf-c4d8889bfe64">If the Timezone Offset From UTC (0008,0201) Attribute is present in the Identifier and Timezone query adjustment was negotiated, it shall be used to adjust values of time Attributes (and associated date Attributes, if present) from the local timezone to UTC. It shall also adjust values of datetime Attributes that do not specify a timezone offset. The encoding and semantics of the Timezone Offset From UTC (0008,0201) Attribute shall be as defined in the SOP Common Module in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
-            <para xml:id="para_67f4294f-9468-411e-a2d6-0e34ff6f9c8f">The manner in which matching is performed is implementation dependent and shall be specified in the conformance statement.</para>
-            <note>
-              <orderedlist>
-                <listitem>
-                  <para xml:id="para_629ac1f2-488f-4a92-936e-af6c87465617">This definition implies that dates or times or datetimes are matched by their meaning, not as literal strings. For example:</para>
-                  <itemizedlist>
-                    <listitem>
-                      <para xml:id="para_7c36b747-6955-4636-8d51-d7fc071cb3fa">the DT "19980128103000.0000" matches "19980128103000"</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_9e508915-94ce-4181-8969-27d0cbc0389c">the DT "19980128103000" with no timezone offset matches "19980128073000" with timezone offset "-0300"</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_7587f5c9-0324-4b3f-a5f0-494e866e95f3">the TM "2230" matches "223000"</para>
-                    </listitem>
-                  </itemizedlist>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_b64e19da-73ce-4072-b6a9-71c1197ae221">If an application is concerned about how single value matching of dates and times is performed by another application, it may consider using range matching instead, which is always performed by meaning, with both values in the range the same.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_8ad311db-b04e-423f-9e0a-6418187c2d1c">Exclusion of the "-" character for single value matching implies that a Key Attribute with DT Value Representation may not contain a negative offset from Universal Coordinated Time (UTC) if single value matching is intended. Use of the "-" character in date, time or datetime indicates range matching.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_52197e93-7a88-48cc-bb1e-e7535201bafc">If an application is in a local time zone that has a negative offset then it cannot perform single value matching using a local time notation. Instead, it can convert the Key Attribute value to UTC and use an explicit suffix of "+0000".</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_ec2b0092-1619-43c7-9ebd-525912992a79">Matching of PN Attributes may be accent-insensitive, as specified in the conformance statement. Accent-insensitive matching would successfully match, for instance, a query character "SMALL LETTER a" (06/01 in the default ISO-IR 6) with</para>
-                  <itemizedlist mark="none">
-                    <listitem>
-                      <para xml:id="para_62b7eb62-14e6-4413-962c-bdd2486adfe6">"SMALL LETTER a WITH GRAVE ACCENT" (14/00 in ISO-IR 100),</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_7b8341f7-1d12-49b2-95a8-c054564bff1b">"SMALL LETTER a WITH TILDE" (14/03 in ISO-IR 100),</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_e2a3f3ea-1776-4187-88cb-cae647081bf0">"SMALL LETTER a WITH BREVE" (14/03 in ISO-IR 101), and</para>
-                    </listitem>
-                    <listitem>
-                      <para xml:id="para_a403b931-bad2-4886-baf2-9247734f5d82">"CAPITAL LETTER a WITH ACUTE ACCENT" (12/01 in ISO-IR 100) (if matching is also case-insensitive),</para>
-                    </listitem>
-                  </itemizedlist>
-                  <para xml:id="para_4b4a4f14-ff27-49e4-958e-b69ed69bb2b4">but would not match 14/00 in ISO-IR 101, which is "SMALL LETTER r WITH ACUTE ACCENT". Matching to particular bit-combinations is specific to each supported character set (note the difference in meaning of 14/00), and should be described in the conformance statement.</para>
-                </listitem>
-                <listitem>
-                  <para xml:id="para_5ed64695-4f7d-4c04-b0cb-411ef9a4f4da">An SCU application may elect to perform additional filtering of the responses by applying the matching rules itself. In the event that both the SCU and SCP are applying the matching rules, this process will be successful as long as literal matching is performed by both, and any additional SCU filtering is insensitive to case, position, accent, or other character encoding variants.</para>
-                </listitem>
-              </orderedlist>
-            </note>
-            <para xml:id="para_d0adc3ed-2fdb-481b-a58f-1ba755aed8fb">However if fuzzy semantic matching of PN Attributes has been negotiated, matching by the SCP may result in responses that are not obviously related to the request, hence care should be taken if any additional filtering of responses is performed by the SCU. For example, if phonetic matching is performed, a query for "Swain" might well return "Swayne", or if name component order insensitive matching is performed, a query for "Smith^Mary" might well return "Mary^Smith" or "Mary Smith" or "Smith, Mary". Fuzzy semantic matching may also take into account separate single-byte, ideographic and phonetic name component groups.</para>
+            <para xml:id="para_cbd0128a-7ff8-4271-b4e7-e9c379d0a883">then single value matching shall be performed. Except for Attributes with a PN VR, only entities with values that match exactly the value specified in the request shall match. This matching is case-sensitive, i.e., sensitive to the exact encoding of the key Attribute value in character sets where a letter may have multiple encodings (e.g., based on its case, its position in a word, or whether it is accented).</para>
+            <section label="C.2.2.2.1.1" status="6" xml:id="sect_C.2.2.2.1.1">
+              <title>Attributes of VR of PN</title>
+              <para xml:id="para_d18005af-0769-4870-bbec-b6aebd090adf">For Attributes with a PN VR (e.g., Patient Name (0010,0010)), an application may perform literal matching that is either case-sensitive, or that is insensitive to some or all aspects of case, position, accent, or other character encoding variants.</para>
+              <note>
+                <para xml:id="para_1387596f-a203-4ce9-b0f7-f901a1aa8b0c">For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; wild card matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
+              </note>
+              <para xml:id="para_ef61aabe-1c74-445e-a239-45b34a3b0d58">If extended negotiation of fuzzy semantic matching rather than literal matching of PN VR is successful, not only may matching be insensitive to case, position, accent, and character encoding (including combining characters), but in addition other techniques such as phonetic matching may be applied.</para>
+              <note>
+                <orderedlist>
+                  <listitem>
+                    <para xml:id="para_ec2b0092-1619-43c7-9ebd-525912992a79">Matching of PN Attributes may be accent-insensitive, as specified in the conformance statement. Accent-insensitive matching would successfully match, for instance, a query character "SMALL LETTER a" (06/01 in the default ISO-IR 6) with</para>
+                    <itemizedlist mark="none">
+                      <listitem>
+                        <para xml:id="para_62b7eb62-14e6-4413-962c-bdd2486adfe6">"SMALL LETTER a WITH GRAVE ACCENT" (14/00 in ISO-IR 100),</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_7b8341f7-1d12-49b2-95a8-c054564bff1b">"SMALL LETTER a WITH TILDE" (14/03 in ISO-IR 100),</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_e2a3f3ea-1776-4187-88cb-cae647081bf0">"SMALL LETTER a WITH BREVE" (14/03 in ISO-IR 101), and</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_a403b931-bad2-4886-baf2-9247734f5d82">"CAPITAL LETTER a WITH ACUTE ACCENT" (12/01 in ISO-IR 100) (if matching is also case-insensitive),</para>
+                      </listitem>
+                    </itemizedlist>
+                    <para xml:id="para_4b4a4f14-ff27-49e4-958e-b69ed69bb2b4">but would not match 14/00 in ISO-IR 101, which is "SMALL LETTER r WITH ACUTE ACCENT". Matching to particular bit-combinations is specific to each supported character set (note the difference in meaning of 14/00), and should be described in the conformance statement.</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_5ed64695-4f7d-4c04-b0cb-411ef9a4f4da">An SCU application may elect to perform additional filtering of the responses by applying the matching rules itself. In the event that both the SCU and SCP are applying the matching rules, this process will be successful as long as literal matching is performed by both, and any additional SCU filtering is insensitive to case, position, accent, or other character encoding variants.</para>
+                  </listitem>
+                </orderedlist>
+              </note>
+              <para xml:id="para_d0adc3ed-2fdb-481b-a58f-1ba755aed8fb">However if fuzzy semantic matching of PN Attributes has been negotiated, matching by the SCP may result in responses that are not obviously related to the request, hence care should be taken if any additional filtering of responses is performed by the SCU. For example, if phonetic matching is performed, a query for "Swain" might well return "Swayne", or if name component order insensitive matching is performed, a query for "Smith^Mary" might well return "Mary^Smith" or "Mary Smith" or "Smith, Mary". Fuzzy semantic matching may also take into account separate single-byte, ideographic and phonetic name component groups.</para>
+            </section>
+            <section label="C.2.2.2.1.2" status="6" xml:id="sect_C.2.2.2.1.2">
+              <title>Attributes of VR of PN, AE, LO, SH, ST, LT and UT</title>
+              <para xml:id="para_d25cd1f5-2dd6-44cf-bdd6-977eb0e875e5">The PN, AE, LO, SH, ST, LT, and UT VRs allow the presence of wild card matching characters "*" and "?". Single value matching against such characters is not supported. See <xref linkend="sect_C.2.2.2.4" xrefstyle="select: label"/>.</para>
+            </section>
+            <section label="C.2.2.2.1.3" status="6" xml:id="sect_C.2.2.2.1.3">
+              <title>Attributes of VR of DA, DT or TM</title>
+              <para xml:id="para_ef9427f0-57bd-468c-8bdf-c4d8889bfe64">If the Timezone Offset From UTC (0008,0201) Attribute is present in the Identifier and Timezone query adjustment was negotiated, it shall be used to adjust values of Attributes of VR of TM (and associated Attributes of VR of DA, if present) from the local timezone to UTC. It shall also adjust values of Attributes of VR of DT that do not specify a timezone offset. The encoding and semantics of the Timezone Offset From UTC (0008,0201) Attribute shall be as defined in the SOP Common Module in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+              <para xml:id="para_67f4294f-9468-411e-a2d6-0e34ff6f9c8f">The manner in which matching is performed is implementation dependent and shall be specified in the conformance statement.</para>
+              <note>
+                <orderedlist>
+                  <listitem>
+                    <para xml:id="para_629ac1f2-488f-4a92-936e-af6c87465617">This definition implies that values of VR of TM, DA and DT are matched by their meaning, not as literal strings. For example:</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para xml:id="para_7c36b747-6955-4636-8d51-d7fc071cb3fa">the DT "19980128103000.0000" matches "19980128103000"</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_9e508915-94ce-4181-8969-27d0cbc0389c">the DT "19980128103000" with no timezone offset matches "19980128073000" with timezone offset "-0300"</para>
+                      </listitem>
+                      <listitem>
+                        <para xml:id="para_7587f5c9-0324-4b3f-a5f0-494e866e95f3">the TM "2230" matches "223000"</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_b64e19da-73ce-4072-b6a9-71c1197ae221">If an application is concerned about how single value matching of dates and times is performed by another application, it may consider using range matching instead, which is always performed by meaning, with both values in the range the same.</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_8ad311db-b04e-423f-9e0a-6418187c2d1c">Exclusion of the "-" character for single value matching implies that a Key Attribute with a VR of DT may not contain a negative offset from Universal Coordinated Time (UTC) if single value matching is intended. Use of the "-" character in values of VR of TM, DA and DT indicates range matching.</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_52197e93-7a88-48cc-bb1e-e7535201bafc">If an application is in a local time zone that has a negative offset then it cannot perform single value matching using a local time notation. Instead, it can convert the Key Attribute value to UTC and use an explicit suffix of "+0000".</para>
+                  </listitem>
+                </orderedlist>
+              </note>
+            </section>
           </section>
           <section label="C.2.2.2.2" status="5" xml:id="sect_C.2.2.2.2">
             <title>List of UID Matching</title>
@@ -4171,8 +4175,8 @@
           </section>
           <section label="C.2.2.2.4" status="5" xml:id="sect_C.2.2.2.4">
             <title>Wild Card Matching</title>
-            <para xml:id="para_b13e6046-8894-4068-a8e7-e11b97ecfdac">If the Attribute is not a date, time, signed long, signed short, unsigned short, unsigned long, floating point single, floating point double, other byte string, other word string, unknown, Attribute tag, decimal string, integer string, age string or UID and the value specified in the request contains any occurrence of an "*" or a "?", then "*" shall match any sequence of characters (including a zero length value) and "?" shall match any single character. This matching is case sensitive, except for Attributes with an PN Value Representation (e.g., Patient Name (0010,0010)).</para>
-            <para xml:id="para_46e6bdd8-87c6-477a-82c3-ecf5734eef86">For Attributes with a PN value representation, including the case of extended negotiation of fuzzy semantic matching, wild card matching is implementation dependent and shall be specified in the conformance statement.</para>
+            <para xml:id="para_b13e6046-8894-4068-a8e7-e11b97ecfdac">If the Attribute is not of VR of DA, DT, TM, SL, SS, US, UL, FL, FD, OB, OW, OD, OF, OL, UN, DS, IS, AS, UI and the value specified in the request contains any occurrence of an "*" or a "?", then "*" shall match any sequence of characters (including a zero length value) and "?" shall match any single character. This matching is case sensitive, except for Attributes with a PN VR (e.g., Patient Name (0010,0010)).</para>
+            <para xml:id="para_46e6bdd8-87c6-477a-82c3-ecf5734eef86">For Attributes with a PN VR, including the case of extended negotiation of fuzzy semantic matching, wild card matching is implementation dependent and shall be specified in the conformance statement.</para>
             <note>
               <orderedlist>
                 <listitem>
@@ -4195,58 +4199,81 @@
           </section>
           <section label="C.2.2.2.5" status="5" xml:id="sect_C.2.2.2.5">
             <title>Range Matching</title>
-            <para xml:id="para_a8fef9b8-ae03-4446-a883-14b163929b2f">In the absence of extended negotiation, if the Attribute is a date, then:</para>
-            <orderedlist numeration="loweralpha">
-              <listitem>
-                <para xml:id="para_ca957a55-42ed-4c8a-975e-18da5ff73208">A string of the form "&lt;date1&gt; - &lt;date2&gt;", where &lt;date1&gt; is less or equal to &lt;date2&gt;, shall match all occurrences of dates that fall between &lt;date1&gt; and &lt;date2&gt; inclusive</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_4bc4ea6c-9087-4ae4-bc26-920a6f351a1c">A string of the form "- &lt;date1&gt;" shall match all occurrences of dates prior to and including &lt;date1&gt;</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_02577823-12ad-4bdb-a3fb-bbe508d2b5c5">A string of the form "&lt;date1&gt; -" shall match all occurrences of &lt;date1&gt; and subsequent dates</para>
-              </listitem>
-            </orderedlist>
-            <para xml:id="para_0c7f8886-46ab-45e9-ad0c-85b96045b5b3">In the absence of extended negotiation, if the Attribute is a time, then:</para>
-            <orderedlist numeration="loweralpha">
-              <listitem>
-                <para xml:id="para_4f361d02-2a40-4612-9e14-fc1ec7a5fe23">A string of the form "&lt;time1&gt; - &lt;time2&gt;", where &lt;time1&gt; is less or equal to &lt;time2&gt;, shall match all occurrences of times that fall between &lt;time1&gt; and &lt;time2&gt; inclusive</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_7b721f27-91a2-40cc-828c-65fbb05dd803">A string of the form "- &lt;time1&gt;" shall match all occurrences of times prior to and including &lt;time1&gt;</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_1d9549b0-035a-4660-a729-1757cc040648">A string of the form "&lt;time1&gt; -" shall match all occurrences of &lt;time1&gt; and subsequent times</para>
-              </listitem>
-            </orderedlist>
-            <para xml:id="para_6bb635ac-b36c-488a-ba29-fe48d01178c6">If the Attribute is a datetime, then:</para>
-            <orderedlist numeration="loweralpha">
-              <listitem>
-                <para xml:id="para_178aca7d-8ccc-407d-8e85-07a962846469">A string of the form "&lt;datetime1&gt; - &lt;datetime2&gt;", where &lt;datetime1&gt; is less or equal to &lt;datetime2&gt;, shall match all moments in time that fall between &lt;datetime1&gt; and &lt;datetime2&gt; inclusive</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_4dff8540-be9b-43ff-aea3-36dcaaefc633">A string of the form "- &lt;datetime1&gt;" shall match all moments in time prior to and including &lt;datetime1&gt;</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_40aad438-5054-49fe-af5e-e1e537d3c69a">A string of the form "&lt;datetime1&gt; -" shall match all moments in time subsequent to and including &lt;datetime1&gt;</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_64b6616c-c8bb-45f8-9e9e-e81325cf365c">The offset from Universal Coordinated Time, if present in the Value of the Attribute, shall be taken into account for the purposes of the match.</para>
-              </listitem>
-            </orderedlist>
-            <para xml:id="para_4841d78d-706a-42b7-b3f3-0306acbdede1">If extended negotiation of combined datetime matching is successful, then a pair of Attributes that are a date and a time, both of which specify the same form of range matching, shall have the concatenated string values of each range matching component matched as if they were a single datetime Attribute.</para>
-            <note>
-              <para xml:id="para_8d28439d-016d-478c-9827-f720491fc84a">For example, a Study Date of "20060705-20060707" and a Study Time of "1000-1800" will match the time period of July 5, 10am until July 7, 6pm, rather than the three time periods of 10am until 6pm on each of July 5, July 6 and July 7, as would be the case without extended negotiation.</para>
-            </note>
-            <para xml:id="para_23e382c2-a835-4b0a-b65d-d11fede177e0">Regardless of other extended negotiation, an application may use the value of Timezone Offset From UTC (0008,0201) to adjust values of time and datetime Attributes from the local timezone to UTC for matching. See <xref linkend="sect_C.2.2.2.1" xrefstyle="select: label"/>.</para>
-            <note>
-              <para xml:id="para_17bac098-cc87-4718-8627-2eb7e1f48785">If extended negotiation of combined datetime matching is successful, the timezone offset may effect a change in date if the local time and UTC are on different sides of midnight.</para>
-            </note>
-            <para xml:id="para_42966313-b4e2-43eb-8625-5a3db3422663">Range matching is not defined for types of Attributes other than dates and times.</para>
+            <section label="C.2.2.2.5.1" status="6" xml:id="sect_C.2.2.2.5.1">
+              <title>Range Matching of Attributes of VR of DA</title>
+              <para xml:id="para_a8fef9b8-ae03-4446-a883-14b163929b2f">In the absence of extended negotiation, then:</para>
+              <orderedlist numeration="loweralpha">
+                <listitem>
+                  <para xml:id="para_ca957a55-42ed-4c8a-975e-18da5ff73208">A string of the form "&lt;date1&gt; - &lt;date2&gt;", where &lt;date1&gt; is less or equal to &lt;date2&gt;, shall match all occurrences of dates that fall between &lt;date1&gt; and &lt;date2&gt; inclusive</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_4bc4ea6c-9087-4ae4-bc26-920a6f351a1c">A string of the form "- &lt;date1&gt;" shall match all occurrences of dates prior to and including &lt;date1&gt;</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_02577823-12ad-4bdb-a3fb-bbe508d2b5c5">A string of the form "&lt;date1&gt; -" shall match all occurrences of &lt;date1&gt; and subsequent dates</para>
+                </listitem>
+              </orderedlist>
+            </section>
+            <section label="C.2.2.2.5.2" status="6" xml:id="sect_C.2.2.2.5.2">
+              <title>Range Matching of Attributes of VR of TM</title>
+              <para xml:id="para_763084d9-5fab-49e3-a76a-72a8a039cdd9">All comparison specified in the following shall be based on a direct comparison of times within a day.
+                "Prior" includes all times starting from midnight of the same day to the specified time.
+                "Subsequent" includes all times starting with the specified time until any time prior to midnight of the following day.
+                Range matching crossing midnight is not supported.</para>
+              <para xml:id="para_39431c5e-cfae-41cd-a91e-8ec961b8013b">No offset from Universal Coordinated Time is permitted in the TM VR values.
+                If Timezone Offset From UTC (0008,0201) is present in the query identifier,
+                the specified time values and the definition of midnight are in the specified timezone.</para>
+              <para xml:id="para_0c7f8886-46ab-45e9-ad0c-85b96045b5b3">In the absence of extended negotiation, then:</para>
+              <orderedlist numeration="loweralpha">
+                <listitem>
+                  <para xml:id="para_4f361d02-2a40-4612-9e14-fc1ec7a5fe23">A string of the form "&lt;time1&gt; - &lt;time2&gt;", where &lt;time1&gt; is less or equal to &lt;time2&gt;, shall match all occurrences of times that fall between &lt;time1&gt; and &lt;time2&gt; inclusive</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_7b721f27-91a2-40cc-828c-65fbb05dd803">A string of the form "- &lt;time1&gt;" shall match all occurrences of times prior to and including &lt;time1&gt;</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_1d9549b0-035a-4660-a729-1757cc040648">A string of the form "&lt;time1&gt; -" shall match all occurrences of &lt;time1&gt; and subsequent times</para>
+                </listitem>
+              </orderedlist>
+            </section>
+            <section label="C.2.2.2.5.3" status="6" xml:id="sect_C.2.2.2.5.3">
+              <title>Range Matching of Attributes of VR of DT</title>
+              <orderedlist numeration="loweralpha">
+                <listitem>
+                  <para xml:id="para_178aca7d-8ccc-407d-8e85-07a962846469">A string of the form "&lt;datetime1&gt; - &lt;datetime2&gt;", where &lt;datetime1&gt; is less or equal to &lt;datetime2&gt;, shall match all moments in time that fall between &lt;datetime1&gt; and &lt;datetime2&gt; inclusive</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_4dff8540-be9b-43ff-aea3-36dcaaefc633">A string of the form "- &lt;datetime1&gt;" shall match all moments in time prior to and including &lt;datetime1&gt;</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_40aad438-5054-49fe-af5e-e1e537d3c69a">A string of the form "&lt;datetime1&gt; -" shall match all moments in time subsequent to and including &lt;datetime1&gt;</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_64b6616c-c8bb-45f8-9e9e-e81325cf365c">The offset from Universal Coordinated Time, if present in the Value of the Attribute, shall be taken into account for the purposes of the match.</para>
+                </listitem>
+              </orderedlist>
+            </section>
+            <section label="C.2.2.2.5.4" status="6" xml:id="sect_C.2.2.2.5.4">
+              <title>Range Matching General Rules</title>
+              <para xml:id="para_4841d78d-706a-42b7-b3f3-0306acbdede1">If extended negotiation of combined datetime matching is successful,
+                then a pair of Attributes that are of VR DA and TM,
+                both of which specify the same form of range matching,
+                shall have the concatenated string values of each range matching component matched as if they were a single Attribute of VR DT.</para>
+              <note>
+                <para xml:id="para_8d28439d-016d-478c-9827-f720491fc84a">For example, a Study Date of "20060705-20060707" and a Study Time of "1000-1800" will match the time period of July 5, 10am until July 7, 6pm, rather than the three time periods of 10am until 6pm on each of July 5, July 6 and July 7, as would be the case without extended negotiation.</para>
+              </note>
+              <para xml:id="para_23e382c2-a835-4b0a-b65d-d11fede177e0">Regardless of other extended negotiation,
+                an application may use the value of Timezone Offset From UTC (0008,0201) to adjust values of Attributes of VR TM and DT from the local timezone to UTC for matching. See <xref linkend="sect_C.2.2.2.1" xrefstyle="select: label"/>.</para>
+              <note>
+                <para xml:id="para_17bac098-cc87-4718-8627-2eb7e1f48785">If extended negotiation of combined datetime matching is successful, the timezone offset may effect a change in date if the local time and UTC are on different sides of midnight.</para>
+              </note>
+              <para xml:id="para_42966313-b4e2-43eb-8625-5a3db3422663">Range matching is not defined for types of Attributes other than dates and times.</para>
+            </section>
           </section>
           <section label="C.2.2.2.6" status="5" xml:id="sect_C.2.2.2.6">
             <title>Sequence Matching</title>
-            <para xml:id="para_99424971-3659-43fb-b39e-346d38fc29b2">If a Key Attribute in the Identifier of a C-FIND request needs to be matched against an Attribute structured as a Sequence of Items (Value Representation of Type SQ), the Key Attribute shall be structured as a Sequence of Items with a single Item. This Item may contain zero or more Item Key Attributes. Each Item Key Attribute matching shall be performed on an Item by Item basis. The types of matching defined in <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> shall be used: Single Value Matching, List of UID Matching, Universal Matching, Wild Card Matching, Range Matching and Sequence Matching (recursive Sequence matching).</para>
+            <para xml:id="para_99424971-3659-43fb-b39e-346d38fc29b2">If a Key Attribute in the Identifier of a C-FIND request needs to be matched
+              against an Attribute structured as a Sequence of Items (VR of SQ), the Key Attribute shall be structured as a Sequence of Items with a single Item. This Item may contain zero or more Item Key Attributes. Each Item Key Attribute matching shall be performed on an Item by Item basis. The types of matching defined in <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> shall be used: Single Value Matching, List of UID Matching, Universal Matching, Wild Card Matching, Range Matching and Sequence Matching (recursive Sequence matching).</para>
             <para xml:id="para_b265cafa-7c70-4884-93a7-0ed65d549b85">If all the Item Key Attributes match, for at least one of the Items of the Attribute against which the match is performed, a successful match is generated. A sequence of matching Items containing only the requested Attributes is returned in the corresponding C-FIND responses.</para>
             <para xml:id="para_f93137be-3799-40e9-9ea9-6c175db7ea4d">If the Key Attribute in the Identifier of a C-FIND request contains no Key Item Attribute (zero-length Item Tag), then all entities shall match this Attribute. This provides a universal matching like mechanism to request that the selected Key Attribute value (the entire Sequence of Items) be returned in corresponding C-FIND responses.</para>
           </section>
@@ -4412,6 +4439,22 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_764be1cf-09f4-43c2-9857-ea03eb44fde9">The SOP Classes contained in the Study.</para>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" colspan="1">
+                <para xml:id="para_fc9bd0d4-26f3-49dd-868d-5770601a3dba">Anatomic Regions in Study Code Sequence</para>
+              </td>
+              <td align="center" colspan="1">
+                <para xml:id="para_3399d5bb-6a90-4937-a439-13cb6d8a4e92">(0008,0063)</para>
+              </td>
+              <td align="left" colspan="1">
+                <para xml:id="para_45da214a-7886-42b8-91da-37919c7b7eb3">The anatomic regions of interest in this Study (i.e., external anatomy, surface anatomy, or general region of the body).</para>
+                <para xml:id="para_251bf3de-7a7f-4515-aafc-6dc02cffded6">One or more Items are permitted in this Sequence.</para>
+                <note>
+                  <para xml:id="para_802acbd3-e255-4bac-9888-3d0acc2b9479">If the Instances in the Study contain Anatomic Region Sequence (0008,2218), then the Items of this Sequence may be the union of the codes in the Instances. Alternatively, multiple (usually contiguous) anatomic regions might be combined into a single code. E.g., (T-D3000, SRT, "Chest"), (T-D4000, SRT, "Abdomen") and (T-D6000, SRT, "Pelvis") might be combined into (R-FAB56, SRT, "Chest, Abdomen and Pelvis").</para>
+                  <para xml:id="para_8acc43ef-4b40-45af-a879-dadd13babb63">If Instances in the Study do not contain Anatomic Region Sequence (0008,2218) but do contain Body Part Examined (0018,0015), then codes equivalent to recognized values of Body Part Examined (0018,0015) may be used. See <olink targetdoc="PS3.16" targetptr="chapter_L" xrefstyle="template:Annex %n “%t” in PS3.16"/> for standard equivalent values. E.g., if an Instance contained Body Part Examined (0018,0015) with a value of "CHEST", then this Sequence might contain (T-D3000, SRT, "Chest").</para>
+                </note>
               </td>
             </tr>
             <tr valign="top">
@@ -7019,6 +7062,17 @@
                     <para xml:id="para_ca395095-3599-4bd6-98e6-dc58a9ed6ca5">O</para>
                   </td>
                 </tr>
+                <tr>
+                  <td align="left" colspan="1">
+                    <para xml:id="para_e53b3644-5980-4f06-8f20-f5108816aa97">Anatomic Regions in Study Code Sequence</para>
+                  </td>
+                  <td align="center" colspan="1">
+                    <para xml:id="para_c9fa35c7-c973-4471-a357-c3a3eb1fb4bb">(0008,0063)</para>
+                  </td>
+                  <td align="center" colspan="1">
+                    <para xml:id="para_2eb732ae-be2a-4ec5-9996-8bfdc174a574">O</para>
+                  </td>
+                </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_d60cea52-0be9-4bef-affe-e46267093ab4">Referring Physician's Name</para>
@@ -8004,6 +8058,17 @@
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_cbb04151-a145-4606-a425-fce7eae26e89">O</para>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" colspan="1">
+                    <para xml:id="para_eb098feb-2fca-4315-b1d4-3a4323f45735">Anatomic Regions in Study Code Sequence</para>
+                  </td>
+                  <td align="center" colspan="1">
+                    <para xml:id="para_300b2542-da10-47a3-95b4-c8d052b4f6e1">(0008,0063)</para>
+                  </td>
+                  <td align="center" colspan="1">
+                    <para xml:id="para_024d9c04-30b6-45ed-85df-172f434a198c">O</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -10600,7 +10665,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_0f522284-153b-41b3-99ca-0b0918cc8f52">
-                      <emphasis role="italic">All other Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.4.16" xrefstyle="select: title"/> and <olink targetdoc="PS3.3" targetptr="sect_C.4.17" xrefstyle="select: title"/>
+                      <emphasis role="italic">All other Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.4.17" xrefstyle="select: title"/>
                       </emphasis>
                     </para>
                   </td>
@@ -10631,6 +10696,9 @@
                 </listitem>
                 <listitem>
                   <para xml:id="para_900335a8-3b3a-40f7-b1f6-829ff9774694">Only Attributes that are specified in a SOP Instance at N-CREATE may later be updated through the N-SET. If an SCU wishes to use the PPS Discontinuation Reason Code Sequence (0040,0281), it must create that Attribute (zero-length) during MPPS N-CREATE.</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_32c89c64-76ba-4651-b0d9-3eeebf6eab2a">The Radiation Dose Module was previously defined in DICOM. This is now retired (see PS3.3-2017c).</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -12097,7 +12165,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_dff8bfd9-d4e3-419d-8046-c501999bbbd1">
-                      <emphasis role="italic">All other Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.4.16" xrefstyle="select: title"/> and <olink targetdoc="PS3.3" targetptr="sect_C.4.17" xrefstyle="select: title"/>
+                      <emphasis role="italic">All other Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.4.17" xrefstyle="select: title"/>
                       </emphasis>
                     </para>
                   </td>
@@ -12115,6 +12183,9 @@
                 </listitem>
                 <listitem>
                   <para xml:id="para_1c1b4abd-5a51-400a-9920-f07e15155c4e">Attributes (0040,2006) and (0040,2007) were previously defined in DICOM. They are now retired (see PS3.3-1998).</para>
+                </listitem>
+                <listitem>
+                  <para xml:id="para_2c49ac40-7dd2-45aa-a939-f9f2ef9c75a0">The Radiation Dose Module was previously defined in DICOM. This is now retired (see PS3.3-2017c).</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -18348,7 +18419,7 @@
           </itemizedlist>
           <para xml:id="para_9de3e0ed-0375-44ad-b018-698373e382b6">See <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> and subsections for specific rules governing of Matching Key Attribute encoding for and performing of different types of matching.</para>
           <para xml:id="para_78202202-89d0-4fe2-84d5-19ab05d245fe">The Specific Character Set (0008,0005) Attribute and/or the Timezone Offset From UTC (0008,0201) Attribute may be present in the Identifier but are never matched, i.e., they are not considered Matching Key Attributes. See <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> for details.</para>
-          <para xml:id="para_7cb3e330-9c6b-47c8-ae08-fa39bcc9a756">Single value matching of Attributes with Person Name Value Representation may be affected by extended negotiation of fuzzy semantic matching of person names.</para>
+          <para xml:id="para_7cb3e330-9c6b-47c8-ae08-fa39bcc9a756">Single value matching of Attributes with a VR of PN may be affected by extended negotiation of fuzzy semantic matching of person names.</para>
         </section>
         <section label="K.2.2.3" status="4" xml:id="sect_K.2.2.3">
           <title>Matching Multiple Values</title>
@@ -33321,10 +33392,10 @@
                 </td>
               </tr>
               <tr valign="top">
-                <td align="left" colspan="1" rowspan="6">
+                <td align="left" colspan="1" rowspan="7">
                   <para xml:id="para_01bda561-2581-4f65-8606-01d90f9a8faf">UPS Progress Report</para>
                 </td>
-                <td align="center" colspan="1" rowspan="6">
+                <td align="center" colspan="1" rowspan="7">
                   <para xml:id="para_c62ca023-b7f2-4b74-9cbe-dbc3b54f6926">3</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
@@ -33357,6 +33428,17 @@
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_6927ecf9-a6aa-4b36-b3f4-1368063b453c">-/3</para>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_8a59316a-da6f-4888-9f3a-9d6edf35b5f4">&gt;Procedure Step Progress Parameters Sequence</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_9145fb61-dd79-44dc-ab87-53e92b47c05e">(0074,1007)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                  <para xml:id="para_4181e258-dfd8-4611-8f0d-9ed863bfbf52">-/3</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -37955,6 +38037,76 @@
                     <para xml:id="para_031ac6d1-a02b-455f-bdf0-3eebbb519a8a">-</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a35f3fc2-ab00-4829-ace4-83d4375ababc">&gt;Procedure Step Progress Parameters Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_092d8712-4e1b-4d61-b0b1-7dbae03ff1af">(0074,1007)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c431eddb-f7ae-4925-8a44-c58428ad351d">Not Allowed</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_32a46c0a-a493-4443-a89c-8f4a076c883f">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_388dce50-4d9b-4d8f-a1f1-e3a13096c413">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8df5b363-a530-4a11-811c-6ef7a38ac323">-/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_93123db6-4a23-4eab-ba98-0da8664b0cd0"/>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d741b224-d507-4ac4-b556-a67f54d3f93d"/>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="9" rowspan="1">
+                    <para xml:id="para_56f430a7-ed34-4868-92a8-927ecf4ef963">
+                      <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2b" xrefstyle="select: label quotedtitle"/>
+                      </emphasis>
+                    </para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_72289113-7e22-46a9-ab76-f9c58539552d">&gt;&gt;Content Item Modifier Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_25f5ea7b-5c5c-4558-a1d6-b58efe19ab7a">(0040,0441)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_fa511269-9efa-4b54-b172-5356d5696ae2">Not Allowed</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_70627a96-ea51-4541-be47-dbb80dc52a3d">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_9e0176a1-7b0e-4c82-9785-c93280d67872">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ddc2733f-5ab7-4bad-b58c-646d9d858a9b">-/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c03e7e7b-5d10-4e76-b125-fadd8be248a6"/>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_023ce09e-f0e7-40c4-9e1a-8280fc4ef1b4"/>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="9" rowspan="1">
+                    <para xml:id="para_89baf992-544e-4093-9a03-06efc8ae44f9">
+                      <emphasis role="italic">&gt;&gt;&gt;Include <xref linkend="table_CC.2.5-2b" xrefstyle="select: label quotedtitle"/>
+                      </emphasis>
+                    </para>
+                  </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
@@ -46723,7 +46875,7 @@
     </section>
   </chapter>
   <chapter label="II" status="1" xml:id="chapter_II">
-    <title>Protocol Approval Query/retrieve Service Classes</title>
+    <title>Protocol Approval Query/Retrieve Service Classes</title>
     <section label="II.1" status="2" xml:id="sect_II.1">
       <title>Overview</title>
       <section label="II.1.1" status="3" xml:id="sect_II.1.1">

@@ -49,7 +49,7 @@ zip "${releasefilebasename}_docbook_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}
 	source/docbook/part19/figures \
 	source/docbook/part20/figures \
 	support/stylesheets/extractcompositeiodsfordicom3tooltemplate.xsl \
-	support/stylesheets/extractcontextgroupdsforpixelmed.xsl \
+	support/stylesheets/extractcontextgroupsforpixelmed.xsl \
 	support/stylesheets/extractdcmdefinitionsasowl.xsl \
 	support/stylesheets/extractsrtemplatesforpixelmed.xsl
 
