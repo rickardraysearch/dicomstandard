@@ -19,6 +19,7 @@
 <!ENTITY PS3_18targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/chtml/targetdb/PS3_18_target.db">
 <!ENTITY PS3_19targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/chtml/targetdb/PS3_19_target.db">
 <!ENTITY PS3_20targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/chtml/targetdb/PS3_20_target.db">
+<!ENTITY PS3_21targets SYSTEM "file:///Users/dclunie/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/output/chtml/targetdb/PS3_21_target.db">
 ]>
 <targetset>
   <targetsetinfo>
@@ -47,7 +48,8 @@
 		<document targetdoc="PS3.17" baseuri="../part17/">&PS3_17targets;</document>
 		<document targetdoc="PS3.18" baseuri="../part18/">&PS3_18targets;</document>
 		<document targetdoc="PS3.19" baseuri="../part19/">&PS3_19targets;</document>
-		<document targetdoc="PS3.20" baseuri="../part20/">&PS3_20targets;</document>
+      	<document targetdoc="PS3.20" baseuri="../part20/">&PS3_20targets;</document>
+      	<document targetdoc="PS3.21" baseuri="../part21/">&PS3_21targets;</document>
       </dir>
     </dir>
   </sitemap>

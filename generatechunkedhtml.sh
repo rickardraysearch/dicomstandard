@@ -14,7 +14,7 @@ mkdir -p "/tmp/chtml/part${part}"
 rm -f /tmp/chtml/part${part}/*
 
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
-xsltproc -maxdepth 10000 --nonet \
+xsltproc -maxdepth 20000 --nonet \
 	--stringparam html.stylesheet dicom.css \
 	--stringparam target.database.document "../../../olinkdb_chtml.xml" \
 	--stringparam current.docid "PS3.${partnoleadingzero}" \

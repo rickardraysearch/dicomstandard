@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2017d - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2017e - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -387,6 +387,17 @@
             <link xl:href="http://tools.ietf.org/html/rfc7405"/>
           </bibliosource>
         </biblioentry>
+        <biblioentry xml:id="biblio_RFC_7525">
+          <abbrev>RFC7525</abbrev>
+          <author>
+            <orgname>IETF</orgname>
+          </author>
+          <date>May 2015</date>
+          <title>TLS Recommendations</title>
+          <bibliosource>
+            <link xl:href="http://tools.ietf.org/html/rfc7525"/>
+          </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_7540">
           <abbrev>RFC7540</abbrev>
           <author>
@@ -507,13 +518,13 @@
       <glossentry>
         <glossterm>HTTP</glossterm>
         <glossdef>
-          <para xml:id="para_124a28d9-d408-496c-b36a-248eaf4da200">The term HTTP as used in this Standard means the Hypertext Transport Protocol versions 1.0, 1.1 or 2. See <xref linkend="biblio_RFC_1945"/>, <xref linkend="biblio_RFC_7230"/> and <xref linkend="biblio_RFC_7540"/>.</para>
+          <para xml:id="para_124a28d9-d408-496c-b36a-248eaf4da200">The term HTTP as used in this Standard means the Hypertext Transport Protocol versions 1.0, 1.1, 2 or later. See <xref linkend="biblio_RFC_1945"/>, <xref linkend="biblio_RFC_7230"/> and <xref linkend="biblio_RFC_7540"/>.</para>
         </glossdef>
       </glossentry>
       <glossentry>
         <glossterm>HTTPS</glossterm>
         <glossdef>
-          <para xml:id="para_f830a0b2-f001-4718-b6eb-5c2b2ff4e421">The term HTTPS as used in this Standard means the Hypertext Transport Protocol Secure versions 1.0, 1.1 or 2. See <xref linkend="biblio_RFC_2818"/> and <xref linkend="biblio_RFC_7230"/>.</para>
+          <para xml:id="para_f830a0b2-f001-4718-b6eb-5c2b2ff4e421">The term HTTPS as used in this Standard means the Hypertext Transport Protocol Secure versions 1.0, 1.1, 2 or later. See <xref linkend="biblio_RFC_2818"/> and <xref linkend="biblio_RFC_7230"/>.</para>
         </glossdef>
       </glossentry>
       <glossentry>
@@ -688,12 +699,17 @@
   <chapter label="6" status="1" xml:id="chapter_6">
     <title>Data Communication Requirements</title>
     <para xml:id="para_2cb3d9ae-bc78-4fc1-8b79-549190b54cad">DICOM Web Services use the HTTP and HTTPS protocols as its transport medium.
-      Web Services supports versions 1.0, 1.1 and 2 of the protocol.
-      If an origin server supports version 2, it shall also support version 1.1.
-      If an origin server supports version 1.1, it shall also support version 1.0.</para>
+      Web Services supports versions 1.0, 1.1, 2 or later of the protocol.</para>
     <para xml:id="para_3071ea48-dd56-48d6-acc6-28ee40380238">It is recommended that user agents that want to use HTTP/2 first initiate an HTTP/1.1 connection to the origin server and then upgrade to HTTP/2.
       If the upgrade fails then the user agent can still use the HTTP/1.1 connection.
       <xref linkend="biblio_RFC_7540"/> <link xl:href="https://tools.ietf.org/html/rfc7540#section-3">Section 3</link> explains how to initiate HTTP/2 connections.</para>
+    <note>
+      <para xml:id="para_64c82fec-4d8f-49a8-b430-5da80997dfd7">HTTPS may mean any SSL or TLS version and options.
+        <xref linkend="biblio_RFC_7525"/> covers selection of TLS versions and options.
+        There may also be national or local regulations that apply, and site-specific risk analysis may affect the selection.
+        TLS version 1.2 or later is often required and always recommended.
+        Earlier versions of TLS and all versions of SSL are known to be vulnerable to well publicized attacks.</para>
+    </note>
     <section label="6.1" status="2" xml:id="sect_6.1">
       <title>Interaction</title>
       <para xml:id="para_a6f53f7e-db61-41e1-93f0-656052b4da5f">
@@ -5984,13 +6000,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <para xml:id="para_8d42faf9-5a45-43ee-940e-daaba8e05715">The results returned in the response are determined as follows:</para>
           <variablelist>
             <varlistentry>
-              <term>M</term>
+              <term>matches</term>
               <listitem>
 <para xml:id="para_f2d16269-543c-4935-9384-7c91d92b5543">is the number of matches resulting from the search.</para>
 </listitem>
             </varlistentry>
             <varlistentry>
-              <term>smax</term>
+              <term>maxResults</term>
               <listitem>
 <para xml:id="para_bd0300f1-578e-4112-ac96-ff74fbee692d">is the maximum number of results the origin server allows in a single response.</para>
 </listitem>
@@ -6002,42 +6018,39 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </listitem>
             </varlistentry>
             <varlistentry>
-              <term>R</term>
+              <term>limit</term>
               <listitem>
-                <para xml:id="para_f5f73a0a-2f76-4e09-aae5-8f3d753b1d35">is the length of the returned results. It is equal to the minimum of:</para>
-                <variablelist>
-                  <varlistentry>
-                    <term>M - offset</term>
-                    <listitem>
-<para xml:id="para_8cfcfc72-36be-41e3-b3b0-78ec90c4cd4c">the length of available matches starting at offset,</para>
-</listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>smax - offset</term>
-                    <listitem>
-<para xml:id="para_c85efede-6a0f-440b-91e4-a65acb63ff4f">the length before reaching smax, and</para>
-</listitem>
-                  </varlistentry>
-                  <varlistentry>
-                    <term>limit</term>
-                    <listitem>
-<para xml:id="para_91925d16-50e2-405b-8051-2e979465954a">the value of the "limit" query parameter.</para>
-</listitem>
-                  </varlistentry>
-                </variablelist>
+                <para xml:id="para_91925d16-50e2-405b-8051-2e979465954a">the value of the "limit" query parameter.</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>results</term>
+              <listitem>
+                <para xml:id="para_5cc475a5-42f2-4452-8ec4-301c69d8a161">is the number of returned results. It is equal to the minimum of:</para>
+                <itemizedlist>
+                  <listitem>
+                    <para xml:id="para_c49ce50a-1be2-4c81-94fd-2b64ad09ac9e">matches – offset, where if the result is less than zero, the result is zero</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_a5fdc373-3caa-4a73-ac53-3fefd0c6aafa">maxResults</para>
+                  </listitem>
+                  <listitem>
+                    <para xml:id="para_104e23d7-9469-418c-8b13-7c66f2e73147">limit</para>
+                  </listitem>
+                </itemizedlist>
               </listitem>
             </varlistentry>
             <varlistentry>
               <term>remaining</term>
               <listitem>
-<para xml:id="para_0e4636f7-278c-4b05-8763-33235f903e75">is the number of remaining matches. It is equal to: M-(offset+R).</para>
+                <para xml:id="para_0e4636f7-278c-4b05-8763-33235f903e75">is the number of remaining matches. It is equal to: matches – (offset + results).</para>
 </listitem>
             </varlistentry>
           </variablelist>
           <para xml:id="para_a665365b-f054-4dff-bc2f-d6b09c8ba2b2">The response is determined as follows:</para>
           <itemizedlist mark="none">
             <listitem>
-<para xml:id="para_420bc1d3-0e9a-4fd1-93fe-c2e6843d0d02">If (R&lt;=0) then there were no matches, and a 204 (No Content) response shall be returned with an empty payload.</para>
+              <para xml:id="para_420bc1d3-0e9a-4fd1-93fe-c2e6843d0d02">If (results=0) then there were no matches, and a 204 (No Content) response shall be returned with an empty payload.</para>
 </listitem>
             <listitem>
 <para xml:id="para_53a57fc4-437d-44c2-a609-b3960071f49f">Otherwise, a 200 (OK) response shall be returned with a payload containing results</para>
@@ -11198,20 +11211,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <para xml:id="para_ab51bb06-3b72-4a99-85da-39990ecc5d2f">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
                   </td>
                 </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a53af92f-36e1-45fe-bf99-9a7f43739c34">ETag</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_2e381a5a-3e61-4331-9a4b-435ecfcad897">entity-tag</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_885932d4-917e-4cd1-98ac-0b9411e8d9c5">C</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_d4e63c85-c4a6-43ed-a5db-0178bf09f1c8">Shall be present if the response status code is 200.</para>
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
           </section>
@@ -11316,7 +11316,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <programlisting><![CDATA[
     version SP status-code SP reason-phrase CRLF
     Content-Type: dicom-media-type CRLF
-    [ETag: entity-tag CRLF]
     [Last-Modified: HTTP-date CRLF]
     *(header-field CRLF)
     CRLF
@@ -11444,20 +11443,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <para xml:id="para_878aadc5-849d-495c-916a-05bb6b814810">Shall be present if a transfer coding has been applied. Shall be absent otherwise.</para>
                   </td>
                 </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_18561142-cc33-4779-86b8-2e25439e557b">ETag</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_f049c30f-c490-4c77-b5b9-8218e126f7d0">entity-tag</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_1e09e72d-3a83-4fb8-b554-9402ebe28bea">C</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a499ee70-7367-488d-a872-81beaaa3b340">Shall be present if the response status code is 200 or 204.</para>
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
           </section>
@@ -12525,9 +12511,17 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <title>Transfer Syntax UID</title>
         <para xml:id="para_c05d7b95-816a-4bc7-98f1-4952c2846d1e">For the URI mode the parameter name shall be "transferSyntax" containing one value.</para>
         <para xml:id="para_f20d4718-961f-42be-b754-763769671c3f">The Transfer Syntax to be used within the DICOM image objects, as specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. This parameter is OPTIONAL for the URI mode. It shall not be present if contentType is other than application/dicom.</para>
-        <para xml:id="para_166baa7e-7574-4ed0-b03c-d8467a6ca3ef">By default the DICOM object(s) returned shall be encoded in Explicit VR Little Endian. Neither Implicit VR, nor Big Endian shall be used. The response shall be the Transfer Syntax requested if possible. If it is not possible for the response to be sent using the requested transfer syntax then the Explicit VR Little Endian Uncompressed Transfer Syntax shall be used.</para>
+        <para xml:id="para_166baa7e-7574-4ed0-b03c-d8467a6ca3ef">By default the DICOM object(s) returned shall be encoded in Explicit VR Little Endian. Neither Implicit VR, nor Big Endian shall be used. The response shall be the Transfer Syntax requested if possible. If it is not possible for the response to be sent using the requested transfer syntax then the Explicit VR Little Endian Uncompressed Transfer Syntax shall be used, unless the pixel data in its compressed form is of such length that it cannot be encoded in the Explicit VR Little Endian Uncompressed Transfer Syntax.</para>
         <note>
-          <para xml:id="para_bc85b4f8-b00b-49db-adb0-f053b8cabf7e">The transfer syntax can be one of the JPIP Transfer Syntaxes, in which case the returned objects will contain the URL of the JPIP provider for retrieving the pixel data.</para>
+          <orderedlist>
+            <listitem>
+              <para xml:id="para_902b36e3-f296-4984-824d-19a7320ca221">If transcoding to the Explicit VR Little Endian Transfer Syntax, a VR of UN may be needed for the encoding of Data Elements with explicit VR whose value length exceeds 65534 (2<superscript>16</superscript>-2) (FFFEH, the largest even length unsigned 16 bit number) but which are defined to have a 16 bit explicit VR length field.
+                See <olink targetdoc="PS3.5" targetptr="sect_6.2.2" xrefstyle="select: docname label"/>.</para>
+            </listitem>
+            <listitem>
+              <para xml:id="para_bc85b4f8-b00b-49db-adb0-f053b8cabf7e">The transfer syntax can be one of the JPIP Transfer Syntaxes, in which case the returned objects will contain the URL of the JPIP provider for retrieving the pixel data.</para>
+            </listitem>
+          </orderedlist>
         </note>
         <para xml:id="para_ed4c8ef6-a829-448e-90a8-0ea2d103f968">The value(s) shall be encoded as a unique identifier (UID) string, as specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, except that it shall not be padded to an even length with a NULL character.</para>
       </section>

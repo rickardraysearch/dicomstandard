@@ -16,7 +16,7 @@ partnoleadingzero=`echo "${part}" | sed -e 's/^0//'`
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
 
 #xsltproc -maxdepth 10000 --nonet -o output/fo/part${part}.fo stylesheets/customize-fo.xsl source/docbook/part${part}/part${part}_tabletest.xml
-xsltproc -maxdepth 10000 --nonet \
+xsltproc -maxdepth 20000 --nonet \
 	--stringparam target.database.document "../../../olinkdb_pdf.xml" \
 	--stringparam current.docid "PS3.${partnoleadingzero}" \
 	-o output/fo/part${part}.fo \

@@ -81,6 +81,7 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	source/docbook/part18/part18.xml \
 	source/docbook/part19/part19.xml \
 	source/docbook/part20/part20.xml \
+	source/docbook/part21/part21.xml \
 	source/docbook/part01/figures \
 	source/docbook/part02/figures \
 	source/docbook/part03/figures \
@@ -99,6 +100,7 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	source/docbook/part18/figures \
 	source/docbook/part19/figures \
 	source/docbook/part20/figures \
+	source/docbook/part21/figures \
 	stylesheets/customize-chunk.xsl \
 	stylesheets/customize-common.xsl \
 	stylesheets/customize-fo-pdf-cp.xsl \

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2017d - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2017e - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -690,6 +690,11 @@
 <olink targetdoc="PS3.20" targetptr="PS3.20">PS3.20: Imaging Reports using HL7 Clinical Document Architecture</olink>
 </para>
         </listitem>
+        <listitem>
+          <para xml:id="para_e436fac8-343c-437c-9bc5-ebadc0707717">
+            <olink targetdoc="PS3.21" targetptr="PS3.21">PS3.21: Transformations between DICOM and other Representations</olink>
+          </para>
+        </listitem>
       </itemizedlist>
       <para xml:id="para_559273ae-baec-40c4-9f4d-b5182bb599db">These parts of the Standard are related but independent documents. A brief description
         of each Part is provided in this section.</para>
@@ -1204,6 +1209,11 @@
       <para xml:id="para_90f8ff36-6cea-439e-a990-f0162666407c">
 <olink targetdoc="PS3.20" targetptr="PS3.20" xrefstyle="select: labelnumber"/> constitutes an implementation guide for CDA, and is harmonized with the approach to standardized templates for CDA implementation guides developed by HL7. It also provides Business Names for data elements that link data in user terminology, e.g., collected by a report authoring application, to specific CDA encoded elements.</para>
       <para xml:id="para_ca4c111a-bd4e-4649-9f2c-08d64075e8af">As an implementation guide for imaging reports, particular attention is given to the use and reference of data collected in imaging procedures as explicit evidence within reports. This data includes images, waveforms, measurements, annotations, and other analytic results managed as DICOM SOP Instances. Specifically, this Part includes a specification for transformation into CDA documents of DICOM Structured Report instances that represent imaging reports.</para>
+    </section>
+    <section label="6.21" status="2" xml:id="sect_6.21">
+      <title>PS3.21: Transformations between DICOM and other Representations</title>
+      <para xml:id="para_96d91af1-a80c-487b-9936-ec68d93f5840">
+<olink targetdoc="PS3.21" targetptr="PS3.21" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the transformations between DICOM and other representations of the same information. Within its scope are transformations to and from the NCI Annotation and Image Markup format.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">

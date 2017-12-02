@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="602px" height="412px" viewBox="0 0 602 412" enable-background="new 0 0 602 412" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.21 : Transformations between DICOM and other Representations
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="600" height="410"/>
+	<g>
+		<rect x="475.391" y="110.712" fill="#86B2D8" stroke="#231F20" stroke-miterlimit="1" width="110" height="30"/>
+		<path fill="#CCDEF0" stroke="#231F20" stroke-miterlimit="1" d="M177.641,285.904h101.891v26.83
+			c-61.624,0-47.514,10.078-101.891,10.078V285.904z"/>
+		<text transform="matrix(1 0 0 1 203.5757 302.1182)" font-size="10">DICOM SR</text>
+		<path fill="#CFEFDB" stroke="#231F20" stroke-miterlimit="1" d="M177.641,27.444h101.891v26.83
+			c-61.624,0-47.514,10.078-101.891,10.078V27.444z"/>
+		<text transform="matrix(1 0 0 1 191.9146 44.6562)" font-size="10">AIM Annotations</text>
+		<g>
+			<text transform="matrix(1 0 0 1 140.3633 248.5391)"><tspan x="0" y="0" font-size="8">Voice Recognition</tspan><tspan x="0.451" y="9.6" font-size="8">Reporting System</tspan></text>
+		</g>
+		<text transform="matrix(1 0 0 1 498.4531 128.4873)" font-size="10">DICOM Image</text>
+		<rect x="396.204" y="160.711" fill="#86B2D8" stroke="#231F20" stroke-miterlimit="1" width="109.999" height="30"/>
+		<text transform="matrix(1 0 0 1 402.3047 178.4868)" font-size="10">DICOM Segmentation</text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#231F20" stroke-width="1.25" stroke-miterlimit="1" x1="309.123" y1="41.866" x2="291.272" y2="41.866"/>
+				<g>
+					<polygon fill="#231F20" points="306.646,38.234 320.197,41.866 306.646,45.497 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="293.749,38.234 280.198,41.866 293.749,45.497 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#231F20" stroke-width="1.25" stroke-miterlimit="1" x1="309.123" y1="299.318" x2="291.272" y2="299.318"/>
+				<g>
+					<polygon fill="#231F20" points="306.646,295.687 320.197,299.318 306.646,302.95 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="293.749,295.687 280.198,299.318 293.749,302.95 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line fill="none" stroke="#231F20" stroke-miterlimit="1" x1="231.049" y1="184.996" x2="231.049" y2="277.064"/>
+				<g>
+					<polygon fill="#231F20" points="228.144,186.978 231.049,176.137 233.954,186.978 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="228.144,275.083 231.049,285.924 233.954,275.083 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<rect x="16.624" y="128.068" fill="#FFC10E" stroke="#231F20" stroke-miterlimit="1" width="110" height="40"/>
+			<text transform="matrix(1 0 0 1 26.3047 152.0859)" font-size="10">Convert AIM </text>
+			<text transform="matrix(1 0 0 1 84.6548 154.0859)" font-size="18">↔</text>
+			<text transform="matrix(1 0 0 1 97.4868 152.0859)" font-size="10"> SR </text>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#005695" stroke-width="3" stroke-miterlimit="1" points="160.973,45.898 71.624,45.898 
+					71.624,112.423 				"/>
+				<g>
+					<polygon fill="#005695" points="157.406,40.668 176.92,45.898 157.406,51.127 					"/>
+				</g>
+				<g>
+					<polygon fill="#005695" points="66.394,108.856 71.624,128.37 76.853,108.856 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#005695" stroke-width="3" stroke-miterlimit="1" points="160.973,304.358 71.624,304.358 
+					71.624,184.015 				"/>
+				<g>
+					<polygon fill="#005695" points="157.406,299.129 176.92,304.358 157.406,309.588 					"/>
+				</g>
+				<g>
+					<polygon fill="#005695" points="76.853,187.582 71.624,168.068 66.394,187.582 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="265.735,145.173 348.501,145.005 348.501,126.273 
+					466.312,126.273 				"/>
+				<g>
+					<polygon fill="#231F20" points="267.723,148.074 256.876,145.191 267.711,142.264 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="464.33,129.178 475.171,126.273 464.33,123.368 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="265.735,155.518 348.501,155.685 348.501,174.417 
+					387.345,174.417 				"/>
+				<g>
+					<polygon fill="#231F20" points="267.711,158.427 256.876,155.5 267.723,152.616 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="385.363,177.323 396.204,174.417 385.363,171.512 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-width="0.75" stroke-miterlimit="1" stroke-dasharray="3.6734,3.6734" points="
+					528.366,102.743 528.366,89.399 229.64,89.399 229.64,58.67 				"/>
+				<g>
+					<polygon fill="#231F20" points="530.545,101.257 528.366,109.387 526.188,101.257 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-width="0.75" stroke-miterlimit="1" stroke-dasharray="3.6734,3.6734" points="
+					435.122,155 435.122,101.501 229.64,101.501 229.64,58.67 				"/>
+				<g>
+					<polygon fill="#231F20" points="437.301,153.514 435.122,161.645 432.943,153.514 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-width="0.75" stroke-miterlimit="1" stroke-dasharray="3.4591,3.4591" points="
+					528.3,147.356 528.3,243.707 263.462,243.707 263.462,285.523 				"/>
+				<g>
+					<polygon fill="#231F20" points="526.121,148.843 528.3,140.712 530.479,148.843 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-width="0.75" stroke-miterlimit="1" stroke-dasharray="3.3945,3.3945" points="
+					438.926,197.255 438.926,231.605 263.462,231.605 263.462,285.523 				"/>
+				<g>
+					<polygon fill="#231F20" points="436.747,198.741 438.926,190.611 441.104,198.741 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="402.35,304.358 557.081,304.358 557.081,149.571 				"/>
+				<g>
+					<polygon fill="#231F20" points="404.331,307.264 393.49,304.358 404.331,301.453 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="559.986,151.553 557.081,140.712 554.176,151.553 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="404.253,289.605 451.222,289.605 451.222,199.444 				"/>
+				<g>
+					<polygon fill="#231F20" points="406.234,292.511 395.394,289.605 406.234,286.7 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="454.127,201.425 451.222,190.584 448.316,201.425 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="218.444,277.209 218.444,204.192 199.844,204.192 				"/>
+				<g>
+					<polygon fill="#231F20" points="221.35,275.228 218.444,286.068 215.539,275.228 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="201.825,201.287 190.984,204.192 201.825,207.098 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="398.849,31.188 557.081,31.188 557.081,101.809 				"/>
+				<g>
+					<polygon fill="#231F20" points="400.83,34.094 389.989,31.188 400.83,28.283 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="554.176,99.828 557.081,110.668 559.986,99.828 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#231F20" stroke-miterlimit="1" points="399.552,44.65 451.223,44.65 451.223,152.967 				"/>
+				<g>
+					<polygon fill="#231F20" points="401.533,47.556 390.692,44.65 401.533,41.745 					"/>
+				</g>
+				<g>
+					<polygon fill="#231F20" points="448.317,150.986 451.223,161.827 454.128,150.986 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="16.62" y="347.922" fill="#FFFFFF" stroke="#231F20" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="120.381" height="48.768"/>
+			<text transform="matrix(0.9288 0 0 1 22.2329 360.4805)" fill="#231F20" font-size="9">Legend:</text>
+			<text transform="matrix(1 0 0 1 86.2534 361.8232)" fill="#231F20" font-size="9">Convert</text>
+			<text transform="matrix(1 0 0 1 86.2534 376.624)" fill="#231F20" font-size="9">Send</text>
+			<text transform="matrix(1 0 0 1 86.2534 391.4229)" fill="#231F20" font-size="9">Reference</text>
+			<g>
+				<g>
+					
+						<line fill="none" stroke="#005695" stroke-width="3" stroke-miterlimit="1" x1="57.085" y1="358.774" x2="70.58" y2="358.774"/>
+					<g>
+						<polygon fill="#005695" points="68.202,362.261 81.211,358.774 68.202,355.288 						"/>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					<line fill="none" stroke="#231F20" stroke-miterlimit="1" x1="57.085" y1="373.44" x2="72.352" y2="373.44"/>
+					<g>
+						<polygon fill="#231F20" points="70.37,376.346 81.211,373.44 70.37,370.535 						"/>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					
+						<line fill="none" stroke="#231F20" stroke-width="0.75" stroke-miterlimit="1" stroke-dasharray="3.6734,3.6734" x1="57.085" y1="388.854" x2="74.65" y2="388.854"/>
+					<g>
+						<polygon fill="#231F20" points="73.164,391.032 81.295,388.854 73.164,386.675 						"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		
+			<rect x="320.742" y="15.311" fill="#D9D9D9" stroke="#000000" stroke-width="0.7607" stroke-miterlimit="1" width="70" height="45.951"/>
+		
+			<radialGradient id="SVGID_1_" cx="322.5889" cy="58.0718" r="68.5281" fx="348.1507" fy="31.5599" gradientTransform="matrix(0.865 -0.5019 0.4517 0.7785 17.3358 174.7584)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#E7F7ED"/>
+			<stop  offset="0.0609" style="stop-color:#D5F2E0"/>
+			<stop  offset="0.3184" style="stop-color:#8FDBAC"/>
+			<stop  offset="0.5502" style="stop-color:#57C982"/>
+			<stop  offset="0.7482" style="stop-color:#2FBC64"/>
+			<stop  offset="0.9046" style="stop-color:#16B452"/>
+			<stop  offset="1" style="stop-color:#0DB14B"/>
+		</radialGradient>
+		
+			<rect x="323.063" y="17.628" fill="url(#SVGID_1_)" stroke="#000000" stroke-width="0.7607" stroke-miterlimit="1" width="65.357" height="40.476"/>
+		<polygon fill="#D9D9D9" stroke="#000000" stroke-width="0.7607" stroke-miterlimit="1" points="367.761,74.487 364.724,72.286 
+			363.149,61.262 348.336,61.262 346.766,72.283 343.725,74.487 343.725,76.485 367.761,76.485 		"/>
+		
+			<line fill="#6ED093" stroke="#000000" stroke-width="0.7607" stroke-miterlimit="1" x1="346.763" y1="72.283" x2="364.722" y2="72.286"/>
+		<text transform="matrix(1 0 0 1 346.3594 34.6562)" enable-background="new    "><tspan x="0" y="0" font-size="10">AIM</tspan><tspan x="-17.508" y="12" font-size="10">Workstation</tspan></text>
+		<g>
+			
+				<rect x="324.125" y="273.773" fill="#D9D9D9" stroke="#000000" stroke-width="0.75" stroke-linejoin="round" width="70" height="45.947"/>
+			
+				<radialGradient id="SVGID_2_" cx="325.9717" cy="316.5322" r="68.5281" fx="346.8875" fy="285.3315" gradientTransform="matrix(0.865 -0.5019 0.4517 0.7785 -98.9461 233.7163)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#CCDEF0"/>
+				<stop  offset="0.0498" style="stop-color:#B8CDE4"/>
+				<stop  offset="0.3104" style="stop-color:#6A88B1"/>
+				<stop  offset="0.5449" style="stop-color:#375F8E"/>
+				<stop  offset="0.7452" style="stop-color:#054678"/>
+				<stop  offset="0.9035" style="stop-color:#00396C"/>
+				<stop  offset="1" style="stop-color:#003468"/>
+			</radialGradient>
+			
+				<rect x="326.445" y="276.088" fill="url(#SVGID_2_)" stroke="#000000" stroke-width="0.75" stroke-linejoin="round" width="65.358" height="40.477"/>
+			<polygon fill="#D9D9D9" stroke="#000000" stroke-width="0.75" stroke-linejoin="round" points="371.139,332.945 368.104,330.746 
+				366.529,319.721 351.714,319.721 350.145,330.744 347.105,332.945 347.105,334.942 371.139,334.942 			"/>
+			
+				<line fill="#6ED093" stroke="#000000" stroke-width="0.75" stroke-linejoin="round" x1="350.143" y1="330.744" x2="368.102" y2="330.746"/>
+			<text transform="matrix(1 0 0 1 334.125 293.4521)" enable-background="new    "><tspan x="0" y="0" fill="#FFFFFF" font-size="10">DICOM SR</tspan><tspan x="-1.396" y="12" fill="#FFFFFF" font-size="10">Workstation</tspan></text>
+		</g>
+		<path fill="#FFF200" stroke="#000000" stroke-width="0.8004" d="M256.6,133.894c0,1.754-12.545,7.119-28.012,7.119
+			c-15.471,0-28.015-5.365-28.015-7.119v35.414c0,1.754,12.544,7.119,28.015,7.119c15.467,0,28.012-5.364,28.012-7.119V133.894z"/>
+		<text transform="matrix(1 0 0 1 205.9136 150.7295)" enable-background="new    "><tspan x="0" y="0" font-size="8">PACS Store,</tspan><tspan x="4.67" y="9.6" font-size="8">Distribute,</tspan><tspan x="9.561" y="19.2" font-size="8">Review</tspan></text>
+		<ellipse fill="#FFC10E" stroke="#000000" stroke-width="0.8004" cx="228.586" cy="133.63" rx="28.013" ry="8.621"/>
+		<path fill="#6C5635" stroke="#231F20" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="10" d="M182.35,204.191
+			c-1.788,9.079-6.888,15.632-12.901,15.633c-6.012,0-11.113-6.553-12.903-15.632"/>
+		<path fill="#999999" stroke="#000000" stroke-width="0.75" stroke-linecap="round" stroke-miterlimit="10" d="M156.545,204.192
+			c-0.445-2.253-0.683-4.664-0.683-7.165c0-12.59,6.082-22.797,13.586-22.797c7.505,0,13.586,10.208,13.586,22.797
+			c0,2.501-0.242,4.912-0.685,7.165"/>
+		<path fill="none" stroke="#626366" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M187.102,202.306
+			c0,12.556-4.967,23.415-17.955,23.415c-12.988,0-17.955-10.859-17.955-23.415"/>
+		
+			<line fill="#FFFFFF" stroke="#626366" stroke-linecap="round" stroke-miterlimit="10" x1="151.192" y1="204.19" x2="187.102" y2="204.19"/>
+		
+			<line fill="#FFFFFF" stroke="#626366" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="169.147" y1="225.721" x2="169.147" y2="234.229"/>
+		
+			<line fill="#FFFFFF" stroke="#626366" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="158.043" y1="234.229" x2="180.25" y2="234.229"/>
+		<g>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="164.663" cy="179.576" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="169.756" cy="179.576" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="174.707" cy="179.576" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="164.663" cy="189.762" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="169.756" cy="189.762" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="174.707" cy="189.762" r="1.273"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M165.936,199.947
+				c0,0.703-0.572,1.275-1.275,1.275s-1.271-0.572-1.271-1.275s0.567-1.271,1.271-1.271S165.936,199.244,165.936,199.947z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M171.029,199.947
+				c0,0.703-0.573,1.275-1.276,1.275c-0.703,0-1.27-0.572-1.27-1.275s0.567-1.271,1.27-1.271
+				C170.456,198.676,171.029,199.244,171.029,199.947z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M175.98,199.947
+				c0,0.703-0.573,1.275-1.276,1.275c-0.704,0-1.271-0.572-1.271-1.275s0.567-1.271,1.271-1.271
+				C175.407,198.676,175.98,199.244,175.98,199.947z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M163.39,194.759
+				c0,0.703-0.573,1.276-1.275,1.276c-0.704,0-1.272-0.573-1.272-1.276c0-0.703,0.568-1.271,1.272-1.271
+				C162.817,193.489,163.39,194.057,163.39,194.759z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M168.482,194.759
+				c0,0.703-0.573,1.276-1.276,1.276c-0.702,0-1.271-0.573-1.271-1.276c0-0.703,0.568-1.271,1.271-1.271
+				C167.909,193.489,168.482,194.057,168.482,194.759z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" d="M173.434,194.759
+				c0,0.703-0.572,1.276-1.275,1.276c-0.705,0-1.272-0.573-1.272-1.276c0-0.703,0.567-1.271,1.272-1.271
+				C172.861,193.489,173.434,194.057,173.434,194.759z"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="177.252" cy="194.759" r="1.274"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="162.116" cy="184.791" r="1.274"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="167.209" cy="184.791" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="172.16" cy="184.791" r="1.273"/>
+			<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.25" stroke-miterlimit="10" cx="177.252" cy="184.791" r="1.274"/>
+		</g>
+		
+			<line fill="#FFC10E" stroke="#FFC10E" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="157.14" y1="204.19" x2="181.607" y2="204.19"/>
+	</g>
+</g>
+</svg>

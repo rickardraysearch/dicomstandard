@@ -4,9 +4,14 @@ supsourcefile="$1"
 sup=`basename "${supsourcefile}" .xml`
 dir=`dirname "${supsourcefile}"`
 
+# need older version of xsltproc, else title page customizations don't work :(
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
-xsltproc --nonet \
+"${XSLTPROC}" --nonet \
 	-o "${dir}/${sup}.fo" \
 	--stringparam target.database.document "${HOME}/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/olinkdb_pdf.xml" \
 	--stringparam current.docid "PS3.14" \

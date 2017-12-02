@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1902px" height="912px" viewBox="0 0 1902 912" enable-background="new 0 0 1902 912" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.21 : Transformations between DICOM and other Representations
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="1900" height="910"/>
+	<g>
+		<g>
+			
+				<rect x="617.72" y="16.073" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.854"/>
+			
+				<rect x="617.72" y="33.936" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="68.553"/>
+			<text transform="matrix(1 0 0 1 674.9863 26.9766)" font-size="7.0974">AIM:: Entity</text>
+			<text transform="matrix(1 0 0 1 619.5029 42.0068)" font-size="7.0974">-  uniqueIdentifier: II</text>
+		</g>
+		<g>
+			
+				<rect x="1361.016" y="303.645" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="17.854"/>
+			
+				<rect x="1361.016" y="321.628" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="70.974"/>
+			<text transform="matrix(1 0 0 1 1386.5 314.5469)" font-size="7.0974">AIM:: ImagingObservationEntity</text>
+			<text transform="matrix(1 0 0 1 1362.7773 329.5762)"><tspan x="0" y="0" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  isPresent: BL [0..1]</tspan><tspan x="0" y="17.034" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  questionIndex: INT [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  questionTypeCode: CD [0..n] {ordered}</tspan><tspan x="0" y="42.584" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="51.102" font-size="7.0974">::Entity</tspan><tspan x="0" y="59.618" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="1529.576" y="302.115" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="17.853"/>
+			
+				<rect x="1529.576" y="320.098" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="37.263"/>
+			<text transform="matrix(1 0 0 1 1560.9854 313.0176)" font-size="7.0974">AIM:: ImagingPhysicalEntity</text>
+			<text transform="matrix(1 0 0 1 1531.3398 328.0469)"><tspan x="0" y="0" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="17.034" font-size="7.0974">::Entity</tspan><tspan x="0" y="25.551" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="1700.181" y="303.645" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.854"/>
+			
+				<rect x="1700.181" y="321.628" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="79.847"/>
+			<text transform="matrix(1 0 0 1 1742.6289 314.5469)" font-size="7.0974">AIM:: InferenceEntity</text>
+			<text transform="matrix(1 0 0 1 1701.9443 329.5781)"><tspan x="0" y="0" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  imageEvidence: BL</tspan><tspan x="0" y="17.034" font-size="7.0974">-  isPresent: BL [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  questionIndex: INT [0..1]</tspan><tspan x="0" y="42.584" font-size="7.0974">-  questionTypeCode: CD [0..n] {ordered}</tspan><tspan x="0" y="51.102" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="59.618" font-size="7.0974">::Entity</tspan><tspan x="0" y="68.135" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="967.09" y="168.704" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="17.854"/>
+			
+				<rect x="967.09" y="186.962" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="63.878"/>
+			<text transform="matrix(1 0 0 1 1007.3877 179.6045)" font-size="7.0974">AIM:: AnnotationEntity</text>
+			<text transform="matrix(1 0 0 1 968.874 194.6367)"><tspan x="0" y="0" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  dateTime: TS</tspan><tspan x="0" y="17.034" font-size="7.0974">-  name: ST</tspan><tspan x="0" y="25.551" font-size="7.0974">-  templateUid: II [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="42.584" font-size="7.0974">::Entity</tspan><tspan x="0" y="51.102" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="324.662" y="303.645" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="17.854"/>
+			
+				<rect x="324.662" y="321.906" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="79.846"/>
+			<text transform="matrix(1 0 0 1 363.9756 314.5469)" font-size="7.0974">AIM:: ImageAnnotation</text>
+			<text transform="matrix(1 0 0 1 326.4502 329.5762)"><tspan x="0" y="0" font-size="7.0974">::AnnotationEntity</tspan><tspan x="0" y="8.517" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="17.034" font-size="7.0974">-  dateTime: TS</tspan><tspan x="0" y="25.551" font-size="7.0974">-  name: ST</tspan><tspan x="0" y="34.067" font-size="7.0974">-  precedentReferencedAnnotationUid: II [0..1]</tspan><tspan x="0" y="42.584" font-size="7.0974">-  templateUid: II [0..1]</tspan><tspan x="0" y="51.102" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="59.618" font-size="7.0974">::Entity</tspan><tspan x="0" y="68.135" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="51.001" y="16.066" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="17.852"/>
+			
+				<rect x="51.001" y="33.917" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="28.317"/>
+			<text transform="matrix(1 0 0 1 82.0352 26.9678)" font-size="7.0974">AIM:: ImageAnnotationStatement</text>
+		</g>
+		<g>
+			
+				<rect x="579.48" y="451.54" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.853"/>
+			
+				<rect x="579.48" y="469.393" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="28.316"/>
+			<text transform="matrix(1 0 0 1 614.8457 462.4424)" font-size="7.0974">AIM:: SegmentationEntity</text>
+		</g>
+		<text transform="matrix(1 0 0 1 336.7808 418.2363)"><tspan x="0" y="0" font-size="7.0974">-imageAnnotations</tspan><tspan x="-27.617" y="25.551" font-size="7.0974">-imageAnnotationCollection</tspan></text>
+		<text transform="matrix(1 0 0 1 404.1816 418.2363)"><tspan x="0" y="0" font-size="7.0974">1..*</tspan><tspan x="0" y="25.551" font-size="7.0974">1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="400.406" y1="404.818" x2="400.406" y2="453.034"/>
+				<g>
+					<polygon points="397.584,410.062 398.419,410.365 400.406,404.904 402.394,410.365 403.227,410.062 400.406,402.311 					"/>
+				</g>
+				<g>
+					<polygon points="397.584,447.79 398.419,447.486 400.406,452.947 402.394,447.486 403.227,447.79 400.406,455.541 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1048.461" y1="253.093" x2="1048.461" y2="301.313"/>
+				<g>
+					<polygon points="1045.639,258.337 1046.474,258.641 1048.461,253.18 1050.448,258.641 1051.282,258.337 1048.461,250.586 					
+						"/>
+				</g>
+				<g>
+					<polygon points="1045.639,296.069 1046.474,295.766 1048.461,301.227 1050.448,295.766 1051.282,296.069 1048.461,303.82 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1436.524" y1="395.024" x2="1436.524" y2="443.24"/>
+				<g>
+					<polygon points="1433.703,400.268 1434.537,400.571 1436.524,395.11 1438.512,400.571 1439.346,400.268 1436.524,392.517 					
+						"/>
+				</g>
+				<g>
+					<polygon points="1433.703,437.996 1434.537,437.692 1436.524,443.153 1438.512,437.692 1439.346,437.996 1436.524,445.747 
+											"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1671.036" y1="359.818" x2="1671.036" y2="408.034"/>
+				<g>
+					<polygon points="1668.215,365.062 1669.049,365.365 1671.036,359.904 1673.023,365.365 1673.857,365.062 1671.036,357.311 
+											"/>
+				</g>
+				<g>
+					<polygon points="1668.215,402.79 1669.049,402.486 1671.036,407.947 1673.023,402.486 1673.857,402.79 1671.036,410.541 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 182.5317 440.1768)" font-size="7.0974">-imageReferenceEntityCollection</text>
+		<text transform="matrix(1 0 0 1 255.6855 374.9443)"><tspan x="0" y="0" font-size="7.0974">-imageAnnotation</tspan><tspan x="51.685" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 162.2285 440.1768)" font-size="7.0974">0..*</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="319.554,381.471 177.513,381.471 
+					177.513,449.927 				"/>
+				<g>
+					<polygon points="314.31,378.649 314.006,379.484 319.467,381.471 314.006,383.458 314.31,384.292 322.061,381.471 					"/>
+				</g>
+				<g>
+					<polygon points="174.691,444.683 175.525,444.38 177.513,449.841 179.5,444.38 180.333,444.683 177.513,452.434 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 556.5195 440.1768)" font-size="7.0974">-segmentationEntityCollection</text>
+		<text transform="matrix(1 0 0 1 485.9561 382.9922)"><tspan x="0" y="0" font-size="7.0974">-imageAnnotation</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 658.6299 440.1768)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 1053.3545 264.3174)" font-size="7.0974">1</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="477.817,390.361 654.89,390.361 
+					654.89,449.033 				"/>
+				<g>
+					<polygon points="483.062,393.183 483.365,392.348 477.904,390.361 483.365,388.374 483.062,387.54 475.311,390.361 					"/>
+				</g>
+				<g>
+					<polygon points="652.068,443.789 652.902,443.485 654.89,448.946 656.877,443.485 657.71,443.789 654.89,451.54 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 746.8667 440.1768)" font-size="7.0974">-markupEntityCollection</text>
+		<text transform="matrix(1 0 0 1 485.9561 333.2051)"><tspan x="0" y="0" font-size="7.0974">-imageAnnotation</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 830.0322 440.1768)" font-size="7.0974">0..*</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="477.817,340.574 825.685,340.574 
+					825.685,448.334 				"/>
+				<g>
+					<polygon points="483.062,343.396 483.365,342.561 477.904,340.574 483.365,338.586 483.062,337.753 475.311,340.574 					"/>
+				</g>
+				<g>
+					<polygon points="822.863,443.09 823.697,442.787 825.685,448.248 827.672,442.787 828.505,443.09 825.685,450.841 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="1084.375,336.542 
+					1186.649,336.542 1186.649,360.248 				"/>
+				<g>
+					<polygon points="1089.619,339.364 1089.923,338.53 1084.462,336.542 1089.923,334.555 1089.619,333.722 1081.868,336.542 					
+						"/>
+				</g>
+				<g>
+					<polygon points="1183.827,355.003 1184.662,354.7 1186.649,360.161 1188.637,354.7 1189.471,355.003 1186.649,362.754 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="1138.337,460.785 
+					1342.954,460.785 1342.954,534.667 				"/>
+				<g>
+					<polygon points="1143.581,463.607 1143.885,462.772 1138.424,460.785 1143.885,458.798 1143.581,457.964 1135.83,460.785 					
+						"/>
+				</g>
+				<g>
+					<polygon points="1340.133,529.423 1340.967,529.119 1342.954,534.58 1344.941,529.119 1345.775,529.423 1342.954,537.174 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 1662.5615 293.0098)" font-size="7.0974">-inferenceEntityCollection</text>
+		<text transform="matrix(1 0 0 1 1128.5508 240.8281)"><tspan x="0" y="0" font-size="7.0974">-annotationEntity</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 1145.5508 453.96)"><tspan x="0" y="0" font-size="7.0974">-calculationResultEntity</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 991.7227 263.8955)" font-size="7.0974">-annotationEntity</text>
+		<text transform="matrix(1 0 0 1 1053.3545 293.4316)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 960.1729 293.0098)" font-size="7.0974">-calculationEntityCollection</text>
+		<text transform="matrix(1 0 0 1 1010.0254 374.5674)" font-size="7.0974">1</text>
+		<text transform="matrix(1 0 0 1 948.0088 374.1455)" font-size="7.0974">-calculationEntity</text>
+		<text transform="matrix(1 0 0 1 1092.043 329.5781)"><tspan x="0" y="0" font-size="7.0974">-calculationEntity</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 1191.4346 353.3262)" font-size="7.0974">0..1</text>
+		<text transform="matrix(1 0 0 1 1151.5137 352.9043)" font-size="7.0974">-algorithm</text>
+		<text transform="matrix(1 0 0 1 1010.0254 426.6816)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 914.4766 426.2598)" font-size="7.0974">-calculationResultCollection</text>
+		<text transform="matrix(1 0 0 1 1043.5322 597.7949)" font-size="7.0974">1</text>
+		<text transform="matrix(1 0 0 1 930.6177 597.373)" font-size="7.0974">-extendedCalculationResultEntity</text>
+		<text transform="matrix(1 0 0 1 1043.5322 625.7168)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 953.1094 625.2949)" font-size="7.0974">-calculationDataCollection</text>
+		<text transform="matrix(1 0 0 1 1010.0254 696.835)" font-size="7.0974">1</text>
+		<text transform="matrix(1 0 0 1 933.0166 696.4131)" font-size="7.0974">-calculationDataEntity</text>
+		<text transform="matrix(1 0 0 1 1010.0254 724.7578)" font-size="7.0974">1..*</text>
+		<text transform="matrix(1 0 0 1 934.9854 724.3359)" font-size="7.0974">-coordinateCollection</text>
+		<text transform="matrix(1 0 0 1 1347.0166 524.6816)" font-size="7.0974">1..*</text>
+		<text transform="matrix(1 0 0 1 1272.7705 524.2598)" font-size="7.0974">-dimensionCollection</text>
+		<text transform="matrix(1 0 0 1 1751.2598 293.0098)" font-size="7.0974">0..*</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="1120.424,248.196 
+					1413.601,248.196 1413.601,300.831 				"/>
+				<g>
+					<polygon points="1125.668,251.018 1125.972,250.183 1120.511,248.196 1125.972,246.208 1125.668,245.375 1117.917,248.196 
+											"/>
+				</g>
+				<g>
+					<polygon points="1410.779,295.586 1411.613,295.283 1413.601,300.744 1415.588,295.283 1416.422,295.586 1413.601,303.337 
+											"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 1473.9209 293.0098)" font-size="7.0974">-imagingPhysicalEntityCollection</text>
+		<text transform="matrix(1 0 0 1 1128.5508 213.0586)"><tspan x="0" y="0" font-size="7.0974">-annotationEntity</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 1584.7012 293.0098)" font-size="7.0974">0..*</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="1120.424,220.424 
+					1581.57,220.424 1581.57,299.889 				"/>
+				<g>
+					<polygon points="1125.668,223.246 1125.972,222.412 1120.511,220.424 1125.972,218.437 1125.668,217.604 1117.917,220.424 
+											"/>
+				</g>
+				<g>
+					<polygon points="1578.748,294.645 1579.583,294.342 1581.57,299.803 1583.558,294.342 1584.392,294.645 1581.57,302.396 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 1295.0625 293.0098)" font-size="7.0974">-imagingObservationEntityCollection</text>
+		<text transform="matrix(1 0 0 1 1128.5508 185.2861)"><tspan x="0" y="0" font-size="7.0974">-annotationEntity</tspan><tspan x="0" y="17.034" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 1417.6826 293.0098)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 1349.1797 407.5098)" font-size="7.0974">-imagingObservationEntity</text>
+		<text transform="matrix(1 0 0 1 1440.6348 407.5098)" font-size="7.0974">1</text>
+		<text transform="matrix(1 0 0 1 1292.3799 435.8379)" font-size="7.0974">-imagingObservationCharacteristicCollection</text>
+		<text transform="matrix(1 0 0 1 1440.6348 435.8379)" font-size="7.0974">0..*</text>
+		<text transform="matrix(1 0 0 1 1595.1211 369.7617)" font-size="7.0974">-imagingPhysicalEntity</text>
+		<text transform="matrix(1 0 0 1 1674.7383 369.7617)" font-size="7.0974">1</text>
+		<text transform="matrix(1 0 0 1 1522.1484 398.0898)" font-size="7.0974">-imagingPhysicaEntityCharacteristicCollection</text>
+		<text transform="matrix(1 0 0 1 1674.7383 398.0898)" font-size="7.0974">0..*</text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" points="1120.424,192.654 
+					1747.176,192.654 1747.176,300.415 				"/>
+				<g>
+					<polygon points="1125.668,195.476 1125.972,194.641 1120.511,192.654 1125.972,190.667 1125.668,189.833 1117.917,192.654 
+											"/>
+				</g>
+				<g>
+					<polygon points="1744.354,295.17 1745.188,294.867 1747.176,300.328 1749.163,294.867 1749.997,295.17 1747.176,302.921 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 371.4814 645.0537)"><tspan x="0" y="0" font-size="7.0974">-annotationCollection</tspan><tspan x="31.172" y="25.551" font-size="7.0974">-equipment</tspan></text>
+		<text transform="matrix(1 0 0 1 446.3818 645.0537)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">0..1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="442.606" y1="631.638" x2="442.606" y2="679.853"/>
+				<g>
+					<polygon points="439.785,636.882 440.619,637.186 442.606,631.725 444.594,637.186 445.427,636.882 442.606,629.131 					"/>
+				</g>
+				<g>
+					<polygon points="439.785,674.608 440.619,674.305 442.606,679.766 444.594,674.305 445.427,674.608 442.606,682.359 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 462.0303 645.0537)"><tspan x="0" y="0" font-size="7.0974">-annotationCollection</tspan><tspan x="50.51" y="25.551" font-size="7.0974">-user</tspan></text>
+		<text transform="matrix(1 0 0 1 536.9316 645.0537)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">0..1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="533.155" y1="631.638" x2="533.155" y2="679.853"/>
+				<g>
+					<polygon points="530.333,636.882 531.168,637.186 533.155,631.725 535.143,637.186 535.976,636.882 533.155,629.131 					"/>
+				</g>
+				<g>
+					<polygon points="530.333,674.608 531.168,674.305 533.155,679.766 535.143,674.305 535.976,674.608 533.155,682.359 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1005.6" y1="361.832" x2="1005.6" y2="432.402"/>
+				<g>
+					<polygon points="1002.777,367.076 1003.612,367.379 1005.6,361.918 1007.587,367.379 1008.421,367.076 1005.6,359.325 					"/>
+				</g>
+				<g>
+					<polygon points="1002.777,427.158 1003.612,426.854 1005.6,432.315 1007.587,426.854 1008.421,427.158 1005.6,434.909 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1038.857" y1="584.972" x2="1038.857" y2="633.188"/>
+				<g>
+					<polygon points="1036.035,590.216 1036.87,590.52 1038.857,585.059 1040.845,590.52 1041.679,590.216 1038.857,582.465 					
+						"/>
+				</g>
+				<g>
+					<polygon points="1036.035,627.944 1036.87,627.641 1038.857,633.102 1040.845,627.641 1041.679,627.944 1038.857,635.695 					
+						"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1005.6" y1="685.106" x2="1005.6" y2="733.323"/>
+				<g>
+					<polygon points="1002.777,690.351 1003.612,690.654 1005.6,685.193 1007.587,690.654 1008.421,690.351 1005.6,682.6 					"/>
+				</g>
+				<g>
+					<polygon points="1002.777,728.079 1003.612,727.775 1005.6,733.236 1007.587,727.775 1008.421,728.079 1005.6,735.83 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 658.3472 765.5557)"><tspan x="0" y="0" font-size="7.0974">-twoDimensionGeometricShapeEntity</tspan><tspan x="-16.579" y="25.551" font-size="7.0974">-twoDimensionSpatialCoordinateCollection</tspan></text>
+		<text transform="matrix(1 0 0 1 784.5117 765.5557)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">0..1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="780.737" y1="752.136" x2="780.737" y2="800.353"/>
+				<g>
+					<polygon points="777.916,757.38 778.75,757.684 780.737,752.223 782.725,757.684 783.558,757.38 780.737,749.629 					"/>
+				</g>
+				<g>
+					<polygon points="777.916,795.108 778.75,794.805 780.737,800.266 782.725,794.805 783.558,795.108 780.737,802.859 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 263.8604 533.8184)"><tspan x="0" y="0" font-size="7.0974">-imageAnnotationCollection</tspan><tspan x="62.732" y="25.551" font-size="7.0974">-person</tspan></text>
+		<text transform="matrix(1 0 0 1 358.8779 533.8184)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">0..1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="355.096" y1="520.397" x2="355.096" y2="568.614"/>
+				<g>
+					<polygon points="352.274,525.642 353.108,525.945 355.096,520.484 357.083,525.945 357.917,525.642 355.096,517.891 					"/>
+				</g>
+				<g>
+					<polygon points="352.274,563.37 353.108,563.066 355.096,568.527 357.083,563.066 357.917,563.37 355.096,571.121 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="445.644" y1="517.891" x2="445.644" y2="564.755"/>
+				<g>
+					<polygon points="441.22,563.46 445.644,571.121 450.067,563.46 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="71.552" y="452.602" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.853"/>
+			
+				<rect x="71.552" y="470.455" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.316"/>
+			<text transform="matrix(1 0 0 1 102.5859 463.5039)" font-size="7.0974">AIM:: ImageReferenceEntity</text>
+		</g>
+		<g>
+			
+				<rect x="71.552" y="552.004" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.854"/>
+			
+				<rect x="71.552" y="569.857" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.314"/>
+			<text transform="matrix(1 0 0 1 90.7588 562.9072)" font-size="7.0974">AIM:: DICOMImageReferenceEntity</text>
+		</g>
+		<g>
+			
+				<rect x="71.554" y="669.242" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.389"/>
+			<text transform="matrix(1 0 0 1 73.3359 676.9111)"><tspan x="0" y="0" font-size="7.0974">-  instanceUid: II</tspan><tspan x="0" y="8.517" font-size="7.0974">-  startDate: TS</tspan><tspan x="0" y="17.034" font-size="7.0974">-  startTime: TS</tspan></text>
+			
+				<rect x="71.554" y="651.402" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.855"/>
+			<text transform="matrix(1 0 0 1 118.7578 661.4102)" font-size="7.0974">AIM:: ImageStudy</text>
+		</g>
+		<g>
+			
+				<rect x="71.554" y="768.701" fill="#CCDEF0" stroke="#000000" stroke-width="1.0393" stroke-miterlimit="10" width="150.819" height="28"/>
+			<text transform="matrix(1 0 0 1 73.3359 776.3711)"><tspan x="0" y="0" font-size="7.0974">-  instanceUid: II</tspan><tspan x="0" y="8.517" font-size="7.0974">-  modality: CD</tspan></text>
+			
+				<rect x="71.554" y="750.859" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.857"/>
+			<text transform="matrix(1 0 0 1 117.7734 761.7627)" font-size="7.0974">AIM:: ImageSeries</text>
+		</g>
+		<g>
+			
+				<rect x="71.554" y="867.934" fill="#CCDEF0" stroke="#000000" stroke-width="1.0393" stroke-miterlimit="10" width="150.819" height="28"/>
+			<text transform="matrix(1 0 0 1 73.3359 875.6064)"><tspan x="0" y="0" font-size="7.0974">-  sopClassUid: II</tspan><tspan x="0" y="8.517" font-size="7.0974">-  sopInstanceUid: II</tspan></text>
+			
+				<rect x="71.554" y="850.096" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.855"/>
+			<text transform="matrix(1 0 0 1 117.7734 860.999)" font-size="7.0974">AIM:: Image</text>
+		</g>
+		<text transform="matrix(1 0 0 1 100.7056 813.7344)"><tspan x="0" y="0" font-size="7.0974">-imageSeries</tspan><tspan x="-11.048" y="25.551" font-size="7.0974">-imageCollection</tspan></text>
+		<text transform="matrix(1 0 0 1 150.7373 813.7344)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">1..*</tspan></text>
+		<text transform="matrix(1 0 0 1 102.6738 713.7188)"><tspan x="0" y="0" font-size="7.0974">-imageStudy</tspan><tspan x="-1.968" y="25.551" font-size="7.0974">-imageSeries</tspan></text>
+		<text transform="matrix(1 0 0 1 150.7373 713.7188)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">1</tspan></text>
+		<text transform="matrix(1 0 0 1 50.9995 614.0977)"><tspan x="0" y="0" font-size="7.0974">-dicomImageReferenceEntity</tspan><tspan x="51.674" y="25.551" font-size="7.0974">-imageStudy</tspan></text>
+		<text transform="matrix(1 0 0 1 150.7373 614.0977)"><tspan x="0" y="0" font-size="7.0974">1</tspan><tspan x="0" y="25.551" font-size="7.0974">1</tspan></text>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="146.963" y1="799.372" x2="146.963" y2="847.589"/>
+				<g>
+					<polygon points="144.141,804.616 144.976,804.92 146.963,799.459 148.95,804.92 149.784,804.616 146.963,796.865 					"/>
+				</g>
+				<g>
+					<polygon points="144.141,842.345 144.976,842.041 146.963,847.502 148.95,842.041 149.784,842.345 146.963,850.096 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="146.963" y1="700.138" x2="146.963" y2="748.353"/>
+				<g>
+					<polygon points="144.141,705.382 144.976,705.686 146.963,700.225 148.95,705.686 149.784,705.382 146.963,697.631 					"/>
+				</g>
+				<g>
+					<polygon points="144.141,743.108 144.976,742.805 146.963,748.266 148.95,742.805 149.784,743.108 146.963,750.859 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="146.963" y1="600.679" x2="146.963" y2="648.896"/>
+				<g>
+					<polygon points="144.141,605.923 144.976,606.227 146.963,600.766 148.95,606.227 149.784,605.923 146.963,598.172 					"/>
+				</g>
+				<g>
+					<polygon points="144.141,643.651 144.976,643.348 146.963,648.809 148.95,643.348 149.784,643.651 146.963,651.402 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="146.963" y1="505.138" x2="146.963" y2="552.004"/>
+				<g>
+					<polygon points="142.539,506.433 146.963,498.771 151.387,506.433 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="654.89" y1="506.55" x2="654.89" y2="553.412"/>
+				<g>
+					<polygon points="650.466,507.845 654.89,500.184 659.313,507.845 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="697.252" y1="108.845" x2="697.252" y2="451.931"/>
+				<g>
+					<polygon points="692.828,110.139 697.252,102.478 701.676,110.139 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="825.685" y1="506.55" x2="825.685" y2="553.412"/>
+				<g>
+					<polygon points="821.261,507.845 825.685,500.184 830.108,507.845 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1005.602" y1="489.185" x2="1005.602" y2="536.049"/>
+				<g>
+					<polygon points="1001.178,490.479 1005.602,482.818 1010.025,490.479 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="1117.904" y1="489.185" x2="1117.904" y2="536.049"/>
+				<g>
+					<polygon points="1113.48,490.479 1117.904,482.818 1122.328,490.479 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="825.685" y1="656.665" x2="825.685" y2="703.529"/>
+				<g>
+					<polygon points="821.261,657.96 825.685,650.299 830.108,657.96 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" x1="868.558" y1="755.995" x2="868.558" y2="802.857"/>
+				<g>
+					<polygon points="864.134,757.29 868.558,749.629 872.981,757.29 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="328.773" y="452.603" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.856"/>
+			
+				<rect x="328.773" y="470.865" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="46.133"/>
+			<text transform="matrix(1 0 0 1 352.5029 463.5039)" font-size="7.0974">AIM:: ImageAnnotationCollection</text>
+			<text transform="matrix(1 0 0 1 330.5586 478.5361)"><tspan x="0" y="0" font-size="7.0974">::AnnotationCollection</tspan><tspan x="0" y="8.517" font-size="7.0974">-  aimVersion: AimVersion</tspan><tspan x="0" y="17.034" font-size="7.0974">-  dateTime: TS</tspan><tspan x="0" y="25.551" font-size="7.0974">-  description: ST [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="240.123" y="572.697" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="17.854"/>
+			
+				<rect x="240.123" y="590.959" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="46.133"/>
+			<text transform="matrix(1 0 0 1 295.0156 583.5996)" font-size="7.0974">AIM:: Person</text>
+			<text transform="matrix(1 0 0 1 241.9004 598.6289)"><tspan x="0" y="0" font-size="7.0974">-  birthDate: TS [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  ethnicGroup: ST [0..1]</tspan><tspan x="0" y="17.034" font-size="7.0974">-  id: ST</tspan><tspan x="0" y="25.551" font-size="7.0974">-  name: ST</tspan><tspan x="0" y="34.067" font-size="7.0974">-  sex: ST [0..1]</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="408.685" y="572.713" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.852"/>
+			
+				<rect x="408.685" y="590.973" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="37.262"/>
+			<text transform="matrix(1 0 0 1 442.2725 583.6143)" font-size="7.0974">AIM:: AnnotationCollection</text>
+			<text transform="matrix(1 0 0 1 410.4648 598.6465)"><tspan x="0" y="0" font-size="7.0974">-  aimVersion: AimVersion</tspan><tspan x="0" y="8.517" font-size="7.0974">-  dateTime: TS</tspan><tspan x="0" y="17.034" font-size="7.0974">-  description: ST [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			<g>
+				
+					<rect x="492.966" y="681.465" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.854"/>
+				
+					<rect x="492.966" y="699.725" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="37.264"/>
+				<text transform="matrix(1 0 0 1 551.5645 692.3662)" font-size="7.0974">AIM:: User</text>
+				<text transform="matrix(1 0 0 1 494.7471 707.3994)"><tspan x="0" y="0" font-size="7.0974">-  loginName: ST</tspan><tspan x="0" y="8.517" font-size="7.0974">-  name: ST</tspan><tspan x="0" y="17.034" font-size="7.0974">-  numberWithinRoleOfClinicalTrial: INT [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  roleInTrial: ST [0..1]</tspan></text>
+			</g>
+			<g>
+				
+					<rect x="324.404" y="681.469" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.852"/>
+				
+					<rect x="324.404" y="699.727" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="28.391"/>
+				<text transform="matrix(1 0 0 1 373.5781 692.3662)" font-size="7.0974">AIM:: Equipment</text>
+				<text transform="matrix(1 0 0 1 326.1846 707.3955)"><tspan x="0" y="0" font-size="7.0974">-  manufacturerModelName: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  manufacturerName: ST</tspan><tspan x="0" y="17.034" font-size="7.0974">-  softwareVersion: ST [0..1]</tspan></text>
+			</g>
+		</g>
+		<g>
+			
+				<rect x="579.48" y="553.412" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.854"/>
+			
+				<rect x="579.48" y="571.674" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="37.26"/>
+			<text transform="matrix(1 0 0 1 604.7881 564.3145)" font-size="7.0974">AIM:: DicomSegmentationEntity</text>
+			<text transform="matrix(1 0 0 1 581.2598 579.3457)"><tspan x="0" y="0" font-size="7.0974">-  referencedSopInstanceUid: II</tspan><tspan x="0" y="8.517" font-size="7.0974">-  segmentNumber: INT</tspan><tspan x="0" y="17.034" font-size="7.0974">-  sopClassUid: II*</tspan><tspan x="0" y="25.551" font-size="7.0974">-  sopInstanceUid: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="750.279" y="451.54" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.853"/>
+			
+				<rect x="750.279" y="469.393" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="28.316"/>
+			<text transform="matrix(1 0 0 1 752.0625 477.4727)"><tspan x="0" y="0" font-size="7.0974">::Entity</tspan><tspan x="0" y="8.517" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+			<text transform="matrix(1 0 0 1 795.7109 462.4424)" font-size="7.0974">AIM:: MarkupEntity</text>
+		</g>
+		<g>
+			
+				<rect x="751.584" y="553.412" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.854"/>
+			
+				<rect x="751.584" y="571.395" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="79.846"/>
+			<text transform="matrix(1 0 0 1 782.2256 564.3145)" font-size="7.0974">AIM:: GeometricShapeEntity</text>
+			<text transform="matrix(1 0 0 1 753.3711 579.3457)"><tspan x="0" y="0" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  includeFlag: BL</tspan><tspan x="0" y="17.034" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  questionIndex: INT [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  questionTypeCode: CD [0..n]</tspan><tspan x="0" y="42.584" font-size="7.0974">-  shapeIdentifier: INT</tspan><tspan x="0" y="51.102" font-size="7.0974">::Entity</tspan><tspan x="0" y="59.618" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="838.659" y="802.914" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="137.51" height="17.855"/>
+			
+				<rect x="838.659" y="820.77" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="137.51" height="28.316"/>
+			<text transform="matrix(1 0 0 1 862.2529 813.8193)" font-size="7.0974">AIM:: TwoDimensionPolyline</text>
+		</g>
+		<g>
+			
+				<rect x="667.804" y="820.697" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="28.389"/>
+			<text transform="matrix(1 0 0 1 669.5791 828.3701)"><tspan x="0" y="0" font-size="7.0974">-  coordinateIndex: INT</tspan><tspan x="0" y="8.517" font-size="7.0974">-  x: REAL</tspan><tspan x="0" y="17.034" font-size="7.0974">-  y: REAL</tspan></text>
+			
+				<rect x="667.804" y="802.857" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="17.854"/>
+			<text transform="matrix(1 0 0 1 682.2617 812.8672)" font-size="7.0974">AIM:: TwoDimensionSpatialCoordinate</text>
+		</g>
+		<g>
+			
+				<rect x="750.27" y="722.17" fill="#CCDEF0" stroke="#000000" stroke-width="1.0393" stroke-miterlimit="10" width="150.819" height="28"/>
+			
+				<rect x="750.27" y="704.33" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.855"/>
+			<text transform="matrix(1 0 0 1 752.0527 729.8389)"><tspan x="0" y="0" font-size="7.0974">-  imageReferenceUid: II [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  referencedFrameNumber: INT [0..1]</tspan></text>
+			<text transform="matrix(1 0 0 1 757.4404 715.2314)" font-size="7.0974">AIM:: TwoDimensionGeometricShapeEntity</text>
+		</g>
+		<g>
+			
+				<rect x="930.433" y="303.645" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.854"/>
+			
+				<rect x="930.433" y="321.628" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="37.262"/>
+			<text transform="matrix(1 0 0 1 970.1328 314.5469)" font-size="7.0974">AIM:: CalculationEntity</text>
+			<text transform="matrix(1 0 0 1 932.207 329.5781)"><tspan x="0" y="0" font-size="7.0974">-  description: ST</tspan><tspan x="0" y="8.517" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="17.034" font-size="7.0974">::Entity</tspan><tspan x="0" y="25.551" font-size="7.0974">-  uniqueIdentifier: II</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="930.433" y="536.379" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.852"/>
+			
+				<rect x="930.433" y="554.23" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="28.318"/>
+			<text transform="matrix(1 0 0 1 953.9561 547.2842)" font-size="7.0974">AIM:: ExtendedCalculationResult</text>
+		</g>
+		<g>
+			
+				<rect x="985.866" y="453.675" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.391"/>
+			<text transform="matrix(1 0 0 1 987.6484 461.3525)"><tspan x="0" y="0" font-size="7.0974">-  dataType: CD</tspan><tspan x="0" y="8.517" font-size="7.0974">-  type: CalculationResultIdentifier</tspan><tspan x="0" y="17.034" font-size="7.0974">-  unitOfMeasure: ST</tspan></text>
+			
+				<rect x="985.866" y="435.838" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.854"/>
+			<text transform="matrix(1 0 0 1 1024.3945 445.8496)" font-size="7.0974">AIM:: CalculationResult</text>
+		</g>
+		<g>
+			
+				<rect x="1098.995" y="554.219" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.387"/>
+			<text transform="matrix(1 0 0 1 1100.7656 561.8926)"><tspan x="0" y="0" font-size="7.0974">-  compression: CD [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  encoding: CD [0..1]</tspan><tspan x="0" y="17.034" font-size="7.0974">-  value: ST</tspan></text>
+			
+				<rect x="1098.995" y="536.379" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.852"/>
+			<text transform="matrix(1 0 0 1 1123.3125 546.3926)" font-size="7.0974">AIM:: CompactCalculationResult</text>
+		</g>
+		<g>
+			
+				<rect x="1267.557" y="554.219" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.387"/>
+			<text transform="matrix(1 0 0 1 1269.3291 561.8926)"><tspan x="0" y="0" font-size="7.0974">-  index: INT</tspan><tspan x="0" y="8.517" font-size="7.0974">-  label: ST</tspan><tspan x="0" y="17.034" font-size="7.0974">-  size: ST</tspan></text>
+			
+				<rect x="1267.557" y="536.379" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.852"/>
+			<text transform="matrix(1 0 0 1 1316.9258 546.3926)" font-size="7.0974">AIM:: Dimension</text>
+		</g>
+		<g>
+			
+				<rect x="1098.995" y="381.253" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="28.391"/>
+			<text transform="matrix(1 0 0 1 1100.7656 388.9131)"><tspan x="0" y="0" font-size="7.0974">-  name: ST</tspan><tspan x="0" y="8.517" font-size="7.0974">-  type:  CD [1..n] {ordered}</tspan><tspan x="0" y="17.034" font-size="7.0974">-  version: ST [0..1]</tspan></text>
+			
+				<rect x="1098.995" y="363.417" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.854"/>
+			<text transform="matrix(1 0 0 1 1150.1396 373.4102)" font-size="7.0974">AIM:: Algorithm</text>
+		</g>
+		<g>
+			
+				<rect x="930.433" y="655.002" fill="#CCDEF0" stroke="#000000" stroke-width="1.0392" stroke-miterlimit="10" width="150.818" height="28"/>
+			<text transform="matrix(1 0 0 1 932.2041 662.6758)" font-size="7.0974">-  value: ST</text>
+			
+				<rect x="930.433" y="637.164" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.818" height="17.854"/>
+			<text transform="matrix(1 0 0 1 971.5137 648.0684)" font-size="7.0974">AIM:: CalculationData</text>
+		</g>
+		<g>
+			
+				<rect x="930.185" y="754.645" fill="#CCDEF0" stroke="#000000" stroke-width="1.0392" stroke-miterlimit="10" width="150.819" height="28"/>
+			<text transform="matrix(1 0 0 1 931.957 762.3213)"><tspan x="0" y="0" font-size="7.0974">-  dimensionIndex: INT</tspan><tspan x="0" y="8.517" font-size="7.0974">-  position: INT</tspan></text>
+			
+				<rect x="930.185" y="736.805" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.819" height="17.855"/>
+			<text transform="matrix(1 0 0 1 978.9561 747.7139)" font-size="7.0974">AIM:: Coordinate</text>
+		</g>
+		<g>
+			
+				<rect x="1529.576" y="410.881" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="17.857"/>
+			
+				<rect x="1529.576" y="428.664" fill="#CCDEF0" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.82" height="55.004"/>
+			<text transform="matrix(1 0 0 1 1539.2891 421.7871)" font-size="7.0974">AIM:: ImagingPhysicalEntityCharacteristic</text>
+			<text transform="matrix(1 0 0 1 1531.3398 436.8184)"><tspan x="0" y="0" font-size="7.0974">-  annotatorConfidence: REAL [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  comment: ST [0..1]</tspan><tspan x="0" y="17.034" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="25.551" font-size="7.0974">-  questionIndex: INT [0..1]</tspan><tspan x="0" y="34.067" font-size="7.0974">-  questionTypeCode: CD [1..n] {ordered}</tspan><tspan x="0" y="42.584" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan></text>
+		</g>
+		<g>
+			
+				<rect x="1361.016" y="463.691" fill="#CCDEF0" stroke="#000000" stroke-width="1.0393" stroke-miterlimit="10" width="150.817" height="28"/>
+			<text transform="matrix(1 0 0 1 1362.7734 471.3613)"><tspan x="0" y="0" font-size="7.0974">-  label: ST [0..1]</tspan><tspan x="0" y="8.517" font-size="7.0974">-  typeCode: CD [1..n] {ordered}</tspan></text>
+			
+				<rect x="1361.016" y="445.852" fill="#86B2D8" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" width="150.817" height="17.853"/>
+			<text transform="matrix(1 0 0 1 1373.6846 456.7539)" font-size="7.0974">AIM:: ImagingObservationCharacteristic</text>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M960.907,227.711
+					c-324.608,0.436-560.501,34.184-560.501,75.755"/>
+				<g>
+					<polygon points="959.584,223.333 967.273,227.707 959.642,232.18 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M612.119,83.532
+					C332.887,85.995,107.58,250.16,107.58,452.324"/>
+				<g>
+					<polygon points="610.747,79.221 618.487,83.504 610.908,88.067 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.425,81.248
+					c116.945,2.672,176.39,79.553,176.39,222.966"/>
+				<g>
+					<polygon points="776.629,85.752 769.059,81.175 776.807,76.907 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.425,71.361
+					c162.625,1.076,267.962,43.352,267.962,95.35"/>
+				<g>
+					<polygon points="776.647,75.887 769.059,71.34 776.79,67.041 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.425,61.514
+					c405.723,1.117,686.475,108.995,686.475,241.919"/>
+				<g>
+					<polygon points="776.683,65.992 769.059,61.505 776.756,57.146 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.429,50.947
+					c497.527,0.849,872.494,101.121,872.494,250.633"/>
+				<g>
+					<polygon points="776.691,55.414 769.059,50.942 776.747,46.566 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.428,41.108
+					c586.691,0.225,1053.326,31.905,1053.326,263.455"/>
+				<g>
+					<polygon points="776.703,45.559 769.059,41.107 776.736,36.712 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="none" stroke="#000000" stroke-width="0.8872" stroke-miterlimit="10" d="M775.426,91.809
+					c96.069,3.988,85.374,221.838,85.374,359.929"/>
+				<g>
+					<polygon points="776.692,96.323 769.059,91.852 776.747,87.475 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

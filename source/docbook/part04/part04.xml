@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2017d - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2017e - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -481,7 +481,10 @@
     </section>
     <section label="5.3" status="2" xml:id="sect_5.3">
       <title>Response Status Values</title>
-      <para xml:id="para_220e27e4-26cc-4b44-86ac-aedeb234872c">Certain tables in this Part of the DICOM Standard denote an implementation specific response status code by using the symbol: 'xx' as part of the code.</para>
+      <para xml:id="para_220e27e4-26cc-4b44-86ac-aedeb234872c">Certain tables in this Part of the DICOM Standard denote an implementation specific response status code by using the symbol 'xx' or 'xxx' as part of the code.</para>
+      <note>
+        <para xml:id="para_8fa61db1-f3ba-486b-8c71-d34fa7301506">Each 'x' symbol may be replaced by an implementation with a hexadecimal digit in the range from 0 to F.</para>
+      </note>
     </section>
     <section label="5.4" status="2" xml:id="sect_5.4">
       <title>Usage Specification</title>
@@ -784,7 +787,7 @@
       <section label="B.2.3" status="3" xml:id="sect_B.2.3">
         <title>Statuses</title>
         <para xml:id="para_5dbf7bdf-97b3-4daf-8c32-16c5b0f353a5">
-          <xref linkend="table_B.2-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-STORE response. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+          <xref linkend="table_B.2-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-STORE response. General status code values and fields related to status code values are defined for C-STORE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
         <table frame="box" label="B.2-1" rules="all" xml:id="table_B.2-1">
           <caption>C-STORE Status</caption>
           <thead>
@@ -897,7 +900,9 @@
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_c467cc05-5424-49aa-b6ee-71638fe3e409">Success</para>
               </td>
-              <td align="left" colspan="1" rowspan="1"/>
+              <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_a3cc237a-453f-474b-aa23-022d1b4e7bff">Success</para>
+              </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_38d6b8d1-18d3-4966-99fb-9a2d2c01a378">0000</para>
               </td>
@@ -907,6 +912,9 @@
             </tr>
           </tbody>
         </table>
+        <para xml:id="para_2b2e109b-740a-40c7-8b7b-957f62b252f5">Some Failure Status Codes are implementation specific.</para> 
+        <para xml:id="para_cabdc48f-a909-457a-b916-d87b371a618d">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes within the same Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_B.2-1" xrefstyle="select: label"/>.</para>
+        <para xml:id="para_f65ad91b-6e5d-4de4-93e8-4dc390b7fd98">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_B.2-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
       </section>
     </section>
     <section label="B.3" status="2" xml:id="sect_B.3">
@@ -4873,7 +4881,7 @@
           <section label="C.4.1.1.4" status="5" xml:id="sect_C.4.1.1.4">
             <title>Status</title>
             <para xml:id="para_c9f7aed1-ea55-4d15-9425-c3ae18ee5cef">
-              <xref linkend="table_C.4-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_C.4-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="C.4-1" rules="all" xml:id="table_C.4-1">
               <caption>C-FIND Response Status Values</caption>
               <thead>
@@ -4918,7 +4926,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_982dbc49-dc62-456c-9b29-1ba3762c42a7">Identifier does not match SOP Class</para>
+                    <para xml:id="para_982dbc49-dc62-456c-9b29-1ba3762c42a7">Error: Data Set does not match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_5515ebc9-6dce-48e6-834b-95a04a57d02d">A900</para>
@@ -4931,7 +4939,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_54617503-f4d0-457a-a5e5-068a8948a7db">Unable to process</para>
+                    <para xml:id="para_54617503-f4d0-457a-a5e5-068a8948a7db">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_06ae996b-1d0d-4cde-8ee2-f57053dd2ac5">Cxxx</para>
@@ -4997,6 +5005,9 @@
                 </tr>
               </tbody>
             </table>
+            <para xml:id="para_0319bd44-d9fd-40a9-b930-faca67fb16cf">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_1f1cc1cc-85a8-40f7-830f-ed07d0f5bf94">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed: Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_C.4-1" xrefstyle="select: label"/>. </para>
+            <para xml:id="para_4cc20629-3513-4298-a4f4-56768a5d69c7">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_C.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
         </section>
         <section label="C.4.1.2" status="4" xml:id="sect_C.4.1.2">
@@ -5273,7 +5284,7 @@
           <section label="C.4.2.1.5" status="5" xml:id="sect_C.4.2.1.5">
             <title>Status</title>
             <para xml:id="para_f654a98a-acde-4946-b449-f2f160930daf">
-              <xref linkend="table_C.4-2" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-MOVE response. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_C.4-2" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-MOVE response. General status code values and fields related to status code values are defined for C-MOVE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="C.4-2" rules="all" xml:id="table_C.4-2">
               <caption>C-MOVE Response Status Values</caption>
               <thead>
@@ -5344,7 +5355,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_6aca5ff8-917e-4426-bcb2-0267621b7126">Identifier does not match SOP Class</para>
+                    <para xml:id="para_6aca5ff8-917e-4426-bcb2-0267621b7126">Error: Data Set does not match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_c74340f3-eb9a-4c28-ae0d-e87c3aed955e">A900</para>
@@ -5357,7 +5368,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_519e5666-d412-4ce4-bdf1-bb53af290a1e">Unable to Process</para>
+                    <para xml:id="para_519e5666-d412-4ce4-bdf1-bb53af290a1e">Failed: Unable to Process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_712ccd68-2f30-4475-bf44-cfb03853b465">Cxxx</para>
@@ -5435,6 +5446,9 @@
                 </tr>
               </tbody>
             </table>
+            <para xml:id="para_9b2fa207-930f-4937-8fc2-e4c75d659e9e">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_316c5c61-bccb-4c11-934e-5d0ae77d53f2">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of "Failed: Unable to process" Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_C.4-2" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_6689a335-3ee6-49ea-af58-c7a6f17b7873">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_C.4-2" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
           <section label="C.4.2.1.6" status="5" xml:id="sect_C.4.2.1.6">
             <title>Number of Remaining Sub-Operations</title>
@@ -5742,7 +5756,7 @@
           <section label="C.4.3.1.4" status="5" xml:id="sect_C.4.3.1.4">
             <title>Status</title>
             <para xml:id="para_c8c59596-7269-4344-9711-bdd97d6b5674">
-              <xref linkend="table_C.4-3" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-GET response. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_C.4-3" xrefstyle="select: label"/> defines the specific status code values that might be returned in a C-GET response. General status code values and fields related to status code values are defined for C-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="C.4-3" rules="all" xml:id="table_C.4-3">
               <caption>C-GET Response Status Values</caption>
               <thead>
@@ -5801,7 +5815,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_21d6996e-5394-4a05-a742-1fa279eb39a1">Identifier does not match SOP Class</para>
+                    <para xml:id="para_21d6996e-5394-4a05-a742-1fa279eb39a1">Error: Data Set does not match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_1495ca02-fd09-4a29-8df9-774440866ad4">A900</para>
@@ -5814,7 +5828,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_5c595123-1d34-409e-b9f2-4832895cac51">Unable to process</para>
+                    <para xml:id="para_5c595123-1d34-409e-b9f2-4832895cac51">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_13dc81e5-b933-4fdd-bd2b-4c1bb924149e">Cxxx</para>
@@ -5892,6 +5906,9 @@
                 </tr>
               </tbody>
             </table>
+            <para xml:id="para_eef1cf47-e008-4512-8cd1-3d8ff6f2f553">Some Failure Status Codes are implementation specific.</para> 
+            <para xml:id="para_17f3f37a-957e-4b7d-87f0-b1ca279b2670">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed – Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_C.4-3" xrefstyle="select: label"/>.</para> 
+            <para xml:id="para_5b366447-e77a-4200-8c30-fa55f81c4985">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_C.4-3" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
           <section label="C.4.3.1.5" status="5" xml:id="sect_C.4.3.1.5">
             <title>Number of Remaining Sub-Operations</title>
@@ -10798,7 +10815,7 @@
           </section>
           <section label="F.7.2.2.4" status="5" xml:id="sect_F.7.2.2.4">
             <title>Status Codes</title>
-            <para xml:id="para_21b7bf01-08e8-434a-a7d0-8154e63b529a">The specific error comment that may be returned as a status code in a N-SET-RSP is defined in <xref linkend="table_F.7.2-2" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
+            <para xml:id="para_21b7bf01-08e8-434a-a7d0-8154e63b529a">There are no specific status codes. The specific Error Comment and Error ID that may be returned with a status code of Processsing Failure in a N-SET-RSP are defined in <xref linkend="table_F.7.2-2" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
             <table frame="box" label="F.7.2-2" rules="all" xml:id="table_F.7.2-2">
               <caption>N-SET Status</caption>
               <thead>
@@ -12207,7 +12224,8 @@
           </section>
           <section label="F.8.2.1.4" status="5" xml:id="sect_F.8.2.1.4">
             <title>Status Codes</title>
-            <para xml:id="para_0dd8186e-f179-4f89-9675-281efacd23ea">The status values that are specific for this SOP Class and DIMSE Service are defined in <xref linkend="table_F.8.2-2" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
+            <para xml:id="para_0dd8186e-f179-4f89-9675-281efacd23ea">
+<xref linkend="table_F.8.2-2" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-GET response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
             <table frame="box" label="F.8.2-2" rules="all" xml:id="table_F.8.2-2">
               <caption>Response Status</caption>
               <thead>
@@ -12224,7 +12242,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_cb54dcb6-135e-4ec7-8e97-81041d524c58">
-                      <emphasis role="bold">Response Status Code</emphasis>
+                      <emphasis role="bold">Status Code</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -13330,24 +13348,25 @@
             </section>
             <section label="H.4.1.2.1.2" status="6" xml:id="sect_H.4.1.2.1.2">
               <title>Status</title>
-              <para xml:id="para_c0597174-e88a-4f8e-bac5-21b5d9f21ed8">The status values that are specific for this SOP Class are defined as follows.</para>
-              <table frame="box" label="H.4.1.2.1.2-1" rules="all" xml:id="table_H.4.1.2.1.2">
+              <para xml:id="para_c0597174-e88a-4f8e-bac5-21b5d9f21ed8">
+<xref linkend="table_H.4.1.2.1.2-1" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-CREATE or N-SET response for this SOP Class. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes of N-CREATE and N-SET DIMSE Services.</para>
+              <table frame="box" label="H.4.1.2.1.2-1" rules="all" xml:id="table_H.4.1.2.1.2-1">
                 <caption>Status Values for Basic Film Session SOP Class</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_1ef9d931-142f-469c-bc89-5bb95d743d67">
-                        <emphasis role="bold">Status</emphasis>
+                        <emphasis role="bold">Service Status</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_b49e456d-da61-4c04-acb7-e01a10d307b1">
-                        <emphasis role="bold">Meaning</emphasis>
+                        <emphasis role="bold">Further Meaning</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_d5d78f52-8edf-46b9-bb09-2d8a3c53f953">
-                        <emphasis role="bold">Code</emphasis>
+                        <emphasis role="bold">Status Code</emphasis>
                       </para>
                     </th>
                   </tr>
@@ -13422,7 +13441,7 @@
             </note>
             <section label="H.4.1.2.3.1" status="6" xml:id="sect_H.4.1.2.3.1">
               <title>Status</title>
-              <para xml:id="para_68efc742-ba07-4941-821b-ca1089e68d18">There are no specific status codes.</para>
+              <para xml:id="para_68efc742-ba07-4941-821b-ca1089e68d18">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
             <section label="H.4.1.2.3.2" status="6" xml:id="sect_H.4.1.2.3.2">
               <title>Behavior</title>
@@ -13527,24 +13546,25 @@
             </section>
             <section label="H.4.1.2.4.2" status="6" xml:id="sect_H.4.1.2.4.2">
               <title>Status</title>
-              <para xml:id="para_db11ff8f-725b-4f27-bfd4-a9e84d670ad2">The status values that are specific for this SOP Class are defined in <xref linkend="table_H.4-4" xrefstyle="select: label"/>.</para>
+              <para xml:id="para_db11ff8f-725b-4f27-bfd4-a9e84d670ad2">
+<xref linkend="table_H.4-4" xrefstyle="select: label"/>defines the specific status code values that may be returned in a N-ACTION response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
               <table frame="box" label="H.4-4" rules="all" xml:id="table_H.4-4">
                 <caption>SOP Class Status Values</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_436a7428-c76c-4ba6-9343-afd17d3049df">
-                        <emphasis role="bold">Status</emphasis>
+                        <emphasis role="bold">Service Status</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_c84c3f07-8d15-428e-9c0c-90d4dfae86e8">
-                        <emphasis role="bold">Meaning</emphasis>
+                        <emphasis role="bold">Further Meaning</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_ec8fc4dd-6074-4e91-835d-e9cbdd377a37">
-                        <emphasis role="bold">Code</emphasis>
+                        <emphasis role="bold">Status Code</emphasis>
                       </para>
                     </th>
                   </tr>
@@ -13613,7 +13633,7 @@
                       <para xml:id="para_90f8063e-1f16-439e-9e0d-4acf016ab88b">Failure</para>
                     </td>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_3546d03a-9ff0-4176-a9ee-ceac1ea71f51">Film Session SOP Instance hierarchy does not contain Film Box SOP Instances</para>
+                      <para xml:id="para_3546d03a-9ff0-4176-a9ee-ceac1ea71f51">Failed: Film Session SOP Instance hierarchy does not contain Film Box SOP Instances</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_06c0b9d4-02e2-40ac-ab43-f7c089248adc">C600</para>
@@ -13622,7 +13642,7 @@
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1"/>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_a339c4f9-693c-4278-9292-e34c08fdb4ff">Unable to create Print Job SOP Instance; print queue is full</para>
+                      <para xml:id="para_a339c4f9-693c-4278-9292-e34c08fdb4ff">Failed: Unable to create Print Job SOP Instance; print queue is full</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_49b5eb44-5f88-4f13-ba97-bee5d3c626fd">C601</para>
@@ -13631,7 +13651,7 @@
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1"/>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_520bbae6-2035-4581-8a53-718a3f50386d">Image size is larger than image box size</para>
+                      <para xml:id="para_520bbae6-2035-4581-8a53-718a3f50386d">Failed: Image size is larger than image box size</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_dc771d7a-80a8-430d-9eac-1ee4069b1919">C603</para>
@@ -13640,7 +13660,7 @@
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1"/>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_a1074374-4e6a-4c15-bac5-4cf0fbab9f3a">Combined Print Image size is larger than the Image Box size</para>
+                      <para xml:id="para_a1074374-4e6a-4c15-bac5-4cf0fbab9f3a">Failed: Combined Print Image size is larger than the Image Box size</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_e13891f8-f3b5-40cc-84a0-3d54ddb4ad21">C613</para>
@@ -14094,24 +14114,25 @@
             </section>
             <section label="H.4.2.2.1.2" status="6" xml:id="sect_H.4.2.2.1.2">
               <title>Status</title>
-              <para xml:id="para_f19c2aac-c508-4b6c-a106-9f7e4de40a3a">The status values that are specific for this SOP Class are defined as follows:</para>
+              <para xml:id="para_f19c2aac-c508-4b6c-a106-9f7e4de40a3a">
+<xref linkend="table_H.4.2.2.1.2-1" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-CREATE or N-SET response for this SOP Class. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes of N-CREATE and N-SET DIMSE Services.</para>
               <table frame="box" label="H.4.2.2.1.2-1" rules="all" xml:id="table_H.4.2.2.1.2-1">
                 <caption>Status Values for Basic Film Box SOP Class</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_2fe093ac-d2bd-49f7-b6b4-76d84f235dd2">
-                        <emphasis role="bold">Status</emphasis>
+                        <emphasis role="bold">Service Status</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_c9a47155-59eb-45cc-bac4-cbeccebd06fd">
-                        <emphasis role="bold">Meaning</emphasis>
+                        <emphasis role="bold">Further Meaning</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_e2945e5d-e2aa-49df-b4b0-085deea7db59">
-                        <emphasis role="bold">Code</emphasis>
+                        <emphasis role="bold">Status Code</emphasis>
                       </para>
                     </th>
                   </tr>
@@ -14144,7 +14165,7 @@
                       <para xml:id="para_7b67caa9-9a55-4fa4-8ef7-e864dbc6b989">Failure</para>
                     </td>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_9310165c-82a6-4a63-b0ce-09feef218c46">There is an existing Film Box that has not been printed and N-ACTION at the Film Session level is not supported. A new Film Box will not be created when a previous Film Box has not been printed.</para>
+                      <para xml:id="para_9310165c-82a6-4a63-b0ce-09feef218c46">Failed: There is an existing Film Box that has not been printed and N-ACTION at the Film Session level is not supported. A new Film Box will not be created when a previous Film Box has not been printed.</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_1179c542-c4af-4b2b-a53a-1d3982d2ce4f">C616</para>
@@ -14387,6 +14408,10 @@
                 <para xml:id="para_8e262b29-c939-4a82-ace9-7c5036ebc7cc">It is beyond the scope of the Standard to specify when the SCP actually deletes the Image SOP Instances with outstanding references.</para>
               </note>
             </section>
+            <section label="H.4.2.2.3.2" status="6" xml:id="sect_H.4.2.2.3.2">
+              <title>Status</title>
+              <para xml:id="para_5dbe9332-4142-408d-aad6-db5a6e1e697f">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
+            </section>
           </section>
           <section label="H.4.2.2.4" status="5" xml:id="sect_H.4.2.2.4">
             <title>N-ACTION</title>
@@ -14479,24 +14504,25 @@
             </section>
             <section label="H.4.2.2.4.2" status="6" xml:id="sect_H.4.2.2.4.2">
               <title>Status</title>
-              <para xml:id="para_a7486d19-4727-41e2-aca0-7ce4594b3384">The status values that are specific for this SOP Class are defined as shown in <xref linkend="table_H.4-9" xrefstyle="select: label"/>.</para>
+              <para xml:id="para_a7486d19-4727-41e2-aca0-7ce4594b3384">
+<xref linkend="table_H.4-9" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-ACTION response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
               <table frame="box" label="H.4-9" rules="all" xml:id="table_H.4-9">
                 <caption>Status Values</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_9a8fab22-fec0-45fc-aa80-a4a494a0eaca">
-                        <emphasis role="bold">Status</emphasis>
+                        <emphasis role="bold">Service Status</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_1ea3fe8d-52ef-4e5a-bd35-99bdfd6a1037">
-                        <emphasis role="bold">Meaning</emphasis>
+                        <emphasis role="bold">Further Meaning</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_89c31fea-ad5c-42de-abfc-96ddba9b08a4">
-                        <emphasis role="bold">Code</emphasis>
+                        <emphasis role="bold">Status Code</emphasis>
                       </para>
                     </th>
                   </tr>
@@ -14556,7 +14582,7 @@
                       <para xml:id="para_349e69e4-73f4-4e4c-88fb-3692c871dc3c">Failure</para>
                     </td>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_dcdadd30-778b-49d3-8c2f-4598dfcb5e3a">Unable to create Print Job SOP Instance; print queue is full</para>
+                      <para xml:id="para_dcdadd30-778b-49d3-8c2f-4598dfcb5e3a">Failed: Unable to create Print Job SOP Instance; print queue is full</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_46cd05e1-3d3e-4026-bcc9-a3b268db862c">C602</para>
@@ -14565,7 +14591,7 @@
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1"/>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_b5f3bb88-5a28-4093-9fa6-0c2a0a0208e1">Image size is larger than image box size</para>
+                      <para xml:id="para_b5f3bb88-5a28-4093-9fa6-0c2a0a0208e1">Failed: Image size is larger than image box size</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_5478bb04-adef-4851-9d25-c3dd45d91ef1">C603</para>
@@ -14574,7 +14600,7 @@
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1"/>
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_9d6215bd-2f8a-4f63-87b4-10c1fb14a8a8">Combined Print Image size is larger than the Image Box size</para>
+                      <para xml:id="para_9d6215bd-2f8a-4f63-87b4-10c1fb14a8a8">Failed: Combined Print Image size is larger than the Image Box size</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_f18296b3-bfdd-4707-918d-3f9f2bac50b6">C613</para>
@@ -14935,24 +14961,25 @@
               </section>
               <section label="H.4.3.1.2.1.2" status="7" xml:id="sect_H.4.3.1.2.1.2">
                 <title>Status</title>
-                <para xml:id="para_3c4764af-48ce-4612-97d7-9771a5a05508">The status values that are specific for this SOP Class are defined as follows.</para>
+                <para xml:id="para_3c4764af-48ce-4612-97d7-9771a5a05508">
+<xref linkend="table_H.4.3.1.2.1.2-1" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-SET response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
                 <table frame="box" label="H.4.3.1.2.1.2-1" rules="all" xml:id="table_H.4.3.1.2.1.2-1">
                   <caption>Status Values for Basic Grayscale Image Box SOP Class</caption>
                   <thead>
                     <tr valign="top">
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_e1a1de1f-b481-4abc-a6ec-664420ca4f6c">
-                          <emphasis role="bold">Status</emphasis>
+                          <emphasis role="bold">Service Status</emphasis>
                         </para>
                       </th>
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_ac4d5750-5942-41b1-a51c-e3b93f36a54a">
-                          <emphasis role="bold">Meaning</emphasis>
+                          <emphasis role="bold">Further Meaning</emphasis>
                         </para>
                       </th>
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_d95e3dc9-5a62-40b3-b94f-e76cd36a44cb">
-                          <emphasis role="bold">Code</emphasis>
+                          <emphasis role="bold">Status Code</emphasis>
                         </para>
                       </th>
                     </tr>
@@ -15012,7 +15039,7 @@
                         <para xml:id="para_9b8369d4-c463-49db-859b-bff6bcb11727">Failure</para>
                       </td>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d8429ba7-a915-41e3-bd79-15ae2b9dc6d1">Image size is larger than image box size</para>
+                        <para xml:id="para_d8429ba7-a915-41e3-bd79-15ae2b9dc6d1">Failed: Image size is larger than image box size</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_77d8ed6b-c830-4c8f-84ac-86ff499c10c9">C603</para>
@@ -15021,7 +15048,7 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1"/>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_722a849a-79c5-4d82-b694-f1ceaa5f850a">Insufficient memory in printer to store the image</para>
+                        <para xml:id="para_722a849a-79c5-4d82-b694-f1ceaa5f850a">Failed: Insufficient memory in printer to store the image</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_8817eb84-5dc8-470a-9515-f453cf1a6d40">C605</para>
@@ -15030,7 +15057,7 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1"/>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_b42c3367-4326-43af-bbf1-b95466217cb8">Combined Print Image size is larger than the Image Box size</para>
+                        <para xml:id="para_b42c3367-4326-43af-bbf1-b95466217cb8">Failed: Combined Print Image size is larger than the Image Box size</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_35ed7ca3-341e-4663-ab07-764fa95967ee">C613</para>
@@ -15334,24 +15361,25 @@
               </section>
               <section label="H.4.3.2.2.1.2" status="7" xml:id="sect_H.4.3.2.2.1.2">
                 <title>Status</title>
-                <para xml:id="para_784fdaac-ffab-471e-8b78-ef371672a2bb">The status values that are specific for this SOP Class are defined as follows.</para>
+                <para xml:id="para_784fdaac-ffab-471e-8b78-ef371672a2bb">
+<xref linkend="table_H.4.3.1.2.1.2-1" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-SET response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
                 <table frame="box" label="H.4.3.2.2.1.2-1" rules="all" xml:id="table_H.4.3.2.2.1.2-1">
                   <caption>Status Values for Basic Color Image Box SOP Class</caption>
                   <thead>
                     <tr valign="top">
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_bd88fe51-6ef0-4419-8a65-61c20c4e5b99">
-                          <emphasis role="bold">Status</emphasis>
+                          <emphasis role="bold">Service Status</emphasis>
                         </para>
                       </th>
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_e76f8d02-c5e0-4a2a-a271-544c3863d462">
-                          <emphasis role="bold">Meaning</emphasis>
+                          <emphasis role="bold">Further Meaning</emphasis>
                         </para>
                       </th>
                       <th align="center" colspan="1" rowspan="1">
                         <para xml:id="para_0f800fd4-60e9-465c-b137-a85d863407af">
-                          <emphasis role="bold">Code</emphasis>
+                          <emphasis role="bold">Status Code</emphasis>
                         </para>
                       </th>
                     </tr>
@@ -15391,7 +15419,7 @@
                         <para xml:id="para_2ecd9833-0ea1-4746-84e2-17ea053fd4cf">Failure</para>
                       </td>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_9090f4c9-3436-4a5b-a155-1093fc817aab">Image size is larger than image box size</para>
+                        <para xml:id="para_9090f4c9-3436-4a5b-a155-1093fc817aab">Failed: Image size is larger than image box size</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_491a2551-ebde-4c03-9a64-457409e4df58">C603</para>
@@ -15400,7 +15428,7 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1"/>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6dc5f294-4b6b-4930-9304-ef809451f3d8">Insufficient memory in printer to store the image</para>
+                        <para xml:id="para_6dc5f294-4b6b-4930-9304-ef809451f3d8">Failed: Insufficient memory in printer to store the image</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_689c91fe-340f-4a6a-a862-576f3a599801">C605</para>
@@ -15409,7 +15437,7 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1"/>
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_66daf847-359b-4391-bc20-17bbb84cc165">Combined Print Image size is larger than the Image Box size</para>
+                        <para xml:id="para_66daf847-359b-4391-bc20-17bbb84cc165">Failed: Combined Print Image size is larger than the Image Box size</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_deeaf6b9-9d1a-4a4e-983e-722b468474f8">C613</para>
@@ -15540,7 +15568,7 @@
             </section>
             <section label="H.4.4.2.1.2" status="6" xml:id="sect_H.4.4.2.1.2">
               <title>Status</title>
-              <para xml:id="para_d1a64e48-c3b8-4fb0-91c8-0beb74392ab4">There are no specific status codes.</para>
+              <para xml:id="para_d1a64e48-c3b8-4fb0-91c8-0beb74392ab4">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
             <section label="H.4.4.2.1.3" status="6" xml:id="sect_H.4.4.2.1.3">
               <title>Behavior</title>
@@ -15828,6 +15856,10 @@
               <para xml:id="para_b05c2a43-c896-4374-9c05-9f95d48bd04d">If the Event Type Name = Failure or Pending then the error/pending condition is stored in the Execution Status Info argument. The possible values of the Execution Status Info argument are defined in <xref linkend="sect_H.4.5.3" xrefstyle="select: label"/>.</para>
               <para xml:id="para_f064a9dc-2b7f-4e18-b727-9980071797ff">If the Event Type Name = Failure or Done then the SCP shall delete the Print Job SOP Instance after receiving a confirmation from the SCU.</para>
             </section>
+            <section label="H.4.5.2.1.3" status="6" xml:id="sect_H.4.5.2.1.3">
+              <title>Status</title>
+              <para xml:id="para_6b3edb28-eddc-4858-88fe-094a7ee2de82">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
+            </section>
           </section>
           <section label="H.4.5.2.2" status="5" xml:id="sect_H.4.5.2.2">
             <title>N-GET</title>
@@ -15943,6 +15975,10 @@
               <para xml:id="para_ea2ecf3f-7299-44c2-af67-7886d06736e7">The SCU uses the N-GET to request the SCP to get a Print Job SOP Instance. The SCU shall specify in the N-GET request primitive the UID of the SOP Instance to be retrieved.</para>
               <para xml:id="para_0fb659b0-4bae-4133-9f3a-7bda41f3454c">The SCP shall return the values for the specified Attributes of the specified SOP Instance.</para>
               <para xml:id="para_8cc8b123-21ac-43b3-9d51-4dc6fe407181">The SCP shall return the status code of the requested SOP Instance retrieval. The meaning of success, warning, and failure status codes is defined in <xref linkend="sect_H.2.5" xrefstyle="select: label"/>.</para>
+            </section>
+            <section label="H.4.5.2.2.3" status="6" xml:id="sect_H.4.5.2.2.3">
+              <title>Status</title>
+              <para xml:id="para_4c95def5-9db4-4d6e-829e-3b0a302a2a4a">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
           </section>
         </section>
@@ -16149,6 +16185,10 @@
               <para xml:id="para_614dda91-3dee-490d-bf5e-2210d0d6c469">The SCU shall return the confirmation of the N-EVENT-REPORT operation.</para>
               <para xml:id="para_9511e73c-173e-4aa7-865a-4239f31eefab">If the Event Type Name = Warning or Failure then the warning/failure condition is stored in the Printer Status Info argument. The possible values the Printer Status Info argument are defined in <xref linkend="sect_H.4.6.3" xrefstyle="select: label"/>.</para>
             </section>
+            <section label="H.4.6.2.1.3" status="6" xml:id="sect_H.4.6.2.1.3">
+              <title>Status</title>
+              <para xml:id="para_37917cda-643a-4251-8f50-b10e3b3778b5">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
+            </section>
           </section>
           <section label="H.4.6.2.2" status="5" xml:id="sect_H.4.6.2.2">
             <title>N-GET</title>
@@ -16286,6 +16326,10 @@
               <para xml:id="para_f0b19059-94d0-4117-8deb-e312d864ce37">The SCU uses the N-GET to request the SCP to get a Printer SOP Instance. The SCU shall specify in the N-GET request primitive the UID of the SOP Instance to be retrieved.</para>
               <para xml:id="para_10404fe0-8df2-4409-bd12-e332f2dfeaee">The SCP shall return the values for the specified Attributes of the specified SOP Instance.</para>
               <para xml:id="para_cf02889a-232a-44f8-b6a7-738984fcfd66">The SCP shall return the status code of the requested SOP Instance retrieval. The meaning of success, warning, and failure status codes is defined in <xref linkend="sect_H.2.5" xrefstyle="select: label"/>.</para>
+            </section>
+            <section label="H.4.6.2.2.3" status="6" xml:id="sect_H.4.6.2.2.3">
+              <title>Status</title>
+              <para xml:id="para_020c3e23-2719-4afe-b44d-ce665f4bdb14">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
           </section>
         </section>
@@ -16476,24 +16520,25 @@
             </section>
             <section label="H.4.9.2.1.2" status="6" xml:id="sect_H.4.9.2.1.2">
               <title>Status</title>
-              <para xml:id="para_903bdc89-e9d7-488c-a577-f1e90dd3e591">The status values that are specific for this SOP Class are defined as follows:</para>
+              <para xml:id="para_903bdc89-e9d7-488c-a577-f1e90dd3e591">
+<xref linkend="table_H.4.9.2.1.2-1" xrefstyle="select: label"/> defines the specific status code values that may be returned in a N-CREATE response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes</para>
               <table frame="box" label="H.4.9.2.1.2-1" rules="all" xml:id="table_H.4.9.2.1.2-1">
                 <caption>Status Values for Presentation LUT SOP Class</caption>
                 <thead>
                   <tr valign="top">
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_bde930ad-7414-45c4-9c39-340f27c6459f">
-                        <emphasis role="bold">Status</emphasis>
+                        <emphasis role="bold">Service Status</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_8676742f-183d-493d-9f49-8d6cf68bd6cf">
-                        <emphasis role="bold">Meaning</emphasis>
+                        <emphasis role="bold">Further Meaning</emphasis>
                       </para>
                     </th>
                     <th align="center" colspan="1" rowspan="1">
                       <para xml:id="para_ec315081-a3b1-48d8-a900-54bd18409747">
-                        <emphasis role="bold">Code</emphasis>
+                        <emphasis role="bold">Status Code</emphasis>
                       </para>
                     </th>
                   </tr>
@@ -16538,7 +16583,7 @@
             <para xml:id="para_1dc11aa0-4dd0-44d4-96db-d57dd270b6ce">The N-DELETE Service Element is used to delete the Presentation LUT SOP Instance.</para>
             <section label="H.4.9.2.2.1" status="6" xml:id="sect_H.4.9.2.2.1">
               <title>Status</title>
-              <para xml:id="para_2b2d91c0-8699-408e-95d4-7f08cf0730f0">There are no specific error codes</para>
+              <para xml:id="para_2b2d91c0-8699-408e-95d4-7f08cf0730f0">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
             <section label="H.4.9.2.2.2" status="6" xml:id="sect_H.4.9.2.2.2">
               <title>Behavior</title>
@@ -17033,6 +17078,10 @@
               <para xml:id="para_7c67abb7-6383-4320-863b-c787f81329d3">The SCP shall return the values for the specified Attributes of the specified SOP Instance.</para>
               <para xml:id="para_b7598d8d-f5ed-480d-b6ac-7ddc0094502a">The SCP shall return the status code of the requested SOP Instance retrieval.</para>
               <para xml:id="para_e876da38-e477-4bfa-987d-ec433c55e922">A Failure status code shall indicate that the SCP has not retrieved the SOP Instance.</para>
+            </section>
+            <section label="H.4.11.2.2.3" status="6" xml:id="sect_H.4.11.2.2.3">
+              <title>Status</title>
+              <para xml:id="para_d731bbe5-3cfa-43a1-a7b2-0f58f78ad030">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
             </section>
           </section>
         </section>
@@ -18506,7 +18555,7 @@
           <section label="K.4.1.1.4" status="5" xml:id="sect_K.4.1.1.4">
             <title>Status</title>
             <para xml:id="para_727e7050-e6fd-48df-84cb-865ba44b8dca">
-              <xref linkend="table_K.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. Fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_K.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="K.4-1" rules="all" xml:id="table_K.4-1">
               <caption>C-FIND Response Status Values</caption>
               <thead>
@@ -18551,7 +18600,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_149035d5-e224-4e83-b9fc-875349e1fa07">Identifier Does Not Match SOP Class</para>
+                    <para xml:id="para_149035d5-e224-4e83-b9fc-875349e1fa07">Error: Data Set Does Not Match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ccd9824b-60ca-4390-b899-0a26f9dc8cdd">A900</para>
@@ -18564,7 +18613,7 @@
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1"/>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_96d13876-b5b2-4044-9d9c-4177696f5d34">Unable to process</para>
+                    <para xml:id="para_96d13876-b5b2-4044-9d9c-4177696f5d34">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_6976e1b0-9867-4ba2-b621-c23bc269f143">Cxxx</para>
@@ -18633,6 +18682,9 @@
             <note>
               <para xml:id="para_21febdd6-9315-4b10-8905-1cd0da1cc7d9">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
             </note>
+            <para xml:id="para_49d4e972-bda8-4970-826b-43f740e0cdfb">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_537c07b5-a617-47cb-a830-0a15db169c92">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed: Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_K.4-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_055b955e-04c2-4798-8708-e5ad58f889ff">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_K.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
         </section>
         <section label="K.4.1.2" status="4" xml:id="sect_K.4.1.2">
@@ -22226,7 +22278,8 @@
         </section>
         <section label="P.2.2.4" status="4" xml:id="sect_P.2.2.4">
           <title>Status Codes</title>
-          <para xml:id="para_d70a6d0a-0286-4d32-b001-bc68cc069d13">The Service Class specific status values defined for the N-ACTION Service are specified in <xref linkend="table_P.2-3" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional general response status codes.</para>
+          <para xml:id="para_d70a6d0a-0286-4d32-b001-bc68cc069d13">
+<xref linkend="table_P.2-3" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-ACTION response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional general response status codes.</para>
           <table frame="box" label="P.2-3" rules="all" xml:id="table_P.2-3">
             <caption>Response Status</caption>
             <thead>
@@ -22237,13 +22290,13 @@
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_3d88db9b-5b01-48d0-81e3-d5c3e9e04a68">
-                    <emphasis role="bold">Response Status Code</emphasis>
-                  </para>
-                </th>
-                <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_98b8b35c-a1b7-49ab-81cf-59bbbba972a8">
                     <emphasis role="bold">Further Meaning</emphasis>
+                  </para>
+                </th>
+                <th align="center">
+                  <para xml:id="para_3d88db9b-5b01-48d0-81e3-d5c3e9e04a68">
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -22253,86 +22306,86 @@
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_8d816f8a-6c1f-494a-9095-478fa13174a0">Success</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="center">
                   <para xml:id="para_30bfbcb8-93c4-4328-84cb-c75fc21fd4ab">0000</para>
                 </td>
-                <td align="left" colspan="1" rowspan="1"/>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_1244f63c-57a0-4bb0-8282-132880789c29">Warning</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_03076399-ac80-4892-b132-e6210057a195">B101</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_64dfc7e3-1052-4cb7-bcc7-bf4c540f1b92">Specified Synchronization Frame of Reference UID does not match SCP Synchronization Frame of Reference</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_03076399-ac80-4892-b132-e6210057a195">B101</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_82c105aa-907c-492b-99c1-9dd31e25a41c">Warning</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_9d164b10-05d9-402c-830a-10b070ba51a0">B102</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_b96aa50b-ea69-4dae-958e-56ccdc201bac">Study Instance UID coercion; Event logged under a different Study Instance UID</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_9d164b10-05d9-402c-830a-10b070ba51a0">B102</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_5093b820-0655-4538-81a9-bc62a6039d84">Warning</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_baf7a791-0678-4378-b187-edf199b09dfe">B104</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_aa692f53-2b0b-4509-9498-1db80f7deced">IDs inconsistent in matching a current study; Event logged</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_baf7a791-0678-4378-b187-edf199b09dfe">B104</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_034d1ff7-f2af-4e4c-adca-9208db51948f">Failure</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_c68c4fd2-4aec-4598-aa19-f551fb19897f">C101</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_2a4140d8-8c2e-4813-9371-02edc48115ad">Procedural Logging not available for specified Study Instance UID</para>
+                  <para xml:id="para_2a4140d8-8c2e-4813-9371-02edc48115ad">Failed: Procedural Logging not available for specified Study Instance UID</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_c68c4fd2-4aec-4598-aa19-f551fb19897f">C101</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_0d98e877-c778-4a58-9a47-ee464e555e5b">Failure</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_8bb4f6b1-4a69-49c3-b229-d6f4a71c262d">C102</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_7dc31ae6-ef5f-4e87-b03c-e8c67be7069f">Event Information does not match Template</para>
+                  <para xml:id="para_7dc31ae6-ef5f-4e87-b03c-e8c67be7069f">Failed: Event Information does not match Template</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_8bb4f6b1-4a69-49c3-b229-d6f4a71c262d">C102</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_09cf095f-f48b-4428-b7cb-e8287c96626a">Failure</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_bea382cf-252f-4095-989e-03fb9349d470">C103</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_567dc936-82e2-4297-b70c-79c10af57c00">Cannot match event to a current study</para>
+                  <para xml:id="para_567dc936-82e2-4297-b70c-79c10af57c00">Failed: Cannot match event to a current study</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_bea382cf-252f-4095-989e-03fb9349d470">C103</para>
                 </td>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_516cd666-a022-427b-9e69-d9764777d1fa">Failure</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_5228e312-6cc3-4239-956b-662b0f24a538">C104</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_de8de1b0-dc59-40ca-9001-9cd0c0a6c70f">IDs inconsistent in matching a current study; Event not logged</para>
+                  <para xml:id="para_de8de1b0-dc59-40ca-9001-9cd0c0a6c70f">Failed: IDs inconsistent in matching a current study; Event not logged</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_5228e312-6cc3-4239-956b-662b0f24a538">C104</para>
                 </td>
               </tr>
             </tbody>
@@ -22806,7 +22859,8 @@
         </section>
         <section label="P.3.2.4" status="4" xml:id="sect_P.3.2.4">
           <title>Status Codes</title>
-          <para xml:id="para_3d7fb781-0ac5-49f7-a23c-be9d41846cbd">The Service Class specific status values defined for the N-ACTION Service are specified in <xref linkend="table_P.3-3" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional general response status codes.</para>
+          <para xml:id="para_3d7fb781-0ac5-49f7-a23c-be9d41846cbd">
+<xref linkend="table_P.3-3" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-ACTION response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional general response status codes.</para>
           <table frame="box" label="P.3-3" rules="all" xml:id="table_P.3-3">
             <caption>Response Status</caption>
             <thead>
@@ -22817,13 +22871,13 @@
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_efd6b4bd-783b-46db-b3c7-9a1be46522ac">
-                    <emphasis role="bold">Response Status Code</emphasis>
-                  </para>
-                </th>
-                <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_212a6d0f-ad98-4a7f-8e1f-c1a26ca04cad">
                     <emphasis role="bold">Further Meaning</emphasis>
+                  </para>
+                </th>
+                <th align="center">
+                  <para xml:id="para_efd6b4bd-783b-46db-b3c7-9a1be46522ac">
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -22833,36 +22887,36 @@
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_a28635c0-8d9a-4584-a3b1-84644a9679f9">Success</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1"/>
+                <td align="center">
                   <para xml:id="para_56f776fe-33aa-44d7-bdf5-2cb487398d92">0000</para>
                 </td>
-                <td align="left" colspan="1" rowspan="1"/>
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="3">
                   <para xml:id="para_3d0c880c-ebb8-44a9-8134-3022f368bded">Failure</para>
                 </td>
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_d4401a49-910b-40c5-8cc8-1b637ed4fa8e">Failed: Operator not authorized to add entry to Medication Administration Record</para>
+                </td>
+                <td align="center">
                   <para xml:id="para_a5585734-0927-4954-866b-619479e0e8ba">C10E</para>
                 </td>
-                <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d4401a49-910b-40c5-8cc8-1b637ed4fa8e">Operator not authorized to add entry to Medication Administration Record</para>
-                </td>
               </tr>
               <tr valign="top">
-                <td align="center" colspan="1" rowspan="1">
+                <td align="left" colspan="1" rowspan="1">
+                  <para xml:id="para_de40d2a9-fa1b-474c-af3f-4dfc0cbe4904">Failed: Patient cannot be identified from Patient ID (0010,0020) or Admission ID (0038,0010)</para>
+                </td>
+                <td align="center">
                   <para xml:id="para_f007bf3b-f47d-4851-9e56-065f3eccd281">C110</para>
                 </td>
-                <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_de40d2a9-fa1b-474c-af3f-4dfc0cbe4904">Patient cannot be identified from Patient ID (0010,0020) or Admission ID (0038,0010)</para>
-                </td>
               </tr>
               <tr valign="top">
-                <td align="center" colspan="1" rowspan="1">
-                  <para xml:id="para_ee9c700b-97e9-4838-8fd4-8545c7006cde">C111</para>
-                </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_32783404-0330-4b50-bb48-c0f4773daffc">Update of Medication Administration Record failed</para>
+                  <para xml:id="para_32783404-0330-4b50-bb48-c0f4773daffc">Failed: Update of Medication Administration Record failed</para>
+                </td>
+                <td align="center">
+                  <para xml:id="para_ee9c700b-97e9-4838-8fd4-8545c7006cde">C111</para>
                 </td>
               </tr>
             </tbody>
@@ -22968,7 +23022,7 @@
           <section label="Q.2.1.1.4" status="5" xml:id="sect_Q.2.1.1.4">
             <title>Status</title>
             <para xml:id="para_683a47ce-9938-4150-b558-d8e8f9a11d8a">
-              <xref linkend="table_Q.2-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. Fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_Q.2-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="Q.2-1" rules="all" xml:id="table_Q.2-1">
               <caption>C-FIND Response Status Values</caption>
               <thead>
@@ -23001,7 +23055,7 @@
                     <para xml:id="para_3b70e9df-4bb9-4ebe-af87-7569fb2661fb">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_ac640416-72f8-40f3-8498-be97f7ba716b">Out of Resources</para>
+                    <para xml:id="para_ac640416-72f8-40f3-8498-be97f7ba716b">Refused: Out of Resources</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_f4614786-914a-49ab-a7d2-48dfa215508a">A700</para>
@@ -23012,7 +23066,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_db862d8d-62a1-485c-9476-264797aafa2c">Identifier Does Not Match SOP Class</para>
+                    <para xml:id="para_db862d8d-62a1-485c-9476-264797aafa2c">Error: Data Set Does Not Match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_e170584b-9591-4414-970f-60e5a3a8955f">A900</para>
@@ -23024,7 +23078,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_cd3dbfed-a913-4522-af84-1298ad6f6e5a">Unable to process</para>
+                    <para xml:id="para_cd3dbfed-a913-4522-af84-1298ad6f6e5a">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_920601b8-f2bd-4aa5-81a4-4cf507c16979">C000</para>
@@ -23036,7 +23090,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_b9c426f6-4ebb-4b60-ae8a-8eb74824b6e8">More than one match found</para>
+                    <para xml:id="para_b9c426f6-4ebb-4b60-ae8a-8eb74824b6e8">Failed: More than one match found</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_8c4cc541-f5d6-435d-883e-d5e6b4a4d60b">C100</para>
@@ -23048,7 +23102,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_673c64f3-2139-43e9-9ca0-a7bb46f72d40">Unable to support requested template</para>
+                    <para xml:id="para_673c64f3-2139-43e9-9ca0-a7bb46f72d40">Failed: Unable to support requested template</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ea3b7cad-c3d0-426f-8c4c-0ee3825e1b02">C200</para>
@@ -24789,24 +24843,25 @@
           </section>
           <section label="S.3.2.1.4" status="5" xml:id="sect_S.3.2.1.4">
             <title>Status Codes.</title>
-            <para xml:id="para_0d472dfa-f6f1-4507-85a5-cfd262e3bc85">The status values that are specific for this action are defined in <xref linkend="table_S.3.2.2.4-1" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for general response status codes.</para>
+            <para xml:id="para_0d472dfa-f6f1-4507-85a5-cfd262e3bc85">
+<xref linkend="table_S.3.2.2.4-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-CREATE response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for general response status codes.</para>
             <table frame="box" label="S.3.2.2.4-1" rules="all" xml:id="table_S.3.2.2.4-1">
               <caption>SOP Class Status Values</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_65c58c16-d8f7-4ae6-becc-66e789875a62">
-                      <emphasis role="bold">Status</emphasis>
+                      <emphasis role="bold">Service Status</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_e38075c7-ac0e-44ab-aedd-cd7f6d6afb76">
-                      <emphasis role="bold">Meaning</emphasis>
+                      <emphasis role="bold">Further Meaning</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_0a152112-00bf-4d2b-b9ca-c441e5f2095d">
-                      <emphasis role="bold">Code</emphasis>
+                      <emphasis role="bold">Status Code</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -24817,7 +24872,7 @@
                     <para xml:id="para_6db7c66f-e91b-4f92-8bcb-eaba88ec67a8">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_7bc87b23-d98d-49ca-982f-bae2352ee53e">Refused because an Initiate Media Creation action has already been received for this SOP Instance.</para>
+                    <para xml:id="para_7bc87b23-d98d-49ca-982f-bae2352ee53e">Failed: An Initiate Media Creation action has already been received for this SOP Instance.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_006ed840-e072-4196-8e4f-75f348a60960">A510</para>
@@ -25013,7 +25068,8 @@
           </section>
           <section label="S.3.2.3.4" status="5" xml:id="sect_S.3.2.3.4">
             <title>Status Codes</title>
-            <para xml:id="para_5295f499-6e4e-4f4b-ae10-e7b5a00b66a8">The status values that are specific for this SOP Class and DIMSE Service are defined in <xref linkend="table_S.3.2.3.4-1" xrefstyle="select: label"/>.See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for general response status codes.</para>
+            <para xml:id="para_5295f499-6e4e-4f4b-ae10-e7b5a00b66a8">
+<xref linkend="table_S.3.2.3.4-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-ACTION response. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for general response status codes.</para>
             <table frame="box" label="S.3.2.3.4-1" rules="all" xml:id="table_S.3.2.3.4-1">
               <caption>Response Statuses</caption>
               <thead>
@@ -25030,7 +25086,7 @@
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_06198395-3f1f-4083-a21b-2f51765f4a8b">
-                      <emphasis role="bold">Response Status Codes</emphasis>
+                      <emphasis role="bold">Status Codes</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -25041,7 +25097,7 @@
                     <para xml:id="para_29637eda-9b65-4f3d-ae53-802783c511bb">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_57bf374d-9a74-4519-a6eb-78ce15041289">Media creation request already completed.</para>
+                    <para xml:id="para_57bf374d-9a74-4519-a6eb-78ce15041289">Failed: Media creation request already completed.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_3651e8b3-f6cd-4318-9e99-7da219229ede">C201</para>
@@ -25049,7 +25105,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0e566b1e-1e43-4723-a99c-09704a574e8c">Media creation request already in progress and cannot be interrupted.</para>
+                    <para xml:id="para_0e566b1e-1e43-4723-a99c-09704a574e8c">Failed: Media creation request already in progress and cannot be interrupted.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_32952790-0725-469f-be8c-11a3fa8441d5">C202</para>
@@ -25057,7 +25113,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_44fb711f-1f28-4251-9ee6-7d6f62419c0f">Cancellation denied for unspecified reason.</para>
+                    <para xml:id="para_44fb711f-1f28-4251-9ee6-7d6f62419c0f">Failed: Cancellation denied for unspecified reason.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_9b8793da-2bc5-4b96-a4a7-f598741bd4aa">C203</para>
@@ -25195,8 +25251,9 @@
           </section>
           <section label="S.3.2.4.4" status="5" xml:id="sect_S.3.2.4.4">
             <title>Status Codes</title>
-            <para xml:id="para_9d3863d2-362c-4098-844f-602cee682cbb">The status values that are specific for this SOP Class and DIMSE Service are defined in <xref linkend="table_S.3.2.4.4-1" xrefstyle="select: label"/>.</para>
-            <para xml:id="para_3641c3b7-eb43-43df-9fa9-29f5b9f391e9">See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
+            <para xml:id="para_9d3863d2-362c-4098-844f-602cee682cbb">
+<xref linkend="table_S.3.2.4.4-1" xrefstyle="select: label"/> defines the specific status code values that might be returned in a N-GET response.</para>
+            <para xml:id="para_3641c3b7-eb43-43df-9fa9-29f5b9f391e9">See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for general response status codes.</para>
             <table frame="box" label="S.3.2.4.4-1" rules="all" xml:id="table_S.3.2.4.4-1">
               <caption>Response Statuses</caption>
               <thead>
@@ -26469,7 +26526,7 @@
           <section label="V.4.1.1.4" status="5" xml:id="sect_V.4.1.1.4">
             <title>Status</title>
             <para xml:id="para_30ee597d-7469-47d3-bb70-42d86d321f5f">
-              <xref linkend="table_V.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. Fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+              <xref linkend="table_V.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="V.4-1" rules="all" xml:id="table_V.4-1">
               <caption>C-FIND Response Status Values</caption>
               <thead>
@@ -26513,7 +26570,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_870add36-e98b-47b0-bbe2-677789d96a70">Identifier Does Not Match SOP Class</para>
+                    <para xml:id="para_870add36-e98b-47b0-bbe2-677789d96a70">Error: Data Set Does Not Match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_c972bdd8-d021-4f01-9f06-791c6c8f9ea2">A900</para>
@@ -26525,11 +26582,10 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_eb0825cf-16ee-46de-b316-6006d4745a43">Unable to process</para>
+                    <para xml:id="para_eb0825cf-16ee-46de-b316-6006d4745a43">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ce8b98eb-678c-448e-862d-8f332fdf768b">Cxxx</para>
-                    <para xml:id="para_09f3fd67-fbac-4991-8d74-68ac8df784af">(values C000 through CFFF as assigned by the implementation)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_fa05f2d1-7723-43e6-aa1c-b5ed53a727fc">(0000,0901)</para>
@@ -26594,6 +26650,9 @@
             <note>
               <para xml:id="para_61022e00-f159-414b-81a0-0f83e0780861">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
             </note>
+            <para xml:id="para_230c0b78-d19c-42ea-ac87-c14a61e314ad">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_2041189b-144f-483e-8864-e01f52d64e52">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of "Failed: Unable to process" Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_b0242b93-2611-479b-bb52-eb873454febd">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
         </section>
         <section label="V.4.1.2" status="4" xml:id="sect_V.4.1.2">
@@ -28282,8 +28341,8 @@
           </section>
           <section label="Y.4.1.1.4" status="5" xml:id="sect_Y.4.1.1.4">
             <title>Status</title>
-            <para xml:id="para_9a305015-2f5a-4c8d-aab8-979e36556232">The status code values that might be returned in a C-MOVE response shall be as specified in <xref linkend="table_Y.4-1" xrefstyle="select: label"/>
-            </para>
+            <para xml:id="para_9a305015-2f5a-4c8d-aab8-979e36556232">
+<xref linkend="table_Y.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-MOVE response. General status code values and fields related to status code values are defined for C-MOVE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="Y.4-1" rules="all" xml:id="table_Y.4-1">
               <caption>C-MOVE Response Status Values for Instance Root Retrieve</caption>
               <thead>
@@ -28352,7 +28411,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_7ea1cef6-2346-4d26-b558-4541058de8f7">Identifier does not match SOP Class</para>
+                    <para xml:id="para_7ea1cef6-2346-4d26-b558-4541058de8f7">Error: Data Set does not match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b6538ff2-5a25-4941-8cdd-6c4bdf835077">A900</para>
@@ -28364,7 +28423,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_2e79fea8-57a4-44de-bd73-18e0ea6d8a5a">Unable to process</para>
+                    <para xml:id="para_2e79fea8-57a4-44de-bd73-18e0ea6d8a5a">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_5490a4e0-9683-4d13-ac2a-ff4580135172">Cxxx</para>
@@ -28376,7 +28435,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_ebfcd864-64c6-4b64-bc67-4e2009157002">None of the frames requested were found in the SOP Instance</para>
+                    <para xml:id="para_ebfcd864-64c6-4b64-bc67-4e2009157002">Failed: None of the frames requested were found in the SOP Instance</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_bda3d18e-6853-4e22-97cc-bd0eabe19dcc">AA00</para>
@@ -28387,7 +28446,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_608cab29-e8bc-4628-9a93-46ee0b5bb45b">Unable to create new object for this SOP class</para>
+                    <para xml:id="para_608cab29-e8bc-4628-9a93-46ee0b5bb45b">Failed: Unable to create new object for this SOP class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ea04e64f-e6a3-48ca-a849-aec11b0cf87b">AA01</para>
@@ -28398,7 +28457,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_500dc1a1-3b79-4a06-9e20-7169fe981802">Unable to extract frames</para>
+                    <para xml:id="para_500dc1a1-3b79-4a06-9e20-7169fe981802">Failed: Unable to extract frames</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_92e687a6-a944-44af-88ef-a9f6826a4046">AA02</para>
@@ -28409,7 +28468,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e4e8749a-0b7a-4128-9546-da8d92fd5289">Time-based request received for a non-time-based original SOP Instance.</para>
+                    <para xml:id="para_e4e8749a-0b7a-4128-9546-da8d92fd5289">Failed: Time-based request received for a non-time-based original SOP Instance.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b9209000-d480-435b-a032-741b7551c091">AA03</para>
@@ -28420,7 +28479,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_6217b0d2-a1ff-445c-acad-2a7ac030726d">Invalid Request</para>
+                    <para xml:id="para_6217b0d2-a1ff-445c-acad-2a7ac030726d">Failed: Invalid Request</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ff5f5b94-06f9-4e45-99a3-0dec0a607a45">AA04</para>
@@ -28500,6 +28559,9 @@
                 </tr>
               </tbody>
             </table>
+            <para xml:id="para_706d1209-d02f-44e8-b323-03ee62ca4a68">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_b3ac0c9a-2611-4055-898e-6abd8a74137b">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of "Failed: Unable to process" Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_Y.4-1" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_249d7b8f-19e8-4d83-af0f-9af287d53918">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_Y.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
           <section label="Y.4.1.1.5" status="5" xml:id="sect_Y.4.1.1.5">
             <title>Number of Remaining Sub-Operations</title>
@@ -29623,8 +29685,8 @@
           </section>
           <section label="Z.4.2.1.4" status="5" xml:id="sect_Z.4.2.1.4">
             <title>Status</title>
-            <para xml:id="para_f49891d6-3809-42cb-be26-547e3585d022">The status code values that might be returned in a C-GET response shall be as specified in <xref linkend="table_Z.4-1" xrefstyle="select: label"/>
-            </para>
+            <para xml:id="para_f49891d6-3809-42cb-be26-547e3585d022">
+<xref linkend="table_Z.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-GET response. General status code values and fields related to status code values are defined for C-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="Z.4-1" rules="all" xml:id="table_Z.4-1">
               <caption>C-GET Response Status Values for Instance Root Retrieve</caption>
               <thead>
@@ -29682,7 +29744,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e46337fe-b278-4b98-a8bf-b73caf146746">Identifier does not match SOP Class</para>
+                    <para xml:id="para_e46337fe-b278-4b98-a8bf-b73caf146746">Error: Data Set does not match SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_03d044b3-09f4-4978-8e2b-060b78e5b8ca">A900</para>
@@ -29694,7 +29756,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_aaca8faf-b3da-4f4b-86e5-787802dffcc7">Unable to process</para>
+                    <para xml:id="para_aaca8faf-b3da-4f4b-86e5-787802dffcc7">Failed: Unable to process</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_11430438-3fdf-4056-bf35-225434d37402">Cxxx</para>
@@ -29774,6 +29836,9 @@
                 </tr>
               </tbody>
             </table>
+            <para xml:id="para_602ebf99-a82d-4f7d-a1d9-439152670707">Some Failure Status Codes are implementation specific.</para>
+            <para xml:id="para_bd08348e-509e-4efc-adb0-51966fa743b6">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of "Failed: Unable to process" Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_Y.4-2" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_65048e47-af8d-49e4-a748-33a97ed7f7ca">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_Y.4-2" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
           </section>
           <section label="Z.4.2.1.5" status="5" xml:id="sect_Z.4.2.1.5">
             <title>Number of Remaining Sub-Operations</title>
@@ -32252,24 +32317,25 @@
         </section>
         <section label="CC.2.1.4" status="4" xml:id="sect_CC.2.1.4">
           <title>Status Codes</title>
-          <para xml:id="para_e9473bb3-3097-4988-8c36-a6d665f6ea31">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.1-2" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_e9473bb3-3097-4988-8c36-a6d665f6ea31">
+<xref linkend="table_CC.2.1-2" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> .</para>
           <table frame="box" label="CC.2.1-2" rules="all" xml:id="table_CC.2.1-2">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_dcc8b77a-7865-4932-b135-621de9f4b4b4">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_f417b6b5-2761-41d9-941e-2ff7d9cbc037">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_1202f8d8-6e3d-4161-a18b-149be74d72cd">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -32310,7 +32376,7 @@
                   <para xml:id="para_4947ab3a-82df-4372-9249-e5f3c5dc8244">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_5135b61b-24cd-48fc-9f54-56f6e589a04e">Refused: The UPS may no longer be updated</para>
+                  <para xml:id="para_5135b61b-24cd-48fc-9f54-56f6e589a04e">Failed: The UPS may no longer be updated</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_b7818262-0f9b-468e-846c-a0178d202f5b">C300</para>
@@ -32318,7 +32384,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_ff0aba29-f9c4-4688-83ea-18b16e85d0a8">Refused: The correct Transaction UID was not provided</para>
+                  <para xml:id="para_ff0aba29-f9c4-4688-83ea-18b16e85d0a8">Failed: The correct Transaction UID was not provided</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_1f17ed5c-5ff0-4c41-a93f-6dbdc9c290ed">C301</para>
@@ -32326,7 +32392,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_dc7741f3-5196-4dfa-b6ac-8babd4db21e3">Refused: The UPS is already IN PROGRESS</para>
+                  <para xml:id="para_dc7741f3-5196-4dfa-b6ac-8babd4db21e3">Failed: The UPS is already IN PROGRESS</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_1fb868d7-b6e7-49db-8ba4-20b54aab391b">C302</para>
@@ -32334,7 +32400,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_625e914c-0804-47b7-a428-ff1a42f7a38b">Refused: The UPS may only become SCHEDULED via N-CREATE, not N-SET or N-ACTION</para>
+                  <para xml:id="para_625e914c-0804-47b7-a428-ff1a42f7a38b">Failed: The UPS may only become SCHEDULED via N-CREATE, not N-SET or N-ACTION</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_c3ec66d0-d86e-4c7c-92a6-7bce32b35897">C303</para>
@@ -32342,7 +32408,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_2cba0726-a648-472c-b6c5-b58010f000f9">Refused: The UPS has not met final state requirements for the requested state change</para>
+                  <para xml:id="para_2cba0726-a648-472c-b6c5-b58010f000f9">Failed: The UPS has not met final state requirements for the requested state change</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_c27858d7-63e2-4ca8-9d1e-e008d20feae6">C304</para>
@@ -32358,7 +32424,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_38b0abba-41ee-4c23-9394-03f028e524e7">Refused: The UPS is not yet in the "IN PROGRESS" state</para>
+                  <para xml:id="para_38b0abba-41ee-4c23-9394-03f028e524e7">Failed: The UPS is not yet in the "IN PROGRESS" state</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_e5398654-03a2-42c3-8008-9bd3a3934f88">C310</para>
@@ -32529,24 +32595,25 @@
         </section>
         <section label="CC.2.2.4" status="4" xml:id="sect_CC.2.2.4">
           <title>Status Codes</title>
-          <para xml:id="para_217b1f3f-6e13-44f7-bb17-688ff5743d58">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.2-2" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_217b1f3f-6e13-44f7-bb17-688ff5743d58">
+<xref linkend="table_CC.2.2-2" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.2-2" rules="all" xml:id="table_CC.2.2-2">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_feca6da4-0d1e-4fe9-9685-278c45e24c33">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_7c24a792-4c39-4961-aeb6-299ba50f5431">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_f23eda23-7160-4f66-b3b4-a221482dd2e9">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -32579,7 +32646,7 @@
                   <para xml:id="para_88f229b5-8fa9-4eb1-a216-5fe7c5d42168">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_8b7d9360-e7a2-4199-a1ef-840cff615b48">Refused: The UPS is already COMPLETED</para>
+                  <para xml:id="para_8b7d9360-e7a2-4199-a1ef-840cff615b48">Failed: The UPS is already COMPLETED</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_64131b45-4c19-4560-9bca-0deebf8d6d87">C311</para>
@@ -32587,7 +32654,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_0a34156c-029a-4bed-9dc9-cdf9d00c4817">Refused: Performer chooses not to cancel</para>
+                  <para xml:id="para_0a34156c-029a-4bed-9dc9-cdf9d00c4817">Failed: Performer chooses not to cancel</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_12872083-09a3-4bb5-b137-3ba08ce7a8c8">C313</para>
@@ -32603,7 +32670,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_8694e2c6-f3ce-4104-9ded-00fe9f32cdde">Refused: The performer cannot be contacted</para>
+                  <para xml:id="para_8694e2c6-f3ce-4104-9ded-00fe9f32cdde">Failed: The performer cannot be contacted</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_3cd16243-f3e8-4bc0-aa57-15eb05701acf">C312</para>
@@ -33064,24 +33131,25 @@
         </section>
         <section label="CC.2.3.4" status="4" xml:id="sect_CC.2.3.4">
           <title>Status Codes</title>
-          <para xml:id="para_e3b30cd4-9a7a-44c8-8cb0-a955117bcc67">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.3-3" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_e3b30cd4-9a7a-44c8-8cb0-a955117bcc67">
+<xref linkend="table_CC.2.3-3" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.3-3" rules="all" xml:id="table_CC.2.3-3">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_ba4e49be-2289-463d-8abe-0429b6a392dc">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_0401702b-a3af-4e61-bf13-76b3be6d9c5b">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_7a6a550d-5df0-4e94-9f26-d06773be70d5">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -33114,7 +33182,7 @@
                   <para xml:id="para_a1fe5393-9144-48db-b8f5-dd8e1c71e6dc">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_e6a7ad00-0ba1-4ab8-b5f5-945da4550c92">Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
+                  <para xml:id="para_e6a7ad00-0ba1-4ab8-b5f5-945da4550c92">Failed: Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_7b7ce4d3-b756-4752-97a1-21b4a9c1f2f5">C307</para>
@@ -33122,7 +33190,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_46181a07-dbe9-4828-97b9-617217a1ca35">Receiving AE-TITLE is Unknown to this SCP</para>
+                  <para xml:id="para_46181a07-dbe9-4828-97b9-617217a1ca35">Failed: Receiving AE-TITLE is Unknown to this SCP</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_150feb35-8a79-4e42-9276-20339aa8ea35">C308</para>
@@ -33130,7 +33198,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_53a0082b-6d03-4197-8ae0-4e3b40d6ff53">Refused: Specified action not appropriate for specified instance</para>
+                  <para xml:id="para_53a0082b-6d03-4197-8ae0-4e3b40d6ff53">Failed: Specified action not appropriate for specified instance</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_72f63871-0dad-462f-96cf-f685ed6492de">C314</para>
@@ -33138,7 +33206,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_51492d7f-ac80-4de7-9955-f24cc7e7e685">Refused: SCP does not support Event Reports</para>
+                  <para xml:id="para_51492d7f-ac80-4de7-9955-f24cc7e7e685">Failed: SCP does not support Event Reports</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_a4933f56-7db6-4d9c-bdac-6666c2b25ed8">C315</para>
@@ -34514,7 +34582,7 @@
                     <para xml:id="para_5c54d06c-eb6e-437e-890f-a298a21b7bf6">1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0d54d9bd-a85f-480c-b5d9-32ffa18d7195">Required if Type of Instances (0040,E020) is DICOM</para>
+                    <para xml:id="para_0d54d9bd-a85f-480c-b5d9-32ffa18d7195">Required if Type of Instances (0040,E020) is DICOM and the Information Model of the referenced instance contains the Study IE</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -34541,7 +34609,7 @@
                     <para xml:id="para_d7172888-ffba-48c0-9ed5-612115b21e47">1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_cae8f066-2230-41c7-9731-a09627a565c6">Required if Type of Instances (0040,E020) is DICOM</para>
+                    <para xml:id="para_cae8f066-2230-41c7-9731-a09627a565c6">Required if Type of Instances (0040,E020) is DICOM and the Information Model of the referenced instance contains the Series IE</para>
                   </td>
                 </tr>
                 <tr valign="top">
@@ -38794,24 +38862,25 @@
         </section>
         <section label="CC.2.5.4" status="4" xml:id="sect_CC.2.5.4">
           <title>Status Codes</title>
-          <para xml:id="para_e00eb7cb-01b0-4b51-a6dd-9bd473291576">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.5-4" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_e00eb7cb-01b0-4b51-a6dd-9bd473291576">
+<xref linkend="table_CC.2.5-4" xrefstyle="select: label"/> defines the status code values that might be returned in a N-CREATE response. General status code values and fields related to status code values are defined for N-CREATE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.5-4" rules="all" xml:id="table_CC.2.5-4">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_12b8108d-a9db-49a5-a4fc-560b3001e5ad">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_aef3f750-eced-4437-bd39-f519b94bc8b0">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_bc8293e2-2dea-4723-a924-b98394d410ae">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -38844,7 +38913,7 @@
                   <para xml:id="para_fe08d486-710a-4fb3-bbab-5e54a6ab8186">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_e2325d76-776b-451f-a075-5fc2a7d13af6">Refused: The provided value of UPS State was not "SCHEDULED".</para>
+                  <para xml:id="para_e2325d76-776b-451f-a075-5fc2a7d13af6">Failed: The provided value of UPS State was not "SCHEDULED".</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_29b929fe-4e5d-41dd-86e4-81cc0f2eb49a">C309</para>
@@ -38890,24 +38959,25 @@
         </section>
         <section label="CC.2.6.4" status="4" xml:id="sect_CC.2.6.4">
           <title>Status Codes</title>
-          <para xml:id="para_f809bb02-2842-48e2-9973-cbbe20ad79f9">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.6-1" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
+          <para xml:id="para_f809bb02-2842-48e2-9973-cbbe20ad79f9">
+<xref linkend="table_CC.2.6-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-SET response. General status code values and fields related to status code values are defined for N-SET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.6-1" rules="all" xml:id="table_CC.2.6-1">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_44c7cf97-f118-4f4b-a2d1-1505350384d9">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_f7d94106-e9a6-49be-a8af-ab0c7532ad04">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_fae46929-b35e-4869-a7eb-0cc4d4c89791">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -38948,7 +39018,7 @@
                   <para xml:id="para_968f74a6-2f90-482f-bec7-6a6d88e8589e">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d139e98a-1cc2-42ea-9561-4a30629dfa38">Refused: The UPS is not in the "IN PROGRESS" state</para>
+                  <para xml:id="para_d139e98a-1cc2-42ea-9561-4a30629dfa38">Failed: The UPS is not in the "IN PROGRESS" state</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_173d0c98-8231-4006-b269-51883cc61711">C310</para>
@@ -38956,7 +39026,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_acbd24cd-a54d-46c1-a79f-b2f9da3ef3b9">Refused: The correct Transaction UID was not provided</para>
+                  <para xml:id="para_acbd24cd-a54d-46c1-a79f-b2f9da3ef3b9">Failed: The correct Transaction UID was not provided</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_6cba0340-8635-4e38-956a-5cd890409044">C301</para>
@@ -38964,7 +39034,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_e1996d2b-5c76-4727-8c09-84090e200938">Refused: The UPS may no longer be updated</para>
+                  <para xml:id="para_e1996d2b-5c76-4727-8c09-84090e200938">Failed: The UPS may no longer be updated</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_d24b9881-761e-4b36-bb03-d6d364facef8">C300</para>
@@ -38972,7 +39042,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_8d86706f-3392-44b6-8a35-209578096db4">Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
+                  <para xml:id="para_8d86706f-3392-44b6-8a35-209578096db4">Failed: Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_90ade82d-3d8c-4f97-9b59-c5ae3760365b">C307</para>
@@ -39018,24 +39088,25 @@
         </section>
         <section label="CC.2.7.4" status="4" xml:id="sect_CC.2.7.4">
           <title>Status Codes</title>
-          <para xml:id="para_877bc66c-8c88-4eea-aa17-3924f807f4d1">The status values that are specific for this DIMSE operation are defined in <xref linkend="table_CC.2.7-1" xrefstyle="select: label"/>. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for additional response status codes.</para>
+          <para xml:id="para_877bc66c-8c88-4eea-aa17-3924f807f4d1">
+<xref linkend="table_CC.2.7-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-GET response. General status code values and fields related to status code values are defined for N-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.7-1" rules="all" xml:id="table_CC.2.7-1">
             <caption>Status Values</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_d1e9ba26-9406-4d27-935e-59a32c4eaa0c">
-                    <emphasis role="bold">Status</emphasis>
+                    <emphasis role="bold">Service Status</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_7e2482c5-4909-4049-a87c-eae41dcfcdc3">
-                    <emphasis role="bold">Meaning</emphasis>
+                    <emphasis role="bold">Further Meaning</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_56221e08-cd6a-4267-82ef-2301f2d2d3d4">
-                    <emphasis role="bold">Code</emphasis>
+                    <emphasis role="bold">Status Code</emphasis>
                   </para>
                 </th>
               </tr>
@@ -39057,7 +39128,7 @@
                   <para xml:id="para_9f589ddd-6e9e-4703-8b90-a249cf3d483a">Failure</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_ecf3a807-7816-459e-8ac3-8cfdc714fd3b">Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
+                  <para xml:id="para_ecf3a807-7816-459e-8ac3-8cfdc714fd3b">Failed: Specified SOP Instance UID does not exist or is not a UPS Instance managed by this SCP</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_0783466a-1a09-49a7-9176-876ff2330989">C307</para>
@@ -39233,7 +39304,7 @@
         <section label="CC.2.8.4" status="4" xml:id="sect_CC.2.8.4">
           <title>Status Codes</title>
           <para xml:id="para_9e81bf94-27ee-4c73-9d28-2ec2d81cdb64">
-            <xref linkend="table_CC.2.8-2" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. Fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+            <xref linkend="table_CC.2.8-2" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
           <table frame="box" label="CC.2.8-2" rules="all" xml:id="table_CC.2.8-2">
             <caption>C-FIND Response Status Values</caption>
             <thead>
@@ -39277,7 +39348,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_977ed46c-7471-4cf0-992a-a94609b8e0cb">Identifier Does Not Match SOP Class</para>
+                  <para xml:id="para_977ed46c-7471-4cf0-992a-a94609b8e0cb">Error: Data Set Does Not Match SOP Class</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_659d8715-83cb-4156-9e76-94b7b5d3c3c0">A900</para>
@@ -39289,7 +39360,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_061a7137-cc42-4654-b73a-f852838ee90d">SOP Class not Supported</para>
+                  <para xml:id="para_061a7137-cc42-4654-b73a-f852838ee90d">Failed: SOP Class not Supported</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_0b262552-ae91-4bb2-b702-4eb074bf985b">0122</para>
@@ -39298,10 +39369,10 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_5907c7ff-c3d9-4075-9b2b-55a6e5b960c9">Unable to process</para>
+                  <para xml:id="para_5907c7ff-c3d9-4075-9b2b-55a6e5b960c9">Failed: Unable to process</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_61572608-6fbc-4d54-ac97-147b38a8768c">(any value C000 through CFFF as assigned by the implementation)</para>
+                  <para xml:id="para_61572608-6fbc-4d54-ac97-147b38a8768c">Cxxx</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_aa92b479-2be9-49a1-957f-3b21c81c80fb">(0000,0901)</para>
@@ -39366,6 +39437,9 @@
           <note>
             <para xml:id="para_15eb5a4a-4d69-411a-a6f5-a0312fad9ea5">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
           </note>
+          <para xml:id="para_db1d6836-ae12-450b-9938-bbe334382e3d">Some Failure Status Codes are implementation specific.</para>
+          <para xml:id="para_0e3345bf-faae-4389-89d4-81886c7b3ae3">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed: Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_1204e78e-9906-432f-826c-25dfdd07fca9">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
         </section>
       </section>
     </section>
@@ -42602,24 +42676,25 @@
           </section>
           <section label="DD.3.2.1.2" status="5" xml:id="sect_DD.3.2.1.2">
             <title>Status</title>
-            <para xml:id="para_2e041dc4-e13d-4e9c-8d54-53301765b1ca">The status values for N-CREATE that are specific for these SOP Classes are defined as follows:</para>
+            <para xml:id="para_2e041dc4-e13d-4e9c-8d54-53301765b1ca">
+<xref linkend="table_DD.3.2.1.2-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-CREATE response. General status code values and fields related to status code values are defined for N-CREATE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="DD.3.2.1.2-1" rules="all" xml:id="table_DD.3.2.1.2-1">
               <caption>RT Ion Machine Verification SOP Class N-CREATE Status Values</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_3fa27457-a883-48ff-aca6-11b1d2936fa5">
-                      <emphasis role="bold">Status</emphasis>
+                      <emphasis role="bold">Service Status</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b50a8eb4-5c82-4ddc-8656-7d4fc4cb1c52">
-                      <emphasis role="bold">Meaning</emphasis>
+                      <emphasis role="bold">Further Meaning</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b4ac2fff-143c-4dc7-8e61-bace59caaa15">
-                      <emphasis role="bold">Code</emphasis>
+                      <emphasis role="bold">Status Code</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -42641,7 +42716,7 @@
                     <para xml:id="para_ee44d094-1d96-422e-883a-2d3fa76ebcaf">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_213d5b2e-cf7c-42fb-a6ec-c1c6ecbda50c">No such object instance - Referenced RT Plan not found</para>
+                    <para xml:id="para_213d5b2e-cf7c-42fb-a6ec-c1c6ecbda50c">Failed: No such object instance - Referenced RT Plan not found</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_c98326d8-9b32-4915-8495-516dda99d98d">C227</para>
@@ -42649,7 +42724,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_3e43d578-bc4e-4aac-bc3b-61d6df68356b">The Referenced Fraction Group Number does not exist in the referenced plan</para>
+                    <para xml:id="para_3e43d578-bc4e-4aac-bc3b-61d6df68356b">Failed: The Referenced Fraction Group Number does not exist in the referenced plan</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_04493a15-7687-4ede-beb0-a3a47262ca86">C221</para>
@@ -42657,7 +42732,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_b378b9be-b858-42e2-8e71-f118e1ebed56">No beams exist within the referenced fraction group</para>
+                    <para xml:id="para_b378b9be-b858-42e2-8e71-f118e1ebed56">Failed: No beams exist within the referenced fraction group</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_91622aeb-05d5-4498-8db1-46577632a97b">C222</para>
@@ -42665,7 +42740,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_ca920ac9-265a-434d-bbbe-063d0b0d511b">SCU already verifying and cannot currently process this request.</para>
+                    <para xml:id="para_ca920ac9-265a-434d-bbbe-063d0b0d511b">Failed: SCU already verifying and cannot currently process this request.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_17b10b12-8077-45f7-b993-d6c3236d606b">C223</para>
@@ -43030,24 +43105,25 @@
           </section>
           <section label="DD.3.2.2.3" status="5" xml:id="sect_DD.3.2.2.3">
             <title>Status</title>
-            <para xml:id="para_28f41cc4-8a4f-4d5d-b220-03bfc0bc4b0d">The status values that are specific for these SOP Classes are defined as follows:</para>
+            <para xml:id="para_28f41cc4-8a4f-4d5d-b220-03bfc0bc4b0d">
+<xref linkend="table_DD.3.2.2.3-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-GET response. General status code values and fields related to status code values are defined for N-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="DD.3.2.2.3-1" rules="all" xml:id="table_DD.3.2.2.3-1">
               <caption>RT Conventional Machine and RT Ion Machine Verification SOP Class N-GET Status Values</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_7aef4111-8997-4846-8a5e-4ffcea39a4d3">
-                      <emphasis role="bold">Status</emphasis>
+                      <emphasis role="bold">Service Status</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_76ba7245-6baa-4344-b550-8df8d6da7a28">
-                      <emphasis role="bold">Meaning</emphasis>
+                      <emphasis role="bold">Further Meaning</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_2d9b5a43-703b-4f33-a4d5-db3a46d993e9">
-                      <emphasis role="bold">Code</emphasis>
+                      <emphasis role="bold">Status Code</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -43069,7 +43145,7 @@
                     <para xml:id="para_6e4d452c-2661-4cef-b9c9-3279bdf2b121">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_38e66f03-6e95-4d09-8374-2cf6a1c1c17d">No such object instance - applicable Machine Verification instance not found</para>
+                    <para xml:id="para_38e66f03-6e95-4d09-8374-2cf6a1c1c17d">Failed: Applicable Machine Verification instance not found</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_3bbb4c4d-d144-4533-9d53-4a7f4c0243fc">C112</para>
@@ -43152,24 +43228,25 @@
           </section>
           <section label="DD.3.2.3.2" status="5" xml:id="sect_DD.3.2.3.2">
             <title>Status</title>
-            <para xml:id="para_254a77b1-07d2-4d25-9589-f48a35b5e9d5">The status values that are specific for these SOP Classes are defined in <xref linkend="table_DD.3.2.3-2" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_254a77b1-07d2-4d25-9589-f48a35b5e9d5">
+<xref linkend="table_DD.3.2.3-2" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
             <table frame="box" label="DD.3.2.3-2" rules="all" xml:id="table_DD.3.2.3-2">
               <caption>RT Conventional Machine and RT Ion Machine Verification SOP Class N-ACTION Status Values</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_7001054b-336d-41d2-9be9-73d7bb1e360a">
-                      <emphasis role="bold">Status</emphasis>
+                      <emphasis role="bold">Service Status</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_36c21cbf-9c0b-4dd9-ba1b-85039351c20c">
-                      <emphasis role="bold">Meaning</emphasis>
+                      <emphasis role="bold">Further Meaning</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_3246c9f8-4ea8-4f59-a4e0-79bef5cf8794">
-                      <emphasis role="bold">Code</emphasis>
+                      <emphasis role="bold">Status Code</emphasis>
                     </para>
                   </th>
                 </tr>
@@ -43191,7 +43268,7 @@
                     <para xml:id="para_5b947415-bc8e-4f67-9a3e-f3cb3ab9fe68">Failure</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_9b20f2ef-2525-4edf-98a0-4719b28e1317">No such object instance - Machine Verification requested instance not found.</para>
+                    <para xml:id="para_9b20f2ef-2525-4edf-98a0-4719b28e1317">Failed; Machine Verification requested instance not found.</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_cd00e9bf-10ea-4c7b-8246-9d32a3e97104">C112</para>
@@ -43214,7 +43291,7 @@
           </section>
           <section label="DD.3.2.4.2" status="5" xml:id="sect_DD.3.2.4.2">
             <title>Status</title>
-            <para xml:id="para_9c6559b8-9e90-4ecc-84fb-4a156567c4af">There are no specific status codes.</para>
+            <para xml:id="para_9c6559b8-9e90-4ecc-84fb-4a156567c4af">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
           </section>
           <section label="DD.3.2.4.3" status="5" xml:id="sect_DD.3.2.4.3">
             <title>Behavior</title>
@@ -43301,7 +43378,7 @@
           </section>
           <section label="DD.3.2.5.2" status="5" xml:id="sect_DD.3.2.5.2">
             <title>Status</title>
-            <para xml:id="para_98fe76f2-6fdb-4fa5-b2c5-56ddc668457d">There are no specific status codes.</para>
+            <para xml:id="para_98fe76f2-6fdb-4fa5-b2c5-56ddc668457d">There are no specific status codes. See <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> for response status codes.</para>
           </section>
           <section label="DD.3.2.5.3" status="5" xml:id="sect_DD.3.2.5.3">
             <title>Behavior</title>
@@ -45541,7 +45618,7 @@
         <note>
           <para xml:id="para_fad96a9b-6a70-453e-8f26-c9147caede98">E.g., an SCP may add values to Alternate Content Description Sequence (0070,0087), to provide an additional description in another language.</para>
         </note>
-        <para xml:id="para_882ae5af-9b97-483e-81ee-af4b3f7f5a72">The SCP shall return, via the C-STORE response primitive, the Response Status Code applicable to the associated request. By performing this service successfully, the SCP indicates that the SOP Instance has been successfully stored. <xref linkend="table_GG.4-1" xrefstyle="select: label"/> shows the response status values. General status code values and fields related to status code values are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_882ae5af-9b97-483e-81ee-af4b3f7f5a72">The SCP shall return, via the C-STORE response primitive, the Response Status Code applicable to the associated request. By performing this service successfully, the SCP indicates that the SOP Instance has been successfully stored. <xref linkend="table_GG.4-1" xrefstyle="select: label"/> defines the specific response status code values that might be returned in a C-STORE response. General status code values and fields related to status code values are defined for C-STORE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
         <table frame="box" label="GG.4-1" rules="all" xml:id="table_GG.4-1">
           <caption>C-STORE Response Status Values</caption>
           <thead>

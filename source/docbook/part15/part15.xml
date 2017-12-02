@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2017d - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2017e - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10564,7 +10564,7 @@ start = message
             <emphasis role="bold">Rtn. Dev. Id. Opt.</emphasis>
           </para>
         </th>
-          <th>
+          <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_1ba661a2-a572-420a-95c1-bc1bf694a70e">
                   <emphasis role="bold">Rtn. Inst. Id. Opt.</emphasis>
               </para>

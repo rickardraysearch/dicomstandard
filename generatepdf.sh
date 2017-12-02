@@ -2,6 +2,11 @@
 
 part="$1"
 
+# need older version of xsltproc, else title page customizations don't work :(
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
 mkdir -p "output/fo"
@@ -17,8 +22,8 @@ partnoleadingzero=`echo "${part}" | sed -e 's/^0//'`
 # may need "--xinclude" option to xsltproc since fop does not support includes (see http://www.sagehill.net/docbookxsl/Xinclude.html#JavaXIncludes)
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
 
-#xsltproc -maxdepth 10000 --nonet -o output/fo/part${part}.fo stylesheets/customize-fo.xsl source/docbook/part${part}/part${part}_tabletest.xml
-xsltproc -maxdepth 10000 --nonet \
+#"${XSLTPROC}" -maxdepth 10000 --nonet -o output/fo/part${part}.fo stylesheets/customize-fo.xsl source/docbook/part${part}/part${part}_tabletest.xml
+"${XSLTPROC}" -maxdepth 20000 --nonet \
 	--stringparam target.database.document "../../../olinkdb_pdf.xml" \
 	--stringparam current.docid "PS3.${partnoleadingzero}" \
 	-o output/fo/part${part}.fo \

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2017d - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2017e - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -3056,7 +3056,8 @@
         <para xml:id="para_7984993b-9caf-4610-be77-8fa0ed194c66">It is possible that multiple implementers may define Private Elements with the same (odd) group number. To avoid conflicts, Private Elements shall be assigned Private Data Element Tags according to the following rules.</para>
         <orderedlist numeration="loweralpha">
           <listitem>
-            <para xml:id="para_184c146b-050a-44b5-8420-fdf179f0bf0b">Private Creator Data Elements numbered (gggg,0010-00FF) (gggg is odd) shall be used to reserve a block of Elements with Group Number gggg for use by an individual implementer. The implementer shall insert an identification code in the first unused (unassigned) Element in this series to reserve a block of Private Elements. The VR of the private identification code shall be LO (Long String) and the VM shall be equal to 1. A Private Creator identifier may be used only once within a Group; reserving multiple blocks of Elements in the same Group with the same identifier is not allowed.</para>
+            <para xml:id="para_184c146b-050a-44b5-8420-fdf179f0bf0b">Private Creator Data Elements numbered (gggg,0010-00FF) (gggg is odd) shall be used to reserve a block of Elements with Group Number gggg for use by an individual implementer. The implementer shall insert an identification code in the first unused (unassigned) Element in this series to reserve a block of Private Elements. The VR of the private identification code shall be LO (Long String) and the VM shall be equal to 1. A Private Creator identifier may be used only once within a Group; reserving multiple blocks of Elements in the same Group with the same identifier is not allowed.
+              The Private Creator Data Elements shall only contain characters from the Default Character Repertoire and not an Extended or Replacement Character Repertoire, even though the LO VR is one that is affected by the Specific Character Set (0008,0005).</para>
             <note>
               <orderedlist>
                 <listitem>
@@ -5805,11 +5806,13 @@
           <para xml:id="para_0a87d68b-4ef7-423c-a8e4-8e6930886928">If an Application Entity receives an A-ASSOCIATE indication corresponding to a request that follows the requirements specified in <xref linkend="sect_10.1" xrefstyle="select: label"/> (a), every Presentation Context related to a given Abstract Syntax cannot be rejected in an A-ASSOCIATE response for the reason that none of the Transfer Syntaxes are supported.</para>
         </listitem>
       </orderedlist>
-      <para xml:id="para_59fedffa-4f57-4093-846d-3378934ac984">Both of these requirements, (a) and (b), are waived when the Application Entity sending the pixel data has only access to the pixel data in lossy compressed form and a Transfer Syntax that uses a pixel data reference is not offered.</para>
+      <para xml:id="para_59fedffa-4f57-4093-846d-3378934ac984">Both of these requirements, (a) and (b), are waived when the Application Entity sending the pixel data has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the default Transfer Syntax, and a Transfer Syntax that uses a pixel data reference is not offered.</para>
       <para xml:id="para_8fd280b8-cc35-4713-a5e9-c6d7d255a4d2">Requirement (b) to accept the default Transfer Syntax is waived if a Transfer Syntax that uses a pixel data reference is offered.</para>
       <note>
-        <para xml:id="para_4964d8b2-85f9-4871-946f-6ee9b4bed99d">In other words, every sending AE is required to be able to convert any Data Set it is going to transmit into the default Transfer Syntax, regardless of the form in which it originally received or stored the Data Set, except in the single case of when it received it in a lossy compressed form. In that exceptional case, the sending AE is permitted to propose only the lossy compressed Transfer Syntax appropriate to the lossy form that was received.</para>
-        <para xml:id="para_b0be2e91-ed38-41d7-b1db-92e9b8477086">In particular, this waiver does not apply to Data Sets received in a lossless compressed form, which means that any AE receiving a Data Set in a lossless compressed Transfer Syntax that needs to re-send the Data Set is required to be able to decompress it in order to support (at least) the default Transfer Syntax.</para>
+        <para xml:id="para_4964d8b2-85f9-4871-946f-6ee9b4bed99d">In other words, every sending AE is required to be able to convert any Data Set it is going to transmit into the default Transfer Syntax, regardless of the form in which it originally received or stored the Data Set, except in the cases of when the decompressed Pixel Data is too large to encode in the default Transfer Syntax or is received in a lossy compressed form.
+          In the case of lossy compressed Pixel Data, the sending AE is permitted to propose only the lossy compressed Transfer Syntax appropriate to the lossy form that was received.
+          In the case of lossless compressed Pixel Data that is too large to encode in the default Transfer Syntax, the sending AE is permitted to propose any appropriate lossless compression Transfer Syntax, not necessarily that in which the image was received, as an alternative to the default Transfer Syntax.</para>
+        <para xml:id="para_b0be2e91-ed38-41d7-b1db-92e9b8477086">This waiver does not apply to Data Sets received in a lossless compressed form if the decompressed Pixel Data is small enough to encode in the default Transfer Syntax, which means that any AE receiving a Data Set in a lossless compressed Transfer Syntax that needs to re-send the Data Set is required to be able to decompress it in order to support (at least) the default Transfer Syntax.</para>
       </note>
     </section>
     <section label="10.2" status="2" xml:id="sect_10.2">
