@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2017e - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2018a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2017</year>
+      <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -2021,7 +2021,7 @@
   </chapter>
   <chapter label="B" status="1" xml:id="chapter_B">
     <title>HL7 Structured Document Files</title>
-    <para xml:id="para_d09fcd28-7c53-41fd-910f-acdfd269b539">Structured Documents as defined by an HL7 standard may be stored on DICOM Interchange Media, and may be referenced from within DICOM SOP Instances (including the DICOMDIR Media Storage Directory). There are two alternatives for storage of such documents - they may be encapsulated in DICOM SOP Instances, or they may be stored as native HL7 objects (unencapsulated),</para>
+    <para xml:id="para_d09fcd28-7c53-41fd-910f-acdfd269b539">Structured Documents as defined by an HL7 standard may be stored on DICOM Interchange Media, and may be referenced from within DICOM SOP Instances (including the DICOMDIR Media Storage Directory). There are two alternatives for storage of such documents - they may be encapsulated in DICOM SOP Instances, or they may be stored as native HL7 objects (unencapsulated).</para>
     <para xml:id="para_74aeb243-f9b2-4c22-90d8-cd1d4cd4449d">An Encapsulated CDA is referenced from the Media Storage Directory like any other DICOM SOP Instance.</para>
     <para xml:id="para_c3493caf-5123-4dad-9d52-6d93f44c84ce">References to a native (unencapsulated) Structured Document use a SOP Class UID, identifying the document class, and a SOP Instance UID. The SOP Instance UID is arbitrary, and the native document instance identifier is encoded in the HL7 Instance Identifier (0040,E001) attribute (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, "HL7 Structured Document Directory Record Definition" and "HL7 Structured Document Reference Sequence" for further information).</para>
     <note>

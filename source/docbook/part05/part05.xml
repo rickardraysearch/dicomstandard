@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2017e - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2018a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2017</year>
+      <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -1072,7 +1072,7 @@
                 <para xml:id="para_cae26918-2e62-4223-8855-fce9370f1a0b">All character sets specified in ISO 8859 include ISO-IR 6. This set will always be invoked in the GL area of the code table and is the equivalent of ASCII (ANSI X3.4:1986), whereas the various extension repertoires are mapped onto the GR area of the code table.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_dd30dad9-f6f7-475b-9bd3-ec77a3f36abe">The 8-bit code table of JIS X 0201 includes ISO-IR 14 (romaji alphanumeric characters) as the G0 code element and ISO-IR 13 (katakana phonetic characters) as the G1 code element. ISO-IR 14 is identical to ISO-IR 6, except that bit combination 05/12 represents a "¥"(YEN SIGN) and bit combination 07/14 represents an over-line.</para>
+                <para xml:id="para_dd30dad9-f6f7-475b-9bd3-ec77a3f36abe">The 8-bit code table of JIS X 0201 includes ISO-IR 14 (romaji alphanumeric characters) as the G0 code element and ISO-IR 13 (katakana phonetic characters) as the G1 code element. ISO-IR 14 is identical to ISO-IR 6, except that bit combination 05/12 represents a "¥" (YEN SIGN) and bit combination 07/14 represents an over-line.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -1091,7 +1091,10 @@
                 <para xml:id="para_8fbc4d8a-482d-49eb-8c60-799854d6aecc">The Unicode Standard includes a substantial discussion of the recommended means for display and print for characters that lack font support. These same recommendations may apply to the mechanisms for unsupported character sets.</para>
                 <para xml:id="para_b935f381-0359-4fc4-afe5-1105c76696df">The machine should print or display such characters by replacing all unknown characters with the four characters "\nnn", where "nnn" is the three digit octal representation of each byte.</para>
                 <para xml:id="para_5cab5efc-85ec-4373-b997-4d74dd896372">An example of this for an ASCII based machine would be as follows:</para>
-                <para xml:id="para_c56427bd-3697-4734-98d5-c20be23ceb81">Character String: <foreignphrase xml:lang="de">Günther</foreignphrase> Encoded representation: 04/07 15/12 06/14 07/04 06/08 06/05 07/02ASCII based machine: G\374nther</para>
+                <para xml:id="para_c56427bd-3697-4734-98d5-c20be23ceb81">Character String: <foreignphrase xml:lang="de">Günther</foreignphrase>
+</para>
+                <para xml:id="para_62cc03ab-43b2-479c-a1bd-b98b2968ac9d">Encoded representation: 04/07 15/12 06/14 07/04 06/08 06/05 07/02</para>
+                <para xml:id="para_48c0f2f9-291d-4ded-a569-3769d8f0173e">ASCII based machine: G\374nther</para>
                 <para xml:id="para_385c7e6f-3897-4972-ac79-f981fef4014e">Implementations may also encounter Control Characters that they have no means to print or display. The machine may print or display such Control Characters by replacing the Control Character with the four characters "\nnn", where "nnn" is the three digit octal representation of each byte.</para>
               </listitem>
               <listitem>
@@ -6044,7 +6047,7 @@
                     <listitem>
                       <para xml:id="para_fe2c7c6e-a93d-46e6-a4c2-764c25c9e4c1">shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
                       <note>
-                        <para xml:id="para_6fca76b0-53b2-4296-9aac-73a4bf8601b8">Previous versions of the Standard specified that the choice of OB or OW VR was based on whether or not Overlay Bits Allocated (60xx,0100) was greater than, or less than or equal to, 8. However, since only one bit plane can be encoded in each Overlay Data Element (60xx,3000), no value of Overlay Bits Allocated other than 1 makes sense. Such a restriction is now present in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+                        <para xml:id="para_6fca76b0-53b2-4296-9aac-73a4bf8601b8">Previous versions of the Standard specified that the choice of OB or OW VR was based on whether or not Overlay Bits Allocated (60xx,0100) was greater than, or less than or equal to, 8. However, since only one bit plane can be encoded in each Overlay Data (60xx,3000) Element, no value of Overlay Bits Allocated other than 1 makes sense. Such a restriction is now present in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
                       </note>
                     </listitem>
                   </itemizedlist>
@@ -6485,7 +6488,7 @@
               <para xml:id="para_30bdeb8e-ff3f-4e3b-a8ac-858133907b2b">(FFFE,E0DD)</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_523e0f06-d9a0-4354-9be4-28912dc189c8">0000 000H</para>
+              <para xml:id="para_523e0f06-d9a0-4354-9be4-28912dc189c8">0000 0000H</para>
             </td>
           </tr>
           <tr valign="top">
@@ -6505,7 +6508,7 @@
               <para xml:id="para_92dccf54-2e68-439e-9d7c-cda40435928f">4 bytes</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_54cf2b2d-3492-45e2-9cd1-2dd2394fe9e5">0628Hbytes</para>
+              <para xml:id="para_54cf2b2d-3492-45e2-9cd1-2dd2394fe9e5">0628H bytes</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_8c6dcba8-95aa-47f7-ad35-19e33542287d">4 bytes</para>
@@ -7135,7 +7138,7 @@
                   <para xml:id="para_e1104bfd-3ae7-4bc4-8002-703ba9f77336">Pixel Data (7FE0,0010) shall not be present, but rather pixel data shall be referenced via Data Element (0028,7FE0) Pixel Data Provider URL</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_5c2597ac-0f18-4ea7-93f0-0cc37c2105d4">Overlay data, if present, shall only be encoded in the Overlay Data attribute (60xx,3000), which shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
+                  <para xml:id="para_5c2597ac-0f18-4ea7-93f0-0cc37c2105d4">Overlay data, if present, shall only be encoded in the Overlay Data (60xx,3000) Element, which shall have the Value Representation OB or OW and shall be encoded in Little Endian.</para>
                 </listitem>
                 <listitem>
                   <para xml:id="para_77d99c9f-6eca-479b-ab1d-4804b374a106">Data Element (0028,0004) Photometric Interpretation shall be limited to the values: MONOCHROME1, MONOCHROME2, YBR_ICT and YBR_RCT.</para>

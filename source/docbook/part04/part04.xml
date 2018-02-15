@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2017e - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2018a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2017</year>
+      <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -37747,6 +37747,43 @@
                     <para xml:id="para_b631aa75-7cd3-4ae6-95ac-a61791631fb1">3</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d149075f-46b1-485b-99bc-1b692ad99fe3">&gt;Requesting Service Code Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_1637abc2-446f-47f6-bbc6-f945b38aaacb">(0032,1034)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f5360466-ba34-44a8-8510-3c1f245ef34a">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b6ffc1ff-8273-4d85-958e-338b206ed847">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_66a54775-afd5-4b98-9f05-d165536463f1">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_db55686a-7a96-4bc1-a5ae-8b94ce212900">-/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+<para xml:id="para_68764f65-722c-4092-91fb-0bf23bb9a5f9">O</para>
+</td>
+                  <td align="center" colspan="1" rowspan="1">
+<para xml:id="para_079fe844-8191-4e6a-951b-a1141001063b">3</para>
+</td>
+                  <td align="left" colspan="1" rowspan="1">
+<para xml:id="para_ac452886-e3ee-4cd7-a15d-829e8e78d88c"/>
+</td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="9" rowspan="1">
+                    <para xml:id="para_c35d143e-b6b4-4641-8617-6b5828288c2f">
+                      <emphasis role="italic">&gt;&gt;Include <xref linkend="table_CC.2.5-2a" xrefstyle="select: label quotedtitle"/>
+                      </emphasis>
+                    </para>
+                  </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">

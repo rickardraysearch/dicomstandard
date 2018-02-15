@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2017e - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2018a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2017</year>
+      <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
   </info>
@@ -3698,7 +3698,7 @@
           <glossentry>
             <glossterm>Media Application Profile</glossterm>
             <glossdef>
-              <para xml:id="para_f5cb288f-1da9-416a-8745-d0b85e6c50f7">The specification of DICOM information objects and encoding exchanged on removable media (e.g., CDs)</para>
+              <para xml:id="para_f5cb288f-1da9-416a-8745-d0b85e6c50f7">The specification of DICOM information objects and encoding exchanged on removable media (e.g., CDs).</para>
             </glossdef>
           </glossentry>
           <glossentry>
@@ -3729,7 +3729,7 @@
           <glossentry>
             <glossterm>Security Profile</glossterm>
             <glossdef>
-              <para xml:id="para_e857f481-786b-49b3-8295-a159385233fe">A set of mechanisms, such as encryption, user authentication, or digital signatures, used by an <emphasis role="italic">Application Entity</emphasis> to ensure confidentiality, integrity, and/or availability of exchanged DICOM data</para>
+              <para xml:id="para_e857f481-786b-49b3-8295-a159385233fe">A set of mechanisms, such as encryption, user authentication, or digital signatures, used by an <emphasis role="italic">Application Entity</emphasis> to ensure confidentiality, integrity, and/or availability of exchanged DICOM data.</para>
             </glossdef>
           </glossentry>
           <glossentry>
@@ -3743,7 +3743,7 @@
             <glossterm>Service Class User</glossterm>
             <acronym>SCU</acronym>
             <glossdef>
-              <para xml:id="para_8f4730aa-0bb1-48e9-8caf-f3124b6dac24">Role of an <emphasis role="italic">Application Entity</emphasis> that uses a DICOM network service; typically, a client. Examples: imaging modality (image storage SCU, and modality worklist SCU), imaging workstation (image query/retrieve SCU)</para>
+              <para xml:id="para_8f4730aa-0bb1-48e9-8caf-f3124b6dac24">Role of an <emphasis role="italic">Application Entity</emphasis> that uses a DICOM network service; typically, a client. Examples: imaging modality (image storage SCU, and modality worklist SCU), imaging workstation (image query/retrieve SCU).</para>
             </glossdef>
           </glossentry>
           <glossentry>
@@ -3763,7 +3763,7 @@
           <glossentry>
             <glossterm>Tag</glossterm>
             <glossdef>
-              <para xml:id="para_1ebfb8e9-aa45-45be-b3fa-8c07619a5ebb">A 32-bit identifier for a data element, represented as a pair of four digit hexadecimal numbers, the "group" and the "element". If the "group" number is odd, the tag is for a private (manufacturer-specific) data element. Examples: (0010,0020) [Patient ID], (07FE,0010) [Pixel Data], (0019,0210) [private data element]</para>
+              <para xml:id="para_1ebfb8e9-aa45-45be-b3fa-8c07619a5ebb">A 32-bit identifier for a data element, represented as a pair of four digit hexadecimal numbers, the "group" and the "element". If the "group" number is odd, the tag is for a private (manufacturer-specific) data element. Examples: (0010,0020) [Patient ID], (07FE,0010) [Pixel Data], (0019,0210) [private data element].</para>
             </glossdef>
           </glossentry>
           <glossentry>
