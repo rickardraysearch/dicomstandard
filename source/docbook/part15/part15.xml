@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2018b - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2018c - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10,6 +10,9 @@
       <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
+      <legalnotice>
+          <para xml:id="para_78f13c74-b629-43d9-80ee-cf8f030e913c">A DICOM® publication</para>
+      </legalnotice>
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>
@@ -9874,8 +9877,8 @@ start = message
       </orderedlist>
     </note>
     <para xml:id="para_1bc61bd4-06bf-4c67-b1a2-74cb2d58dc03">TCP ports on which an implementation accepts TLS connections, or the mechanism by which these port numbers are selected or configured, shall be stated in the Conformance Statement.
-      The TCP ports on which an implementation accepts TLS connections for DICOMWeb shall be different from those on which an implementation accepts TLS connections for DIMSE.
-      The HTTP/HTTPS connection for DICOMWeb can be shared with other HTTP/HTTPS traffic.</para>
+      The TCP ports on which an implementation accepts TLS connections for DICOMweb shall be different from those on which an implementation accepts TLS connections for DIMSE.
+      The HTTP/HTTPS connection for DICOMweb can be shared with other HTTP/HTTPS traffic.</para>
     <note>
       <para xml:id="para_34be39e8-f93f-42c1-8fae-e5d88d1fc796">It is recommended that systems supporting the BCP195 TLS Profile use the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS.</para>
     </note>
@@ -9931,8 +9934,8 @@ start = message
       </listitem>
     </itemizedlist>
     <para xml:id="para_ce11ddd8-e0af-4382-af00-9ac621319eb5">TCP ports on which an implementation accepts TLS connections, or the mechanism by which these port numbers are selected or configured, shall be stated in the Conformance Statement.
-      The TCP ports on which an implementation accepts TLS connections for DICOMWeb shall be different from those on which an implementation accepts TLS connections for DIMSE.
-      The HTTP/HTTPS connection for DICOMWeb can be shared with other HTTP/HTTPS traffic.</para>
+      The TCP ports on which an implementation accepts TLS connections for DICOMweb shall be different from those on which an implementation accepts TLS connections for DIMSE.
+      The HTTP/HTTPS connection for DICOMweb can be shared with other HTTP/HTTPS traffic.</para>
     <para xml:id="para_ae7031c5-b115-4610-819b-f37445ae684d">The Conformance Statement shall also indicate what mechanisms the implementation supports for Key Management.</para>
     <note>
       <para xml:id="para_2d957e53-32da-4c75-81ad-1a5fd91b0972">It is recommended that systems supporting the Non-Downgrading BCP195 TLS Profile use the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS.
@@ -10614,7 +10617,7 @@ start = message
         <para xml:id="para_e4aecdf5-5073-4584-ab3c-6cbdb2345393">Y</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_defe6a5d-af72-4b40-8b08-2c88470ca485">X</para>
+        <para xml:id="para_defe6a5d-af72-4b40-8b08-2c88470ca485">X/Z</para>
       </td>
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
@@ -10674,7 +10677,7 @@ start = message
         <para xml:id="para_c3e10274-64dd-48e5-b94e-5bd78d3adb47">Y</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_5eaf1c7b-52fe-4f39-b6ee-6bfba802dea0">X/D</para>
+        <para xml:id="para_5eaf1c7b-52fe-4f39-b6ee-6bfba802dea0">X/Z/D</para>
       </td>
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
@@ -12666,6 +12669,33 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
+        <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+                <para xml:id="para_fed896a3-78ba-43d8-ba5c-5101f1e129a1">Instance Origin Status</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_cd33fa62-498b-4251-b707-45258cefe272">(0400,0600)</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_edc7121a-0047-4e5e-bc69-def452f93ed2">N</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_fef36565-dc3b-4353-a431-b32dd003022c">Y</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1">
+                <para xml:id="para_95aa0e8e-118b-42b0-b6ef-b8ced2116797">X</para>
+            </td>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+            <td align="center" colspan="1" rowspan="1"/>
+        </tr>
     <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_6aa6f9d7-5813-4ac5-8923-5ecc219ca87d">Institution Address</para>
@@ -15027,7 +15057,7 @@ start = message
         <para xml:id="para_e3b213cd-47b5-40e6-ab91-d69b3ee339a1">Performed Station Name Code Sequence</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_16a1bf08-6c77-45f9-966b-d2d22b847c51">(0040, 4028)</para>
+          <para xml:id="para_16a1bf08-6c77-45f9-966b-d2d22b847c51">(0040,4028)</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
         <para xml:id="para_e8b27a05-a048-4cd8-afcc-bda1a9ea5a55">N</para>
@@ -15848,7 +15878,7 @@ start = message
         <para xml:id="para_13a86d31-d48a-4983-acc0-44e9cc5604dd">Referenced Patient Alias Sequence</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_8a267ef5-878b-4080-940e-188b4cfc8cf2">(0038, 0004)</para>
+        <para xml:id="para_8a267ef5-878b-4080-940e-188b4cfc8cf2">(0038,0004)</para>
       </td>
       <td align="center" colspan="1" rowspan="1">
         <para xml:id="para_26d0b4be-9dae-4b57-ab18-8e524dde7dc1">N</para>

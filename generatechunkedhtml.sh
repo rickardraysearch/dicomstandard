@@ -4,6 +4,10 @@ part="$1"
 
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 rm -rf output/chtml/part${part}
 mkdir -p "output/chtml/part${part}"
 cp css/dicom.css output/chtml/part${part}/dicom.css
@@ -14,7 +18,7 @@ mkdir -p "/tmp/chtml/part${part}"
 rm -f /tmp/chtml/part${part}/*
 
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
-xsltproc -maxdepth 20000 --nonet \
+"${XSLTPROC}" -maxdepth 20000 --nonet \
 	--stringparam html.stylesheet dicom.css \
 	--stringparam target.database.document "../../../olinkdb_chtml.xml" \
 	--stringparam current.docid "PS3.${partnoleadingzero}" \

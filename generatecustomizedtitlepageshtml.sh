@@ -2,9 +2,13 @@
 
 # see "http://www.sagehill.net/docbookxsl/TitlePageNewElems.html"
 
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
-xsltproc --nonet \
+"${XSLTPROC}" --nonet \
 	-o stylesheets/customizedtitlepages-xhtml.xsl \
 	docbook-xsl-ns-1.78.1/template/titlepage.xsl \
 	stylesheets/customized-titlepage.templates-xhtml.xml

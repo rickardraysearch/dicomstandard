@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2018b - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2018c - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10,6 +10,9 @@
       <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
+      <legalnotice>
+          <para xml:id="para_1e90113b-204e-4faf-bb5c-e9805ca87a46">A DICOM® publication</para>
+      </legalnotice>
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>

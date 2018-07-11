@@ -2,6 +2,10 @@
 
 part="$1"
 
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
 mkdir -p "output/html"
@@ -12,7 +16,7 @@ rm -f "output/html/part${part}.html"
 partnoleadingzero=`echo "${part}" | sed -e 's/^0//'`
 
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
-xsltproc -maxdepth 20000 --nonet \
+"${XSLTPROC}" -maxdepth 20000 --nonet \
 	--stringparam html.stylesheet dicom.css \
 	--stringparam target.database.document "../../../olinkdb_html.xml" \
 	--stringparam current.docid "PS3.${partnoleadingzero}" \

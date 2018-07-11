@@ -17,7 +17,7 @@
 	<xsl:param name="body.font.family" select="'sans-serif'"/>
 	<xsl:param name="body.font.master" select="9"/>
 
-	<xsl:param name="draft.mode" select="'yes'"/>
+	<xsl:param name="draft.mode" select="'no'"/>
 	<xsl:param name="draft.watermark.image" select="'http://docbook.sourceforge.net/release/xsl/current/images/draft.png'"/>	<!-- uses rewrite rule in catalog.xml to find it -->
 	
 	<xsl:param name="xref.with.number.and.title" select="'1'"/>
@@ -175,6 +175,108 @@ body { background-image: url('</xsl:text>
 		</tr>
 	</table>
 </xsl:template>
+
+    <!-- add link to current release in header center navigation cell - customize templates from chunk-common.xsl-->
+    
+    <xsl:template name="header.navigation">
+        <xsl:param name="prev" select="/d:foo"/>
+        <xsl:param name="next" select="/d:foo"/>
+        <xsl:param name="nav.context"/>
+        
+        <xsl:variable name="home" select="/*[1]"/>
+        <xsl:variable name="up" select="parent::*"/>
+        
+        <xsl:variable name="row1" select="$navig.showtitles != 0"/>
+        <xsl:variable name="row2" select="count($prev) &gt; 0
+            or (count($up) &gt; 0 
+            and generate-id($up) != generate-id($home)
+            and $navig.showtitles != 0)
+            or count($next) &gt; 0"/>
+        
+        <xsl:variable name="parttitle" select="/d:book/d:title"/>
+        <xsl:variable name="partnumber" select="substring-after($parttitle,'PS3.')"/>
+        <xsl:variable name="zeropaddedpartnumber">
+            <xsl:choose>
+                <xsl:when test="string-length($partnumber) = 1"><xsl:text>0</xsl:text><xsl:value-of select="$partnumber"/></xsl:when>
+                <xsl:otherwise><xsl:value-of select="$partnumber"/></xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:if test="$suppress.navigation = '0' and $suppress.header.navigation = '0'">
+            <div class="navheader">
+                <xsl:if test="$row1 or $row2">
+                    <table width="100%" summary="Navigation header">
+                        <xsl:if test="$row1">
+                            <tr>
+                                <th colspan="3" align="center">
+                                    <xsl:apply-templates select="." mode="object.title.markup"/>
+                                    <xsl:text> </xsl:text>
+                                    <a accesskey="current">
+                                        <xsl:attribute name="href">
+                                            <xsl:text>http://dicom.nema.org/medical/dicom/current/output/chtml/part</xsl:text>
+                                            <xsl:value-of select="$zeropaddedpartnumber"/>
+                                            <xsl:text>/</xsl:text>
+                                            <xsl:call-template name="href.target">
+                                                <xsl:with-param name="object" select="."/>
+                                            </xsl:call-template>
+                                        </xsl:attribute>
+                                        <xsl:text>(Current)</xsl:text>
+                                    </a>
+                                </th>
+                            </tr>
+                        </xsl:if>
+                        
+                        <xsl:if test="$row2">
+                            <tr>
+                                <td width="20%" align="{$direction.align.start}">
+                                    <xsl:if test="count($prev)>0">
+                                        <a accesskey="p">
+                                            <xsl:attribute name="href">
+                                                <xsl:call-template name="href.target">
+                                                    <xsl:with-param name="object" select="$prev"/>
+                                                </xsl:call-template>
+                                            </xsl:attribute>
+                                            <xsl:call-template name="navig.content">
+                                                <xsl:with-param name="direction" select="'prev'"/>
+                                            </xsl:call-template>
+                                        </a>
+                                    </xsl:if>
+                                    <xsl:text>&#160;</xsl:text>
+                                </td>
+                                <th width="60%" align="center">
+                                    <xsl:choose>
+                                        <xsl:when test="count($up) > 0
+                                            and generate-id($up) != generate-id($home)
+                                            and $navig.showtitles != 0">
+                                            <xsl:apply-templates select="$up" mode="object.title.markup"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>&#160;</xsl:otherwise>
+                                    </xsl:choose>
+                                </th>
+                                <td width="20%" align="{$direction.align.end}">
+                                    <xsl:text>&#160;</xsl:text>
+                                    <xsl:if test="count($next)>0">
+                                        <a accesskey="n">
+                                            <xsl:attribute name="href">
+                                                <xsl:call-template name="href.target">
+                                                    <xsl:with-param name="object" select="$next"/>
+                                                </xsl:call-template>
+                                            </xsl:attribute>
+                                            <xsl:call-template name="navig.content">
+                                                <xsl:with-param name="direction" select="'next'"/>
+                                            </xsl:call-template>
+                                        </a>
+                                    </xsl:if>
+                                </td>
+                            </tr>
+                        </xsl:if>
+                    </table>
+                </xsl:if>
+                <xsl:if test="$header.rule != 0">
+                    <hr/>
+                </xsl:if>
+            </div>
+        </xsl:if>
+    </xsl:template>
 
 <!-- do not italicize foreignphrase -->
 <xsl:template match="d:foreignphrase">

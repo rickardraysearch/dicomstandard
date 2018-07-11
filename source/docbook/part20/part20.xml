@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2018b - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2018c - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10,6 +10,9 @@
       <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
+      <legalnotice>
+          <para xml:id="para_c5271702-dcbc-4554-ac97-800adca6ff13">A DICOM® publication</para>
+      </legalnotice>
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>
@@ -1347,6 +1350,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
 </listitem>
               </itemizedlist>
               <para xml:id="para_3a09ecaf-3448-40f4-99a5-e4ed2b7183ea">The report templates sponsored by the RSNA Radiology Reporting Initiative (<link xl:href="http://www.radreport.org"/>) adhere to this general section outline.</para>
+                <para xml:id="para_6c38c50a-df80-4578-9457-914784f993c0">The section and subsection structure of this template is also identified by LOINC panel code <link xl:href="http://s.details.loinc.org/LOINC/87416-4.html">87416-4</link>.</para>
             </td>
           </tr>
           <tr valign="top">
@@ -25431,7 +25435,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_1128e56e-032a-4a6e-8e71-e2e574b46c7d">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25443,7 +25447,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_9aeb4907-940a-4731-b42e-d2e64ab51d4e">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25743,7 +25747,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_b4e54a81-30bc-4d76-95fb-40c59ad55ac0">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25755,7 +25759,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_a718e1e6-d125-4fcf-b838-c2358770ac16">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25767,7 +25771,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_eef04666-4de9-44c5-82ab-833372a5b3aa">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+<link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25779,7 +25783,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_2eff334e-9123-4558-a9ee-e5100c7d866d">
                     <emphasis role="italic">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+<link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
 </emphasis>
                   </para>
                 </td>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2018b - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2018c - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10,6 +10,9 @@
       <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
+      <legalnotice>
+          <para xml:id="para_c6a4ddfd-0b05-49e3-a010-f452a55ee4e2">A DICOM® publication</para>
+      </legalnotice>
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>
@@ -3312,11 +3315,7 @@
         <para xml:id="para_4bcb841e-c6bf-4e26-82a5-3fad3c942da0">The use of the DICOM Encapsulated Format to support JPEG Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream.</para>
         <para xml:id="para_e85c4e05-8672-41cc-b179-25140f06e76c">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from <olink targetdoc="PS3.3" targetptr="sect_C.7.6.3.1.2" xrefstyle="select: docname label"/>) are specified in <xref linkend="table_8.2.1-1" xrefstyle="select: label"/> and <xref linkend="table_8.2.1-2" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
         <table frame="box" label="8.2.1-1" rules="all" xml:id="table_8.2.1-1">
-          <caption>
-<emphasis role="bold">
-<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG Lossy Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
-</emphasis>
-</caption>
+          <caption>Valid Values of Pixel Data Related Attributes for JPEG Lossy Transfer Syntaxes using Standard Photometric Interpretations</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
@@ -3471,11 +3470,7 @@
           </tbody>
         </table> 
         <table frame="box" label="8.2.1-2" rules="all" xml:id="table_8.2.1-2">
-          <caption>
-<emphasis role="bold">
-<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG Lossless Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
-</emphasis>
-</caption>
+          <caption>Valid Values of Pixel Data Related Attributes for JPEG Lossless Transfer Syntaxes using Standard Photometric Interpretations</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
@@ -3639,11 +3634,7 @@
         <para xml:id="para_f46aa917-6020-441c-a144-02b3a06c3e39">The use of the DICOM Encapsulated Format to support RLE Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the compressed data.</para>
         <para xml:id="para_d65635ee-be9b-4ec5-afe2-2d54380611e8">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.2-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
         <table frame="box" label="8.2.2-1" rules="all" xml:id="table_8.2.2-1">
-          <caption>
-<emphasis role="bold">
-<emphasis role="underline">Valid Values of Pixel Data Related Attributes for RLE Compression using Standard Photometric Interpretations</emphasis>
-</emphasis>
-</caption>
+          <caption>Valid Values of Pixel Data Related Attributes for RLE Compression using Standard Photometric Interpretations</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
@@ -3791,11 +3782,7 @@
         <para xml:id="para_573ea007-d4e1-4c07-a82a-2d6b13d109eb">The use of the DICOM Encapsulated Format to support JPEG-LS Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG-LS Interchange Format shall be used to decode the compressed data stream.</para>
         <para xml:id="para_5976cf65-a31f-4316-8505-601ebc3b7401">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.3-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
         <table frame="box" label="8.2.3-1" rules="all" xml:id="table_8.2.3-1">
-          <caption>
-<emphasis role="bold">
-<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG-LS Compression using Standard Photometric Interpretations</emphasis>
-</emphasis>
-</caption>
+          <caption>Valid Values of Pixel Data Related Attributes for JPEG-LS Compression using Standard Photometric Interpretations</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
@@ -3979,11 +3966,7 @@
         <para xml:id="para_b8bb4636-3e99-4465-86d3-207414bb06a5">The use of the DICOM Encapsulated Format to support JPEG 2000 Compressed Pixel Data requires that the Data Elements that are related to the Pixel Data encoding (e.g., Photometric Interpretation, Samples per Pixel, Planar Configuration, Bits Allocated, Bits Stored, High Bit, Pixel Representation, Rows, Columns, etc.) shall contain values that are consistent with the characteristics of the compressed data stream. The Pixel Data characteristics included in the JPEG 2000 bit stream shall be used to decode the compressed data stream.</para>
         <para xml:id="para_97016112-b006-4f38-8ab5-2a3fe84802dd">The requirements when using a Standard Photometric Interpretation (i.e., a Defined Term from PS.3. C.7.6.3.1.2) are specified in <xref linkend="table_8.2.4-1" xrefstyle="select: label"/>. No other Standard Photometric Interpretation values shall be used.</para>
         <table frame="box" label="8.2.4-1" rules="all" xml:id="table_8.2.4-1">
-          <caption>
-<emphasis role="bold">
-<emphasis role="underline">Valid Values of Pixel Data Related Attributes for JPEG 2000 Transfer Syntaxes using Standard Photometric Interpretations</emphasis>
-</emphasis>
-</caption>
+          <caption>Valid Values of Pixel Data Related Attributes for JPEG 2000 Transfer Syntaxes using Standard Photometric Interpretations</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">

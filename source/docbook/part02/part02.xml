@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2018b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2018c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10,6 +10,9 @@
       <year>2018</year>
       <holder>NEMA</holder>
     </copyright>
+      <legalnotice>
+          <para xml:id="para_878dab4e-0c17-4045-adf2-d98e0a63e821">A DICOM® publication</para>
+      </legalnotice>
   </info>
   <chapter label="" status="1" xml:id="chapter_Notice">
     <title>Notice and Disclaimer</title>
@@ -46105,14 +46108,14 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_18fc54bd-d64b-489d-9e9b-eba417e1fc8d">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=118565006" xl:show="new">(G-D705, SRT, "Volume")</link>
+<link xl:href="http://snomed.info/id/118565006" xl:show="new">(G-D705, SRT, "Volume")</link>
 </para>
                       </td>
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8489e057-19fe-4ae7-8def-5a65d2e93883">
-<link xl:href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=127489000" xl:show="new">(G-C52F, SRT, "Active Ingredient")</link>
+<link xl:href="http://snomed.info/id/127489000" xl:show="new">(G-C52F, SRT, "Active Ingredient")</link>
 </para>
                       </td>
                     </tr>

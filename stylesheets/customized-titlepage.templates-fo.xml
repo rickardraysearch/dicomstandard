@@ -18,7 +18,7 @@
              xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- ********************************************************************
-     $Id: customized-titlepage.templates-fo.xml,v 1.3 2014/03/06 14:15:09 dclunie Exp $
+     $Id: customized-titlepage.templates-fo.xml,v 1.4 2018/06/14 09:16:31 dclunie Exp $
      ********************************************************************
 
      This file is part of the DocBook XSL Stylesheet distribution.
@@ -180,7 +180,7 @@
       <pubdate space-before="1em"/>
       <copyright/>
       <abstract/>
-      <legalnotice font-size="8pt"/>
+      <legalnotice space-before="1em" font-size="10pt"/>
   </t:titlepage-content>
 
   <t:titlepage-separator>

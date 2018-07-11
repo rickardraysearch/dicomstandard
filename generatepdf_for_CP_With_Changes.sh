@@ -4,9 +4,13 @@ cpsourcefile="$1"
 cp=`basename "${cpsourcefile}" .xml`
 dir=`dirname "${cpsourcefile}"`
 
+#XSLTPROC=xsltproc
+XSLTPROC=/usr/bin/xsltproc
+#XSLTPROC=/opt/local/bin/xsltproc
+
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
-xsltproc --nonet \
+"${XSLTPROC}" --nonet \
 	-o "${dir}/${cp}.fo" \
 	--stringparam target.database.document "${HOME}/Documents/Work/DICOM_Publish_XML/DocBookDICOM2013/olinkdb_pdf.xml" \
 	--stringparam current.docid "PS3.14" \
