@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2018a - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2018b - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -3244,6 +3244,19 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_761c1dff-be9e-4797-8538-e40f2eadb9ac">
                 <olink targetdoc="PS3.3" targetptr="sect_A.45.2" xrefstyle="select: title"/>
+              </para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_c6e4b567-1f5b-4c69-af53-c09ee5bffb8b">Encapsulated STL Storage</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_776286f3-7610-4070-8a52-96211fa8038f">1.2.840.10008.5.1.4.1.1.104.3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_7fbf9456-daf6-474f-a4da-a28a39b8f5e6">
+                <olink targetdoc="PS3.3" targetptr="sect_A.85.1" xrefstyle="select: title"/>
               </para>
             </td>
           </tr>
@@ -19239,6 +19252,108 @@
                     <para xml:id="para_5d03c258-745b-4aa2-8f90-f4411fa7c407">2</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c097dfc6-a42d-4eae-9e89-5a53b6b692f9">&gt;Referenced Defined Protocol Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_6d60ad34-28da-4baa-839b-4f0ddb49e392">(0018,990C)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_54d5face-6ec3-4bf0-b3db-e1b77443b8ed">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_061287b0-19ab-42a8-ac99-ef4a4d72ccac">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_44589e70-317f-47bb-a4a4-dcd1c1e9a634"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_54c54b20-c81f-4e8a-8bce-fac41482c7b8">&gt;&gt;Referenced SOP Class UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_bf2c0b5e-8502-4b91-964e-37b17488fce4">(0008,1150)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_30f437e2-5122-41df-aa1f-ffaf9299cb6e">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_d19b9d58-c70e-41fd-8b02-21e562a71062">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8f2c596a-76a4-44e4-adcc-cd5cd222f675"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_32f83656-efda-4b4b-aa39-bdb284ff2fac">&gt;&gt;Referenced SOP Instance UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c1e90ec5-de13-49e6-b2f1-9ef54e00aad3">(0008,1155)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_3acd5216-5e10-44d5-873d-e9ca33791361">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4af09f26-c0f7-456b-bb61-238992b6b8e2">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_81ee4fe7-360b-44bc-8a1f-a57862d59fcb"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_9a7db1a6-3b54-462c-ba40-34fc3b77eda9">&gt;Referenced Performed Protocol Sequence</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_4c4d7ecc-2de4-42a9-8f48-d9f97b10cd9c">(0018,990D)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_2186b658-ce63-403b-b4db-e57ddc6a899b">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_474bab44-93af-41ff-98f2-d8481bcc3f33">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5bac0a20-d13c-459a-985e-c33bac6dec47"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_59a52d12-d1d1-4594-b776-4f5c930d8b1f">&gt;&gt;Referenced SOP Class UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_876a0f92-7af6-4b52-a030-7205e9cd3df2">(0008,1150)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_fb4879d0-643a-4002-854f-f2c663f155af">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c6c97a31-ba93-4a25-87d7-8152b18ea299">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_de58a87a-70b9-4bc6-b9bb-7dfc15622803"/>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0a7d0f2a-3a51-4408-9eaa-bab0d55ea770">&gt;&gt;Referenced SOP Instance UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_72416cf0-f1e8-42ad-b1d7-34552020462d">(0008,1155)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_7f6ba79e-9119-43c6-aa06-095171bea314">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_378a2a78-aadf-4f16-a5b9-5f91cead2275">1</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_474313e3-6f67-4370-b299-64ca1829246b"/>
+                  </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
@@ -36604,6 +36719,35 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_d3fb6bff-bed7-442e-a3c4-db228ddd4b6c">Expected Completion Date and Time shall be retrieved with Single Value Matching or Range Matching.</para>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_84ebf8a4-6dc7-4786-8506-a06cf4738ce5">Scheduled Procedure Step Expiration Date Time</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_cab28c37-ec05-4be0-a8d3-de2891298abb">(0040,4008)</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_a407a603-fae0-4685-936a-2f4aa7e39ac7">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f969f987-e91f-4a77-a1f3-2f3b66ec7929">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_252142d6-6138-4974-9874-23dc790fa458">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_6b35053a-491f-41eb-b4d6-d397a17da803">3/3</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_c379da91-0036-4688-bffe-134c25c88197">O</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_1c318b5d-2c0c-49c6-8f19-27ac71d2aa0e">3</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_caa3885c-2d33-421c-a2e1-85960f141918">Scheduled Procedure Step Expiration Date and Time shall be retrieved with Single Value Matching or Range Matching.</para>
                   </td>
                 </tr>
                 <tr valign="top">

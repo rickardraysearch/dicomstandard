@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2018a - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2018b - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -642,7 +642,7 @@
       </section>
       <section label="6.2.3" status="3" xml:id="sect_6.2.3">
         <title>DICOM Data Format Layer</title>
-        <para xml:id="para_1d35f73f-e9b1-4105-830a-ee806a929942">The DICOM Data Format Layer includes four elements of specification:</para>
+        <para xml:id="para_1d35f73f-e9b1-4105-830a-ee806a929942">The DICOM Data Format Layer includes the following elements of specification:</para>
         <orderedlist numeration="loweralpha">
           <listitem>
             <para xml:id="para_3c1dbc59-31b6-41ea-af39-cabcb5cb2add">DICOM Media Storage SOP Classes and associated Information Object Definitions;</para>

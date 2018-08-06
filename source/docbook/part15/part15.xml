@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2018a - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2018b - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -146,6 +146,12 @@
   <para xml:id="para_41985c34-c780-4420-9621-22a686fd7e0a">RFC5424 The Syslog Protocol</para>
   <para xml:id="para_51a1c04a-bcaa-42db-8654-01dcb5240952">RFC5425 Transport Layer Security (TLS) Transport Mapping for Syslog</para>
   <para xml:id="para_d89cf1fa-937e-4248-86a9-2168b1cec25d">RFC5426 Transmission of Syslog Messages over UDP</para>
+  
+  <para xml:id="para_290ce9b9-8cf3-487e-98ca-1cf163015fb5">RFC7525 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) <link xl:href="http://tools.ietf.org/html/rfc7525"/>
+</para>
+  <para xml:id="para_abcd0dcb-d80c-42b4-a107-7c6c4371f997">BCP195 Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS) <link xl:href="http://tools.ietf.org/html/bcp195"/>
+</para>
+  
   <note>
     <para xml:id="para_7a3fb8ed-7510-486c-b790-d36c06e0b0b9">Normative RFC's are frequently updated by issuance of subsequent RFC's. The original older RFC is not modified to include references to the newer RFC.</para>
   </note>
@@ -9684,174 +9690,23 @@ start = message
     <title>Secure Transport Connection Profiles (Normative)</title>
   
   <section label="B.1" status="2" xml:id="sect_B.1">
-    <title>The Basic TLS Secure Transport Connection Profile</title>
+    <title>Basic TLS Secure Transport Connection Profile</title>
   
-  <para xml:id="para_f2c5417b-2079-4288-891f-9bc9c4298f7c">An implementation that supports the Basic TLS Secure Transport Connection Profile shall utilize the framework and negotiation mechanism specified by the Transport Layer Security Version 1.0 protocol. <xref linkend="table_B.1-1" xrefstyle="select: label"/> specifies mechanisms that shall be supported if the corresponding features within TLS are supported by the Application Entity. The profile does not require the implementation to support all of the features (entity authentication, encryption, integrity checks) of TLS. Other mechanisms may also be used if agreed to by negotiation during establishment of the TLS channel.</para>
-    <table frame="box" label="B.1-1" rules="all" xml:id="table_B.1-1">
-    <caption>Minimum Mechanisms for TLS Features</caption>
-    <thead>
-    <tr valign="top">
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_04f07709-25a7-4fb9-85a9-eedb86e88c47">Supported TLS Feature</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_97d3d8c7-fc51-45a7-b899-8d697cfa705b">Minimum Mechanism</para>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_15b8b3cb-a8a5-4c59-9975-aeea87311119">Entity Authentication</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_2475253f-398c-4f16-8903-ab8f2d28b9a9">RSA based certificates</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_1b344ecb-63e6-424c-8b22-afe20f67fa7c">Exchange of Master Secrets</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8a6584c3-6cb3-4946-9230-ee3b32ba699f">RSA</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_adc0086c-f663-47aa-ab9c-45c059751946">Data Integrity</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_413dd807-4c68-4cf2-a30c-028a2eba6f8b">SHA</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_d00882f0-04f9-490c-93dc-767cdc7c6189">Privacy</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_30cea8f5-d115-4bc1-bd2a-9b6e4e14edfb">Triple DES EDE, CBC</para>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-  <para xml:id="para_82046201-fd0c-4bda-b90a-791dee139a98">IP ports on which an implementation accepts TLS connections, or the mechanism by which this port number is selected or configured, shall be specified in the Conformance Statement. This port shall be different from ports used for other types of transport connections (secure or unsecure).</para>
-  <note>
-    <para xml:id="para_09b8e842-520b-4e10-8a57-e5919c8b789a">It is strongly recommended that systems supporting the Basic TLS Secure Transport Connection Profile use as their port the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS: (decimal).</para>
-  </note>
-  <para xml:id="para_0ceb4394-e140-4ebf-a35d-6a28e38bfba6">The Conformance Statement shall also indicate what mechanisms the implementation supports for Key Management.</para>
-  <para xml:id="para_8fb1c614-b361-41ad-95f9-9874d6cbb2a2">The profile does not specify how a TLS Secure Transport Connection is established, or the significance of any certificates exchanged during peer entity authentication. These issues are left up to the Application Entity, which presumably is following some site specified security policy. The identities of the certificate owners can by used by the application entity for audit log support, or to restrict access based on some external access rights control framework. Once the Application Entity has established a Secure Transport Connection, then an Upper Layer Association can use that secure channel.</para>
-  <note>
-    <para xml:id="para_25c1587a-0a26-457c-a059-1ef44499b809">There may be an interaction between PDU size and TLS Record size that impacts efficiency of transport. The maximum allowed TLS record size is smaller than the maximum allowed PDU size.</para>
-  </note>
-  <para xml:id="para_66cfaa43-6e16-42d2-8b5a-8706479ba727">When an integrity check fails, the connection shall be dropped per the TLS protocol, causing both the sender and the receiver to issue an A-P-ABORT indication to the upper layers with an implementation-specific provider reason. The provider reason used shall be documented in the conformance statement.</para>
-  <note>
-    <para xml:id="para_16ae8c26-48ba-48d7-98e4-c2f503215e9b">An integrity check failure indicates that the security of the channel may have been compromised.</para>
-  </note>
+  <para xml:id="para_f2c5417b-2079-4288-891f-9bc9c4298f7c">Retired. See PS3.15 2018a.</para>
   </section>
 <section label="B.2" status="2" xml:id="sect_B.2">
     <title>ISCL Secure Transport Connection Profile</title>
   
-  <para xml:id="para_3711e6dc-7f2c-49f2-bd5b-ab5ee4cb50a2">An implementation that supports the ISCL Transport Connection Profile shall utilize the framework and negotiation mechanism specified by the Integrated Secure Communication Layer, V1.00. An Application Entity shall use ISCL to select the mechanisms specified in <xref linkend="table_B.2-1" xrefstyle="select: label"/>. An Application Entity shall as a minimum use an Entity Authentication mechanism and Data Integrity checks. An Application Entity may optionally use a privacy mechanism.</para>
-    <table frame="box" label="B.2-1" rules="all" xml:id="table_B.2-1">
-    <caption>Minimum Mechanisms for ISCL Features</caption>
-    <thead>
-    <tr valign="top">
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_cb5d643d-1992-40cf-b0a1-4538daafd3e5">Supported ISCL Feature</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_df361797-2ada-4dde-9781-1fec6a8efed6">Minimum Mechanism</para>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_265be61e-dfd1-4390-913a-2462ae168de1">Entity Authentication</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_ced6be6a-1e28-4b1c-a3c1-8d970c8b94c8">Three pass (four-way) authentication(ISO/IEC 9798-2)</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_5dfb0b05-cc5b-4c2f-838e-82c16c31483b">Data Integrity</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_148c5764-6e22-47fe-b03e-33004b387f3d">Either MD-5 encrypted with DES,or DES-MAC (ISO 8730)</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_978ff153-3c27-449b-bebd-3b29e5874cb3">Privacy</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_5de26013-8c88-453c-94d0-6921dc41b30e">DES (see Note)</para>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-  <note>
-    <para xml:id="para_8d80e56b-cb4b-4da1-aa9a-fc3110e7d438">The use of DES for privacy is optional for Online Electronic Storage.</para>
-  </note>
-  <para xml:id="para_e2883f03-a0b6-45d5-b87e-271a4e563f76">For the Data Integrity check, an implementation may either encrypt the random number before applying MD-5, or encrypt the output of MD-5. The order is specified in the protocol. A receiver shall be able to perform the integrity check on messages regardless of the order.</para>
-  <para xml:id="para_d0a549af-08a2-4dda-af72-afac263064c7">IP ports on which an implementation accepts ISCL connections, or the mechanism by which this port number is selected or configured, shall be specified in the Conformance Statement. This port shall be different from ports used for other types of transport connections (secure or unsecure).</para>
-  <note>
-    <para xml:id="para_62390a20-f6e8-4f20-998a-42eea8d036d1">It is strongly recommended that systems supporting the ISCL Secure Transport Connection Profile use as their port the registered port number "2761 dicom-iscl" for the DICOM Upper Layer Protocol on ISCL.</para>
-  </note>
-  <para xml:id="para_38ff115b-13f6-41e7-9e66-60fa0747ae2f">The Conformance Statement shall also indicate what mechanisms the implementation supports for Key Management.</para>
-  <para xml:id="para_7f34752a-dba6-4374-a76c-4b2398eda84e">The profile does not specify how an ISCL Secure Transport Connection is established. This issue is left up to the Application Entity, which presumably is following some site specified security policy. Once the Application Entity has established a Secure Transport Connection, then an Upper Layer Association can use that secure channel.</para>
-  <note>
-    <para xml:id="para_340ab19c-9e46-4a14-9d2a-7f30b6f344c4">There may be an interaction between PDU size and ISCL record size that impacts efficiency of transport.</para>
-  </note>
-  <para xml:id="para_528de4d1-f2fb-46c1-bc14-84214d081485">When an integrity check fails, the connection shall be dropped, per the ISCL protocol, causing both the sender and the receiver to issue an A-P-ABORT indication to the upper layers with an implementation-specific provider reason. The provider reason used shall be documented in the conformance statement.</para>
-  <note>
-    <para xml:id="para_d0a9a306-13da-4ce7-b4a8-9f86d92ed193">An integrity check failure indicates that the security of the channel may have been compromised.</para>
-  </note>
+  <para xml:id="para_3711e6dc-7f2c-49f2-bd5b-ab5ee4cb50a2">Retired. See PS3.15 2018a.</para>
   </section>
 <section label="B.3" status="2" xml:id="sect_B.3">
-    <title>The AES TLS Secure Transport Connection Profile</title>
+    <title>AES TLS Secure Transport Connection Profile</title>
   
-  <para xml:id="para_a4082a9b-ee9b-4df4-a568-cb4a60e77f56">An implementation that supports the AES TLS Secure Transport Connection Profile shall utilize the framework and negotiation mechanism specified by the Transport Layer Security Version 1.0 protocol. <xref linkend="table_B.3-1" xrefstyle="select: label"/> specifies mechanisms that shall be supported if the corresponding features within TLS are supported by the Application Entity. The profile does not require the implementation to support all of the features (entity authentication, encryption, integrity checks) of TLS. Other mechanisms may also be used if agreed to by negotiation during establishment of the TLS channel.</para>
-    <table frame="box" label="B.3-1" rules="all" xml:id="table_B.3-1">
-    <caption>Minimum Mechanisms for TLS Features</caption>
-    <thead>
-    <tr valign="top">
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_99aa345c-603f-4519-81c8-a85c10440c8f">Supported TLS Feature</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_ba017f36-7700-4bfe-9ce0-5592dabc089c">Minimum Mechanism</para>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_de51ee23-9b0a-49f4-ae57-ff5aa44bf017">Entity Authentication</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_89659a37-a6e6-444e-a634-4bc9bcc2d986">RSA based Certificates</para>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-  <para xml:id="para_7db45ab7-f2f0-4668-9df8-1d5e240e492b">Two cyphersuite options shall be offered during TLS negotiation by applications that comply with this profile:</para>
-  <para xml:id="para_9dea8aa4-104c-4edc-aaf7-ae8e1eeff168">TLS_RSA_WITH_AES_128_CBC_SHA</para>
-  <para xml:id="para_c7718a53-c0c2-4a3d-92fa-252ea607ca17">TLS_RSA_WITH_3DES_EDE_CBC_SHA</para>
-  <para xml:id="para_ad11e6e5-d690-46a9-ba17-260c8ad857b0">The application shall offer both options. The AES version shall be preferred. The fallback to 3DES is offered so that this profile can interoperate easily with applications that only support the 3DES cyphersuite.</para>
-  <para xml:id="para_11913bdb-9614-4425-b0ae-1894ba121d53">IP ports on which an implementation accepts TLS connections, or the mechanism by which this port number is selected or configured, shall be specified in the Conformance Statement. This port shall be different from ports used for other types of transport connections (secure or unsecure).</para>
+  <para xml:id="para_a4082a9b-ee9b-4df4-a568-cb4a60e77f56">Retired. See PS3.15 2018a.</para>
   <note>
-    <para xml:id="para_889ed06a-cba9-4bc4-bbba-8529a55d06af">It is strongly recommended that systems supporting the AES TLS Secure Transport Connection Profile use as their port the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS: (decimal).</para>
-  </note>
-  <para xml:id="para_f87385f4-3ff6-479d-a2a4-b328b69fd547">The Conformance Statement shall also indicate what mechanisms the implementation supports for Key Management.</para>
-  <para xml:id="para_e02b482c-7170-4e58-9dde-0a6bab1c853b">The profile does not specify how a TLS Secure Transport Connection is established, or the significance of any certificates exchanged during peer entity authentication. These issues are left up to the Application Entity, which presumably is following some site specified security policy. The identities of the certificate owners can by used by the application entity for audit log support, or to restrict access based on some external access rights control framework. Once the Application Entity has established a Secure Transport Connection, then an Upper Layer Association can use that secure channel.</para>
-  <note>
-    <para xml:id="para_b6493840-0fcd-46db-9323-2f4be65d2a41">There may be an interaction between PDU size and TLS Record size that impacts efficiency of transport. The maximum allowed TLS record size is smaller than the maximum allowed PDU size.</para>
-  </note>
-  <para xml:id="para_452f5718-8199-4305-b1f0-e039c7e667ad">When an integrity check fails, the connection shall be dropped per the TLS protocol, causing both the sender and the receiver to issue an A-P-ABORT indication to the upper layers with an implementation-specific provider reason. The provider reason used shall be documented in the conformance statement.</para>
-  <note>
-    <para xml:id="para_10694164-1cd1-4fc6-8105-72e65e9b91d2">An integrity check failure indicates that the security of the channel may have been compromised.</para>
+    <para xml:id="para_889ed06a-cba9-4bc4-bbba-8529a55d06af">Applications implementing the AES TLS Secure Transport Connection Profile will connect
+      and interoperate with implementations of the BCP195 TLS Profile;
+      see <xref linkend="sect_B.9" xrefstyle="select: label quotedtitle"/>.</para>
   </note>
   </section>
 <section label="B.4" status="2" xml:id="sect_B.4">
@@ -10000,6 +9855,92 @@ start = message
     </orderedlist>
   </note>
   
+  </section>
+  <section label="B.9" status="2" xml:id="sect_B.9">
+    <title>BCP195 TLS Secure Transport Connection Profile</title>
+    <para xml:id="para_999b2656-2b98-42fe-9594-0902e4613b44">An implementation that supports the BCP195 TLS Profile shall utilize the framework and negotiation mechanism specified by the Transport Layer Security protocol.
+      It shall comply with BCP195 from the IETF.</para>
+    <note>
+      <orderedlist>
+        <listitem>
+          <para xml:id="para_7345e2a6-909f-4536-985c-808df73c7ab2">BCP195 is currently also published as RFC7525 Recommendations for Secure Use of Transport Layer Security (TLS).
+            Both provide suggestions for proper use of TLS 1.2 and allow appropriate fallback rules.</para>
+        </listitem>
+        <listitem>
+          <para xml:id="para_6f81b815-2398-40e5-8e7c-129e348bc3cd">Existing implementations that are compliant with the DICOM AES TLS Secure Connection Profile are able to interoperate with this profile.
+            This profile adds significant recommendations by the IETF, but does not make them mandatory.
+            This is the IETF recommendation for upgrading an installed base.</para>
+        </listitem>
+      </orderedlist>
+    </note>
+    <para xml:id="para_1bc61bd4-06bf-4c67-b1a2-74cb2d58dc03">TCP ports on which an implementation accepts TLS connections, or the mechanism by which these port numbers are selected or configured, shall be stated in the Conformance Statement.
+      The TCP ports on which an implementation accepts TLS connections for DICOMWeb shall be different from those on which an implementation accepts TLS connections for DIMSE.
+      The HTTP/HTTPS connection for DICOMWeb can be shared with other HTTP/HTTPS traffic.</para>
+    <note>
+      <para xml:id="para_34be39e8-f93f-42c1-8fae-e5d88d1fc796">It is recommended that systems supporting the BCP195 TLS Profile use the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS.</para>
+    </note>
+    <para xml:id="para_86e26f94-5f23-4ef2-89e0-60298af72650">The Conformance Statement shall indicate what mechanisms the implementation supports for Key Management.
+      When an integrity check fails, the connection shall be dropped per the TLS protocol, causing both the sender and the receiver to issue an A-P-ABORT indication to the upper layers with an implementation-specific provider reason.
+      The provider reason used shall be documented in the Conformance Statement.</para>
+    <note>
+      <para xml:id="para_0516c79a-67c4-4993-860f-8271e34286a2">Implementers should take care to manage the risks of downgrading to less secure obsolescent protocols or cleartext protocols.
+        See BCP 195, Section 5.2 "Opportunistic Security".</para>
+    </note>
+  </section>
+  <section label="B.10" status="2" xml:id="sect_B.10">
+    <title>Non-Downgrading BCP195 TLS Secure Transport Connection Profile</title>
+    <para xml:id="para_f58ca21b-9c2d-4e51-85d6-b5e7438b4219">An implementation that supports the Non-Downgrading BCP195 TLS Profile shall utilize the framework and negotiation mechanism specified by the Transport Layer Security protocol.
+      It shall comply with BCP195 from the IETF with the additional restrictions enumerated below.</para>
+    <para xml:id="para_8dc5fa98-690d-4c48-a01d-53e78b6443c7">The following additions are made to BCP195 requirements.
+      They change some of the "should" recommendations in the RFC into requirements.</para>
+    <itemizedlist>
+      <listitem>
+        <para xml:id="para_e27f2345-cfb7-4c86-92ef-8a72f81d5d5a">Implementations shall not negotiate TLS version 1.1 [RFC4346] or TLS version 1.0 [RFC2246]</para>
+      </listitem>
+      <listitem>
+        <para xml:id="para_702bbc90-9b80-4d94-bb9f-11dd5ec6801f">Implementations shall not negotiate DTLS version 1.0 [RFC4347]</para>
+      </listitem>
+      <listitem>
+        <para xml:id="para_94a69b0d-eb09-48f3-ba5f-3cb0239b2ab1">In cases where an application protocol allows implementations or deployments a choice between strict TLS configuration and dynamic upgrade from unencrypted to TLS-protected traffic (such as STARTTLS), clients and servers shall prefer strict TLS configuration.</para>
+      </listitem>
+      <listitem>
+        <para xml:id="para_ee0dafee-eff0-4b85-987d-fddf822c3ece">Application protocols typically provide a way for the server to offer TLS during an initial protocol exchange,
+          and sometimes also provide a way for the server to advertise support for TLS (e.g., through a flag indicating that TLS is required);
+          unfortunately, these indications are sent before the communication channel is encrypted.
+          A client shall attempt to negotiate TLS even if these indications are not communicated by the server.</para>
+      </listitem>
+      <listitem>
+        <para xml:id="para_d0117bf4-3ed1-4961-9b64-7b7a48a850e1">The following cipher suites shall all be supported:</para>
+        <itemizedlist>
+          <listitem>
+            <para xml:id="para_1b3e6bb3-7e64-4033-b4b9-43fccea5c7ea">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_4bd67dbf-e317-4916-abf8-ba89dbed72c6">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_c215d6a7-3f22-4df4-b03b-be9d6daca0fe">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</para>
+          </listitem>
+          <listitem>
+            <para xml:id="para_be94d4f7-3633-4a3a-b92d-90f3ba9fff36">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para xml:id="para_60e3abcb-1205-4d09-802a-d464137ebeb7">Additional cipher suites of similar or greater cryptographic strength may be supported.</para>
+      </listitem>
+    </itemizedlist>
+    <para xml:id="para_ce11ddd8-e0af-4382-af00-9ac621319eb5">TCP ports on which an implementation accepts TLS connections, or the mechanism by which these port numbers are selected or configured, shall be stated in the Conformance Statement.
+      The TCP ports on which an implementation accepts TLS connections for DICOMWeb shall be different from those on which an implementation accepts TLS connections for DIMSE.
+      The HTTP/HTTPS connection for DICOMWeb can be shared with other HTTP/HTTPS traffic.</para>
+    <para xml:id="para_ae7031c5-b115-4610-819b-f37445ae684d">The Conformance Statement shall also indicate what mechanisms the implementation supports for Key Management.</para>
+    <note>
+      <para xml:id="para_2d957e53-32da-4c75-81ad-1a5fd91b0972">It is recommended that systems supporting the Non-Downgrading BCP195 TLS Profile use the registered port number "2762 dicom-tls" for the DICOM Upper Layer Protocol on TLS.
+        If both the Non-Downgrading BCP195 TLS Profile and the BCP195 TLS Profile are supported, it is recommended that they use the well known port numbers on different IP addresses.</para>
+    </note>
+    <para xml:id="para_f13a14f9-bf49-44de-b50d-751f2d1acb90">The Conformance Statement shall indicate what mechanisms the implementation supports for Key Management.</para>
+    <para xml:id="para_dabdcbab-b4b8-4daf-876d-76ed58d47956">When an integrity check fails, the connection shall be dropped per the TLS protocol, causing both the sender and the receiver to issue an A-P-ABORT indication to the upper layers with an implementation-specific provider reason.
+      The provider reason used shall be documented in the Conformance Statement.</para>
   </section>
 </chapter>
   <chapter label="C" status="1" xml:id="chapter_C">
@@ -16817,7 +16758,36 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_f3a8e384-dd95-4d8f-bfa1-35d653664e20">Scheduled Procedure Step Description</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_1edd2cf7-c70e-4c0d-86bb-a4c9cf5ccff5">(0040,0007)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_63ba7745-af8a-4822-8124-1f0a8b39077a">N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_9b7e65d4-0486-465a-8a3c-b4d1195fab32">Y</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_77ae1255-172b-4f46-b630-b682fbc68dce">X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_cf9a5b53-5414-413e-91b9-89961f186500">C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
+      <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_f38c8605-c3c4-4fdf-8816-0edc6b3e5091">Scheduled Procedure Step End Date</para>
       </td>
@@ -16879,35 +16849,37 @@ start = message
       <td align="center" colspan="1" rowspan="1"/>
       <td align="center" colspan="1" rowspan="1"/>
     </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f3a8e384-dd95-4d8f-bfa1-35d653664e20">Scheduled Procedure Step Description</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_1edd2cf7-c70e-4c0d-86bb-a4c9cf5ccff5">(0040,0007)</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_63ba7745-af8a-4822-8124-1f0a8b39077a">N</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_9b7e65d4-0486-465a-8a3c-b4d1195fab32">Y</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_77ae1255-172b-4f46-b630-b682fbc68dce">X</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-                            <td/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_cf9a5b53-5414-413e-91b9-89961f186500">C</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="center" colspan="1" rowspan="1"/>
-    </tr>
+      <tr valign="top">
+        <td align="left" colspan="1" rowspan="1">
+          <para xml:id="para_977cb42e-a0d6-4647-b355-1102723ff596">Scheduled Procedure Step Expiration DateTime</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_5a7bd997-842c-40f8-923f-db697ad76b67">(0040,4008)</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_bd48b9b6-4938-4623-bf6f-fe35a0ae3746">N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_408c5416-0df0-492d-bc3f-eb7d888ae3f9">N</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_24922ce9-499b-40bd-bb22-7e91a2af15c9">X</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_ddab7d29-bbb4-4445-8f5b-90910b594c81">K</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1">
+          <para xml:id="para_e41faa63-b25e-4605-aa15-d069b84924b2">C</para>
+        </td>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+        <td align="center" colspan="1" rowspan="1"/>
+      </tr>
     <tr valign="top">
       <td align="left" colspan="1" rowspan="1">
         <para xml:id="para_86d57a37-81f5-470e-bc00-0bfe4b8dd068">Scheduled Procedure Step Location</para>

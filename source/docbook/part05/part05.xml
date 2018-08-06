@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2018a - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2018b - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2194,7 +2194,7 @@
         <para xml:id="para_40ec77dd-aa29-4df9-b2fd-3b8546b1bee7">A padding character may need to be appended to a fixed length character string value in the above case.</para>
       </note>
       <para xml:id="para_d7569de7-8e63-45e4-a4de-3817073593dd">Only the last UID Value in a multiple valued Data Element with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to ensure that the entire Value Field (including "\" delimiters) is of even length.</para>
-      <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of OB, OD, OF, OL, OW, OB, SQ, UN or UR shall always have a Value Multiplicity of one.</para>
+      <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of OB, OD, OF, OL, OW, SQ, UN or UR shall always have a Value Multiplicity of one.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">

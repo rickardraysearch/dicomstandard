@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2018a - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2018b - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2688,6 +2688,17 @@
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e327c958-d6e3-4e96-b306-11d140d5e6a9">Transfer</para>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_e87a5077-1798-4d37-b4a5-5cf06560d412">1.2.840.10008.5.1.4.1.1.104.3</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_f31a8adf-2c5e-487d-ad15-d362a2db8e6c">Encapsulated STL Storage SOP Class</para>
+            </td>
+            <td align="left" colspan="1" rowspan="1">
+              <para xml:id="para_23c38862-60ae-4292-9a05-5e9c72652738">Transfer</para>
             </td>
           </tr>
           <tr valign="top">
@@ -19489,8 +19500,9 @@
       </section>
       <section label="C.3.3" xml:id="sect_C.3.3">
         <title>Additional References for This Example</title>
-        <para xml:id="para_beff7c98-249a-4a41-a71b-492492d9eefb">IHE Radiology Technical Framework, Revision 7.0, ACC/HIMSS/RSNA, 2006</para>
-        <para xml:id="para_031cd24e-b05a-4004-ab91-6c17f90d8d7a">CPT 2002 Professional Edition, American Medical Association, 2001</para>
+        <para xml:id="para_beff7c98-249a-4a41-a71b-492492d9eefb">IHE Radiology Technical Framework, Revision 7.0, ACC/HIMSS/RSNA, 2006.</para>
+        <para xml:id="para_031cd24e-b05a-4004-ab91-6c17f90d8d7a">Logical Observation Identifier Names and Codes (LOINC). Regenstrief Institute. Indianapolis. 2018.<link xl:href="http://loinc.org/"/>
+</para>
       </section>
       <section label="C.3.4" xml:id="sect_C.3.4">
         <title>Additional Remarks and Definitions for This Example</title>
@@ -23055,7 +23067,7 @@
                   <para xml:id="para_fa5ae9b0-4919-4b8b-a097-46e0814dff40">Universal Service Id</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_cf5b760a-db77-492c-9d25-ecdbacfe6fff">ORM OBR:4</para>
+                  <para xml:id="para_cf5b760a-db77-492c-9d25-ecdbacfe6fff">ORM OBR:44</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_7660a3b8-3de2-4d13-a7e5-be2c7ee72d01">The value in the HL7 attribute is mapped to one or more procedure codes in the DICOMRis database. The mapping is configurable</para>
@@ -23072,10 +23084,10 @@
                   <para xml:id="para_bfc8b4bc-2eed-4038-bec2-7a464c4a2a4a">Universal Service Id</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d1d91a83-d558-49fb-940e-82bce5c1af39">ORM OBR:4</para>
+                  <para xml:id="para_d1d91a83-d558-49fb-940e-82bce5c1af39">ORM OBR:44</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_3bc923e0-53dc-4ee7-8825-4a828177e082">Maps to a site-defined Coding Scheme, the CPT Coding Scheme or the DICOMRis internal Coding Scheme</para>
+                  <para xml:id="para_3bc923e0-53dc-4ee7-8825-4a828177e082">Maps to a site-defined Coding Scheme, the LOINC Coding Scheme or the DICOMRis internal Coding Scheme</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -23783,10 +23795,10 @@
                 <para xml:id="para_5f9821a9-1a20-4ba8-a6fb-db39f971fe5c">None</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_5fc30c17-b1e3-4968-954f-dec7a029863a">CPT-4, DICOMRis Procedure, site-supplied procedure codes or site-supplied protocol codes</para>
+                <para xml:id="para_5fc30c17-b1e3-4968-954f-dec7a029863a">LOINC, DICOMRis Procedure, site-supplied procedure codes or site-supplied protocol codes</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_0114d02a-89f6-4cf3-8acc-47e86e2296d8">At the option of the site, DICOMRis may be configured to associate CPT-4, DICOMRis Internal codes or site-supplied procedure codes with the various procedures represented in their Item master file. The configured procedure code will be passed in this attribute unless the site has supplied and configured protocol codes to be associated with the respective procedures in addition to procedure codes. In this case the configured protocol code will be passed</para>
+                <para xml:id="para_0114d02a-89f6-4cf3-8acc-47e86e2296d8">At the option of the site, DICOMRis may be configured to associate LOINC, DICOMRis Internal codes or site-supplied procedure codes with the various procedures represented in their Item master file. The configured procedure code will be passed in this attribute unless the site has supplied and configured protocol codes to be associated with the respective procedures in addition to procedure codes. In this case the configured protocol code will be passed</para>
               </td>
             </tr>
             <tr valign="top">
@@ -23806,7 +23818,7 @@
                 <para xml:id="para_ea745927-7f6c-4607-8548-742b67597e48">None</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_06ef049e-3408-4c39-91de-9b1af4936cfc">CPT-4, DICOMRis Procedure, site-supplied procedure codes</para>
+                <para xml:id="para_06ef049e-3408-4c39-91de-9b1af4936cfc">LOINC, DICOMRis Procedure, site-supplied procedure codes</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_d0095ce2-515f-4586-aaa1-82bfa211b0ad">See remarks for Scheduled Protocol Code Sequence (0040,0040). The difference is that a procedure code is always passed in this attribute rather than a protocol code</para>
