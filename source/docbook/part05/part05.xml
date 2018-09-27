@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2018c - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2018d - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1753,10 +1753,10 @@
               <note>
                 <para xml:id="para_78da7b20-7105-4e23-ae41-865ce624f134">HL7 prohibits leading spaces within a component; DICOM allows leading and trailing spaces and considers them insignificant.</para>
               </note>
-              <para xml:id="para_2ce60ec5-3c8c-4248-9a2f-7a664ff92843">Any of the five components may be an empty string. The component delimiter shall be the caret "^" character (5EH). Delimiters are required for interior null components. Trailing null components and their delimiters may be omitted. Multiple entries are permitted in each component and are encoded as natural text strings, in the format preferred by the named person.</para>
+                <para xml:id="para_2ce60ec5-3c8c-4248-9a2f-7a664ff92843">Any of the five components may be an empty string. The component delimiter shall be the caret "^" character (5EH). There shall be no more than four component delimiters, i.e., none after the last component if all components are present. Delimiters are required for interior null components. Trailing null components and their delimiters may be omitted. Multiple entries are permitted in each component and are encoded as natural text strings, in the format preferred by the named person.</para>
               <para xml:id="para_3835b192-07af-4733-980f-917d21b04975">For veterinary use, the first two of the five components in their order of occurrence are: responsible party family name or responsible organization name, patient name. The remaining components are not used and shall not be present.</para>
               <para xml:id="para_12de8c0d-8ab8-4e45-b1a2-a117ac28030f">This group of five components is referred to as a Person Name component group.</para>
-              <para xml:id="para_56ae71f4-a419-42a1-99bc-49af29f5306f">For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 groups of components (see Annexes H, I and J) may be used. The delimiter for component groups shall be the equals character "=" (3DH). The three component groups of components in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.</para>
+                <para xml:id="para_56ae71f4-a419-42a1-99bc-49af29f5306f">For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 groups of components (see <xref linkend="chapter_H" xrefstyle="template:Annex %n"/>, <xref linkend="chapter_I" xrefstyle="template:Annex %n"/> and <xref linkend="chapter_J" xrefstyle="template:Annex %n"/>) may be used. The delimiter for component groups shall be the equals character "=" (3DH). There shall be no more than two component group delimiters, i.e., none after the last component group if all component groups are present. The three component groups of components in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.</para>
               <para xml:id="para_4c665478-8b98-4492-a57a-47c9e6d625c8">Any component group may be absent, including the first component group. In this case, the person name may start with one or more "=" delimiters. Delimiters are required for interior null component groups. Trailing null component groups and their delimiters may be omitted.</para>
               <para xml:id="para_9cea8a36-93d5-4c85-a1de-0ba254e5cf41">Precise semantics are defined for each component group. See <xref linkend="sect_6.2.1.2" xrefstyle="select: label"/>.</para>
               <para xml:id="para_b10c0554-b765-4fa7-a779-01a06034345e">For examples and notes, see <xref linkend="sect_6.2.1.1" xrefstyle="select: label"/>.</para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2018c - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2018d - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -413,161 +413,467 @@
     <para xml:id="para_6b0a1e19-8ada-4df7-b929-19c2d708f758">
       <emphasis role="bold">UID</emphasis> Unique Identifier</para>
   </chapter>
-  <chapter label="5" status="1" xml:id="chapter_5">
-    <title>Conventions</title>
-    <section label="5.1" status="2" xml:id="sect_5.1">
-      <title>Entity-Relationship Model</title>
-      <section label="5.1.1" status="3" xml:id="sect_5.1.1">
-        <title>Entity</title>
-        <para xml:id="para_33d7ef68-dd5b-45e8-89a0-f4b084ed6d8a">An entity is used in an Entity-Relationship (E-R) model to represent a Real-World Object, class of Real-World Objects, or DICOM data representation (such as IOD or Module). An entity is depicted as a box within this Part of the DICOM Standard as shown in Figure 5-1.</para>
-        <para xml:id="para_fee7fec2-4d8c-4a38-a7ef-94289b05d0d0">
-          <figure label="5-1" pgwide="1" xml:id="figure_5-1">
-            <title>Entity Convention</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="figures/PS3.4_5-1.svg"/>
-                <!--<imagedata fileref="part04_fromword_files/image002.png"/>-->
-              </imageobject>
-            </mediaobject>
-          </figure>
-        </para>
-      </section>
-      <section label="5.1.2" status="3" xml:id="sect_5.1.2">
-        <title>Relationship</title>
-        <para xml:id="para_de7ce168-ecf2-4bb6-9b79-aa23f74141c0">A relationship, which defines how entities are related, is depicted as a diamond within this Standard as shown in Figure 5-2.</para>
-        <para xml:id="para_c1d1b3f8-0ed6-4f50-a1bd-2b92c857178b">
-          <figure label="5-2" pgwide="1" xml:id="figure_5-2">
-            <title>Relationship Convention</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="figures/PS3.4_5-2.svg"/>
-                <!--<imagedata fileref="part04_fromword_files/image004.png"/>-->
-              </imageobject>
-            </mediaobject>
-          </figure>
-        </para>
-        <para xml:id="para_c78b4f3f-2081-4278-89a8-1024b9878383">The relationship is read from source to destination entity as indicated by the arrows. The a and b show the source and destination cardinality of the relationship respectively. The following cardinalities are permitted:</para>
-        <orderedlist numeration="loweralpha">
-          <listitem>
-            <para xml:id="para_309dddc9-4a2d-43e7-8083-6d12a6516a7e">(a = 1, b = 1) -one source entity is related to one destination entity</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_ab51553c-42f4-445a-97b3-4b622b7a6a8a">(a = 1, b = 0-n) -one source entity is related to zero or more destination entities</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_413b0e87-37a2-4d0c-b47d-dcf30596739b">(a = 1, b = 1-n) -one source entity is related to one or more destination entities</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_b93d35f5-1b18-4e29-9a8a-cc37db6aecc5">(a = 1-n, b = 1) -one or more source entities are related to one destination entity</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_4cb7ac48-31f7-49ec-9e76-f019583c7db2">(a = 1-n, b = 0-n) -one or more source entities are related to zero or more destination entities</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_17a6d6f1-04f3-4333-bcc7-577ab06408d4">(a = 1-n, b = 1-n) -one or more source entities are related to one or more destination entities</para>
-          </listitem>
-        </orderedlist>
-        <para xml:id="para_8a48b473-65cd-4c4d-8227-47004e9319cc">In a relationship where (a = 1-n, b = 1-n) the values of the source and destination cardinalities may be different. The value "n" simply denotes one or more.</para>
-        <note>
-          <para xml:id="para_9e534b1b-e707-4df2-b0ba-9dc7caef705a">DICOM has added the use of arrows to the E-R diagramming conventions often used in other literature. This has been done to avoid the possibility of inferring an incorrect relationship that can result from reading a relationship in the reverse order of that intended. For example, a relationship "Cat Catches Mouse" could be read "Mouse Catches Cat" if the arrows were not present.</para>
-        </note>
-        <para xml:id="para_0ddd40f1-b5b0-473b-94ec-89227ecbf46e">A relationship may be bi-directional (i.e., the relationship is true in both directions). In such a case, the convention used is arrows pointing toward both the source and the destination entities.</para>
-      </section>
-    </section>
-    <section label="5.2" status="2" xml:id="sect_5.2">
-      <title>Sequences</title>
-      <para xml:id="para_2960cd7f-8489-4831-a985-de334ff0b260">Certain tables in this Part of the DICOM Standard denote a Sequence of Items by using the symbol: '&gt;.'</para>
-      <para xml:id="para_d2eb6d18-a280-4986-923f-c958a813285a">In <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Modules.' Nested Sequences of Modules are identified by '&gt;&gt;'. In <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> and <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Attributes'. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> for the complete specification of how Sequences of Items shall be encoded.</para>
-      <note>
-        <para xml:id="para_eecbf667-94cc-40ac-8534-088eea9ad764">Information Object Definitions (IODs) that include the Sequence of Module construct are often called folders. The use of 'Sequences of Attributes' is not limited to 'Folders.'</para>
-      </note>
-    </section>
-    <section label="5.3" status="2" xml:id="sect_5.3">
-      <title>Response Status Values</title>
-      <para xml:id="para_220e27e4-26cc-4b44-86ac-aedeb234872c">Certain tables in this Part of the DICOM Standard denote an implementation specific response status code by using the symbol 'xx' or 'xxx' as part of the code.</para>
-      <note>
-        <para xml:id="para_8fa61db1-f3ba-486b-8c71-d34fa7301506">Each 'x' symbol may be replaced by an implementation with a hexadecimal digit in the range from 0 to F.</para>
-      </note>
-    </section>
-    <section label="5.4" status="2" xml:id="sect_5.4">
-      <title>Usage Specification</title>
-      <para xml:id="para_ab21352d-447a-43da-9b74-f9f6835451e8">The building blocks of SOP Classes are Modules and DIMSE Services. The DIMSE Services associated with a SOP Class may be Mandatory (M) or Optional (U). The usage may be different for the SCU and SCP. The usage is specified as a pair of letters: the former indicating the SCU usage, the latter indicating the SCP usage.</para>
-      <para xml:id="para_efd6ccb3-96ba-48d9-ae91-d86482e0c3f9">The meaning and behavior of the usage specification for DIMSE Services are:</para>
-      <variablelist>
-        <varlistentry>
-          <term>M/M</term>
-          <listitem>
-            <para xml:id="para_fb014dbc-ede2-4785-884b-61ad4f67f8af">The SCU shall support the DIMSE Service but is not required to use it on an Association. The SCP shall support the DIMSE Service.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>U/M</term>
-          <listitem>
-            <para xml:id="para_942b52e4-0448-4de9-98f2-66ea37f4467b">The SCU may support and use the DIMSE Service. The SCP shall support the DIMSE Service.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>U/U</term>
-          <listitem>
-            <para xml:id="para_f3e53201-19a2-4f26-b594-ff5f5298a0c2">The SCU may support and use the DIMSE Service. The SCP may support the DIMSE Service. If the SCP does not support the DIMSE Service used by the SCU, it shall return a Failure status.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-      <para xml:id="para_7101a4b5-7c69-4f81-a733-49aeb2881a29">Modules and their usage in Composite IODs are defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Normalized IODs are also constructed from Modules but usage is specified on an Attribute basis in this Part of the DICOM Standard. The following usage specification applies to all Attributes of Normalized IODs unless superseded by a usage specification in a particular SOP Class Specification.</para>
-      <para xml:id="para_435272af-9d7b-497a-8125-ee1e13cf61e5">The meaning and behavior of the usage specification for Attributes of Normalized IODs are as follows:</para>
-      <variablelist>
-        <varlistentry>
-          <term>1/1</term>
-          <listitem>
-            <para xml:id="para_4dccd388-fe3b-4d8c-bec2-47c9bf469661">The SCU shall provide a value for the Attribute. If the SCU does not supply a value, the SCP shall return a Failure status ("Missing Attribute," code 0120H). The SCP shall support the Attribute. The SCP shall not support null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>3/1</term>
-          <listitem>
-            <para xml:id="para_6ed96a82-6cd3-44e9-b32d-efef7312a094">The SCU may retrieve or provide a value for the Attribute. The SCP shall support the Attribute. The SCP shall not support null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>-/1</term>
-          <listitem>
-            <para xml:id="para_1aa73a47-b834-484f-b342-75669976865e">The SCU's usage of the Attribute is undefined. The SCP shall support the Attribute. The SCP shall not support null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>2/2</term>
-          <listitem>
-            <para xml:id="para_724c6fba-5949-4326-baba-aeb4a4e1c515">The SCU shall retrieve or provide a value for the Attribute. The SCU shall always provide the Attribute but a null value shall be permitted (Attribute provided with a zero length and no value). The SCP shall support the Attribute and permit null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>3/2</term>
-          <listitem>
-            <para xml:id="para_f424b5e8-08e6-47f2-879d-148613f3b9d9">The SCU may retrieve or provide a value for the Attribute. The SCP shall support the Attribute and permit null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>-/2</term>
-          <listitem>
-            <para xml:id="para_07cd7e7e-0ac5-440e-a563-8524c46b5edb">The SCU's usage of the Attribute is undefined. The SCP shall support the Attribute and permit null values (Attribute provided with a zero length and no value) for the Attribute.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>3/3</term>
-          <listitem>
-            <para xml:id="para_9e7ced3b-b1db-444d-82e5-b3b8cd441ad2">The SCU may retrieve or provide a value for the Attribute. The SCP may support the Attribute. If the SCP does not support the Attribute and it is requested by the SCU, the SCP shall return either a Failure status ("Invalid Attribute Value", code 0106H) or a Warning status ("Attribute Value out of Range", code 0116H). If the SCU provides the Attribute and the SCP does not support the Attribute and returned a failure or warning, the Attribute shall be ignored.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-      <para xml:id="para_503dd2f1-1bc5-449a-97ae-79c6ad241a42">If the SCP usage type designation is modified by a "C" (e.g., 3/1C) the specification stated above shall be modified to include the requirement that the SCP shall support the Attribute if the specified condition is met.</para>
-      <para xml:id="para_c44ea4fc-629b-46c9-af06-24e228a32700">For all N-CREATE, N-SET, N-GET, N-DELETE, N-ACTION and N-EVENT-REPORT operations, the SOP Class is conveyed in the request primitive in Affected SOP Class UID (0000,0002). The SOP Class UID (0008,0016) Attribute shall not be present in the Data Set.</para>
-      <para xml:id="para_c64fc907-95f2-448f-8d7f-e593dfa6c6fd">For N-CREATE operations and N-EVENT-REPORT notifications, the SOP Instance is conveyed in Affected SOP Instance UID (0000,1000). The SOP Instance UID (0008,0018) Attribute shall not be present in the Data Set.</para>
-      <note>
-        <para xml:id="para_3e425e31-2abd-469f-9f20-ccedd8e0d16d">In some Service Classes, the SOP Class definition may override the general provision in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> that allows the SOP Instance UID to be specified or omitted in the N-CREATE request primitive, and require that the SCU be responsible for specifying the SOP Instance UID.</para>
-      </note>
-      <para xml:id="para_e16d4e83-441e-4e71-82c0-4b3b2c759bd2">For N-SET, N-GET, N-ACTION and N-DELETE operations, the SOP Instance is conveyed in Requested SOP Instance UID (0000,1001). The SOP Instance UID (0008,0018) Attribute shall not be present in the data set.</para>
-    </section>
-  </chapter>
+    <chapter label="5" status="1" xml:id="chapter_5">
+        <title>Conventions</title>
+        <section label="5.1" status="2" xml:id="sect_5.1">
+            <title>Entity-Relationship Model</title>
+            <section label="5.1.1" status="3" xml:id="sect_5.1.1">
+                <title>Entity</title>
+                <para xml:id="para_33d7ef68-dd5b-45e8-89a0-f4b084ed6d8a">An entity is used in an Entity-Relationship (E-R) model to represent a Real-World Object, class of Real-World Objects, or DICOM data representation (such as IOD or Module). An entity is depicted as a box within this Part of the DICOM Standard as shown in Figure 5-1.</para>
+                <para xml:id="para_fee7fec2-4d8c-4a38-a7ef-94289b05d0d0">
+                    <figure label="5-1" pgwide="1" xml:id="figure_5-1">
+                        <title>Entity Convention</title>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="figures/PS3.4_5-1.svg"/>
+                                <!--<imagedata fileref="part04_fromword_files/image002.png"/>-->
+                            </imageobject>
+                        </mediaobject>
+                    </figure>
+                </para>
+            </section>
+            <section label="5.1.2" status="3" xml:id="sect_5.1.2">
+                <title>Relationship</title>
+                <para xml:id="para_de7ce168-ecf2-4bb6-9b79-aa23f74141c0">A relationship, which defines how entities are related, is depicted as a diamond within this Standard as shown in Figure 5-2.</para>
+                <para xml:id="para_c1d1b3f8-0ed6-4f50-a1bd-2b92c857178b">
+                    <figure label="5-2" pgwide="1" xml:id="figure_5-2">
+                        <title>Relationship Convention</title>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="figures/PS3.4_5-2.svg"/>
+                                <!--<imagedata fileref="part04_fromword_files/image004.png"/>-->
+                            </imageobject>
+                        </mediaobject>
+                    </figure>
+                </para>
+                <para xml:id="para_c78b4f3f-2081-4278-89a8-1024b9878383">The relationship is read from source to destination entity as indicated by the arrows. The a and b show the source and destination cardinality of the relationship respectively. The following cardinalities are permitted:</para>
+                <orderedlist numeration="loweralpha">
+                    <listitem>
+                        <para xml:id="para_309dddc9-4a2d-43e7-8083-6d12a6516a7e">(a = 1, b = 1) -one source entity is related to one destination entity</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_ab51553c-42f4-445a-97b3-4b622b7a6a8a">(a = 1, b = 0-n) -one source entity is related to zero or more destination entities</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_413b0e87-37a2-4d0c-b47d-dcf30596739b">(a = 1, b = 1-n) -one source entity is related to one or more destination entities</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_b93d35f5-1b18-4e29-9a8a-cc37db6aecc5">(a = 1-n, b = 1) -one or more source entities are related to one destination entity</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_4cb7ac48-31f7-49ec-9e76-f019583c7db2">(a = 1-n, b = 0-n) -one or more source entities are related to zero or more destination entities</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_17a6d6f1-04f3-4333-bcc7-577ab06408d4">(a = 1-n, b = 1-n) -one or more source entities are related to one or more destination entities</para>
+                    </listitem>
+                </orderedlist>
+                <para xml:id="para_8a48b473-65cd-4c4d-8227-47004e9319cc">In a relationship where (a = 1-n, b = 1-n) the values of the source and destination cardinalities may be different. The value "n" simply denotes one or more.</para>
+                <note>
+                    <para xml:id="para_9e534b1b-e707-4df2-b0ba-9dc7caef705a">DICOM has added the use of arrows to the E-R diagramming conventions often used in other literature. This has been done to avoid the possibility of inferring an incorrect relationship that can result from reading a relationship in the reverse order of that intended. For example, a relationship "Cat Catches Mouse" could be read "Mouse Catches Cat" if the arrows were not present.</para>
+                </note>
+                <para xml:id="para_0ddd40f1-b5b0-473b-94ec-89227ecbf46e">A relationship may be bi-directional (i.e., the relationship is true in both directions). In such a case, the convention used is arrows pointing toward both the source and the destination entities.</para>
+            </section>
+        </section>
+        <section label="5.2" status="2" xml:id="sect_5.2">
+            <title>Sequences</title>
+            <para xml:id="para_2960cd7f-8489-4831-a985-de334ff0b260">Certain tables in this Part of the DICOM Standard denote a Sequence of Items by using the symbol: '&gt;.'</para>
+            <para xml:id="para_d2eb6d18-a280-4986-923f-c958a813285a">In <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Modules.' Nested Sequences of Modules are identified by '&gt;&gt;'. In <xref linkend="chapter_B" xrefstyle="template:Annex %n"/> and <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>, '&gt;' is used to identify a 'Sequence of Attributes'. See <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> for the complete specification of how Sequences of Items shall be encoded.</para>
+            <note>
+                <para xml:id="para_eecbf667-94cc-40ac-8534-088eea9ad764">Information Object Definitions (IODs) that include the Sequence of Module construct are often called folders. The use of 'Sequences of Attributes' is not limited to 'Folders.'</para>
+            </note>
+        </section>
+        <section label="5.3" status="2" xml:id="sect_5.3">
+            <title>Response Status Values</title>
+            <para xml:id="para_220e27e4-26cc-4b44-86ac-aedeb234872c">Certain tables in this Part of the DICOM Standard denote an implementation specific response status code by using the symbol 'xx' or 'xxx' as part of the code.</para>
+            <note>
+                <para xml:id="para_8fa61db1-f3ba-486b-8c71-d34fa7301506">Each 'x' symbol may be replaced by an implementation with a hexadecimal digit in the range from 0 to F.</para>
+            </note>
+        </section>
+        <section label="5.4" status="2" xml:id="sect_5.4">
+            <title>Usage Specification</title>
+            <para xml:id="para_ab21352d-447a-43da-9b74-f9f6835451e8">The building blocks of SOP Classes are Modules and DIMSE Services. The DIMSE Services associated with a SOP Class may be Mandatory (M) or Optional (U). The usage may be different for the SCU and SCP. The usage is specified as a pair of letters: the former indicating the SCU usage, the latter indicating the SCP usage.</para>
+            <section label="5.4.1" status="3" xml:id="sect_5.4.1">
+                <title>Use of DIMSE Services</title>
+                <para xml:id="para_efd6ccb3-96ba-48d9-ae91-d86482e0c3f9">The meaning and behavior of the usage specification for DIMSE Services are:</para>
+                <variablelist>
+                    <varlistentry>
+                        <term>M/M</term>
+                        <listitem>
+                            <para xml:id="para_fb014dbc-ede2-4785-884b-61ad4f67f8af">The SCU shall support the DIMSE Service but is not required to use it on an Association. The SCP shall support the DIMSE Service.</para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>U/M</term>
+                        <listitem>
+                            <para xml:id="para_942b52e4-0448-4de9-98f2-66ea37f4467b">The SCU may support and use the DIMSE Service. The SCP shall support the DIMSE Service.</para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>U/U</term>
+                        <listitem>
+                            <para xml:id="para_f3e53201-19a2-4f26-b594-ff5f5298a0c2">The SCU may support and use the DIMSE Service. The SCP may support the DIMSE Service. If the SCP does not support the DIMSE Service used by the SCU, it shall return a Failure status.</para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
+            </section>
+            <section label="5.4.2" status="3" xml:id="sect_5.4.2">
+                <title>Use of Attributes in Normalized Services</title>
+                <para xml:id="para_7101a4b5-7c69-4f81-a733-49aeb2881a29">Modules and their usage in Composite IODs are defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. Normalized IODs are also constructed from Modules but usage is specified on an Attribute basis in this Part of the DICOM Standard. The following usage specification applies to all Attributes of Normalized IODs unless superseded by a usage specification in a particular SOP Class Specification.</para>
+                <para xml:id="para_435272af-9d7b-497a-8125-ee1e13cf61e5">The term ‘receive’ means the following: the value shall be stored; under certain circumstances (e.g. coercion) the value returned may have changed.</para>
+                <section label="5.4.2.1" status="4" xml:id="sect_5.4.2.1">
+                    <title>DIMSE Service N-CREATE, N-SET, N-ACTION</title>
+                    <para xml:id="para_ebf5fbcf-679d-414e-9959-7f3436b52223">The following Requirements apply when specifying the use of DIMSE services N-CREATE, N-SET, N-ACTION.</para>
+                    <para xml:id="para_023d5da9-749b-426a-9c87-1a769215cf57">The convention used in the table below are as follows:</para>
+                    <variablelist>
+                        <title>SCU Behaviour</title>
+                        <varlistentry>
+                            <term>Mandatory</term>
+                            <listitem>
+                                <para xml:id="para_825fc831-d173-441c-8dc8-ffc4cf2b3d63">The SCU shall provide the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Optional</term>
+                            <listitem>
+                                <para xml:id="para_59741f98-773e-437a-b9a0-1630a23e4146">The SCU may or may not provide the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Undefined</term>
+                            <listitem>
+                                <para xml:id="para_fef7d464-fa09-4d84-a2f3-cf8f35bd9aa1">The SCU's usage of the Attribute is undefined.</para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                    <variablelist>
+                        <title>SCP Behaviour</title>
+                        <varlistentry>
+                            <term>Mandatory</term>
+                            <listitem>
+                                <para xml:id="para_bbf79c54-7e52-4d60-8b4e-8ac29bf5ab7f">The SCP shall support receiving the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Mandatory with Default</term>
+                            <listitem>
+                                <para xml:id="para_bb054410-ebdf-41b6-a280-c1d8b0bda6d2">The SCP shall support receiving the Attribute. Upon receiving zero-length values, the SCP shall assign values as defined by the specification of the Service Class.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Optional</term>
+                            <listitem>
+                                <para xml:id="para_5f0738b3-454b-4c13-a43e-aeb3304eec3a">The SCP may or may not support receiving the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Undefined</term>
+                            <listitem>
+                                <para xml:id="para_7444d7c1-7ba2-4bc3-bebb-9c3d01ae888a">The SCP’s support of the Attribute is undefined.</para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                    <informaltable>
+                        <thead>
+                            <tr valign="top">
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_49f2a9a0-5850-40a5-a25f-fefc1794b481"/>
+                                </th>
+                                <th align="center" colspan="2" rowspan="1">
+                                    <para xml:id="para_caa7a005-bbf9-47b9-bb09-92ff4b5bcfd2">SCU</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_27b6bbd8-2657-4345-a06c-be417af67bf0">SCP</para>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_6d0fd60c-0b79-4dfc-8a53-833d19e637f6">Usage</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_80e9a32f-1936-4965-bf5f-bfb200ae341b">Requirement</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_95a8cdb6-907c-420d-b9c9-c9853c603ce9">Zero Length</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_03dd52a7-bffc-4be3-8b22-8af07bc153df">Requirement</para>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_a621d9fe-4735-4d0f-aa4c-a466931b1190">1/1</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_f6768f59-2aa7-4404-96cc-af3d6675532e">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_66bbfb20-27f6-46a7-ac16-4991c5d9841c">Not Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_c457b389-4cc9-4a27-bf8c-1b7f7fc96ca6">Mandatory</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_d5aa6953-208b-49cb-bc1e-74e7c02efdc2">2/1</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_6df149f3-ada5-4ca2-8a43-191b4593c2b9">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_103c72ab-95c7-4977-a108-13e3a09ed7f2">Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_172b5b10-866b-4905-bb2c-173f8752afdc">Mandatory with Default</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_37881311-e4b8-4e5e-9d03-125b4b91b82d">2/2</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_310d20e8-7b0d-47f3-94b0-a7e24db73ed7">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_2aaf574f-b8bb-462b-a911-a891134dec97">Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_af93b837-7032-456b-a09e-95db51659817">Mandatory</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_7e76c0c0-5b1b-4c7b-8cc1-b014f11e2e9f">3/1</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_75b8f2e3-49f2-4a61-aa48-c490f3d744ab">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_bc209c6a-65da-40a4-ab69-ce1495c807f6">Not Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_1d2e5b26-3f3c-4398-9dd8-2a7062611740">Mandatory</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_92c552e5-2549-4397-b643-21d91cece8c9">3/2</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_24c9d018-8d51-4702-8197-e8db427cc9b6">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_ceb1536e-051c-4bf6-bc6a-021bdb9ce1ce">Not Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_bc1dc6c5-e120-4348-8fe4-f1e39643610e">Optional</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_9e06a5d9-bb89-4abc-9333-483ca6d38498">3/3</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_2cc048c2-d27d-49ad-8dca-2059e5db3fa7">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_c272ea31-698a-4a1d-9194-cb22a76be92b">Not Permitted</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_3a289bb2-c2a1-4c1d-b743-47a7067e117b">Optional</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_8b987c1f-4ba9-4035-a0d3-867d75c672be">-/-</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_30d628c7-96f6-4fa7-bd30-b62675616eae">Undefined</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_061d5248-3b60-46d2-944c-d3b293bbb611">Undefined</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_89c5a7f3-00d7-4488-b8de-2743a7dc6f16">Undefined</para>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </informaltable>
+                    <para xml:id="para_288e6e25-cd1c-417b-a81f-df10b81d0bb4">If the SCU does not provide an Attribute that is Mandatory for the SCU, the SCP shall respond with the error code "Missing Attribute" (0120H).</para>
+                    <para xml:id="para_5be0051c-80e1-4954-b2b2-de6914404d02">If the SCU provides a zero-length value for a Mandatory Attribute when zero length is not permitted, the SCP shall respond with the error code "Missing Attribute Value" (0121H).</para>
+                </section>
+                <section label="5.4.2.2" status="4" xml:id="sect_5.4.2.2">
+                    <title>DIMSE Service N-GET, N-EVENT-REPORT</title>
+                    <para xml:id="para_b4a33f17-7a3d-4045-a082-b4dbd64f4f17">The following Requirements apply when specifying the use of DIMSE services N-GET, N-EVENT-REPORT.</para>
+                    <para xml:id="para_69f281b6-8bd4-4cea-8610-fd8db03c179a">The convention used in the table below are as follows:</para>
+                    <variablelist>
+                        <title>SCU Behaviour</title>
+                        <varlistentry>
+                            <term>Optional</term>
+                            <listitem>
+                                <para xml:id="para_610bc557-cd24-4623-b996-cb397e742d67">The SCU may retrieve the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Undefined</term>
+                            <listitem>
+                                <para xml:id="para_64b26dcc-ec61-4f20-a752-6e3667da3450">The SCU's usage of the Attribute is undefined.</para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                    <variablelist>
+                        <title>SCP Behaviour</title>
+                        <varlistentry>
+                            <term>Mandatory</term>
+                            <listitem>
+                                <para xml:id="para_500687e2-381c-4b7a-a276-fec12276586d">The SCP shall support retrieval of the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Optional</term>
+                            <listitem>
+                                <para xml:id="para_94a1e9b7-90f4-4b81-af6d-a09fd2835877">The SCP may or may not support retrieval of the Attribute.</para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry>
+                            <term>Undefined</term>
+                            <listitem>
+                                <para xml:id="para_9a13fd7d-6288-42da-9164-ebb5c59ad8d5">The SCP’s support of the Attribute is undefined.</para>
+                            </listitem>
+                        </varlistentry>
+                    </variablelist>
+                    <informaltable>
+                        <thead>
+                            <tr valign="top">
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_2e78776a-d792-458f-8c1f-d277d4bffb18"/>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_804e83e7-f8b5-4ce3-97cf-a60f51d57e60">SCU</para>
+                                </th>
+                                <th align="center" colspan="2" rowspan="1">
+                                    <para xml:id="para_128562ab-acfc-40bc-9d5c-0324bff215ea">SCP</para>
+                                </th>
+                            </tr>
+                            <tr valign="top">
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_c5090b59-f060-45aa-aa91-b695a2c8a1dd">Usage</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_06e66316-7fb8-4534-adc3-af427d73517b">Requirement</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_de8084f2-4b17-47fe-bc0a-f662ad0df108">Requirement</para>
+                                </th>
+                                <th align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_532af39f-ee64-4749-b7ff-73eb2b2d1b49">Zero Length</para>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_d29d671c-93b3-4b49-9239-1b5fa8039db4">3/1</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_16b839b1-8c56-4b1d-8401-c51b6baae851">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_522d4107-016a-429a-a3c0-8164afefb897">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_9c1985b2-1f74-4d3f-a556-1b28f1a97d61">Not Permitted</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_a4fcd8d4-2df5-424b-b169-bd007cc79e1c">3/2</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_e04ad547-95b5-4b12-ad9a-19c4f6f9b91c">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_57191268-0256-495f-b423-3533ab5072a4">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_0d79fa0d-c3bc-4db3-a92d-c9c1dd69af40">Permitted</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_7d30dc56-760d-4663-9619-5aa74a92fd57">3/3</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_5b412aa9-783e-4586-b037-a3767b56dcb5">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_18bbf83c-f627-43b2-a4d7-24eee6ea24c1">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_8b551481-ab8b-4844-816c-09d77c89a1f3">Not Permitted</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_a407580b-22a4-4780-b5ff-a6509aa57d1a">-/1</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_50de669a-e729-46fd-9b84-6e857f0d8961">Undefined</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_146e10f4-fc8a-42f1-b2e4-8101776f9a05">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_1c19326d-8681-475f-aead-8a3b399fce59">Not Permitted</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_d9434053-d6de-4008-967e-a9cdd3533115">-/2</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_99a2aa7e-63d2-4350-8d6d-8fce0e3f6c89">Undefined</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_5683dcc5-37e9-4dc3-82c8-77515d64ea2d">Mandatory</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_c78063b1-9794-4f6b-bef4-7be63e94cc69">Permitted</para>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_0e6476e9-10ed-429e-ae7a-502501be42d8">-/3</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_f0a455f2-21ec-406b-b78d-8ea1ce19a750">Undefined</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_f829e0e8-5aeb-4116-912a-672e3013fc55">Optional</para>
+                                </td>
+                                <td align="center" colspan="1" rowspan="1">
+                                    <para xml:id="para_91570b92-679a-4171-8394-e95edc1bd509">Not Permitted</para>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </informaltable>
+                    <para xml:id="para_73f532aa-8b80-496f-89a9-ba3036dda5f0">If support of an Attribute by the SCP is optional and the SCP does not support the Attribute and the Attribute is requested by the SCU, the SCP shall respond with the error code "Invalid Attribute Value" (0106H) or "Attribute Value out of Range" (0116H).</para>
+                </section>
+                <section label="5.4.2.3" status="4" xml:id="sect_5.4.2.3">
+                    <title>Other Requirements</title>
+                    <para xml:id="para_503dd2f1-1bc5-449a-97ae-79c6ad241a42">If the SCP usage type designation is modified by a "C" (e.g., 3/1C) the specification stated above shall be modified to include the requirement that the SCP shall support the Attribute if the specified condition is met.</para>
+                <para xml:id="para_c44ea4fc-629b-46c9-af06-24e228a32700">For all N-CREATE, N-SET, N-GET, N-DELETE, N-ACTION and N-EVENT-REPORT operations, the SOP Class is conveyed in the request primitive in Affected SOP Class UID (0000,0002). The SOP Class UID (0008,0016) Attribute shall not be present in the Data Set.</para>
+                <para xml:id="para_c64fc907-95f2-448f-8d7f-e593dfa6c6fd">For N-CREATE operations and N-EVENT-REPORT notifications, the SOP Instance is conveyed in Affected SOP Instance UID (0000,1000). The SOP Instance UID (0008,0018) Attribute shall not be present in the Data Set.</para>
+                <note>
+                    <para xml:id="para_3e425e31-2abd-469f-9f20-ccedd8e0d16d">In some Service Classes, the SOP Class definition may override the general provision in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> that allows the SOP Instance UID to be specified or omitted in the N-CREATE request primitive, and require that the SCU be responsible for specifying the SOP Instance UID.</para>
+                </note>
+                <para xml:id="para_e16d4e83-441e-4e71-82c0-4b3b2c759bd2">For N-SET, N-GET, N-ACTION and N-DELETE operations, the SOP Instance is conveyed in Requested SOP Instance UID (0000,1001). The SOP Instance UID (0008,0018) Attribute shall not be present in the data set.</para>
+            </section>
+            </section>
+        </section>
+    </chapter>
   <chapter label="6" status="1" xml:id="chapter_6">
     <title>DICOM Information Model</title>
     <para xml:id="para_faf86d02-bde6-4637-bec8-5dcc034d304c">The DICOM Information Model defines the structure and organization of the information related to the communication of medical images. Figure 6-1 shows the relationships between the major structures of the DICOM Information Model.</para>
@@ -9600,6 +9906,21 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_0ba0b912-eb4c-4f68-bd69-50fa4777d666">&gt;Type of Patient ID</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_c74b0375-c711-417a-94fa-7382f31b1d77">(0010,0022)</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_4e7f8d3d-1a7e-482a-ab99-25ff415e4600">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f26d3c08-69fe-43d6-9b62-abb3039cb63c">Not allowed</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_d4945ab3-127f-4e9e-a910-5e2b9e0a1f0e">Patient's Birth Date</para>
@@ -35102,7 +35423,7 @@
                     <para xml:id="para_a2da49af-b15c-409a-9a61-68f1af300e06">(0040,E030)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_720e49c3-9807-4c60-8f1e-5f5ce591bb52">1</para>
+                    <para xml:id="para_720e49c3-9807-4c60-8f1e-5f5ce591bb52">1/1</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_5db71362-89e6-4233-8775-2abd18139542">1/1</para>
@@ -36318,12 +36639,12 @@
                     <para xml:id="para_f848a9fc-8f3c-4e22-a0ec-ae62b33280bf">(0040,4010)</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_591e008d-c448-4fe5-b6af-100de331c7c5">2/1</para>
-                    <para xml:id="para_39783d2d-8cdf-4653-9ed5-848eaaef9377">SCP shall use time of CREATE rather than any value provided</para>
+                    <para xml:id="para_591e008d-c448-4fe5-b6af-100de331c7c5">-/1</para>
+                    <para xml:id="para_39783d2d-8cdf-4653-9ed5-848eaaef9377">SCP shall use time of CREATE</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_72664f5f-d2d9-40bc-b612-008eb9f53b96">-/1</para>
-                    <para xml:id="para_1447eb2b-47e6-4950-bb68-0a933b3e9972">SCP will use time of SET</para>
+                    <para xml:id="para_1447eb2b-47e6-4950-bb68-0a933b3e9972">SCP shall use time of SET</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_8ee881c0-985a-4090-bbb7-690c770bc57c">R</para>
@@ -37113,6 +37434,33 @@
                     </para>
                   </td>
                 </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_16a92cfa-7365-441b-972a-2d0f33ef32a6">&gt;Type of Patient ID</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_ad1d205c-a8f2-4269-98ae-e704ee836808">(0010,0022)</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_764955db-05a2-4849-8904-03d4676c7823">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_92064d9b-b0b7-48c9-a863-1c3fb0145eb4">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_563120b4-8a64-4529-a1ce-116601cfba80">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_73f10a9c-665e-46c8-884d-74415486d3a5">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_bb581b8a-a73b-4a38-b8fd-87d3aa218dec">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f519ab38-f2f7-4275-a682-88d303cac0d3">3</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_c404e594-acc8-464f-b65e-7084a7befb67">Patient's Birth Date</para>

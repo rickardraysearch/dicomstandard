@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2018c - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2018d - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2460,10 +2460,10 @@
                 <para xml:id="para_bc98321a-59d7-456f-9cbd-b107a20dc222">The compressed bulk data of each part of a multipart payload contains only the compressed bit stream and not the DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> Encapsulated Sequence or Delimiter Items.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_82a0e156-cdc1-4581-bba7-32316bbefca0">For the media type image/dicom+jpeg Transfer Syntaxes, the image may or may not include the JFIF marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.1" xrefstyle="select: docname label quotedtitle"/>.</para>
+                <para xml:id="para_82a0e156-cdc1-4581-bba7-32316bbefca0">For the media type image/jpeg Transfer Syntaxes, the image may or may not include the JFIF marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.1" xrefstyle="select: docname label quotedtitle"/>.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_7c12cef3-8c6f-464e-999b-651924863b55">For the media type image/dicom+jp2 and image/dicom+jpx Transfer Syntaxes, the image does not include the jp2 marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.4" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="sect_A.4.4" xrefstyle="select: docname label quotedtitle"/>.</para>
+                <para xml:id="para_7c12cef3-8c6f-464e-999b-651924863b55">For the media type image/jp2 and image/jpx Transfer Syntaxes, the image does not include the jp2 marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.4" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="sect_A.4.4" xrefstyle="select: docname label quotedtitle"/>.</para>
               </listitem>
               <listitem>
                 <para xml:id="para_cc5f2890-bb73-4140-a2fe-081d1188cb57">The resource on the origin server may have been encoded in the Deflated Explicit VR Little Endian (1.2.840.10008.1.2.1.99) transfer syntax. If so, the origin server may inflate it, and then convert it into an Acceptable Transfer Syntax. Alternatively, if the user-agent allowed a Content-Encoding header field of 'deflate', then the deflated bytes may be transferred unaltered, but the transfer syntax parameter in the response should be the Explicit VR Little Endian transfer syntax.</para>
