@@ -2,7 +2,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.21" version="5.0" xml:id="PS3.21">
   
   <title>PS3.21</title>
-  <subtitle>DICOM PS3.21 2018d - Transformations between DICOM and other Representations</subtitle>
+  <subtitle>DICOM PS3.21 2018e - Transformations between DICOM and other Representations</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2268,10 +2268,10 @@
             <para xml:id="para_7b41e53e-ce49-458c-90f6-762d951f2020">The additional required Attributes in each Content Item depend on the ValueType:</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_6fdf624f-9742-49eb-916d-8f8d118ba58c">TEXT - TextValue</para>
+                  <para xml:id="para_6fdf624f-9742-49eb-916d-8f8d118ba58c">TEXT - Text​Value</para>
               </listitem>
               <listitem>
-                <para xml:id="para_115c716e-42bf-4bfb-a95a-721d4dd10a81">DATETIME - DateTime</para>
+                  <para xml:id="para_115c716e-42bf-4bfb-a95a-721d4dd10a81">DATETIME - Date​Time</para>
               </listitem>
               <listitem>
                 <para xml:id="para_1075a781-8edf-4f74-b6f3-5013127a5b0b">DATE - Date</para>
@@ -2280,31 +2280,31 @@
                 <para xml:id="para_abc7f433-c3fe-4424-8de7-cf1c817f7a4f">TIME - Time</para>
               </listitem>
               <listitem>
-                <para xml:id="para_8490272f-a22c-44e2-afd5-864a58239b56">PNAME - PersonName</para>
+                  <para xml:id="para_8490272f-a22c-44e2-afd5-864a58239b56">PNAME - Person​Name</para>
               </listitem>
               <listitem>
                 <para xml:id="para_43406bcc-1de1-4113-b2ec-55f26d333993">UIDREF - UID</para>
               </listitem>
               <listitem>
-                <para xml:id="para_42c4efc3-4b19-4738-a9f1-5e199879b0cc">NUM - MeasuredValueSequence, MeasuredValueSequence&gt;NumericValue, MeasuredValueSequence&gt;MeasurementUnitsCodeSequence</para>
+                  <para xml:id="para_42c4efc3-4b19-4738-a9f1-5e199879b0cc">NUM - Measured​Value​Sequence, Measured​Value​Sequence&gt;Numeric​Value, Measured​Value​Sequence&gt;Measurement​Units​Code​Sequence</para>
               </listitem>
               <listitem>
                 <para xml:id="para_5f2e20d3-d0f3-40b7-8f24-1ee5bbefcb82">CODE - ConceptCodeSequence</para>
               </listitem>
               <listitem>
-                <para xml:id="para_0018e0ce-f97c-4a54-a495-dfe60a2957e2">COMPOSITE - ReferencedSOPSequence, ReferencedSOPSequence&gt;ReferencedSOPClassUID, ReferencedSOPSequence&gt;ReferencedSOPInstanceUID</para>
+                  <para xml:id="para_0018e0ce-f97c-4a54-a495-dfe60a2957e2">COMPOSITE - Referenced​SOP​Sequence, Referenced​SOP​Sequence&gt;Referenced​SOP​Class​UID, Referenced​SOP​Sequence&gt;Referenced​SOP​Instance​UID</para>
               </listitem>
               <listitem>
-                <para xml:id="para_6ea4adf3-a6db-495e-b274-48b93dcf91e2">IMAGE - ReferencedSOPSequence, ReferencedSOPSequence&gt;ReferencedSOPClassUID, ReferencedSOPSequence&gt;ReferencedSOPInstanceUID, ReferencedSOPSequence&gt;ReferencedFrameNumber, ReferencedSOPSequence&gt;ReferencedSegmentNumber</para>
+                  <para xml:id="para_6ea4adf3-a6db-495e-b274-48b93dcf91e2">IMAGE - Referenced​SOP​Sequence, Referenced​SOP​Sequence&gt;Referenced​SOP​Class​UID, Referenced​SOP​Sequence&gt;Referenced​SO​PInstance​UID, Referenced​SOP​Sequence&gt;Referenced​Frame​Number, Referenced​SOP​Sequence&gt;Referenced​Segment​Number</para>
               </listitem>
               <listitem>
-                <para xml:id="para_3e5f89cd-bac6-4748-a10a-d26932eeee8e">SCOORD - GraphicData, GraphicType</para>
+                  <para xml:id="para_3e5f89cd-bac6-4748-a10a-d26932eeee8e">SCOORD - Graphic​Data, Graphic​Type</para>
               </listitem>
               <listitem>
-                <para xml:id="para_506a05c2-f0a0-4a59-b538-3cee1729dd8d">SCOORD3D - ReferencedFrameOfReferenceUID, GraphicData, GraphicType</para>
+                  <para xml:id="para_506a05c2-f0a0-4a59-b538-3cee1729dd8d">SCOORD3D - Referenced​Frame​Of​Reference​UID, Graphic​Data, Graphic​Type</para>
               </listitem>
               <listitem>
-                <para xml:id="para_3733e495-f682-40db-84c9-1cd9f90a2562">CONTAINER - ContinuityOfContent, ContentTemplateSequence, ContentTemplateSequence&gt;MappingResource, ContentTemplateSequence&gt;TemplateIdentifier</para>
+                  <para xml:id="para_3733e495-f682-40db-84c9-1cd9f90a2562">CONTAINER - Continuity​Of​Content, Content​Template​Sequence, Content​Template​Sequence&gt;Mapping​Resource, Content​Template​Sequence&gt;Template​Identifier</para>
               </listitem>
             </itemizedlist>
           </section>
@@ -2538,7 +2538,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_768d2567-3037-4692-92d4-2dfa3130e99f">(126000, DCM, "Imaging Measurement Report")</para>
+                        <para xml:id="para_768d2567-3037-4692-92d4-2dfa3130e99f">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_ab2127a7-7dbd-4d94-ab73-5412ae1a9077">CONTAINER</para>
@@ -2568,7 +2570,8 @@
                   </tr>
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_4a5e4966-5e71-48a1-a6ff-d3f9e3f384b3">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                      <para xml:id="para_4a5e4966-5e71-48a1-a6ff-d3f9e3f384b3">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                     </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_741a742c-fdac-4871-8a14-f05a6b7d8ca5">INCLUDE</para>
@@ -2587,7 +2590,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c68fcd0d-078f-4340-9b2c-77192aa19aca">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                        <para xml:id="para_c68fcd0d-078f-4340-9b2c-77192aa19aca">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_2dd5655f-edda-4867-9095-15c108763d4e">INCLUDE</para>
@@ -2606,7 +2610,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_ab0a6fa1-3a24-4dc2-86e4-1ec43fb8b7ec">(126000, DCM, "Imaging Measurement Report") &gt; (121058, DCM, "Procedure reported")</para>
+                        <para xml:id="para_ab0a6fa1-3a24-4dc2-86e4-1ec43fb8b7ec">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121058">(121058, DCM, "Procedure reported")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_c4ba0598-5afa-48a5-8b8b-e4e05ba9ed16">CODE</para>
@@ -2618,7 +2624,9 @@
                         <para xml:id="para_ce295d50-6a3d-4923-a810-0ac8a4163ba5">M</para>
                      </td>
                   <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6be68148-b281-44ae-b366-24b7a8173700">(P0-0099A, SRT, "Imaging procedure")</para>
+                        <para xml:id="para_6be68148-b281-44ae-b366-24b7a8173700">
+<link xl:href="http://snomed.info/id/363679005" xl:show="new">(P0-0099A, SRT, "Imaging procedure")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_7d202807-5c6a-4dff-9b4f-bc0a01a0073a"/>
@@ -2636,7 +2644,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c4392c98-6b39-4852-a77c-72a6da33e07e">(126000, DCM, "Imaging Measurement Report") &gt; </para>
+                        <para xml:id="para_c4392c98-6b39-4852-a77c-72a6da33e07e">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_061079fd-9fe4-4175-82ea-389888fe4eec">INCLUDE</para>
@@ -2655,7 +2664,9 @@
                  </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_f87c3624-f355-44fa-9c20-7013d7f5c1c2">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements")</para>
+                        <para xml:id="para_f87c3624-f355-44fa-9c20-7013d7f5c1c2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_562da109-62fd-4265-9c34-cf9aca43d2c8">CONTAINER</para>
@@ -2684,7 +2695,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c8ff3323-2de0-4cca-b946-e82b7b71cfa8">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt;</para>
+                        <para xml:id="para_c8ff3323-2de0-4cca-b946-e82b7b71cfa8">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_f5e0187b-e48d-4118-9bfb-b4132df8ed13">INCLUDE</para>
@@ -2703,7 +2715,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d3c5e53d-8dd7-4e1e-a772-850f44a1c83c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt;</para>
+                        <para xml:id="para_d3c5e53d-8dd7-4e1e-a772-850f44a1c83c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_5342d6d1-c3f3-4eb3-95d2-4be9ccbede50">INCLUDE</para>
@@ -2722,7 +2735,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_3410fb19-6119-43a0-a373-4794e832da9c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt;</para>
+                        <para xml:id="para_3410fb19-6119-43a0-a373-4794e832da9c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_1f93d17b-897a-434e-9ee6-af7bce27b561">INCLUDE</para>
@@ -2741,7 +2755,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_8ecf8b48-b5d9-413a-a027-76d0d53ce002">(126000, DCM, "Imaging Measurement Report")  &gt; (126011, DCM, "Derived Imaging Measurements")</para>
+                        <para xml:id="para_8ecf8b48-b5d9-413a-a027-76d0d53ce002">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink>  &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_3fc73237-6a34-448a-970d-ffc2e8264519">CONTAINER</para>
@@ -2770,7 +2786,8 @@
                   </tr>
                   <tr valign="top">
                      <td>
-                    <para xml:id="para_085cd99c-2bef-49ab-afee-f33b1b62322c">(126000, DCM, "Imaging Measurement Report") &gt; (126011, DCM, "Derived Imaging Measurements") &gt;</para>
+                    <para xml:id="para_085cd99c-2bef-49ab-afee-f33b1b62322c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink> &gt;</para>
                   </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_81384a38-4220-4b9e-a3b8-a753831ea9f3">INCLUDE</para>
@@ -2789,7 +2806,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d9b9f4f4-ee5b-464c-8475-503ba2895953">(126000, DCM, "Imaging Measurement Report") &gt; (C0034375, UMLS, "Qualitative Evaluations")</para>
+                        <para xml:id="para_d9b9f4f4-ee5b-464c-8475-503ba2895953">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <link xl:href="https://uts.nlm.nih.gov/metathesaurus.html?cui=C0034375" xl:show="new">(C0034375, UMLS, "Qualitative Evaluations")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_ab48dfe8-144f-49e9-b42b-f351bf923e1e">CONTAINER</para>
@@ -2818,7 +2837,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6b84d4db-efdd-490c-b9e5-840ef745bdc4">(126000, DCM, "Imaging Measurement Report") &gt; (C0034375, UMLS, "Qualitative Evaluations") &gt; CODE</para>
+                        <para xml:id="para_6b84d4db-efdd-490c-b9e5-840ef745bdc4">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <link xl:href="https://uts.nlm.nih.gov/metathesaurus.html?cui=C0034375" xl:show="new">(C0034375, UMLS, "Qualitative Evaluations")</link> &gt; CODE</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_2048148c-a30d-427f-a4d2-57b4ab1dad08">CODE</para>
@@ -2846,7 +2866,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6bb5ab99-c630-4c85-961d-bbcc5eca7fdb">(126000, DCM, "Imaging Measurement Report") &gt; (C0034375, UMLS, "Qualitative Evaluations") &gt; TEXT</para>
+                        <para xml:id="para_6bb5ab99-c630-4c85-961d-bbcc5eca7fdb">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <link xl:href="https://uts.nlm.nih.gov/metathesaurus.html?cui=C0034375" xl:show="new">(C0034375, UMLS, "Qualitative Evaluations")</link> &gt; TEXT</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_093e5b62-411c-4728-b7fa-ac99ebffec95">TEXT</para>
@@ -2916,7 +2937,9 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_d79d3a4e-3120-4e5d-b35c-a519f0ffe038">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group")</para>
+                    <para xml:id="para_d79d3a4e-3120-4e5d-b35c-a519f0ffe038">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_74f0eb23-1f33-4176-af64-701d09da492a">CONTAINER</para>
@@ -2945,7 +2968,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_c77e8c01-7792-4f6c-9f23-7db2c605522f">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (C67447, NCIt, "Activity Session")</para>
+                    <para xml:id="para_c77e8c01-7792-4f6c-9f23-7db2c605522f">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; (C67447, NCIt, "Activity Session")</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_7fec71d3-5ad4-47ac-b01d-1b79c36012b9">TEXT</para>
@@ -2975,7 +2999,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a79990e3-7785-4866-a2be-4721de47a84f">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112039, DCM, "Tracking Identifier")</para>
+                    <para xml:id="para_a79990e3-7785-4866-a2be-4721de47a84f">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112039">(112039, DCM, "Tracking Identifier")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_e8256222-5fe9-4b2a-94da-e09a251d3a5f">TEXT</para>
@@ -3004,7 +3030,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_cb699ebd-6ba9-4bf0-8a63-9a96a8903131">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112040, DCM, "Tracking Unique Identifier")</para>
+                    <para xml:id="para_cb699ebd-6ba9-4bf0-8a63-9a96a8903131">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112040">(112040, DCM, "Tracking Unique Identifier")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_b7a1fdfb-989e-4492-9d5d-c4fece99bd46">UIDREF</para>
@@ -3033,7 +3061,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_53e4f014-edd5-4f73-8dce-cfd2acfa805d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121071, DCM, "Finding")</para>
+                    <para xml:id="para_53e4f014-edd5-4f73-8dce-cfd2acfa805d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121071">(121071, DCM, "Finding")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_ccf3d80b-a07d-4576-a951-f76fb3855516">CODE</para>
@@ -3062,7 +3092,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_7a5e3eea-726a-42bc-9cbe-44afe946319c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; </para>
+                    <para xml:id="para_7a5e3eea-726a-42bc-9cbe-44afe946319c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; </para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_74bacb20-9b6d-4f85-8bb8-55f8ec9a6da0">INCLUDE</para>
@@ -3084,7 +3115,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a2ab127e-f788-4f3f-91c3-455c6c58512a">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C036, SRT, "Measurement Method")</para>
+                    <para xml:id="para_a2ab127e-f788-4f3f-91c3-455c6c58512a">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_6aec8392-caba-48e8-b44b-cbda49c84446">CODE</para>
@@ -3113,7 +3146,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_8c1dd64e-92ff-47bb-89d9-55c33dcca93f">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site")</para>
+                    <para xml:id="para_8c1dd64e-92ff-47bb-89d9-55c33dcca93f">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_5d80c40d-6cea-44c0-b803-ead0721157d1">CODE</para>
@@ -3142,7 +3177,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_73792436-5d61-4db9-ba26-15ce0aa845ae">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT, "Laterality")</para>
+                    <para xml:id="para_73792436-5d61-4db9-ba26-15ce0aa845ae">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_bd4f79aa-2f06-4321-9104-282dbbd3e86f">CODE</para>
@@ -3174,7 +3211,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a8e02b16-89d1-4574-87e2-5dc9f212faa9">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-A1F8, SRT, "Topographical modifier")</para>
+                    <para xml:id="para_a8e02b16-89d1-4574-87e2-5dc9f212faa9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_3dab7832-6034-4ac5-bd28-8fce38aeeb8e">CODE</para>
@@ -3203,7 +3242,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e0f4b04f-811d-431b-8539-866bfcd95002">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126100, DCM, "Real World Value Map used for measurement")</para>
+                    <para xml:id="para_e0f4b04f-811d-431b-8539-866bfcd95002">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126100">(126100, DCM, "Real World Value Map used for measurement")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_ac578953-652b-4973-8731-40690e653bde">COMPOSITE</para>
@@ -3232,7 +3273,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_618cfc7e-96ba-4512-a50c-1b28cf7cfe31">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; </para>
+                    <para xml:id="para_618cfc7e-96ba-4512-a50c-1b28cf7cfe31">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; </para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_1a53f0d7-a525-4bbe-925f-471f4f2b7c2a">INCLUDE</para>
@@ -3251,7 +3293,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a25e5b3e-24ee-4876-ad32-a6bc6125af2b">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                    <para xml:id="para_a25e5b3e-24ee-4876-ad32-a6bc6125af2b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_4c41379a-bfe3-4ecb-9634-621fa5c5e9d3">CODE</para>
@@ -3280,7 +3323,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_78aabc2a-e32c-4b96-8a4a-2c68a95991f3">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                    <para xml:id="para_78aabc2a-e32c-4b96-8a4a-2c68a95991f3">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_36d3744d-abc0-4fe6-892a-905a93e732d1">TEXT</para>
@@ -3349,7 +3393,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_67b2f166-8caa-4903-8e4d-c45872edf763">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126070, DCM, "Subject Time Point Identifier")</para>
+                        <para xml:id="para_67b2f166-8caa-4903-8e4d-c45872edf763">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126070">(126070, DCM, "Subject Time Point Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_a607a897-ce4f-4279-8125-8e267e4ee2f2">TEXT</para>
@@ -3378,7 +3424,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_0138b6e6-da2e-4228-9111-6af571cce4b9">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126071, DCM, "Protocol Time Point Identifier")</para>
+                        <para xml:id="para_0138b6e6-da2e-4228-9111-6af571cce4b9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126071">(126071, DCM, "Protocol Time Point Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_1043bd26-40e8-4a4f-a561-d6034677a4cb">TEXT</para>
@@ -3407,7 +3455,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c4543190-7254-4d7b-ba74-b3d2dbd86cea">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (C2348792, UMLS, "Time Point")</para>
+                        <para xml:id="para_c4543190-7254-4d7b-ba74-b3d2dbd86cea">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="https://uts.nlm.nih.gov/metathesaurus.html?cui=C2348792" xl:show="new">(C2348792, UMLS, "Time Point")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_a05464ce-5c5e-4499-bcc6-f82ecfcaed49">TEXT</para>
@@ -3436,7 +3486,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_bdf460f4-ab6b-4d51-b11b-49517df70331">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126072, DCM, "Time Point Type") </para>
+                        <para xml:id="para_bdf460f4-ab6b-4d51-b11b-49517df70331">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126072">(126072, DCM, "Time Point Type")</olink> </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6de28612-345a-40d4-8f7d-1643a72e623c">CODE</para>
@@ -3467,7 +3518,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_e838c76f-4d11-46ef-906c-df564477884c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126073, DCM, "Time Point Order")</para>
+                        <para xml:id="para_e838c76f-4d11-46ef-906c-df564477884c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126073">(126073, DCM, "Time Point Order")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_a9a0736f-0ec0-49b2-9940-49dbdae8687c">NUM</para>
@@ -3496,7 +3549,9 @@
                   </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_9ba865a6-9cb0-408c-8821-0717c6f4e7d6">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (128740, DCM, "Longitudinal Temporal Offset from Event")</para>
+                     <para xml:id="para_9ba865a6-9cb0-408c-8821-0717c6f4e7d6">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_128740">(128740, DCM, "Longitudinal Temporal Offset from Event")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_2d3fc46c-113b-4782-8633-a460f0ccc52b">NUM</para>
@@ -3525,7 +3580,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_a0f066e8-0466-4474-bb28-b88ac2ca91ae">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (128740, DCM, "Longitudinal Temporal Offset from Event") &gt; (128741, DCM, "Longitudinal Temporal Event Type")</para>
+                     <para xml:id="para_a0f066e8-0466-4474-bb28-b88ac2ca91ae">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_128740">(128740, DCM, "Longitudinal Temporal Offset from Event")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_128741">(128741, DCM, "Longitudinal Temporal Event Type")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_853bfc5d-d031-4ab3-864d-ab91bb3491b7">CODE</para>
@@ -3596,7 +3653,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c987c086-f795-422c-8196-a1c0a642db5c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group")</para>
+                        <para xml:id="para_c987c086-f795-422c-8196-a1c0a642db5c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e1ac0f8d-655b-4d4e-b8a3-be9c9ea6b405">CONTAINER</para>
@@ -3625,7 +3684,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d6910845-ec0d-4921-8b68-4d83d2d01883">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (C67447, NCIt, "Activity Session")</para>
+                        <para xml:id="para_d6910845-ec0d-4921-8b68-4d83d2d01883">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; (C67447, NCIt, "Activity Session")</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_4bdd6323-6d11-49f3-a011-405af705480b">TEXT</para>
@@ -3655,7 +3715,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_2305126b-bd39-43e1-ab62-29cce8d5127d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112039, DCM, "Tracking Identifier")</para>
+                        <para xml:id="para_2305126b-bd39-43e1-ab62-29cce8d5127d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112039">(112039, DCM, "Tracking Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_0d31e476-607b-4b8f-a6bd-f87090f16b61">TEXT</para>
@@ -3684,7 +3746,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4363b569-f374-4492-8611-4f0d125f843b">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112040, DCM, "Tracking Unique Identifier")</para>
+                        <para xml:id="para_4363b569-f374-4492-8611-4f0d125f843b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112040">(112040, DCM, "Tracking Unique Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_84d21c0a-ffa1-4545-abcd-b91ac38e17fc">UIDREF</para>
@@ -3713,7 +3777,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_35bdd2a5-c236-4fb3-993d-2aad3ac89039">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121071, DCM, "Finding")</para>
+                        <para xml:id="para_35bdd2a5-c236-4fb3-993d-2aad3ac89039">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121071">(121071, DCM, "Finding")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_f671866f-422c-4b39-82d5-b21931077013">CODE</para>
@@ -3742,7 +3808,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_841e6155-654d-4a73-97f1-19a79b6045b8">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt;</para>
+                        <para xml:id="para_841e6155-654d-4a73-97f1-19a79b6045b8">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_78132495-fb50-40cc-8468-814aa42ab0b4">INCLUDE</para>
@@ -3764,7 +3831,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_e7be05c9-6c47-4d03-a6c2-c9348fa5db07">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (111030, DCM, "Image Region")</para>
+                        <para xml:id="para_e7be05c9-6c47-4d03-a6c2-c9348fa5db07">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111030">(111030, DCM, "Image Region")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_156039e3-f9ed-4f8d-a00f-4184899d323b">SCOORD</para>
@@ -3793,7 +3862,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_20506aad-cc2d-430a-94d6-ce378b54203a">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (111030, DCM, "Image Region") &gt; IMAGE</para>
+                        <para xml:id="para_20506aad-cc2d-430a-94d6-ce378b54203a">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111030">(111030, DCM, "Image Region")</olink> &gt; IMAGE</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_0aaa799e-8f8d-46c7-ab7d-501fe8498901">IMAGE</para>
@@ -3823,7 +3893,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c261769f-99bb-4b39-960c-65b290bbae71">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121214, DCM, "Referenced Segmentation Frame")</para>
+                        <para xml:id="para_c261769f-99bb-4b39-960c-65b290bbae71">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121214">(121214, DCM, "Referenced Segmentation Frame")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6330bc68-c81d-4557-9c89-2836639f1903">IMAGE</para>
@@ -3852,7 +3924,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_f2a0a34f-0e46-4d42-a348-27778f5fb396">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121233, DCM, "Source image for segmentation")</para>
+                        <para xml:id="para_f2a0a34f-0e46-4d42-a348-27778f5fb396">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121233">(121233, DCM, "Source image for segmentation")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_abdd40d3-a260-4109-badc-67988ac7c3ab">IMAGE</para>
@@ -3881,7 +3955,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6fc29904-e74d-49ec-bb2a-c93334f7e405">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121200, DCM, "Illustration of ROI")</para>
+                        <para xml:id="para_6fc29904-e74d-49ec-bb2a-c93334f7e405">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121200">(121200, DCM, "Illustration of ROI")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9de605d1-5cd8-4841-b884-91800016b252">IMAGE</para>
@@ -3910,7 +3986,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_983cfa06-50d9-47c2-9ae7-2e3b85e6eaa2">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126100, DCM, "Real World Value Map used for measurement")</para>
+                        <para xml:id="para_983cfa06-50d9-47c2-9ae7-2e3b85e6eaa2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126100">(126100, DCM, "Real World Value Map used for measurement")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_830a823d-6fe2-4d57-96c2-fa2cd9d030ec">COMPOSITE</para>
@@ -3939,7 +4017,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_698bc2bc-27fe-4c23-ba89-1d799b6f1865">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; </para>
+                        <para xml:id="para_698bc2bc-27fe-4c23-ba89-1d799b6f1865">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8012a639-c38a-4366-9115-d98eda141bc4">INCLUDE</para>
@@ -3961,7 +4040,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_7918e78f-966d-418e-920b-8d925abc04b7">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                        <para xml:id="para_7918e78f-966d-418e-920b-8d925abc04b7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_d30992fd-5f9a-4bd3-9b42-2756886537c3">CODE</para>
@@ -3990,7 +4070,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_b093b700-1618-4eb4-97f1-100088f19abe">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                        <para xml:id="para_b093b700-1618-4eb4-97f1-100088f19abe">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6107311d-e4d6-46c8-9f6d-b725df7013f2">TEXT</para>
@@ -4059,7 +4140,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_e094d380-67f8-46bc-bc2a-f4296e9d7fb6">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group")</para>
+                        <para xml:id="para_e094d380-67f8-46bc-bc2a-f4296e9d7fb6">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_85d92b96-1bc9-4d00-a8d1-bf9e1a37e52d">CONTAINER</para>
@@ -4088,7 +4171,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_5270a9ba-52f5-4ca6-bba8-3f14c7bbd9c3">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (C67447, NCIt, "Activity Session")</para>
+                        <para xml:id="para_5270a9ba-52f5-4ca6-bba8-3f14c7bbd9c3">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; (C67447, NCIt, "Activity Session")</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9cb09402-8061-4b6c-a0d8-c9131c5f6194">TEXT</para>
@@ -4118,7 +4202,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_ef240c96-ff30-403f-ad3a-bf1d52a23082">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112039, DCM, "Tracking Identifier")</para>
+                        <para xml:id="para_ef240c96-ff30-403f-ad3a-bf1d52a23082">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112039">(112039, DCM, "Tracking Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_05a71610-c371-4b73-9947-0feb9fee5d4f">TEXT</para>
@@ -4147,7 +4233,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_a57d8566-0a67-4962-a11c-d4a191dcf06d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (112040, DCM, "Tracking Unique Identifier")</para>
+                        <para xml:id="para_a57d8566-0a67-4962-a11c-d4a191dcf06d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112040">(112040, DCM, "Tracking Unique Identifier")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_006ed1cf-95ba-4a81-9233-c0ec4c1671c2">UIDREF</para>
@@ -4176,7 +4264,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_78e1dc11-170e-4c57-8faf-6c4f3731ea11">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121071, DCM, "Finding")</para>
+                        <para xml:id="para_78e1dc11-170e-4c57-8faf-6c4f3731ea11">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121071">(121071, DCM, "Finding")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_2d685f01-79d4-47db-a487-bc2b9117bb6e">CODE</para>
@@ -4205,7 +4295,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_ceb74c1c-4cd2-4838-8680-ff9bc4acb75b">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; </para>
+                        <para xml:id="para_ceb74c1c-4cd2-4838-8680-ff9bc4acb75b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_c1e2320c-15a3-401a-b6ce-3ff031387586">INCLUDE</para>
@@ -4227,7 +4318,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1eb5b7c7-448d-477d-a5e6-76a6fe4f96b9">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (111030, DCM, "Image Region")</para>
+                        <para xml:id="para_1eb5b7c7-448d-477d-a5e6-76a6fe4f96b9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111030">(111030, DCM, "Image Region")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_df75b533-ba06-4232-b8f1-d8638b4d6623">SCOORD</para>
@@ -4256,7 +4349,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_a13360f0-f562-4875-a9e8-603c5d277586">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (111030, DCM, "Image Region") &gt; IMAGE</para>
+                        <para xml:id="para_a13360f0-f562-4875-a9e8-603c5d277586">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111030">(111030, DCM, "Image Region")</olink> &gt; IMAGE</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6f7e11c6-e0e9-4d3b-9927-66ccd54ddf52">IMAGE</para>
@@ -4286,7 +4380,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d3c1045f-69b7-4951-a6e0-db205d2ece92">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121191, DCM, "Referenced Segment")</para>
+                        <para xml:id="para_d3c1045f-69b7-4951-a6e0-db205d2ece92">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121191">(121191, DCM, "Referenced Segment")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_66e8cae8-379e-41c1-a37a-98e03316e5f1">IMAGE</para>
@@ -4315,7 +4411,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_f68d6c8e-ae3f-46af-8289-8e3ec34f3bf2">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121231, DCM, "Volume Surface")</para>
+                        <para xml:id="para_f68d6c8e-ae3f-46af-8289-8e3ec34f3bf2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121231">(121231, DCM, "Volume Surface")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_aa656a67-7386-47f9-be90-7e6735e51be5">SCOORD3D</para>
@@ -4344,7 +4442,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_31a12578-f60f-41c7-a4d5-0acd514ab809">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121233, DCM, "Source image for segmentation")</para>
+                        <para xml:id="para_31a12578-f60f-41c7-a4d5-0acd514ab809">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121233">(121233, DCM, "Source image for segmentation")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e671fc9a-2eaf-48d5-a9f3-51afdf0365c7">IMAGE</para>
@@ -4373,7 +4473,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_334cbf51-a6b5-4f79-bd4b-bb1ae0a65fb1">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121232, DCM, "Source series for segmentation")</para>
+                        <para xml:id="para_334cbf51-a6b5-4f79-bd4b-bb1ae0a65fb1">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121232">(121232, DCM, "Source series for segmentation")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8bacc5e4-ddb8-4d07-9c0f-857ea7ab65fa">UIDREF</para>
@@ -4402,7 +4504,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_47d92ec9-1122-4836-9be3-7be2c0fc195b">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (121200, DCM, "Illustration of ROI")</para>
+                        <para xml:id="para_47d92ec9-1122-4836-9be3-7be2c0fc195b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121200">(121200, DCM, "Illustration of ROI")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8668cccf-ac90-4c7f-a05b-14b8f6827f60">IMAGE</para>
@@ -4431,7 +4535,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_31ed261a-41fa-4687-b2f8-f93bf84a3a7a">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (126100, DCM, "Real World Value Map used for measurement")</para>
+                        <para xml:id="para_31ed261a-41fa-4687-b2f8-f93bf84a3a7a">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126100">(126100, DCM, "Real World Value Map used for measurement")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_b192d89c-32ed-4cdc-9b9e-ef0b446907c7">COMPOSITE</para>
@@ -4460,7 +4566,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_db6a491e-74a0-491d-b2fc-5e63050c5ec7">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; </para>
+                        <para xml:id="para_db6a491e-74a0-491d-b2fc-5e63050c5ec7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_47d8e379-96c6-4926-9d36-a689f1af7a2a">INCLUDE</para>
@@ -4482,7 +4589,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d669b63b-1341-4b3a-a296-84de777495d7">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                        <para xml:id="para_d669b63b-1341-4b3a-a296-84de777495d7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_f246bd46-1b8c-4d90-9059-6a289caac441">CODE</para>
@@ -4511,7 +4619,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_461d4a03-525f-4f53-b4d2-cd215e0cf716">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $QualitativeEvaluations</para>
+                        <para xml:id="para_461d4a03-525f-4f53-b4d2-cd215e0cf716">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $QualitativeEvaluations</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9b2557b2-6ff1-4f83-b62e-6b2b26fe9118">TEXT</para>
@@ -4580,7 +4689,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_e5f2772b-d4b0-4176-8009-429881e04281">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C036, SRT, "Measurement Method")</para>
+                        <para xml:id="para_e5f2772b-d4b0-4176-8009-429881e04281">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_d9a6c762-6fda-4e27-a312-3892f9d1d44c">CODE</para>
@@ -4609,7 +4720,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4aaaff04-d258-4a66-aaee-1fd67cf5a97a">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site")</para>
+                        <para xml:id="para_4aaaff04-d258-4a66-aaee-1fd67cf5a97a">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_c961abb0-8c34-462a-80d2-c12391579f7b">CODE</para>
@@ -4639,7 +4752,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_600926cf-b262-42eb-a73f-c911db75e02d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT, "Laterality")</para>
+                        <para xml:id="para_600926cf-b262-42eb-a73f-c911db75e02d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_0b4903e4-a668-4c23-8d2c-c5e246f634ec">CODE</para>
@@ -4668,7 +4783,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_500139ae-ad36-489f-b70e-538b85313ff0">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-A1F8, SRT, "Topographical modifier")</para>
+                        <para xml:id="para_500139ae-ad36-489f-b70e-538b85313ff0">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_523b3ebf-db7c-41dc-890e-7e3988897e60">CODE</para>
@@ -4697,7 +4814,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4ec43574-db5e-42fa-8693-0b112778a479">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement</para>
+                        <para xml:id="para_4ec43574-db5e-42fa-8693-0b112778a479">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement</para>
                      </td>
                     <td align="left" colspan="1" rowspan="1">
                       <para xml:id="para_47c4e516-60df-4362-99ac-099676437471">NUM</para>
@@ -4731,7 +4849,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_b2ea64c7-6887-4c0e-b2f9-31a2e607aeec">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $ModType</para>
+                        <para xml:id="para_b2ea64c7-6887-4c0e-b2f9-31a2e607aeec">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $ModType</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_61f009cf-1bce-4b6e-bddc-3b7822932f7f">CODE</para>
@@ -4760,7 +4879,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_3acf0714-aff5-4541-aea0-d2aff908380d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C036, SRT, "Measurement Method")</para>
+                        <para xml:id="para_3acf0714-aff5-4541-aea0-d2aff908380d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_ee499e79-d6cf-4329-b108-6def764eb628">CODE</para>
@@ -4789,7 +4910,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_88a395b9-c2c3-49da-95dd-4bdf3bd94b13">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (121401, DCM, "Derivation")</para>
+                        <para xml:id="para_88a395b9-c2c3-49da-95dd-4bdf3bd94b13">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_121401">(121401, DCM, "Derivation")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_31745f74-1c3a-4bc7-aa38-f5243fb7d76b">CODE</para>
@@ -4818,7 +4941,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_12eb8b6b-30de-488a-9e5e-d2470dfbceed">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site")</para>
+                        <para xml:id="para_12eb8b6b-30de-488a-9e5e-d2470dfbceed">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e5ebdd46-00f3-4e58-8dde-074731cea545">CODE</para>
@@ -4848,7 +4973,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_b28ca836-8f7d-4700-aef9-109b0f2b71cf">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT, "Laterality")</para>
+                        <para xml:id="para_b28ca836-8f7d-4700-aef9-109b0f2b71cf">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_f42d9d25-fecb-4db2-8447-ec059f7d2f53">CODE</para>
@@ -4879,7 +5006,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_916f6ce3-bf17-44e5-8c9e-459ba31663f2">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-A1F8, SRT, "Topographical modifier")</para>
+                        <para xml:id="para_916f6ce3-bf17-44e5-8c9e-459ba31663f2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_d011bbd2-4fe1-4b7d-bdd8-9c232053d71d">CODE</para>
@@ -4908,7 +5037,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_39233b51-f2d6-4fc7-9ff9-61b33abd0694">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; </para>
+                        <para xml:id="para_39233b51-f2d6-4fc7-9ff9-61b33abd0694">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_2c4ad608-cfba-4626-bb26-12628b90bf02">INCLUDE</para>
@@ -4930,7 +5060,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_afc483f4-b9df-4496-972c-1e7ef4de0bf4">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $DerivationParameter</para>
+                        <para xml:id="para_afc483f4-b9df-4496-972c-1e7ef4de0bf4">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $DerivationParameter</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_484c65fb-79ef-4ba6-a991-b9dcd441470c">NUM</para>
@@ -4959,7 +5090,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_a5c2a1a0-30a3-4840-9cb8-8dac3126e974">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $DerivationParameter</para>
+                        <para xml:id="para_a5c2a1a0-30a3-4840-9cb8-8dac3126e974">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $DerivationParameter</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_013bdfa6-ca4d-40b8-8abd-1a15a2fd6f6a">NUM</para>
@@ -4988,7 +5120,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_bde1e23a-48bd-409c-bae0-04ad8c3644e9">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; </para>
+                        <para xml:id="para_bde1e23a-48bd-409c-bae0-04ad8c3644e9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8483ab5c-a9de-4c6b-8766-aeb7772e9324">INCLUDE</para>
@@ -5010,7 +5143,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_87a4fac2-b704-4ae6-a301-e28fe4d56d60">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; TEXT</para>
+                        <para xml:id="para_87a4fac2-b704-4ae6-a301-e28fe4d56d60">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; TEXT</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_a97541a5-26e4-4f44-bd94-25e739f3059c">TEXT</para>
@@ -5042,7 +5176,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_94d59b8b-a1c1-4062-b9bb-3196e31733e1">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; </para>
+                        <para xml:id="para_94d59b8b-a1c1-4062-b9bb-3196e31733e1">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_4ce7d6f3-8adf-4594-af20-a6974dc8e2c3">INCLUDE</para>
@@ -5064,7 +5199,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6936635a-9a1a-477a-a08b-4b8151931e9e">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (121050, DCM, "Equivalent Meaning of Concept Name")</para>
+                        <para xml:id="para_6936635a-9a1a-477a-a08b-4b8151931e9e">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_121050">(121050, DCM, "Equivalent Meaning of Concept Name")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_27be5412-0ff9-4164-80ed-e9f09f6c42a0">TEXT</para>
@@ -5093,7 +5230,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4236688e-3ed9-478a-b990-2c32c6f51510">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (126100, DCM, "Real World Value Map used for measurement")</para>
+                        <para xml:id="para_4236688e-3ed9-478a-b990-2c32c6f51510">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_126100">(126100, DCM, "Real World Value Map used for measurement")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_a2b46ffc-4020-4849-b160-19631179e1c4">COMPOSITE</para>
@@ -5122,7 +5261,8 @@
                   </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_8b8c68b3-6df1-49ee-b1f4-825853c9f0c7">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; </para>
+                     <para xml:id="para_8b8c68b3-6df1-49ee-b1f4-825853c9f0c7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; </para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_e11b17ea-f4c7-4fb5-b072-1d5e86cfb8d3">INCLUDE</para>
@@ -5184,7 +5324,8 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4b8f33fb-186d-4691-bd0f-4182c449bf39">(126000, DCM, "Imaging Measurement Report") &gt; (126011, DCM, "Derived Imaging Measurements") &gt; NUM</para>
+                        <para xml:id="para_4b8f33fb-186d-4691-bd0f-4182c449bf39">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink> &gt; NUM</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_edadb859-86c3-4eb3-9f32-f0b39d70b549">NUM</para>
@@ -5215,7 +5356,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c72d7909-832b-4330-be95-1e057bbef7ae">(126000, DCM, "Imaging Measurement Report") &gt; (126011, DCM, "Derived Imaging Measurements") &gt; NUM &gt; </para>
+                        <para xml:id="para_c72d7909-832b-4330-be95-1e057bbef7ae">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink> &gt; NUM &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_fc359f3a-225a-4148-bed4-0bd995d42d9a">INCLUDE</para>
@@ -5237,7 +5379,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_54558c9d-7c17-4224-8bea-4bd9655f72d3">(126000, DCM, "Imaging Measurement Report") &gt; (126011, DCM, "Derived Imaging Measurements") &gt; NUM &gt; </para>
+                        <para xml:id="para_54558c9d-7c17-4224-8bea-4bd9655f72d3">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink> &gt; NUM &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_4360e358-9c77-484e-97f3-cbb3a31e22be">INCLUDE</para>
@@ -5259,7 +5402,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_c6f21dca-3d31-43ae-8fbe-c1311e738371">(126000, DCM, "Imaging Measurement Report") &gt; (126011, DCM, "Derived Imaging Measurements") &gt; NUM &gt; </para>
+                        <para xml:id="para_c6f21dca-3d31-43ae-8fbe-c1311e738371">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126011">(126011, DCM, "Derived Imaging Measurements")</olink> &gt; NUM &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6b1d0845-f00f-40db-a54b-6cdb8fefdf4b">INCLUDE</para>
@@ -5322,7 +5466,8 @@
                <tbody>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_09bba8fc-4914-4a59-a7ab-4b4ee0e768f5">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement</para>
+                     <para xml:id="para_09bba8fc-4914-4a59-a7ab-4b4ee0e768f5">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_a03455ea-de08-4a0a-b91c-52d24a5cef05">NUM</para>
@@ -5355,7 +5500,8 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_347dade7-d205-4da7-8634-24e7acdd72df">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $ModType</para>
+                     <para xml:id="para_347dade7-d205-4da7-8634-24e7acdd72df">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $ModType</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_c690f85a-6b6f-4df0-b252-4042939f3e89">CODE</para>
@@ -5384,7 +5530,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_b1277580-60a0-49fb-a9fb-a56c970caea2">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C036, SRT, "Measurement Method")</para>
+                     <para xml:id="para_b1277580-60a0-49fb-a9fb-a56c970caea2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_ab667b00-aa2b-475f-818b-5c8d6bbebd70">CODE</para>
@@ -5413,7 +5561,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_e8fee1fa-f466-4f84-b5b1-0b3630e04312">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (121401, DCM, "Derivation")</para>
+                     <para xml:id="para_e8fee1fa-f466-4f84-b5b1-0b3630e04312">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_121401">(121401, DCM, "Derivation")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_eb8da72f-de40-4ff8-bb46-f63bd9ed8bdf">CODE</para>
@@ -5442,7 +5592,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_14180469-233b-4a53-898f-d44954f7d2cf">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site")</para>
+                     <para xml:id="para_14180469-233b-4a53-898f-d44954f7d2cf">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_4650e58d-27b7-49fe-803b-822eb72428d2">CODE</para>
@@ -5471,7 +5623,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_0396f6da-f59b-4aed-9e95-3fdd455b3058">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-C171, SRT, "Laterality")</para>
+                     <para xml:id="para_0396f6da-f59b-4aed-9e95-3fdd455b3058">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_c92a1d11-c128-45f1-962c-1c0b8f7fce63">CODE</para>
@@ -5502,7 +5656,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_870bc79d-d712-46a4-af2e-288f9be6d15c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (G-C0E3, SRT, "Finding Site") &gt; (G-A1F8, SRT, "Topographical modifier")</para>
+                     <para xml:id="para_870bc79d-d712-46a4-af2e-288f9be6d15c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_3d785f25-1b7a-4b6c-9ec4-7ffad7854103">CODE</para>
@@ -5531,7 +5687,8 @@
                  </tr>
                  <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_2fc0abe8-0d9d-43a1-971e-9a96d797c282">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt;</para>
+                        <para xml:id="para_2fc0abe8-0d9d-43a1-971e-9a96d797c282">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_c61d2bd5-5f7c-44df-a73e-933535c4c4b3">INCLUDE</para>
@@ -5553,7 +5710,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1e9acc82-214d-43dd-bf24-008d2e68e2de">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $DerivationParameter</para>
+                        <para xml:id="para_1e9acc82-214d-43dd-bf24-008d2e68e2de">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $DerivationParameter</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8bd3761a-10af-4d50-abcf-c6568c85806f">NUM</para>
@@ -5582,7 +5740,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_bc80afbc-0e9a-43f8-bfbc-114233997038">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $DerivationParameter</para>
+                        <para xml:id="para_bc80afbc-0e9a-43f8-bfbc-114233997038">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $DerivationParameter</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_be9c37c6-e565-4c4e-9530-7fb98e4bf40c">NUM</para>
@@ -5611,7 +5770,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_46a75716-2e93-45d8-8844-a5c92d298352">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt;</para>
+                        <para xml:id="para_46a75716-2e93-45d8-8844-a5c92d298352">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_e54d3cc3-5916-42b3-8113-a0e8b10d6cf7">INCLUDE</para>
@@ -5633,7 +5793,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_0662f8d8-496f-425e-bfe3-221cf1916edf">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; TEXT</para>
+                        <para xml:id="para_0662f8d8-496f-425e-bfe3-221cf1916edf">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; TEXT</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_02757111-ef51-4693-ade8-2d87d3e9b0dd">TEXT</para>
@@ -5665,7 +5826,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_e17b4189-d80c-4463-bea5-0f2673ca3b2c">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $ImagePurpose</para>
+                        <para xml:id="para_e17b4189-d80c-4463-bea5-0f2673ca3b2c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $ImagePurpose</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_bf8149c2-67d2-4d7a-9164-77dedd20ce57">INCLUDE</para>
@@ -5687,7 +5849,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_61727218-698e-458a-9d30-bf8e0213cb52">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; $WavePurpose</para>
+                        <para xml:id="para_61727218-698e-458a-9d30-bf8e0213cb52">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; $WavePurpose</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_b6321a5c-9156-4b7d-b034-e0db188812da">INCLUDE</para>
@@ -5709,7 +5872,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4884ee49-72d5-4212-906f-758611cf3511">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt;</para>
+                        <para xml:id="para_4884ee49-72d5-4212-906f-758611cf3511">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_6bbed568-cde9-4bfa-b267-00066f75a65f">INCLUDE</para>
@@ -5731,7 +5895,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_08bad3f2-234f-4145-8a86-bb1715e1d60d">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (121050, DCM, "Equivalent Meaning of Concept Name")</para>
+                        <para xml:id="para_08bad3f2-234f-4145-8a86-bb1715e1d60d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_121050">(121050, DCM, "Equivalent Meaning of Concept Name")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_f2239d5d-651b-4748-9ec8-2a3235aa8092">TEXT</para>
@@ -5760,7 +5926,8 @@
                   </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_eaf3196a-550b-47fc-81e7-fd90fc767420">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt;</para>
+                     <para xml:id="para_eaf3196a-550b-47fc-81e7-fd90fc767420">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt;</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_b43d4e08-a504-4b83-b818-5425049348d2">INCLUDE</para>
@@ -5782,7 +5949,9 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_75d7b267-14e1-4f72-9903-98e8a8d1ba99">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (126100, DCM, "Real World Value Map used for measurement")</para>
+                     <para xml:id="para_75d7b267-14e1-4f72-9903-98e8a8d1ba99">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_126100">(126100, DCM, "Real World Value Map used for measurement")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_967001d1-eb45-4dee-afc3-ecfa1e7fed43">COMPOSITE</para>
@@ -5811,7 +5980,8 @@
                  </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_63ec45a7-5bb6-4a5c-b3b8-f47b82b60ecc">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; </para>
+                     <para xml:id="para_63ec45a7-5bb6-4a5c-b3b8-f47b82b60ecc">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; </para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_363a85b8-8419-4414-8bf6-a7c22314b037">INCLUDE</para>
@@ -5877,7 +6047,8 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_eff456ea-aabb-491d-ab50-660ee7b09d57">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Purpose</para>
+                    <para xml:id="para_eff456ea-aabb-491d-ab50-660ee7b09d57">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Purpose</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_724be64a-374f-4286-a18c-cf89312aafd5">IMAGE</para>
@@ -5908,7 +6079,8 @@
                   </td>
                 </tr>                <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_6e17b0a1-4ded-4a1f-a016-177e396cd94e">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Purpose</para>
+                    <para xml:id="para_6e17b0a1-4ded-4a1f-a016-177e396cd94e">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Purpose</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_1a747957-5ebb-45df-b0ef-78fe8a9a1882">SCOORD</para>
@@ -5937,7 +6109,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_26ee1546-fd06-4d8a-a36f-e1756efd8d94">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Purpose &gt; IMAGE</para>
+                    <para xml:id="para_26ee1546-fd06-4d8a-a36f-e1756efd8d94">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Purpose &gt; IMAGE</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_d61cf4a1-5b91-4248-a893-d353bba4e693">IMAGE</para>
@@ -6009,7 +6182,9 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_9f91dcd3-f50e-40d8-801a-9358b1d9fc95">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (111001, DCM, "Algorithm Name")</para>
+                    <para xml:id="para_9f91dcd3-f50e-40d8-801a-9358b1d9fc95">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_111001">(111001, DCM, "Algorithm Name")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_a0be002a-b839-4d61-9940-ca85861db4c0">TEXT</para>
@@ -6036,7 +6211,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_49ec4804-18e7-4647-8b44-ff74dd4e2de9">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (111003, DCM, "Algorithm Version")</para>
+                    <para xml:id="para_49ec4804-18e7-4647-8b44-ff74dd4e2de9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_111003">(111003, DCM, "Algorithm Version")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_6485a135-79f5-481c-9686-cba8a8b42eeb">TEXT</para>
@@ -6065,7 +6242,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_44bfa161-99bc-4620-af16-77a5ffaef824">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (111002, DCM, "Algorithm Parameters")</para>
+                    <para xml:id="para_44bfa161-99bc-4620-af16-77a5ffaef824">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_111002">(111002, DCM, "Algorithm Parameters")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_fd6cae6c-cf93-4701-a96c-5bc142b9a6b4">TEXT</para>
@@ -6149,7 +6328,9 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_32f0dbb3-e530-42db-a64f-677dcd78ba35">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (112039, DCM, "Tracking Identifier")</para>
+                    <para xml:id="para_32f0dbb3-e530-42db-a64f-677dcd78ba35">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_112039">(112039, DCM, "Tracking Identifier")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_bc3f117e-2035-4e65-86cf-d4a9efeeb9b8">TEXT</para>
@@ -6179,7 +6360,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_315a9c30-ff80-42c4-8b6a-934265befcae">(126000, DCM, "Imaging Measurement Report") &gt; (126010, DCM, "Imaging Measurements") &gt; (125007, DCM, "Measurement Group") &gt; $Measurement &gt; (112040, DCM, "Tracking Unique Identifier")</para>
+                    <para xml:id="para_315a9c30-ff80-42c4-8b6a-934265befcae">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126010">(126010, DCM, "Imaging Measurements")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_125007">(125007, DCM, "Measurement Group")</olink> &gt; $Measurement &gt; <olink targetdoc="PS3.16" targetptr="DCM_112040">(112040, DCM, "Tracking Unique Identifier")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_377adc03-21c7-4956-9986-702016e0169e">UIDREF</para>
@@ -6250,7 +6433,9 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_41583901-34d2-45ab-8c40-f247fb945469">(126000, DCM, "Imaging Measurement Report") &gt; (121049, DCM, "Language of Content Item and Descendants")</para>
+                    <para xml:id="para_41583901-34d2-45ab-8c40-f247fb945469">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121049">(121049, DCM, "Language of Content Item and Descendants")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_03fe73a1-2976-4f5f-ba50-c93e37a5f91c">CODE</para>
@@ -6280,7 +6465,9 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_163fc809-a624-46c9-8b35-e938fe2659f9">(126000, DCM, "Imaging Measurement Report") &gt; (121049, DCM, "Language of Content Item and Descendants") &gt; (121046, DCM, "Country of Language")</para>
+                    <para xml:id="para_163fc809-a624-46c9-8b35-e938fe2659f9">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121049">(121049, DCM, "Language of Content Item and Descendants")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121046">(121046, DCM, "Country of Language")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_70eb360c-b9ce-47ff-87d8-cea63199dfe3">CODE</para>
@@ -6351,7 +6538,8 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_2510293d-8617-4c3b-9bd0-a12ab03bed3f">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                    <para xml:id="para_2510293d-8617-4c3b-9bd0-a12ab03bed3f">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_87976a08-4656-4063-9cda-39424cab7702">INCLUDE</para>
@@ -6373,7 +6561,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_71de902d-b2dd-40c7-831c-a3b747e5d9bb">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                    <para xml:id="para_71de902d-b2dd-40c7-831c-a3b747e5d9bb">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_e9c99437-e6f7-470f-ba10-2d7be016da35">INCLUDE</para>
@@ -6393,7 +6582,8 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_63494bf8-41e4-4cfa-bb37-0c97750dbedf">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                    <para xml:id="para_63494bf8-41e4-4cfa-bb37-0c97750dbedf">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_798111e8-8ed5-4395-acb7-b3bd981333c3">INCLUDE</para>
@@ -6454,7 +6644,9 @@
               <tbody>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_3bba8a55-3854-4e49-89fb-fef4622f0876">(126000, DCM, "Imaging Measurement Report") &gt; (121005, DCM, "Observer Type")</para>
+                    <para xml:id="para_3bba8a55-3854-4e49-89fb-fef4622f0876">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121005">(121005, DCM, "Observer Type")</olink>
+</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_b006ab62-3ace-4c5a-b1de-43bd3185d479">CODE</para>
@@ -6478,13 +6670,14 @@
                     <para xml:id="para_cf9a9a27-239d-441d-b639-c9c18da02936"/>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_6abe37db-126f-4d36-af9f-1efb0837f8d4">Since this template is only used for AIM for person observers, which is the default, it may be omitted or explicitly sent as (121006, DCM, "Person"); see also <olink targetdoc="PS3.16" targetptr="sect_CID_270" xrefstyle="select: labelnumber quotedtitle"/>
+                    <para xml:id="para_6abe37db-126f-4d36-af9f-1efb0837f8d4">Since this template is only used for AIM for person observers, which is the default, it may be omitted or explicitly sent as <olink targetdoc="PS3.16" targetptr="DCM_121006">(121006, DCM, "Person")</olink>; see also <olink targetdoc="PS3.16" targetptr="sect_CID_270" xrefstyle="select: labelnumber quotedtitle"/>
                     </para>
                   </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0e30d9f6-65dc-41c0-912b-6d5d2d3933e4">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                    <para xml:id="para_0e30d9f6-65dc-41c0-912b-6d5d2d3933e4">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_3df5f61e-6a9a-4aff-b6ef-bdfa6b3b2834">INCLUDE</para>
@@ -6501,12 +6694,13 @@
 </para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_8dde2d10-99a4-4124-b35e-8689d8d3f887">IFF Row 1 value = (121006, DCM, "Person") or Row 1 is absent</para>
+                    <para xml:id="para_8dde2d10-99a4-4124-b35e-8689d8d3f887">IFF Row 1 value = <olink targetdoc="PS3.16" targetptr="DCM_121006">(121006, DCM, "Person")</olink> or Row 1 is absent</para>
                   </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_8ad9055a-1fbd-4a6e-b842-ecff7918b85d">(126000, DCM, "Imaging Measurement Report") &gt;</para>
+                    <para xml:id="para_8ad9055a-1fbd-4a6e-b842-ecff7918b85d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt;</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_ed624f42-019e-4500-a367-5b37560cd92b">INCLUDE</para>
@@ -6521,7 +6715,8 @@
                     <para xml:id="para_b2dfa196-508b-4b72-b958-0e72242ae11a">TID 1004 "Device Observer Identifying Attributes"</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_1738e0df-b343-43dc-b01a-938205935681">Not used in AIM; IFF Row 1 value = (121007, DCM, "Device")</para>
+                    <para xml:id="para_1738e0df-b343-43dc-b01a-938205935681">Not used in AIM; IFF Row 1 value = <olink targetdoc="PS3.16" targetptr="DCM_121007">(121007, DCM, "Device")</olink>
+</para>
                   </td>
                 </tr>
               </tbody>
@@ -6567,7 +6762,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_0941316d-1c41-46f0-9983-e577b13c9a7d">(126000, DCM, "Imaging Measurement Report") &gt; (121008, DCM, "Person Observer Name")</para>
+                        <para xml:id="para_0941316d-1c41-46f0-9983-e577b13c9a7d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121008">(121008, DCM, "Person Observer Name")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_3acccb8d-597b-4aed-ad43-5ffb3ecac651">PNAME</para>
@@ -6596,7 +6793,9 @@
                   </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_e92a634e-2711-4290-847e-3b7d5721c7fe">(126000, DCM, "Imaging Measurement Report") &gt; (128774, DCM, "Person Observer's Login Name")</para>
+                     <para xml:id="para_e92a634e-2711-4290-847e-3b7d5721c7fe">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_128774">(128774, DCM, "Person Observer's Login Name")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_419b9a80-ee3f-428e-8536-ad047d7585ef">PNAME</para>
@@ -6625,7 +6824,9 @@
                  </tr>
                  <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_5ab785a0-143a-4ef1-9748-449b9749a559">(126000, DCM, "Imaging Measurement Report") &gt; (121009, DCM, "Person Observer's Organization Name")</para>
+                        <para xml:id="para_5ab785a0-143a-4ef1-9748-449b9749a559">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121009">(121009, DCM, "Person Observer's Organization Name")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9d74559c-b896-4f83-a6c3-923e419b13d9">TEXT</para>
@@ -6654,7 +6855,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1323b967-5adf-457a-9097-b299b4907885">(126000, DCM, "Imaging Measurement Report") &gt; (121010, DCM, "Person Observer's Role in the Organization")</para>
+                        <para xml:id="para_1323b967-5adf-457a-9097-b299b4907885">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121010">(121010, DCM, "Person Observer's Role in the Organization")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_c20ee8bf-47f4-43db-8d18-bc2b836cb974">CODE</para>
@@ -6683,7 +6886,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_01a75035-2a53-46d1-a82c-cea86380ac04">(126000, DCM, "Imaging Measurement Report") &gt; (121011, DCM, "Person Observer's Role in this Procedure")</para>
+                        <para xml:id="para_01a75035-2a53-46d1-a82c-cea86380ac04">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121011">(121011, DCM, "Person Observer's Role in this Procedure")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_12089639-2f75-4a98-bbd4-958152a936b2">CODE</para>
@@ -6715,7 +6920,9 @@
                   </tr>
                  <tr valign="top">
                    <td align="left" colspan="1" rowspan="1">
-                     <para xml:id="para_50b6706d-9d3c-4c1d-b7b4-50f98bf75b30">(126000, DCM, "Imaging Measurement Report") &gt; (121011, DCM, "Person Observer's Role in this Procedure") &gt; (128775, DCM, "Identifier within Person Observer's Role")</para>
+                     <para xml:id="para_50b6706d-9d3c-4c1d-b7b4-50f98bf75b30">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121011">(121011, DCM, "Person Observer's Role in this Procedure")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_128775">(128775, DCM, "Identifier within Person Observer's Role")</olink>
+</para>
                    </td>
                    <td align="left" colspan="1" rowspan="1">
                      <para xml:id="para_09699e54-854e-4c49-b02f-9c41bfb13ef0">TEXT</para>
@@ -6785,7 +6992,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_4a9a940d-d492-40a6-bb05-17021e7c5d42">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library")</para>
+                        <para xml:id="para_4a9a940d-d492-40a6-bb05-17021e7c5d42">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_814639a8-e2aa-48cf-b667-c042c72d3daf">CONTAINER</para>
@@ -6814,7 +7023,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_0a12cc68-e5ac-48f9-9f90-4a7fcb6086f6">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group")</para>
+                        <para xml:id="para_0a12cc68-e5ac-48f9-9f90-4a7fcb6086f6">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_5bd3331b-edd7-4b4a-9691-4de6be0d8b32">CONTAINER</para>
@@ -6843,7 +7054,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_adefd0c2-043a-4640-bf7c-00527b9def5d">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; </para>
+                        <para xml:id="para_adefd0c2-043a-4640-bf7c-00527b9def5d">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_12df68c4-b260-4ea5-b0a4-92e0c74d3fd7">INCLUDE</para>
@@ -6865,7 +7077,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_767cce57-0354-4364-985c-0cb7ef434ea6">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; </para>
+                        <para xml:id="para_767cce57-0354-4364-985c-0cb7ef434ea6">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; </para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_42b431e3-5164-4159-a4ee-880ce298af28">INCLUDE</para>
@@ -6927,7 +7140,8 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_0100e482-42a1-43eb-b9ca-72fd476e1228">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; IMAGE</para>
+                        <para xml:id="para_0100e482-42a1-43eb-b9ca-72fd476e1228">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; IMAGE</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_15cad349-18da-423a-996c-2ff2000f8024">IMAGE</para>
@@ -6956,7 +7170,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_46988a38-d1f3-428b-9b5f-a5752bc5e16e">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; IMAGE &gt;</para>
+                        <para xml:id="para_46988a38-d1f3-428b-9b5f-a5752bc5e16e">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; IMAGE &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_37e84f95-2e25-4585-a1f8-6fb8dd324f1e">INCLUDE</para>
@@ -7018,7 +7233,9 @@
                <tbody>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_186d6a9a-60fa-4d05-b06d-0c8d8bca30a0">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (121139, DCM, "Modality")</para>
+                        <para xml:id="para_186d6a9a-60fa-4d05-b06d-0c8d8bca30a0">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_121139">(121139, DCM, "Modality")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9550d9d2-f179-4516-a2e8-7085e57667ee">CODE</para>
@@ -7047,7 +7264,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_9469640a-00c8-4b24-9386-abe0ba221bea">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (123014, DCM, "Target Region")</para>
+                        <para xml:id="para_9469640a-00c8-4b24-9386-abe0ba221bea">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_123014">(123014, DCM, "Target Region")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_7dac670f-9804-4c78-ac24-2e9eb88b2922">CODE</para>
@@ -7076,7 +7295,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_ddfc90a7-6854-4f2c-bd88-3d1d14ac4f04">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (111027, DCM, "Image Laterality")</para>
+                        <para xml:id="para_ddfc90a7-6854-4f2c-bd88-3d1d14ac4f04">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111027">(111027, DCM, "Image Laterality")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_b87582f0-0499-495a-addb-c6f6160af2c2">CODE</para>
@@ -7105,7 +7326,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_7806d53e-3b3c-41e4-9998-cea021b14ae5">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (111060, DCM, "Study Date")</para>
+                        <para xml:id="para_7806d53e-3b3c-41e4-9998-cea021b14ae5">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111060">(111060, DCM, "Study Date")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_bdf85b99-56ef-44ab-8b45-1325715db4d3">DATE</para>
@@ -7134,7 +7357,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d1dc9d00-d4e9-46b2-965e-e277127b6188">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (111061, DCM, "Study Time")</para>
+                        <para xml:id="para_d1dc9d00-d4e9-46b2-965e-e277127b6188">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111061">(111061, DCM, "Study Time")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_9905044c-7fe5-46ee-b126-be36708e689a">TIME</para>
@@ -7163,7 +7388,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_09b8bf40-e3b0-415a-a9d2-6f4573220aa7">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (111018, DCM, "Content Date")</para>
+                        <para xml:id="para_09b8bf40-e3b0-415a-a9d2-6f4573220aa7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111018">(111018, DCM, "Content Date")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_0f1c6690-8392-42f3-bfff-1c74bf49c4ae">DATE</para>
@@ -7192,7 +7419,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_00f8b972-a307-4951-830f-786451d0dd7c">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (111019, DCM, "Content Time")</para>
+                        <para xml:id="para_00f8b972-a307-4951-830f-786451d0dd7c">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111019">(111019, DCM, "Content Time")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_951cb7e8-93ce-403d-99ca-87388f02994b">TIME</para>
@@ -7221,7 +7450,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_ad6e3a86-7b14-4adf-ae49-e6e3cb3d9cbe">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (126201, DCM, "Acquisition Date")</para>
+                        <para xml:id="para_ad6e3a86-7b14-4adf-ae49-e6e3cb3d9cbe">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126201">(126201, DCM, "Acquisition Date")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8de4dc90-9d03-4c96-828d-2144bf567229">DATE</para>
@@ -7250,7 +7481,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1a85f687-dc5f-4a2d-84e5-d8cc1ffbe2b8">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (126202, DCM, "Acquisition Time")</para>
+                        <para xml:id="para_1a85f687-dc5f-4a2d-84e5-d8cc1ffbe2b8">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126202">(126202, DCM, "Acquisition Time")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_27b173ee-574f-444b-b6ff-49f984eb3760">TIME</para>
@@ -7279,7 +7512,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_a295c3e8-d257-4a42-a1d3-0c45b06464e7">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (112227, DCM, "Frame of Reference UID")</para>
+                        <para xml:id="para_a295c3e8-d257-4a42-a1d3-0c45b06464e7">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_112227">(112227, DCM, "Frame of Reference UID")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_0f250087-37b5-4d10-a217-c82d5d7c6765">UIDREF</para>
@@ -7308,7 +7543,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_1a8d9ec1-d4e0-4e1e-bb2a-d31971e740e4">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (110910, DCM, "Pixel Data Rows")</para>
+                        <para xml:id="para_1a8d9ec1-d4e0-4e1e-bb2a-d31971e740e4">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_110910">(110910, DCM, "Pixel Data Rows")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_ea272ab0-d799-477c-a2e5-4bf8262d463e">NUM</para>
@@ -7337,7 +7574,9 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_33818608-f772-42d9-8345-74d10b11afc4">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt; (110911, DCM, "Pixel Data Columns")</para>
+                        <para xml:id="para_33818608-f772-42d9-8345-74d10b11afc4">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_110911">(110911, DCM, "Pixel Data Columns")</olink>
+</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_95550d0e-9baa-4b45-b710-444d85b38f82">NUM</para>
@@ -7366,7 +7605,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_5caf3472-214a-4076-aa8a-531c3fc44736">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt;</para>
+                        <para xml:id="para_5caf3472-214a-4076-aa8a-531c3fc44736">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_94f59676-a88b-4640-8e41-7fbf7d2b5e11">INCLUDE</para>
@@ -7386,7 +7626,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_9efbea1b-9f5c-49c0-b3a6-65f7cf66cee2">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt;</para>
+                        <para xml:id="para_9efbea1b-9f5c-49c0-b3a6-65f7cf66cee2">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_61e174b0-0ab2-48d1-b472-1fe8f70e2e74">INCLUDE</para>
@@ -7406,7 +7647,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_98ad9212-8bc9-4bf1-ac0c-9687f5d6c43b">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt;</para>
+                        <para xml:id="para_98ad9212-8bc9-4bf1-ac0c-9687f5d6c43b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_1b223702-8567-4fcd-812d-9654e6280b84">INCLUDE</para>
@@ -7426,7 +7668,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_f2a60a4a-2247-4763-996c-b0b9caea7d13">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt;</para>
+                        <para xml:id="para_f2a60a4a-2247-4763-996c-b0b9caea7d13">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_399b4968-467c-49b7-b0c1-eeab09f26db9">INCLUDE</para>
@@ -7446,7 +7689,8 @@
                   </tr>
                   <tr valign="top">
                      <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_6f15e93f-a77c-46a2-a671-3557f8a7c02b">(126000, DCM, "Imaging Measurement Report") &gt; (111028, DCM, "Image Library") &gt; (126200, DCM, "Image Library Group") &gt;</para>
+                        <para xml:id="para_6f15e93f-a77c-46a2-a671-3557f8a7c02b">
+<olink targetdoc="PS3.16" targetptr="DCM_126000">(126000, DCM, "Imaging Measurement Report")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_111028">(111028, DCM, "Image Library")</olink> &gt; <olink targetdoc="PS3.16" targetptr="DCM_126200">(126200, DCM, "Image Library Group")</olink> &gt;</para>
                      </td>
                      <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_eac4e227-d347-48d1-94c5-d5715553e932">INCLUDE</para>
@@ -18634,7 +18878,7 @@
           <para xml:id="para_683000ee-7bbe-4949-b7f4-754ac53c1f41">The AIM CalculationData/​@value shall be assumed to be in the US English locale (i.e., periods are used as the decimal point, not commas, etc.).</para>
           <para xml:id="para_3eea8356-ef7b-401b-bc00-9116f896290e">The length of the AIM CalculationData/​@value ST is not limited, but the DICOM DS value representation is limited to 16 characters. Values of CalculationData/​@value that are too long shall be truncated or rounded to fit in an implementation-dependent manner.</para>
           <para xml:id="para_6f6ac400-ee61-434f-b70f-0a0d03d30644">The CalculationResult/​dataType (e.g., Double, Integer) is not encoded in the DICOM mapping, since all DICOM SR numeric values are encoded as a Decimal String (DS), so in a round trip from AIM to DICOM and back to AIM will not be recovered (i.e., will always be encoded as Double). For the use cases for this mapping, it is likely that all measurements will be Double anyway.</para>
-          <para xml:id="para_0be77456-db43-4acb-9217-fded9d3126ae">DICOM allows the Measured Value Sequence (0040,A300) to be sent zero length (empty) if there is no value. In such cases the Numeric Value Qualifier Code Sequence (0040,A301) may be used in DICOM to send a code indicating why, either because of an invalid floating point result (e.g., (114000, DCM, "Not a number") corresponding to <xref linkend="biblio_IEEE754"/> NaN), or for more general reasons (e.g., (114006, DCM, "Measurement failure")). See <olink targetdoc="PS3.16" targetptr="sect_CID_42" xrefstyle="select: labelnumber quotedtitle"/>. <xref linkend="table_A.8-4" xrefstyle="select: label"/> indicates that a non-numeric CalculationData/@value may be mapped to Numeric Value Qualifier Code Sequence (0040,A301). Various possible mappings of AIM string values to a subset of DICOM codes corresponding to <xref linkend="biblio_IEEE754"/> are defined in <xref linkend="table_A.8-5" xrefstyle="select: label"/>. These are based
+          <para xml:id="para_0be77456-db43-4acb-9217-fded9d3126ae">DICOM allows the Measured Value Sequence (0040,A300) to be sent zero length (empty) if there is no value. In such cases the Numeric Value Qualifier Code Sequence (0040,A301) may be used in DICOM to send a code indicating why, either because of an invalid floating point result (e.g., <olink targetdoc="PS3.16" targetptr="DCM_114000">(114000, DCM, "Not a number")</olink> corresponding to <xref linkend="biblio_IEEE754"/> NaN), or for more general reasons (e.g., <olink targetdoc="PS3.16" targetptr="DCM_114006">(114006, DCM, "Measurement failure")</olink>). See <olink targetdoc="PS3.16" targetptr="sect_CID_42" xrefstyle="select: labelnumber quotedtitle"/>. <xref linkend="table_A.8-4" xrefstyle="select: label"/> indicates that a non-numeric CalculationData/@value may be mapped to Numeric Value Qualifier Code Sequence (0040,A301). Various possible mappings of AIM string values to a subset of DICOM codes corresponding to <xref linkend="biblio_IEEE754"/> are defined in <xref linkend="table_A.8-5" xrefstyle="select: label"/>. These are based
             on the:</para>
           <itemizedlist>
             <listitem>
@@ -18673,7 +18917,9 @@
             <tbody>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_725a20a9-b809-4832-8418-5494c2f11f35">(114000, DCM, "Not a number")</para>
+                  <para xml:id="para_725a20a9-b809-4832-8418-5494c2f11f35">
+<olink targetdoc="PS3.16" targetptr="DCM_114000">(114000, DCM, "Not a number")</olink>
+</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_5eeb62f3-10a5-4c47-91e3-4860a809f23b">NaN</para>
@@ -18685,7 +18931,9 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_2d2be3c4-b844-4ce5-8d28-f863e7545e5f">(114001, DCM, "Negative Infinity")</para>
+                  <para xml:id="para_2d2be3c4-b844-4ce5-8d28-f863e7545e5f">
+<olink targetdoc="PS3.16" targetptr="DCM_114001">(114001, DCM, "Negative Infinity")</olink>
+</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_6c8bcec9-64aa-47a3-911a-fabe67198271">-Infinity</para>
@@ -18699,7 +18947,9 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d3458423-7b01-4739-88a6-f57f0d36c8d0">(114002, DCM, "Positive Infinity")</para>
+                  <para xml:id="para_d3458423-7b01-4739-88a6-f57f0d36c8d0">
+<olink targetdoc="PS3.16" targetptr="DCM_114002">(114002, DCM, "Positive Infinity")</olink>
+</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_6b4f83ec-5023-42d5-a897-5659513b2b49">Infinity</para>
@@ -18835,7 +19085,7 @@
           </table>
           <para xml:id="para_0e1bf246-ccfd-4a35-bc6d-8f3b67c29f42">The SOP Class UID is included locally in the AIM tree with the reference, rather than being factored out into the imageReferenceEntityCollection, in which it is not present.</para>
           <para xml:id="para_56daa39b-d85b-4727-b44f-24a939ec7402">Ideally, all segmentation references would be included in either Current Requested Procedure Evidence Sequence or Pertinent Other Evidence Sequence as appropriate; however there is insufficient information in the AIM 4.0 model to support this; i.e., the Study and Series Instance UIDs are absent, and cannot safely be assumed to be those of any related images.</para>
-          <para xml:id="para_1ea039d9-8f12-46d3-8de6-160a1e5767fc">The reference to the original image that was segmented, which may be encoded in SegmentationEntity/​referencedSopInstanceUid/​@root may be encoded in a separate Content Item if supported by the template (e.g., TID 1410, TID 1411) in (121233, DCM, "Source image for segmentation").</para>
+          <para xml:id="para_1ea039d9-8f12-46d3-8de6-160a1e5767fc">The reference to the original image that was segmented, which may be encoded in SegmentationEntity/​referencedSopInstanceUid/​@root may be encoded in a separate Content Item if supported by the template (e.g., TID 1410, TID 1411) in <olink targetdoc="PS3.16" targetptr="DCM_121233">(121233, DCM, "Source image for segmentation")</olink>.</para>
         </listitem>
       </orderedlist>
     </section>

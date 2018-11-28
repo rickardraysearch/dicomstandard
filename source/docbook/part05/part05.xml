@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2018d - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2018e - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -472,6 +472,18 @@
           </author>
           <date>2003</date>
           <title>Information technology - Coding of audio-visual objects - Part 14: MP4 file format</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC15076-1">
+            <abbrev>ISO 15076-1</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>2005</date>
+            <title>Image technology <foreignphrase xml:lang="en-GB">colour</foreignphrase> management - Architecture, profile format, and data structure</title>
+            <releaseinfo>
+                <remark>Also available as ICC.1:2004-10 (Profile version 4.2.0.0), International Color Consortium, available at <link xl:href="http://www.color.org/v4spec.xalter"/>
+                </remark>
+            </releaseinfo>
         </biblioentry>
         <biblioentry xml:id="biblio_ISOIEC15444-1">
           <abbrev>ISO/IEC 15444-1</abbrev>
@@ -1047,7 +1059,7 @@
           <note>
             <para xml:id="para_0bbf8614-20a1-4f74-a870-ebbc4066f9b5">The Attribute Specific Character Set (0008,0005) is encoded using a subset of characters from ISO-IR 6. See the definition for the Value Representation (VR) of Code String (CS) in <xref linkend="table_6.2-1" xrefstyle="select: label"/>.</para>
           </note>
-          <para xml:id="para_2ada37a7-15b7-45b1-a249-c92b19e3fb32">For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name) the default character repertoire may be extended or replaced (these Value Representations are described in more detail in <xref linkend="sect_6.2" xrefstyle="select: label"/>). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005) (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>) and shall be stated in the Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> gives conformance guidelines.</para>
+          <para xml:id="para_2ada37a7-15b7-45b1-a249-c92b19e3fb32">For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name) the Default Character Repertoire may be extended or replaced (these Value Representations are described in more detail in <xref linkend="sect_6.2" xrefstyle="select: label"/>). If such an extension or replacement is used, the relevant "Specific Character Set" shall be defined as an attribute of the SOP Common Module (0008,0005) (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>) and shall be stated in the Conformance Statement. <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> gives conformance guidelines.</para>
           <note>
             <orderedlist numeration="arabic">
               <listitem>
@@ -1061,7 +1073,7 @@
         </section>
         <section label="6.1.2.3" status="4" xml:id="sect_6.1.2.3">
           <title>Encoding of Character Repertoires</title>
-          <para xml:id="para_c113f89f-d9e3-414d-a25f-0cabf019722e">The 7-bit default character repertoire can be replaced for use in Value Representations SH, LO, ST, LT, PN, UC and UT with one of the single-byte codes defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+          <para xml:id="para_c113f89f-d9e3-414d-a25f-0cabf019722e">The 7-bit Default Character Repertoire can be replaced for use in Value Representations SH, LO, ST, LT, PN, UC and UT with one of the single-byte codes defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
           <note>
             <para xml:id="para_663f1d83-3f68-45bd-9c3b-e42a6a41b2ef">This replacement character repertoire does not apply to other textual Value Representations (AE and CS).</para>
           </note>
@@ -1079,12 +1091,12 @@
               </listitem>
             </orderedlist>
           </note>
-          <para xml:id="para_f64042c5-1534-47bd-a4c8-3c78fecd0cb6">Two character codes of the single-byte character sets invoked in the GL area of the code table, 02/00 and 05/12, have special significance in the DICOM Standard. The character SPACE, represented by bit combination 02/00, shall be used for the padding of Data Element Values that are character strings. The Graphic Character represented by the bit combination 05/12, "\" (BACKSLASH) in the repertoire ISO-IR 6, shall only be used in character strings with Value Representations of UT, ST and LT (see <xref linkend="sect_6.2" xrefstyle="select: label"/>). Otherwise the character code 05/12 is used as a separator for multiple valued Data Elements (see <xref linkend="sect_6.4" xrefstyle="select: label"/>).</para>
+          <para xml:id="para_f64042c5-1534-47bd-a4c8-3c78fecd0cb6">Two character codes of the single-byte character sets invoked in the GL area of the code table, 02/00 and 05/12, have special significance in the DICOM Standard. The character SPACE, represented by bit combination 02/00, shall be used for the padding of Data Element Values that are character strings. The Graphic Character represented by the bit combination 05/12, "\" (BACKSLASH) in the repertoire ISO-IR 6, shall only be used in character strings with Value Representations of UT, ST and LT (see <xref linkend="sect_6.2" xrefstyle="select: label"/>). Otherwise the character code 05/12 is used as a separator for multi-valued Data Elements (see <xref linkend="sect_6.4" xrefstyle="select: label"/>).</para>
           <note>
             <para xml:id="para_d6c942f8-45cd-4fb6-bfe8-ddcf1dc8814d">When the value of the Attribute Specific Character Set (0008,0005) is either "ISO_IR 13" or "ISO 2022 IR 13", the graphic character represented by the bit combination 05/12 is a "¥" (YEN SIGN) in the character set of ISO-IR 14.</para>
           </note>
           <para xml:id="para_e1b25ce2-fe4d-4ddc-bc61-beb1fde48d07">The character DELETE (bit combination 07/15) shall not be used in DICOM character strings.</para>
-          <para xml:id="para_573657de-5d29-4c9c-8862-f314026c447c">The replacement Character Repertoire specified in value 1 of the Attribute Specific Character Set (0008,0005) (or the default Character Repertoire if value 1 is empty) may be further extended with additional Coded Character Sets, if needed and permitted by the replacement Character Repertoire. The additional Coded Character Sets and extension mechanism shall be specified in additional values of the Attribute Specific Character Set. If Attribute Specific Character Set (0008,0005) has a single value, the DICOM SOP Instance supports only one code table and no Code Extension techniques. If Attribute Specific Character Set (0008,0005) has multiple values, the DICOM SOP Instance supports Code Extension techniques as described in ISO/IEC 2022:1994.</para>
+          <para xml:id="para_573657de-5d29-4c9c-8862-f314026c447c">The replacement Character Repertoire specified in value 1 of the Attribute Specific Character Set (0008,0005) (or the Default Character Repertoire if value 1 is empty) may be further extended with additional Coded Character Sets, if needed and permitted by the replacement Character Repertoire. The additional Coded Character Sets and extension mechanism shall be specified in additional values of the Attribute Specific Character Set. If Attribute Specific Character Set (0008,0005) has a single value, the DICOM SOP Instance supports only one code table and no Code Extension techniques. If Attribute Specific Character Set (0008,0005) has multiple values, the DICOM SOP Instance supports Code Extension techniques as described in ISO/IEC 2022:1994.</para>
           <para xml:id="para_5205ee1a-3884-4e52-81bc-836e0df21394">The Character Repertoires that prohibit extension are identified in Part 3.</para>
           <note>
             <orderedlist numeration="arabic">
@@ -1113,7 +1125,7 @@
         </section>
         <section label="6.1.2.4" status="4" xml:id="sect_6.1.2.4">
           <title>Code Extension Techniques</title>
-          <para xml:id="para_2db1782c-2a63-4417-9daf-b1245cf417c4">For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name), the default character repertoire or the character repertoire specified by value 1 of Attribute Specific Character Set (0008,0005), may be extended using the Code Extension techniques specified by ISO/IEC 2022:1994.</para>
+          <para xml:id="para_2db1782c-2a63-4417-9daf-b1245cf417c4">For Data Elements with Value Representations of SH (Short String), LO (Long String), UC (Unlimited Characters), ST (Short Text), LT (Long Text), UT (Unlimited Text) or PN (Person Name), the Default Character Repertoire or the character repertoire specified by value 1 of Attribute Specific Character Set (0008,0005), may be extended using the Code Extension techniques specified by ISO/IEC 2022:1994.</para>
           <para xml:id="para_a289dfd1-124a-41df-bf6a-96b49cf2882d">If such Code Extension techniques are used, the related Specific Character Set or Sets shall be specified by value 2 to value n of the Attribute Specific Character Set (0008,0005) of the SOP Common Module (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>), and shall be stated in the Conformance Statement.</para>
           <note>
             <orderedlist numeration="arabic">
@@ -1159,8 +1171,8 @@
           </section>
           <section label="6.1.2.5.3" status="5" xml:id="sect_6.1.2.5.3">
             <title>Requirements</title>
-            <para xml:id="para_02c3300a-533a-4b7d-8d5c-d4b1e5d2fa98">The character set specified by value 1 of the Attribute Specific Character Set (0008,0005), or the default character repertoire if value 1 is missing, shall be active at the beginning of each textual Data Element value, and at the beginning of each line (i.e., after a CR and/or LF) or page (i.e., after an FF).</para>
-            <para xml:id="para_6c95050d-eef5-4072-9570-b8ecb2f54bab">If within a textual value a character set other than the one specified in value 1 of the Attribute Specific Character Set (0008,0005), or the default character repertoire if value 1 is missing, has been invoked, the character set specified in the value 1, or the default character repertoire if value 1 is missing, shall be active in the following instances:</para>
+            <para xml:id="para_02c3300a-533a-4b7d-8d5c-d4b1e5d2fa98">The character set specified by value 1 of the Attribute Specific Character Set (0008,0005), or the Default Character Repertoire if value 1 is missing, shall be active at the beginning of each textual Data Element value, and at the beginning of each line (i.e., after a CR and/or LF) or page (i.e., after an FF).</para>
+            <para xml:id="para_6c95050d-eef5-4072-9570-b8ecb2f54bab">If within a textual value a character set other than the one specified in value 1 of the Attribute Specific Character Set (0008,0005), or the Default Character Repertoire if value 1 is missing, has been invoked, the character set specified in the value 1, or the Default Character Repertoire if value 1 is missing, shall be active in the following instances:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_08a8e5cf-1b9d-48d7-be5d-d9db9022a2b9">before the end of line (i.e., before the CR and/or LF)</para>
@@ -1178,7 +1190,7 @@
                 <para xml:id="para_a894152c-ade6-45c1-8a5e-1d944c8e61db">before the "^" and "=" delimiters separating name components and name component groups in Data Elements with a VR of PN.</para>
               </listitem>
             </itemizedlist>
-            <para xml:id="para_7c200653-8dba-4bae-b750-6b3ac326979a">If within a textual value a character set other than the one specified in value 1 of the Attribute Specific Character Set (0008,0005), or the default character repertoire if value 1 is missing, is used, the Escape Sequence of this character set must be inserted explicitly in the following instances:</para>
+            <para xml:id="para_7c200653-8dba-4bae-b750-6b3ac326979a">If within a textual value a character set other than the one specified in value 1 of the Attribute Specific Character Set (0008,0005), or the Default Character Repertoire if value 1 is missing, is used, the Escape Sequence of this character set must be inserted explicitly in the following instances:</para>
             <itemizedlist>
               <listitem>
                 <para xml:id="para_bf844194-77e5-4708-82e2-c7a29f0ccc44">before the first use of the character set in the line</para>
@@ -1644,7 +1656,7 @@
               <para xml:id="para_d5cdb0ba-5bae-445d-a3cd-0771d2e73e4b">Long String</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_42adc9ba-6f64-4267-8e9e-92661a86a90f">A character string that may be padded with leading and/or trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string shall not have Control Characters except for ESC.</para>
+              <para xml:id="para_42adc9ba-6f64-4267-8e9e-92661a86a90f">A character string that may be padded with leading and/or trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_50c6e09d-fb46-4ee9-abc5-8d6704dcf47f">Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
@@ -1749,7 +1761,7 @@
               <para xml:id="para_bbf43fb8-2401-4ed7-bf80-c899211a6560">Person Name</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_33c3c135-889d-43ab-bd7c-33e8baf2cf4e">A character string encoded using a 5 component convention. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string may be padded with trailing spaces. For human use, the five components in their order of occurrence are: family name complex, given name complex, middle name, name prefix, name suffix.</para>
+              <para xml:id="para_33c3c135-889d-43ab-bd7c-33e8baf2cf4e">A character string encoded using a 5 component convention. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string may be padded with trailing spaces. For human use, the five components in their order of occurrence are: family name complex, given name complex, middle name, name prefix, name suffix.</para>
               <note>
                 <para xml:id="para_78da7b20-7105-4e23-ae41-865ce624f134">HL7 prohibits leading spaces within a component; DICOM allows leading and trailing spaces and considers them insignificant.</para>
               </note>
@@ -1898,7 +1910,7 @@
               <para xml:id="para_5c0434ae-2ecd-4306-a160-6e24428123fb">Unlimited Characters</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_b9f2f961-ed9e-4e9d-8b89-8a65ef926c09">A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multiple valued data elements. The string shall not have Control Characters except for ESC.</para>
+              <para xml:id="para_b9f2f961-ed9e-4e9d-8b89-8a65ef926c09">A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH "\" in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_d4d52b8d-489f-451a-baa1-6bd44fff556f">Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH "\" in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</para>
@@ -2087,7 +2099,7 @@
           <para xml:id="para_7d144c51-7fae-47f0-8e50-a8252e08bbe0">For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 component groups may be used. The delimiter of the component group shall be the equals character "=" (3DH). The three component groups in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.</para>
           <para xml:id="para_facb498f-6a71-48ba-b2e1-7e53564054d3">Any component group may be absent, including the first component group. In this case, the person name may start with one or more "=" delimiters. Delimiters are also required for interior null component groups. Trailing null component groups and their delimiters may be omitted.</para>
           <para xml:id="para_4c6c02a7-227b-4b36-81b2-6a19a14b5d94">The first component group (identified by DICOM as "alphabetic") shall be encoded using the character set specified by the Attribute Specific Character Set (0008,0005), value 1.
-            If Attribute Specific Character Set (0008,0005) is not present, the default Character Repertoire ISO-IR 6 shall be used.
+            If Attribute Specific Character Set (0008,0005) is not present, the Default Character Repertoire ISO-IR 6 shall be used.
             ISO 2022 escapes for Code Extension shall not be used in this component group.
             When Specific Character Set (0008,0005) value 1 specifies a multi-byte character set without Code Extension (i.e., Unicode in UTF-8, GB18030 or GBK), the characters of this component group may be encoded with multiple bytes,
             but shall be drawn from the code points U+0020 through U+1FFF of ISO/IEC 10646, or the following ISO/IEC 10646 code points:</para>
@@ -2098,9 +2110,9 @@
           </itemizedlist>
           <para xml:id="para_30152420-8f82-4b81-8257-adfb51b7068d">The second group shall be used for ideographic characters. The character sets used will usually be those from Attribute Specific Character Set (0008,0005), value 2 through n, and may use ISO 2022 escapes.</para>
           <para xml:id="para_c0a7f528-096f-45e3-9c89-ff069bb9c265">The third group shall be used for phonetic characters. The character sets used shall be those from Attribute Specific Character Set (0008,0005), value 1 through n, and may use ISO 2022 escapes.</para>
-          <para xml:id="para_62b5c323-852d-46e0-955b-80db36d4714c">Delimiter characters "^" and "=" are taken from the character set specified by value 1 of the Attribute Specific Character Set (0008,0005). If Attribute Specific Character Set (0008,0005), value 1 is not present, the default Character Repertoire ISO-IR 6 shall be used.</para>
-          <para xml:id="para_161f532e-f318-4c78-94c9-28029e1bb2da">At the beginning of the value of the Person Name data element, the following initial condition is assumed: if Attribute Specific Character Set (0008,0005), value 1 is not present, the default Character Repertoire ISO-IR 6 is invoked, and if the Attribute Specific Character Set (0008,0005), value 1 is present, the character set specified by value 1 of the Attribute is invoked.</para>
-          <para xml:id="para_e46ac9b0-fe70-494e-88ab-06f65e6713af">At the end of the value of the Person Name data element, and before the component delimiters "^" and "=", the character set shall be switched to the default character repertoire ISO-IR 6, if value 1 of the Attribute Specific Character Set (0008,0005) is not present. If value 1 of the Attribute Specific Character Set (0008,0005) is present, the character set shall be switched to that specified by value 1 of the Attribute.</para>
+          <para xml:id="para_62b5c323-852d-46e0-955b-80db36d4714c">Delimiter characters "^" and "=" are taken from the character set specified by value 1 of the Attribute Specific Character Set (0008,0005). If Attribute Specific Character Set (0008,0005), value 1 is not present, the Default Character Repertoire ISO-IR 6 shall be used.</para>
+          <para xml:id="para_161f532e-f318-4c78-94c9-28029e1bb2da">At the beginning of the value of the Person Name data element, the following initial condition is assumed: if Attribute Specific Character Set (0008,0005), value 1 is not present, the Default Character Repertoire ISO-IR 6 is invoked, and if the Attribute Specific Character Set (0008,0005), value 1 is present, the character set specified by value 1 of the Attribute is invoked.</para>
+          <para xml:id="para_e46ac9b0-fe70-494e-88ab-06f65e6713af">At the end of the value of the Person Name data element, and before the component delimiters "^" and "=", the character set shall be switched to the Default Character Repertoire ISO-IR 6, if value 1 of the Attribute Specific Character Set (0008,0005) is not present. If value 1 of the Attribute Specific Character Set (0008,0005) is present, the character set shall be switched to that specified by value 1 of the Attribute.</para>
          <para xml:id="para_a6d5007e-b6cc-40ea-8bd4-322ddf316600">The value length of each component group is 64 characters maximum, including the delimiter for the component group. Each combining character (e.g., diacritics or vowel marks) shall be considered a separate character for this maximum length, regardless of how an application may display such combining characters (i.e., combined into the glyph for the base character, or rendered separately).</para>
         </section>
       </section>
@@ -2192,12 +2204,12 @@
           <para xml:id="para_73d96d51-5171-40e8-86ea-dfcf7ff7495a">Multiple binary Values of fixed length shall be a series of concatenated Values without any delimiter.</para>
         </listitem>
       </itemizedlist>
-      <para xml:id="para_f7b0dcd1-b53a-437f-9724-2f02c72ac87c">Each string Value in a multiple valued character string may be of even or odd length, but the length of the entire Value Field (including "\" delimiters) shall be of even length. If padding is required to make the Value Field of even length, a single padding character shall be applied to the end of the Value Field (to the last Value), in which case the length of the last Value may exceed the Length of Value by 1.</para>
+      <para xml:id="para_f7b0dcd1-b53a-437f-9724-2f02c72ac87c">Each string Value in a multi-valued character string may be of even or odd length, but the length of the entire Value Field (including "\" delimiters) shall be of even length. If padding is required to make the Value Field of even length, a single padding character shall be applied to the end of the Value Field (to the last Value), in which case the length of the last Value may exceed the Length of Value by 1.</para>
       <note>
         <para xml:id="para_40ec77dd-aa29-4df9-b2fd-3b8546b1bee7">A padding character may need to be appended to a fixed length character string value in the above case.</para>
       </note>
-      <para xml:id="para_d7569de7-8e63-45e4-a4de-3817073593dd">Only the last UID Value in a multiple valued Data Element with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to ensure that the entire Value Field (including "\" delimiters) is of even length.</para>
-      <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of OB, OD, OF, OL, OW, SQ, UN or UR shall always have a Value Multiplicity of one.</para>
+      <para xml:id="para_d7569de7-8e63-45e4-a4de-3817073593dd">Only the last UID Value in a multi-valued Data Element with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to ensure that the entire Value Field (including "\" delimiters) is of even length.</para>
+        <para xml:id="para_dedc13f4-52b5-4ecd-9f6d-5d3c4c63a6a8">Data Elements with a VR of LT, OB, OD, OF, OL, OW, SQ, ST, UN, UR or UT shall always have a Value Multiplicity of one. See <xref linkend="table_6.2-1" xrefstyle="select: label"/>.</para>
     </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
@@ -3601,7 +3613,8 @@
           </tbody>
         </table>
         <para xml:id="para_c2ac8f4a-9824-420f-a861-6a1c61719ee7">The Pixel Data characteristics included in the JPEG Interchange Format shall be used to decode the compressed data stream.</para>
-        <note>
+        <para xml:id="para_c82ff006-e1a8-46d4-a5db-0f63db0fd123">If APP2 marker segments with an identifier of "ICC_PROFILE" (as defined in Annex B of <xref linkend="biblio_ISOIEC15076-1"/>) are present in the compressed data stream, their concatenated value shall be identical to the value of ICC Profile (0028,2000) Attribute, if present, excluding padding.</para>
+          <note>
           <orderedlist numeration="arabic">
             <listitem>
               <para xml:id="para_651e0fda-0843-4bef-b448-30495fd6330f">These requirements were formerly specified in terms of the "uncompressed pixel data from which the compressed data stream was derived". However, since the form of the "original" uncompressed data stream could vary between different implementations, this requirement is now specified in terms of consistency with what is encapsulated.</para>
@@ -5735,7 +5748,7 @@
           </note>
         </listitem>
         <listitem>
-          <para xml:id="para_00fe30ff-df7d-4afc-b3a3-18fcc70cd2d0">Each component numeric value shall be encoded using the characters 0-9 of the Basic G0 Set of the International Reference Version of ISO 646:1990 (the DICOM default character repertoire).</para>
+          <para xml:id="para_00fe30ff-df7d-4afc-b3a3-18fcc70cd2d0">Each component numeric value shall be encoded using the characters 0-9 of the Basic G0 Set of the International Reference Version of ISO 646:1990 (the DICOM Default Character Repertoire).</para>
         </listitem>
         <listitem>
           <para xml:id="para_0c072cce-30a9-4817-96b8-e0dc1ff2724f">Components shall be separated by the character "." (2EH).</para>
@@ -7081,7 +7094,7 @@
       <para xml:id="para_388e73ba-5381-4d1f-a295-8fc80abd79b9">In order to facilitate interoperability of implementations conforming to the DICOM Standard that elect to use this Transfer Syntax, the following policy is specified:</para>
       <itemizedlist>
         <listitem>
-          <para xml:id="para_6c4b9d15-b230-4bee-8543-001de8d2b954">Any implementation that has elected to support the Deflated Explicit VR Little Endian Transfer Syntax for any Abstract Syntax, shall also support the Explicit VR Little Endian Transfer for that Abstract Syntax</para>
+          <para xml:id="para_6c4b9d15-b230-4bee-8543-001de8d2b954">Any implementation that has elected to support the Deflated Explicit VR Little Endian Transfer Syntax for any Abstract Syntax, shall also support the Explicit VR Little Endian Transfer for that Abstract Syntax.</para>
         </listitem>
       </itemizedlist>
       <note>
@@ -7467,7 +7480,7 @@
   <chapter label="E" status="1" xml:id="chapter_E">
     <title>DICOM Default Character Repertoire (Normative)</title>
     <para xml:id="para_fcee0f24-a472-439c-9cde-ef9984ce13c8">The default repertoire for character strings in DICOM is the Basic G0 Set of the International Reference Version of ISO 646:1990 (ISO IR-6). In addition, the Control Characters LF, FF, CR, TAB and ESC are supported. These control characters are a subset of the C0 set defined in ISO 646:1990 and ISO 6429:1990.</para>
-    <para xml:id="para_d122af03-09da-43f0-8ffd-408f95215e67">The byte encoding of the default character repertoire is pictured in Table E-1. This table can be used to derive both ISO column/row byte values and hex values for encoded representations (see <xref linkend="sect_6.1.1" xrefstyle="select: label"/>).</para>
+    <para xml:id="para_d122af03-09da-43f0-8ffd-408f95215e67">The byte encoding of the Default Character Repertoire is pictured in Table E-1. This table can be used to derive both ISO column/row byte values and hex values for encoded representations (see <xref linkend="sect_6.1.1" xrefstyle="select: label"/>).</para>
     <table frame="box" label="E-1" rules="all" xml:id="table_E-1">
       <caption>DICOM Default Character Repertoire Encoding</caption>
       <thead>
@@ -10043,7 +10056,7 @@
             <para xml:id="para_4007989a-a0bf-48dd-af58-63cbc9e56e20">The multi-byte character set (ISO-IR 149) and single-byte character set (ISO 646) can be used intermixed without any explicit escape sequence after the initial escape sequence. Once ISO 646 has been designated to the GL area and ISO-IR 149 to the GR area, each character set has different code area, thus can be used intermixed. The decoder will check the most significant bit of a character to know whether it is a two byte character in the GR area (high bit one) or a one byte character in the GL area (high bit zero).</para>
           </listitem>
           <listitem>
-            <para xml:id="para_180a73e9-aec2-442b-91e2-81a16a5acd22">In the above example of person name representation, explicit escape sequences precede each Hangul and Hanja string. These escape sequences are to meet the requirements of the code extension technique that specifies a switch to the default character repertoire before delimiters. In the previous example, it is assumed that the default character repertoire (ISO-646) is invoked to G0 code area and no character set to G1 area after delimiters ("^" and "=" signs). See <xref linkend="sect_6.1.2.5.3" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_180a73e9-aec2-442b-91e2-81a16a5acd22">In the above example of person name representation, explicit escape sequences precede each Hangul and Hanja string. These escape sequences are to meet the requirements of the code extension technique that specifies a switch to the Default Character Repertoire before delimiters. In the previous example, it is assumed that the Default Character Repertoire (ISO-646) is invoked to G0 code area and no character set to G1 area after delimiters ("^" and "=" signs). See <xref linkend="sect_6.1.2.5.3" xrefstyle="select: label"/>.</para>
           </listitem>
         </orderedlist>
       </note>

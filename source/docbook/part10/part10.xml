@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2018d - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2018e - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1171,7 +1171,7 @@
         </listitem>
       </orderedlist>
       <note>
-        <para xml:id="para_266abf1e-d013-489f-8944-2247fa7a63bc">Although a File-set Updater (FSU) may include the functions corresponding to a File-set Creator (FSC) and a File-set Reader (FSR), it is not required that implementations supporting an FSU role also support an FSC or an FSR role..</para>
+        <para xml:id="para_266abf1e-d013-489f-8944-2247fa7a63bc">Although a File-set Updater (FSU) may include the functions corresponding to a File-set Creator (FSC) and a File-set Reader (FSR), it is not required that implementations supporting an FSU role also support an FSC or an FSR role.</para>
       </note>
       <para xml:id="para_f9c42d57-114d-4b02-a6b9-f306c9b16380">The use of the concept of roles in DICOM Conformance Statements will result in a more precise expression of the capabilities of implementations supporting DICOM Media Storage. Conforming implementations shall support one of the following choices:</para>
       <orderedlist numeration="loweralpha">

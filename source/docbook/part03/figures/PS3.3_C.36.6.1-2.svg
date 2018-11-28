@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="502px" height="242px" viewBox="0 0 502 242" enable-background="new 0 0 502 242" xml:space="preserve">
+        
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.3 Information Object Definitions
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F5EED6" width="500" height="240"/>
+	<g>
+		<rect x="13.5" y="11.986" fill="#CCDEF0" stroke="#000000" stroke-miterlimit="1" width="475" height="91.038"/>
+		<rect x="18.796" y="18.033" fill="none" width="116.249" height="8.501"/>
+		<text transform="matrix(0.9288 0 0 1 18.7974 25.1279)" font-size="10">Parent Prescription:</text>
+		<rect x="13.5" y="136.64" fill="#B2CEE7" stroke="#000000" stroke-miterlimit="1" width="475" height="93.372"/>
+		<rect x="145.735" y="34.564" fill="#9DD29C" width="220" height="60"/>
+		<rect x="18.796" y="142.687" fill="none" width="116.249" height="14.549"/>
+		<text transform="matrix(0.9288 0 0 1 18.7974 149.8457)" font-size="10">Child Prescriptions:</text>
+		<rect x="152.27" y="41.08" fill="none" width="188.083" height="48.667"/>
+		<text transform="matrix(0.9288 0 0 1 152.2695 48.2402)"><tspan x="0" y="0" font-size="10">Right Oropharynx Cancer Treatment</tspan><tspan x="0" y="15" font-size="10">   </tspan><tspan x="8.336" y="15" font-size="9">• Curative</tspan><tspan x="0" y="25.799" font-size="9">   • Target Dose:: 80 Gy</tspan><tspan x="0" y="36.6" font-size="9">   • Two Phase with FIeld Reduction</tspan></text>
+		<rect x="25.678" y="161.498" fill="#76C37A" width="220" height="60.001"/>
+		<rect x="33.115" y="168.593" fill="none" width="205.133" height="48.666"/>
+		<text transform="matrix(0.9288 0 0 1 33.1108 175.752)"><tspan x="0" y="0" font-size="10">Right Oropharynx and Right Neck Nodal Volumes</tspan><tspan x="0" y="15" font-size="9">   • Target Dose: 28 x 2 Gy = 56 Gy</tspan><tspan x="0" y="25.799" font-size="9">   • IMRT 9  FIelds</tspan><tspan x="0" y="36.6" font-size="9">   • Photons 6X</tspan></text>
+		<rect x="258.488" y="161.205" fill="#76C37A" width="220.002" height="60"/>
+		<rect x="265.271" y="168.593" fill="none" width="188.083" height="48.666"/>
+		<text transform="matrix(0.9288 0 0 1 265.2705 175.752)"><tspan x="0" y="0" font-size="10">Right Oropharynx PTV only</tspan><tspan x="0" y="15" font-size="10">   </tspan><tspan x="8.334" y="15" font-size="9">• Target Dose: 7 x 2 Gy = 14 Gy</tspan><tspan x="0" y="25.799" font-size="9">   • IMRT Field Boost</tspan><tspan x="0" y="36.6" font-size="9">   • Photons 6X</tspan></text>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" points="135.678,149.951 135.678,120.56 
+					253.972,120.56 253.972,93.651 				"/>
+				<g>
+					<polygon fill="#005695" points="139.164,147.573 135.678,160.582 132.191,147.573 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polyline fill="none" stroke="#005695" stroke-width="2" stroke-miterlimit="1" points="368.49,150.651 368.49,120.56 
+					253.972,120.56 253.972,94.352 				"/>
+				<g>
+					<polygon fill="#005695" points="371.977,148.273 368.49,161.282 365.004,148.273 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2018d - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2018e - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -104,6 +104,16 @@
         <date>1994</date>
         <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
       </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3986">
+            <abbrev>RFC3986</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Uniform Resource Identifiers (URI): Generic Syntax</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3986"/>
+            </bibliosource>
+        </biblioentry>
       <biblioentry xml:id="biblio_ISO8509">
         <abbrev>ISO/TR 8509</abbrev>
         <author>
@@ -944,14 +954,18 @@
       <para xml:id="para_7e41d1a2-f104-46ed-94a7-2dd000b2222f">A Service-Object Pair (SOP) Class is defined by the union of an IOD and a DIMSE Service Group. The SOP Class definition contains the rules and semantics that may restrict the use of the services in the DIMSE Service Group or the Attributes of the IOD.</para>
       <para xml:id="para_4027fa1a-af1e-4655-805a-8c5ac9d4a485">The selection of SOP Classes is used by Application Entities to establish an agreed set of capabilities to support their interaction. This negotiation is performed at Association establishment time as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. An extended negotiation allows Application Entities to further agree on specific options within a SOP Class.</para>
       <note>
-        <para xml:id="para_3c1ea27b-1b70-4952-9776-0e277145fafd">The SOP Class as defined in the DICOM Information Model is equivalent in ISO/OSI terminology to the Managed Object Class. Readers familiar with object oriented terminology will recognize the SOP Class operations (and notifications) as comprising the methods of an object class.</para>
-      </note>
-      <section label="6.5.1" status="3" xml:id="sect_6.5.1">
+          <orderedlist>
+              <listitem>
+                  <para xml:id="para_3c1ea27b-1b70-4952-9776-0e277145fafd">The SOP Class as defined in the DICOM Information Model is equivalent in ISO/OSI terminology to the Managed Object Class. Readers familiar with object oriented terminology will recognize the SOP Class operations (and notifications) as comprising the methods of an object class.</para>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_7becf42d-fd73-4273-9130-6398831f2c6f">SOP Class Specifications play a central role in defining DICOM conformance. They allow DICOM Application Entities to select a well-defined application level subset of this Standard to which they may claim conformance. See <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+              </listitem>
+          </orderedlist>
+       </note>
+        <section label="6.5.1" status="3" xml:id="sect_6.5.1">
         <title>Normalized and Composite SOP Classes</title>
         <para xml:id="para_836bd197-80a7-4548-bf86-136a5227ed3c">DICOM defines two types of SOP Classes, Normalized and Composite. Normalized SOP Classes are defined as the union of a Normalized IOD and a set of DIMSE-N Services. Composite SOP Classes are defined as the union of a Composite IOD and a set of DIMSE-C Services.</para>
-        <note>
-          <para xml:id="para_7becf42d-fd73-4273-9130-6398831f2c6f">SOP Class Specifications play a central role for defining DICOM conformance requirements. It allows DICOM Application Entities to select a well-defined application level subset of this Standard to which they may claim conformance. See <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
-        </note>
       </section>
     </section>
     <section label="6.6" status="2" xml:id="sect_6.6">
@@ -1255,7 +1269,14 @@
       </itemizedlist>
       <section label="B.3.1" status="3" xml:id="sect_B.3.1">
         <title>Extended Negotiation</title>
-        <para xml:id="para_40b932fb-94ea-4279-b8f8-9374539880fa">At the time of Association establishment implementations may exchange information about their respective capabilities, as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>. SCUs and SCPs may use the SOP Class Extended Negotiation Sub-Item Structure as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> to exchange information about the level of conformance and options supported. SCUs may use the SOP Class Common Extended Negotiation Sub-Item defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> to exchange information about the nature of the SOP Classes.</para>
+        <para xml:id="para_40b932fb-94ea-4279-b8f8-9374539880fa">At the time of Association establishment implementations may exchange information about their respective capabilities,
+            as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>.
+            SCUs and SCPs may use the SOP Class Extended Negotiation Sub-Item Structure as described in
+            <olink targetdoc="PS3.7" targetptr="sect_D.3.3.5" xrefstyle="select: docname label"/>
+            to exchange information about the level of conformance and options supported.
+            SCUs may use the SOP Class Common Extended Negotiation Sub-Item defined in
+            <olink targetdoc="PS3.7" targetptr="sect_D.3.3.6" xrefstyle="select: docname label"/>
+            to exchange information about the nature of the SOP Classes.</para>
         <para xml:id="para_41418307-c7d0-4ce9-8efb-14085ba10117">Extended negotiation is optional. In the event that either the SCU or the SCP does not support extended negotiation, the defaults shall apply.</para>
         <section label="B.3.1.1" status="4" xml:id="sect_B.3.1.1">
           <title>Service-Class-Application-Information (A-ASSOCIATE-RQ)</title>
@@ -3519,6 +3540,32 @@
               </para>
             </td>
           </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6585c3b9-bc8c-4f8f-bfd6-1da09c509ca2">Planned Imaging Agent Administration SR Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d04b3a68-6426-41d6-94fd-9950362b194b">1.2.840.10008.5.​1.​4.​1.​1.​88.​74</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_19c20a93-e7a0-433c-8756-bf2964e2df6e">
+                        <olink targetdoc="PS3.3" targetptr="sect_A.35.19" xrefstyle="select: title"/>
+                    </para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_29f66519-3662-4057-8e0a-0623f6d64cb9">Performed Imaging Agent Administration SR Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3eb2e796-35cf-4d15-a69f-7c53c591edaf">1.2.840.10008.5.​1.​4.​1.​1.​88.​75</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c47dba05-264e-4fad-b8b5-e0891edeee1b">
+                        <olink targetdoc="PS3.3" targetptr="sect_A.35.20" xrefstyle="select: title"/>
+                    </para>
+                </td>
+            </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_01e8db9e-925b-4b06-86bf-f3914e261ce4">Content Assessment Results Storage</para>
@@ -3752,6 +3799,32 @@
               </para>
             </td>
           </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a63fd386-4c39-4531-b616-53122357c758">RT Physician Intent Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f9f30818-9116-4a5c-85de-c2fd01b651d3">1.2.840.10008.5.1.4.1.1.481.10</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_240aca64-8176-4811-887f-70d022c44e3f">
+                        <olink targetdoc="PS3.3" targetptr="sect_A.86.1.2" xrefstyle="select: title"/>
+                    </para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b255adb7-bd84-431a-a533-1401a49938ba">RT Segment Annotation Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2bfe6c4e-5d09-4269-a8dd-7a3c9ce8c902">1.2.840.10008.5.1.4.1.1.481.11</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a7bb3183-aee7-406e-84bb-8aaa9d7123ed">
+                        <olink targetdoc="PS3.3" targetptr="sect_A.86.1.3" xrefstyle="select: title"/>
+                    </para>
+                </td>
+            </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f4e800a4-4d22-4bcf-8569-5bdad38c0a56">RT Beams Delivery Instruction Storage</para>
@@ -4386,16 +4459,17 @@
           <note>
             <orderedlist>
               <listitem>
-                <para xml:id="para_431a64ef-6f8a-464b-9e8f-fb8ff87a6515">For example, the "-" character is not valid for the DA, DT and TM VRs but is used for range matching.</para>
+                <para xml:id="para_431a64ef-6f8a-464b-9e8f-fb8ff87a6515">For example, the "-" character is not valid for the DA, DT and TM VRs but is used for Range Matching.
+                    The wild card characters "*" and "?" are not valid for the CS VR but are used for Wild Card Matching.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_d026b6cf-008a-42b2-89da-14f0bb396001">When character sets other than the default character repertoire are used, then the rules in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply, such as with respect to the use of the 05/12 "\" (BACKSLASH) (in ISO IR 6) or 05/12 "¥" (YEN SIGN) (in ISO IR 14).</para>
+                <para xml:id="para_d026b6cf-008a-42b2-89da-14f0bb396001">When character sets other than the Default Character Repertoire are used, then the rules in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply, such as with respect to the use of the 05/12 "\" (BACKSLASH) (in ISO IR 6) or 05/12 "¥" (YEN SIGN) (in ISO IR 14).</para>
               </listitem>
             </orderedlist>
           </note>
           <para xml:id="para_246393fa-0db9-43b1-9533-a1122227799c">The total length of the Key Attribute may exceed the length as specified in the VR in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. The Value Multiplicity (VM) may be larger than the VM specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> for the Key Attribute, as defined for particular Matching Type.</para>
           <para xml:id="para_82a8a72e-10bd-4d64-809d-2dde8e395f9e">The Specific Character Set (0008,0005) Attribute may be present in the Identifier but is never matched. Rather, it specifies how other Attributes are encoded in the Request and Response Identifiers.</para>
-          <para xml:id="para_3fc82b2e-8c3b-4739-8ebe-5b603e0f0673">It may influence how matching of other Attributes is performed. If Specific Character Set (0008,0005) is absent, then the default character repertoire shall be used. Specific Character Set (0008,0005) shall not have a zero length value.</para>
+          <para xml:id="para_3fc82b2e-8c3b-4739-8ebe-5b603e0f0673">It may influence how matching of other Attributes is performed. If Specific Character Set (0008,0005) is absent, then the Default Character Repertoire shall be used. Specific Character Set (0008,0005) shall not have a zero length value.</para>
           <para xml:id="para_cb375a80-0fd7-4782-98b2-29f35931271e">Specific Character Set (0008,0005) may have multiple values if escape sequences are used to switch between character repertoires within values.</para>
           <para xml:id="para_ff6d4d84-8d61-460d-86dc-cc6568aa2469">If the SCP does not support the value(s) of Specific Character Set (0008,0005) in the Request Identifier, then the manner in which matching is performed is undefined and shall be specified in the conformance statement.</para>
           <note>
@@ -4411,21 +4485,24 @@
           <para xml:id="para_1f9a6aae-93b6-4973-b456-b962790c75c2">The Timezone Offset From UTC (0008,0201) Attribute may be present in the Identifier but is not matched if Timezone query adjustment is negotiated. If Timezone query adjustment is negotiated, it specifies how Attribute values of VR of DT and TM (including related Attribute values of VR of DA, if present) are interpreted in the Request and Response Identifiers if those values lack a specific time zone offset specification.</para>
           <section label="C.2.2.2.1" status="5" xml:id="sect_C.2.2.2.1">
             <title>Single Value Matching</title>
-            <para xml:id="para_33957686-3953-4a04-b30a-6cfc1938bbf3">If the value specified for a Key Attribute in a request is non-zero length and if it is:</para>
+              <para xml:id="para_33957686-3953-4a04-b30a-6cfc1938bbf3">If the value specified for a Key Attribute in a request is non-zero length and if it is not of VR SQ and:</para>
             <orderedlist numeration="loweralpha">
               <listitem>
-                <para xml:id="para_4f144eb2-7834-4b2d-a635-829ecef27cb1">not of VR of DA, TM or DT and contains no wild card characters</para>
+                  <para xml:id="para_4f144eb2-7834-4b2d-a635-829ecef27cb1">of VR of AE, CS, LO, LT, PN, SH, ST, UC, UR or UT and contains no wild card characters, or</para>
               </listitem>
               <listitem>
-                <para xml:id="para_ab1103ab-b157-43b4-9ef5-661084ad010f">of VR of DA, TM or DT and contains a single value with no "-"</para>
+                <para xml:id="para_ab1103ab-b157-43b4-9ef5-661084ad010f">of VR of DA, TM or DT and contains a single value with no "-", or</para>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_f4240f71-7924-4850-901c-9910dcddb6c0">of any other VR</para>
               </listitem>
             </orderedlist>
-            <para xml:id="para_cbd0128a-7ff8-4271-b4e7-e9c379d0a883">then single value matching shall be performed. Except for Attributes with a PN VR, only entities with values that match exactly the value specified in the request shall match. This matching is case-sensitive, i.e., sensitive to the exact encoding of the key Attribute value in character sets where a letter may have multiple encodings (e.g., based on its case, its position in a word, or whether it is accented).</para>
+            <para xml:id="para_cbd0128a-7ff8-4271-b4e7-e9c379d0a883">then Single Value Matching shall be performed. Except for Attributes with a PN VR, only entities with values that match exactly the value specified in the request shall match. This matching is case-sensitive, i.e., sensitive to the exact encoding of the key Attribute value in character sets where a letter may have multiple encodings (e.g., based on its case, its position in a word, or whether it is accented).</para>
             <section label="C.2.2.2.1.1" status="6" xml:id="sect_C.2.2.2.1.1">
               <title>Attributes of VR of PN</title>
               <para xml:id="para_d18005af-0769-4870-bbec-b6aebd090adf">For Attributes with a PN VR (e.g., Patient Name (0010,0010)), an application may perform literal matching that is either case-sensitive, or that is insensitive to some or all aspects of case, position, accent, or other character encoding variants.</para>
               <note>
-                <para xml:id="para_1387596f-a203-4ce9-b0f7-f901a1aa8b0c">For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; wild card matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
+                <para xml:id="para_1387596f-a203-4ce9-b0f7-f901a1aa8b0c">For multi-component names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally as a single string. E.g., "Wang^XiaoDong=王^小東" may or may not match "Wang^XiaoDong" or "王^小東"; Wild Card Matching without the component group delimiter, such as "*Wang^XiaoDong*" or "*王^小東 *" may be necessary.</para>
               </note>
               <para xml:id="para_ef61aabe-1c74-445e-a239-45b34a3b0d58">If extended negotiation of fuzzy semantic matching rather than literal matching of PN VR is successful, not only may matching be insensitive to case, position, accent, and character encoding (including combining characters), but in addition other techniques such as phonetic matching may be applied.</para>
               <note>
@@ -4456,8 +4533,8 @@
               <para xml:id="para_d0adc3ed-2fdb-481b-a58f-1ba755aed8fb">However if fuzzy semantic matching of PN Attributes has been negotiated, matching by the SCP may result in responses that are not obviously related to the request, hence care should be taken if any additional filtering of responses is performed by the SCU. For example, if phonetic matching is performed, a query for "Swain" might well return "Swayne", or if name component order insensitive matching is performed, a query for "Smith^Mary" might well return "Mary^Smith" or "Mary Smith" or "Smith, Mary". Fuzzy semantic matching may also take into account separate single-byte, ideographic and phonetic name component groups.</para>
             </section>
             <section label="C.2.2.2.1.2" status="6" xml:id="sect_C.2.2.2.1.2">
-              <title>Attributes of VR of PN, AE, LO, SH, ST, LT and UT</title>
-              <para xml:id="para_d25cd1f5-2dd6-44cf-bdd6-977eb0e875e5">The PN, AE, LO, SH, ST, LT, and UT VRs allow the presence of wild card matching characters "*" and "?". Single value matching against such characters is not supported. See <xref linkend="sect_C.2.2.2.4" xrefstyle="select: label"/>.</para>
+                <title>Attributes of VR of AE, CS, LO, LT, PN, SH, ST, UC, UR and UT</title>
+                <para xml:id="para_d25cd1f5-2dd6-44cf-bdd6-977eb0e875e5">The AE, LO, LT, PN, SH, ST, UC, UR and UT VRs allow the presence of wild card characters "*" and "?". Wild card matching is also defined for CS values. Single value matching against such characters is not supported. See <xref linkend="sect_C.2.2.2.4" xrefstyle="select: label"/>.</para>
             </section>
             <section label="C.2.2.2.1.3" status="6" xml:id="sect_C.2.2.2.1.3">
               <title>Attributes of VR of DA, DT or TM</title>
@@ -4480,13 +4557,13 @@
                     </itemizedlist>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_b64e19da-73ce-4072-b6a9-71c1197ae221">If an application is concerned about how single value matching of dates and times is performed by another application, it may consider using range matching instead, which is always performed by meaning, with both values in the range the same.</para>
+                    <para xml:id="para_b64e19da-73ce-4072-b6a9-71c1197ae221">If an application is concerned about how Single Value Matching of dates and times is performed by another application, it may consider using Range Matching instead, which is always performed by meaning, with both values in the range the same.</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_8ad311db-b04e-423f-9e0a-6418187c2d1c">Exclusion of the "-" character for single value matching implies that a Key Attribute with a VR of DT may not contain a negative offset from Universal Coordinated Time (UTC) if single value matching is intended. Use of the "-" character in values of VR of TM, DA and DT indicates range matching.</para>
+                    <para xml:id="para_8ad311db-b04e-423f-9e0a-6418187c2d1c">Exclusion of the "-" character for Single Value Matching implies that a Key Attribute with a VR of DT may not contain a negative offset from Universal Coordinated Time (UTC) if Single Value Matching is intended. Use of the "-" character in values of VR of TM, DA and DT indicates Range Matching.</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_52197e93-7a88-48cc-bb1e-e7535201bafc">If an application is in a local time zone that has a negative offset then it cannot perform single value matching using a local time notation. Instead, it can convert the Key Attribute value to UTC and use an explicit suffix of "+0000".</para>
+                    <para xml:id="para_52197e93-7a88-48cc-bb1e-e7535201bafc">If an application is in a local time zone that has a negative offset then it cannot perform Single Value Matching using a local time notation. Instead, it can convert the Key Attribute value to UTC and use an explicit suffix of "+0000".</para>
                   </listitem>
                 </orderedlist>
               </note>
@@ -4505,24 +4582,34 @@
           </section>
           <section label="C.2.2.2.4" status="5" xml:id="sect_C.2.2.2.4">
             <title>Wild Card Matching</title>
-            <para xml:id="para_b13e6046-8894-4068-a8e7-e11b97ecfdac">If the Attribute is not of VR of DA, DT, TM, SL, SS, US, UL, FL, FD, OB, OW, OD, OF, OL, UN, DS, IS, AS, UI and the value specified in the request contains any occurrence of an "*" or a "?", then "*" shall match any sequence of characters (including a zero length value) and "?" shall match any single character. This matching is case sensitive, except for Attributes with a PN VR (e.g., Patient Name (0010,0010)).</para>
-            <para xml:id="para_46e6bdd8-87c6-477a-82c3-ecf5734eef86">For Attributes with a PN VR, including the case of extended negotiation of fuzzy semantic matching, wild card matching is implementation dependent and shall be specified in the conformance statement.</para>
+              <para xml:id="para_b13e6046-8894-4068-a8e7-e11b97ecfdac">If the Attribute is of VR of AE, CS, LO, LT, PN, SH, ST, UC, UR, UT and the value specified in the request contains any occurrence of an "*" or a "?", then "*" shall match any sequence of characters (including a zero length value) and "?" shall match any single character. This matching is case sensitive, except for Attributes with a PN VR (e.g., Patient Name (0010,0010)).</para>
+            <para xml:id="para_46e6bdd8-87c6-477a-82c3-ecf5734eef86">For Attributes with a PN VR, including the case of extended negotiation of fuzzy semantic matching, Wild Card Matching is implementation dependent and shall be specified in the conformance statement.</para>
             <note>
               <orderedlist>
                 <listitem>
-                  <para xml:id="para_1ea9fb01-8b83-4705-aa7d-4610f77e92c3">Wild card matching on a value of "*" is equivalent to universal matching.</para>
+                  <para xml:id="para_1ea9fb01-8b83-4705-aa7d-4610f77e92c3">Wild card matching on a value of "*" is equivalent to Universal Matching.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_887a7304-d288-44b5-8a74-6bf023b0aa25">The wild card matching method specified by DICOM might not be supported by some non-DICOM multi-byte character text processors.</para>
+                  <para xml:id="para_887a7304-d288-44b5-8a74-6bf023b0aa25">The Wild Card Matching method specified by DICOM might not be supported by some non-DICOM multi-byte character text processors.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_255d8119-72eb-4841-9c8f-dafef36ca526">For multi-component group names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally. E.g., "*=*" or "*=*=*" may or may not return all strings, and hence is not equivalent to "*", nor to universal matching.</para>
+                  <para xml:id="para_255d8119-72eb-4841-9c8f-dafef36ca526">For multi-component group names, the component group delimiter "=" (3DH) may be present in the Key Attribute value, but may give unexpected results if the SCP does not support matching on separate components but interprets the entire value literally. E.g., "*=*" or "*=*=*" may or may not return all strings, and hence is not equivalent to "*", nor to Universal Matching.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_a9c4bf58-43d2-4380-b6d0-06dbacfd0904">Using attributes with VR of AE, LO, PN and SH as matching keys will not allow single value matching on values that contain characters "*" and "?" - such queries will always be treated as queries with wildcard matching.</para>
+                    <para xml:id="para_a9c4bf58-43d2-4380-b6d0-06dbacfd0904">Attributes with VR of AE, LO, PN, SH and UC may contain wild card characters "*" and "?".
+                        Attempts to match on a string explicitly containing "*" or "?" will be treated as Wild Card Matching and thus may return multiple results rather than a single one.
+                        There is no mechanism for Single Value Matching on values that contain characters "*" and "?" for these VRs - such queries will always be treated as queries with Wild Card Matching.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_2f439270-4a78-4d27-87d9-dcfeec0ca3e4">Attributes with VR of ST, LT and UT are intended for conveying narrative text and may contain wildcard characters "*" and "?". Attempts to match on a string explicitly containing "*" or "?" will be treated as wildcard matching and thus may return multiple results rather than a single one.</para>
+                    <para xml:id="para_2f439270-4a78-4d27-87d9-dcfeec0ca3e4">Attributes with VR of ST, LT and UT are intended for conveying narrative text and may contain wild card characters "*" and "?".
+                        Attempts to match on a string explicitly containing "*" or "?" will be treated as Wild Card Matching and thus may return multiple results rather than a single one.
+                        There is no mechanism for Single Value Matching on values that contain characters "*" and "?" for these VRs - such queries will always be treated as queries with Wild Card Matching.</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_d90fbf38-91bb-419f-acb6-01ac94630001">Attributes with VR of UR may contain wild card characters "*" and "?" as delimiters.
+                        These characters are reserved according to <xref linkend="biblio_RFC_3986"/> Section 2.
+                        Attempts to match on a string explicitly containing "*" or "?" will be treated as Wild Card Matching and thus may return multiple results rather than a single one.
+                        There is no mechanism for Single Value Matching on values that contain characters "*" and "?" for these VRs - such queries will always be treated as queries with Wild Card Matching.</para>
                 </listitem>
               </orderedlist>
             </note>
@@ -4587,8 +4674,8 @@
               <title>Range Matching General Rules</title>
               <para xml:id="para_4841d78d-706a-42b7-b3f3-0306acbdede1">If extended negotiation of combined datetime matching is successful,
                 then a pair of Attributes that are of VR DA and TM,
-                both of which specify the same form of range matching,
-                shall have the concatenated string values of each range matching component matched as if they were a single Attribute of VR DT.</para>
+                both of which specify the same form of Range Matching,
+                shall have the concatenated string values of each Range Matching component matched as if they were a single Attribute of VR DT.</para>
               <note>
                 <para xml:id="para_8d28439d-016d-478c-9827-f720491fc84a">For example, a Study Date of "20060705-20060707" and a Study Time of "1000-1800" will match the time period of July 5, 10am until July 7, 6pm, rather than the three time periods of 10am until 6pm on each of July 5, July 6 and July 7, as would be the case without extended negotiation.</para>
               </note>
@@ -4605,7 +4692,7 @@
             <para xml:id="para_99424971-3659-43fb-b39e-346d38fc29b2">If a Key Attribute in the Identifier of a C-FIND request needs to be matched
               against an Attribute structured as a Sequence of Items (VR of SQ), the Key Attribute shall be structured as a Sequence of Items with a single Item. This Item may contain zero or more Item Key Attributes. Each Item Key Attribute matching shall be performed on an Item by Item basis. The types of matching defined in <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/> shall be used: Single Value Matching, List of UID Matching, Universal Matching, Wild Card Matching, Range Matching and Sequence Matching (recursive Sequence matching).</para>
             <para xml:id="para_b265cafa-7c70-4884-93a7-0ed65d549b85">If all the Item Key Attributes match, for at least one of the Items of the Attribute against which the match is performed, a successful match is generated. A sequence of matching Items containing only the requested Attributes is returned in the corresponding C-FIND responses.</para>
-            <para xml:id="para_f93137be-3799-40e9-9ea9-6c175db7ea4d">If the Key Attribute in the Identifier of a C-FIND request contains no Key Item Attribute (zero-length Item Tag), then all entities shall match this Attribute. This provides a universal matching like mechanism to request that the selected Key Attribute value (the entire Sequence of Items) be returned in corresponding C-FIND responses.</para>
+            <para xml:id="para_f93137be-3799-40e9-9ea9-6c175db7ea4d">If the Key Attribute in the Identifier of a C-FIND request contains no Key Item Attribute (zero-length Item Tag), then all entities shall match this Attribute. This provides a Universal Matching like mechanism to request that the selected Key Attribute value (the entire Sequence of Items) be returned in corresponding C-FIND responses.</para>
           </section>
         </section>
         <section label="C.2.2.3" status="4" xml:id="sect_C.2.2.3">
@@ -4782,8 +4869,8 @@
                 <para xml:id="para_45da214a-7886-42b8-91da-37919c7b7eb3">The anatomic regions of interest in this Study (i.e., external anatomy, surface anatomy, or general region of the body).</para>
                 <para xml:id="para_251bf3de-7a7f-4515-aafc-6dc02cffded6">One or more Items are permitted in this Sequence.</para>
                 <note>
-                  <para xml:id="para_802acbd3-e255-4bac-9888-3d0acc2b9479">If the Instances in the Study contain Anatomic Region Sequence (0008,2218), then the Items of this Sequence may be the union of the codes in the Instances. Alternatively, multiple (usually contiguous) anatomic regions might be combined into a single code. E.g., (T-D3000, SRT, "Chest"), (T-D4000, SRT, "Abdomen") and (T-D6000, SRT, "Pelvis") might be combined into (R-FAB56, SRT, "Chest, Abdomen and Pelvis").</para>
-                  <para xml:id="para_8acc43ef-4b40-45af-a879-dadd13babb63">If Instances in the Study do not contain Anatomic Region Sequence (0008,2218) but do contain Body Part Examined (0018,0015), then codes equivalent to recognized values of Body Part Examined (0018,0015) may be used. See <olink targetdoc="PS3.16" targetptr="chapter_L" xrefstyle="template:Annex %n “%t” in PS3.16"/> for standard equivalent values. E.g., if an Instance contained Body Part Examined (0018,0015) with a value of "CHEST", then this Sequence might contain (T-D3000, SRT, "Chest").</para>
+                  <para xml:id="para_802acbd3-e255-4bac-9888-3d0acc2b9479">If the Instances in the Study contain Anatomic Region Sequence (0008,2218), then the Items of this Sequence may be the union of the codes in the Instances. Alternatively, multiple (usually contiguous) anatomic regions might be combined into a single code. E.g., <link xl:href="http://snomed.info/id/51185008" xl:show="new">(T-D3000, SRT, "Chest")</link>, <link xl:href="http://snomed.info/id/113345001" xl:show="new">(T-D4000, SRT, "Abdomen")</link> and <link xl:href="http://snomed.info/id/12921003" xl:show="new">(T-D6000, SRT, "Pelvis")</link> might be combined into <link xl:href="http://snomed.info/id/416775004" xl:show="new">(R-FAB56, SRT, "Chest, Abdomen and Pelvis")</link>.</para>
+                  <para xml:id="para_8acc43ef-4b40-45af-a879-dadd13babb63">If Instances in the Study do not contain Anatomic Region Sequence (0008,2218) but do contain Body Part Examined (0018,0015), then codes equivalent to recognized values of Body Part Examined (0018,0015) may be used. See <olink targetdoc="PS3.16" targetptr="chapter_L" xrefstyle="template:Annex %n “%t” in PS3.16"/> for standard equivalent values. E.g., if an Instance contained Body Part Examined (0018,0015) with a value of "CHEST", then this Sequence might contain <link xl:href="http://snomed.info/id/51185008" xl:show="new">(T-D3000, SRT, "Chest")</link>.</para>
                 </note>
               </td>
             </tr>
@@ -5477,7 +5564,7 @@
             <para xml:id="para_9121674b-1eba-4abd-bca2-22a61760245a">More than one option may be agreed upon.</para>
             <section label="C.4.1.3.2.1" status="6" xml:id="sect_C.4.1.3.2.1">
               <title>Relational-Queries</title>
-              <para xml:id="para_f14b1872-270b-4deb-99da-d7e6ed8ccbb6">The C-FIND Service with relational-queries allows any combination of keys at any level in the hierarchy. At the lowest level, a query using the relational-queries shall contain the Unique Key for that level with either a single value match, a wild card match, or a universal match. Support for relational-queries removes the baseline restriction that a Unique Key shall be specified for all levels above the Query/Retrieve level in the C-FIND request.</para>
+              <para xml:id="para_f14b1872-270b-4deb-99da-d7e6ed8ccbb6">The C-FIND Service with relational-queries allows any combination of keys at any level in the hierarchy. At the lowest level, a query using the relational-queries shall contain the Unique Key for that level with either a Single Value Match, a Wild Card Match, or a Universal Match. Support for relational-queries removes the baseline restriction that a Unique Key shall be specified for all levels above the Query/Retrieve level in the C-FIND request.</para>
               <para xml:id="para_661d5f1f-5388-47b5-951f-e40d39d0c4b2">The C-FIND SCP shall perform matching based on all keys specified in the C-FIND request regardless of the Query/Retrieve level.</para>
             </section>
             <section label="C.4.1.3.2.2" status="6" xml:id="sect_C.4.1.3.2.2">
@@ -5575,7 +5662,7 @@
                   <para xml:id="para_38bfca18-2255-4d6f-90c5-0d06881e5988">Conditionally, the Attribute Query/Retrieve View (0008,0053). This Attribute may be included if Enhanced Multi-Frame Image Conversion has been accepted during Association Extended Negotiation. It shall not be included otherwise.</para>
                 </listitem>
               </itemizedlist>
-              <para xml:id="para_a3f47d4c-e529-4570-9fec-12efc1ada2e4">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the default character repertoire.</para>
+              <para xml:id="para_a3f47d4c-e529-4570-9fec-12efc1ada2e4">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the Default Character Repertoire.</para>
               <para xml:id="para_1edaed3a-3c6c-4552-9b6e-c40720103ec5">The Unique Keys at each level of the hierarchy and the values allowable for the level of the retrieval shall be defined in the SOP Class definition for the Query/Retrieve Information Model.</para>
               <note>
                 <orderedlist>
@@ -6047,7 +6134,7 @@
                   <para xml:id="para_9dcee53d-7cc4-4d8b-9e44-6ed507924b68">Conditionally, the Attribute Query/Retrieve View (0008,0053). This Attribute may be included if Enhanced Multi-Frame Image Conversion has been accepted during Association Extended Negotiation. It shall not be included otherwise.</para>
                 </listitem>
               </itemizedlist>
-              <para xml:id="para_1aaf7e8b-71eb-4059-9844-cefc89366596">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the default character repertoire.</para>
+              <para xml:id="para_1aaf7e8b-71eb-4059-9844-cefc89366596">Specific Character Set (0008,0005) shall be present if Patient ID (0010,0020) is using a character set other than the Default Character Repertoire.</para>
               <para xml:id="para_036fc38a-4a9b-4b4a-bea4-f9d17a6d1c33">The Unique Keys at each level of the hierarchy and the values allowable for the level of the retrieval shall be defined in the SOP Class definition for the Query/Retrieve Information Model.</para>
               <note>
                 <orderedlist>
@@ -6509,7 +6596,7 @@
               <para xml:id="para_b204a92d-dd30-4073-b899-21768b47c0df">no relational-query support</para>
             </listitem>
             <listitem>
-              <para xml:id="para_b207da64-614e-468f-a120-11552c031dc9">separate (independent) range matching of date and time Attributes</para>
+              <para xml:id="para_b207da64-614e-468f-a120-11552c031dc9">separate (independent) Range Matching of date and time Attributes</para>
             </listitem>
             <listitem>
               <para xml:id="para_7b80fea9-640c-4013-a7aa-e0f22cb7a32c">literal matching of person names with case sensitivity unspecified</para>
@@ -6527,7 +6614,7 @@
               <para xml:id="para_f443a99e-f3e1-45bc-aff9-842a1f61c94c">relational-query support by the Association-requester</para>
             </listitem>
             <listitem>
-              <para xml:id="para_80f0c17c-9eec-4adc-9c41-3feb72f1c1ab">combined date and time range matching by the Association-requester</para>
+              <para xml:id="para_80f0c17c-9eec-4adc-9c41-3feb72f1c1ab">combined date and time Range Matching by the Association-requester</para>
             </listitem>
             <listitem>
               <para xml:id="para_8181d6af-c385-48bd-8877-7b34ffeb30f6">literal or fuzzy semantic matching of person names by the Association-requester</para>
@@ -6592,7 +6679,7 @@
                     <para xml:id="para_be1a9208-6503-4891-8af9-a9e659d790d7">Date-time matching</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_600760c1-237b-4fbf-b4c1-7a4a8c0b00e4">This byte field defines whether or not combined date and time Attribute range matching is requested by the Association-requester. It shall be encoded as an unsigned binary integer and shall use one of the following values</para>
+                    <para xml:id="para_600760c1-237b-4fbf-b4c1-7a4a8c0b00e4">This byte field defines whether or not combined date and time Attribute Range Matching is requested by the Association-requester. It shall be encoded as an unsigned binary integer and shall use one of the following values</para>
                     <para xml:id="para_dc42ec90-f649-4166-9973-ef185d76b3b8">0 - combined matching not requested</para>
                     <para xml:id="para_43b3ab13-a426-4bd4-97c0-73ed368c9fe8">1 - combined matching requested</para>
                   </td>
@@ -6685,7 +6772,7 @@
                     <para xml:id="para_4b6fdb09-73f8-4f30-b69a-efeb16f22497">Date-time matching</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_b5ca11de-5318-42ac-b36f-8b2f51a5c664">This byte field defines whether or not combined date and time Attribute range matching will be performed by the Association-acceptor. It shall be encoded as an unsigned binary integer and shall use one of the following values</para>
+                    <para xml:id="para_b5ca11de-5318-42ac-b36f-8b2f51a5c664">This byte field defines whether or not combined date and time Attribute Range Matching will be performed by the Association-acceptor. It shall be encoded as an unsigned binary integer and shall use one of the following values</para>
                     <para xml:id="para_c5ef5f07-88fa-485d-a75e-697a85415f9a">0 - combined matching not performed</para>
                     <para xml:id="para_edcd1ee4-eced-4aed-917c-219d62147bae">1 - combined matching performed</para>
                   </td>
@@ -9082,12 +9169,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_b33cbc57-4fb5-4653-82a8-bb938198b02a">The DIMSE Services shown in <xref linkend="table_F.7.1-1" xrefstyle="select: label"/> are applicable to the Modality Performed Procedure Step IOD under the Modality Performed Procedure Step SOP Class.</para>
         <table frame="box" label="F.7.1-1" rules="all" xml:id="table_F.7.1-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Modality Performed Procedure Step</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_d18790da-381e-4b2d-9c69-309fffa58a82">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -11261,12 +11348,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_89aacbfd-82c4-4880-b796-09b6589f16d9">The DIMSE Services shown in <xref linkend="table_F.8.1-1" xrefstyle="select: label"/> are applicable to the Modality Performed Procedure Step IOD under the Modality Performed Procedure Step Retrieve SOP Class.</para>
         <table frame="box" label="F.8.1-1" rules="all" xml:id="table_F.8.1-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Modality Performed Procedure Step Retrieve</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_4aa4a1f7-070f-49d8-9459-19d954a39e41">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -12647,12 +12734,12 @@
           <xref linkend="table_F.9.1-1" xrefstyle="select: label"/> shows the DIMSE-N Services applicable to the Modality Performed Procedure Step IOD under the Modality Performed Procedure Step Notification SOP Class.</para>
         <para xml:id="para_a8c18f7d-114b-4396-91d4-154d7933df9e">The DIMSE-N Services and Protocol are specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
         <table frame="box" label="F.9.1-1" rules="all" xml:id="table_F.9.1-1">
-          <caption>DIMSE-N Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Modality Performed Procedure Step Notification</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_2169f2d2-a222-45eb-b7e5-773c149343ac">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -13010,7 +13097,7 @@
       <section label="H.2.4" status="3" xml:id="sect_H.2.4">
         <title>Usage Specifications</title>
         <para xml:id="para_afa65590-f50d-4c2c-afaf-8a11bab17875">The building blocks of SOP Classes are Modules and DIMSE Services. The Modules contain related Attributes, which are Mandatory(M) or Optional (U). The usage may be different for the SCU and SCP. The usage is specified as a pair of letters: the former indicating the SCU usage, the latter indicating the SCP usage.</para>
-        <para xml:id="para_19074cc8-2f01-430b-8af4-c46f53bda862">DIMSE Services may be Mandatory (M) or Optional (U) as specified in Section 5.4 of this Part.</para>
+        <para xml:id="para_19074cc8-2f01-430b-8af4-c46f53bda862">DIMSE Service Group may be Mandatory (M) or Optional (U) as specified in Section 5.4 of this Part.</para>
         <para xml:id="para_858fa6a6-e8a6-40b7-844e-6a12e69c82e5">The meaning and behavior of the usage specification for Attributes for the Print Management Service Class are:</para>
         <variablelist>
           <varlistentry>
@@ -13043,7 +13130,7 @@
       </section>
       <section label="H.2.5" status="3" xml:id="sect_H.2.5">
         <title>Status Code Categories</title>
-        <para xml:id="para_c82863ec-d25c-4d9c-ad74-7c057b4fa76d">For every operation requested on a SOP class of the print management service class, a status code will be returned. These status codes are grouped into success, warning or failure categories.</para>
+        <para xml:id="para_c82863ec-d25c-4d9c-ad74-7c057b4fa76d">For every operation requested on a SOP Class of the print management service class, a status code will be returned. These status codes are grouped into success, warning or failure categories.</para>
         <note>
           <para xml:id="para_ea27fb95-e652-482b-9fa0-83b7ec3bf1f8">These status codes categories are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
           <itemizedlist mark="none">
@@ -13428,7 +13515,7 @@
             <para xml:id="para_a6c12dfa-5bcf-4831-8514-678d78369ef5">for each of the supported SOP and Meta SOP Classes:</para>
           </listitem>
           <listitem>
-            <para xml:id="para_21795154-f932-4a10-86ec-afaffdc74fae">list of supported optional SOP Class Attributes and DIMSE Service Elements</para>
+            <para xml:id="para_21795154-f932-4a10-86ec-afaffdc74fae">list of supported optional SOP Class Attributes and DICOM Message Service Elements</para>
           </listitem>
           <listitem>
             <para xml:id="para_455449c1-6be9-4b8c-93e5-4404d1206987">for each supported Attribute (mandatory and optional Attribute), the valid range of values</para>
@@ -13449,7 +13536,7 @@
             <para xml:id="para_480f0c0e-78f0-43c0-a065-d19dd3623b7c">for each of the supported SOP Classes:</para>
           </listitem>
           <listitem>
-            <para xml:id="para_ce3bddfe-5ad1-49f5-b053-b5774e1348ee">list of supported optional SOP Class Attributes and DIMSE Service Elements</para>
+            <para xml:id="para_ce3bddfe-5ad1-49f5-b053-b5774e1348ee">list of supported optional SOP Class Attributes and DICOM Message Service Elements</para>
           </listitem>
           <listitem>
             <para xml:id="para_3ad248aa-2d71-41c8-9398-1be1dfc54150">for each supported Attribute (mandatory and optional Attribute):</para>
@@ -13500,12 +13587,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_9dc76f32-3fa2-424e-bd64-510d5c73122e">The DIMSE Services applicable to the IOD are shown in <xref linkend="table_H.4-1" xrefstyle="select: label"/>.</para>
           <table frame="box" label="H.4-1" rules="all" xml:id="table_H.4-1">
-            <caption>DIMSE Service Group</caption>
+              <caption>DIMSE Service Group Applicable to Basic Film Session</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_51e72ad8-bd0c-401f-83c2-5dbc2a5bf4b2">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -14039,12 +14126,12 @@
           <para xml:id="para_4aabbe56-4065-4700-94c4-2fd2936b588d">
             <xref linkend="table_H.4-5" xrefstyle="select: label"/> shows DIMSE Services applicable to the IOD.</para>
           <table frame="box" label="H.4-5" rules="all" xml:id="table_H.4-5">
-            <caption>DIMSE Service Group</caption>
+              <caption>DIMSE Service Group Applicable to Basic Film Box</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_48f4c2f4-0660-472f-bd2a-8562dc13fe54">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -14977,12 +15064,12 @@
             <title>DIMSE Service Group</title>
             <para xml:id="para_b6a6a9d2-d10b-4bc6-a2aa-6594af3b4dc0">The DIMSE Services applicable to the IOD are shown below.</para>
             <table frame="box" label="H.4.3.1.2-1" rules="all" xml:id="table_H.4.3.1.2-1">
-              <caption>DIMSE Services Applicable to Basic Grayscale Image Box</caption>
+                <caption>DIMSE Service Group Applicable to Basic Grayscale Image Box</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
                     <para xml:id="para_b378ef5f-06be-441f-86cd-871fe5e1f6b5">
-                      <emphasis role="bold">DIMSE Service Element</emphasis>
+                      <emphasis role="bold">DICOM Message Service Element</emphasis>
                     </para>
                   </th>
                   <th align="center" colspan="1" rowspan="1">
@@ -15433,7 +15520,7 @@
             <title>DIMSE Service Group</title>
             <para xml:id="para_fd2a1aab-de93-47f0-a6d1-bf212a27b821">The following DIMSE Services are applicable to the IOD.</para>
             <table frame="box" label="H.4.3.2.2-1" rules="all" xml:id="table_H.4.3.2.2-1">
-              <caption>DIMSE Services Applicable to Basic Color Image Box</caption>
+              <caption>DIMSE Service Group Applicable to Basic Color Image Box</caption>
               <thead>
                 <tr valign="top">
                   <th align="center" colspan="1" rowspan="1">
@@ -15818,12 +15905,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_11751e09-4ad2-46e6-b140-bcf6d0529b29">The DIMSE Services that are applicable to the IOD are shown below.</para>
           <table frame="box" label="H.4.4.2-1" rules="all" xml:id="table_H.4.4.2">
-            <caption>DIMSE Services Applicable to Basic Annotation Box</caption>
+            <caption>DIMSE Service Group Applicable to Basic Annotation Box</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_806f9e2c-4e77-44d0-8f5f-0957910a42ca">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -15931,12 +16018,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_c7088c4a-10ab-4238-9fc4-7080dfc902ae">The DIMSE Services that are applicable to the IOD are shown below.</para>
           <table frame="box" label="H.4.5.2-1" rules="all" xml:id="table_H.4.5.2-1">
-            <caption>DIMSE Services Applicable to Print Job</caption>
+            <caption>DIMSE Service Group Applicable to Print Job</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_8e33142a-b559-442e-a1f8-64b9eb496a92">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -16339,12 +16426,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_cb6930cb-10c4-4d61-a8c2-3c768af80278">The DIMSE Services that are applicable to the IOD are shown below.</para>
           <table frame="box" label="H.4.6.2-1" rules="all" xml:id="table_H.4.6.2-1">
-            <caption>DIMSE Services Applicable to Printer</caption>
+            <caption>DIMSE Service Group Applicable to Printer</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_f5523942-5480-45fe-a4ef-b350f3bdca87">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -16712,12 +16799,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_9a4e226b-9c9f-419d-b987-7c037e2ddae1">The following DIMSE Services are applicable to the association related Presentation LUT Information Object:</para>
           <table frame="box" label="H.4.9.2-1" rules="all" xml:id="table_H.4.9.2-1">
-            <caption>DIMSE Services Are Applicable to Presentation LUT</caption>
+            <caption>DIMSE Service Group Applicable to Presentation LUT</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_2d069c26-9068-485c-a481-2cc0dfd4614a">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -16949,12 +17036,12 @@
           <title>DIMSE Service Group</title>
           <para xml:id="para_b12f1ddd-6bf5-4040-bd9e-9a6683505eb0">The DIMSE Services that are applicable to the IOD are shown in <xref linkend="table_H.4.11.2-1" xrefstyle="select: label"/>.</para>
           <table frame="box" label="H.4.11.2-1" rules="all" xml:id="table_H.4.11.2-1">
-            <caption>IOD DIMSE Services</caption>
+              <caption>DIMSE Service Group Applicable to Printer Configuration Retrieval</caption>
             <thead>
               <tr valign="top">
                 <th align="center" colspan="1" rowspan="1">
                   <para xml:id="para_3c049ca7-9663-4b62-a278-b5e84b80f725">
-                    <emphasis role="bold">DIMSE Service Element</emphasis>
+                    <emphasis role="bold">DICOM Message Service Element</emphasis>
                   </para>
                 </th>
                 <th align="center" colspan="1" rowspan="1">
@@ -17711,67 +17798,8 @@
         </orderedlist>
       </note>
       <section label="I.4.1" status="3" xml:id="sect_I.4.1">
-        <title>Specialization for Standard SOP Classes</title>
-        <section label="I.4.1.1" status="4" xml:id="sect_I.4.1.1">
-          <title>Softcopy Presentation State Storage SOP Classes</title>
-          <para xml:id="para_62896030-d464-409a-b901-1c39d5bd5461">See <xref linkend="chapter_N" xrefstyle="template:Annex %n"/>.</para>
-        </section>
-        <section label="I.4.1.2" status="4" xml:id="sect_I.4.1.2">
-          <title>Structured Reporting Storage SOP Classes</title>
-          <para xml:id="para_408e920f-85da-4da5-85eb-b0e126ea875b">The requirements of <xref linkend="chapter_O" xrefstyle="template:Annex %n"/> apply to the following SOP Classes:</para>
-          <itemizedlist>
-            <listitem>
-              <para xml:id="para_77b78ffa-87b3-4229-a8f7-4fd1526a000f">Basic Text SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_0e4501d6-e8cf-4322-9521-0f878be0a053">Enhanced SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_6802df33-0f56-4314-a997-1334ff3ebbce">Comprehensive SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_c16cc3da-7dc8-44a8-a158-d3d86d985651">Comprehensive 3D SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_ee0aa4d1-5101-44ec-9f83-ea5ce15bb246">Extensible SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_3e370426-8fc2-42d3-aa01-1440a1f1d800">Mammography CAD SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_365dce99-b198-4ed4-9aa1-41ba3b9d7dce">Chest CAD SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_56794e46-8554-4775-a813-c4b7852b00a7">Procedure Log</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_fbbd0e4a-7e0e-4150-8b23-86ce2a325837">X-Ray Radiation Dose SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_e2a1b8fe-2a55-4089-964c-736aca368fdf">Radiopharmaceutical Radiation Dose SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_df28cccc-147f-486e-919a-9534945a1224">Patient Radiation Dose SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_9f9da368-cf66-48e8-8184-3112e8ed1b51">Spectacle Prescription Report</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_062d4f0b-2bc0-4b68-bf14-4e7e0342fd69">Colon CAD SR</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_eff85d44-fd48-48e4-8258-b15e771c9376">Macular Grid Thickness and Volume Report</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_e348770f-0add-4a3e-8a6c-7bfc5b554302">Implantation Plan SR Document</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_2e4e2fcc-a139-480c-b758-4e4645f5a63c">Acquisition Context SR</para>
-            </listitem>
-          </itemizedlist>
-          <para xml:id="para_366d36b9-e401-4d48-b76e-21172cc5c638">
-            <xref linkend="chapter_O" xrefstyle="template:Annex %n"/> requirements do not apply to the Key Object Selection Document SOP Class.</para>
-        </section>
+        <title>Specialization for Standard SOP Classes (Retired)</title>
+          <para xml:id="para_01546978-5895-4ddd-9c29-e9c191f1bee0">See <xref linkend="sect_B.5.1" xrefstyle="select: label title"/>.</para>
       </section>
     </section>
     <section label="I.5" status="2" xml:id="sect_I.5">
@@ -17830,12 +17858,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_7b919672-edf8-41dd-a704-c4b6741190ee">The DIMSE-N Services applicable to the Storage Commitment Push Model SOP Class are shown in <xref linkend="table_J.3.1-1" xrefstyle="select: label"/>.</para>
         <table frame="box" label="J.3.1-1" rules="all" xml:id="table_J.3.1-1">
-          <caption>IOD DIMSE Services</caption>
+            <caption>DIMSE Service Group Applicable to Storage Commitment Push Model</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_a81126ce-0adf-47b4-9166-846b7e21e987">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -18630,7 +18658,7 @@
         <para xml:id="para_e3495334-cb9f-4b78-93a2-df3b6eda80db">This annex defines a service for communicating such worklists. The following are characteristics for this Service Class:</para>
         <itemizedlist>
           <listitem>
-            <para xml:id="para_8d42ada8-d533-41fa-b1d1-66ccfd9c81e7">The worklist has to be queried by the Application Entity (AE) associated with the application on which, or by which, the tasks included in the worklist have to be performed. In this query, a number of search keys can be used, defined for each particular worklist SOP class.</para>
+            <para xml:id="para_8d42ada8-d533-41fa-b1d1-66ccfd9c81e7">The worklist has to be queried by the Application Entity (AE) associated with the application on which, or by which, the tasks included in the worklist have to be performed. In this query, a number of search keys can be used, defined for each particular worklist SOP Class.</para>
           </listitem>
           <listitem>
             <para xml:id="para_bf82a443-0b5e-4800-b748-2f8fff3c78df">The worklist consists of worklist items, each item is related to one task. A worklist item contains Attributes from different objects related to the task.</para>
@@ -18724,7 +18752,7 @@
               <note>
                 <orderedlist numeration="arabic">
                   <listitem>
-                    <para xml:id="para_0bf08ebf-360b-4859-b46a-bcc230d2214e">Even though there is no means to perform matching on such entities, they may be queried as a Return Key Attribute using a C-FIND request with a zero length value (universal match) or by a single wild card (wild card match).</para>
+                    <para xml:id="para_0bf08ebf-360b-4859-b46a-bcc230d2214e">Even though there is no means to perform matching on such entities, they may be queried as a Return Key Attribute using a C-FIND request with a zero length value (Universal Match) or by a single wild card (Wild Card Match).</para>
                   </listitem>
                   <listitem>
                     <para xml:id="para_2eb0a1ce-21e9-4f61-87db-5e11bedfbeed">An SCU may choose to supply any subset of Required Matching Key Attributes.</para>
@@ -18757,7 +18785,7 @@
           </section>
           <section label="K.2.2.1.2" status="5" xml:id="sect_K.2.2.1.2">
             <title>Return Key Attributes</title>
-            <para xml:id="para_a4a62d91-5631-49e3-96ba-779368ebeabf">The values of Return Key Attributes to be retrieved with the Worklist are specified with zero-length (universal matching) in the C-FIND request. SCPs shall support Return Key Attributes defined by a Worklist Information Model according to the Data Element Type (1, 1C, 2, 2C, 3) as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
+            <para xml:id="para_a4a62d91-5631-49e3-96ba-779368ebeabf">The values of Return Key Attributes to be retrieved with the Worklist are specified with zero-length (Universal Matching) in the C-FIND request. SCPs shall support Return Key Attributes defined by a Worklist Information Model according to the Data Element Type (1, 1C, 2, 2C, 3) as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
             <para xml:id="para_84cf61e3-79dd-4cdb-9eec-0ff7a97a5e68">Every Matching Key Attribute shall also be considered as a Return Key Attribute. Therefore the C-FIND response shall contain in addition to the values of the requested Return Key Attributes the values of the requested Matching Key Attributes.</para>
             <note>
               <orderedlist>
@@ -19285,9 +19313,9 @@
         <title>Modality Worklist SOP Class</title>
         <section label="K.6.1.1" status="4" xml:id="sect_K.6.1.1">
           <title>Modality Worklist SOP Class Overview</title>
-          <para xml:id="para_8989f1bc-b000-434a-8673-dc5cf86f3924">The Modality Worklist SOP class defined within the Basic Worklist Management Service Class defines an application-level class of service that facilitates the communication of information to the imaging modality about Scheduled Procedure Steps, and entities related to the Scheduled Procedure Steps. As will be detailed below, part of the information carried by the worklist mechanism is intended to be used by the imaging modality itself, but much of the information is intended to be presented to the modality operator.</para>
+          <para xml:id="para_8989f1bc-b000-434a-8673-dc5cf86f3924">The Modality Worklist SOP Class defined within the Basic Worklist Management Service Class defines an application-level class of service that facilitates the communication of information to the imaging modality about Scheduled Procedure Steps, and entities related to the Scheduled Procedure Steps. As will be detailed below, part of the information carried by the worklist mechanism is intended to be used by the imaging modality itself, but much of the information is intended to be presented to the modality operator.</para>
           <para xml:id="para_e402eb5b-432b-4f01-bb03-86fa4be83a79">This worklist is structured according to Scheduled Procedure Steps. A procedure step is a unit of service in the context of a requested imaging procedure.</para>
-          <para xml:id="para_fc51c498-e79d-471a-b335-c147796c9783">The Modality Worklist SOP class supports the following requirements:</para>
+          <para xml:id="para_fc51c498-e79d-471a-b335-c147796c9783">The Modality Worklist SOP Class supports the following requirements:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_08b99cdd-1f46-4d58-b23d-4d14abd61a05">Verify patient (e.g., download patient demographic information from IS to Modality, to verify that the person to be examined is the intended subject).</para>
@@ -22502,7 +22530,7 @@
       <para xml:id="para_e476034a-276a-4cc4-a16a-ad9fceb38876">The Procedural Event Logging SOP Class allows SCUs to report to an SCP the events that are to be recorded in a Procedure Log SOP Instance, as described in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. This allows multiple devices participating in a Study to cooperatively construct a log of events that occur during that Study.</para>
       <para xml:id="para_8b5e05d9-6488-412f-899e-658ceebdbfc7">The multiple procedural events reported through this SOP Class are related by Patient ID, Study Instance UID, Study ID, and/or Performed Location. The mechanism by which multiple devices obtain these shared identifiers is not defined by this SOP Class.</para>
       <note>
-        <para xml:id="para_4af2285a-a0e3-45a6-890a-4ee23fca6fb9">The Modality Worklist or UPS SOP Classes may be used for this purpose. For simple devices that cannot support worklist SOP classes, the SCP may be able to use Performed Location, or the SCU AE Title, to relate the use of the device to a particular procedure.</para>
+        <para xml:id="para_4af2285a-a0e3-45a6-890a-4ee23fca6fb9">The Modality Worklist or UPS SOP Classes may be used for this purpose. For simple devices that cannot support worklist SOP Classes, the SCP may be able to use Performed Location, or the SCU AE Title, to relate the use of the device to a particular procedure.</para>
       </note>
       <para xml:id="para_a3417bbf-21d4-43f0-8fa6-63d215e15384">The SCP may also provide for recording events for which the SCU does not provide identifiers for matching. The mechanism by which the SCP determines the association of such an unidentified event with the log for a specific procedure is not defined by this SOP Class.</para>
       <note>
@@ -22512,12 +22540,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_5c6ad72d-6121-4718-9920-aae58eed2dc8">The DIMSE-N Services applicable to the Procedural Event Logging SOP Class are shown in <xref linkend="table_P.2-1" xrefstyle="select: label"/>.</para>
         <table frame="box" label="P.2-1" rules="all" xml:id="table_P.2-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Procedural Event Logging</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_d6266ea4-d722-49d0-b1fc-e86a64430c14">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -22946,12 +22974,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_f2101dfc-e7be-4df3-9cd2-6c680b0268fb">The DIMSE-N Services applicable to the Substance Administration Logging SOP Class are shown in <xref linkend="table_P.3-1" xrefstyle="select: label"/>.</para>
         <table frame="box" label="P.3-1" rules="all" xml:id="table_P.3-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Substance Administration Logging</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_82da7bc8-f12f-452d-a8a9-17ce3a0be081">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -24397,12 +24425,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_4b879c06-bee8-4901-a84a-fe27425ce3b7">The DIMSE Services shown in <xref linkend="table_R.3.1-1" xrefstyle="select: label"/> are applicable to the Instance Availability Notification IOD under the Instance Availability Notification SOP Class.</para>
         <table frame="box" label="R.3.1-1" rules="all" xml:id="table_R.3.1-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Instance Availability Notification</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_bbdd8020-8f16-4694-a829-6a8f1892c0a2">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -24823,12 +24851,12 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_8cacf476-6be3-445c-9bbd-fdc22a055dbb">The following DIMSE-N Services are applicable to the Media Creation Management SOP Class.</para>
         <table frame="box" label="S.3.1-1" rules="all" xml:id="table_S.3.1-1">
-          <caption>DIMSE-N Services Applicable to Media Creation Management</caption>
+          <caption>DIMSE Service Group Applicable to Media Creation Management</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_8084620b-00e4-4cfd-946f-44b765083ef7">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -26845,7 +26873,7 @@
           </section>
           <section label="V.2.2.1.2" status="5" xml:id="sect_V.2.2.1.2">
             <title>Return Key Attributes</title>
-            <para xml:id="para_2a8032f9-8db1-4945-830b-0c83e648c125">The values of Return Key Attributes to be retrieved with the Query are specified with zero-length (universal matching) in the C-FIND request. SCPs shall support Return Key Attributes defined by a Substance Administration Query Information Model according to the Data Element Type (1, 1C, 2, 2C, 3) as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
+            <para xml:id="para_2a8032f9-8db1-4945-830b-0c83e648c125">The values of Return Key Attributes to be retrieved with the Query are specified with zero-length (Universal Matching) in the C-FIND request. SCPs shall support Return Key Attributes defined by a Substance Administration Query Information Model according to the Data Element Type (1, 1C, 2, 2C, 3) as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
             <para xml:id="para_655fab4c-d403-4194-8fee-2086a041595e">Every Matching Key Attribute shall also be considered as a Return Key Attribute. Therefore the C-FIND response shall contain, in addition to the values of the requested Return Key Attributes, the values of the requested Matching Key Attributes.</para>
             <note>
               <orderedlist>
@@ -27169,8 +27197,8 @@
         <title>Product Characteristics Query SOP Class</title>
         <section label="V.6.1.1" status="4" xml:id="sect_V.6.1.1">
           <title>Product Characteristics Query SOP Class Overview</title>
-          <para xml:id="para_fa51c58a-0fab-4c46-8ec1-ce6848b0182a">The Product Characteristics Query SOP class defines an application-level class of service that facilitates the communication of detailed information about drugs, contrast agents, or devices identified by a bar code or similar identifier. The detailed information is intended to be used both for automated processing and for presentation to a system operator.</para>
-          <para xml:id="para_3f3bed8f-f213-4748-bf26-922beb93eeb9">The Product Characteristics Query SOP class supports the following example use cases:</para>
+          <para xml:id="para_fa51c58a-0fab-4c46-8ec1-ce6848b0182a">The Product Characteristics Query SOP Class defines an application-level class of service that facilitates the communication of detailed information about drugs, contrast agents, or devices identified by a bar code or similar identifier. The detailed information is intended to be used both for automated processing and for presentation to a system operator.</para>
+          <para xml:id="para_3f3bed8f-f213-4748-bf26-922beb93eeb9">The Product Characteristics Query SOP Class supports the following example use cases:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_58157377-4a3e-4cad-8d8f-b55d30b79132">Obtain the active ingredient, concentration, or other parameters of a contrast agent for inclusion in the image SOP Instances created during use of the agent, or for setting up image acquisition parameters (e.g., ultrasound transducer frequency)</para>
@@ -27533,7 +27561,7 @@
         <section label="V.6.2.1" status="4" xml:id="sect_V.6.2.1">
           <title>Substance Approval Query SOP Class Overview</title>
           <para xml:id="para_dead5bc9-e628-43ed-bf5e-cd6d3662a09a">The Substance Approval Query SOP Class defines an application-level class of service that allows a device at the point of care to obtain verification of the appropriateness of contrast agents and other drugs administered during a procedure, based on the substance label barcode and the patient ID. The response is an authorization to proceed, or a warning, or a contra-indication for presentation to the system operator.</para>
-          <para xml:id="para_3a932cdc-0fec-475d-a85d-956d888502e4">The Substance Approval Query SOP class supports the following example use cases:</para>
+          <para xml:id="para_3a932cdc-0fec-475d-a85d-956d888502e4">The Substance Approval Query SOP Class supports the following example use cases:</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_64269517-10a1-428a-a05b-d9c6d5f4e50f">Obtain verification that administration of a specific drug or contrast agent for an image acquisition is appropriate for the patient</para>
@@ -28497,7 +28525,7 @@
     </section>
   </chapter>
   <chapter label="Y" status="1" xml:id="chapter_Y">
-    <title>Instance and Frame Level Retrieve SOP Classes (Normative)</title>
+      <title>Composite Instance Root Retrieve Service Class (Normative)</title>
     <section label="Y.1" status="2" xml:id="sect_Y.1">
       <title>Overview</title>
       <section label="Y.1.1" status="3" xml:id="sect_Y.1.1">
@@ -28609,7 +28637,7 @@
                 <para xml:id="para_2efc1aa6-cc8e-4fce-9924-378835a4b45b">Re-ordering of frames is not supported, and order of the frames in the Frame List will always be the same as in the original SOP Instance.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_477639ba-c7aa-47bc-92c5-18d845e6b45d">New allowable frame selection mechanisms may be defined in the future by the addition of new SOP classes</para>
+                <para xml:id="para_477639ba-c7aa-47bc-92c5-18d845e6b45d">New allowable frame selection mechanisms may be defined in the future by the addition of new SOP Classes</para>
               </listitem>
             </orderedlist>
           </note>
@@ -28885,7 +28913,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_608cab29-e8bc-4628-9a93-46ee0b5bb45b">Failed: Unable to create new object for this SOP class</para>
+                    <para xml:id="para_608cab29-e8bc-4628-9a93-46ee0b5bb45b">Failed: Unable to create new object for this SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_ea04e64f-e6a3-48ca-a849-aec11b0cf87b">AA01</para>
@@ -29257,7 +29285,7 @@
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_8a78e1ff-721a-45e7-807f-b4e16e508450">Unable to create new object for this SOP class</para>
+                    <para xml:id="para_8a78e1ff-721a-45e7-807f-b4e16e508450">Unable to create new object for this SOP Class</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_0d6e29d3-5bf5-44d4-b5fb-4d8534e36ac8">AA01</para>
@@ -29876,13 +29904,13 @@
     </section>
   </chapter>
   <chapter label="Z" status="1" xml:id="chapter_Z">
-    <title>Composite Instance Retrieve Without Bulk Data SOP Classes (Normative)</title>
+    <title>Composite Instance Retrieve Without Bulk Data Service Class (Normative)</title>
     <section label="Z.1" status="2" xml:id="sect_Z.1">
       <title>Overview</title>
       <section label="Z.1.1" status="3" xml:id="sect_Z.1.1">
         <title>Scope</title>
         <para xml:id="para_cdbdcb1a-176d-49a8-8737-24fe4bbffc80">Composite Instance Retrieve Without Bulk Data Service is a service within the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/>.The retrieve capability of this service allows a DICOM AE to retrieve Composite Instances without retrieving their pixel data or other potentially large Attributes as defined in <xref linkend="sect_Z.1.3" xrefstyle="select: label"/>.</para>
-        <para xml:id="para_7f224792-5c46-4f17-b3eb-fe220a0446da">The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> is also supported for the Composite Instance Root Retrieve Service.</para>
+          <para xml:id="para_7f224792-5c46-4f17-b3eb-fe220a0446da">The Enhanced Multi-Frame Image Conversion Extended Negotiation Option of the DICOM Query/Retrieve Service class defined in <xref linkend="chapter_C" xrefstyle="template:Annex %n"/> is also supported for the Composite Instance Retrieve Without Bulk Data Service.</para>
       </section>
       <section label="Z.1.2" status="3" xml:id="sect_Z.1.2">
         <title>Composite Instance Retrieve Without Bulk Data Information Model</title>
@@ -29987,6 +30015,10 @@
           <para xml:id="para_5642b682-cd84-454d-81b8-427423f875eb">This implies that the pixel data within Icon Image Sequence (0088,0200) Items will be preserved.</para>
         </note>
         <para xml:id="para_20f1f0a6-9c9b-4043-9d45-ad79b6d65397">The Waveform Data (5400,1010) Attribute shall not be included within the Waveform Sequence (5400,0100).</para>
+          <para xml:id="para_e6608230-2b59-4a93-af2e-f137d690db46">Private Attributes may be preserved or discarded by a Storage SCP, as defined in <xref linkend="sect_B.4.1" xrefstyle="select: label"/>. A Storage SCP that claims conformance to Level 2 (Full) support of the Storage Service Class may choose to return Private Attributes in the2 Retrieve Without Bulk Data Service or not. Whether or not particular Private Attributes are returned shall be documented in the Conformance Statement.</para>
+          <note>
+              <para xml:id="para_a63f7459-0088-4491-bd7a-5b3e126e5931">The decision as to whether or not to return a particular Private Attribute may be dependent on its size.</para>
+          </note>
       </section>
       <section label="Z.1.4" status="3" xml:id="sect_Z.1.4">
         <title>Service Definition</title>
@@ -30554,14 +30586,14 @@
     </section>
   </chapter>
   <chapter label="AA" status="1" xml:id="chapter_AA">
-    <title>Ophthalmic Refractive Measurements Storage SOP Classes(Normative)</title>
+    <title>Ophthalmic Refractive Measurements Storage SOP Classes (Normative)</title>
     <section label="AA.1" status="3" xml:id="sect_AA.1">
       <title>Scope</title>
-      <para xml:id="para_1c9bfb7f-9aea-455e-836f-dcbcb666b7c7">Refractive instruments are the most commonly used instruments in eye care. At present many of them have the capability for digital output, but their data is most often addressed by manual input into a paper or electronic record. Lensometry, Autorefraction, Keratometry, Subjective Refraction, and Visual Acuity Measurements SOP Classes support devices such as lensometers, auto-refractors, keratometers, autophoropters, and autoprojectors.</para>
+        <para xml:id="para_1c9bfb7f-9aea-455e-836f-dcbcb666b7c7">Refractive instruments are the most commonly used instruments in eye care. At present many of them have the capability for digital output, but their data is most often addressed by manual input into a paper or electronic record. Lensometry, Autorefraction, Keratometry, Subjective Refraction, and Visual Acuity Measurements Storage SOP Classes support devices such as lensometers, auto-refractors, keratometers, autophoropters, and autoprojectors.</para>
     </section>
     <section label="AA.2" status="3" xml:id="sect_AA.2">
       <title>Behavior of a SCP</title>
-      <para xml:id="para_c1e9301d-974f-484a-91e7-1d81c27574f0">For a device that is both a SCU and a SCP of these Storage SOP Classes, in addition to the behavior for the Storage Service Class specified in <xref linkend="sect_B.2.2" xrefstyle="select: label"/>, the following additional requirements are specified for Structured Reporting Storage SOP Classes:</para>
+        <para xml:id="para_c1e9301d-974f-484a-91e7-1d81c27574f0">For a device that is both a SCU and a SCP of the aforementioned Storage SOP Classes, in addition to the behavior for the Storage Service Class specified in <xref linkend="sect_B.2.2" xrefstyle="select: label"/>, the following additional requirements are specified for Structured Reporting Storage SOP Classes:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_8b5e8ed4-53c8-4f3e-9310-a04158b514e0">A SCP of these SOP Class shall support Level 2 Conformance as defined in <xref linkend="sect_B.4.1" xrefstyle="select: label"/>.</para>
@@ -32466,12 +32498,12 @@
       <title>DIMSE Service Groups</title>
       <para xml:id="para_ddf44980-e04e-4cc2-9a9d-7478269569a9">The DIMSE Services shown in <xref linkend="table_CC.2-1" xrefstyle="select: label"/>, <xref linkend="table_CC.2-2" xrefstyle="select: label"/>, <xref linkend="table_CC.2-3" xrefstyle="select: label"/> and <xref linkend="table_CC.2-4" xrefstyle="select: label"/> are applicable to the Unified Procedure Step (UPS) IOD under the UPS Push, UPS Pull, UPS Watch and UPS Event SOP Classes respectively.</para>
       <table frame="box" label="CC.2-1" rules="all" xml:id="table_CC.2-1">
-        <caption>DIMSE Service Group - UPS Push</caption>
+        <caption>DIMSE Service Group Applicable to UPS Push</caption>
         <thead>
           <tr valign="top">
             <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_11543d46-1234-43da-baf8-eb5d25758205">
-                <emphasis role="bold">DIMSE Service Element</emphasis>
+                <emphasis role="bold">DICOM Message Service Element</emphasis>
               </para>
             </th>
             <th align="center" colspan="1" rowspan="1">
@@ -32509,12 +32541,12 @@
         </tbody>
       </table>
       <table frame="box" label="CC.2-2" rules="all" xml:id="table_CC.2-2">
-        <caption>DIMSE Service Group - UPS Pull</caption>
+        <caption>DIMSE Service Group Applicable to UPS Pull</caption>
         <thead>
           <tr valign="top">
             <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_337a90e4-20bc-44ef-b686-72b8351b28e6">
-                <emphasis role="bold">DIMSE Service Element</emphasis>
+                <emphasis role="bold">DICOM Message Service Element</emphasis>
               </para>
             </th>
             <th align="center" colspan="1" rowspan="1">
@@ -32560,12 +32592,12 @@
         </tbody>
       </table>
       <table frame="box" label="CC.2-3" rules="all" xml:id="table_CC.2-3">
-        <caption>DIMSE Service Group - UPS Watch</caption>
+        <caption>DIMSE Service Group Applicable to UPS Watch</caption>
         <thead>
           <tr valign="top">
             <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_7ab81bc1-19c6-454d-b78d-383109b3a125">
-                <emphasis role="bold">DIMSE Service Element</emphasis>
+                <emphasis role="bold">DICOM Message Service Element</emphasis>
               </para>
             </th>
             <th align="center" colspan="1" rowspan="1">
@@ -32611,12 +32643,12 @@
         </tbody>
       </table>
       <table frame="box" label="CC.2-4" rules="all" xml:id="table_CC.2-4">
-        <caption>DIMSE Service Group - UPS Event</caption>
+        <caption>DIMSE Service Group Applicable to UPS Event</caption>
         <thead>
           <tr valign="top">
             <th align="center" colspan="1" rowspan="1">
               <para xml:id="para_66224ecd-d8fe-4545-9a9b-22c88de7f860">
-                <emphasis role="bold">DIMSE Service Element</emphasis>
+                <emphasis role="bold">DICOM Message Service Element</emphasis>
               </para>
             </th>
             <th align="center" colspan="1" rowspan="1">
@@ -40183,12 +40215,12 @@
         <para xml:id="para_2e518024-8bae-495f-a315-54a4e108d691">
           <xref linkend="table_DD.3.2-1" xrefstyle="select: label"/> shows DIMSE Services applicable to the IODs.</para>
         <table frame="box" label="DD.3.2-1" rules="all" xml:id="table_DD.3.2-1">
-          <caption>DIMSE Service Group</caption>
+            <caption>DIMSE Service Group Applicable to Machine Verification</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="1" rowspan="1">
                 <para xml:id="para_f91816e7-7a1a-4c0e-974f-6efeac07f11e">
-                  <emphasis role="bold">DIMSE Service Element</emphasis>
+                  <emphasis role="bold">DICOM Message Service Element</emphasis>
                 </para>
               </th>
               <th align="center" colspan="1" rowspan="1">
@@ -43950,11 +43982,11 @@
         <title>DIMSE Service Group</title>
         <para xml:id="para_cd7407da-1fbe-4eee-922f-e2278def16be">The DIMSE Service shown in <xref linkend="table_EE.2.2-1" xrefstyle="select: label"/> is applicable to the Display System IOD under the Display System SOP Class.</para>
         <table frame="box" label="EE.2.2-1" rules="all" xml:id="table_EE.2.2-1">
-          <caption>DIMSE Service Group - Display System</caption>
+          <caption>DIMSE Service Group Applicable to Display System</caption>
           <thead>
             <tr valign="top">
               <th align="left" colspan="1" rowspan="1">
-                <para xml:id="para_ff80b168-24dc-4da7-a419-86d37c7c6190">DIMSE Service Element</para>
+                <para xml:id="para_ff80b168-24dc-4da7-a419-86d37c7c6190">DICOM Message Service Element</para>
               </th>
               <th align="left" colspan="1" rowspan="1">
                 <para xml:id="para_aa55fbe0-6b36-4f5d-a36c-7c5b85cb0081">Usage SCU/SCP</para>
@@ -43975,7 +44007,7 @@
         <para xml:id="para_29dddac8-b408-440f-ad8b-c178801a762c">This section describes the behavior of the DIMSE services that are specific for this IOD. The general behavior of the DIMSE services is specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
         <section label="EE.2.2.1" status="4" xml:id="sect_EE.2.2.1">
           <title>N-GET</title>
-          <para xml:id="para_59bcc353-1453-4c9d-90fb-5f9eb2c9888b">N-GET is used to retrieve information from an instance of the Display System SOP class.</para>
+          <para xml:id="para_59bcc353-1453-4c9d-90fb-5f9eb2c9888b">N-GET is used to retrieve information from an instance of the Display System SOP Class.</para>
           <section label="EE.2.2.1.1" status="5" xml:id="sect_EE.2.2.1.1">
             <title>Attributes</title>
             <section label="EE.2.2.1.1.1" status="6" xml:id="sect_EE.2.2.1.1.1">
@@ -44268,7 +44300,18 @@
                       <para xml:id="para_c7dd997c-c5b7-499c-a85d-f884035bb35e">3/2</para>
                     </td>
                   </tr>
-                  <tr valign="top">
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c6f8d9cd-24e8-4e5c-9b0c-5ec39e168f2b">Institutional Department Type Code Sequence</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0c876080-6cda-4c81-9ffc-337983dd0919">(0008,1041)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0b19e5b0-649e-4845-bb7b-47b2f23753b6">3/3</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
                     <td align="left" colspan="1" rowspan="1">
                       <para xml:id="para_49a78bbc-d3d2-495a-ba96-aef2365f7a06">Manufacturer's Model Name</para>
                     </td>
@@ -45329,7 +45372,7 @@
       </section>
       <section label="EE.2.3" status="3" xml:id="sect_EE.2.3">
         <title>SOP Class Definitions and UIDs</title>
-        <para xml:id="para_e2da1b9a-28c2-442f-81fe-8ce7a2314521">The SOP Class UID of the Display System SOP class shall have the value of "1.2.840.10008.5.1.1.40".</para>
+        <para xml:id="para_e2da1b9a-28c2-442f-81fe-8ce7a2314521">The SOP Class UID of the Display System SOP Class shall have the value of "1.2.840.10008.5.1.1.40".</para>
       </section>
       <section label="EE.2.4" status="3" xml:id="sect_EE.2.4">
         <title>Reserved Identifications</title>
@@ -45340,7 +45383,7 @@
       <title>Conformance</title>
       <section label="EE.3.1" status="3" xml:id="sect_EE.3.1">
         <title>Conformance Statement</title>
-        <para xml:id="para_46afaa72-18d9-45ab-9d58-eebf958374c0">The implementation conformance statement of this SOP class shall follow <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_46afaa72-18d9-45ab-9d58-eebf958374c0">The implementation conformance statement of this SOP Class shall follow <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
         <para xml:id="para_528a5e44-eeea-45f2-adb6-d3b5fbcfd114">The SCU Conformance Statement shall specify the following items:</para>
         <itemizedlist>
           <listitem>
@@ -45350,10 +45393,10 @@
             <para xml:id="para_fb03b0ad-b644-4da7-8b55-63d0c12e44b1">List of SOP Classes supported</para>
           </listitem>
           <listitem>
-            <para xml:id="para_b5afb82b-c330-4ee8-a82c-868a098eee60">For each of the supported SOP classes:</para>
+            <para xml:id="para_b5afb82b-c330-4ee8-a82c-868a098eee60">For each of the supported SOP Classes:</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_09507f21-9c1d-4de9-8c68-1b80f2451a77">List of supported SOP class attributes and DIMSE service elements</para>
+                <para xml:id="para_09507f21-9c1d-4de9-8c68-1b80f2451a77">List of supported SOP Class attributes and DICOM Message Service Elements</para>
               </listitem>
               <listitem>
                 <para xml:id="para_aac7c8d4-ed8d-47ef-9bb8-ea75819d7838">For each supported attribute (mandatory and optional), a valid value range</para>
@@ -45370,10 +45413,10 @@
             <para xml:id="para_990b5555-1324-4876-9451-9afde6cbce3a">List of SOP Classes supported</para>
           </listitem>
           <listitem>
-            <para xml:id="para_361723b4-f19d-4dbb-97a4-05b22ec96af5">For each of the supported SOP classes:</para>
+            <para xml:id="para_361723b4-f19d-4dbb-97a4-05b22ec96af5">For each of the supported SOP Classes:</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_9f7d6951-b2d5-4ecd-95d6-913799c2447d">List of supported SOP class attributes and DIMSE service elements</para>
+                <para xml:id="para_9f7d6951-b2d5-4ecd-95d6-913799c2447d">List of supported SOP Class attributes and DICOM Message Service Elements</para>
               </listitem>
               <listitem>
                 <para xml:id="para_b298f23a-94ae-42f5-b320-dd3c231229d5">For each supported attribute (mandatory and optional)</para>
@@ -48201,6 +48244,69 @@
                 </td>
                 <td align="left" colspan="1" rowspan="1"/>
               </tr>
+                <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_232f79c6-7513-43ce-a4ee-9fc21f6c3eae">&gt;&gt;Institutional Department Type Code Sequence</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_332cb04f-97ac-48d4-b9e9-cdaeb99fcb20">(0008,1041)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_1ad7d33b-92df-4a1e-bb63-54d0dc7a3d17">U</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_3f9a8040-7c63-46d7-9d36-fbccc0b74a63">3</para>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_229c05d7-f96b-4ccd-bd71-3611239f6263">&gt;&gt;&gt;Code Value</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_f34e07a3-d2ea-486f-b9dc-a441be3a2bf0">(0008,0100)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_1846b89b-8399-4584-8cdf-1fca17e454fa">R</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_affcd6da-952a-4ba6-b067-28f87d9b2bdf">1</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_a2645dcd-b006-47f1-865a-43f117ea1314">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_32f91826-a1e6-4e1a-9169-e1712d0fac5e">&gt;&gt;&gt;Coding Scheme Designator</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_5297e578-799f-410b-9b65-f151e8fde136">(0008,0102)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_644f8e4a-276a-4de4-8178-b7ad204088af">R</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_158b8112-117a-481e-a0c9-36e9ba9efd11">1</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_b75e9c6b-f5d8-4a9a-bfaf-4c0c6052b30a">This Attribute shall be retrieved with Single Value or Universal matching.</para>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_8bae5541-30f9-4970-b6ab-b09d6e2662d6">&gt;&gt;&gt;Code Meaning</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_f1fc263c-e2f8-4e37-ba95-ef9c12b688c2">(0008,0104)</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_ee1a0838-f1c4-41b0-b4aa-84f4bc51b317">-</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_dfa0912f-aab6-434e-95a8-b2f78b41b7e4">1</para>
+                    </td>
+                    <td align="left" colspan="1" rowspan="1"/>
+                </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_c6e09819-c15d-4c92-ade5-07789c205de1">&gt;Assertion DateTime</para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2018d - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2018e - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -115,7 +115,60 @@
             </remark>
           </releaseinfo>
         </biblioentry>
-        <biblioentry xml:id="biblio_IEC61966-2.1">
+          <biblioentry xml:id="biblio_ISOIEC15076-1">
+              <abbrev>ISO 15076-1</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>2005</date>
+              <title>Image technology <foreignphrase xml:lang="en-GB">colour</foreignphrase> management - Architecture, profile format, and data structure</title>
+              <releaseinfo>
+                  <remark>Also available as ICC.1:2004-10 (Profile version 4.2.0.0), International Color Consortium, available at 
+                      <link xl:href="http://www.color.org/v4spec.xalter"/>
+                  </remark>
+              </releaseinfo>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIEC15444-1">
+              <abbrev>ISO/IEC 15444-1</abbrev>
+              <author>
+                  <orgname>ISO/IEC</orgname>
+              </author>
+              <date>2004</date>
+              <title>JPEG 2000 Image Coding System</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIEC15444-2">
+              <abbrev>ISO/IEC 15444-2</abbrev>
+              <author>
+                  <orgname>ISO/IEC</orgname>
+              </author>
+              <date>2004</date>
+              <title>JPEG 2000 Image Coding System: Extensions</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO15948">
+              <abbrev>ISO 15948</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>2003</date>
+              <title>Information technology -- Computer graphics and image processing -- Portable Network Graphics (PNG): Functional specification</title>
+              <releaseinfo>
+                  <remark>A Joint ISO/IEC International Standard and W3C Recommendation. Also available at:
+                      <link xl:href="https://www.w3.org/TR/2003/REC-PNG-20031110/"/>
+                  </remark>
+              </releaseinfo>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO22028-2">
+              <abbrev>ISO 22028-2</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>2013</date>
+              <title>Photography and graphic technology - Extended colour encodings for digital image storage, manipulation and interchange - Part 2: Reference output medium metric RGB colour image encoding (ROMM RGB)</title>
+              <bibliosource>
+                  <link xl:href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=56591"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_IEC61966-2.1">
           <abbrev>IEC 61966-2.1</abbrev>
           <author>
             <orgname>IEC</orgname>
@@ -429,6 +482,18 @@
       </bibliodiv>
       <bibliodiv label="3.4" status="2" xml:id="sect_3.4">
         <title>Other References</title>
+          <biblioentry xml:id="biblio_AdobeRGB">
+              <abbrev>Adobe RGB</abbrev>
+              <author>
+                  <orgname>Adobe Systems Incorporated</orgname>
+              </author>
+              <date>1998</date>
+              <edition>2005-05</edition>
+              <title>Adobe RGB (1998) Color Image Encoding</title>
+              <bibliosource>
+                  <link xl:href="http://www.adobe.com/digitalimag/pdfs/AdobeRGB1998.pdf"/>
+              </bibliosource>
+          </biblioentry>
         <biblioentry xml:id="biblio_IHE_ITI_TF_2x_AppendixV">
           <abbrev>IHE ITI TF-2x Appendix V</abbrev>
           <author>
@@ -1594,7 +1659,7 @@
             </tbody>
           </table>
           <para xml:id="para_35b4d96d-1f48-45f7-b272-450e9fbd7d71">
-<xref linkend="table_6.1.1.8-2" xrefstyle="select: label"/> specifies, by Resource Category (see <xref linkend="table_6.1.1-1" xrefstyle="select: label"/>) , the application/dicom media type for <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Files, along with the default and allowed Transfer Syntax UID combinations for each resource category for the Web Services. The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types.</para>
+<xref linkend="table_6.1.1.8-2" xrefstyle="select: label"/> specifies, by Resource Category (see <xref linkend="table_6.1.1-1" xrefstyle="select: label"/>), the application/dicom media type for <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Files, along with the default and allowed Transfer Syntax UID combinations for each resource category for the Web Services. The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types.</para>
           <para xml:id="para_547f5f96-5452-4b66-a351-36361eace1c7">If no transfer-syntax parameter is specified for the media type for <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Files (application/dicom) then the Explicit VR Little Endian Transfer Syntax "1.2.840.10008.1.2.1" shall be used.</para>
           <note>
             <para xml:id="para_9893b2b8-ebc0-4c2b-8fc7-eb3fefa8d57f">This is different from the Default Transfer Syntax defined in <olink targetdoc="PS3.5" targetptr="sect_10.1" xrefstyle="select: docname label quotedtitle"/>, which is Implicit VR Little Endian.</para>
@@ -1983,7 +2048,7 @@
             </tbody>
           </table>
           <para xml:id="para_2aa12fef-75f3-4d67-b361-e4baadc39319">
-<xref linkend="table_6.1.1.8-3a" xrefstyle="select: label"/> and <xref linkend="table_6.1.1.8-3b" xrefstyle="select: label"/> specify, by Resource Category (see <xref linkend="table_6.1.1-1" xrefstyle="select: label"/>) , the various media types for bulk data, along with the default and allowed media types and Transfer Syntax UID combinations for each resource category for the RS service.</para>
+<xref linkend="table_6.1.1.8-3a" xrefstyle="select: label"/> and <xref linkend="table_6.1.1.8-3b" xrefstyle="select: label"/> specify, by Resource Category (see <xref linkend="table_6.1.1-1" xrefstyle="select: label"/>), the various media types for bulk data, along with the default and allowed media types and Transfer Syntax UID combinations for each resource category for the RS service.</para>
           <note>
             <para xml:id="para_3b244488-331d-4ac4-abef-7a4e1ee9a7ee">No entries are specified for the WADO-URI service, because it does not support separate retrieval of bulk data.</para>
           </note>
@@ -2451,7 +2516,7 @@
               </tr>
             </tbody>
           </table>
-          <para xml:id="para_99b849a3-5b8b-4cad-bdf8-2d2abe9e94c0">The Implicit VR Little Endian (1.2.840.10008.1.2) ,and Explicit VR Big Endian (1.2.840.10008.1.2.2) transfer syntaxes shall not be used with Web Services.</para>
+          <para xml:id="para_99b849a3-5b8b-4cad-bdf8-2d2abe9e94c0">The Implicit VR Little Endian (1.2.840.10008.1.2), and Explicit VR Big Endian (1.2.840.10008.1.2.2) transfer syntaxes shall not be used with Web Services.</para>
           <para xml:id="para_1edc7b0e-8a0d-46d7-9c30-3e65ac2b062b">If a transfer syntax parameter for a DICOM Media Type is not specified in a request or response, the Transfer Syntax in the response shall be the Transfer Syntax specified as the default for the Resource Category and media type combination in <xref linkend="table_6.1.1.8-3a" xrefstyle="select: label"/> or <xref linkend="table_6.1.1.8-3b" xrefstyle="select: label"/>.</para>
           <para xml:id="para_4c6a68b0-0b48-4619-b84f-946cc7ba0317">The origin server may support additional Transfer Syntaxes.</para>
           <note>
@@ -2460,7 +2525,10 @@
                 <para xml:id="para_bc98321a-59d7-456f-9cbd-b107a20dc222">The compressed bulk data of each part of a multipart payload contains only the compressed bit stream and not the DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> Encapsulated Sequence or Delimiter Items.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_82a0e156-cdc1-4581-bba7-32316bbefca0">For the media type image/jpeg Transfer Syntaxes, the image may or may not include the JFIF marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.1" xrefstyle="select: docname label quotedtitle"/>.</para>
+                <para xml:id="para_82a0e156-cdc1-4581-bba7-32316bbefca0">For the media type image/jpeg Transfer Syntaxes, the image may or may not include the JFIF marker segment.
+                    The image may or may not include APP2 marker segments with an identifier of "ICC_PROFILE".
+                    There is no requirement for the origin server to add a JFIF marker segment nor to copy the value of the ICC Profile (0028,2000) Attribute, if present, into APP2 marker segments in the compressed data stream.
+                    See <olink targetdoc="PS3.5" targetptr="sect_8.2.1" xrefstyle="select: docname label quotedtitle"/>.</para>
               </listitem>
               <listitem>
                 <para xml:id="para_7c12cef3-8c6f-464e-999b-651924863b55">For the media type image/jp2 and image/jpx Transfer Syntaxes, the image does not include the jp2 marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.4" xrefstyle="select: docname label quotedtitle"/> and <olink targetdoc="PS3.5" targetptr="sect_A.4.4" xrefstyle="select: docname label quotedtitle"/>.</para>
@@ -3107,7 +3175,7 @@
                     <para xml:id="para_1ce9bd91-680f-46c6-ab24-b5eccefc3953">The Accept request would contain the following comma-separated parameters:</para>
                     <itemizedlist mark="none">
                       <listitem>
-                        <para xml:id="para_150b9984-c227-4978-9eb3-c583979183ed">Accept: multipart/related; type="image/jpx"; transfer-syntax=1.2.840.10008.1.2.4.92,, multipart/related; type="image/jpx"; transfer-syntax=1.2.840.10008.1.2.4.93, multipart/related; type="image/jpeg"</para>
+                        <para xml:id="para_150b9984-c227-4978-9eb3-c583979183ed">Accept: multipart/related; type="image/jpx"; transfer-syntax=1.2.840.10008.1.2.4.92, multipart/related; type="image/jpx"; transfer-syntax=1.2.840.10008.1.2.4.93, multipart/related; type="image/jpeg"</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
@@ -4229,14 +4297,17 @@
           <section label="6.5.8.1.2" status="5" xml:id="sect_6.5.8.1.2">
             <title>Query Parameters</title>
             <para xml:id="para_9eed3593-8afb-424e-958f-b1ce4ca572f4">The query parameters defined in this section specify various rendering transformations to be applied to the images and video contained in the target resource.</para>
-            <para xml:id="para_db624f65-bc39-4f41-b18f-815e14f08b6a">The origin server shall support all of the query parameters defined in this section. An origin server may define additional parameters. If additional parameters are defined, they shall be documented in the Conformance Statement and in the Retrieve Capabilities response. The origin server shall ignore any unknown parameters.</para>
+              <para xml:id="para_db624f65-bc39-4f41-b18f-815e14f08b6a">The origin server shall support all of the Required query parameters defined in <xref linkend="table_6.5.8-2" xrefstyle="select: label"/>.
+                  An origin server may support Optional query parameters defined in <xref linkend="table_6.5.8-2" xrefstyle="select: label"/>.
+                  An origin server may define additional parameters.
+                  If additional parameters are defined, they shall be documented in the Conformance Statement and in the Retrieve Capabilities response. The origin server shall ignore any unknown parameters.</para>
             <para xml:id="para_e6ca1946-f620-4cbd-bdb4-f80069cfe6f1">The following rules pertain to all parameters defined in this section:</para>
             <orderedlist>
               <listitem>
                 <para xml:id="para_440754a6-6a1c-42f6-8aab-8b7bdfbd7485">All parameters are optional for the user agent.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_494f641c-8cef-4290-8bb6-315782f8bc23">All parameters are required to be supported by the origin server.</para>
+                  <para xml:id="para_494f641c-8cef-4290-8bb6-315782f8bc23">All Required parameters are required to be supported by the origin server.</para>
                </listitem>
               <listitem>
                 <para xml:id="para_929344dd-b645-4beb-a101-8aadb979c301">These parameters only apply to resources that are images and video.</para>
@@ -4249,123 +4320,165 @@
               </listitem>
             </orderedlist>
             <para xml:id="para_cfdaa305-e2de-43a8-be38-954682551895">See <xref linkend="sect_6.1.4" xrefstyle="select: label"/>.</para>
-            <table frame="box" label="6.5.8-2" rules="all" xml:id="table_6.5.8-2">
-              <caption>Retrieve Rendered Query Parameters</caption>
-              <thead>
-                <tr valign="top">
-                  <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_a3ca3910-7f52-43f9-814e-001b8f75cb6f">Key</para>
-                  </th>
-                  <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_d6da920e-03d2-47f0-9a12-ac0b45d2526d">Values</para>
-                  </th>
-                  <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_66b5021a-bf37-4251-886f-8b9d48ac8912">Target Resource</para>
-                  </th>
-                  <th align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_086a0d4f-f3a8-4439-962f-dcee029d7198">Section</para>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_dd884b37-09e7-46dc-b50f-a4e82574e47f">annotation</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_dcd9900d-c4de-4be0-b34f-c28d3dfcaca4">"patient" and/or "technique"</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_445a7a9c-45f9-471b-8349-fdb9b43c929a">All</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_1cdee47c-2c6b-4af7-8059-8f6a241166e6">
-<xref linkend="sect_6.5.8.1.2.1" xrefstyle="select: labelnumber"/>
+              <table frame="box" label="6.5.8-2" rules="all" xml:id="table_6.5.8-2">
+                  <caption>Retrieve Rendered Query Parameters</caption>
+                  <thead>
+                      <tr valign="top">
+                          <th align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_a3ca3910-7f52-43f9-814e-001b8f75cb6f">Key</para>
+                          </th>
+                          <th align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_d6da920e-03d2-47f0-9a12-ac0b45d2526d">Values</para>
+                          </th>
+                          <th align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_66b5021a-bf37-4251-886f-8b9d48ac8912">Target Resource</para>
+                          </th>
+                          <th align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_086a0d4f-f3a8-4439-962f-dcee029d7198">Section</para>
+                          </th>
+                          <th align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_9577e850-165a-4639-a2d6-6b62acdee851">
+<emphasis role="bold">Origin Server Support</emphasis>
 </para>
-                  </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_da9d43dc-a934-4091-ba2e-394421e5276a">charset</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_15461b2a-f0f6-4bcc-b0af-351fdfc218b2">token</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_a00a7e7e-9b5e-4856-83e1-994f6484b805">All</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_56778a13-78bb-4e98-ba3f-6d078bd8f9f7">
-<xref linkend="sect_6.1.2.2" xrefstyle="select: labelnumber"/>
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_dd884b37-09e7-46dc-b50f-a4e82574e47f">annotation</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_dcd9900d-c4de-4be0-b34f-c28d3dfcaca4">"patient" and/or "technique"</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_445a7a9c-45f9-471b-8349-fdb9b43c929a">All</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_1cdee47c-2c6b-4af7-8059-8f6a241166e6">
+                                  <xref linkend="sect_6.5.8.1.2.1" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_f083fc75-5546-4c8e-b0bf-5656f255ca90">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_da9d43dc-a934-4091-ba2e-394421e5276a">charset</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_15461b2a-f0f6-4bcc-b0af-351fdfc218b2">token</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_a00a7e7e-9b5e-4856-83e1-994f6484b805">All</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_56778a13-78bb-4e98-ba3f-6d078bd8f9f7">
+                                  <xref linkend="sect_6.1.2.2" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_e6a02481-eea5-4d0b-94ec-eb2f18934218">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_e2a9307c-f550-47c8-81f3-2038f4dc5107">quality</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_af367da3-a36a-4fbf-bb96-6887b45aab7e">integer</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_559e9106-c7a4-4c03-9e1a-290fbd56633f">All</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_3229bdfa-8f54-419f-917e-95da294792b5">
+                                  <xref linkend="sect_6.5.8.1.2.2" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_dda125ea-d87d-4e60-8513-fc9d4569bc4d">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_289322b1-3978-413a-885c-0beab4625971">viewport</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_ca323a7c-5e26-4105-bc01-9f1bc86f78d8">vw, vh, [ sx, sy, sw, sh ]</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_70870c49-02d3-423d-b26c-1d56a4f305d0">Non-Presentation States</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_e81d836a-bd6d-4a8c-b6bf-720f530434f5">
+                                  <xref linkend="sect_6.5.8.1.2.3" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_57e1ac4c-88a5-46b0-ac77-1c11d7f970aa">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_0c48ef4d-fb09-41ff-9b9b-ce7c11be61fc">viewport</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_5717b444-fb32-4a1a-b901-1b0c16063a59">vw, vh,</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_ced3e34e-d021-412d-9e22-dff1b8830b5c">Presentation States</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_b170fa07-f9be-4472-97e1-8661c845b3e9">
+                                  <xref linkend="sect_6.5.8.1.2.3" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_5b44faad-19c3-4106-94ab-450c8e74b1c9">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_167283f1-d6e2-4175-98f0-872104775527">window</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_abad49f3-392b-4a68-9604-82a2116455d3">center, width, shape</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_0480ef4d-2b3d-40ec-9491-6fa3d1f35761">Non-Presentation States</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_d0ece7ae-7f06-41a0-a46f-7c8700ccbdf5">
+                                  <xref linkend="sect_6.5.8.1.2.4" xrefstyle="select: labelnumber"/>
+                              </para>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_46f7cf0a-110b-445f-8fa3-e2e229ad325f">Required</para>
+                          </td>
+                      </tr>
+                      <tr valign="top">
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_44f4016e-6e8b-4abf-abb7-245b92563d7f">iccprofile</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_5943bc03-9c29-4385-b241-c3ee25a1e88d">"yes", "no", "srgb", "adobergb", "rommrgb"</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_17f210f2-81f0-4a65-8fca-173820e744bc">Images</para>
+                          </td>
+                          <td align="left" colspan="1" rowspan="1">
+                              <para xml:id="para_d55d45b4-f8cb-4117-9af3-9f9d281472fc">
+<xref linkend="sect_6.5.8.1.2.5" xrefstyle="select: labelnumber"/>
 </para>
-                  </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e2a9307c-f550-47c8-81f3-2038f4dc5107">quality</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_af367da3-a36a-4fbf-bb96-6887b45aab7e">integer</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_559e9106-c7a4-4c03-9e1a-290fbd56633f">All</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_3229bdfa-8f54-419f-917e-95da294792b5">
-<xref linkend="sect_6.5.8.1.2.2" xrefstyle="select: labelnumber"/>
-</para>
-                  </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_289322b1-3978-413a-885c-0beab4625971">viewport</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_ca323a7c-5e26-4105-bc01-9f1bc86f78d8">vw, vh, [ sx, sy, sw, sh ]</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_70870c49-02d3-423d-b26c-1d56a4f305d0">Non-Presentation States</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e81d836a-bd6d-4a8c-b6bf-720f530434f5">
-<xref linkend="sect_6.5.8.1.2.3" xrefstyle="select: labelnumber"/>
-</para>
-                  </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0c48ef4d-fb09-41ff-9b9b-ce7c11be61fc">viewport</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_5717b444-fb32-4a1a-b901-1b0c16063a59">vw, vh,</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_ced3e34e-d021-412d-9e22-dff1b8830b5c">Presentation States</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_b170fa07-f9be-4472-97e1-8661c845b3e9">
-<xref linkend="sect_6.5.8.1.2.3" xrefstyle="select: labelnumber"/>
-</para>
-                  </td>
-                </tr>
-                <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_167283f1-d6e2-4175-98f0-872104775527">window</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_abad49f3-392b-4a68-9604-82a2116455d3">center, width, shape</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_0480ef4d-2b3d-40ec-9491-6fa3d1f35761">Non-Presentation States</para>
-                  </td>
-                  <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_d0ece7ae-7f06-41a0-a46f-7c8700ccbdf5">
-<xref linkend="sect_6.5.8.1.2.4" xrefstyle="select: labelnumber"/>
-</para>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                          </td>
+                          <td align="center" colspan="1" rowspan="1">
+                              <para xml:id="para_308fafbc-6b4a-40d6-aa92-8dbfac570933">Optional</para>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
             <section label="6.5.8.1.2.1" status="6" xml:id="sect_6.5.8.1.2.1">
               <title>Image Annotation</title>
               <para xml:id="para_23b7735b-27de-47ce-a23e-92cb1be10b75">The annotation parameter specifies that the rendered images shall be annotated with patient and/or procedure information. Its value is a comma-separated list of one or more keywords. It has the following syntax:</para>
@@ -4539,6 +4652,116 @@
               <para xml:id="para_9ed1486b-32b3-4bb9-a28c-3575bb31bb95">If any of the parameter values are missing or invalid, the origin server shall return a 400 (Bad Request) response, and should include a payload containing an appropriate error message.</para>
               <para xml:id="para_914e5f9a-eb29-43df-9bf7-a8e747720a15">If the target resource is a Presentation State, this parameter shall not be used. If this parameter is present when the target resource is a Presentation state, the origin server shall return a 400 (Bad Request).</para>
             </section>
+              <section label="6.5.8.1.2.5" status="6" xml:id="sect_6.5.8.1.2.5">
+                  <title>ICC Profile</title>
+                  <para xml:id="para_844e4c8d-b117-4f53-8873-7e5a6e00d847">The "iccprofile" parameter specifies the color characteristics of, and inclusion of an ICC Profile in, the rendered images. It has the following syntax:</para>
+                  <programlisting><![CDATA[
+    %s"iccprofile=" 1#( %s"no" / %s"yes" / %s"srgb" / %s"adobergb" / %s"rommrgb" )
+]]></programlisting>
+                  <para xml:id="para_de959f36-b6c0-4482-83d5-4b60655ded49">Where</para>
+                  <informaltable frame="void" rules="none">
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <para xml:id="para_8ec417c2-d4ba-4918-8331-42fb1321ed23">"no"</para>
+                              </td>
+                              <td>
+                                  <para xml:id="para_c7bfb9dc-df05-45d8-8fbb-11fc618d7415">indicates that no ICC profile shall be present in the rendered image in the response.</para>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <para xml:id="para_50eceb4b-01db-475b-8997-c2df90918e73">"yes"</para>
+                              </td>
+                              <td>
+                                  <para xml:id="para_896498eb-e6ac-4f4a-8a3c-2672fba124d0">indicates that an ICC profile shall be present in the rendered image in the response, describing its color characteristics, if the Media Type supports embedded ICC Profiles.</para>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <para xml:id="para_a5ee722a-e654-4269-abb1-9ba3dbb71ec1">"srgb"</para>
+                              </td>
+                              <td>
+                                  <para xml:id="para_3973d9f5-9a7a-43a9-b954-58ca888c95ab">indicates that an sRGB ICC profile shall be present in the image, if the Media Type supports embedded ICC Profiles, and that the pixels of the rendered image in the response shall be transformed from their original color space and be encoded in the sRGB color space <xref linkend="biblio_IEC61966-2.1"/>.</para>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <para xml:id="para_5a3f22ee-c188-464c-a46a-7999cc942655">"adobergb"</para>
+                              </td>
+                              <td>
+                                  <para xml:id="para_ec5fa626-71fe-4f4b-bee5-a1cb31490ce1">indicates that an Adobe RGB ICC profile shall be present in the image, if the Media Type supports embedded ICC Profiles, and that the pixels of the rendered image in the response shall be transformed from their original color space and be encoded in the Adobe RGB color space <xref linkend="biblio_AdobeRGB"/>.</para>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <para xml:id="para_3588cee4-fb2a-4b00-9078-9136dbe747b9">"rommrgb"</para>
+                              </td>
+                              <td>
+                                  <para xml:id="para_766fa193-424d-45c2-97ff-ebfebbe87823">indicates that a ROMM RGB ICC profile shall be present in the image, if the Media Type supports embedded ICC Profiles, and that the pixels of the rendered image in the response shall be transformed from their original color space and encoded in the ROMM RGB color space <xref linkend="biblio_ISO22028-2"/>.</para>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </informaltable>
+                  <para xml:id="para_49ba09fb-6f89-47a0-a37a-90147580ebe6">When this parameter is not present:</para>
+                  <itemizedlist>
+                      <listitem>
+                          <para xml:id="para_4a352d1d-b666-443f-959f-aeec96c78029">an ICC profile may or may not be present in the image in the response;</para>
+                      </listitem>
+                      <listitem>
+                          <para xml:id="para_a523912b-e915-4270-8bee-68aa7c0ba97e">the color characteristics of the image in the response may or may not be consistent with any DICOM ICC Profile (0028,2000) Attribute in the metadata.</para>
+                      </listitem>
+                  </itemizedlist>
+                  <para xml:id="para_ea9b461f-db48-4f7b-b455-760a4f155e27">The ICC Profile in the image in the response shall be:</para>
+                  <para xml:id="para_f9392871-5b4f-45e9-838a-a2580891d795">
+                      <itemizedlist>
+                          <listitem>
+                              <para xml:id="para_a10223d3-a37e-4478-9236-f1e4c583745f">the ICC profile of the color space specified explicitly by the parameter,</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_53f0b060-b920-4254-ade0-03478f3265a7">otherwise, the ICC profile encoded in the source DICOM ICC Profile (0028,2000) Attribute, if any, appropriate to the selected frame,</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_b9fee79f-46e2-4e61-95ff-58d786716c21">otherwise, the ICC profile, if any, embedded in the stored compressed representation of the selected frame,</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_1d8f01c0-c96f-4092-9d10-ac809de427c7">otherwise, at the discretion of the origin server, the ICC profile of a well-known color space listed in <olink targetdoc="PS3.3" targetptr="sect_C.11.15.1.2" xrefstyle="select: docname label quotedtitle"/> that is appropriate to the type and source of the image.</para>
+                          </listitem>
+                      </itemizedlist>
+                  </para>
+                  <para xml:id="para_c214974f-e382-44db-bdc6-fdbf3a48baeb">If the Media Type does not support embedded ICC Profiles:</para>
+                  <para xml:id="para_a2e75898-896a-48a6-9e64-f1e8b70ecdd2">
+                      <itemizedlist>
+                          <listitem>
+                              <para xml:id="para_391b9810-d16b-4f63-a3ad-ec3d78fa6608">a 400 Bad Request error shall be returned if the parameter value is other than "no"</para>
+                          </listitem>
+                      </itemizedlist>
+                  </para>
+                  <note>
+                      <orderedlist>
+                          <listitem>
+                              <para xml:id="para_a8c2f906-f792-4e7e-8ef3-0eb07aab91f3">This parameter allows ICC profile information to be present in the image in the response so that the user agent can make use of it for local color management (e.g., an ICC profile capable browser can apply the profile when displaying the rendered image in the response).</para>
+                          </listitem>
+                          
+                          <listitem>
+                              <para xml:id="para_1d0a0bc8-7ab6-43cd-b6ff-020b3a1b0dcf">This parameter provides a limited mechanism for requesting that the origin server perform some color management. It provides the names of well-known color spaces for the rendered image in the response. It does not provide a mechanism to supply an arbitrary ICC profile, such as the calibration profile of a display, so it does not absolve the user agent from the need to handle its own color calibration and color management.</para>
+                          </listitem>
+                          
+                          <listitem>
+                              <para xml:id="para_3d051dd7-cb1d-4127-bf43-cce2d466594d">ICC profiles can theoretically be large relative to the compressed pixel data of a single frame, so the user agent may specify a parameter value of "no", retrieve the DICOM ICC Profile (0028,2000) Attribute value(s) that apply to multiple frames from the metadata, and combine these itself.</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_22014a02-b67e-4d87-afbc-d0ad7672678a">ICC profiles are embedded in rendered images of Media Type image/jpeg as one or more chunks in APP2 marker segments with an identifier of "ICC_PROFILE", as defined in Annex B of <xref linkend="biblio_ISOIEC15076-1"/>.</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_fafab111-f0d8-4b11-8341-1d407bdb0178">ICC profiles are embedded in rendered images of Media Type image/jp2 either as JP2 Restricted or JPX Full profiles according to <xref linkend="biblio_ISOIEC15444-1"/> and <xref linkend="biblio_ISOIEC15444-2"/>, respectively; rendered images in the response are not subject to the prohibition against inclusion of a JP2 box in JPEG 2000 compressed data streams in DICOM images.</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_27170345-3b20-49b9-a675-dbcb9098f5b1">ICC profiles are embedded in rendered images of Media Type image/png in an iCCP chunk, as defined in <xref linkend="biblio_ISO15948"/>.</para>
+                          </listitem>
+                      </orderedlist>
+                  </note>
+              </section>
           </section>
           <section label="6.5.8.1.3" status="5" xml:id="sect_6.5.8.1.3">
             <title>Header Fields</title>
@@ -4656,7 +4879,23 @@
                     <para xml:id="para_f13fdd19-e123-4a11-8ba5-63b70804a1ff">The origin server successfully rendered and is returning representations for part, but not all, of the resource.</para>
                   </td>
                 </tr>
-                <tr valign="top">
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_a643e954-903d-4a46-b7bb-65efd194b8bf">
+<emphasis role="bold">
+<emphasis role="underline">400 Bad Request</emphasis>
+</emphasis>
+</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_30c2d60e-60a7-471d-9a29-d0c79df88375">
+<emphasis role="bold">
+<emphasis role="underline">The origin cannot process the request because of errors in the request headers or parameters.</emphasis>
+</emphasis>
+</para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_cb0e6576-4152-4bf1-8670-220bd53b009a">406 Not Acceptable</para>
                   </td>
@@ -4937,6 +5176,10 @@
                 </itemizedlist>
               </listitem>
             </itemizedlist>
+              <note>
+                  <para xml:id="para_103e8bbf-15b3-4c94-9dcd-94edc7979a84">The Transfer Syntax of each instance stored is encoded in Transfer Syntax UID (0002,0010) of the <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> File Meta Information, and is not repeated in the Content-Type HTTP header as a parameter.
+                      If a transfer-syntax parameter is present and inconsistent with the <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> File Meta Information, it will either be ignored or an error will be returned.</para>
+              </note>
           </section>
           <section label="6.6.1.1.2" status="5" xml:id="sect_6.6.1.1.2">
             <title>XML Metadata and Bulk Data Request Message Body</title>
@@ -6512,7 +6755,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </table>
               <para xml:id="para_a8c82924-563f-4bc2-ba37-31769f940c09">Series Level and Instance Level attributes passed as "includefield" query values shall not be returned.</para>
               <note>
-                <para xml:id="para_36622655-ae1f-4abb-92d1-58756674e7d9">The above list is consistent with those required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/Technical_Framework/upload/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1).</para>
+                <para xml:id="para_36622655-ae1f-4abb-92d1-58756674e7d9">The above list is consistent with those required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1).</para>
               </note>
             </section>
             <section label="6.7.1.2.2.2" status="6" xml:id="sect_6.7.1.2.2.2">
@@ -6693,7 +6936,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </table>
               <para xml:id="para_f3cd13b3-609a-40f3-a58b-4f3231069475">Instance Level attributes passed as "includefield" query values shall not be returned.</para>
               <note>
-                <para xml:id="para_fec55004-c9d4-4a71-95ed-09ce12221ac7">The above list is consistent with the attributes required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/Technical_Framework/upload/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1).</para>
+                <para xml:id="para_fec55004-c9d4-4a71-95ed-09ce12221ac7">The above list is consistent with the attributes required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1).</para>
               </note>
             </section>
             <section label="6.7.1.2.2.3" status="6" xml:id="sect_6.7.1.2.2.3">
@@ -6861,7 +7104,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 </tbody>
               </table>
               <note>
-                <para xml:id="para_4b6b6cc6-1374-4f5f-8635-6cfb03283f2d">The above list is consistent with the attributes required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/Technical_Framework/upload/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1 and Table 4.14-2).</para>
+                <para xml:id="para_4b6b6cc6-1374-4f5f-8635-6cfb03283f2d">The above list is consistent with the attributes required for IHE RAD-14 (see <link xl:href="http://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf"/> Table 4.14-1 and Table 4.14-2).</para>
               </note>
             </section>
           </section>

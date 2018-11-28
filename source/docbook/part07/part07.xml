@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.7" version="5.0" xml:id="PS3.7">
   <title>PS3.7</title>
-  <subtitle>DICOM PS3.7 2018d - Message Exchange</subtitle>
+  <subtitle>DICOM PS3.7 2018e - Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -4793,7 +4793,10 @@
   <section label="9.3.5.1" status="4" xml:id="sect_9.3.5.1">
     <title>C-ECHO-RQ</title>
   
-  <para xml:id="para_b7f4a1a5-3c38-49c4-a807-2404aecd2ea1">The C-ECHO-RQ Message contains fields as defined in <xref linkend="table_9.3-12" xrefstyle="select: label"/> Each field shall conform to DICOM encoding and Value Representation as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Fields are required as specified in the C-ECHO service definition unless otherwise noted in <xref linkend="table_9.3-12" xrefstyle="select: label"/>. Fields not specified in the C-ECHO service definition but present in <xref linkend="table_9.3-13" xrefstyle="select: label"/> are required by the DIMSE-C protocol.</para>
+  <para xml:id="para_b7f4a1a5-3c38-49c4-a807-2404aecd2ea1">The C-ECHO-RQ Message contains fields as defined in <xref linkend="table_9.3-12" xrefstyle="select: label"/>.
+      Each field shall conform to DICOM encoding and Value Representation as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.
+      Fields are required as specified in the C-ECHO service definition unless otherwise noted in <xref linkend="table_9.3-12" xrefstyle="select: label"/>.
+      Fields not specified in the C-ECHO service definition but present in <xref linkend="table_9.3-12" xrefstyle="select: label"/> are required by the DIMSE-C protocol.</para>
     <table frame="box" label="9.3-12" rules="all" xml:id="table_9.3-12">
     <caption>C-ECHO-RQ Message Fields</caption>
     <thead>
@@ -11997,11 +12000,11 @@
 <section label="D.3.3.3" status="4" xml:id="sect_D.3.3.3">
     <title>Asynchronous Operations (And Sub-Operations) Window Negotiation</title>
   
-  <para xml:id="para_f5c2eda1-19b4-4574-8c81-e1ad78efbf1a">The Asynchronous Operations Window is used to negotiate the maximum number of outstanding operation or sub-operation requests (i.e., command requests) for each direction. The synchronous operations mode is the default mode and shall be support by all DICOM AEs. This negotiation is optional.</para>
+  <para xml:id="para_f5c2eda1-19b4-4574-8c81-e1ad78efbf1a">The Asynchronous Operations Window is used to negotiate the maximum number of outstanding operation or sub-operation requests (i.e., command requests) for each direction. The synchronous operations mode is the default mode and shall be supported by all DICOM AEs. This negotiation is optional.</para>
   <para xml:id="para_0d523164-c3de-45b4-b8f4-8f09cf7dca68">The Association-requester conveys in the A-ASSOCIATE request:</para>
 <itemizedlist>
   <listitem>
-<para xml:id="para_3fa86715-9353-40df-80ee-9230d225f0f4">when negotiating the SCU role for operations, the maximum number of outstanding operations it may invoke asynchronously; when negotiating the SCP role for operations,the maximum number of outstanding sub-operations it may invoke asynchronously; when negotiating the SCP role for notifications, the maximum number of notifications it may invoke asynchronously</para>
+<para xml:id="para_3fa86715-9353-40df-80ee-9230d225f0f4">when negotiating the SCU role for operations, the maximum number of outstanding operations it may invoke asynchronously; when negotiating the SCP role for operations, the maximum number of outstanding sub-operations it may invoke asynchronously; when negotiating the SCP role for notifications, the maximum number of notifications it may invoke asynchronously</para>
 </listitem>
   <listitem>
 <para xml:id="para_d55385a4-c5d9-4544-8c4b-ef4a3eb37ba5">when negotiating the SCP role for operations, the maximum number of outstanding operations it may invoke asynchronously; when negotiating the SCU role for operations, the maximum number of outstanding sub-operations it may perform asynchronously; when negotiating the SCU role for notifications, the maximum number of notifications it may perform asynchronously when negotiating the SCP role</para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2018d - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2018e - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -784,10 +784,14 @@
         <listitem>
           <para xml:id="para_5c078232-08d3-4bfa-9b6c-f1ed5dc89d73">a section describing DICOM related configuration details;</para>
         </listitem>
+        <listitem>
+            <para xml:id="para_0e7aaaf2-0188-438a-bc8b-85ee91431c45">a description of any implementation details that may be related to DICOM conformance or interoperability;</para>
+        </listitem>
+        <listitem>
+            <para xml:id="para_e2def8bb-afd7-4da1-8dc8-4ee921718a7e">a description of what codes and controlled terminology mechanisms are used.</para>
+        </listitem>
       </itemizedlist>
-      <para xml:id="para_0e7aaaf2-0188-438a-bc8b-85ee91431c45">a description of any implementation details that may be related to DICOM conformance or interoperability;</para>
-      <para xml:id="para_e2def8bb-afd7-4da1-8dc8-4ee921718a7e">a description of what codes and controlled terminology mechanisms are used.</para>
-    </section>
+     </section>
   </chapter>
   <chapter label="7" xml:id="chapter_7">
     <title>Conformance Requirements</title>
@@ -804,7 +808,7 @@
       </listitem>
     </itemizedlist>
     <section label="7.1" xml:id="sect_7.1">
-      <title>DICOM Network Conformance Requirements</title>
+      <title>DICOM Networking Conformance Requirements</title>
       <para xml:id="para_91b99436-cadb-482c-ab00-275365114f4c">An implementation claiming DICOM network conformance shall:</para>
       <itemizedlist>
         <listitem>
@@ -840,9 +844,11 @@
         </listitem>
         <listitem>
           <para xml:id="para_4d9c2577-9e90-4fe5-b47e-f8efa9a0f91c">support the following communication mode:</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_355787d2-4bc4-4796-956c-44a4a9ce3164">TCP/IP (See <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>),</para>
+            <itemizedlist>
+                <listitem>
+<para xml:id="para_355787d2-4bc4-4796-956c-44a4a9ce3164">TCP/IP (See <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>).</para>
+</listitem>
+            </itemizedlist>
         </listitem>
       </itemizedlist>
     </section>
@@ -875,7 +881,7 @@
           <para xml:id="para_e2f1ccbd-ff0a-415e-afbb-bc79009f7707">write as an FSC or FSU all SOP Classes defined as mandatory by each of the supported Application Profiles in one of the mandatory Transfer Syntaxes;</para>
         </listitem>
         <listitem>
-          <para xml:id="para_7250efb9-96c7-4a3e-bf3b-3c3cfe70455f">be able to gracefully ignore any Standard, Standard Extended, specialized or Private SOP Classes that may be present on the Storage Medium but are not defined in any of the Application Profiles to which conformance is claimed.</para>
+          <para xml:id="para_7250efb9-96c7-4a3e-bf3b-3c3cfe70455f">be able to gracefully ignore any Standard, Standard Extended, Specialized or Private SOP Classes that may be present on the Storage Medium but are not defined in any of the Application Profiles to which conformance is claimed.</para>
         </listitem>
       </itemizedlist>
       <note>
@@ -926,8 +932,13 @@
           <para xml:id="para_77d791cf-f29b-4b10-97d9-12c7db76fdc7">use the same UID as the Standard SOP Class on which it is based.</para>
         </listitem>
       </orderedlist>
-      <para xml:id="para_d209c80a-12a2-4ae6-af6a-e2896ff42502">A Standard Extended SOP Class may include Standard and/or Private Type 3 Attributes beyond those defined in the IOD on which it is based as long as the Conformance Statement identifies the added Attributes and defines their relationship with the <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> information model.</para>
-      <para xml:id="para_5cdce10a-4d44-4fce-92c1-e586e9cf5cea">An implementation claiming conformance with a Standard Extended SOP Class shall identify in its Conformance Statement the Standard SOP Class being extended, the options, roles, and behavior selected, and describe the Attributes being added with the Standard SOP Class's IOD Model and Modules.</para>
+      <para xml:id="para_d209c80a-12a2-4ae6-af6a-e2896ff42502">A Standard Extended SOP Class may include Standard and/or Private Type 3 Attributes beyond those defined in the IOD on which it is based as long as the Conformance Statement identifies the added Attributes and defines their relationship with the <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> information model.
+          If additional Type 3 Attributes drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> are sent that affect the encoding of other Attributes, or whose encoding depends on the values of other Attributes, their presence and use shall be consistent.</para>
+        <note>
+            <para xml:id="para_b57e18c6-ef8b-4b29-bbd3-2b306e0576b3">E.g., An Attribute such as Pixel Padding Value (0028,0120) with a dictionary VR of US or SS would not be allowed to be present without Pixel Representation (0028,0103) also being present to resolve the encoding ambiguity.
+                Further, Pixel Padding Value would not be allowed to be present in the absence of the Pixel Data (7FE0,0010) to which it applies.</para>
+        </note>
+        <para xml:id="para_5cdce10a-4d44-4fce-92c1-e586e9cf5cea">An implementation claiming conformance with a Standard Extended SOP Class shall identify in its Conformance Statement the Standard SOP Class being extended, the options, roles, and behavior selected, and describe the Attributes being added with the Standard SOP Class's IOD Model and Modules.</para>
       <para xml:id="para_21a5fa10-7eb4-47dc-ac17-0c43b03b26d1">Specialized SOP Classes shall:</para>
       <orderedlist numeration="loweralpha">
         <listitem>
@@ -2660,6 +2671,28 @@
               <para xml:id="para_888d364e-7d18-4ff4-9a4e-905e343fb0bb">Transfer</para>
             </td>
           </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b7036732-232f-4a2e-b01c-124a790ec31c">1.2.840.10008.5.​1.​4.​1.​1.​88.​74</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ac544566-6b38-4e3e-b1b0-42ae521f464d">Planned Imaging Agent Administration SR Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5a611679-b780-489b-880e-170378951d06">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_26701f62-58c1-461e-a657-6be7e8be2d64">1.2.840.10008.5.​1.​4.​1.​1.​88.​75</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_984423ea-8253-4872-aa3f-7a61ac347b2d">Performed Imaging Agent Administration SR Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_1b925528-ac5d-45a5-966f-eca09ed6e4e1">Transfer</para>
+                </td>
+            </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_9e00674a-c1fe-4de9-91fb-053c5216e533">1.2.840.10008.5.1.4.1.1.90.1</para>
@@ -2847,6 +2880,50 @@
               <para xml:id="para_7dcb0a17-6478-4da4-87d6-64db8e898256">Transfer</para>
             </td>
           </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_f3d1fb7c-52c3-47d4-a7e9-b96b04c0f0ca">1.2.840.10008.5.1.4.1.1.481.8</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_83804073-c4f6-471e-86e8-e6c5a8b38d0a">RT Ion Plan Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c7aeac6a-9251-4761-9cfe-58286c972fc8">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_b5b8f1ec-7984-4ddd-a9bf-2351ed758552">1.2.840.10008.5.1.4.1.1.481.9</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2ab979a6-c23a-46a2-bb4d-ce520f316bb9">RT Ion Beams Treatment Record Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_fabb5fb0-f1b7-41a1-b8b5-f046f64626b5">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_08f4ffad-890e-474b-a67b-35ddc704cc44">1.2.840.10008.5.1.4.1.1.481.10</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4970faf4-bea4-4900-9466-d634f19830e1">RT Physician Intent Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_86a50c67-43c9-4193-9107-4db54d8efd24">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4900a01f-ecc9-47f3-a407-d824e0c7b3e4">1.2.840.10008.5.1.4.1.1.481.11</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_99c7ee26-adce-4605-9512-45c7d5604513">RT Segment Annotation Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_bef27a4b-b041-4640-8802-69af6d582976">Transfer</para>
+                </td>
+            </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a9e4393c-0f78-428f-ab09-ee9feb1c7d96">1.2.840.10008.5.1.4.1.2.1.1</para>
