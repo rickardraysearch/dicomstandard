@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2018e - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2019a - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -60,7 +60,7 @@
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
-    <para xml:id="para_442ff5b0-7139-4f11-8ed7-a4506b7bb8a2">This part of the DICOM Standard specifies templates for the encoding of imaging reports using the HL7 Clinical Document Architecture Release 2 (CDA R2, or simply CDA) Standard. Within this scope are clinical procedure reports for specialties that use imaging for screening, diagnostic, or therapeutic purposes.</para>
+    <para xml:id="para_442ff5b0-7139-4f11-8ed7-a4506b7bb8a2">This Part of the DICOM Standard specifies templates for the encoding of imaging reports using the HL7 Clinical Document Architecture Release 2 (CDA R2, or simply CDA) Standard. Within this scope are clinical procedure reports for specialties that use imaging for screening, diagnostic, or therapeutic purposes.</para>
     <para xml:id="para_5d8dc6a8-16b3-4804-b190-7417bc2d3e2b">This Part constitutes an implementation guide for CDA, and is harmonized with the approach to standardized templates for CDA implementation guides developed by HL7. It also provides Business Names for data elements that link data in user terminology, e.g., collected by a report authoring application, to specific CDA encoded elements.</para>
     <para xml:id="para_265c46dd-9539-4308-8d9f-d136ae780a3b">As an implementation guide for imaging reports, particular attention is given to the use and reference of data collected in imaging procedures as explicit evidence within reports. This data includes images, waveforms, measurements, annotations, and other analytic results managed as DICOM SOP Instances. Specifically, this Part includes a specification for transformation into CDA documents of DICOM Structured Report instances that represent imaging reports.</para>
   </chapter>
@@ -118,90 +118,86 @@
     <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
     <para xml:id="para_80c4cfbf-8fa3-4a99-af91-6ba52690f148">For the purposes of this Standard the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
-      <title>Codes and Controlled Terminology Definitions:</title>
-      <para xml:id="para_7b61465b-852f-47ec-b0b0-1b5f8d193b2a">The following definitions are commonly used in this Part of the DICOM Standard:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Context Group</term>
-          <listitem>
-            <para xml:id="para_0509cb75-2f71-47c0-8f82-443c5d89be47">A set of coded concepts defined by a Mapping Resource forming a set appropriate to use in a particular context.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Context ID (CID)</term>
-          <listitem>
-            <para xml:id="para_64d131bc-bfd6-4658-baf6-a582fb123dcb">Identifier of a Context Group.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Template</term>
-          <listitem>
-            <para xml:id="para_41de6367-201c-416b-8e5b-907ec84eccf8">A pattern that describes the Content Items, Value Types, Relationship Types and Value Sets that may be used in part of a Structured Report content tree, or in other Content Item constructs, such as Acquisition Context or Protocol Context. Analogous to a Module of an Information Object Definition.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Template ID (TID)</term>
-          <listitem>
-            <para xml:id="para_745793a9-ab79-4b9c-8a5a-2e5c60758877">Identifier of a Template.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Coding Schemes</term>
-          <listitem>
-            <para xml:id="para_a5c7948c-2b09-40d4-8bfc-8b6fa41634b3">Dictionaries (lexicons) of concepts (terms) with assigned codes and well defined meanings.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
-      <title>Vocabulary Model Definitions:</title>
-      <para xml:id="para_bf0a4f1a-a595-45d8-a1f2-35477a692393">The following terms used in this Part of the DICOM Standard are defined in HL7 Core Principles and Properties of Version 3 Models:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Concept Domain</term>
-          <listitem>
-            <para xml:id="para_51445782-b2e1-4287-a85f-3702f501ecca">A named category of like concepts (a semantic type) that is specified in the vocabulary declaration of an attribute in an information model. It constrains the intent of the coded element while deferring the binding of the element to a specific set of codes until later in the specification process.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Value Set</term>
-          <listitem>
-            <para xml:id="para_22c1650d-ed8a-4a18-8e6d-952c79b6cc0e">A uniquely identifiable set of valid concept identifiers. Value sets constrain the permissible content for a coded element in an information model or data type specification.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Vocabulary Binding</term>
-          <listitem>
-            <para xml:id="para_a53c399a-a876-43b5-a4f1-477670a249a3">The mechanism of identifying specific codes to be used to express the semantics of coded model elements in information models or coded data type properties. Vocabulary Binding may bind the coded element or data type property to a single fixed value code, or may bind it to a Value Set Assertion.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-    <section label="3.3" status="2" xml:id="sect_3.3">
-      <title>Template Definitions</title>
-      <para xml:id="para_a7ec167b-35d1-48f5-bff2-73f3dc690218">The following term used in this Part of the DICOM Standard is defined in the HL7 Templates Standard, and applies to CDA template specifications:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Template</term>
-          <listitem>
-            <para xml:id="para_9f246ba5-b966-445e-83c3-82e4a380527f">A set of conformance statements which further constrain an existing information model.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-    <section label="3.4" status="2" xml:id="sect_3.4">
-      <title>Imaging Report Definitions</title>
-      <para xml:id="para_8e1c3a99-3487-4e18-92de-39ddcd8662c8">The following definitions apply to terms used in this Part of the Standard:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Business Name</term>
-          <listitem>
-            <para xml:id="para_63c6a187-7de1-4585-9de4-2fd5e650cd29">Identifier for a CDA Data Element, Attribute, or structure of Data Elements that corresponds to a business requirement for information exchange.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
+        <glossary>
+            <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>Codes and Controlled Terminology Definitions:</title>
+                <para xml:id="para_7b61465b-852f-47ec-b0b0-1b5f8d193b2a">The following definitions are commonly used in this Part of the DICOM Standard:</para>
+                <glossentry>
+                    <glossterm>Context Group</glossterm>
+                    <glossdef>
+                        <para xml:id="para_0509cb75-2f71-47c0-8f82-443c5d89be47">A set of coded concepts defined by a Mapping Resource forming a set appropriate to use in a particular context.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Context ID</glossterm>
+                    <acronym>CID</acronym>
+                    <glossdef>
+                        <para xml:id="para_64d131bc-bfd6-4658-baf6-a582fb123dcb">Identifier of a Context Group.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Template</glossterm>
+                    <glossdef>
+                        <para xml:id="para_41de6367-201c-416b-8e5b-907ec84eccf8">A pattern that describes the Content Items, Value Types, Relationship Types and Value Sets that may be used in part of a Structured Report content tree, or in other Content Item constructs, such as Acquisition Context or Protocol Context. Analogous to a Module of an Information Object Definition.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Template ID</glossterm>
+                    <acronym>TID</acronym>
+                    <glossdef>
+                        <para xml:id="para_745793a9-ab79-4b9c-8a5a-2e5c60758877">Identifier of a Template.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Coding Schemes</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a5c7948c-2b09-40d4-8bfc-8b6fa41634b3">Dictionaries (lexicons) of concepts (terms) with assigned codes and well defined meanings.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>Vocabulary Model Definitions:</title>
+                <para xml:id="para_bf0a4f1a-a595-45d8-a1f2-35477a692393">The following terms used in this Part of the DICOM Standard are defined in HL7 Core Principles and Properties of Version 3 Models:</para>
+                <glossentry>
+                    <glossterm>Concept Domain</glossterm>
+                    <glossdef>
+                        <para xml:id="para_51445782-b2e1-4287-a85f-3702f501ecca">A named category of like concepts (a semantic type) that is specified in the vocabulary declaration of an attribute in an information model. It constrains the intent of the coded element while deferring the binding of the element to a specific set of codes until later in the specification process.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Value Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_22c1650d-ed8a-4a18-8e6d-952c79b6cc0e">A uniquely identifiable set of valid concept identifiers. Value sets constrain the permissible content for a coded element in an information model or data type specification.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Vocabulary Binding</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a53c399a-a876-43b5-a4f1-477670a249a3">The mechanism of identifying specific codes to be used to express the semantics of coded model elements in information models or coded data type properties. Vocabulary Binding may bind the coded element or data type property to a single fixed value code, or may bind it to a Value Set Assertion.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>Template Definitions</title>
+                <para xml:id="para_a7ec167b-35d1-48f5-bff2-73f3dc690218">The following term used in this Part of the DICOM Standard is defined in the HL7 Templates Standard, and applies to CDA template specifications:</para>
+                <glossentry>
+                    <glossterm>Template</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9f246ba5-b966-445e-83c3-82e4a380527f">A set of conformance statements which further constrain an existing information model.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.4" status="2" xml:id="sect_3.4">
+                <title>Imaging Report Definitions</title>
+                <para xml:id="para_8e1c3a99-3487-4e18-92de-39ddcd8662c8">The following definitions apply to terms used in this Part of the Standard:</para>
+                <glossentry>
+                    <glossterm>Business Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_63c6a187-7de1-4585-9de4-2fd5e650cd29">Identifier for a CDA Data Element, Attribute, or structure of Data Elements that corresponds to a business requirement for information exchange.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
   </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
@@ -1227,13 +1223,13 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
         <para xml:id="para_eb156fc4-ea7a-40ae-9fed-a7ae1f504f1a">The HL7 Structured Documents Working Group coordinates markup extensions that have been defined for implementation guides published by HL7, IHE, DICOM, and other organizations. See <link xl:href="http://wiki.hl7.org/index.php?title=CDA_R2_Extensions"/>
 </para>
       </note>
-      <para xml:id="para_78a64181-f87b-4ef0-ae5a-914466dedbe6">The namespace for extensions defined in this standard is "urn:dicom-org:ps3-20", which is aliased in this standard as "ps3-20". Extensions defined in this standard are:</para>
+      <para xml:id="para_78a64181-f87b-4ef0-ae5a-914466dedbe6">The namespace for extensions defined in this Standard is "urn:dicom-org:ps3-20", which is aliased in this Standard as "ps3-20". Extensions defined in this Standard are:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_d0356100-c31a-4354-9c0c-db3fd777a5cb">ps3-20:accessionNumber - The accessionNumber extension allows for the clear identification of the imaging department identifier for a service request (order). While this identifier could be conveyed as another id for the inFulfillmentOf/Order element, there is no reliable way in that context to distinguish it from the Placer Order Number. As this is a primary management identifier in departmental workflows, a distinct local markup is defined. This extension uses the II Data Type.</para>    
         </listitem>
       </itemizedlist>
-      <para xml:id="para_ab8ddd95-764a-484e-a521-c88e56d1b754">The namespace for extensions defined by HL7 is "urn:hl7-org:sdtc". which is aliased in this standard as "sdtc". HL7 defined extensions used in this standard are:</para>
+      <para xml:id="para_ab8ddd95-764a-484e-a521-c88e56d1b754">The namespace for extensions defined by HL7 is "urn:hl7-org:sdtc". which is aliased in this Standard as "sdtc". HL7 defined extensions used in this Standard are:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_f5145fb7-2bd3-44fe-9a97-a58a79b9beea">sdtc:signatureText - Provides a location for a textual or multimedia depiction of the signature by which the participant endorses and accepts responsibility for his or her participation in the Act as specified in the Participation.typeCode. Details of the element content are described in the HL7 CDA Digital Signature Standard. This extension uses the ED Data Type.</para>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.8" version="5.0" xml:id="PS3.8">
   <title>PS3.8</title>
-  <subtitle>DICOM PS3.8 2018e - Network Communication Support for Message Exchange</subtitle>
+  <subtitle>DICOM PS3.8 2019a - Network Communication Support for Message Exchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -61,7 +61,7 @@
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
   
-  <para xml:id="para_b199c761-b0b2-4fd1-9c64-b8b7f0038c2f">The Communication Protocols specified in this part of PS 3 closely fit the ISO Open Systems Interconnection Basic Reference Model (ISO 7498-1, see <xref linkend="figure_1-1" xrefstyle="select: label"/>). They relate to the following layers: Physical, Data Link, Network, Transport, Session, Presentation and the Association Control Services (ACSE) of the Application layer. The communication protocols specified by this part are general purpose communication protocols (TCP/IP) and not specific to this standard. The other aspects of the Application Layer protocols are addressed in other parts of this standard as discussed in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber quotedtitle"/>.</para>
+  <para xml:id="para_b199c761-b0b2-4fd1-9c64-b8b7f0038c2f">The Communication Protocols specified in this Part of PS3 closely fit the ISO Open Systems Interconnection Basic Reference Model (ISO 7498-1, see <xref linkend="figure_1-1" xrefstyle="select: label"/>). They relate to the following layers: Physical, Data Link, Network, Transport, Session, Presentation and the Association Control Services (ACSE) of the Application layer. The communication protocols specified by this Part are general purpose communication protocols (TCP/IP) and not specific to this Standard. The other aspects of the Application Layer protocols are addressed in other parts of this Standard as discussed in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber quotedtitle"/>.</para>
   <para xml:id="para_fd801cf5-219e-40e0-95c8-e3f7de0276fd">
   <figure label="1-1" pgwide="1" xml:id="figure_1-1">
     <title>ISO OSI Basic Reference Model</title>
@@ -76,235 +76,542 @@
   </chapter>
 <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
-  <bibliography>
-    <biblioentry xml:id="biblio_ISODirectives2">
-      <abbrev>ISO/IEC Directives, Part 2</abbrev>
-      <author>
-        <orgname>ISO/IEC</orgname>
-      </author>
-      <date>2016/05</date>
-      <edition>7.0</edition>
-      <title>Rules for the structure and drafting of International Standards</title>
-      <bibliosource>
-        <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
-      </bibliosource>
-    </biblioentry>
+    <para xml:id="para_b52677dd-c36f-4d4e-9645-3cbff6ee1c22">The following standards contain provisions which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <bibliography>
+      <bibliodiv label="2.1" status="2" xml:id="sect_2.1">
+          <title>International Standards</title>
+          <biblioentry xml:id="biblio_ISODirectives2">
+              <abbrev>ISO/IEC Directives, Part 2</abbrev>
+              <author>
+                  <orgname>ISO/IEC</orgname>
+              </author>
+              <date>2016/05</date>
+              <edition>7.0</edition>
+              <title>Rules for the structure and drafting of International Standards</title>
+              <bibliosource>
+                  <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO7498-1">
+              <abbrev>ISO 7498-1</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1994</date>
+              <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO7498-3">
+              <abbrev>ISO 7498-3</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1997</date>
+              <title>Information Processing Systems - Open Systems Interconnection - Naming and Addressing</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8327">
+              <abbrev>ISO 8327</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1996</date>
+              <title>Information Processing Systems - Open Systems Interconnection - Connection Oriented Session Protocol Specification</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8649">
+              <abbrev>ISO 8649</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1988</date>
+              <title>Information processing systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE)</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8650">
+              <abbrev>ISO 8650</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1987</date>
+              <title>Information Processing Systems - Open Systems Interconnection - Protocol Specification for the Association Control Service Element</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8509">
+              <abbrev>ISO/TR 8509</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <title>Information Processing Systems - Open Systems Interconnection - Service Conventions</title>
+              <releaseinfo>
+                  <remark>ISO/TR 8509 has been withdrawn. See ISO/IEC 2382-26:1993 Information technology - Vocabulary - Part 26: Open systems interconnection</remark>
+              </releaseinfo>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8822">
+              <abbrev>ISO 8822</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1988</date>
+              <title>Information processing systems - Open Systems Interconnection - Connection oriented presentation service definition</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8823">
+              <abbrev>ISO 8823</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1988</date>
+              <title>Information processing systems - Open Systems Interconnection - Connection Oriented Presentation Protocol Specification</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8824">
+              <abbrev>ISO 8824</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1990</date>
+              <title>Information processing systems - Open Systems Interconnection - Specification of Abstract Syntax Notation One (ASN.1)</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8825">
+              <abbrev>ISO 8825</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1990</date>
+              <title>Information processing systems - Open Systems Interconnection - Specification of Basic Encoding Rules for Abstract Syntax Notation One (ASN.1)</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIEC9545">
+              <abbrev>ISO/IEC 9545</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1994</date>
+              <title>Information processing systems - Open Systems Interconnection - Application Layer Structure</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIEC9834-1">
+              <abbrev>ISO/IEC 9834-1</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>2012</date>
+              <title>Information processing systems - Open Systems Interconnection - Procedures for the operation of OSI Registration Authorities: General procedures and top arcs of the ASN.1 Object Identifier tree</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIECTR10000-1">
+              <abbrev>ISO/IEC TR 10000-1</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1998</date>
+              <title>Information processing systems - Open Systems Interconnection - International Standardized Profiles, Part 1: Taxonomy Framework</title>
+          </biblioentry>
+      </bibliodiv>
+      <bibliodiv label="2.2" status="2" xml:id="sect_2.2">
+          <title>Other Documents</title>
+          <biblioentry xml:id="biblio_NISTSP500-150">
+              <abbrev>NIST SP 500-150</abbrev>
+              <author>
+                  <orgname>NIST</orgname>
+              </author>
+              <title>Stable Implementation Agreements for Open Systems Interconnection Protocols</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_791">
+              <abbrev>RFC791</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>September 1981</date>
+              <title>Internet Protocol - DARPA Internet Protocol Specification</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc791"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_792">
+              <abbrev>RFC792</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>September 1981</date>
+              <title>Internet Control Message Protocol - DARPA Internet Program Protocol Specification</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc792"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_793">
+              <abbrev>RFC793</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>September 1981</date>
+              <title>Transmission Control Program - DARPA Internet Protocol Specification</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc793"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_950">
+              <abbrev>RFC950</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>August 1985</date>
+              <title>Internet Subnetting</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc950"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_1881">
+              <abbrev>RFC1881</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>December 1995</date>
+              <title>IPv6 Address Allocation Management</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc1881"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_2460">
+              <abbrev>RFC2460</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>December 1998</date>
+              <title>Internet Protocol, Version 6 (IPv6) Specification</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc2460"/>
+              </bibliosource>
+          </biblioentry>
+      </bibliodiv>
   </bibliography>
-  <section label="2.1" status="2" xml:id="sect_2.1">
-    <title>International Standards</title>
-  <para xml:id="para_5d21e435-e959-41e9-ad6d-f33cc2bd003e">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model</para>
-  <para xml:id="para_3e67da51-1086-4572-a451-92bf29225c9e">ISO 7498-3, OSI Basic Reference Model - Part 3: Naming and Addressing</para>
-  <para xml:id="para_2d037bd4-1a88-44ec-85f9-ac28e60614a4">ISO 8327:1987, Information Processing Systems - Open Systems Interconnection - Connection Oriented Session Protocol Specification</para>
-  <para xml:id="para_824503fa-0bd8-410a-aeb6-ab9a07e8cdae">ISO 8327/AM 2, Information Processing Systems - Open Systems Interconnection - Connection Oriented Session Protocol Specification - Amendment 2: Incorporation of Unlimited User Data</para>
-  <para xml:id="para_3840df0b-7f69-4b56-904f-1d9d579de96e">ISO 8649:1987, Information Processing Systems - Open Systems Interconnection - Service Definition for the Association Control Service Element</para>
-  <para xml:id="para_a9457cc6-8789-4025-8d24-51635648cde9">ISO 8650:1987, Information Processing Systems - Open Systems Interconnection - Protocol Specification for the Association Control Service Element</para>
-  <para xml:id="para_819e0a7d-b4ab-4d2a-bb6d-b6237f433b46">ISO TR 8509, Information Processing Systems - Open Systems Interconnection - Service Conventions</para>
-  <para xml:id="para_8d52fdc9-b90b-4a18-a731-042a9e8d7367">ISO 8822:1988, Information Processing Systems - Open Systems Interconnection - Connection-Oriented Presentation Service Definition</para>
-  <para xml:id="para_de58d562-2a94-4e4f-94da-c3b2aa31c37d">ISO 8823:1988, Information Processing Systems - Open Systems Interconnection - Connection Oriented Presentation Protocol Specification</para>
-  <para xml:id="para_9b4a876c-b813-4c03-8de2-957d51829ea0">ISO 8824:1990, Information Processing Systems - Open Systems Interconnection - Specification of Abstract Syntax Notation One (ASN.1)</para>
-  <para xml:id="para_84c14601-438f-4109-b0f1-41e95e8effc1">ISO 8825:1990, Information Processing Systems - Open Systems Interconnection - Specification of Basic Encoding Rules for Abstract Syntax Notation One (ASN.1)</para>
-  <para xml:id="para_350f3b8d-5589-45e5-8c7d-062215565402">ISO/IEC 9545, Information Processing Systems - Open Systems Interconnection - Application Layer Structure</para>
-  <para xml:id="para_4b9f27af-14bd-4ea2-b9d0-075f7e2c1104">ISO/IEC 9834-1, Information technology - Open Systems Interconnection - Procedures for the operation of OSI Registration Authorities: General procedures and top arcs of the ASN.1 Object Identifier tree</para>
-  <para xml:id="para_f45034b0-4087-4b10-a4d4-b1cd0bdd8221">ISO/IEC TR 10000-1, Information Processing Systems - Open Systems Interconnection - International Standardized Profiles, Part 1: Taxonomy Framework</para>
-  </section>
-<section label="2.2" status="2" xml:id="sect_2.2">
-    <title>Other Documents</title>
-  
-  <para xml:id="para_14d22363-371d-4a95-80ec-ef6039a2a23e">NIST Special Publication 500-150 - Stable Implementation Agreements for Open Systems Interconnection Protocols</para>
-  <para xml:id="para_27f942a8-382b-4bb9-abe0-f536c729976b">RFC791, Internet Protocol - DARPA Internet Protocol Specification</para>
-  <para xml:id="para_d3eba435-932c-4766-9cdd-8494967accaf">RFC792, Internet Control Message Protocol - DARPA Internet Program Protocol Specification</para>
-  <para xml:id="para_02250798-8e6f-4342-a6d8-383924063a0c">RFC793, Transmission Control Program - DARPA Internet Protocol Specification</para>
-  <para xml:id="para_81b2c53a-d0a0-49fd-a538-17b6e3d5dfd6">RFC950, Internet Subnetting</para>
-  <para xml:id="para_bf62e07f-b588-4c03-995f-dc3322b1c7d0">RFC1881, IPv6 Address Allocation Management</para>
-  <para xml:id="para_5ca6e255-e957-4744-9d7d-329c945a247d">RFC2460, Internet Protocol, Version 6 (IPv6) Specification</para>
-  </section>
 </chapter>
-<chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-  
-  <section label="3.1" status="2" xml:id="sect_3.1">
-    <title>Reference Model Definitions</title>
-  
-  <para xml:id="para_1681ca7e-ad8f-42f9-b5ae-daf1d2eafa8d">This part of the Standard is based on the concepts developed in ISO 7498-1 and makes use of the following terms defined in it:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_a7e4a92c-11da-4060-af26-cb1c01cb7051">application entity</para>
-</listitem>
-<listitem>
-<para xml:id="para_db21bc39-019b-48d3-80f3-30a7f9a6fa36">application layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_173cf0b1-660c-4d52-8678-e7dab54aeebb">application process</para>
-</listitem>
-<listitem>
-<para xml:id="para_b193ccba-9552-4498-8b99-f19b5a33ed37">data link layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_65ca92ce-9227-4886-80a0-ea63a612987c">layer entity</para>
-</listitem>
-<listitem>
-<para xml:id="para_ecc7c6b6-c211-4434-92af-5e4c9a221017">network layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_dc38f1d6-5992-473e-92cf-cf05db363f7c">physical layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_926b1a0a-e06b-454e-b3a3-0a42ea5c5d5d">presentation layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_5ddd242b-f3e2-4705-8dbc-c7dec320a1e5">presentation service</para>
-</listitem>
-<listitem>
-<para xml:id="para_8044ac45-b5b1-49fe-a8ae-b1d08bd26dd9">protocol or layer protocol</para>
-</listitem>
-<listitem>
-<para xml:id="para_45d3a383-5f05-4628-be3c-dc03dff58a1b">protocol data unit or layer protocol data unit</para>
-</listitem>
-<listitem>
-<para xml:id="para_fb736195-92ec-434e-be11-70d55e013c1c">service or layer service</para>
-</listitem>
-<listitem>
-<para xml:id="para_4490c410-0e1f-4b2c-bd83-0bcd15c80d79">service access point</para>
-</listitem>
-<listitem>
-<para xml:id="para_c7a0dd6a-d2d1-4561-9594-a616e36b30f2">session layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_826b8d5b-b005-4e70-85f3-6448661c2d66">transfer syntax</para>
-</listitem>
-<listitem>
-<para xml:id="para_d65e42fb-4e3e-45d6-9c00-75557bfba42d">transport layer</para>
-</listitem>
-<listitem>
-<para xml:id="para_1308f232-460c-4017-8102-1cfb5c0d0293">transport protocol</para>
-</listitem>
-<listitem>
-<para xml:id="para_7e1b1d68-40bc-4726-ac83-e593043fd9a7">transport connection</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.2" status="2" xml:id="sect_3.2">
-    <title>Naming and Addressing Definitions</title>
-  
-  <para xml:id="para_58988096-ebad-4f38-8715-0d3370dec909">This part of the Standard makes use of the following terms defined in ISO 7498-3:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_28650533-f3a6-4576-88be-c24310185d3d">calling presentation address</para>
-</listitem>
-<listitem>
-<para xml:id="para_3760963c-8dfb-4d23-8470-ab128e36638a">called presentation address</para>
-</listitem>
-<listitem>
-<para xml:id="para_2058ce39-bdb0-43f9-a5f7-06a1cc726b9e">responding presentation address</para>
-</listitem>
-<listitem>
-<para xml:id="para_a1cfca5c-2e80-4e00-a355-9468b5b143b5">called application entity title</para>
-</listitem>
-<listitem>
-<para xml:id="para_47f1a09b-fe66-46de-b16b-a5aff174e254">calling application entity title</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.3" status="2" xml:id="sect_3.3">
-    <title>Service Conventions Definitions</title>
-  
-  <para xml:id="para_258a9422-d482-4f2c-b4c8-dfac6a70967e">This part of the Standard makes use of the following terms defined in ISO/TR 8509:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_f9a05b98-d373-4d1e-9e98-673793a9a8bf">service provider</para>
-</listitem>
-<listitem>
-<para xml:id="para_1dcbf8fe-8ffb-4d7b-8409-bf789aed989e">service user</para>
-</listitem>
-<listitem>
-<para xml:id="para_3d20c008-00ff-4c81-85c7-4e4d41b56430">confirmed service</para>
-</listitem>
-<listitem>
-<para xml:id="para_c17e6d9a-1a68-4b37-98f2-d94c19d2997d">non-confirmed service</para>
-</listitem>
-<listitem>
-<para xml:id="para_68c0460f-8d8e-43e5-88f6-875619d4b945">primitive</para>
-</listitem>
-<listitem>
-<para xml:id="para_cf560262-82b6-483d-934f-e99fa927f8e0">request (primitive)</para>
-</listitem>
-<listitem>
-<para xml:id="para_cc924161-e3d1-4f12-a4d3-6e881aab8405">indication (primitive)</para>
-</listitem>
-<listitem>
-<para xml:id="para_671913ec-2514-4d32-b0c5-cc7196fdd578">response (primitive)</para>
-</listitem>
-<listitem>
-<para xml:id="para_7a76900d-c6b0-4b4f-b93a-fabfe0a4eb8f">confirmation (primitive)</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.4" status="2" xml:id="sect_3.4">
-    <title>Presentation Service Definitions</title>
-  
-  <para xml:id="para_8cef739a-4b1e-4437-aff1-aa6621815bfd">This part of the Standard makes use of the following terms defined in ISO 8822:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_4c97a7af-d8df-4694-9e64-3a010380944f">abstract syntax</para>
-</listitem>
-<listitem>
-<para xml:id="para_a07f77f2-831e-49cb-824d-7276c503601b">abstract syntax name</para>
-</listitem>
-<listitem>
-<para xml:id="para_e3f3f666-e06d-4de5-a55d-e2d6e9ecce9f">presentation context</para>
-</listitem>
-<listitem>
-<para xml:id="para_62ed3530-ba3a-4242-be28-f63757cd1832">presentation data values</para>
-</listitem>
-<listitem>
-<para xml:id="para_33d30b14-2a1b-452b-8c81-aad44e65bb8d">transfer syntax</para>
-</listitem>
-<listitem>
-<para xml:id="para_c596c81a-d513-4f83-99f9-8a333ffcb278">transfer syntax name</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.5" status="2" xml:id="sect_3.5">
-    <title>ACSE Service Definitions</title>
-  
-  <para xml:id="para_cfcf683d-9b58-4839-bb0f-d3d83c054e44">This part of the Standard makes use of the following terms defined in ISO 8649:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_7f2b3dfe-552c-433e-86bd-771873dc868e">association or application association</para>
-</listitem>
-<listitem>
-<para xml:id="para_03e58f6b-2d3b-404f-8f43-66246fd090d2">application context</para>
-</listitem>
-<listitem>
-<para xml:id="para_e9d4da32-1cc8-482f-829e-634bbb275123">association control service element</para>
-</listitem>
-<listitem>
-<para xml:id="para_b9653b12-7ec3-4583-8a4e-2e4be1813bef">association initiator</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.6" status="2" xml:id="sect_3.6">
-    <title>DICOM Introduction and Overview Definition</title>
-  
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_0a4c5251-358e-41e0-8a32-ac147a3fdf77">message</para>
-</listitem>
-</orderedlist>
-  </section>
-<section label="3.7" status="2" xml:id="sect_3.7">
-    <title>DICOM Communication Support Definitions</title>
-  
-  <para xml:id="para_6712a3f8-ad7a-47cd-8eca-463980f63a75">The following definitions are commonly used in this part of the Standard:</para>
-  <para xml:id="para_e6469dc7-ca90-4c86-9ac6-173c11511811">
-  <emphasis role="bold">Unique identifier (UID) :</emphasis>The scheme used to provide global unique identification for objects. It uses the structure defined by ISO 8824 for OSI Object Identifiers.</para>
-  <para xml:id="para_a331bb7c-479e-4ada-a186-c435f8403d48">
-  <emphasis role="bold">DICOM upper layer:</emphasis>The Upper Layer protocols are related to the Session, Presentation and part of the Application Layer of the ISO reference model. These protocols provide the Upper Layer Service. This Service is a proper subset of the ACSE Service and OSI Presentation Layer Service.</para>
-  </section>
-</chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_46221b78-346a-4d38-9571-9345f39fb7d4">For the purposes of this Standard the following definitions apply.</para>
+        <glossary>
+            <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>Reference Model Definitions</title>
+                <para xml:id="para_1681ca7e-ad8f-42f9-b5ae-daf1d2eafa8d">This Part of the Standard is based on the concepts developed in <xref linkend="biblio_ISO7498-1"/> and makes use of the following terms defined in it:</para>
+                <glossentry xml:id="glossentry_ApplicationEntity" xreflabel="Application Entity">
+                    <glossterm>Application Entity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a7e4a92c-11da-4060-af26-cb1c01cb7051">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationLayer" xreflabel="Application Layer">
+                    <glossterm>Application Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_db21bc39-019b-48d3-80f3-30a7f9a6fa36">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationProcess" xreflabel="Application Process">
+                    <glossterm>Application Process</glossterm>
+                    <glossdef>
+                        <para xml:id="para_173cf0b1-660c-4d52-8678-e7dab54aeebb">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataLinkLayer" xreflabel="Data Link Layer">
+                    <glossterm>Data Link Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b193ccba-9552-4498-8b99-f19b5a33ed37">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_LayerEntity" xreflabel="Layer Entity">
+                    <glossterm>Layer Entity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_65ca92ce-9227-4886-80a0-ea63a612987c">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_NetworkLayer" xreflabel="Network Layer">
+                    <glossterm>Network Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_ecc7c6b6-c211-4434-92af-5e4c9a221017">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PhysicalLayer" xreflabel="Physical Layer">
+                    <glossterm>Physical Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_dc38f1d6-5992-473e-92cf-cf05db363f7c">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationLayer" xreflabel="Presentation Layer">
+                    <glossterm>Presentation Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_926b1a0a-e06b-454e-b3a3-0a42ea5c5d5d">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationService" xreflabel="Presentation Service">
+                    <glossterm>Presentation Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5ddd242b-f3e2-4705-8dbc-c7dec320a1e5">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Protocol" xreflabel="Protocol">
+                    <glossterm>Protocol</glossterm>
+                    <glossdef>
+                        <para xml:id="para_8044ac45-b5b1-49fe-a8ae-b1d08bd26dd9">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ProtocolDataUnit" xreflabel="Protocol Data Unit">
+                    <glossterm>Protocol Data Unit</glossterm>
+                    <glossdef>
+                        <para xml:id="para_45d3a383-5f05-4628-be3c-dc03dff58a1b">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Service" xreflabel="Service">
+                    <glossterm>Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_fb736195-92ec-434e-be11-70d55e013c1c">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceAccessPoint" xreflabel="Service Access Point">
+                    <glossterm>Service Access Point</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4490c410-0e1f-4b2c-bd83-0bcd15c80d79">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SessionLayer" xreflabel="Session Layer">
+                    <glossterm>Session Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_c7a0dd6a-d2d1-4561-9594-a616e36b30f2">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntax" xreflabel="Transfer Syntax">
+                    <glossterm>Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_826b8d5b-b005-4e70-85f3-6448661c2d66">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransportLayer" xreflabel="Transport Layer">
+                    <glossterm>Transport Layer</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d65e42fb-4e3e-45d6-9c00-75557bfba42d">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransportProtocol" xreflabel="Transport Protocol">
+                    <glossterm>Transport Protocol</glossterm>
+                    <glossdef>
+                        <para xml:id="para_1308f232-460c-4017-8102-1cfb5c0d0293">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransportConnection" xreflabel="Transport Connection">
+                    <glossterm>Transport Connection</glossterm>
+                    <glossdef>
+                        <para xml:id="para_7e1b1d68-40bc-4726-ac83-e593043fd9a7">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>Naming and Addressing Definitions</title>
+                <para xml:id="para_58988096-ebad-4f38-8715-0d3370dec909">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO7498-3"/>:</para>
+                <glossentry xml:id="glossentry_CallingPresentationAddress" xreflabel="Calling Presentation Address">
+                    <glossterm>Calling Presentation Address</glossterm>
+                    <glossdef>
+                        <para xml:id="para_28650533-f3a6-4576-88be-c24310185d3d">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_CalledPresentationAddress" xreflabel="Called Presentation Address">
+                    <glossterm>Called Presentation Address</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3760963c-8dfb-4d23-8470-ab128e36638a">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationAddress" xreflabel="Presentation Address">
+                    <glossterm>Presentation Address</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e29cdb32-f70b-418d-b756-7d2d4da59f64">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_RespondingPresentationAddress" xreflabel="Responding Presentation Address">
+                    <glossterm>Responding Presentation Address</glossterm>
+                    <glossdef>
+                        <para xml:id="para_2058ce39-bdb0-43f9-a5f7-06a1cc726b9e">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_CalledApplicationEntityTitle" xreflabel="Called Application Entity Title">
+                    <glossterm>Called Application Entity Title</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a1cfca5c-2e80-4e00-a355-9468b5b143b5">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_CallingApplicationEntityTitle" xreflabel="Calling Application Entity Title">
+                    <glossterm>Calling Application Entity Title</glossterm>
+                    <glossdef>
+                        <para xml:id="para_47f1a09b-fe66-46de-b16b-a5aff174e254">See <xref linkend="biblio_ISO7498-3"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>Service Conventions Definitions</title>
+                <para xml:id="para_258a9422-d482-4f2c-b4c8-dfac6a70967e">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8509"/>:</para>
+                <glossentry xml:id="glossentry_ServiceProvider" xreflabel="Service Provider">
+                    <glossterm>Service Provider</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f9a05b98-d373-4d1e-9e98-673793a9a8bf">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceUser" xreflabel="Service User">
+                    <glossterm>Service User</glossterm>
+                    <glossdef>
+                        <para xml:id="para_1dcbf8fe-8ffb-4d7b-8409-bf789aed989e">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ConfirmedService" xreflabel="Confirmed Service">
+                    <glossterm>Confirmed Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3d20c008-00ff-4c81-85c7-4e4d41b56430">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_NonConfirmedService" xreflabel="Non-confirmed Service">
+                    <glossterm>Non-confirmed Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_c17e6d9a-1a68-4b37-98f2-d94c19d2997d">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Primitive" xreflabel="Primitive">
+                    <glossterm>Primitive</glossterm>
+                    <glossdef>
+                        <para xml:id="para_68c0460f-8d8e-43e5-88f6-875619d4b945">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_RequestPrimitive" xreflabel="Request (Primitive)">
+                    <glossterm>Request (Primitive)</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cf560262-82b6-483d-934f-e99fa927f8e0">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_IndicationPrimitive" xreflabel="Indication (Primitive)">
+                    <glossterm>Indication (Primitive)</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cc924161-e3d1-4f12-a4d3-6e881aab8405">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ResponsePrimitive" xreflabel="Response (Primitive)">
+                    <glossterm>Response (Primitive)</glossterm>
+                    <glossdef>
+                        <para xml:id="para_671913ec-2514-4d32-b0c5-cc7196fdd578">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ConfirmationPrimitive" xreflabel="Confirmation (Primitive)">
+                    <glossterm>Confirmation (Primitive)</glossterm>
+                    <glossdef>
+                        <para xml:id="para_7a76900d-c6b0-4b4f-b93a-fabfe0a4eb8f">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.4" status="2" xml:id="sect_3.4">
+                <title>Presentation Service Definitions</title>
+                <para xml:id="para_8cef739a-4b1e-4437-aff1-aa6621815bfd">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8822"/>:</para>
+                <glossentry xml:id="glossentry_AbstractSyntax" xreflabel="Abstract Syntax">
+                    <glossterm>Abstract Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4c97a7af-d8df-4694-9e64-3a010380944f">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AbstractSyntaxName" xreflabel="Abstract Syntax Name">
+                    <glossterm>Abstract Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a07f77f2-831e-49cb-824d-7276c503601b">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationContext" xreflabel="Presentation Context">
+                    <glossterm>Presentation Context</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e3f3f666-e06d-4de5-a55d-e2d6e9ecce9f">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationDataValues" xreflabel="Presentation Data Values">
+                    <glossterm>Presentation Data Values</glossterm>
+                    <glossdef>
+                        <para xml:id="para_62ed3530-ba3a-4242-be28-f63757cd1832">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntaxName" xreflabel="Transfer Syntax Name">
+                    <glossterm>Transfer Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_c596c81a-d513-4f83-99f9-8a333ffcb278">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.5" status="2" xml:id="sect_3.5">
+                <title>ACSE Service Definitions</title>
+                <para xml:id="para_cfcf683d-9b58-4839-bb0f-d3d83c054e44">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8649"/>:</para>
+                <glossentry xml:id="glossentry_Association" xreflabel="Association">
+                    <glossterm>Association</glossterm>
+                    <glossdef>
+                        <para xml:id="para_7f2b3dfe-552c-433e-86bd-771873dc868e">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationContext" xreflabel="Application Context">
+                    <glossterm>Application Context</glossterm>
+                    <glossdef>
+                        <para xml:id="para_03e58f6b-2d3b-404f-8f43-66246fd090d2">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AssociationControlServiceElement" xreflabel="Association Control Service Element">
+                    <glossterm>Association Control Service Element</glossterm>
+                    <acronym>ACSE</acronym>
+                    <glossdef>
+                        <para xml:id="para_e9d4da32-1cc8-482f-829e-634bbb275123">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AssociationInitiator" xreflabel="Association Initiator">
+                    <glossterm>Association Initiator</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b9653b12-7ec3-4583-8a4e-2e4be1813bef">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.6" status="2" xml:id="sect_3.6">
+                <title>DICOM Introduction and Overview Definition</title>
+                <para xml:id="para_bc4b5482-8854-4b1a-b04a-b4f842db5385">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_Message" xreflabel="Message">
+                    <glossterm>Message</glossterm>
+                    <glossdef>
+                        <para xml:id="para_0a4c5251-358e-41e0-8a32-ac147a3fdf77">
+<olink targetdoc="PS3.1" targetptr="glossentry_Message"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.7" status="2" xml:id="sect_3.7">
+                <title>DICOM Communication Support Definitions</title>
+                <para xml:id="para_6712a3f8-ad7a-47cd-8eca-463980f63a75">The following definitions are commonly used in this Part of the Standard:</para>
+                <glossentry xml:id="glossentry_DICOMUpperLayerService" xreflabel="DICOM Upper Layer Service">
+                    <glossterm>DICOM Upper Layer Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a331bb7c-479e-4ada-a186-c435f8403d48">The Upper Layer protocols are related to the Session, Presentation and part of the Application Layer of the ISO reference model. These protocols provide the Upper Layer Service. This Service is a proper subset of the ACSE Service and OSI Presentation Layer Service.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.8" status="2" xml:id="sect_3.8">
+                <title>DICOM Service Class Definitions</title>
+                <para xml:id="para_537dd1f1-07dc-4a8b-936b-d065e6419971">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service-Object Pair Instance (SOP Instance)">
+                    <glossterm>Service-Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_6b26166e-fbf9-4280-8bb8-75be8f353b1f">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.9" status="2" xml:id="sect_3.9">
+                <title>DICOM Data Structures and Encoding Definitions</title>
+                <para xml:id="para_84123f4d-e495-4ee9-8fb1-fc18a57027a6">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                    <glossterm>Data Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_2e9c0e10-928a-4cb9-9653-05c33acdc61e">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_UniqueIdentifier" xreflabel="Unique Identifier (UID)">
+                    <glossterm>Unique Identifier</glossterm>
+                    <acronym>UID</acronym>
+                    <glossdef>
+                        <para xml:id="para_c5070add-648d-425f-b179-bb8b824691b0">
+<olink targetdoc="PS3.5" targetptr="glossentry_UniqueIdentifier"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
+    
 <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
-  <para xml:id="para_ca171612-0be2-4009-9c26-07a31785d16a">The following symbols and abbreviations are used in this part of the Standard.</para>
+  <para xml:id="para_ca171612-0be2-4009-9c26-07a31785d16a">The following symbols and abbreviations are used in this Part of the Standard.</para>
   <variablelist>
   <varlistentry>
 <term>ACR</term>
@@ -485,7 +792,7 @@
 <chapter label="5" status="1" xml:id="chapter_5">
     <title>Conventions</title>
   
-  <para xml:id="para_2e2d899c-3ede-41d5-b6f8-e28d11318dac">The following conventions are used for the service description tables shown in this part of the Standard.</para>
+  <para xml:id="para_2e2d899c-3ede-41d5-b6f8-e28d11318dac">The following conventions are used for the service description tables shown in this Part of the Standard.</para>
   <variablelist>
   <varlistentry>
 <term>(=)</term>
@@ -643,7 +950,7 @@
     <title>A-ASSOCIATE Parameters</title>
   
   <para xml:id="para_9de52ff8-2a0d-4e92-b476-cacbb30a32a0">
-<xref linkend="table_7-2" xrefstyle="select: label"/> lists the parameters that shall be required for the A-ASSOCIATE service used by DICOM Application Entities in this standard.</para>
+<xref linkend="table_7-2" xrefstyle="select: label"/> lists the parameters that shall be required for the A-ASSOCIATE service used by DICOM Application Entities in this Standard.</para>
     <table frame="box" label="7-2" rules="all" xml:id="table_7-2">
     <caption>Key A-ASSOCIATE Service Parameters</caption>
     <thead>
@@ -827,10 +1134,10 @@
   </tbody>
   </table>
   <note>
-    <para xml:id="para_7859e116-8629-4043-8f0d-d9b99ab0e422">See Section 5 of this part for table conventions.</para>
+    <para xml:id="para_7859e116-8629-4043-8f0d-d9b99ab0e422">See Section 5 of this Part for table conventions.</para>
   </note>
   <para xml:id="para_0e3a8b8d-7e35-42fe-80b5-9129e3cad776">
-<xref linkend="table_7-3" xrefstyle="select: label"/> lists the parameters for the A-ASSOCIATE service that shall contain fixed values or shall not be used by DICOM Application Entities in this standard.</para>
+<xref linkend="table_7-3" xrefstyle="select: label"/> lists the parameters for the A-ASSOCIATE service that shall contain fixed values or shall not be used by DICOM Application Entities in this Standard.</para>
     <table frame="box" label="7-3" rules="all" xml:id="table_7-3">
     <caption>A-ASSOCIATE Service Parameter (Fixed or Not Used)</caption>
     <thead>
@@ -1030,7 +1337,7 @@
 <section label="7.1.1.5" status="4" xml:id="sect_7.1.1.5">
     <title>Responding AE Title (Fixed)</title>
   
-  <para xml:id="para_dde8e63d-8f01-4a9c-a502-6f29298e6cdd">This parameter identifies the AE that shall contain the actual acceptor of the A-ASSOCIATE service. In this standard it shall always contain the same value as the Called AE Title of the A-ASSOCIATE indication.</para>
+  <para xml:id="para_dde8e63d-8f01-4a9c-a502-6f29298e6cdd">This parameter identifies the AE that shall contain the actual acceptor of the A-ASSOCIATE service. In this Standard it shall always contain the same value as the Called AE Title of the A-ASSOCIATE indication.</para>
   </section>
 <section label="7.1.1.6" status="4" xml:id="sect_7.1.1.6">
     <title>User Information</title>
@@ -1151,7 +1458,7 @@
 </listitem>
 </orderedlist>
   <note>
-    <para xml:id="para_1f72bb93-1992-4a29-bbe1-868276524f69">Even though some of the above symbolic values correspond to parameter errors not used in this standard, they are included to allow the notification of errors resulting from the unauthorized use of these parameters.</para>
+    <para xml:id="para_1f72bb93-1992-4a29-bbe1-868276524f69">Even though some of the above symbolic values correspond to parameter errors not used in this Standard, they are included to allow the notification of errors resulting from the unauthorized use of these parameters.</para>
   </note>
   </section>
 <section label="7.1.1.10" status="4" xml:id="sect_7.1.1.10">
@@ -1167,7 +1474,7 @@
 <section label="7.1.1.12" status="4" xml:id="sect_7.1.1.12">
     <title>Responding Presentation Address</title>
   
-  <para xml:id="para_9b7a1067-1eb3-426c-904d-bbdcc6bbaba9">In this standard, a responding presentation address shall always contain the same value as the called Presentation Address of the A-ASSOCIATE indication. This parameter shall contain a structured destination address unambiguous within the global network address structure.</para>
+  <para xml:id="para_9b7a1067-1eb3-426c-904d-bbdcc6bbaba9">In this Standard, a responding presentation address shall always contain the same value as the called Presentation Address of the A-ASSOCIATE indication. This parameter shall contain a structured destination address unambiguous within the global network address structure.</para>
   </section>
 <section label="7.1.1.13" status="4" xml:id="sect_7.1.1.13">
     <title>Presentation Context Definition List</title>
@@ -1177,7 +1484,7 @@
   <note>
     <para xml:id="para_e1988979-c006-4533-9ad8-883bef90fa48">A separate presentation context will be associated with each Abstract Syntax Name in each of the elements of the Presentation Context Definition List parameter. If the same Abstract Syntax Name occurs more than once, a separate and distinctly identified presentation context will be generated for each occurrence (as only one Transfer Syntax per presentation context can be accepted).</para>
   </note>
-  <para xml:id="para_d1eaf481-679e-47f7-9c48-e73756aa6fbd">Abstract Syntaxes defined by this standard and used by DICOM Application Entites are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. Transfer Syntaxes defined by this standard and used by DICOM Application Entities are defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Further discussion on Abstract Syntaxes and Transfer Syntaxes can be found in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
+  <para xml:id="para_d1eaf481-679e-47f7-9c48-e73756aa6fbd">Abstract Syntaxes defined by this Standard and used by DICOM Application Entites are defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. Transfer Syntaxes defined by this Standard and used by DICOM Application Entities are defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Further discussion on Abstract Syntaxes and Transfer Syntaxes can be found in <xref linkend="chapter_B" xrefstyle="template:Annex %n"/>.</para>
   </section>
 <section label="7.1.1.14" status="4" xml:id="sect_7.1.1.14">
     <title>Presentation Context Definition Result List</title>
@@ -1186,7 +1493,7 @@
   <note>
     <para xml:id="para_68a74ba7-b553-4eb0-8ac5-5f3b7fa4de30">The order of the results may be different than the order proposed. The order need not be sorted by identifier, and the Initiator may not assume or depend upon any particular order.</para>
   </note>
-  <para xml:id="para_e0e70fb8-d78f-49b9-a79d-859f25b75cbf">In this standard only one Transfer Syntax per presentation context shall be agreed to, even though more than one choice of Transfer Syntaxes may have been offered in a specific presentation context of the Presentation Context Definition list.</para>
+  <para xml:id="para_e0e70fb8-d78f-49b9-a79d-859f25b75cbf">In this Standard only one Transfer Syntax per presentation context shall be agreed to, even though more than one choice of Transfer Syntaxes may have been offered in a specific presentation context of the Presentation Context Definition list.</para>
   </section>
 <section label="7.1.1.15" status="4" xml:id="sect_7.1.1.15">
     <title>Presentation Requirements (Fixed Value)</title>
@@ -1201,7 +1508,7 @@
 <section label="7.1.1.17" status="4" xml:id="sect_7.1.1.17">
     <title>Other Parameters</title>
   
-  <para xml:id="para_94dfd80b-01b0-42bb-a851-d4b8a46ad460">A few optional parameters defined in the OSI ACSE (ISO 8649) and OSI Presentation Service (ISO 8822) Standards are not identified here. They are not necessary for the communication of DICOM Application Entities and shall not be used in this standard.</para>
+  <para xml:id="para_94dfd80b-01b0-42bb-a851-d4b8a46ad460">A few optional parameters defined in the OSI ACSE (ISO 8649) and OSI Presentation Service (ISO 8822) Standards are not identified here. They are not necessary for the communication of DICOM Application Entities and shall not be used in this Standard.</para>
   </section>
 </section>
 <section label="7.1.2" status="3" xml:id="sect_7.1.2">
@@ -1247,7 +1554,7 @@
     <title>A-RELEASE Parameters</title>
   
   <para xml:id="para_40b083eb-4c1f-44f4-9e80-8617efd638bb">
-<xref linkend="table_7-4" xrefstyle="select: label"/> lists the parameters for the A-RELEASE service that shall contain fixed values or shall not be used by DICOM Application Entities in this standard.</para>
+<xref linkend="table_7-4" xrefstyle="select: label"/> lists the parameters for the A-RELEASE service that shall contain fixed values or shall not be used by DICOM Application Entities in this Standard.</para>
     <table frame="box" label="7-4" rules="all" xml:id="table_7-4">
     <caption>A-RELEASE Service Parameters</caption>
     <thead>
@@ -1333,12 +1640,12 @@
   <section label="7.2.1.1" status="4" xml:id="sect_7.2.1.1">
     <title>Reason (Fixed)</title>
   
-  <para xml:id="para_5b2aec1d-82cd-40c9-88c8-5f0b4cd9696e">When used on the request primitive, this parameter identifies the general level of urgency of the request. This parameter shall always use the value "normal" in this standard.</para>
+  <para xml:id="para_5b2aec1d-82cd-40c9-88c8-5f0b4cd9696e">When used on the request primitive, this parameter identifies the general level of urgency of the request. This parameter shall always use the value "normal" in this Standard.</para>
   </section>
 <section label="7.2.1.2" status="4" xml:id="sect_7.2.1.2">
     <title>Result (Fixed)</title>
   
-  <para xml:id="para_05943d33-6ad6-4178-a6eb-d9ca05cb3bad">This parameter shall always take the value "affirmative" in this standard.</para>
+  <para xml:id="para_05943d33-6ad6-4178-a6eb-d9ca05cb3bad">This parameter shall always take the value "affirmative" in this Standard.</para>
   </section>
 </section>
 <section label="7.2.2" status="3" xml:id="sect_7.2.2">
@@ -1399,7 +1706,7 @@
     <title>A-ABORT Parameters</title>
   
   <para xml:id="para_7ce99acc-e773-4aac-ba7c-78ba67b1a40d">
-<xref linkend="table_7-5" xrefstyle="select: label"/> lists the parameters for the A-ABORT service. Only the first parameter shall be used by DICOM Application Entities in this standard.</para>
+<xref linkend="table_7-5" xrefstyle="select: label"/> lists the parameters for the A-ABORT service. Only the first parameter shall be used by DICOM Application Entities in this Standard.</para>
     <table frame="box" label="7-5" rules="all" xml:id="table_7-5">
     <caption>A-ABORT Service Parameters</caption>
     <thead>
@@ -1543,7 +1850,7 @@
 </listitem>
 </orderedlist>
   <note>
-    <para xml:id="para_b6e96550-343b-4993-9f03-5d42931bf4af">In addition to these reasons, a locally defined list of reasons may be used to reflect errors that caused the abort and originated in the Session, Transport, Network, Data Link, and Physical layers. The generation and handling of such errors is internal to an implementation and, therefore, is outside the scope of this communications standard.</para>
+    <para xml:id="para_b6e96550-343b-4993-9f03-5d42931bf4af">In addition to these reasons, a locally defined list of reasons may be used to reflect errors that caused the abort and originated in the Session, Transport, Network, Data Link, and Physical layers. The generation and handling of such errors is internal to an implementation and, therefore, is outside the scope of this communications Standard.</para>
   </note>
   </section>
 <section label="7.4.2" status="3" xml:id="sect_7.4.2">
@@ -4406,7 +4713,7 @@
         <para xml:id="para_9e8cc62e-4040-4e1f-a215-faebf2ba02bf">Presentation-data-value</para>
       </td>
       <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_78305d60-ec3e-4102-931a-238fb9b7b6fb">This Presentation-data-value field shall contain DICOM message information (command and/or data set) with a message control header. For a complete description of the use of this field see <xref linkend="chapter_E" xrefstyle="template:Annex %n"/>.</para>
+        <para xml:id="para_78305d60-ec3e-4102-931a-238fb9b7b6fb">This Presentation-data-value field shall contain DICOM message information (command and/or Data Set) with a message control header. For a complete description of the use of this field see <xref linkend="chapter_E" xrefstyle="template:Annex %n"/>.</para>
       </td>
     </tr>
   </tbody>
@@ -4985,7 +5292,7 @@
   <note>
     <orderedlist numeration="arabic">
       <listitem>
-        <para xml:id="para_17c68ce9-2d13-4e07-956d-0672424e64b8">The values of the Sub-Items types in the User Information Field are assigned by this standard in the range of 51H through FFH. Sub-Item values are defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_17c68ce9-2d13-4e07-956d-0672424e64b8">The values of the Sub-Items types in the User Information Field are assigned by this Standard in the range of 51H through FFH. Sub-Item values are defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>.</para>
       </listitem>
       <listitem>
         <para xml:id="para_54ea8412-72dc-4bea-93e7-fc5fe2f859fe">Succeeding editions of the Standard may define additional user information Sub-Items in a manner that does not affect the semantics of previously defined Sub-Items. Association acceptors compliant to an earlier edition of the Standard are required to ignore such unrecognized user information Sub-Items and not reject an Association because of their presence.</para>
@@ -5113,7 +5420,7 @@
 
   <para xml:id="para_5c0c00e9-2672-4c78-9788-4cf2355d8f5a">The OSI Upper Layer Service is described by a number of service primitives. They each model one of the functional interactions between the service-user in the layer above and the service-provider. In the context of this Standard, the service-user is called the DICOM Application Service Element. The service-provider is called the Upper Layer and performs the Upper Layer Protocol.</para>
   <note>
-    <para xml:id="para_b5ac3b4a-12a7-447e-b16e-7e37cc715f78">The OSI UL Services defined in this standard are provided by the DICOM Upper Layer Protocol for TCP/IP (Section 9).</para>
+    <para xml:id="para_b5ac3b4a-12a7-447e-b16e-7e37cc715f78">The OSI UL Services defined in this Standard are provided by the DICOM Upper Layer Protocol for TCP/IP (Section 9).</para>
   </note>
   <para xml:id="para_f7e4a310-1a41-4f95-b7e4-b26aeadeea91">These service primitives cross the layer boundary at what is called a Service Access Point (SAP). In most cases a direct relationship exists between service primitives in two Application Entities (AEs). This is reflected in the names of these primitives:</para>
   <orderedlist numeration="loweralpha">

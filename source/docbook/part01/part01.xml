@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2018e - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2019a - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -72,7 +72,7 @@
     <title>Scope and Field of Application</title>
     <para xml:id="para_2017ee20-1d0a-4e65-ad76-eb8b297cda3a">PS3.1 provides an overview of the entire Digital Imaging and Communications in Medicine
       (DICOM) Standard. It describes the history, scope, goals, and structure of the Standard. In
-      particular, it contains a brief description of the contents of each part of the
+      particular, it contains a brief description of the contents of each Part of the
       Standard.</para>
     <section label="1.1" status="2" xml:id="sect_1.1">
       <title>Scope of DICOM</title>
@@ -233,7 +233,7 @@
           Standards Committee will not maintain the documentation of retired features. The reader is
           referred to earlier editions of the Standard.</para>
         <para xml:id="para_d3113d8d-92c2-466a-9caa-fdeb11436b1f">The use of the retired features is discouraged for new implementations, in favor of those
-          alternatives remaining in the standard.</para>
+          alternatives remaining in the Standard.</para>
       </section>
       <section label="1.4.3" status="3" xml:id="sect_1.4.3">
         <title>Information Objects and Unique Object Identification</title>
@@ -315,130 +315,119 @@
       </biblioentry>
     </bibliography>
   </chapter>
-  <chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_892f86ea-a08b-43d4-92b2-fb556ab0774d"/>
-    <glossary>
-      <title/>
-      <glossentry>
-        <glossterm>Attribute</glossterm>
-        <glossdef>
-          <para xml:id="para_6918bd83-fed4-4a97-882a-3e200b3c2878">A property of an Information Object. An Attribute
-        has a name and a value that are independent of any encoding scheme.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Command</glossterm>
-        <glossdef>
-          <para xml:id="para_19044bbb-225f-450f-bfc7-bb06da9c810a">A request to operate on information across a network.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Command Element</glossterm>
-        <glossdef>
-          <para xml:id="para_006b42b8-8b45-4b5f-9871-cab6b7163466">An encoding of a parameter of a command that conveys this parameter's value.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Command Stream</glossterm>
-        <glossdef>
-          <para xml:id="para_6acc4490-c493-4b9c-bc27-a359b4453727">The result of encoding a set of DICOM Command Elements using the DICOM encoding scheme.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Conformance Statement</glossterm>
-        <glossdef>
-          <para xml:id="para_c43f5184-0342-4a51-9b07-7b5fd5545993">A formal statement that describes a
-      specific product implementation that uses the DICOM Standard. It specifies the Service
-      Classes, Information Objects, and Communication Protocols supported by the implementation.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Data Dictionary</glossterm>
-        <glossdef>
-          <para xml:id="para_f0a61682-18f1-4d68-a613-9361e05b0d17">A registry of DICOM Data Elements that assigns a unique tag, a name,
-        value characteristics, and semantics to each Data
-      Element.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Data Element</glossterm>
-        <glossdef>
-          <para xml:id="para_fb6c4bfb-93ea-4500-8c94-2ea10f3a26a6">A unit of information as defined by a single entry in the data dictionary.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Data Set</glossterm>
-        <glossdef>
-          <para xml:id="para_ad8cecfa-d44a-49b4-ae75-801f0cf960ef">Exchanged information consisting of a structured
-      set of Attributes. The value of each Attribute in a Data Set is expressed as a Data
-      Element.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Data Stream</glossterm>
-        <glossdef>
-          <para xml:id="para_5e3c3316-1066-4125-9cc0-e5869ac21f0f">The result of encoding a Data Set using the
-      DICOM encoding scheme (Data Element Numbers and representations as specified by the Data
-      Dictionary).</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Information Object</glossterm>
-        <glossdef>
-          <para xml:id="para_34d8edce-dea8-4043-9d4a-653d4f228634">An abstraction of a real information
-      entity (e.g., CT Image, Structured Report, etc.) that is acted upon by one or more DICOM
-      Commands.</para>
-          <note>
-            <para xml:id="para_8de67f41-9f1d-48bb-afd0-238392f3b865">This term is primarily used in PS3.1, with a few references in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. It is an
-            informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. In all other
-            parts of the DICOM Standard this formal term is known as an Information Object
-            Definition.</para>
-          </note>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Information Object Class</glossterm>
-        <glossdef>
-          <para xml:id="para_0612db04-d94d-4220-bb9f-20c044587a15">A formal description of an Information Object, which includes a description of its purpose and
-          the Attributes it possesses. It does not include values for these attributes.</para>
-          <note>
-            <para xml:id="para_544fcd11-963a-484e-bb96-8e4a4409235d">This term is only used in PS3.1. It is an informal term corresponding to a formal
-            term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair Class
-            or more commonly as a SOP Class.</para>
-          </note>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Information Object Instance</glossterm>
-        <glossdef>
-          <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurrence of an real-world entity, which includes values for the
-          Attributes of the Information Object Class to which the entity belongs.</para>
-          <note>
-            <para xml:id="para_f46795a4-3588-4be5-8d4a-1e2e9bbed96e">This term is only used in PS3.1. It is an informal term corresponding to a formal
-            term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair
-            Instance or more commonly as a SOP Instance.</para>
-          </note>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Message</glossterm>
-        <glossdef>
-          <para xml:id="para_bda3f417-dad1-4296-abed-8288c235ccfd">A data unit of the Message Exchange Protocol
-      exchanged between two cooperating DICOM Applications. A Message is composed of a Command
-      Stream followed by an optional Data Stream.</para>
-        </glossdef>
-      </glossentry>
-      <glossentry>
-        <glossterm>Service Class</glossterm>
-        <glossdef>
-          <para xml:id="para_e938b4ab-8346-47e4-90f7-0116eaad38c2">A structured description of a service that is
-      supported by cooperating DICOM Applications using specific DICOM Commands acting on a specific
-      class of Information Object.</para>
-        </glossdef>
-      </glossentry>
-    </glossary>
-  </chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_892f86ea-a08b-43d4-92b2-fb556ab0774d"/>
+        <glossary>
+            <title/>
+            <glossentry xml:id="glossentry_Attribute" xreflabel="Attribute">
+                <glossterm>Attribute</glossterm>
+                <glossdef>
+                    <para xml:id="para_6918bd83-fed4-4a97-882a-3e200b3c2878">A property of an Information Object. An Attribute has a name and a value that are independent of any encoding scheme.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Command" xreflabel="Command">
+                <glossterm>Command</glossterm>
+                <glossdef>
+                    <para xml:id="para_19044bbb-225f-450f-bfc7-bb06da9c810a">A request to operate on information across a network.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_CommandElement" xreflabel="Command Element">
+                <glossterm>Command Element</glossterm>
+                <glossdef>
+                    <para xml:id="para_006b42b8-8b45-4b5f-9871-cab6b7163466">An encoding of a parameter of a command that conveys this parameter's value.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_CommandStream" xreflabel="Command Stream">
+                <glossterm>Command Stream</glossterm>
+                <glossdef>
+                    <para xml:id="para_6acc4490-c493-4b9c-bc27-a359b4453727">The result of encoding a set of DICOM Command Elements using the DICOM encoding scheme.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_ConformanceStatement" xreflabel="Conformance Statement">
+                <glossterm>Conformance Statement</glossterm>
+                <glossdef>
+                    <para xml:id="para_c43f5184-0342-4a51-9b07-7b5fd5545993">A formal statement that describes a specific implementation of the DICOM Standard. It specifies the Service Classes, Information Objects, Communication Protocols, Security Profiles, and Media Storage Application Profiles supported by the implementation.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_DataDictionary" xreflabel="Data Dictionary">
+                <glossterm>Data Dictionary</glossterm>
+                <glossdef>
+                    <para xml:id="para_f0a61682-18f1-4d68-a613-9361e05b0d17">A registry of DICOM Data Elements that assigns a unique tag, a name, value characteristics, and semantics to each Data Element.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_DataElement" xreflabel="Data Element">
+                <glossterm>Data Element</glossterm>
+                <glossdef>
+                    <para xml:id="para_fb6c4bfb-93ea-4500-8c94-2ea10f3a26a6">A unit of information as defined by a single entry in the data dictionary.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                <glossterm>Data Set</glossterm>
+                <glossdef>
+                    <para xml:id="para_ad8cecfa-d44a-49b4-ae75-801f0cf960ef">Exchanged information consisting of a structured set of Attributes. The value of each Attribute in a Data Set is expressed as a Data Element.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_DataStream" xreflabel="Data Stream">
+                <glossterm>Data Stream</glossterm>
+                <glossdef>
+                    <para xml:id="para_5e3c3316-1066-4125-9cc0-e5869ac21f0f">The result of encoding a Data Set using the DICOM encoding scheme (Data Element Numbers and representations as specified by the Data Dictionary).</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_InformationObject" xreflabel="Information Object">
+                <glossterm>Information Object</glossterm>
+                <glossdef>
+                    <para xml:id="para_34d8edce-dea8-4043-9d4a-653d4f228634">An abstraction of a real information entity (e.g., CT Image, Structured Report, etc.) that is acted upon by one or more DICOM Commands.</para>
+                    <note>
+                        <para xml:id="para_8de67f41-9f1d-48bb-afd0-238392f3b865">This term is primarily used in PS3.1, with a few references in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. It is an informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>. In all other parts of the DICOM Standard this formal term is known as an Information Object Definition.</para>
+                    </note>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_InformationObjectClass" xreflabel="Information Object Class">
+                <glossterm>Information Object Class</glossterm>
+                <glossdef>
+                    <para xml:id="para_0612db04-d94d-4220-bb9f-20c044587a15">A formal description of an Information Object, which includes a description of its purpose and the Attributes it possesses. It does not include values for these attributes.</para>
+                    <note>
+                        <para xml:id="para_544fcd11-963a-484e-bb96-8e4a4409235d">This term is only used in PS3.1. It is an informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair Class or more commonly as a SOP Class.</para>
+                    </note>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_InformationObjectInstance" xreflabel="Information Object Instance">
+                <glossterm>Information Object Instance</glossterm>
+                <glossdef>
+                    <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurrence of an real-world entity, which includes values for the Attributes of the Information Object Class to which the entity belongs.</para>
+                    <note>
+                        <para xml:id="para_f46795a4-3588-4be5-8d4a-1e2e9bbed96e">This term is only used in PS3.1. It is an informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair Instance or more commonly as a SOP Instance.</para>
+                    </note>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Message" xreflabel="Message">
+                <glossterm>Message</glossterm>
+                <glossdef>
+                    <para xml:id="para_bda3f417-dad1-4296-abed-8288c235ccfd">A data unit of the Message Exchange Protocol exchanged between two cooperating DICOM Applications. A Message is composed of a Command Stream followed by an optional Data Stream.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Part" xreflabel="Part">
+                <glossterm>Part</glossterm>
+                <glossdef>
+                    <para xml:id="para_e5fb58ff-d970-4a3a-96b4-84030408cdce">Subdivision of the DICOM Standard that covers related subject material.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_ServiceClass" xreflabel="Service Class">
+                <glossterm>Service Class</glossterm>
+                <glossdef>
+                    <para xml:id="para_e938b4ab-8346-47e4-90f7-0116eaad38c2">A structured description of a service that is supported by cooperating DICOM Applications using specific DICOM Commands acting on a specific class of Information Object.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+                <glossterm>Service-Object Pair Class</glossterm>
+                <acronym>SOP Class</acronym>
+                <glossdef>
+                    <para xml:id="para_b19fe384-7c7b-4932-aeba-e6b348a8e057">The pair of an Information Object and either a DIMSE Service Group, a Media Storage Service, or a Web Service.</para>
+                </glossdef>
+            </glossentry>
+        </glossary>
+    </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
     <variablelist>
@@ -460,6 +449,12 @@
           <para xml:id="para_27c4717c-7201-4038-a14a-61876e7b84d0">Digital Imaging and Communications in Medicine</para>
         </listitem>
       </varlistentry>
+        <varlistentry>
+            <term>DIMSE</term>
+            <listitem>
+                <para xml:id="para_663e37f5-2468-41ca-afe4-3651d3a47d69">DICOM Message Service Element</para>
+            </listitem>
+        </varlistentry>
       <varlistentry>
         <term>HIS</term>
         <listitem>
@@ -577,7 +572,7 @@
           <para xml:id="para_bc812d57-953f-4c9e-8864-e275dea08784">the DICOM Web Service API and HTTP Service, which allows use of common hypertext and associated protocols for transport of DICOM services</para>
         </listitem>
         <listitem>
-          <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">The Basic DICOM File Service, which provides access to Storage Media independently
+          <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">the Basic DICOM File Service, which provides access to Storage Media independently
             from specific media storage formats and file structures.</para>
         </listitem>
       </itemizedlist>
@@ -895,7 +890,7 @@
               transfer, or certain well known Information Object Instances,</para>
           </listitem>
           <listitem>
-            <para xml:id="para_87f4cf8c-5f81-47cd-8bd8-2a530364fcee">in which part of the DICOM Standard it is defined.</para>
+            <para xml:id="para_87f4cf8c-5f81-47cd-8bd8-2a530364fcee">in which Part of the DICOM Standard it is defined.</para>
           </listitem>
         </itemizedlist>
       </para>
@@ -960,11 +955,11 @@
         provide a framework allowing the interchange of various types of medical images and related
         information on a broad range of physical storage media.</para>
       <note>
-        <para xml:id="para_8e0c48db-da50-49e1-b13a-a6cac22cd9a9">See <xref linkend="figure_5-1" xrefstyle="select: label"/> for understanding how the media interchange model compares to the
+        <para xml:id="para_8e0c48db-da50-49e1-b13a-a6cac22cd9a9">See <xref linkend="figure_5-1" xrefstyle="select: label"/> for understanding how the media interchange model relates to the
           network model.</para>
       </note>
       <para xml:id="para_2f9d8305-4758-4efb-aba7-d23368de9543">
-<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> Specifies:</para>
+<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> specifies:</para>
       <para xml:id="para_1d0a0a1c-48b2-4899-ac2c-b0a9572c4fda">
         <itemizedlist>
           <listitem>
@@ -992,16 +987,16 @@
       <para xml:id="para_abc792a9-3bfb-42c4-a9c1-bbfaaf5616fc">
         <itemizedlist>
           <listitem>
-            <para xml:id="para_1eb4109f-4fa8-4d46-acfe-5bb012214621">the method to identify a set of files on a single medium</para>
+            <para xml:id="para_1eb4109f-4fa8-4d46-acfe-5bb012214621">the method to identify a set of files on a single medium;</para>
           </listitem>
           <listitem>
-            <para xml:id="para_7507dfdf-2352-4307-a121-392871095d83">the method for naming a DICOM file within a specific file system</para>
+            <para xml:id="para_7507dfdf-2352-4307-a121-392871095d83">the method for naming a DICOM file within a specific file system.</para>
           </listitem>
         </itemizedlist>
       </para>
       <para xml:id="para_e81ea5d2-4863-42be-8734-20570f7095f0">
         <figure label="6.10-1" pgwide="1" xml:id="figure_6.10-1">
-          <title>DICOM Media Communication Model</title>
+            <title>DICOM Communication Model for Media Interchange</title>
           <mediaobject>
             <imageobject>
               <imagedata fileref="figures/PS3.1_6.10-1.svg"/>
@@ -1105,7 +1100,7 @@
         printers).</para>
       <para xml:id="para_0bbae57d-d76c-4147-9346-5812f86c72dc">The chosen display function is based on human visual perception. Human eye contrast
         sensitivity is distinctly non-linear within the luminance range of display devices. This
-        standard uses Barten's model of the human visual system.</para>
+        Standard uses Barten's model of the human visual system.</para>
     </section>
     <section label="6.15" status="2" xml:id="sect_6.15">
       <title>PS3.15: Security and System Management Profiles</title>
@@ -1115,7 +1110,7 @@
         by referencing externally developed standard protocols, such as DHCP, LDAP, TLS and ISCL.
         Security protocols may use security techniques like public keys and "smart cards". Data
         encryption can use various standardized data encryption schemes.</para>
-      <para xml:id="para_6fd02b6d-c186-480a-9989-3abc33488a8c">This part does not address issues of security policies. The standard only provides
+      <para xml:id="para_6fd02b6d-c186-480a-9989-3abc33488a8c">This Part does not address issues of security policies. The Standard only provides
         mechanisms that can be used to implement security policies with regard to the interchange of
         DICOM objects. It is the local administrator's responsibility to establish appropriate
         security policies.</para>
@@ -1160,7 +1155,7 @@
         retrieving or storing a DICOM object.</para>
       <para xml:id="para_d04c0a56-b7d8-442f-9e8f-68d769ba7283">Requests that retrieve data specify the media type (format) of the response body.
         Requests that store data specify the media type of the request body.</para>
-      <para xml:id="para_a9148c09-134b-4974-90fc-bd6ca55e6fcb">The HTTP requests as defined within this standard are sufficient for the HTTP server to
+      <para xml:id="para_a9148c09-134b-4974-90fc-bd6ca55e6fcb">The HTTP requests as defined within this Standard are sufficient for the HTTP server to
         act as a DICOM SCU (Service Class User) to retrieve or store the requested objects from an
         appropriate DICOM SCP (Service Class Provider) using baseline DICOM functionality as defined
         in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>, which is to say that the HTTP server can act as a proxy for the DICOM

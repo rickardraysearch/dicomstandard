@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2018e - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2019a - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -110,7 +110,7 @@
         <para xml:id="para_93946e5f-1495-45e0-80ea-ff7ab9c1e171">Distributed Execution - although the API is designed for local execution, it does not prevent remote execution, where the Application is running on a different system from the Host.</para>
       </listitem>
     </itemizedlist>
-    <para xml:id="para_2c68270d-d159-4b3c-a981-4031fd21b1b8">PS3.19 specifies both the interactions and the Application Programming Interfaces (API) between Hosting Systems and Hosted Applications. PS3.19 also includes Normative and Informative Annexes that define the data models that are used by the API defined in this part.</para>
+    <para xml:id="para_2c68270d-d159-4b3c-a981-4031fd21b1b8">PS3.19 specifies both the interactions and the Application Programming Interfaces (API) between Hosting Systems and Hosted Applications. PS3.19 also includes Normative and Informative Annexes that define the data models that are used by the API defined in this Part.</para>
     <para xml:id="para_3c3c848e-a74a-4310-bf04-0308b9966d2c">The API does not directly address workflow management, which is addressed by other DICOM Services.</para>
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
@@ -129,181 +129,324 @@
           <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
+        <biblioentry xml:id="biblio_ISO8822">
+            <abbrev>ISO 8822</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1988</date>
+            <title>Information processing systems - Open Systems Interconnection - Connection oriented presentation service definition</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_W3C_WSDL1_1">
+            <abbrev>WSDL 1.1</abbrev>
+            <author>
+                <orgname>W3C</orgname>
+            </author>
+            <date>26 June 2007</date>
+            <title>W3C Recommendation Web Services Description Language (WSDL) 1.1</title>
+            <bibliosource>
+                <link xl:href="http://www.w3.org/TR/wsdl"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_W3C_XPath2">
+            <abbrev>XPath 2.0</abbrev>
+            <author>
+                <orgname>W3C</orgname>
+            </author>
+            <date>October 2016</date>
+            <title>W3C Recommendation XML Path Language (XPath) 2.0</title>
+            <bibliosource>
+                <link xl:href="http://www.w3.org/TR/xpath20/"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_W3C_InfoSet">
+            <abbrev>InfoSet</abbrev>
+            <author>
+                <orgname>W3C</orgname>
+            </author>
+            <date>4 February 2004</date>
+            <title>W3C Recommendation XML Information Set</title>
+            <bibliosource>
+                <link xl:href="http://www.w3.org/TR/xml-infoset/"/>
+            </bibliosource>
+        </biblioentry>
     </bibliography>
     <para xml:id="para_7342e92c-4ff9-45bd-abec-15cbcfbdf759">IETF RFC2045,2046,2048 MIME Multipurpose Internet Mail Extension</para>
     <para xml:id="para_7552dd36-5fe4-4a85-8834-520a52facb0c">IETF RFC3240 application/dicom MIME Sub-type Registration</para>
     <para xml:id="para_31c7e5e2-066f-4d0a-9d3d-983e99a4b0a7">IETF RFC3986 Uniform Resource Identifiers (URI) : Generic Syntax</para>
-    <para xml:id="para_64ae4837-c2d7-4938-a804-fc476dc165ce">ISO 8822:1988 Information processing systems -- Open Systems Interconnection - Connection oriented presentation service definition</para>
     <para xml:id="para_8ae891ff-8b44-4ad9-bf36-8ead1880905c">ISO/IEC 19757 DSDL Document Schema Definition Languages (DSDL)</para>
     <para xml:id="para_3778ebb3-dc20-42ee-97cb-a803e0134ec4">ITU-T Recommendation X.667 UUID (also IETF RFC4122)</para>
-    <para xml:id="para_bf07d6fb-03eb-46fa-921d-0ad3d0724550">W3C Recommendation Web Services Description Language (WSDL) 1.1</para>
-    <note>
-      <para xml:id="para_36bf6ded-0b86-40d1-8fae-2bb0cd402e03">The WSDL W3C Recommendation can be found at <link xl:href="http://www.w3.org/TR/wsdl"/>
-</para>
-    </note>
-    <para xml:id="para_7b34556b-a629-48e7-8b28-6bc4fe4c6995">W3C Recommendation XML Path Language (XPath) 2.0</para>
-    <note>
-      <para xml:id="para_64c21690-f8c5-46c1-916b-9dedfcd10842">The XPath W3C Recommendation can be found at <link xl:href="http://www.w3.org/TR/2007/REC-xpath20-20070123/"/>)</para>
-    </note>
-    <para xml:id="para_51780a7e-7109-4ffe-842e-d0ce50589810">W3C Recommendation XML Information Set</para>
-    <note>
-      <para xml:id="para_d0376bce-5848-4c8e-a9b4-e96d89ca7ba0">The XML Information Set W3C Recommendation can be found at <link xl:href="http://www.w3.org/TR/xml-infoset/"/>
-</para>
-    </note>
+
   </chapter>
-  <chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_f679fcfc-1844-45a6-9bb3-3a80dbed112a">For the purposes of this Standard the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
-      <title>Presentation Service Definitions</title>
-      <para xml:id="para_d798ecb1-7adb-4ac1-b475-3bfd8006415e">This part of the standard makes use of the following terms defined in ISO 8822:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_73312af3-17ea-41b2-93cc-2e97b27a6732">Transfer Syntax</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_8e6ec3c1-74ff-47a2-9ce3-9256a784f8df">Transfer Syntax Name</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
-      <title>XML Infoset Definitions</title>
-      <para xml:id="para_3b65c6d0-0a23-4ba7-9155-61e9d129420e">This part of the standard makes use of the following terms defined in W3C Recommendation XML Information Set:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_04dbbba8-8347-4237-8149-0690db371ded">Infoset or XML Infoset</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_97f06223-8cdf-4f2a-8fba-25336a6e473e">Element or XML Element</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_6cf6dcdd-ff88-4b24-a2f1-8f03cee228f3">Attribute or XML Attribute</para>
-        </listitem>
-      </orderedlist>
-      <note>
-        <orderedlist>
-          <listitem>
-            <para xml:id="para_c012bded-0106-4e95-95f6-b011fbe1e89d">The concept of an XML Attribute is quite distinct from that of a DICOM Attribute.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_6c85cf17-d58b-414e-bbe5-3752d22886c1">To avoid confusion with the DICOM terms with similar names, the text of the DICOM Standard will use XML Element and XML Attribute when referring to these XML Infoset concepts. The appearance of Element or Attribute without the term XML in front of them generally refers to the DICOM concepts instead of the XML Infoset concepts.</para>
-          </listitem>
-        </orderedlist>
-      </note>
-    </section>
-    <section label="3.3" status="2" xml:id="sect_3.3">
-      <title>DICOM Introduction and Overview Definitions</title>
-      <para xml:id="para_46528746-87c4-4dba-9f29-3738dd182f18">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_41751b13-1b96-4500-bf5e-bd69fe8c06da">Attribute</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.4" status="2" xml:id="sect_3.4">
-      <title>DICOM Information Object Definition</title>
-      <para xml:id="para_9604a410-372e-4f23-967e-f33c439574f4">This part of the standard makes use of the following term defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_98da7e56-848b-4863-a0c1-d9cf28a35a34">Attribute Tag</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.5" status="2" xml:id="sect_3.5">
-      <title>DICOM Data Structures and Encoding</title>
-      <para xml:id="para_8359c19b-9ab5-4d5b-bccc-fd527100881e">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_537d29ce-6e25-45ce-90c5-98c81d54ef0d">Data Element</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_58e8d2c6-a85a-47e3-b3c4-1b4577ab32f8">Data Element Tag</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_e91380ba-17a4-4ef3-b428-403ff9ad6544">Data Element Type</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_efeb4402-23bb-493a-a0a2-353bfe8b2352">Data Set</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_515f2715-ff3b-46f6-bd28-f07cdd104b23">Defined Term</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_0fdab397-bbf2-42e5-8175-77b4d3d0c66c">Enumerated Value</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_4b1e6579-135a-4e7b-968c-3e193e89b1f6">Sequence of Items</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_20bb2160-c6e6-46a8-829f-b546aba3475a">Unique Identifier (UID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_2727e56b-58f8-48e1-8105-0fa0c32f5da3">Value Multiplicity (VM)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_9547a133-fda3-4624-8905-9e440b8716b6">Value Representation (VR)</para>
-        </listitem>
-      </orderedlist>
-      <para xml:id="para_dbb00d9b-3ef6-4010-a93c-0d526f15f823"/>
-    </section>
-    <section label="3.6" status="2" xml:id="sect_3.6">
-      <title>Codes and Controlled Terminology Definitions:</title>
-      <para xml:id="para_43d543e9-fa3a-4074-8454-e4f8a888b092">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_76bda4a2-ea10-44ac-92e4-fa9cfd390987">Baseline Context Group Identifier (BCID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_35ab1930-6947-4bfd-a683-a5c0d59499c7">Defined Context Group Identifier (DCID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_5fc8e697-bfac-4d70-92bf-f1831ccd73e3">Context Group</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_19d94d44-5c9a-4e22-b0ec-346aea0fd32f">Context Group Version</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_e75fba2d-27c0-41a7-9341-763c0e795339">Context ID (CID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_6493b5d7-eb92-4d3a-9526-f91bb1b51a56">Mapping Resource</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_802eacdf-6121-4089-a64a-1861ba13c867">DICOM Content Mapping Resource (DCMR)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_6291dce9-bf20-4711-807a-6001504f17e7">Value Set</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_13e93aeb-6341-4ed0-8edf-9016e90286f6">Coding schemes</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.7" status="2" xml:id="sect_3.7">
-      <title>Application Hosting Definitions</title>
-      <para xml:id="para_8729996b-c727-4a16-9738-505f8b637092">The following definitions are commonly used in this part of the Standard:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Application Programming Interface</term>
-          <listitem>
-            <para xml:id="para_7f70cb75-3171-4fc2-a7da-87804849003c">A set of interface methods that Hosted Applications and Hosting Systems use to communicate with each other.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Hosted Application</term>
-          <listitem>
-            <para xml:id="para_b561b44e-2bd0-4500-b58d-c6a840500129">An application launched and controlled by a Hosting System. The Hosted Application may utilize services offered by the Hosting System.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Hosting System</term>
-          <listitem>
-            <para xml:id="para_772c3550-fb1f-405b-8ec0-461ed7f1e04c">The application used to launch and control Hosted Applications. The Hosting System provides a variety of services such as DICOM object retrieval and storage for the Hosted Application. The Hosting System provides the infrastructure in which the Hosted Application runs and interacts with the external environment. This includes network access, database and security.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-  </chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_f679fcfc-1844-45a6-9bb3-3a80dbed112a">For the purposes of this Standard the following definitions apply.</para>
+        <glossary>
+             <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>Presentation Service Definitions</title>
+                <para xml:id="para_d798ecb1-7adb-4ac1-b475-3bfd8006415e">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8822"/>:</para>
+                <glossentry xml:id="glossentry_TransferSyntax" xreflabel="Transfer Syntax">
+                    <glossterm>Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_73312af3-17ea-41b2-93cc-2e97b27a6732">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntaxName" xreflabel="Transfer Syntax Name">
+                    <glossterm>Transfer Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_8e6ec3c1-74ff-47a2-9ce3-9256a784f8df">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>XML Infoset Definitions</title>
+                <para xml:id="para_3b65c6d0-0a23-4ba7-9155-61e9d129420e">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_W3C_InfoSet"/>:</para>
+                <note>
+                    <orderedlist>
+                        <listitem>
+                            <para xml:id="para_c012bded-0106-4e95-95f6-b011fbe1e89d">The concept of an XML Attribute is quite distinct from that of a DICOM Attribute.</para>
+                        </listitem>
+                        <listitem>
+                            <para xml:id="para_6c85cf17-d58b-414e-bbe5-3752d22886c1">To avoid confusion with the DICOM terms with similar names, the text of the DICOM Standard will use XML Element and XML Attribute when referring to these XML Infoset concepts. The appearance of Element or Attribute without the term XML in front of them generally refers to the DICOM concepts instead of the XML Infoset concepts.</para>
+                        </listitem>
+                    </orderedlist>
+                </note>
+                <glossentry xml:id="glossentry_XMLInfoset" xreflabel="XML Infoset">
+                    <glossterm>XML Infoset</glossterm>
+                    <glossdef>
+                        <para xml:id="para_04dbbba8-8347-4237-8149-0690db371ded">See <xref linkend="biblio_W3C_InfoSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_XMLElement" xreflabel="XML Element">
+                    <glossterm>XML Element</glossterm>
+                    <glossdef>
+                        <para xml:id="para_97f06223-8cdf-4f2a-8fba-25336a6e473e">See <xref linkend="biblio_W3C_InfoSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_XMLAttribute" xreflabel="XML Attribute">
+                    <glossterm>XML Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6cf6dcdd-ff88-4b24-a2f1-8f03cee228f3">See <xref linkend="biblio_W3C_InfoSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>DICOM Introduction and Overview Definitions</title>
+                <para xml:id="para_46528746-87c4-4dba-9f29-3738dd182f18">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_Attribute" xreflabel="Attribute">
+                    <glossterm>Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_41751b13-1b96-4500-bf5e-bd69fe8c06da">
+<olink targetdoc="PS3.1" targetptr="glossentry_Attribute"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+                    <glossterm>Service-Object Pair Class</glossterm>
+                    <acronym>SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_91548724-4dae-4506-acc6-a18067fdff13">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.4" status="2" xml:id="sect_3.4">
+                <title>DICOM Information Object Definition</title>
+                <para xml:id="para_9604a410-372e-4f23-967e-f33c439574f4">This Part of the Standard makes use of the following term defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_AttributeTag" xreflabel="Attribute Tag">
+                    <glossterm>Attribute Tag</glossterm>
+                    <glossdef>
+                        <para xml:id="para_98da7e56-848b-4863-a0c1-d9cf28a35a34">
+<olink targetdoc="PS3.3" targetptr="glossentry_AttributeTag"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.5" status="2" xml:id="sect_3.5">
+                <title>DICOM Data Structures and Encoding</title>
+                <para xml:id="para_8359c19b-9ab5-4d5b-bccc-fd527100881e">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_DataElement" xreflabel="Data Element">
+                    <glossterm>Data Element</glossterm>
+                    <glossdef>
+                        <para xml:id="para_537d29ce-6e25-45ce-90c5-98c81d54ef0d">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElement"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataElementTag" xreflabel="Data Element Tag">
+                    <glossterm>Data Element Tag</glossterm>
+                    <glossdef>
+                        <para xml:id="para_58e8d2c6-a85a-47e3-b3c4-1b4577ab32f8">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElementTag"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataElementType" xreflabel="Data Element Type">
+                    <glossterm>Data Element Type</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e91380ba-17a4-4ef3-b428-403ff9ad6544">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElementType"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                    <glossterm>Data Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_efeb4402-23bb-493a-a0a2-353bfe8b2352">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DefinedTerm" xreflabel="Defined Term">
+                    <glossterm>Defined Term</glossterm>
+                    <glossdef>
+                        <para xml:id="para_515f2715-ff3b-46f6-bd28-f07cdd104b23">
+<olink targetdoc="PS3.5" targetptr="glossentry_DefinedTerm"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_EnumeratedValue" xreflabel="Enumerated Value">
+                    <glossterm>Enumerated Value</glossterm>
+                    <glossdef>
+                        <para xml:id="para_0fdab397-bbf2-42e5-8175-77b4d3d0c66c">
+<olink targetdoc="PS3.5" targetptr="glossentry_EnumeratedValue"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SequenceOfItems" xreflabel="Sequence of Items">
+                    <glossterm>Sequence of Items</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4b1e6579-135a-4e7b-968c-3e193e89b1f6">
+<olink targetdoc="PS3.5" targetptr="glossentry_SequenceOfItems"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_UniqueIdentifier" xreflabel="Unique Identifier (UID)">
+                    <glossterm>Unique Identifier</glossterm>
+                    <acronym>UID</acronym>
+                    <glossdef>
+                        <para xml:id="para_20bb2160-c6e6-46a8-829f-b546aba3475a">
+<olink targetdoc="PS3.5" targetptr="glossentry_UniqueIdentifier"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ValueMultiplicity" xreflabel="Value Multiplicity (VM)">
+                    <glossterm>Value Multiplicity</glossterm>
+                    <acronym>VM</acronym>
+                    <glossdef>
+                        <para xml:id="para_2727e56b-58f8-48e1-8105-0fa0c32f5da3">
+<olink targetdoc="PS3.5" targetptr="glossentry_ValueMultiplicity"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ValueRepresentation" xreflabel="Value Representation (VR)">
+                    <glossterm>Value Representation</glossterm>
+                    <acronym>VR</acronym>
+                    <glossdef>
+                        <para xml:id="para_9547a133-fda3-4624-8905-9e440b8716b6">
+<olink targetdoc="PS3.5" targetptr="glossentry_ValueRepresentation"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.6" status="2" xml:id="sect_3.6">
+                <title>Codes and Controlled Terminology Definitions:</title>
+                <para xml:id="para_43d543e9-fa3a-4074-8454-e4f8a888b092">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_BaselineContextGroupIdentifier" xreflabel="Baseline Context Group Identifier (BCID)">
+                    <glossterm>Baseline Context Group Identifier</glossterm>
+                    <acronym>BCID</acronym>
+                    <glossdef>
+                        <para xml:id="para_76bda4a2-ea10-44ac-92e4-fa9cfd390987">
+<olink targetdoc="PS3.16" targetptr="glossentry_BaselineContextGroupIdentifier"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DefinedContextGroupIdentifier" xreflabel="Defined Context Group Identifier (DCID)">
+                    <glossterm>Defined Context Group Identifier</glossterm>
+                    <acronym>DCID</acronym>
+                    <glossdef>
+                        <para xml:id="para_35ab1930-6947-4bfd-a683-a5c0d59499c7">
+<olink targetdoc="PS3.16" targetptr="glossentry_DefinedContextGroupIdentifier"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ContextGroup" xreflabel="Context Group">
+                    <glossterm>Context Group</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5fc8e697-bfac-4d70-92bf-f1831ccd73e3">
+<olink targetdoc="PS3.16" targetptr="glossentry_ContextGroup"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ContextGroupVersion" xreflabel="Context Group Version">
+                    <glossterm>Context Group Version</glossterm>
+                    <glossdef>
+                        <para xml:id="para_19d94d44-5c9a-4e22-b0ec-346aea0fd32f">
+<olink targetdoc="PS3.16" targetptr="glossentry_ContextGroupVersion"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ContextID" xreflabel="Context ID (CID)">
+                    <glossterm>Context ID</glossterm>
+                    <acronym>CID</acronym>
+                    <glossdef>
+                        <para xml:id="para_e75fba2d-27c0-41a7-9341-763c0e795339">
+<olink targetdoc="PS3.16" targetptr="glossentry_ContextID"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MappingResource" xreflabel="Mapping Resource">
+                    <glossterm>Mapping Resource</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6493b5d7-eb92-4d3a-9526-f91bb1b51a56">
+<olink targetdoc="PS3.16" targetptr="glossentry_MappingResource"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMContentMappingResource" xreflabel="DICOM Content Mapping Resource (DCMR)">
+                    <glossterm>DICOM Content Mapping Resource</glossterm>
+                    <acronym>DCMR</acronym>
+                    <glossdef>
+                        <para xml:id="para_802eacdf-6121-4089-a64a-1861ba13c867">
+<olink targetdoc="PS3.16" targetptr="glossentry_DICOMContentMappingResource"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ValueSet" xreflabel="Value Set">
+                    <glossterm>Value Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6291dce9-bf20-4711-807a-6001504f17e7">
+<olink targetdoc="PS3.16" targetptr="glossentry_ValueSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_CodingScheme" xreflabel="Coding Scheme">
+                    <glossterm>Coding Scheme</glossterm>
+                    <glossdef>
+                        <para xml:id="para_13e93aeb-6341-4ed0-8edf-9016e90286f6">
+<olink targetdoc="PS3.16" targetptr="glossentry_CodingScheme"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.7" status="2" xml:id="sect_3.7">
+                <title>Application Hosting Definitions</title>
+                <para xml:id="para_8729996b-c727-4a16-9738-505f8b637092">The following definitions are commonly used in this Part of the Standard:</para>
+                <glossentry>
+                    <glossterm>Application Programming Interface</glossterm>
+                    <acronym>API</acronym>
+                    <glossdef>
+                        <para xml:id="para_7f70cb75-3171-4fc2-a7da-87804849003c">A set of interface methods that Hosted Applications and Hosting Systems use to communicate with each other.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Hosted Application</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b561b44e-2bd0-4500-b58d-c6a840500129">An application launched and controlled by a Hosting System. The Hosted Application may utilize services offered by the Hosting System.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry>
+                    <glossterm>Hosting System</glossterm>
+                    <glossdef>
+                        <para xml:id="para_772c3550-fb1f-405b-8ec0-461ed7f1e04c">The application used to launch and control Hosted Applications. The Hosting System provides a variety of services such as DICOM object retrieval and storage for the Hosted Application. The Hosting System provides the infrastructure in which the Hosted Application runs and interacts with the external environment. This includes network access, database and security.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.8" status="2" xml:id="sect_3.8">
+                <title>DICOM Service Class Definitions</title>
+                <para xml:id="para_c48e4012-8c00-4be6-9b33-0d7ead7502dc">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service-Object Pair Instance (SOP Instance)">
+                    <glossterm>Service-Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_9497216c-bad1-4380-ad82-fcaa040f5513">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
     <para xml:id="para_3be739e6-3a8d-4bbb-a1de-3b761e85b292">The following symbols and abbreviations are used in this Part of the Standard.</para>
@@ -827,7 +970,7 @@
   </chapter>
   <chapter label="8" status="1" xml:id="chapter_8">
     <title>Interfaces</title>
-    <para xml:id="para_a4f892aa-ae60-4a96-9bfd-a55ced7cd29c">There are three base interfaces defined in this part, as shown in <xref linkend="figure_8-1" xrefstyle="select: label"/>. One, named "Application", represents the Hosted Application, and is utilized by the Hosting System to control the Hosted Application. The second, named "Host", represents the Hosting System, and is utilized by the Hosted Application to request services from and to notify the Hosting System of events during the execution of the Hosted Application. The third, named "DataExchange" is an interface used by both the Hosting System and the Hosted Application to communicate information about the data to be exchanged. Thus, the entire Hosted Application ("ApplicationService") implementation consists of the combination of the "Application" and "DataExchange" base interfaces, while the entire Hosting System ("HostService") implementation consists of the combination of the "Host" and "DataExchange" base interfaces.</para>
+    <para xml:id="para_a4f892aa-ae60-4a96-9bfd-a55ced7cd29c">There are three base interfaces defined in this Part, as shown in <xref linkend="figure_8-1" xrefstyle="select: label"/>. One, named "Application", represents the Hosted Application, and is utilized by the Hosting System to control the Hosted Application. The second, named "Host", represents the Hosting System, and is utilized by the Hosted Application to request services from and to notify the Hosting System of events during the execution of the Hosted Application. The third, named "DataExchange" is an interface used by both the Hosting System and the Hosted Application to communicate information about the data to be exchanged. Thus, the entire Hosted Application ("ApplicationService") implementation consists of the combination of the "Application" and "DataExchange" base interfaces, while the entire Hosting System ("HostService") implementation consists of the combination of the "Host" and "DataExchange" base interfaces.</para>
     <para xml:id="para_d8541448-2b7e-4d6b-ae33-00bac2ac25dd">The interfaces are defined as a set of methods using Web Services Description Language (WSDL). The implementers shall change the end point references (i.e., the "location" XML Attribute within the "address" XML Element within the "port" XML Elements of a "service" XML Element) in the WSDL specification as needed to deploy Hosted Applications and Hosting Systems that utilize these interfaces.</para>
     <note>
       <para xml:id="para_ba67698e-a766-45bd-a717-4dd0376fa3c4">The major (non-backward compatible) versions of the interfaces are reflected in the values of the "name" and "targetNamespace" XML Attributes of the "definitions" XML Element in the WSDL specification of the interfaces. Any changes to the interfaces that are not backward compatible will utilize new values for "name" and "targetNamespace" XML Attributes of the "definitions" XML Element.</para>
@@ -1399,7 +1542,7 @@
     <title>Data Exchange Model Conventions</title>
     <para xml:id="para_8ad752ab-a6b7-4fbf-974b-a2742b4c53b2">Models that can be used by the model-based DataExchange interface methods are defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>. These models are defined in the form of XML Schemas written in Relax NG Compact form of DSDL as specified by ISO/IEC 19757.</para>
     <note>
-      <para xml:id="para_c8ffb849-e867-4381-af7c-9f2db7abcfab">An implementer may translate the Relax NG Compact form to other forms for use within their implementation as long as the exchanged XML Infosets will validate against the schema specified by the standard. For example, a particular implementation may internally utilize a schema with stronger validation rules (e.g., using Schematron rules as specified in ISO/IEC 19757, or using XSDL with assertion rules) as long as the XML produced for exchange over the interface can be parsed with the schema specified in the standard, and that XML from well-formed DICOM objects produced by the schema specified in the standard can still be utilized by the implementation's internal schema.</para>
+      <para xml:id="para_c8ffb849-e867-4381-af7c-9f2db7abcfab">An implementer may translate the Relax NG Compact form to other forms for use within their implementation as long as the exchanged XML Infosets will validate against the schema specified by the Standard. For example, a particular implementation may internally utilize a schema with stronger validation rules (e.g., using Schematron rules as specified in ISO/IEC 19757, or using XSDL with assertion rules) as long as the XML produced for exchange over the interface can be parsed with the schema specified in the Standard, and that XML from well-formed DICOM objects produced by the schema specified in the Standard can still be utilized by the implementation's internal schema.</para>
     </note>
     <para xml:id="para_1382fb35-5962-46c9-9c5f-267e35d87ff1">Actual instances of the models are XML Infosets. <xref linkend="chapter_A" xrefstyle="template:Annex %n"/> follows the following conventions in describing models.</para>
     <note>

@@ -10,7 +10,7 @@ XSLTPROC=/usr/bin/xsltproc
 
 export XML_CATALOG_FILES="catalogs/catalog.xml"
 
-"${XSLTPROC}" --nonet -o "${dir}/${cp}.fo" stylesheets/customize-fo-pdf-cp.xsl "${cpsourcefile}"
+"${XSLTPROC}" --maxdepth 10000 --maxvars 30000 --nonet -o "${dir}/${cp}.fo" stylesheets/customize-fo-pdf-cp.xsl "${cpsourcefile}"
 
 #XEP/xep -fo "${dir}/${cp}.fo" -pdf "${dir}/${cp}.pdf"
 

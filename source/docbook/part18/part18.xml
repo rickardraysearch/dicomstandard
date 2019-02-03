@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
   <title>PS3.18</title>
-  <subtitle>DICOM PS3.18 2018e - Web Services</subtitle>
+  <subtitle>DICOM PS3.18 2019a - Web Services</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -54,7 +54,7 @@
     <para xml:id="para_c321918f-5f16-42f7-8fbb-f9de51e87c39">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
     <para xml:id="para_864d808c-2320-4d75-92f1-3e85f1fe7e69">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
     <para xml:id="para_f6543a39-57f7-42e4-b3ad-f5556fc85386">
-<olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/> should be used as the base reference for the current parts of this standard.</para>
+<olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/> should be used as the base reference for the current parts of this Standard.</para>
     <para xml:id="para_4ee78e2b-66c7-460c-ba9a-b47d6a7b980b">DICOM® is the registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information, all rights reserved.</para>
     <para xml:id="para_0ebfabad-758f-45e8-8e3b-7f8f926aee57">HL7® and CDA® are the registered trademarks of Health Level Seven International, all rights reserved.</para>
     <para xml:id="para_36103881-a6a4-4676-834e-d77d3ac623b9">SNOMED®, SNOMED Clinical Terms®, SNOMED CT® are the registered trademarks of the International Health Terminology Standards Development <foreignphrase xml:lang="en-GB">Organisation</foreignphrase> (IHTSDO), all rights reserved.</para>
@@ -62,15 +62,15 @@
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope</title>
-    <para xml:id="para_13c3b33e-9bc4-46ee-9a40-1e8232a2889f">This standard specifies a web-based service for accessing and presenting DICOM (Digital Imaging and Communications in Medicine) objects (e.g., images, medical imaging reports). This is intended for distribution of results and images to healthcare professionals. It provides a simple mechanism for accessing a DICOM object, through HTTP/HTTPS protocol, using DICOM UIDs (Unique Identifiers). Data may be retrieved either in a presentation-ready form as specified by the requester (e.g., JPEG or GIF) or in a native DICOM format. It does not support facilities for web searching of DICOM images. This standard relates only to DICOM Objects (not to non-DICOM objects). Access control beyond the security mechanisms generally available to web applications is outside the scope of this standard.</para>
+    <para xml:id="para_13c3b33e-9bc4-46ee-9a40-1e8232a2889f">This Standard specifies a web-based service for accessing and presenting DICOM (Digital Imaging and Communications in Medicine) objects (e.g., images, medical imaging reports). This is intended for distribution of results and images to healthcare professionals. It provides a simple mechanism for accessing a DICOM object, through HTTP/HTTPS protocol, using DICOM UIDs (Unique Identifiers). Data may be retrieved either in a presentation-ready form as specified by the requester (e.g., JPEG or GIF) or in a native DICOM format. It does not support facilities for web searching of DICOM images. This Standard relates only to DICOM Objects (not to non-DICOM objects). Access control beyond the security mechanisms generally available to web applications is outside the scope of this Standard.</para>
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Conformance</title>
-    <para xml:id="para_1e9bf43f-c83f-49ae-b3e8-41c80e6059c8">Systems claiming conformance to this standard shall function in accordance with all its mandatory sections.</para>
+    <para xml:id="para_1e9bf43f-c83f-49ae-b3e8-41c80e6059c8">Systems claiming conformance to this Standard shall function in accordance with all its mandatory sections.</para>
   </chapter>
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Normative References</title>
-    <para xml:id="para_52e5cf66-d457-46cf-b316-f79791f736fd">The following normative documents contain provisions that, through reference in this text, constitute provisions of this part of DICOM. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this part of DICOM are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies. Members of ISO and IEC maintain registers of currently valid International Standards.</para>
+    <para xml:id="para_52e5cf66-d457-46cf-b316-f79791f736fd">The following normative documents contain provisions that, through reference in this text, constitute provisions of this Part of DICOM. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. However, parties to agreements based on this Part of DICOM are encouraged to investigate the possibility of applying the most recent editions of the normative documents indicated below. For undated references, the latest edition of the normative document referred to applies. Members of ISO and IEC maintain registers of currently valid International Standards.</para>
     <bibliography>
       <bibliodiv label="3.1" status="2" xml:id="sect_3.1">
         <title>International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC)</title>
@@ -523,29 +523,31 @@
   </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Terms and Definitions</title>
-    <para xml:id="para_61a94d0d-7532-4890-942a-dfdf29f83c18">For the purposes of this part of DICOM, the following terms and definitions apply.</para>
+    <para xml:id="para_61a94d0d-7532-4890-942a-dfdf29f83c18">For the purposes of this Part of DICOM, the following terms and definitions apply.</para>
     <glossary>
-      <glossentry>
-        <glossterm>Accept Query Parameter</glossterm>
-        <glossdef>
+        <glossdiv label="4.1" status="2" xml:id="sect_4.1">
+            <title>Web Services Definitions:</title>
+      <glossentry xml:id="glossentry_AcceptQueryParameter" xreflabel="Accept Query Parameter">
+            <glossterm>Accept Query Parameter</glossterm>
+          <glossdef>
           <para xml:id="para_4898d9b7-961a-4a97-b0d0-b518cde9d984">A query parameter that specifies one or more media types acceptable for the representation(s) contained in the response. See <xref linkend="sect_6.1.1.5" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Acceptable Character Sets</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_AcceptableCharacterSets" xreflabel="Acceptable Character Sets">
+            <glossterm>Acceptable Character Sets</glossterm>
+          <glossdef>
           <para xml:id="para_8897e8a9-4eae-49ad-a84d-6d3b82e0f0d1">One or more character sets acceptable to the user agent in the response. See <xref linkend="sect_6.1.2.1" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Acceptable Media Types</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_AcceptableMediaTypes" xreflabel="Acceptable Media Types">
+            <glossterm>Acceptable Media Types</glossterm>
+          <glossdef>
           <para xml:id="para_e61e3283-b334-4935-9b0e-030894224bdf">One or more media type acceptable to the user agent in the response. See <xref linkend="sect_6.1.1.4" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>BulkDataURI</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_BulkDataURI" xreflabel="Bulk Data URI">
+            <glossterm>Bulk Data URI</glossterm>
+          <glossdef>
           <para xml:id="para_50a5c0a7-9b46-4461-8aef-47b7c50a31fc">A Uniform Resource Identifier in accordance with <xref linkend="biblio_RFC_3986"/> that identifies an octet-stream representing the value of a DICOM attribute.</para>
           <note>
             <para xml:id="para_fd2ed224-f2a1-4e16-b9c0-4533fc4b2d91">The octet-stream does not include the Attribute Tag, Value Representation, or Attribute Length.
@@ -553,84 +555,128 @@
           </note>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Bulk Data Media Type</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_BulkDataMediaType" xreflabel="Bulk Data Media Type">
+            <glossterm>Bulk Data Media Type</glossterm>
+          <glossdef>
           <para xml:id="para_1f6bac20-891b-4276-a55c-d237d6c8a2f4">A media type in which bulk data (such as Pixel Data) extracted from DICOM instances is encoded. See <xref linkend="sect_6.1.1.8" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>DICOM Media Type</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_DICOMMediaType" xreflabel="DICOM Media Type">
+            <glossterm>DICOM Media Type</glossterm>
+          <glossdef>
           <para xml:id="para_bc1417f6-bffb-44b6-8598-b8a3c6d77f0d">A media type in which DICOM instances are encoded. See <xref linkend="sect_6.1.1.8" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Charset Query Parameter</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_CharsetQueryParameter" xreflabel="Charset Query Parameter">
+            <glossterm>Charset Query Parameter</glossterm>
+          <glossdef>
           <para xml:id="para_dee8882a-e1f6-41e2-b03f-d2919488c012">A query parameter that specifies one or more character sets for the representation(s) contained in the response. See <xref linkend="sect_6.1.2.2" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>DICOM Object</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_DICOMObject" xreflabel="DICOM Object">
+            <glossterm>DICOM Object</glossterm>
+          <glossdef>
           <para xml:id="para_b283705d-e698-450f-8079-55f2272b27fa">An instance of a data object as defined by <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> that has been allocated an unique identifier in the format specified for SOP Instance UID in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and has been chosen as an object to be saved securely for some period of time. Within the DICOM Standard, a DICOM Object is referred to as a Composite Service Object Pair (SOP) Instance.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>DICOM Resource Categories</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_DICOMResourceCategories" xreflabel="DICOM Resource Categories">
+            <glossterm>DICOM Resource Categories</glossterm>
+          <glossdef>
           <para xml:id="para_ebbe42e1-7c66-4054-8747-3450676b01ea">A set of categories for the content of DICOM SOP Instances. Examples include images, video, and text. See <xref linkend="sect_6.1.1.2" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>HTTP</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_HTTP" xreflabel="HTTP">
+            <glossterm>HTTP</glossterm>
+          <glossdef>
           <para xml:id="para_124a28d9-d408-496c-b36a-248eaf4da200">The term HTTP as used in this Standard means the Hypertext Transport Protocol versions 1.0, 1.1, 2 or later. See <xref linkend="biblio_RFC_1945"/>, <xref linkend="biblio_RFC_7230"/> and <xref linkend="biblio_RFC_7540"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>HTTPS</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_HTTPS" xreflabel="HTTPS">
+            <glossterm>HTTPS</glossterm>
+          <glossdef>
           <para xml:id="para_f830a0b2-f001-4718-b6eb-5c2b2ff4e421">The term HTTPS as used in this Standard means the Hypertext Transport Protocol Secure versions 1.0, 1.1, 2 or later. See <xref linkend="biblio_RFC_2818"/> and <xref linkend="biblio_RFC_7230"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Origin-Server</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_OriginServer" xreflabel="Origin-Server">
+            <glossterm>Origin-Server</glossterm>
+          <glossdef>
           <para xml:id="para_25630219-9f1f-4784-80e2-406fd068abd3">See <xref linkend="biblio_RFC_7230"/> <link xl:href="http://tools.ietf.org/html/rfc7230#section-2.1">Section 2.1 Client/Server Messaging</link>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Rendered Media Type</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_RenderedMediaType" xreflabel="Rendered Media Type">
+            <glossterm>Rendered Media Type</glossterm>
+          <glossdef>
           <para xml:id="para_d53c5561-f8f3-4c70-bb0d-2bae5255bffb">A non-DICOM media type into which DICOM instances may be transformed in order to display them using commonly available non-DICOM software, for example browsers. See <xref linkend="sect_6.1.1.3" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Selected Character Set</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_SelectedCharacterSet" xreflabel="Selected Character Set">
+            <glossterm>Selected Character Set</glossterm>
+          <glossdef>
           <para xml:id="para_73eae239-2f64-4ded-b658-b348c5a9f120">The character sets selected by the origin server for the response payload. See <xref linkend="sect_6.1.2.4" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Selected Media Type</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_SelectedMediaType" xreflabel="Selected Media Type">
+            <glossterm>Selected Media Type</glossterm>
+          <glossdef>
           <para xml:id="para_1b661bd4-5be3-4baa-acaa-ef142f5a395b">The media type selected by the origin server for the response payload. See <xref linkend="sect_6.1.1.7" xrefstyle="select: label"/>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>User-Agent</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_UserAgent" xreflabel="User-Agent">
+            <glossterm>User-Agent</glossterm>
+          <glossdef>
           <para xml:id="para_1ec181db-b4b8-4752-9356-1ca1c80233e1">See <xref linkend="biblio_RFC_7230"/> <link xl:href="http://tools.ietf.org/html/rfc7230#section-2.1">Section 2.1 Client/Server Messaging</link>.</para>
         </glossdef>
       </glossentry>
-      <glossentry>
-        <glossterm>Web Access to DICOM Objects</glossterm>
-        <glossdef>
+      <glossentry xml:id="glossentry_WebAccessToDICOMObjects" xreflabel="Web Access to DICOM Objects (WADO)">
+            <glossterm>Web Access to DICOM Objects</glossterm>
+          <acronym>WADO</acronym>
+          <glossdef>
           <para xml:id="para_abac5cef-d9f4-4155-a4a2-d7da46cf4650">A service enabling the user agent to retrieve DICOM Objects managed by an origin serven, through HTTP/HTTPS protocol.</para>
         </glossdef>
       </glossentry>
+        </glossdiv>
+            <glossdiv label="4.2" status="2" xml:id="sect_4.2">
+                <title>DICOM Introduction and Overview Definitions</title>
+                <para xml:id="para_ad2c9c16-eafa-4573-8733-150831edf3c5">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+                    <glossterm>Service-Object Pair Class</glossterm>
+                    <acronym>SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_25a998fc-601f-4e51-9c22-4cea1f259a88">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="4.3" status="2" xml:id="sect_4.3">
+                <title>DICOM Service Class Definitions</title>
+                <para xml:id="para_74716158-11f7-4d43-b332-8171dce4b773">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service-Object Pair Instance (SOP Instance)">
+                    <glossterm>Service-Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_cafc8865-6a75-44b0-b759-60adf773c6b9">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        <glossdiv label="4.5" status="2" xml:id="sect_4.5">
+            <title>DICOM Data Structures and Encoding</title>
+            <para xml:id="para_45970a7b-76d4-4629-97b4-e42480d0ee89">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
+            <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                <glossterm>Data Set</glossterm>
+                <glossdef>
+                    <para xml:id="para_1975bffa-972d-4594-a7af-0b28d2402c07">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_SequenceOfItems" xreflabel="Sequence of Items">
+                <glossterm>Sequence of Items</glossterm>
+                <glossdef>
+                    <para xml:id="para_cc9e6976-3abf-48e2-9599-1c37a1d877b1">
+<olink targetdoc="PS3.5" targetptr="glossentry_SequenceOfItems"/>.</para>
+                </glossdef>
+            </glossentry>
+        </glossdiv>
     </glossary>
   </chapter>
   <chapter label="5" status="1" xml:id="chapter_5">
@@ -771,9 +817,35 @@
     </variablelist>
   </chapter>
   <chapter label="6" status="1" xml:id="chapter_6">
-    <title>Data Communication Requirements</title>
-    <para xml:id="para_2cb3d9ae-bc78-4fc1-8b79-549190b54cad">DICOM Web Services use the HTTP and HTTPS protocols as its transport medium.
-      Web Services supports versions 1.0, 1.1, 2 or later of the protocol.</para>
+      <title>DICOM Communication Model for Web Services</title>
+      <para xml:id="para_73a08d0d-fc28-4631-a71c-67795d51019f">
+          <olink targetdoc="PS3.1" targetptr="figure_5-1" xrefstyle="select: docname label"/> presents the general communication model of the DICOM Standard,
+          which spans both network (on-line) and media interchange (off-line) communication.
+          Application Entities may utilize any of the following transport mechanisms:</para>
+      <orderedlist numeration="loweralpha">
+          <listitem>
+              <para xml:id="para_0acd52b6-4e58-4cab-9e71-5169092fea1c">the DICOM Message Service and Upper Layer Service, which provides independence from specific physical networking communication support and protocols such as TCP/IP,</para>
+          </listitem>
+          <listitem>
+              <para xml:id="para_4e9f6bb2-2149-46ae-bfaf-64e851d34b7f">the DICOM Web Service API and HTTP Service, which allows use of common hypertext and associated protocols for transport of DICOM services, or</para>
+          </listitem>
+          <listitem>
+              <para xml:id="para_d4f51692-5c40-4063-ae3c-24d15ed34997">the Basic DICOM File Service, which provides access to Storage Media independently from specific physical media storage formats and file structures.</para>
+          </listitem>
+      </orderedlist>
+      <para xml:id="para_2cb3d9ae-bc78-4fc1-8b79-549190b54cad">PS3.18 describes the DICOM Web Services, which use the HTTP and HTTPS protocols as their transport medium,
+          as depicted in <xref linkend="figure_6-1a" xrefstyle="select: label"/>.</para>
+      <para xml:id="para_a86837d5-478b-4998-9c5d-d292379aa55f">
+          <figure label="6-1a" pgwide="1" xml:id="figure_6-1a">
+              <title>DICOM Communication Model for Web Services</title>
+              <mediaobject>
+                  <imageobject>
+                      <imagedata fileref="figures/PS3.18_6-1a.svg"/>
+                  </imageobject>
+              </mediaobject>
+          </figure>
+      </para>
+      <para xml:id="para_856ed9ea-4a5a-4afd-a5a0-c006d471d887">Web Services supports versions 1.0, 1.1, 2 or later of the protocol.</para>
     <para xml:id="para_3071ea48-dd56-48d6-acc6-28ee40380238">It is recommended that user agents that want to use HTTP/2 first initiate an HTTP/1.1 connection to the origin server and then upgrade to HTTP/2.
       If the upgrade fails then the user agent can still use the HTTP/1.1 connection.
       <xref linkend="biblio_RFC_7540"/> <link xl:href="https://tools.ietf.org/html/rfc7540#section-3">Section 3</link> explains how to initiate HTTP/2 connections.</para>
@@ -2202,7 +2274,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_24036d8d-7a69-4ae0-9a18-27d2bcc11445">image/x-dicom-rle</para>
+                  <para xml:id="para_24036d8d-7a69-4ae0-9a18-27d2bcc11445">image/dicom-rle</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_c882e85b-4eef-4e70-b9bf-f92fe0c25e71">1.2.840.10008.1.2.5</para>
@@ -2216,7 +2288,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="2">
-                  <para xml:id="para_cec06431-19c7-4975-8eb3-1702ed0e5707">image/x-jls</para>
+                  <para xml:id="para_cec06431-19c7-4975-8eb3-1702ed0e5707">image/jls</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_38cfe13b-dcff-458d-a813-1d205814d3e2">1.2.840.10008.1.2.4.80</para>
@@ -2341,7 +2413,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_c4dda872-91ce-4a0c-aae4-d0035cfa624c">image/x-dicom-rle</para>
+                  <para xml:id="para_c4dda872-91ce-4a0c-aae4-d0035cfa624c">image/dicom-rle</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_c0d5010a-8de3-4499-9422-8498d8815716">1.2.840.10008.1.2.5</para>
@@ -2355,7 +2427,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="2">
-                  <para xml:id="para_d26b9d20-e151-484d-8327-ce64a0af5a46">image/x-jls</para>
+                  <para xml:id="para_d26b9d20-e151-484d-8327-ce64a0af5a46">image/jls</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_6de11db1-8319-482f-ba61-097b0a40a851">1.2.840.10008.1.2.4.80</para>
@@ -2516,6 +2588,9 @@
               </tr>
             </tbody>
           </table>
+            <note>
+                <para xml:id="para_ba1b0996-f39f-4129-851e-09ef536d995b">Previously, experimental Media Types "image/x-dicom-rle" and "image/x-jls" were defined, so origin servers and user agents may want to account for these when communicating with older implementations. These have been replaced with the standard Media Types "image/dicom-rle" and "image/jls", respectively.</para>
+            </note>
           <para xml:id="para_99b849a3-5b8b-4cad-bdf8-2d2abe9e94c0">The Implicit VR Little Endian (1.2.840.10008.1.2), and Explicit VR Big Endian (1.2.840.10008.1.2.2) transfer syntaxes shall not be used with Web Services.</para>
           <para xml:id="para_1edc7b0e-8a0d-46d7-9c30-3e65ac2b062b">If a transfer syntax parameter for a DICOM Media Type is not specified in a request or response, the Transfer Syntax in the response shall be the Transfer Syntax specified as the default for the Resource Category and media type combination in <xref linkend="table_6.1.1.8-3a" xrefstyle="select: label"/> or <xref linkend="table_6.1.1.8-3b" xrefstyle="select: label"/>.</para>
           <para xml:id="para_4c6a68b0-0b48-4619-b84f-946cc7ba0317">The origin server may support additional Transfer Syntaxes.</para>
@@ -2906,7 +2981,7 @@
               <para xml:id="para_f6945020-11e7-424d-97c1-c67af09948ac">Other components of the Request-URI depend on the configuration, e.g., location and script language of the origin server.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_75c12509-9257-4c01-b297-bf7ce2b63545">The means by which the user agent obtains the value of the necessary parameters for web accessing of DICOM Objects is out of the scope of the standard.</para>
+              <para xml:id="para_75c12509-9257-4c01-b297-bf7ce2b63545">The means by which the user agent obtains the value of the necessary parameters for web accessing of DICOM Objects is out of the scope of the Standard.</para>
             </listitem>
           </orderedlist>
         </note>
@@ -3007,7 +3082,7 @@
           <title>Content</title>
           <para xml:id="para_f3df4ac2-db9e-4130-a129-3a0ffed037f1">The content shall be a single MIME part containing the object to be retrieved.</para>
           <note>
-            <para xml:id="para_eecc47e4-b2d5-45a5-9c94-2ec01a1a55ee">Multiple objects in a response are not supported by this standard. The parameters select only a single object to retrieve. Most current user agents are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
+            <para xml:id="para_eecc47e4-b2d5-45a5-9c94-2ec01a1a55ee">Multiple objects in a response are not supported by this Standard. The parameters select only a single object to retrieve. Most current user agents are able to retrieve single objects, within a "non multipart" MIME body, and are not able to support multipart/related or multipart/mixed responses.</para>
           </note>
         </section>
       </section>
@@ -4805,7 +4880,7 @@
             <para xml:id="para_0e2fa895-c292-449c-85dd-c637b0513cac">If the Presentation Size Mode is SCALE TO FIT, the origin server shall scale the Specified Displayed Area in the Presentation State, maintaining its original aspect ratio, until either the rendered image width is the same as the viewport width or the rendered image height is the same as the viewport height, whichever comes first. In other words, viewport scaling makes the displayed area selection as large as possible, within the viewport, without overflowing the viewport area and without distorting the image. If the viewport parameter is not present, the returned images shall have the dimensions of the Specified Displayed Area.</para>
             <para xml:id="para_6b4e96d6-7d15-472d-9a17-8a3fc69cd0bf">If the Presentation Size Mode is MAGNIFY, then the referenced images shall be scaled to the Specified Displayed Area in the Presentation State, and then they shall be cropped to the size specified by the "viewport" parameter. If the request does not contain a "viewport" parameter, then the referenced images shall not be cropped.</para>
             <para xml:id="para_b7732de9-14e4-4b7c-9031-8e96304575eb">Any Specified Displayed Area relative annotations in the Presentation State shall be rendered relative to the Specified Displayed Area within the Presentation State, not the size of the viewport.</para>
-            <para xml:id="para_9180bb54-e578-4430-aed2-36e986989c78">Though the output of the Presentation State is defined in DICOM to be in P-Values (grayscale values intended for display on a device calibrated to the DICOM Grayscale Standard Display Function <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>), the grayscale or color space for the rendered images is not defined by this standard.</para>
+            <para xml:id="para_9180bb54-e578-4430-aed2-36e986989c78">Though the output of the Presentation State is defined in DICOM to be in P-Values (grayscale values intended for display on a device calibrated to the DICOM Grayscale Standard Display Function <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>), the grayscale or color space for the rendered images is not defined by this Standard.</para>
           </section>
         </section>
         <section label="6.5.8.3" status="4" xml:id="sect_6.5.8.3">
@@ -5535,7 +5610,7 @@
                     <para xml:id="para_719fe679-cf03-498f-8854-0f3398850d2e">1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_908cb6fb-9a6e-4960-afbe-8726d82b0961">A sequence of Items where each Item references a single SOP Instance for which storage could not be provided.</para>
+                    <para xml:id="para_908cb6fb-9a6e-4960-afbe-8726d82b0961">A Sequence of Items where each Item references a single SOP Instance for which storage could not be provided.</para>
                     <para xml:id="para_21e2f347-dcd4-49d4-9843-f9c5ed5f949c">Required if one or more SOP Instances failed to store.</para>
                   </td>
                 </tr>
@@ -5573,7 +5648,7 @@
                     <para xml:id="para_787b999f-1d54-4920-a0f2-120d357e0264">1C</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_e5198e35-9715-4267-bd65-9a12561deb32">A sequence of Items where each Item references a single SOP Instance that was successfully stored.</para>
+                    <para xml:id="para_e5198e35-9715-4267-bd65-9a12561deb32">A Sequence of Items where each Item references a single SOP Instance that was successfully stored.</para>
                     <para xml:id="para_daafa01e-02a8-4671-ba4e-8d0e663a954d">Required if one or more SOP Instances were successfully stored.</para>
                   </td>
                 </tr>
@@ -5688,14 +5763,14 @@
                     <para xml:id="para_9e122227-a0d1-45e6-b903-3e4d8fc6e6c1">1</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_97bc651a-30ac-4780-9661-435cd8115fa3">Sequence that contains all the Attributes, with their previous values, that were modified or removed from the main data set.</para>
+                    <para xml:id="para_97bc651a-30ac-4780-9661-435cd8115fa3">Sequence that contains all the Attributes, with their previous values, that were modified or removed from the main Data Set.</para>
                     <para xml:id="para_81288324-d9f2-4f93-8317-6050ea4fd608">Only a single Item shall be included in this sequence.</para>
                   </td>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="4" rowspan="1">
                     <para xml:id="para_2fa21bd9-7dee-4f34-8ea4-8b9ee7377f5a">
-                      <emphasis role="italic">&gt;&gt;Any Attribute from the main data set that was modified or removed; may include Sequence Attributes and their Items.</emphasis>
+                      <emphasis role="italic">&gt;&gt;Any Attribute from the main Data Set that was modified or removed; may include Sequence Attributes and their Items.</emphasis>
                     </para>
                   </td>
                 </tr>
@@ -6923,7 +6998,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                   </tr>
                   <tr valign="top">
                     <td align="left" colspan="3" rowspan="1">
-                      <para xml:id="para_2fa4f7d6-611a-4c46-ba19-d617dc211142">All available Instance Level DICOM Attributes if the "includefield" query key is included with a value of "all"</para>
+                      <para xml:id="para_2fa4f7d6-611a-4c46-ba19-d617dc211142">All available Series Level DICOM Attributes if the "includefield" query key is included with a value of "all"</para>
                     </td>
                   </tr>
                   <tr valign="top">
@@ -12520,7 +12595,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </note>
       <para xml:id="para_24a7bc3a-4edd-4b06-82ce-a9283658fce3">An error response may include a payload containing an appropriate error message.</para>	
       <note>
-        <para xml:id="para_27d348ab-3142-4e78-83b0-3967ace3c46d">To identify a DICOM Object, only one UID is required, because any UID is globally unique. However, the standard requires that the UID of the higher levels in the DICOM Information Model are specified (i.e., series and study), in order to support the use of DICOM devices that support only the baseline hierarchical (rather than extended relational) Query/Retrieve model, which requires the Study Instance UID and Series Instance UID to be defined when retrieving an SOP Instance, as defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_27d348ab-3142-4e78-83b0-3967ace3c46d">To identify a DICOM Object, only one UID is required, because any UID is globally unique. However, the Standard requires that the UID of the higher levels in the DICOM Information Model are specified (i.e., series and study), in order to support the use of DICOM devices that support only the baseline hierarchical (rather than extended relational) Query/Retrieve model, which requires the Study Instance UID and Series Instance UID to be defined when retrieving an SOP Instance, as defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>.</para>
       </note>
       <section label="8.1.1" status="3" xml:id="sect_8.1.1">
         <title>Request Type</title>
@@ -12574,7 +12649,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_32f8be6a-8cb6-45e4-91eb-2d803c96c44d">This standard does not introduce any security-related requirements. It is likely that the information contained within DICOM Objects identifies the patient. The protocol used (that is HTTP) can be replaced by HTTPs, which is its secure extension, to protect the information in transit. The underlying DICOM implementation decides whether or not to grant access to a particular DICOM object based on whatever security policy or mechanism it has in place. A server is unlikely to fulfill a request from an unknown user (e.g., accessed via the HTTP protocol) unless it is certain that the data requested has no patient identifying information within it and has been approved for public viewing.</para>
+              <para xml:id="para_32f8be6a-8cb6-45e4-91eb-2d803c96c44d">This Standard does not introduce any security-related requirements. It is likely that the information contained within DICOM Objects identifies the patient. The protocol used (that is HTTP) can be replaced by HTTPs, which is its secure extension, to protect the information in transit. The underlying DICOM implementation decides whether or not to grant access to a particular DICOM object based on whatever security policy or mechanism it has in place. A server is unlikely to fulfill a request from an unknown user (e.g., accessed via the HTTP protocol) unless it is certain that the data requested has no patient identifying information within it and has been approved for public viewing.</para>
             </listitem>
             <listitem>
               <para xml:id="para_cbce1e8c-714a-4227-b5de-54b2c8961fbd">The Anonymize object enables, for example, teaching files systems or clinical trial applications to offer an access to original images stored in a PACS, without disclosing the patient's identity, and requiring storage of a (de-identified) copy of the original image. Anonymization is the responsibility of the Server. In order to preserve patient confidentiality, the Server likely will refuse to deliver an anonymized SOP instance to an unknown or unauthorized person unless the Server is certain that the SOP instance holds no patient identifying information. This would include "blanking out" any annotation area(s) containing nominative information burned into the pixels or in the overlays.</para>
@@ -12716,7 +12791,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         </note>
         <para xml:id="para_7e3ea027-8171-45d2-bd83-85cc3f9b47ed">If the value of this parameter is less than 1 or greater than 100, then the response shall be a 400 (Bad Request), and may include a payload containing an appropriate error message.</para>
         <note>
-          <para xml:id="para_97f47b85-69dc-4124-863e-eb5b9a80bb4d">The specific interpretation of the meaning of this parameter is left to the interpretation of the implementers of the standard.</para>
+          <para xml:id="para_97f47b85-69dc-4124-863e-eb5b9a80bb4d">The specific interpretation of the meaning of this parameter is left to the interpretation of the implementers of the Standard.</para>
         </note>
       </section>
       <section label="8.2.9" status="3" xml:id="sect_8.2.9">
@@ -12742,7 +12817,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </listitem>
           </orderedlist>
           </note>
-          <para xml:id="para_f16e23d0-21b9-4b2f-9e01-dad06c379a00">Though the output of the presentation state is defined in DICOM to be in P-Values (grayscale values intended for display on a device calibrated to the DICOM Grayscale Standard Display Function <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>), the grayscale or color space for the images returned by the request is not defined by this standard.</para>
+          <para xml:id="para_f16e23d0-21b9-4b2f-9e01-dad06c379a00">Though the output of the presentation state is defined in DICOM to be in P-Values (grayscale values intended for display on a device calibrated to the DICOM Grayscale Standard Display Function <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="select: labelnumber"/>), the grayscale or color space for the images returned by the request is not defined by this Standard.</para>
         </section>
         <section label="8.2.9.2" status="4" xml:id="sect_8.2.9.2">
           <title>Unique Identifier of the Series Containing the Presentation SOP Instance</title>
@@ -12786,7 +12861,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       The grammar for the query component is defined using <xref linkend="biblio_RFC_5234"/> <emphasis role="italic">Augmented BNF for Syntax Specifications: ABNF</emphasis>.</para>
     <para xml:id="para_446689b6-d5f4-4fb5-9543-fd71cf2d0a75">DICOM URIs may use the query component of the URI to specify request parameters.
       The following grammar defines the general syntax of parameters contained in the query component of the URI.
-      Specific HTTP transactions defined elsewhere in this standard may further refine the legal &lt;name&gt; and/or &lt;value&gt; rules.</para>
+      Specific HTTP transactions defined elsewhere in this Standard may further refine the legal &lt;name&gt; and/or &lt;value&gt; rules.</para>
     <programlisting><![CDATA[    query-component = parameter [ *("&" parameter) ]
     parameter       = name "="" value
     name            = *qchar
@@ -12867,7 +12942,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   </chapter>
   <chapter label="C" status="1" xml:id="chapter_C">
     <title>Applications (Informative)</title>
-    <para xml:id="para_b52fa18b-ea9e-4a5a-8807-022528ddcd3d">There are multiple applications, in which DICOM and "web-based" environments are interacting. "Web-based" means information and communication systems that are using Internet related technologies (Web, e-mail…). The basic feature supported by this standard is a mechanism for the "Web-based" system to retrieve a DICOM object from the "DICOM-based" system.</para>
+    <para xml:id="para_b52fa18b-ea9e-4a5a-8807-022528ddcd3d">There are multiple applications, in which DICOM and "web-based" environments are interacting. "Web-based" means information and communication systems that are using Internet related technologies (Web, e-mail…). The basic feature supported by this Standard is a mechanism for the "Web-based" system to retrieve a DICOM object from the "DICOM-based" system.</para>
     <para xml:id="para_e9e71831-a112-4c37-97e2-99e80b091f07">Typical applications are:</para>
     <orderedlist numeration="lowerroman">
       <listitem>
@@ -12883,7 +12958,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <para xml:id="para_25a69d21-8e94-4c00-80d3-c12e57809dfc">Providing access to anonymized DICOM reports, images and waveforms via a web server, for teaching purposes and for clinical trials.</para>
       </listitem>
     </orderedlist>
-    <para xml:id="para_b9c5fa82-5e81-4673-8d2c-a408afcc4251">To retrieve DICOM Objects using "WADO", the "web-based" system must "know" the UIDs (Study, Series, SOP Instance) of the objects it needs to retrieve. These may be obtained through different methods (reception of a standardized message containing a document containing the reference to the DICOM Objects, query of other systems…) that are beyond the scope of this standard.</para>
+    <para xml:id="para_b9c5fa82-5e81-4673-8d2c-a408afcc4251">To retrieve DICOM Objects using "WADO", the "web-based" system must "know" the UIDs (Study, Series, SOP Instance) of the objects it needs to retrieve. These may be obtained through different methods (reception of a standardized message containing a document containing the reference to the DICOM Objects, query of other systems…) that are beyond the scope of this Standard.</para>
   </chapter>
   <chapter label="D" status="1" xml:id="chapter_D">
     <title>IANA Character Set Mapping</title>

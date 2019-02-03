@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.14" version="5.0" xml:id="PS3.14">
   <title>PS3.14</title>
-  <subtitle>DICOM PS3.14 2018e - Grayscale Standard Display Function</subtitle>
+  <subtitle>DICOM PS3.14 2019a - Grayscale Standard Display Function</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -113,9 +113,10 @@
             <para xml:id="para_2cb73dae-96f7-4cbb-a920-6f1530de5f10">A function that plots the Just-Noticeable Difference divided by the Luminance across the Luminance Range.</para>
           </glossdef>
         </glossentry>
-        <glossentry xml:id="glossentry_DigitalDrivingLevel">
-          <glossterm>Digital Driving Level (DDL)</glossterm>
-          <glossdef>
+          <glossentry xml:id="glossentry_DigitalDrivingLevel" xreflabel="Digital Driving Level (DDL)">
+          <glossterm>Digital Driving Level</glossterm>
+            <acronym>DDL</acronym>
+            <glossdef>
             <para xml:id="para_afadc267-3f13-4abb-b996-e9e64ba411e1">A digital value that given as input to a Display System produces a Luminance. The set of DDLs of a Display System is all the possible discrete values that can produce Luminance values on that Display System. The mapping of DDLs to Luminance values for a Display System produces the Characteristic Curve of that Display System. The actual output for a given DDL is specific to the Display System and is not corrected for the Grayscale Standard Display Function.</para>
           </glossdef>
         </glossentry>
@@ -137,8 +138,9 @@
             <para xml:id="para_2b2448ba-c1e2-4d06-9ec8-db930f8eb601">Light from the environment surrounding the Display System that illuminates the display medium. It contributes to the Luminance that is received by an observer from the image display. Ambient Light reduces the contrast in the image.</para>
           </glossdef>
         </glossentry>
-        <glossentry xml:id="glossentry_JustNoticeableDifference">
-          <glossterm>Just-Noticeable Difference (JND)</glossterm>
+          <glossentry xml:id="glossentry_JustNoticeableDifference" xreflabel="Just-Noticeable Difference (JND)">
+          <glossterm>Just-Noticeable Difference</glossterm>
+            <acronym>JND</acronym>
           <glossdef>
             <para xml:id="para_ad5ea01a-7c28-4202-9b38-6be12e9c7e3f">The Luminance difference of a given target under given viewing conditions that the average human observer can just perceive.</para>
           </glossdef>
@@ -273,7 +275,7 @@
     <para xml:id="para_a6b5a4f2-3237-4974-baff-b955c912d7ae">PS3.14 defines, mathematically, the Grayscale Standard Display Function of Standardized Display Systems. These systems may be printers producing hard-copies viewed on light-boxes or electronic Display Systems for soft-copies.</para>
     <para xml:id="para_4045dbee-bca2-4041-8ade-4edb9ecc22f7">Hard-copies may consist of transmissive films as well as reflective prints. The image in these prints is represented by optical density variations in transmission or diffuse reflection. To an observer, every element of the image appears with a certain Luminance depending on the Illuminance and the optical density of the image element.</para>
     <para xml:id="para_ee008973-f09b-465f-ad51-2970d036ed8e">Soft-copies may be produced by emissive Display Systems (such as CRT monitors) or electronic light valves (such as light sources and liquid crystal displays).</para>
-    <para xml:id="para_72ec4eb9-ced4-4f26-8d67-032e0e421dd5">For the purpose of PS3.14, Display Systems take a Digital Driving Level and produce Luminance or optical density variations that represent the image. Predictable application of image transformations, such as the modality, value-of-interest, and presentation look-up tables specified in the DICOM standard, requires knowledge of the Characteristic Curve of the Display System. Standardizing the response function expected of the Display System simplifies the application of such image transformations across several different Display Systems such as encountered in a network environment.</para>
+    <para xml:id="para_72ec4eb9-ced4-4f26-8d67-032e0e421dd5">For the purpose of PS3.14, Display Systems take a Digital Driving Level and produce Luminance or optical density variations that represent the image. Predictable application of image transformations, such as the modality, value-of-interest, and presentation look-up tables specified in the DICOM Standard, requires knowledge of the Characteristic Curve of the Display System. Standardizing the response function expected of the Display System simplifies the application of such image transformations across several different Display Systems such as encountered in a network environment.</para>
     <para xml:id="para_02489abd-d835-40cb-8dac-196bc4497759">PS3.14 does not define when conformance with the Grayscale Standard Display Function is achieved or how to characterize the degree of conformance reached.</para>
     <note>
       <para xml:id="para_4797d6b8-3c21-4add-8347-78a8dc646333">A definition of conformance would require thorough evaluations of human visual system sensitivity to deviations of Display Functions from the Grayscale Standard Display Function for medical images.</para>
@@ -9476,7 +9478,7 @@
       of P-Values allows, in principle, more localized aberrations from the Grayscale Standard Display Function to be "caught", but the signal-to-noise ratio (or significance) of each of these will be decreased.</para>
         </listitem>
         <listitem>
-          <para xml:id="para_037c8ac5-8783-4aae-89e3-71d350dee0ed">If the measurement data for a particular Display System has significant "noise" (as indicated by limited repeatability in the data when multiple sets of measurements are taken), it may be desirable to apply a statistical analysis technique that goes beyond the "FIT" and "LUM" metric by explicitly utilizing the known standard deviations in the input data set, along with the data itself, to prevent the fitting technique from over-reacting to noise. See, for example, the section "General Linear Least Squares" in Reference C1 and the chapter "Least-Squares Fit to a Polynomial" in Reference C2. If measurement noise is not explicitly taken into account in the analysis, the metric's returned root-mean-square error of the data points relative to the fit could be misleadingly high, since it would include the combined effect of errors due to incorrectness in the Display Function and errors due to measurement noise.</para>
+          <para xml:id="para_037c8ac5-8783-4aae-89e3-71d350dee0ed">If the measurement data for a particular Display System has significant "noise" (as indicated by limited repeatability in the data when multiple sets of measurements are taken), it may be desirable to apply a statistical analysis technique that goes beyond the "FIT" and "LUM" metric by explicitly utilizing the known standard deviations in the input data, along with the data itself, to prevent the fitting technique from over-reacting to noise. See, for example, the section "General Linear Least Squares" in Reference C1 and the chapter "Least-Squares Fit to a Polynomial" in Reference C2. If measurement noise is not explicitly taken into account in the analysis, the metric's returned root-mean-square error of the data points relative to the fit could be misleadingly high, since it would include the combined effect of errors due to incorrectness in the Display Function and errors due to measurement noise.</para>
         </listitem>
         <listitem>
           <para xml:id="para_2cdf26e0-83dc-4a91-b440-4f2de20dcd72">If possible, the sensitivity and specificity of the metric being considered should be checked against visual tests. For example, a digital test pattern with many low-contrast steps at many ambient Luminances could be printed on a "laboratory standard" Grayscale Standard Display Function printer and also printed on a printer being evaluated. The resultant films could then be placed side-by-side on light-boxes for comparison by a human observer. A good metric technique should detect as sensitively and repeatably as the human observer the existence of deviations (of any shape) from the Grayscale Standard Display Function. For example, if a Display System has a Characteristic Curve that, for even a very short interval of DDL values, is too contrasty, too flat, or (worse yet) non-monotonic, the metric should be able to detect and respond to that anomaly as strongly as the human observer does.</para>
@@ -9628,7 +9630,7 @@
         <para xml:id="para_7f7efdab-b5d4-4c5a-9bb0-9b933cbdcc45">If a handheld photometer that does not cast a shadow on the display screen is used to measure the Characteristic Curve, then the Luminance produced by the display plus the effect of ambient light may be measured simultaneously.</para>
         <para xml:id="para_ba0bc911-31b3-4713-b6ed-8bdde68d3b21">When a suction cup photometer is used to take the Luminance measurements or when a handheld photometer casts a shadow on the display screen, all ambient lighting should be turned off while measuring the Characteristic Curve. The effect of ambient light is determined separately: The Display System is turned off, the ambient light is turned on, and the Luminance produced by scattering of ambient light at the display screen is measured by placing the photometer at a distance from the display screen so that its acceptance angle includes a major portion of the screen and that the measurement is not affected by direct illumination from areas outside the display screen. The Luminance related to ambient light is added to the previously measured Luminance levels produced by the Display System to determine the effective Characteristic Curve of the system.</para>
         <note>
-          <para xml:id="para_cce7b376-9009-4740-a500-fb7eb3d6509b">Changes in ambient lighting conditions may require recalibration of the display subsystem in order to maintain conformance to this standard.</para>
+          <para xml:id="para_cce7b376-9009-4740-a500-fb7eb3d6509b">Changes in ambient lighting conditions may require recalibration of the display subsystem in order to maintain conformance to this Standard.</para>
         </note>
         <para xml:id="para_8b530fd8-b0e5-453b-a37e-2628816045de">In the following, an example for measurements and transformation of a Display Function is presented. The Display System for this example is a CRT monitor with display controller. It is assumed that the display controller allows a transformation of the DDLs with 8-bit input precision and 10-bit output precision.</para>
         <para xml:id="para_5dba8538-acb9-4903-b20b-8a0e101ad481">The Luminance is measured with a photometer with a narrow (1°) acceptance angle. The ambient light level was adjusted as low as possible. No localized highlights were visible.</para>

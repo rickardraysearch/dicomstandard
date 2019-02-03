@@ -69,6 +69,27 @@
 			</xsl:for-each>
 		</xsl:when>
 		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
+				  and d:thead/d:tr/d:th[2] = 'Coding Scheme Version'
+				  and d:thead/d:tr/d:th[3] = 'Code Value'
+				  and d:thead/d:tr/d:th[4] = 'Code Meaning'
+				  and d:thead/d:tr/d:th[5] = 'SNOMED-CT Concept ID'
+				  and d:thead/d:tr/d:th[6] = 'UMLS Concept Unique ID'">
+			<xsl:for-each select="d:tbody/d:tr[string-length(normalize-space(d:td[1])) &gt; 0]">	<!-- ignore empty rows -->
+				<xsl:variable name="linkend"><xsl:value-of select="d:td[1]/descendant::d:xref[1]/@linkend"/></xsl:variable>		<!-- Should be d:td[1]/d:para/d:emphasis/d:xref/@linkend} but just in case, go straight to d:xref -->
+				<xsl:choose>
+				<xsl:when test="starts-with(d:td[1],'Include') and count($linkend) &gt; 0 and starts-with($linkend,'sect_CID_')">	<!-- linkend is of the form 'sect_CID_4040' -->
+					<include cid="{normalize-space(substring-after($linkend,'sect_CID_'))}"/>
+				</xsl:when>
+				<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include')) and string-length(normalize-space(d:td[2])) = 0">
+					<contextgroupcode csd="{normalize-space(d:td[1])}" cv="{normalize-space(d:td[3])}" cm="{normalize-space(d:td[4])}" sct="{normalize-space(d:td[5])}" umlscui="{normalize-space(d:td[6])}"/>
+				</xsl:when>
+				<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include')) and string-length(normalize-space(d:td[2])) &gt; 0">
+					<contextgroupcode csd="{normalize-space(d:td[1])}" csv="{normalize-space(d:td[2])}" cv="{normalize-space(d:td[3])}" cm="{normalize-space(d:td[4])}" sct="{normalize-space(d:td[5])}" umlscui="{normalize-space(d:td[6])}"/>
+				</xsl:when>
+				</xsl:choose>
+			</xsl:for-each>
+		</xsl:when>
+		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
 				  and d:thead/d:tr/d:th[2] = 'Code Value'
 				  and d:thead/d:tr/d:th[3] = 'Code Meaning'">
 			<xsl:for-each select="d:tbody/d:tr[string-length(normalize-space(d:td[1])) &gt; 0]">	<!-- ignore empty rows -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.11" version="5.0" xml:id="PS3.11">
   <title>PS3.11</title>
-  <subtitle>DICOM PS3.11 2018e - Media Storage Application Profiles</subtitle>
+  <subtitle>DICOM PS3.11 2019a - Media Storage Application Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -60,16 +60,16 @@
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
-    <para xml:id="para_f74963f8-b1c1-47da-b6bf-a5db16865851">This part of the DICOM Standard specifies application specific subsets of the DICOM Standard to which an implementation may claim conformance. Such a conformance statement applies to the interoperable interchange of medical images and related information on storage media for specific clinical uses. It follows the framework, defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>, for the interchange of various types of information on storage media.</para>
-    <para xml:id="para_6486ffc8-f0a5-4a20-8175-164a9e20932d">This part is related to other parts of the DICOM Standard in that:</para>
+    <para xml:id="para_f74963f8-b1c1-47da-b6bf-a5db16865851">This Part of the DICOM Standard specifies application specific subsets of the DICOM Standard to which an implementation may claim conformance. Such a conformance statement applies to the interoperable interchange of medical images and related information on storage media for specific clinical uses. It follows the framework, defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>, for the interchange of various types of information on storage media.</para>
+    <para xml:id="para_6486ffc8-f0a5-4a20-8175-164a9e20932d">This Part is related to other parts of the DICOM Standard in that:</para>
     <itemizedlist>
       <listitem>
         <para xml:id="para_d437e0c1-6a70-4ee2-bb2d-255002422c51">
-<olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>, Conformance, specifies the general rules for assuring interoperability, which are applied for media interchange through the Application Profiles of this part</para>
+<olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>, Conformance, specifies the general rules for assuring interoperability, which are applied for media interchange through the Application Profiles of this Part</para>
       </listitem>
       <listitem>
         <para xml:id="para_9be2f7e0-7e6a-4676-8107-ae4a0d272733">
-<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, Information Object Definitions, specifies a number of Information Object Definitions (e.g., various types of images) that may be used in conjunction with this part. It also defines a medical Directory structure to facilitate access to the objects stored on media</para>
+<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, Information Object Definitions, specifies a number of Information Object Definitions (e.g., various types of images) that may be used in conjunction with this Part. It also defines a medical Directory structure to facilitate access to the objects stored on media</para>
     </listitem>
       <listitem>
         <para xml:id="para_46f8bbc2-71c3-4929-86fe-8afcd01bdc08">
@@ -86,11 +86,11 @@
       </listitem>
       <listitem>
         <para xml:id="para_f3f70dd0-b3e4-42dd-aa1b-361eaa1266a3">
-<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>, Media Storage and File Formats for Media Interchange, standardizes the overall open Storage Media architecture used by this part, including the definition of a generic File Format, a Basic File Service and a Directory concept</para>
+<olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>, Media Storage and File Formats for Media Interchange, standardizes the overall open Storage Media architecture used by this Part, including the definition of a generic File Format, a Basic File Service and a Directory concept</para>
       </listitem>
       <listitem>
         <para xml:id="para_885453ae-74fe-4377-88e7-6db29b8c7a94">
-<olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/>, Media Formats and Physical Media, defines a number of standard Physical Media and corresponding Media Formats. These Media Formats and Physical Media selections are referenced by one or more of the Application Profiles of this part. <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> is intended to be extended as the technologies related to Physical Medium evolve</para>
+<olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/>, Media Formats and Physical Media, defines a number of standard Physical Media and corresponding Media Formats. These Media Formats and Physical Media selections are referenced by one or more of the Application Profiles of this Part. <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> is intended to be extended as the technologies related to Physical Medium evolve</para>
       </listitem>
       <listitem>
         <para xml:id="para_916fcb81-6f4a-4701-9847-bce2531e2d26">
@@ -114,196 +114,343 @@
           <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
+        <biblioentry xml:id="biblio_ISO7498-1">
+            <abbrev>ISO 7498-1</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1994</date>
+            <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO7498-2">
+            <abbrev>ISO 7498-2</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1989</date>
+            <title>Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</title>
+        </biblioentry>
     </bibliography>
-    <para xml:id="para_569e15c8-01bf-42c2-9339-640142b4f7cf">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
-    <para xml:id="para_53727856-78b5-415c-839f-f71eb2660cd1">ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
-    <para xml:id="para_05360441-3cb1-4014-a3a7-2fa2fd6ee0cd">ISO 8859, Information Processing - 8-bit single-byte coded graphic character sets - part 1: Latin Alphabet No. 1.</para>
-    <para xml:id="para_7f06f16b-b192-4d08-a71e-bd3486962d17">RFC2630, Cryptographic Message Syntax, June 1999</para>
   </chapter>
-  <chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_9d1252c0-2960-44e7-ac73-d9268320112d">For the purposes of this standard the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
-      <title>Reference Model Definitions</title>
-      <para xml:id="para_bb71664a-5214-44f0-8459-b2b9fe5748e2">This part of the Standard is based on the concepts developed in ISO 7498-1 and makes use of the following terms defined in it:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_6c9ddcda-d018-4a0a-81a4-04751ce8faab">Application Entity</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_2fbd975f-6a23-4337-aa5e-a2574c2222e3">Service or Layer Service</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d952bc7d-c65d-4f76-bdf6-cfa61f1bd6ca">Transfer Syntax</para>
-        </listitem>
-      </orderedlist>
-      <para xml:id="para_2c27cf41-7049-4b3a-8b31-486ce8794e62">This Part of the Standard makes use of the following terms defined in ISO 7498-2:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_a7a1e976-0ef8-4248-a536-bd8d0c246499">Data Confidentiality</para>
-          <note>
-            <para xml:id="para_1f49b62b-2c42-4bff-9685-a6e71a3c8437">The definition is "the property that information is not made available or disclosed to unauthorized individuals, entities or processes."</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para xml:id="para_b7c937ec-05bb-45dc-ad88-35db01ab38e4">Data Origin Authentication</para>
-          <note>
-            <para xml:id="para_e8bba118-2004-4e1f-9ab3-6d396cbda8f9">The definition is "the corroboration that the source of data received is as claimed."</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para xml:id="para_503600be-4101-4a36-bf08-4e903ac610bc">Data Integrity</para>
-          <note>
-            <para xml:id="para_4ab81452-60e2-49dc-b400-b5ad055b3120">The definition is "the property that data has not been altered or destroyed in an unauthorized manner."</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para xml:id="para_df039bab-334a-4167-96d3-3ef28fbe4755">Key Management</para>
-          <note>
-            <para xml:id="para_79018678-0a33-418b-ac65-8357259efbee">The definition is "the generation, storage, distribution, deletion, archiving and application of keys in accordance with a security policy."</para>
-          </note>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
-      <title>DICOM Introduction and Overview Definitions</title>
-      <para xml:id="para_6bd127da-3761-4eb6-ad9e-ac552957a35b">This part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_f7314ccd-18c4-4b57-8cd5-b82f1576194b">Attribute</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.3" status="2" xml:id="sect_3.3">
-      <title>DICOM Conformance</title>
-      <para xml:id="para_af58d3e8-f300-484b-bcc6-56fb82922ddc">This part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_588513a2-af6c-4258-b39f-51f32aa5e442">Conformance Statement</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_74d6aa45-fdbf-4a5a-acca-2c0fc80b3e51">Standard SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_feaef9c2-7214-4c95-b325-10357881d691">Standard Extended SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_cee987fd-8854-47d6-b2df-941e905f202d">Specialized SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_076e62cc-c4ee-4b7c-bc8d-5ae71c6ebc75">Private SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_02ddfe53-947b-458b-b075-90d7a33d874d">Standard Application Profile</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_af7e4e83-4973-4890-8c52-de4399738fd3">Augmented Application Profile</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_517fefae-49e9-445c-a39c-115950ef1c4f">Private Application Profile</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.4" status="2" xml:id="sect_3.4">
-      <title>DICOM Information Object Definitions</title>
-      <para xml:id="para_23842fae-1769-4f46-8bc5-3996c7727363">This part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_416ff826-688f-409d-a11d-7745672bd848">Information Object Definition</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_fb9348e1-682d-41e8-a72e-91caab8d87e8">Basic Directory IOD</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_f45e2661-ede0-4146-be35-d3476f34eaa7">Basic Directory Information Model</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.5" status="2" xml:id="sect_3.5">
-      <title>DICOM Data Structure and Encoding Definitions</title>
-      <para xml:id="para_a97e7fd0-cad0-4b7f-960b-c31475e14f60">This part of the standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_e0499d7a-4541-47fc-950d-06e03e1e9a8a">Data Element</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d2ad85d4-eb93-47f0-92f4-1f908ced3a1d">Data Set</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.6" status="2" xml:id="sect_3.6">
-      <title>DICOM Message Exchange Definitions</title>
-      <para xml:id="para_1745cc5c-f62b-4a60-8334-e24cc943c26c">This part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_9919801b-2ff3-468c-a1fa-f3558775dbf2">Service Object Pair (SOP) Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_2f740142-0654-4a12-b790-135847172f3f">Service Object Pair (SOP) Instance</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_1d5b9e7a-09e7-4e71-9245-d8549b74a253">Implementation Class UID</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.7" status="2" xml:id="sect_3.7">
-      <title>DICOM Media Storage and File Format Definitions</title>
-      <para xml:id="para_e9b9f5d8-78d3-4fce-a823-95a11ff315f5">This part of the standard makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_cea56999-040b-4b51-9226-f1bde03d409a">Application Profile</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_f91d7a56-8c7f-4787-a301-edf4e38d9ae4">DICOM File Format</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_5f3866c1-1a05-40f0-9b8b-d3fcef9ac81c">DICOM File Service</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_b251ba41-11c7-4514-aa1c-df89d195f592">DICOM File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_231c2a44-95b4-4a37-8dae-4db99256d22b">DICOMDIR File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_26367c5e-9aaa-42da-a428-6e3fbba00c9d">File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_201ddbc8-453a-48de-8ef8-37bddfa2e718">File ID</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d30a4834-d244-4a08-9eb8-baa90f768020">File Meta Information</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_97dfb6ba-2528-41cf-9ab4-de586f180148">File-set</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_ab4ae4ad-9cbf-47ca-83c5-acf6223e81c5">Media Storage Model</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_991f88b4-5c4a-4a50-8ab5-7f82db81f0cf">Secure DICOM File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_b7b71367-cc26-4bf5-afd0-7319f16c477f">Secure Media Storage Application Profile</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.8" status="2" xml:id="sect_3.8">
-      <title>Media Storage Application Profiles</title>
-      <para xml:id="para_954e1983-08b9-4492-837a-297bf724b75b">This part of the DICOM Standard uses the following definitions:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Application Profile Class</term>
-          <listitem>
-            <para xml:id="para_bdf1d359-0c0c-4015-bceb-e7963291404e">A group of related Application Profiles defined in a single annex to this part.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-  </chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_9d1252c0-2960-44e7-ac73-d9268320112d">For the purposes of this Standard the following definitions apply.</para>
+        <glossary>
+            <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>Reference Model Definitions</title>
+                <para xml:id="para_bb71664a-5214-44f0-8459-b2b9fe5748e2">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO7498-1"/> and <xref linkend="biblio_ISO7498-2"/>:</para>
+                <glossentry xml:id="glossentry_ApplicationEntity" xreflabel="Application Entity">
+                    <glossterm>Application Entity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6c9ddcda-d018-4a0a-81a4-04751ce8faab">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Service" xreflabel="Service">
+                    <glossterm>Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_2fbd975f-6a23-4337-aa5e-a2574c2222e3">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntax" xreflabel="Transfer Syntax">
+                    <glossterm>Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d952bc7d-c65d-4f76-bdf6-cfa61f1bd6ca">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataConfidentiality" xreflabel="Data Confidentiality">
+                    <glossterm>Data Confidentiality</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a7a1e976-0ef8-4248-a536-bd8d0c246499">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_1f49b62b-2c42-4bff-9685-a6e71a3c8437">The definition is "the property that information is not made available or disclosed to unauthorized individuals, entities or processes."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataOriginAuthentication" xreflabel="Data Origin Authentication">
+                    <glossterm>Data Origin Authentication</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b7c937ec-05bb-45dc-ad88-35db01ab38e4">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_e8bba118-2004-4e1f-9ab3-6d396cbda8f9">The definition is "the corroboration that the source of data received is as claimed."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataIntegrity" xreflabel="Data Integrity">
+                    <glossterm>Data Integrity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_503600be-4101-4a36-bf08-4e903ac610bc">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_4ab81452-60e2-49dc-b400-b5ad055b3120">The definition is "the property that data has not been altered or destroyed in an unauthorized manner."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_KeyManagement" xreflabel="Key Management">
+                    <glossterm>Key Management</glossterm>
+                    <glossdef>
+                        <para xml:id="para_df039bab-334a-4167-96d3-3ef28fbe4755">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_79018678-0a33-418b-ac65-8357259efbee">The definition is "the generation, storage, distribution, deletion, archiving and application of keys in accordance with a security policy."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>DICOM Introduction and Overview Definitions</title>
+                <para xml:id="para_6bd127da-3761-4eb6-ad9e-ac552957a35b">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_Attribute" xreflabel="Attribute">
+                    <glossterm>Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f7314ccd-18c4-4b57-8cd5-b82f1576194b">
+<olink targetdoc="PS3.1" targetptr="glossentry_Attribute"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service Object Pair Class (SOP Class)">
+                    <glossterm>Service Object Pair Class</glossterm>
+                    <acronym>SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_3c99d54e-7788-4c82-99ed-c79df4fd37cb">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>DICOM Conformance</title>
+                <para xml:id="para_af58d3e8-f300-484b-bcc6-56fb82922ddc">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_ConformanceStatement" xreflabel="Conformance Statement">
+                    <glossterm>Conformance Statement</glossterm>
+                    <glossdef>
+                        <para xml:id="para_588513a2-af6c-4258-b39f-51f32aa5e442">
+<olink targetdoc="PS3.2" targetptr="glossentry_ConformanceStatement"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardSOPClass" xreflabel="Standard SOP Class">
+                    <glossterm>Standard SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_74d6aa45-fdbf-4a5a-acca-2c0fc80b3e51">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardSOPClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardExtendedSOPClass" xreflabel="Standard Extended SOP Class">
+                    <glossterm>Standard Extended SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_feaef9c2-7214-4c95-b325-10357881d691">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardExtendedSOPClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SpecializedSOPClass" xreflabel="Specialized SOP Class">
+                    <glossterm>Specialized SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cee987fd-8854-47d6-b2df-941e905f202d">
+<olink targetdoc="PS3.2" targetptr="glossentry_SpecializedSOPClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PrivateSOPClass" xreflabel="Private SOP Class">
+                    <glossterm>Private SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_076e62cc-c4ee-4b7c-bc8d-5ae71c6ebc75">
+<olink targetdoc="PS3.2" targetptr="glossentry_PrivateSOPClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardApplicationProfile" xreflabel="Standard Application Profile">
+                    <glossterm>Standard Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_02ddfe53-947b-458b-b075-90d7a33d874d">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AugmentedApplicationProfile" xreflabel="Augmented Application Profile">
+                    <glossterm>Augmented Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_af7e4e83-4973-4890-8c52-de4399738fd3">
+<olink targetdoc="PS3.2" targetptr="glossentry_AugmentedApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PrivateApplicationProfile" xreflabel="Private Application Profile">
+                    <glossterm>Private Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_517fefae-49e9-445c-a39c-115950ef1c4f">
+<olink targetdoc="PS3.2" targetptr="glossentry_PrivateApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.4" status="2" xml:id="sect_3.4">
+                <title>DICOM Information Object Definitions</title>
+                <para xml:id="para_23842fae-1769-4f46-8bc5-3996c7727363">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_InformationObjectDefinition" xreflabel="Information Object Definition">
+                    <glossterm>Information Object Definition</glossterm>
+                    <acronym>IOD</acronym>
+                    <glossdef>
+                        <para xml:id="para_416ff826-688f-409d-a11d-7745672bd848">
+<olink targetdoc="PS3.3" targetptr="glossentry_InformationObjectDefinition"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_BasicDirectoryIOD" xreflabel="Basic Directory IOD">
+                    <glossterm>Basic Directory IOD</glossterm>
+                    <glossdef>
+                        <para xml:id="para_fb9348e1-682d-41e8-a72e-91caab8d87e8">
+<olink targetdoc="PS3.3" targetptr="glossentry_BasicDirectoryIOD"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_BasicDirectoryInformationModel" xreflabel="Basic Directory Information Model">
+                    <glossterm>Basic Directory Information Model</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f45e2661-ede0-4146-be35-d3476f34eaa7">
+<olink targetdoc="PS3.3" targetptr="glossentry_BasicDirectoryInformationModel"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.5" status="2" xml:id="sect_3.5">
+                <title>DICOM Data Structure and Encoding Definitions</title>
+                <para xml:id="para_a97e7fd0-cad0-4b7f-960b-c31475e14f60">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_DataElement" xreflabel="Data Element">
+                    <glossterm>Data Element</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e0499d7a-4541-47fc-950d-06e03e1e9a8a">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElement"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                    <glossterm>Data Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d2ad85d4-eb93-47f0-92f4-1f908ced3a1d">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.6" status="2" xml:id="sect_3.6">
+                <title>DICOM Message Exchange Definitions</title>
+                <para xml:id="para_1745cc5c-f62b-4a60-8334-e24cc943c26c">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_ImplementationClassUID" xreflabel="Implementation Class UID">
+                    <glossterm>Implementation Class UID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_1d5b9e7a-09e7-4e71-9245-d8549b74a253">
+<olink targetdoc="PS3.7" targetptr="glossentry_ImplementationClassUID"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.7" status="2" xml:id="sect_3.7">
+                <title>DICOM Media Storage and File Format Definitions</title>
+                <para xml:id="para_e9b9f5d8-78d3-4fce-a823-95a11ff315f5">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_ApplicationProfile" xreflabel="Application Profile">
+                    <glossterm>Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cea56999-040b-4b51-9226-f1bde03d409a">
+<olink targetdoc="PS3.10" targetptr="glossentry_ApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFileFormat" xreflabel="DICOM File Format">
+                    <glossterm>DICOM File Format</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f91d7a56-8c7f-4787-a301-edf4e38d9ae4">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMFileFormat"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFileService" xreflabel="DICOM File Service">
+                    <glossterm>DICOM File Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5f3866c1-1a05-40f0-9b8b-d3fcef9ac81c">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMFileService"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFile" xreflabel="DICOM File">
+                    <glossterm>DICOM File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b251ba41-11c7-4514-aa1c-df89d195f592">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMFile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMDIRFile" xreflabel="DICOMDIR File">
+                    <glossterm>DICOMDIR File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_231c2a44-95b4-4a37-8dae-4db99256d22b">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMDIRFile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_File" xreflabel="File">
+                    <glossterm>File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_26367c5e-9aaa-42da-a428-6e3fbba00c9d">
+<olink targetdoc="PS3.10" targetptr="glossentry_File"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileID" xreflabel="File ID">
+                    <glossterm>File ID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_201ddbc8-453a-48de-8ef8-37bddfa2e718">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileID"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileMetaInformation" xreflabel="File Meta Information">
+                    <glossterm>File Meta Information</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d30a4834-d244-4a08-9eb8-baa90f768020">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileMetaInformation"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSet" xreflabel="File-set">
+                    <glossterm>File-set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_97dfb6ba-2528-41cf-9ab4-de586f180148">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MediaStorageModel" xreflabel="Media Storage Model">
+                    <glossterm>Media Storage Model</glossterm>
+                    <glossdef>
+                        <para xml:id="para_ab4ae4ad-9cbf-47ca-83c5-acf6223e81c5">
+<olink targetdoc="PS3.10" targetptr="glossentry_MediaStorageModel"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecureDICOMFile" xreflabel="Secure DICOM File">
+                    <glossterm>Secure DICOM File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_991f88b4-5c4a-4a50-8ab5-7f82db81f0cf">
+<olink targetdoc="PS3.10" targetptr="glossentry_SecureDICOMFile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecureMediaStorageApplicationProfile" xreflabel="Secure Media Storage Application Profile">
+                    <glossterm>Secure Media Storage Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b7b71367-cc26-4bf5-afd0-7319f16c477f">
+<olink targetdoc="PS3.10" targetptr="glossentry_SecureMediaStorageApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.8" status="2" xml:id="sect_3.8">
+                <title>Media Storage Application Profiles</title>
+                <para xml:id="para_954e1983-08b9-4492-837a-297bf724b75b">The following definitions are commonly used in this Part of the Standard:</para>
+
+                <glossentry xml:id="glossentry_ApplicationProfileClass" xreflabel="Application Profile Class">
+                    <glossterm>Application Profile Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_bdf1d359-0c0c-4015-bceb-e7963291404e">A group of related Application Profiles defined in a single Annex to PS3.11.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.9" status="2" xml:id="sect_3.9">
+                <title>DICOM Service Class Definitions</title>
+                <para xml:id="para_8807411b-d594-4456-9638-4e471804e2c9">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service Object Pair Instance (SOP Instance)">
+                    <glossterm>Service Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_2f740142-0654-4a12-b790-135847172f3f">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
-    <para xml:id="para_7c8f3705-41fa-40bd-a672-22c18f927d1b">The following symbols and abbreviations are used in this part of the standard.</para>
+    <para xml:id="para_7c8f3705-41fa-40bd-a672-22c18f927d1b">The following symbols and abbreviations are used in this Part of the Standard.</para>
     <variablelist>
       <varlistentry>
         <term>ACC</term>
@@ -606,7 +753,7 @@
   </chapter>
   <chapter label="8" status="1" xml:id="chapter_8">
     <title>Structure of Application Profile</title>
-    <para xml:id="para_1fe29813-b9a0-4eae-8ed7-dd280928b205">Application Profiles specific to various clinical areas are defined in the annexes to this part. Each Annex defines an Application Profile Class related to a single area of medical practice, e.g., cardiology, or to a single functional context, e.g., image transfer to a printer system. Several specific Application Profiles may be defined in each Application Profile class, and an identification scheme is established to label each specific Application Profile.</para>
+    <para xml:id="para_1fe29813-b9a0-4eae-8ed7-dd280928b205">Application Profiles specific to various clinical areas are defined in the Annexes to this Part. Each Annex defines an Application Profile Class related to a single area of medical practice, e.g., cardiology, or to a single functional context, e.g., image transfer to a printer system. Several specific Application Profiles may be defined in each Application Profile class, and an identification scheme is established to label each specific Application Profile.</para>
     <para xml:id="para_556baf20-8d4a-44c3-8b38-7395da64ab72">An example of an Application Profile structure is provided in below. The section identifier "X" should be replaced by the identifier of the annex.</para>
     <section label="X.1" status="2" xml:id="sect_X.1">
       <title>Class and Profile Identification</title>
@@ -614,7 +761,7 @@
 <xref linkend="sect_X.1" xrefstyle="select: label"/> of the Application Profile defines the class and specific Application Profiles in that class.</para>
       <para xml:id="para_6f1e8c7b-bdeb-4f0d-a068-fc803c1e3012">This section assigns an identifier to each Application Profile of the form ttt-x...x-y...y, where "ttt" indicates the type of Application Profile, "x...x" is an abbreviation of a significant term for the clinical context and "y...y" is a significant term for a distinguishing feature of the specific Application Profile. The "ttt" type term shall be one of STD, AUG, or PRI, indicating whether the Application Profile is a Standard, Augmented, or Private Application Profile respectively (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>). Identifiers shall be written such that they may be encoded with LO (Long String) Value Representation (see <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>).</para>
       <note>
-        <para xml:id="para_108c109d-622c-4e7a-a132-585f9f2f99f1">Conformance Statements may use the earlier prefix of APL, which is equivalent to STD. This use is deprecated and may be retired in future versions of the standard.</para>
+        <para xml:id="para_108c109d-622c-4e7a-a132-585f9f2f99f1">Conformance Statements may use the earlier prefix of APL, which is equivalent to STD. This use is deprecated and may be retired in future editions of the Standard.</para>
       </note>
     </section>
     <section label="X.2" status="2" xml:id="sect_X.2">
@@ -1099,7 +1246,7 @@
                 <para xml:id="para_8d6712f3-1cd2-4121-9ed9-f9bc59f4ae0a">This icon size is larger than that recommended in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> because the 64x64 icon would not be clinically useful for identifying and selecting X-Ray angiographic images.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_33e7d335-4b46-4614-ab8f-9298dda7dd9c">For multi-frame images, it is recommended that the icon image be derived from the frame identified in the Representative Frame Number attribute (0028,6010), if defined for the image SOP Instance. If the Representative Frame Number is not present, a frame approximately one-third of the way through the multi-frame image should be selected. The process to reduce a 512x512 image to a 128x128 image is beyond the scope of this standard.</para>
+                <para xml:id="para_33e7d335-4b46-4614-ab8f-9298dda7dd9c">For multi-frame images, it is recommended that the icon image be derived from the frame identified in the Representative Frame Number attribute (0028,6010), if defined for the image SOP Instance. If the Representative Frame Number is not present, a frame approximately one-third of the way through the multi-frame image should be selected. The process to reduce a 512x512 image to a 128x128 image is beyond the scope of this Standard.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -1735,13 +1882,13 @@
           <note>
             <orderedlist>
               <listitem>
-                <para xml:id="para_49ca8472-0c72-4f54-b7cd-50b560a2340f">It is recommended that the Icon Images be encoding using VR OB encoding. The use of OW, allowed by the STD-XABC-CD Basic Cardiac profile defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, is deprecated, and may be retired in future versions of the standard.</para>
+                <para xml:id="para_49ca8472-0c72-4f54-b7cd-50b560a2340f">It is recommended that the Icon Images be encoding using VR OB encoding. The use of OW, allowed by the STD-XABC-CD Basic Cardiac profile defined in <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>, is deprecated, and may be retired in future editions of the Standard.</para>
               </listitem>
               <listitem>
                 <para xml:id="para_9f9fc11f-851d-4333-a026-322de1880461">This icon size is larger than that recommended in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> because the 64x64 icon would not be clinically useful for identifying and selecting X-Ray angiographic images.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_dc97ad89-dd33-4876-8df9-3ba22dfc93de">For multi-frame images, it is recommended that the icon image be derived from the frame identified in the Representative Frame Number attribute (0028,6010), if defined for the image SOP Instance. If the Representative Frame Number is not present, a frame approximately one-third of the way through the multi-frame image should be selected. The process to reduce any image to a 128x128 image is beyond the scope of this standard.</para>
+                <para xml:id="para_dc97ad89-dd33-4876-8df9-3ba22dfc93de">For multi-frame images, it is recommended that the icon image be derived from the frame identified in the Representative Frame Number attribute (0028,6010), if defined for the image SOP Instance. If the Representative Frame Number is not present, a frame approximately one-third of the way through the multi-frame image should be selected. The process to reduce any image to a 128x128 image is beyond the scope of this Standard.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -1974,7 +2121,7 @@
       <para xml:id="para_a86074b2-849b-4572-b132-40c0167bb255">This Annex defines Application Profiles for Ultrasound Media Storage applications. Each Application Profile has a unique identifier used for conformance claims. Due to the variety of clinical applications of storage media in Ultrasound, a family of application profiles are described in this section to best tailor an application choice to the specific needs of the user. The identifier used to describe each profile is broken down into three parts: a prefix, mid-section, and suffix. The prefix describes the overall Application Profile Class and is common for all ultrasound application profiles. The mid section describes the specific clinical application of the profile. The suffix is used to describe the actual media choice the profile will use.</para>
       <para xml:id="para_e3a6277f-b759-4bba-a5a4-448af0a493fd">The prefix for this class of application profiles is identified with the STD-US identifier.</para>
       <note>
-        <para xml:id="para_770c1606-0f5a-4825-87f3-dc52d51764eb">Conformance Statements may use the earlier prefix of APL that is equivalent to STD. This use is deprecated and may be retired in future versions of the standard.</para>
+        <para xml:id="para_770c1606-0f5a-4825-87f3-dc52d51764eb">Conformance Statements may use the earlier prefix of APL that is equivalent to STD. This use is deprecated and may be retired in future editions of the Standard.</para>
       </note>
       <para xml:id="para_f0ff4cfb-ab6d-4715-a245-47524449f008">The midsection is broken down into three subclasses that describe the clinical use of the data. These subclasses are: Image Display (ID identifier), Spatial Calibration (SC identifier), and Combined Calibration (CC identifier). All three subclasses can be applied to either single frames (SF) images or single and multi-frames (MF) images. The SC subclass enhances the ID class by adding the requirement for region specific spatial calibration data with each IOD. The CC subclass enhances the SC subclass by requiring region specific pixel component calibration.</para>
       <para xml:id="para_fbf0b607-0ecf-4b19-998f-27efab7d09e5">The suffix, xxxx, is used to describe the actual media choice used for the conformance claim. Any of the above mentioned classes can be stored onto one of eight pieces of media described in the <xref linkend="table_C.3-3" xrefstyle="select: label"/>.</para>
@@ -2405,7 +2552,7 @@
       </section>
       <section label="C.3.3" status="3" xml:id="sect_C.3.3">
         <title>DICOMDIR</title>
-        <para xml:id="para_00ca57f2-332e-4a2a-bb5b-650d6853a32e">The Directory shall include Directory Records of PATIENT, STUDY, SERIES, IMAGE corresponding to the information object files in the File Set. All DICOM files in the File Set incorporating SOP Instances (Information Objects) defined for the specific Application Profile shall be referenced by Directory Records. At the image level each file contains a single ultrasound image object or a single ultrasound multi-frame image object as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the standard.</para>
+        <para xml:id="para_00ca57f2-332e-4a2a-bb5b-650d6853a32e">The Directory shall include Directory Records of PATIENT, STUDY, SERIES, IMAGE corresponding to the information object files in the File Set. All DICOM files in the File Set incorporating SOP Instances (Information Objects) defined for the specific Application Profile shall be referenced by Directory Records. At the image level each file contains a single ultrasound image object or a single ultrasound multi-frame image object as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> of the Standard.</para>
         <note>
           <para xml:id="para_615a9860-b7a2-40c0-a628-e3788717d90b">For all media selected in this Application Profile Class, STD-US, the following applies as defined in <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/>.</para>
         </note>
@@ -4416,8 +4563,8 @@
                   <para xml:id="para_fe2f64ae-b2be-4ac9-beb0-8056f32d556d">1C</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_18450782-61fb-4365-8b33-6ea111c80ca5">Required if present in image object with one or more items, either in the top level data set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
-                  <para xml:id="para_eaf2e281-b4e6-4c4d-a08e-e4f5b1cdcb5c">This sequence shall be the entire contents of the sequence present in image object (all items and elements shall be copied in the same order and no addition or removal shall be done). When more then one sequence is present in the image object, the top level data set sequence shall be copied.</para>
+                  <para xml:id="para_18450782-61fb-4365-8b33-6ea111c80ca5">Required if present in image object with one or more items, either in the top level Data Set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
+                  <para xml:id="para_eaf2e281-b4e6-4c4d-a08e-e4f5b1cdcb5c">This sequence shall be the entire contents of the sequence present in image object (all items and elements shall be copied in the same order and no addition or removal shall be done). When more then one sequence is present in the image object, the top level Data Set sequence shall be copied.</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -4566,7 +4713,7 @@
                   <para xml:id="para_30fb2089-8f5c-4c85-a2db-07d1acaa3283">1C</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_a9a4bcd8-a831-43d2-b0f0-cf2e6a3bad51">Required if present in image or spectroscopy object, either in the top level data set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
+                  <para xml:id="para_a9a4bcd8-a831-43d2-b0f0-cf2e6a3bad51">Required if present in image or spectroscopy object, either in the top level Data Set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -4583,7 +4730,7 @@
                   <para xml:id="para_574b5242-fc1f-4da0-bf4d-1fa26311eb39">1C</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_adad8c07-7f26-4b64-b461-4bb200c932a1">Required if present in image or spectroscopy object, either in the top level data set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
+                  <para xml:id="para_adad8c07-7f26-4b64-b461-4bb200c932a1">Required if present in image or spectroscopy object, either in the top level Data Set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
                 </td>
               </tr>
               <tr valign="top">
@@ -4600,7 +4747,7 @@
                   <para xml:id="para_b4b82b0b-5848-47fc-9386-03794413ccd4">1C</para>
                 </td>
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_c6ff4085-ea86-4bff-b604-9382fa77c3dc">Required if present in image or spectroscopy object, either in the top level data set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
+                  <para xml:id="para_c6ff4085-ea86-4bff-b604-9382fa77c3dc">Required if present in image or spectroscopy object, either in the top level Data Set or nested within a functional group sequence of the Shared Functional Groups Sequence (5200,9229).</para>
                 </td>
               </tr>
             </tbody>

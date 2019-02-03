@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2018e - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2019a - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -165,206 +165,435 @@
   <chapter label="3" status="1" xml:id="chapter_3">
     <title>Definitions</title>
     <para xml:id="para_2bbf33ff-11aa-4f1a-8dd2-a265bad920dc">For the purposes of this Standard the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
+      <glossary>
+    <glossdiv label="3.1" status="2" xml:id="sect_3.1">
       <title>Reference Model Definitions</title>
-      <para xml:id="para_9be89e97-6f44-4804-b763-f2b97b313648">This Part of the Standard makes use of the following terms defined in ISO 7498-1:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_8fcda757-079f-423c-b8c4-17849b7e59b5">Application Entity</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_698a23c2-31e0-4740-8166-b831e4f3dc21">Service or Layer Service</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_e5efbef9-1b96-400a-b5a2-fec88fee1a95">Application Entity Title</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
+        <para xml:id="para_9be89e97-6f44-4804-b763-f2b97b313648">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO7498-1"/>:</para>
+      
+        <glossentry xml:id="glossentry_ApplicationEntity" xreflabel="Application Entity">
+            <glossterm>Application Entity</glossterm>
+          <glossdef>
+            <para xml:id="para_8fcda757-079f-423c-b8c4-17849b7e59b5">See <xref linkend="biblio_ISO7498-1"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_Service" xreflabel="Service">
+            <glossterm>Service</glossterm>
+          <glossdef>
+            <para xml:id="para_698a23c2-31e0-4740-8166-b831e4f3dc21">See <xref linkend="biblio_ISO7498-1"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_ApplicationEntityTitle" xreflabel="Application Entity Title">
+            <glossterm>Application Entity Title</glossterm>
+            <acronym>AET</acronym>
+          <glossdef>
+            <para xml:id="para_e5efbef9-1b96-400a-b5a2-fec88fee1a95">See <xref linkend="biblio_ISO7498-1"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.2" status="2" xml:id="sect_3.2">
       <title>Service Conventions Definitions</title>
-      <para xml:id="para_e777bcd1-a0a6-4ea1-b50b-50aafccd3011">This Part of the Standard makes use of the following terms defined in ISO/TR 8509:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_6c76c7a5-cb8f-4fdb-8456-7a60f4811d24">Primitive</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.3" status="2" xml:id="sect_3.3">
+              <para xml:id="para_e777bcd1-a0a6-4ea1-b50b-50aafccd3011">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8509"/>:</para>
+      
+        <glossentry xml:id="glossentry_Primitive" xreflabel="Primitive">
+            <glossterm>Primitive</glossterm>
+          <glossdef>
+            <para xml:id="para_6c76c7a5-cb8f-4fdb-8456-7a60f4811d24">See <xref linkend="biblio_ISO8509"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.3" status="2" xml:id="sect_3.3">
       <title>DICOM Introduction and Overview Definitions</title>
       <para xml:id="para_a83fb0dc-432e-4e10-8d90-5ded1ede39a5">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_3851534b-d6fa-4341-9634-5d285bdfb35c">Attribute</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_34341f6e-db8d-4f3e-b444-cf0cf173f217">Command</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_ec50a05a-a28a-46ac-9e4f-8121127fee4e">Data Dictionary</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_50e6d913-44e9-441f-80ce-9e1fbc389e47">Information Object</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_c03e929c-9b07-4920-bec4-c5a9d79c7f6b">Message</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.4" status="2" xml:id="sect_3.4">
+      
+        <glossentry xml:id="glossentry_Attribute" xreflabel="Attribute">
+            <glossterm>Attribute</glossterm>
+          <glossdef>
+            <para xml:id="para_3851534b-d6fa-4341-9634-5d285bdfb35c">
+<olink targetdoc="PS3.1" targetptr="glossentry_Attribute"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_Command" xreflabel="Command">
+            <glossterm>Command</glossterm>
+          <glossdef>
+            <para xml:id="para_34341f6e-db8d-4f3e-b444-cf0cf173f217">
+<olink targetdoc="PS3.1" targetptr="glossentry_Command"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DataDictionary" xreflabel="Data Dictionary">
+            <glossterm>Data Dictionary</glossterm>
+          <glossdef>
+            <para xml:id="para_ec50a05a-a28a-46ac-9e4f-8121127fee4e">
+<olink targetdoc="PS3.1" targetptr="glossentry_DataDictionary"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_InformationObject" xreflabel="Information Object">
+            <glossterm>Information Object</glossterm>
+          <glossdef>
+            <para xml:id="para_50e6d913-44e9-441f-80ce-9e1fbc389e47">
+<olink targetdoc="PS3.1" targetptr="glossentry_InformationObject"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_Message" xreflabel="Message">
+            <glossterm>Message</glossterm>
+          <glossdef>
+            <para xml:id="para_c03e929c-9b07-4920-bec4-c5a9d79c7f6b">
+<olink targetdoc="PS3.1" targetptr="glossentry_Message"/>.</para>
+          </glossdef>
+        </glossentry>
+          <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+            <glossterm>Service-Object Pair Class</glossterm>
+              <acronym>SOP Class</acronym>
+          <glossdef>
+              <para xml:id="para_cb75b9d9-c7af-487d-a217-e799bc0c4a76">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.4" status="2" xml:id="sect_3.4">
       <title>DICOM Upper Layer Service Definitions</title>
       <para xml:id="para_b9d609f4-bbd6-4ee1-93cf-591ce14c8de4">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_a32ff3d5-04bf-4853-90b8-6570a9d23aeb">Unique Identifier (UID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_7ff49fed-5bca-4001-bd4a-5be9b26a87ca">DICOM Upper Layer Service</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.5" status="2" xml:id="sect_3.5">
+      
+        <glossentry xml:id="glossentry_DICOMUpperLayerService" xreflabel="DICOM Upper Layer Service">
+            <glossterm>DICOM Upper Layer Service</glossterm>
+          <glossdef>
+            <para xml:id="para_7ff49fed-5bca-4001-bd4a-5be9b26a87ca">
+<olink targetdoc="PS3.8" targetptr="glossentry_DICOMUpperLayerService"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.5" status="2" xml:id="sect_3.5">
       <title>DICOM Message Exchange Definitions</title>
       <para xml:id="para_08c52003-8042-49bd-9a43-21e413bef950">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_df0bb2ee-0344-4dd4-b792-28f108fd22c3">DICOM Message Service Element (DIMSE)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_da35ea97-6a41-49ea-a9d7-56faad11e2f4">DIMSE-N Services</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_7e632ad9-3e8a-4ac9-86d4-d0db21b126cb">DIMSE-C Services</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_2cc7865d-b496-446d-9a78-4ec16e95b7c8">DIMSE Service Group (DSG)</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.6" status="2" xml:id="sect_3.6">
+      
+        <glossentry xml:id="glossentry_DICOMMessageServiceElement" xreflabel="DICOM Message Service Element (DIMSE)">
+            <glossterm>DICOM Message Service Element</glossterm>
+            <acronym>DIMSE</acronym>
+          <glossdef>
+              <para xml:id="para_df0bb2ee-0344-4dd4-b792-28f108fd22c3">
+<olink targetdoc="PS3.7" targetptr="glossentry_DICOMMessageServiceElement"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DIMSENServices" xreflabel="DIMSE-N Services">
+            <glossterm>DIMSE-N Services</glossterm>
+          <glossdef>
+              <para xml:id="para_da35ea97-6a41-49ea-a9d7-56faad11e2f4">
+<olink targetdoc="PS3.7" targetptr="glossentry_DIMSENServices"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DIMSECServices" xreflabel="DIMSE-C Services">
+            <glossterm>DIMSE-C Services</glossterm>
+          <glossdef>
+              <para xml:id="para_7e632ad9-3e8a-4ac9-86d4-d0db21b126cb">
+<olink targetdoc="PS3.7" targetptr="glossentry_DIMSECServices"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DIMSEServiceGroup" xreflabel="DIMSE Service Group (DSG)">
+            <glossterm>DIMSE Service Group</glossterm>
+            <acronym>DSG</acronym>
+          <glossdef>
+              <para xml:id="para_2cc7865d-b496-446d-9a78-4ec16e95b7c8">
+<olink targetdoc="PS3.7" targetptr="glossentry_DIMSEServiceGroup"/>.</para>
+          </glossdef>
+        </glossentry>
+    </glossdiv>
+          <glossdiv label="3.6" status="2" xml:id="sect_3.6">
       <title>DICOM Information Object Definitions</title>
       <para xml:id="para_da8230e3-0b98-4b2b-a73e-2a86979061d0">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_5c763331-3b88-4cf6-9547-31c422172fa9">Attribute Tag</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_3ba84d04-9c67-4867-b6e2-861ab56e9381">Composite IOD</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_f2bcf78e-a870-4cb4-ad9d-883bd26693e3">DICOM Application Model</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_a498a8b8-7ab9-40fe-b3f8-2f2f5333fbce">DICOM Information Model</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_7cd03bbd-ad01-4ee8-910f-d9eef462746a">Information Object Definition</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_3317d074-c682-4b09-b382-bee09e07a893">Module</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_811ee437-d90b-4001-b5a3-94399b7feb20">Normalized IOD</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_42fae264-ee0b-4db5-b1e7-090ed84ae621">Functional Group</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.7" status="2" xml:id="sect_3.7">
+      
+        <glossentry xml:id="glossentry_AttributeTag" xreflabel="Attribute Tag">
+            <glossterm>Attribute Tag</glossterm>
+          <glossdef>
+            <para xml:id="para_5c763331-3b88-4cf6-9547-31c422172fa9">
+<olink targetdoc="PS3.3" targetptr="glossentry_AttributeTag"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_CompositeIOD" xreflabel="Composite IOD">
+            <glossterm>Composite IOD</glossterm>
+          <glossdef>
+            <para xml:id="para_3ba84d04-9c67-4867-b6e2-861ab56e9381">
+<olink targetdoc="PS3.3" targetptr="glossentry_CompositeIOD"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DICOMApplicationModel" xreflabel="DICOM Application Model">
+            <glossterm>DICOM Application Model</glossterm>
+          <glossdef>
+            <para xml:id="para_f2bcf78e-a870-4cb4-ad9d-883bd26693e3">
+<olink targetdoc="PS3.3" targetptr="glossentry_DICOMApplicationModel"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DICOMInformationModel" xreflabel="DICOM Information Model">
+            <glossterm>DICOM Information Model</glossterm>
+          <glossdef>
+            <para xml:id="para_a498a8b8-7ab9-40fe-b3f8-2f2f5333fbce">
+<olink targetdoc="PS3.3" targetptr="glossentry_DICOMInformationModel"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_InformationObjectDefinition" xreflabel="Information Object Definition">
+            <glossterm>Information Object Definition</glossterm>
+            <acronym>IOD</acronym>
+          <glossdef>
+            <para xml:id="para_7cd03bbd-ad01-4ee8-910f-d9eef462746a">
+<olink targetdoc="PS3.3" targetptr="glossentry_InformationObjectDefinition"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_Module" xreflabel="Module">
+            <glossterm>Module</glossterm>
+          <glossdef>
+            <para xml:id="para_3317d074-c682-4b09-b382-bee09e07a893">
+<olink targetdoc="PS3.3" targetptr="glossentry_Module"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_NormalizedIOD" xreflabel="Normalized IOD">
+            <glossterm>Normalized IOD</glossterm>
+          <glossdef>
+            <para xml:id="para_811ee437-d90b-4001-b5a3-94399b7feb20">
+<olink targetdoc="PS3.3" targetptr="glossentry_NormalizedIOD"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_FunctionalGroup" xreflabel="Functional Group">
+            <glossterm>Functional Group</glossterm>
+          <glossdef>
+            <para xml:id="para_42fae264-ee0b-4db5-b1e7-090ed84ae621">
+<olink targetdoc="PS3.3" targetptr="glossentry_FunctionalGroup"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.7" status="2" xml:id="sect_3.7">
       <title>DICOM Conformance</title>
       <para xml:id="para_f5f67039-ef14-47a2-b9df-14d04eac82c4">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_6cf8f777-6889-482a-ae3c-f0f353c96fdd">Standard SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_863fef8c-c7a2-41c7-8372-2e69b2f6bceb">Specialized SOP Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_9252c815-6730-4b03-8263-ee703c27ef75">Conformance Statement</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.8" status="2" xml:id="sect_3.8">
+      
+          <glossentry xml:id="glossentry_ConformanceStatement" xreflabel="Conformance Statement">
+            <glossterm>Conformance Statement</glossterm>
+          <glossdef>
+            <para xml:id="para_9252c815-6730-4b03-8263-ee703c27ef75">
+<olink targetdoc="PS3.2" targetptr="glossentry_ConformanceStatement"/>.</para>
+          </glossdef>
+        </glossentry>
+          <glossentry xml:id="glossentry_StandardSOPClass" xreflabel="Standard SOP Class">
+            <glossterm>Standard SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_6cf8f777-6889-482a-ae3c-f0f353c96fdd">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardSOPClass"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_SpecializedSOPClass" xreflabel="Specialized SOP Class">
+            <glossterm>Specialized SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_863fef8c-c7a2-41c7-8372-2e69b2f6bceb">
+<olink targetdoc="PS3.2" targetptr="glossentry_SpecializedSOPClass"/>.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_StandardExtendedSOPClass" xreflabel="Standard Extended SOP Class">
+            <glossterm>Standard Extended SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_8587e193-9e82-4d38-adb7-cd71cab4f0b6">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardExtendedSOPClass"/>.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_PrivateSOPClass" xreflabel="Private SOP Class">
+            <glossterm>Private SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_8ffbc7b9-e692-4f8d-a90b-c05a50848e11">
+<olink targetdoc="PS3.2" targetptr="glossentry_PrivateSOPClass"/>.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_StandardAttribute" xreflabel="Standard Attribute">
+            <glossterm>Standard Attribute</glossterm>
+          <glossdef>
+            <para xml:id="para_ca889b52-5a31-40b7-893b-b9286e905174">
+<olink targetdoc="PS3.2" targetptr="glossentry_StandardAttribute"/>.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_PrivateAttribute" xreflabel="Private Attribute">
+                  <glossterm>Private Attribute</glossterm>
+                  <glossdef>
+                      <para xml:id="para_318292f1-cd5f-4dd2-8634-6e7688687e65">
+<olink targetdoc="PS3.2" targetptr="glossentry_PrivateAttribute"/>.</para>
+                  </glossdef>
+              </glossentry>
+    </glossdiv>
+          <glossdiv label="3.8" status="2" xml:id="sect_3.8">
       <title>DICOM Data Structures and Encoding</title>
       <para xml:id="para_f57a36a4-2647-414b-a02a-76bf2998e227">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_fac8cd02-1a43-4916-bffa-8631a1d67dae">Data Element</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_48206718-0371-4e3e-bb3f-4f4e5429c2ef">Data Set</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.9" status="2" xml:id="sect_3.9">
+        <glossentry xml:id="glossentry_DataElement" xreflabel="Data Element">
+            <glossterm>Data Element</glossterm>
+          <glossdef>
+            <para xml:id="para_fac8cd02-1a43-4916-bffa-8631a1d67dae">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElement"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+            <glossterm>Data Set</glossterm>
+          <glossdef>
+            <para xml:id="para_48206718-0371-4e3e-bb3f-4f4e5429c2ef">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+          </glossdef>
+        </glossentry>
+          <glossentry xml:id="glossentry_UniqueIdentifier" xreflabel="Unique Identifier (UID)">
+              <glossterm>Unique Identifier</glossterm>
+              <acronym>UID</acronym>
+              <glossdef>
+                  <para xml:id="para_a32ff3d5-04bf-4853-90b8-6570a9d23aeb">
+<olink targetdoc="PS3.8" targetptr="glossentry_UniqueIdentifier"/>.</para>
+              </glossdef>
+          </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.9" status="2" xml:id="sect_3.9">
       <title>DICOM Service Class Definitions</title>
       <para xml:id="para_070f226e-bf09-445d-8ad9-82dfb12d66d9">The following definitions are commonly used in this Part of the DICOM Standard:</para>
-      <para xml:id="para_343bfe39-750b-4f21-968e-1d857c2fd53d">
-        <emphasis role="bold">Classic Image Storage SOP Class</emphasis>: an Image Storage SOP Class that is defined by an IOD that stores a single frame and defines the majority of the Attributes in the top-level Data Set.</para>
-      <para xml:id="para_47431d1b-5145-42be-8893-0f3cdf48edbb">
-        <emphasis role="bold">Combined Print Image</emphasis>: a pixel matrix created by superimposing an image and an overlay, the size of which is defined by the smallest rectangle enclosing the superimposed image and overlay.</para>
-      <para xml:id="para_ec6b2b53-c8e2-43d4-b9ce-fe429aac8d95">
-        <emphasis role="bold">DICOM Information Model</emphasis>: an Entity-Relationship diagram that is used to model the relationships between the Information Object Definitions representing classes of Real-World Objects defined by the DICOM Application Model.</para>
-      <para xml:id="para_6fb8f017-5297-40c8-8cae-19d2669f9008">
-        <emphasis role="bold">DICOM Application Model</emphasis>: an Entity-Relationship diagram used to model the relationships between Real-World Objects that are within the area of interest of the DICOM Standard.</para>
-      <para xml:id="para_f0c2a17f-8d65-49b7-b102-f42bce4fdda8">
-        <emphasis role="bold">Enhanced Image Storage SOP Class</emphasis>: an Image Storage SOP Class that is defined by an IOD that stores multiple frames and defines the majority of the Attributes in Functional Group Sequences.</para>
-      <para xml:id="para_8e5d90fa-aec4-41e7-ba1f-e657edcd7df3">
-        <emphasis role="bold">Legacy Converted Enhanced Image Storage SOP Class</emphasis>: a modality-specific Enhanced Image Storage SOP Class that is defined by an IOD that defines only generic Functional Group Sequences, which does not require information that is not present in Classic Image Storage SOP Class Instances, and is intended for storage of converted Classic Image Storage SOP Class Instances when there is insufficient information to use a True Enhanced Image Storage SOP Class.</para>
-      <para xml:id="para_0b9defdc-9a5e-443e-b9cf-7544e9a836e1">
-        <emphasis role="bold">Meta Service-Object Pair (SOP) Class</emphasis>: a pre-defined set of SOP Classes that may be associated under a single SOP for the purpose of negotiating the use of the set with a single item.</para>
-      <para xml:id="para_d21f506e-0d18-4c18-90bc-c5576665cbdd">
-        <emphasis role="bold">Performed Procedure Step SOP Class</emphasis>: any SOP Class that encodes the details about the performance of a procedure step. </para>
-      <para xml:id="para_a612b743-3d0b-4b38-89df-6650cf932b26">
-        <emphasis role="bold">Performed Procedure Step SOP Instance</emphasis>: an instance of a Performed Procedure Step SOP Class. Note that all UPS instances are instances of the UPS Push SOP Class, which is capable of encoding details about the performance of a procedure step (in addition to details about the scheduled procedure step) and thus qualify as an instance of a Performed Procedure Step SOP Class.</para>
-      <para xml:id="para_ea5b0740-e5cd-444d-a5de-c2c032020922">
-        <emphasis role="bold">Preformatted Grayscale Image</emphasis>: an image where all annotation, graphics, and grayscale transformations (up to and including the VOI LUT) expected in the printed image have been burnt in or applied before being sent to the SCP. It is a displayable image where the polarity of the intended display is specified by Photometric Interpretation (0028,0004).</para>
-      <para xml:id="para_02724985-ee25-467d-8139-628ce8af3458">
-        <emphasis role="bold">Preformatted Color Image</emphasis>: an image where all annotation, graphics, and color transformations expected in the printed image have been burnt in or applied before being sent to the SCP.</para>
-      <para xml:id="para_67d034fc-a4fa-4b29-bb06-fd8d9332a265">
-        <emphasis role="bold">Real-World Activity</emphasis>: that which exists in the real world that pertains to specific area of information processing within the area of interest of the DICOM Standard. Such a Real-World Activity may be represented by one or more computer information metaphors called SOP Classes.</para>
-      <para xml:id="para_b5ca9fff-69f1-43cf-853d-e220d6bd59f1">
-        <emphasis role="bold">Real-World Object</emphasis>: that which exists in the real world upon which operations may be performed that are within the area of interest of the DICOM Standard. Such a Real-World Object may be represented through a computer information metaphor called a SOP Instance.</para>
-      <para xml:id="para_c89bbe80-fb00-4b74-a8cb-4cf9758fcc4f">
-        <emphasis role="bold">Related General SOP Class</emphasis>: a SOP Class that is related to another SOP Class as being more generalized in terms of behavior defined in the standard, and that may be used to identically encode an instance with the same Attributes and values, other than the SOP Class UID. In particular, this may be the SOP Class from which a Specialized SOP Class (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>) is derived.</para>
-      <para xml:id="para_3e639512-1751-4728-a06b-e67db017784b">
-        <emphasis role="bold">Service Class User</emphasis>: the role played by a DICOM Application Entity (DIMSE-Service-User) that invokes operations and performs notifications on a specific Association.</para>
-      <para xml:id="para_1c368955-f59a-4827-9292-4bdd07d72029">
-        <emphasis role="bold">Service Class Provider</emphasis>: the role played by a DICOM Application Entity (DIMSE-Service-User) that performs operations and invokes notifications on a specific Association.</para>
-      <para xml:id="para_7670372d-a69e-4207-b853-dfb1dbd3d3c2">
-        <emphasis role="bold">Service Class</emphasis>: a collection of SOP Classes and/or Meta SOP Classes that are related in that they are described together to accomplish a single application.</para>
-      <para xml:id="para_cb75b9d9-c7af-487d-a217-e799bc0c4a76">
-        <emphasis role="bold">Service-Object Pair (SOP) Class</emphasis>: the union of a specific set of DIMSE Services and one related Information Object Definition (as specified by a Service Class Definition) that completely defines a precise context for communication of operations on such an object or notifications about its state.</para>
-      <para xml:id="para_a5031f74-f80e-4dcd-b9fe-3859a8ead823">
-        <emphasis role="bold">Service-Object Pair (SOP) Instance</emphasis>: a concrete occurrence of an Information Object that is managed by a DICOM Application Entity and may be operated upon in a communication context defined by a specific set of DIMSE Services (on a network or interchange media). A SOP Instance is persistent beyond the context of its communication.</para>
-      <para xml:id="para_11dc9d9f-48fb-427b-adc1-de59866a92e6">
-        <emphasis role="bold">True Enhanced Image Storage SOP Class</emphasis>: a modality-specific Enhanced Image Storage SOP Class that is defined by an IOD that defines modality-specific Functional Group Sequences, Attributes and sets of values, and is intended for creation by acquisition devices.</para>
-    </section>
-    <section label="3.10" status="2" xml:id="sect_3.10">
+      <glossentry xml:id="glossentry_ClassicImageStorageSOPClass" xreflabel="Classic Image Storage SOP Class">
+            <glossterm>Classic Image Storage SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_343bfe39-750b-4f21-968e-1d857c2fd53d">An Image Storage SOP Class that is defined by an IOD that stores a single frame and defines the majority of the Attributes in the top-level Data Set.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_CombinedPrintImage" xreflabel="Combined Print Image">
+            <glossterm>Combined Print Image</glossterm>
+          <glossdef>
+            <para xml:id="para_47431d1b-5145-42be-8893-0f3cdf48edbb">A pixel matrix created by superimposing an image and an overlay, the size of which is defined by the smallest rectangle enclosing the superimposed image and overlay.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_EnhancedImageStorageSOPClass" xreflabel="Enhanced Image Storage SOP Class">
+            <glossterm>Enhanced Image Storage SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_f0c2a17f-8d65-49b7-b102-f42bce4fdda8">An Image Storage SOP Class that is defined by an IOD that stores multiple frames and defines the majority of the Attributes in Functional Group Sequences.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_LegacyConvertedEnhancedImageStorageSOPClass" xreflabel="Legacy Converted Enhanced Image Storage SOP Class">
+            <glossterm>Legacy Converted Enhanced Image Storage SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_8e5d90fa-aec4-41e7-ba1f-e657edcd7df3">A modality-specific Enhanced Image Storage SOP Class that is defined by an IOD that defines only generic Functional Group Sequences, which does not require information that is not present in Classic Image Storage SOP Class Instances, and is intended for storage of converted Classic Image Storage SOP Class Instances when there is insufficient information to use a True Enhanced Image Storage SOP Class.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_MetaServiceObjectPairClass" xreflabel="Meta Service-Object Pair Class (Meta SOP Class)">
+            <glossterm>Meta Service-Object Pair Class</glossterm>
+          <acronym>Meta SOP Class</acronym>
+          <glossdef>
+            <para xml:id="para_0b9defdc-9a5e-443e-b9cf-7544e9a836e1">A pre-defined set of SOP Classes that may be associated under a single SOP for the purpose of negotiating the use of the set with a single item.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_PerformedProcedureStepSOPClass" xreflabel="Performed Procedure Step SOP Class">
+            <glossterm>Performed Procedure Step SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_d21f506e-0d18-4c18-90bc-c5576665cbdd">Any SOP Class that encodes the details about the performance of a procedure step. </para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_PerformedProcedureStepSOPInstance" xreflabel="Performed Procedure Step SOP Instance">
+            <glossterm>Performed Procedure Step SOP Instance</glossterm>
+          <glossdef>
+            <para xml:id="para_a612b743-3d0b-4b38-89df-6650cf932b26">An instance of a Performed Procedure Step SOP Class. Note that all UPS instances are instances of the UPS Push SOP Class, which is capable of encoding details about the performance of a procedure step (in addition to details about the scheduled procedure step) and thus qualify as an instance of a Performed Procedure Step SOP Class.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_PreformattedGrayscaleImage" xreflabel="Preformatted Grayscale Image">
+            <glossterm>Preformatted Grayscale Image</glossterm>
+          <glossdef>
+            <para xml:id="para_ea5b0740-e5cd-444d-a5de-c2c032020922">An image where all annotation, graphics, and grayscale transformations (up to and including the VOI LUT) expected in the printed image have been burnt in or applied before being sent to the SCP. It is a displayable image where the polarity of the intended display is specified by Photometric Interpretation (0028,0004).</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_PreformattedColorImage" xreflabel="Preformatted Color Image">
+            <glossterm>Preformatted Color Image</glossterm>
+          <glossdef>
+            <para xml:id="para_02724985-ee25-467d-8139-628ce8af3458">An image where all annotation, graphics, and color transformations expected in the printed image have been burnt in or applied before being sent to the SCP.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_RealWorldActivity" xreflabel="Real-World Activity">
+            <glossterm>Real-World Activity</glossterm>
+          <glossdef>
+            <para xml:id="para_67d034fc-a4fa-4b29-bb06-fd8d9332a265">That which exists in the real world that pertains to specific area of information processing within the area of interest of the DICOM Standard. Such a Real-World Activity may be represented by one or more computer information metaphors called SOP Classes.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_RealWorldObject" xreflabel="Real-World Object">
+            <glossterm>Real-World Object</glossterm>
+          <glossdef>
+            <para xml:id="para_b5ca9fff-69f1-43cf-853d-e220d6bd59f1">That which exists in the real world upon which operations may be performed that are within the area of interest of the DICOM Standard. Such a Real-World Object may be represented through a computer information metaphor called a SOP Instance.</para>
+          </glossdef>
+        </glossentry>
+       <glossentry xml:id="glossentry_RelatedGeneralSOPClass" xreflabel="Related General SOP Class">
+           <glossterm>Related General SOP Class</glossterm>
+           <glossdef>
+               <para xml:id="para_c89bbe80-fb00-4b74-a8cb-4cf9758fcc4f">A SOP Class that is related to another SOP Class as being more generalized in terms of behavior defined in the Standard, and that may be used to identically encode an instance with the same Attributes and values, other than the SOP Class UID. In particular, this may be the SOP Class from which a Specialized SOP Class (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>) is derived.</para>
+           </glossdef>
+       </glossentry>
+              <glossentry xml:id="glossentry_ServiceClassUser" xreflabel="Service Class User (SCU)">
+            <glossterm>Service Class User</glossterm>
+                  <acronym>SCU</acronym>
+          <glossdef>
+            <para xml:id="para_3e639512-1751-4728-a06b-e67db017784b">The role played by a DICOM Application Entity (DIMSE-Service-User) that invokes operations and performs notifications on a specific Association.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_ServiceClassProvider" xreflabel="Service Class Provider (SCP)">
+            <glossterm>Service Class Provider</glossterm>
+          <acronym>SCP</acronym>
+          <glossdef>
+            <para xml:id="para_1c368955-f59a-4827-9292-4bdd07d72029">The role played by a DICOM Application Entity (DIMSE-Service-User) that performs operations and invokes notifications on a specific Association.</para>
+          </glossdef>
+        </glossentry>
+      <glossentry xml:id="glossentry_ServiceClass" xreflabel="Service Class">
+            <glossterm>Service Class</glossterm>
+          <glossdef>
+            <para xml:id="para_7670372d-a69e-4207-b853-dfb1dbd3d3c2">A collection of SOP Classes and/or Meta SOP Classes that are related in that they are described together to accomplish a single application.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service-Object Pair Instance (SOP Instance)">
+                  <glossterm>Service-Object Pair Instance</glossterm>
+                  <acronym>SOP Instance</acronym>
+                  <glossdef>
+                      <para xml:id="para_a5031f74-f80e-4dcd-b9fe-3859a8ead823">A concrete occurrence of an Information Object that is managed by a DICOM Application Entity and may be operated upon in a communication context defined by a specific set of DIMSE Services (on a network or interchange media). A SOP Instance is persistent beyond the context of its communication.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_TrueEnhancedImageStorageSOPClass" xreflabel="True Enhanced Image Storage SOP Class">
+            <glossterm>True Enhanced Image Storage SOP Class</glossterm>
+          <glossdef>
+            <para xml:id="para_11dc9d9f-48fb-427b-adc1-de59866a92e6">A modality-specific Enhanced Image Storage SOP Class that is defined by an IOD that defines modality-specific Functional Group Sequences, Attributes and sets of values, and is intended for creation by acquisition devices.</para>
+          </glossdef>
+        </glossentry>
+    </glossdiv>
+          <glossdiv label="3.10" status="2" xml:id="sect_3.10">
       <title>Device Independent Pixel Values</title>
       <para xml:id="para_be3df635-9c9e-42ed-8b1e-ce1235efd419">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_b9c1afd0-2068-4a8b-a9db-9885a25d4847">P-Value</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_8845d0b9-9821-4742-ba57-ec0b4c75e2c7">PCS-Value</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.11" status="2" xml:id="sect_3.11">
+      
+        <glossentry xml:id="glossentry_PValue" xreflabel="P-Value">
+            <glossterm>P-Value</glossterm>
+          <glossdef>
+            <para xml:id="para_b9c1afd0-2068-4a8b-a9db-9885a25d4847">
+<olink targetdoc="PS3.3" targetptr="glossentry_PValue"/>.</para>
+          </glossdef>
+        </glossentry>
+              <glossentry xml:id="glossentry_ProfileConnectionSpaceValue" xreflabel="Profile Connection Space Value (PCS-Value)">
+                  <glossterm>Profile Connection Space Value</glossterm>
+                  <acronym>PCS-Value</acronym>
+          <glossdef>
+              <para xml:id="para_8845d0b9-9821-4742-ba57-ec0b4c75e2c7">
+<olink targetdoc="PS3.3" targetptr="glossentry_ProfileConnectionSpaceValue"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+          <glossdiv label="3.11" status="2" xml:id="sect_3.11">
       <title>HTTP Definitions</title>
-      <para xml:id="para_0fd847e2-f4cb-4b76-a981-5bb3681a4b62">This Part of the Standard makes use of the following terms defined in IETF RFC7230:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_3c7d1995-2e1d-47fa-a8bc-65c0bfff45d9">Origin-Server</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_75173ca5-8e5d-4c55-9c5c-1d9a1aa8fecf">User-Agent</para>
-        </listitem>
-      </orderedlist>
-    </section>
+              <para xml:id="para_0fd847e2-f4cb-4b76-a981-5bb3681a4b62">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_RFC_7230"/>:</para>
+      
+        <glossentry xml:id="glossentry_OriginServer" xreflabel="Origin-Server">
+            <glossterm>Origin-Server</glossterm>
+          <glossdef>
+            <para xml:id="para_3c7d1995-2e1d-47fa-a8bc-65c0bfff45d9">See <xref linkend="biblio_RFC_7230"/>.</para>
+          </glossdef>
+        </glossentry>
+        <glossentry xml:id="glossentry_UserAgent" xreflabel="User-Agent">
+            <glossterm>User-Agent</glossterm>
+          <glossdef>
+            <para xml:id="para_75173ca5-8e5d-4c55-9c5c-1d9a1aa8fecf">See <xref linkend="biblio_RFC_7230"/>.</para>
+          </glossdef>
+        </glossentry>
+      
+    </glossdiv>
+      </glossary>
   </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
@@ -879,7 +1108,7 @@
                 <note>
                     <para xml:id="para_3e425e31-2abd-469f-9f20-ccedd8e0d16d">In some Service Classes, the SOP Class definition may override the general provision in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> that allows the SOP Instance UID to be specified or omitted in the N-CREATE request primitive, and require that the SCU be responsible for specifying the SOP Instance UID.</para>
                 </note>
-                <para xml:id="para_e16d4e83-441e-4e71-82c0-4b3b2c759bd2">For N-SET, N-GET, N-ACTION and N-DELETE operations, the SOP Instance is conveyed in Requested SOP Instance UID (0000,1001). The SOP Instance UID (0008,0018) Attribute shall not be present in the data set.</para>
+                <para xml:id="para_e16d4e83-441e-4e71-82c0-4b3b2c759bd2">For N-SET, N-GET, N-ACTION and N-DELETE operations, the SOP Instance is conveyed in Requested SOP Instance UID (0000,1001). The SOP Instance UID (0008,0018) Attribute shall not be present in the Data Set.</para>
             </section>
             </section>
         </section>
@@ -932,7 +1161,9 @@
     </section>
     <section label="6.3" status="2" xml:id="sect_6.3">
       <title>On-Line Communication and Media Storage Services</title>
-      <para xml:id="para_6b46a9ae-127d-46e9-961b-6871f52289b5">For on-line communication the DIMSE Services allow a DICOM Application Entity to invoke an operation or notification across a network or a point-to-point interface. DIMSE Services are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_6b46a9ae-127d-46e9-961b-6871f52289b5">For on-line communication the DIMSE Services and Web Services allow a DICOM Application Entity to invoke an operation or notification across a network or a point-to-point interface.
+            DIMSE Services are defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>
+            and Web Services are defined in<olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>.</para>
       <para xml:id="para_3bfb2eb5-2dd7-449f-9ed4-de1bbbbd5642">For media storage interchange, Media Storage Services allow a DICOM Application Entity to invoke media storage related operations.</para>
       <para xml:id="para_7953c5a5-b7cd-44a4-9b72-2d9a9c7a3497">Media Storage Services are discussed in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
       <section label="6.3.1" status="3" xml:id="sect_6.3.1">
@@ -951,12 +1182,15 @@
     </section>
     <section label="6.5" status="2" xml:id="sect_6.5">
       <title>Service-Object Pair (SOP) Class</title>
-      <para xml:id="para_7e41d1a2-f104-46ed-94a7-2dd000b2222f">A Service-Object Pair (SOP) Class is defined by the union of an IOD and a DIMSE Service Group. The SOP Class definition contains the rules and semantics that may restrict the use of the services in the DIMSE Service Group or the Attributes of the IOD.</para>
-      <para xml:id="para_4027fa1a-af1e-4655-805a-8c5ac9d4a485">The selection of SOP Classes is used by Application Entities to establish an agreed set of capabilities to support their interaction. This negotiation is performed at Association establishment time as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. An extended negotiation allows Application Entities to further agree on specific options within a SOP Class.</para>
+        <para xml:id="para_7e41d1a2-f104-46ed-94a7-2dd000b2222f">The SOP Class definitions in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> contain the rules and semantics that may restrict the use of the services in the DIMSE Service Group or the Attributes of the IOD.
+            <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> contain the rules and semantics that may restrict the attributes of the IOD or the use of the services in the Media Storage Services and the Web Services respectively.</para>
+        <para xml:id="para_4027fa1a-af1e-4655-805a-8c5ac9d4a485">The selection of SOP Classes is used by Application Entities to establish an agreed set of capabilities to support their interaction for SOP Classes based on DIMSE Services.
+          This negotiation is performed at Association establishment time as described in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. An extended negotiation allows Application Entities to further agree on specific options within a SOP Class.</para>
       <note>
           <orderedlist>
               <listitem>
-                  <para xml:id="para_3c1ea27b-1b70-4952-9776-0e277145fafd">The SOP Class as defined in the DICOM Information Model is equivalent in ISO/OSI terminology to the Managed Object Class. Readers familiar with object oriented terminology will recognize the SOP Class operations (and notifications) as comprising the methods of an object class.</para>
+                  <para xml:id="para_3c1ea27b-1b70-4952-9776-0e277145fafd">The SOP Class as defined in the DICOM Information Model is equivalent in ISO/OSI terminology to the Managed Object Class.
+                      Readers familiar with object-oriented terminology will recognize the SOP Class operations (and notifications) as comprising the methods of an object class.</para>
               </listitem>
               <listitem>
                   <para xml:id="para_7becf42d-fd73-4273-9130-6398831f2c6f">SOP Class Specifications play a central role in defining DICOM conformance. They allow DICOM Application Entities to select a well-defined application level subset of this Standard to which they may claim conformance. See <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
@@ -965,7 +1199,10 @@
        </note>
         <section label="6.5.1" status="3" xml:id="sect_6.5.1">
         <title>Normalized and Composite SOP Classes</title>
-        <para xml:id="para_836bd197-80a7-4548-bf86-136a5227ed3c">DICOM defines two types of SOP Classes, Normalized and Composite. Normalized SOP Classes are defined as the union of a Normalized IOD and a set of DIMSE-N Services. Composite SOP Classes are defined as the union of a Composite IOD and a set of DIMSE-C Services.</para>
+        <para xml:id="para_836bd197-80a7-4548-bf86-136a5227ed3c">DICOM defines two types of SOP Classes, Normalized and Composite.
+            For DIMSE Services, Normalized SOP Classes are defined as the union of a Normalized IOD and a set of DIMSE-N Services,
+            while Composite SOP Classes are defined as the union of a Composite IOD and a set of DIMSE-C Services.
+            Media Storage Services only support Composite IODs and Web Services support both Normalized and Composite SOP Classes.</para>
       </section>
     </section>
     <section label="6.6" status="2" xml:id="sect_6.6">
@@ -1856,7 +2093,7 @@
                 <para xml:id="para_1d76572a-da00-4d9c-a47c-c8bf607f21bc">The SCP may support storage of all SOP Classes of the Storage Service Class, preserving all Attributes as a Level 2 SCP.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_05ba3e4a-6920-4a66-8853-dd6177d6c66d">This Extended Negotiation allows an SCP to determine that a private SOP Class (per <olink targetdoc="PS3.2" targetptr="sect_3.11.5" xrefstyle="select: docname label quotedtitle"/>) in a proposed Presentation Context follows the semantics of the Storage Service Class, and may be handled accordingly.</para>
+                  <para xml:id="para_05ba3e4a-6920-4a66-8853-dd6177d6c66d">This Extended Negotiation allows an SCP to determine that a Private SOP Class in a proposed Presentation Context follows the semantics of the Storage Service Class, and may be handled accordingly.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -1870,7 +2107,7 @@
                 <para xml:id="para_d5c61a52-682f-4469-bad6-7ed151962489">The SCP may handle instances of such specialized SOP Classes using the semantics of the Related General SOP Class, but preserving all additional (potentially Type 1 or 2) Attributes as a Level 2 SCP.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_5b3f556e-5dfa-4426-a623-e5f42508a4b3">An SCP that has access to the current content of <xref linkend="table_B.5-1" xrefstyle="select: label"/> might use that to determine acceptance of proposed Presentation Context SOP Classes. This allows an SCP, even without Extended Negotiation, to be able to identify all standard SOP Classes of the Storage Service Class. Access to <xref linkend="table_B.5-1" xrefstyle="select: label"/> may be through private means, or to the publication of PS3 on the web site of the DICOM Standards Committee. This provides an automated alternative to manually editing a table of supported Storage SOP Classes.</para>
+                <para xml:id="para_5b3f556e-5dfa-4426-a623-e5f42508a4b3">An SCP that has access to the current content of <xref linkend="table_B.5-1" xrefstyle="select: label"/> might use that to determine acceptance of proposed Presentation Context SOP Classes. This allows an SCP, even without Extended Negotiation, to be able to identify all Standard SOP Classes of the Storage Service Class. Access to <xref linkend="table_B.5-1" xrefstyle="select: label"/> may be through private means, or to the publication of PS3 on the web site of the DICOM Standards Committee. This provides an automated alternative to manually editing a table of supported Storage SOP Classes.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -2061,15 +2298,15 @@
       <section label="B.4.4" status="3" xml:id="sect_B.4.4">
         <title>Specialized Conformance</title>
         <para xml:id="para_c9ed7ca3-1d1f-42dc-ba42-cb407d2a2690">Implementations may provide Specialized SOP Class conformance by providing a proper superset of the SOP Instances to be stored. Implementations providing Specialized SOP Class Conformance to one of the SOP Classes defined in this Annex shall be conformant as described in the following sections and shall include within their Conformance Statement information as described in the following sections.</para>
-        <para xml:id="para_3a44b6a0-4d15-407a-95de-23de34577b90">An implementation shall be permitted to conform as a Specialization of the standard SOP Class as an SCU, SCP or both. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_3a44b6a0-4d15-407a-95de-23de34577b90">An implementation shall be permitted to conform as a Specialization of the Standard SOP Class as an SCU, SCP or both. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
         <section label="B.4.4.1" status="4" xml:id="sect_B.4.4.1">
           <title>Specialized SOP Class Identification</title>
-          <para xml:id="para_1190a2ad-94a4-4833-bef4-12a1c22fa66d">Any implementation that specializes the standard SOP Class shall define its specialization as an Allomorphic subclass of the standard SOP Class. As such, the specialization shall have its own unique SOP Class identification.</para>
+          <para xml:id="para_1190a2ad-94a4-4833-bef4-12a1c22fa66d">Any implementation that specializes the Standard SOP Class shall define its specialization as an Allomorphic subclass of the Standard SOP Class. As such, the specialization shall have its own unique SOP Class identification.</para>
           <para xml:id="para_19c0b9bc-0ce1-43a7-9264-0fc95e21302b">The Conformance Statement shall include a SOP Class Identification Statement as defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>, declaring a SOP Name and SOP Class UID that identify the Specialized SOP Class. The SOP Name is not guaranteed to be unique (unless the implementer chooses to copyright it) but is provided for informal identification of the SOP Class. The SOP Class UID shall uniquely identify the Specialized SOP Class and conform to the DICOM UID requirements as specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
         </section>
         <section label="B.4.4.2" status="4" xml:id="sect_B.4.4.2">
           <title>Specialized Information Object Definition</title>
-          <para xml:id="para_575486e4-9488-474a-8193-0775f7dc6eac">The standard SOP Class may be specialized by supporting additional private Attributes. The SCU Operations Statement shall describe these specializations and be formatted as defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>. Following this statement shall be the list of Attributes that may be sent or stored with SOP Instances.</para>
+          <para xml:id="para_575486e4-9488-474a-8193-0775f7dc6eac">The Standard SOP Class may be specialized by supporting additional private Attributes. The SCU Operations Statement shall describe these specializations and be formatted as defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>. Following this statement shall be the list of Attributes that may be sent or stored with SOP Instances.</para>
         </section>
       </section>
     </section>
@@ -4154,7 +4391,7 @@
     </section>
     <section label="B.6" status="2" xml:id="sect_B.6">
       <title>Retired Standard SOP Classes</title>
-      <para xml:id="para_2503d5df-9191-40d8-995e-cd6077bb3535">The SOP Classes in <xref linkend="table_B.6-1" xrefstyle="select: label"/> were defined in previous versions of the DICOM Standard. They are now retired and have been replaced by new standard SOP Classes shown in <xref linkend="table_B.5-1" xrefstyle="select: label"/>.</para>
+      <para xml:id="para_2503d5df-9191-40d8-995e-cd6077bb3535">The SOP Classes in <xref linkend="table_B.6-1" xrefstyle="select: label"/> were defined in previous versions of the DICOM Standard. They are now retired and have been replaced by new Standard SOP Classes shown in <xref linkend="table_B.5-1" xrefstyle="select: label"/>.</para>
       <note>
         <para xml:id="para_ce7d3267-faad-4c5a-a1a3-c70b1d97ea76">Usage of the retired SOP Classes is permitted by DICOM. However, new implementations are strongly encouraged to implement the newer SOP Classes.</para>
       </note>
@@ -4331,7 +4568,7 @@
             <para xml:id="para_79253646-44ba-4cd2-9507-0e43bfe0d4cb">A C-MOVE service conveys the following semantics:</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_d1aed172-69c3-47ea-ac5b-35a994fe4155">The SCU supplies Unique Key values to identify an entity at the level of the retrieval. The SCP of the C-MOVE initiates C-STORE sub-operations for the corresponding storage SOP Instances identified by Unique Key values. These C-STORE sub-operations occur on a different Association than the C-MOVE service. The SCP role of the Query/Retrieve SOP Class and the SCU role of the Storage SOP Class may be performed by different applications that may or may not reside on the same system. Initiation mechanism of C-STORE sub-operations is outside of the scope of DICOM standard.</para>
+                <para xml:id="para_d1aed172-69c3-47ea-ac5b-35a994fe4155">The SCU supplies Unique Key values to identify an entity at the level of the retrieval. The SCP of the C-MOVE initiates C-STORE sub-operations for the corresponding storage SOP Instances identified by Unique Key values. These C-STORE sub-operations occur on a different Association than the C-MOVE service. The SCP role of the Query/Retrieve SOP Class and the SCU role of the Storage SOP Class may be performed by different applications that may or may not reside on the same system. Initiation mechanism of C-STORE sub-operations is outside of the scope of DICOM Standard.</para>
                 <note>
                   <para xml:id="para_b85eeacf-2b83-42b5-b033-49430991b102">This does not imply that they use the same AE Title. See <xref linkend="sect_C.6.1.2.2.2" xrefstyle="select: label"/> and <xref linkend="sect_C.6.2.2.2.2" xrefstyle="select: label"/> for the requirements to the C-MOVE SCP conformance.</para>
                 </note>
@@ -4373,7 +4610,7 @@
       <note>
         <para xml:id="para_85a09e49-be1b-4395-9b30-14c360f375cd">This SOP Class identifies the class of the Query/Retrieve Information Model (i.e., not the SOP Class of the stored SOP Instances for which the SCP has information).</para>
       </note>
-      <para xml:id="para_1c4a64bc-01f9-4fe4-be77-49be8032a859">Information Model Definitions for standard SOP Classes of the Query/Retrieve Service Class are defined in this Annex. A Query/Retrieve Information Model Definition contains:</para>
+      <para xml:id="para_1c4a64bc-01f9-4fe4-be77-49be8032a859">Information Model Definitions for Standard SOP Classes of the Query/Retrieve Service Class are defined in this Annex. A Query/Retrieve Information Model Definition contains:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_f7dff48d-b25e-487c-a1be-89544161a2d0">Entity-Relationship Model Definition</para>
@@ -5024,7 +5261,7 @@
             </note>
           </listitem>
           <listitem>
-            <para xml:id="para_970fbe27-facb-42b7-9853-40e124e56cf2">All optional Attributes, Modules and Functional Group Macros for which corresponding information is present in the source images in standard Attributes shall also be populated.</para>
+            <para xml:id="para_970fbe27-facb-42b7-9853-40e124e56cf2">All optional Attributes, Modules and Functional Group Macros for which corresponding information is present in the source images in Standard Attributes shall also be populated.</para>
           </listitem>
           <listitem>
             <para xml:id="para_e7c5cee6-106c-4d75-83fe-a277c1ee7659">All Attributes of the Overlay Module shall be removed and converted into a Grayscale or Color Softcopy Presentation State (depending on the value of Photometric Interpretation); if the Overlay uses high bits in the Pixel Data (7FE0,0010) these shall be extracted and encoded in Overlay Data (60xx,3000) in the Presentation State and shall be set to zero in the Pixel Data (7FE0,0010) Attribute in the converted image.</para>
@@ -6628,7 +6865,7 @@
           </itemizedlist>
           <para xml:id="para_166e70b5-c171-496b-85c1-200e026b24c7">The Association-acceptor shall return a single byte field (single sub-field) if offered a single byte field (single sub-field) by the Association-requester. The Association-acceptor may return either a single byte field (single sub-field) or a multiple byte field if offered a multiple byte field by the Association-requester. A one byte response to a multiple byte request means that the missing sub-fields shall be treated as 0 values.</para>
           <note>
-            <para xml:id="para_0aec2d3b-235a-445e-8644-c781ad1f63af">The restriction to return only a single byte field if that was all that was offered is because the original DICOM standard only contained one byte and older systems may not be expecting more.</para>
+            <para xml:id="para_0aec2d3b-235a-445e-8644-c781ad1f63af">The restriction to return only a single byte field if that was all that was offered is because the original DICOM Standard only contained one byte and older systems may not be expecting more.</para>
           </note>
           <para xml:id="para_b225caba-d505-417e-a5e2-a5c6dfc52bee">The Association-acceptor, for each sub-field of the SOP Class Extended Negotiation Sub-Item offered, either accepts the Association-requester proposal by returning the same value (1) or turns down the proposal by returning the value (0).</para>
           <para xml:id="para_6e09af65-0227-4cc2-b210-fe2ded3bb77f">If the SOP Class Extended Negotiation Sub-Item is not returned by the Association-acceptor then relational-queries are not supported over the Association (default condition).</para>
@@ -6865,7 +7102,7 @@
           </itemizedlist>
           <para xml:id="para_79046468-0200-48bf-ab70-1e0302a15969">The Association-acceptor shall return a single byte field (single sub-field) if offered a single byte field (single sub-field) by the Association-requester. The Association-acceptor may return either a single byte field (single sub-field) or a multiple byte field if offered a multiple byte field by the Association-requester. A one byte response to a multiple byte request means that the missing sub-fields shall be treated as 0 values.</para>
           <note>
-            <para xml:id="para_766398fe-612f-4050-aa74-fe8bd7bfdf86">The restriction to return only a single byte field if that was all that was offered is because the original DICOM standard only contained one byte and older systems may not be expecting more.</para>
+            <para xml:id="para_766398fe-612f-4050-aa74-fe8bd7bfdf86">The restriction to return only a single byte field if that was all that was offered is because the original DICOM Standard only contained one byte and older systems may not be expecting more.</para>
           </note>
           <para xml:id="para_1bf205cb-0e7f-43db-b98d-90783ca77bb5">The Association-acceptor, for each SOP Class Extended Negotiation Sub-Item offered, either accepts the Association-requester proposal by returning the same value (1) or turns down the proposal by returning the value (0).</para>
           <para xml:id="para_8314e3c6-41d8-4fdd-b117-1773fe0c70fc">If the SOP Class Extended Negotiation Sub-Item is not returned by the Association-acceptor then relational-retrievals and Enhanced Multi-Frame Image Conversion are not supported (default condition).</para>
@@ -7127,7 +7364,7 @@
           </tbody>
         </table>
         <note>
-          <para xml:id="para_996bcc4a-3ec6-451b-9846-6b73e1d8fe8f">The use of the word "Images" rather than "Composite Object Instances" is historical to allow backward compatibility with previous versions of the standard. It should not be taken to mean that Composite Object Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
+          <para xml:id="para_996bcc4a-3ec6-451b-9846-6b73e1d8fe8f">The use of the word "Images" rather than "Composite Object Instances" is historical to allow backward compatibility with previous editions of the standard. It should not be taken to mean that Composite Object Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
         </note>
         <section label="C.6.1.1" status="4" xml:id="sect_C.6.1.1">
           <title>Patient Root Query/Retrieve Information Model</title>
@@ -7153,7 +7390,7 @@
             <note>
               <orderedlist numeration="arabic">
                 <listitem>
-                  <para xml:id="para_5bfa1d1e-cc8c-4173-ae6f-cb4339c74d83">A description of the Attributes of this Information Model is contained in <xref linkend="sect_C.3" xrefstyle="select: label"/> of this part.</para>
+                  <para xml:id="para_5bfa1d1e-cc8c-4173-ae6f-cb4339c74d83">A description of the Attributes of this Information Model is contained in <xref linkend="sect_C.3" xrefstyle="select: label"/> of this Part.</para>
                 </listitem>
                 <listitem>
                   <para xml:id="para_b97ecfe2-e273-4a43-a0ba-84068d07de17">Although the Patient ID may not be globally unique, the Study Instance UID is globally unique ensuring that no two studies may be misidentified. The scope of uniqueness of the Patient ID may be specified using the Issuer of Patient ID (0010,0021).</para>
@@ -8329,7 +8566,7 @@
           </tbody>
         </table>
         <note>
-          <para xml:id="para_db1c5b89-d4be-468b-b706-7aac082cec00">The use of the word "Images" rather than "Composite Object Instances" is historical to allow backward compatibility with previous versions of the standard. It should not be taken to mean that Composite Object Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
+          <para xml:id="para_db1c5b89-d4be-468b-b706-7aac082cec00">The use of the word "Images" rather than "Composite Object Instances" is historical to allow backward compatibility with previous editions of the Standard. It should not be taken to mean that Composite Object Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
         </note>
         <section label="C.6.2.1" status="4" xml:id="sect_C.6.2.1">
           <title>Study Root Query/Retrieve Information Model</title>
@@ -12996,7 +13233,7 @@
             </listitem>
           </itemizedlist>
           <para xml:id="para_69229951-4136-4e39-a4d9-7fa697b822da">The output of the Film Session Management process is the Print Job, which contains all the information to print the film session.</para>
-          <para xml:id="para_8e79a8b0-35f2-4df3-9fb2-d727b8779451">The Print process prints a set of films, based on the information in the Print Job. The Print process is implementation specific and its management is beyond the scope of the DICOM standard.</para>
+          <para xml:id="para_8e79a8b0-35f2-4df3-9fb2-d727b8779451">The Print process prints a set of films, based on the information in the Print Job. The Print process is implementation specific and its management is beyond the scope of the DICOM Standard.</para>
         </section>
         <section label="H.2.1.2" status="4" xml:id="sect_H.2.1.2">
           <title>Grayscale Transformations</title>
@@ -17569,7 +17806,9 @@
       </section>
       <section label="I.1.2" status="3" xml:id="sect_I.1.2">
         <title>Service Definition</title>
-        <para xml:id="para_4326fe1e-060f-45ec-8d42-f38027aef892">DICOM AEs implement a SOP Class of the Media Storage Service Class by supporting one or more roles among the three roles FSC, FSR or FSU. SOP Classes of the Media Storage Service Class are implemented using the Media Storage Operations (M-WRITE, M-READ, M-DELETE, M-INQUIRE FILE-SET and M-INQUIRE FILE). The services provided by these Operations are defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
+          <para xml:id="para_4326fe1e-060f-45ec-8d42-f38027aef892">DICOM AEs support a SOP Class of the Media Storage Service Class by performing one or more roles among the three roles FSC, FSR or FSU.
+              SOP Classes of the Media Storage Service Class use the Media Storage Services (M-WRITE, M-READ, M-DELETE, M-INQUIRE FILE-SET and M-INQUIRE FILE).
+              These Services are defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
       </section>
     </section>
     <section label="I.2" status="2" xml:id="sect_I.2">
@@ -17731,19 +17970,20 @@
       </section>
     </section>
     <section label="I.4" status="2" xml:id="sect_I.4">
-      <title>Media Storage Standard SOP Classes</title>
-      <para xml:id="para_2aec48d3-e23c-44e0-a56a-d20b80cab76c">The SOP Classes in the Media Storage Service Class identify the Composite IODs to be stored. The following Standard SOP Classes are defined:</para>
+      <title>Media Storage SOP Classes</title>
+      <para xml:id="para_2aec48d3-e23c-44e0-a56a-d20b80cab76c">The SOP Classes in the Media Storage Service Class identify the Composite IODs to be stored.
+          The IODs of the following SOP Classes can be stored:</para>
       <itemizedlist>
         <listitem>
-          <para xml:id="para_9f4c3910-d8d5-4336-b6cb-5b664fd3e182">all SOP Classes specified for the DIMSE C-STORE based Storage Service Class identified in <xref linkend="table_B.5-1" xrefstyle="select: label"/>
+            <para xml:id="para_9f4c3910-d8d5-4336-b6cb-5b664fd3e182">all IODs of the SOP Classes specified for the DIMSE C-STORE based Storage Service Class identified in <xref linkend="table_B.5-1" xrefstyle="select: label"/>
           </para>
         </listitem>
         <listitem>
-          <para xml:id="para_7dcc32de-e896-4c7d-9372-fc78a6cfbdb8">all SOP Classes specified for the DIMSE C-STORE based Non-Patient Object Storage Service Class identified in <xref linkend="table_GG.3-1" xrefstyle="select: label"/>
+            <para xml:id="para_7dcc32de-e896-4c7d-9372-fc78a6cfbdb8">all IODs of the SOP Classes specified for the DIMSE C-STORE based Non-Patient Object Storage Service Class identified in <xref linkend="table_GG.3-1" xrefstyle="select: label"/>
           </para>
         </listitem>
         <listitem>
-          <para xml:id="para_2e89db0a-9072-4e2b-9140-142483166f5f">the media directory SOP Class identified in <xref linkend="table_I.4-1" xrefstyle="select: label"/>
+            <para xml:id="para_2e89db0a-9072-4e2b-9140-142483166f5f">the IOD of the media directory SOP Class identified in <xref linkend="table_I.4-1" xrefstyle="select: label"/>
           </para>
         </listitem>
       </itemizedlist>
@@ -17787,7 +18027,11 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_fb9fcfcc-ce69-4a4d-9060-596e76ed9c8e">Except for the Media Storage Directory SOP Class, all the SOP Classes in the Media Storage Service Class are assigned the same UID Value as the corresponding network communication SOP Classes. This was done to simplify UID assignment. Although these SOP Classes are based on different Operations, the context of their usage should unambiguously distinguish a SOP Class used for Media Storage from a network communication SOP Class.</para>
+            <para xml:id="para_fb9fcfcc-ce69-4a4d-9060-596e76ed9c8e">Except for the Media Storage Directory SOP Class,
+                all the SOP Classes in the Media Storage Service Class are assigned the same UID Value as the corresponding network communication SOP Classes.
+                This was done to simplify UID assignment.
+                Although these SOP Classes are based on different Services,
+                the context of their usage should unambiguously distinguish a SOP Class used for Media Storage from a network communication SOP Class.</para>
           </listitem>
           <listitem>
             <para xml:id="para_f9568b1c-9c15-4932-8519-237d662c0bcf">The storage of Normalized Print SOP Instances on media was previously defined in DICOM. They have been retired. See PS 3.4-1998.</para>
@@ -18722,7 +18966,7 @@
     <section label="K.2" status="2" xml:id="sect_K.2">
       <title>Worklist Information Model Definition</title>
       <para xml:id="para_1c2db0b6-d98a-45e6-9d6f-8b3fb4019836">The Worklist Information Model is identified by the SOP Class negotiated at Association establishment time. The SOP Class is composed of both an Information Model and a DIMSE-C Service Group.</para>
-      <para xml:id="para_26a27c02-b3d1-422d-ad3e-1dab0da548b4">Information Model Definitions for standard SOP Classes of the Worklist Service Class are defined in this Annex. A Worklist Information Model Definition contains:</para>
+      <para xml:id="para_26a27c02-b3d1-422d-ad3e-1dab0da548b4">Information Model Definitions for Standard SOP Classes of the Worklist Service Class are defined in this Annex. A Worklist Information Model Definition contains:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_243d94c8-3c21-4d8f-9a79-61039514dc22">an Entity-Relationship Model Definition</para>
@@ -20396,6 +20640,23 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_70db86ab-5735-41f8-b19a-1f3c42cd9c4a">Barcode Value</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_1d18a8ec-9ba8-4a86-b29c-b88acbc8d9bb">(2200,0005)</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_ee9d903b-27d4-4a51-ad9e-b4c37c17cab2">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_b5c3bc17-a6e3-45cc-8a08-1c0a8a4fd4df">3</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_b654e21a-d366-49bd-9d71-4fbb51926c3c">This may be the same as Container Identifier (0040,0512).</para>
+                      </td>
+                  </tr>
                 <tr valign="top">
                   <td align="left" colspan="5" rowspan="1">
                     <para xml:id="para_fec09262-4457-4c8a-b654-29ac003bf3e0">
@@ -21495,7 +21756,7 @@
             <note>
               <orderedlist numeration="arabic">
                 <listitem>
-                  <para xml:id="para_a9909580-6946-46fa-80ed-3d7315bdb304">Just like Series and Image Entities specified in the Query/Retrieve Service Class either an SCU or an SCP may support optional Matching Key Attributes and/or Type 3 Return Key Attributes that are not included in the Worklist Information Model (i.e., standard or private Attributes). This is considered a Standard Extended SOP Class (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>).</para>
+                  <para xml:id="para_a9909580-6946-46fa-80ed-3d7315bdb304">Just like Series and Image Entities specified in the Query/Retrieve Service Class either an SCU or an SCP may support optional Matching Key Attributes and/or Type 3 Return Key Attributes that are not included in the Worklist Information Model (i.e., Standard or Private Attributes). This is considered a Standard Extended SOP Class (see <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>).</para>
                 </listitem>
                 <listitem>
                   <para xml:id="para_5ff01d96-a3b4-4a52-aaee-aa4c5ce77020">Each Module contains a Comment Attribute. This may be used to transmit non-structured information, which may be displayed to the operator of the Modality.</para>
@@ -21773,11 +22034,11 @@
         <para xml:id="para_be2ea18c-21aa-4eb2-bb34-03f219dbbc52">The blending presentation states specify two sets of images, an underlying set, and a superimposed set, and the manner in which their pixel values are blended. The underlying set is rendered as grayscale and the superimposed set is rendered as color. The blending is not defined in a pair wise image-by-image or frame-by-frame manner, but rather the manner in which the two sets are combined is left to the discretion of the implementation. Specifically, matters of spatial registration, and any re-sampling and the mechanism of interpolation are not specified.</para>
         <para xml:id="para_57815107-9246-473a-9eb5-0b23eaaca11d">The Softcopy Presentation State Storage SOP Classes may be used to store a single state per image, or a common state to be shared by multiple selected images. All images to which the Grayscale, Color and Pseudo-Color Presentation States apply must be a part of the same study that the stored state is a part of, and be of a single Composite Image Storage SOP Class.</para>
         <para xml:id="para_ad0e56f7-a33e-4540-8b20-cba5a92390b6">The two sets of images to which the Blended Presentation State applies may be in separate Studies, Each set shall be within a single study. Each set shall be of a single Composite Image Storage SOP Class.</para>
-        <para xml:id="para_23f20fce-c111-4aea-a87a-df12aed871f0">How an SCU of this SOP Class records or generates this state is beyond the scope of the standard.</para>
+        <para xml:id="para_23f20fce-c111-4aea-a87a-df12aed871f0">How an SCU of this SOP Class records or generates this state is beyond the scope of the Standard.</para>
         <note>
           <para xml:id="para_9383ba91-91df-4b23-a4f0-31a8e3809070">For example, an acquisition device may acquire, reconstruct and store to a workstation or archive images that are later examined by an operator for the purpose of quality assurance or printing. At that time a selected grayscale transformation (such as a window level/width operation) may be applied by the operator, and that activity captured and saved as a Grayscale Softcopy Presentation State Storage SOP Instance to the same workstation or archive, from which it is subsequently available for use by another user. Another workstation may retrieve the state for later use. Alternatively, an automated algorithm may derive a state from analysis of image statistics, body part examined, or other characteristics.</para>
         </note>
-        <para xml:id="para_53eda918-69c5-43ad-b5e2-fbb0d5672149">How an SCP of this SOP Class chooses between multiple states that may apply to an image is beyond the scope of this standard, other than to state that a claim of conformance as an SCP of this SOP Class implies that the SCP shall make the presentation state available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the standard.</para>
+        <para xml:id="para_53eda918-69c5-43ad-b5e2-fbb0d5672149">How an SCP of this SOP Class chooses between multiple states that may apply to an image is beyond the scope of this Standard, other than to state that a claim of conformance as an SCP of this SOP Class implies that the SCP shall make the presentation state available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the Standard.</para>
         <note>
           <orderedlist numeration="arabic">
             <listitem>
@@ -21934,7 +22195,7 @@
           <title>Profile Connection Space Transformation</title>
           <para xml:id="para_c444e20c-0fa8-469d-aef2-c949f760fb64">The Profile Connection Space Transformation operation applies only to color images, including true color (e.g., RGB) and pseudo-color (e.g., PALETTE COLOR) images, grayscale images for which a Palette Color LUT has been specified in the Presentation State, and the RGB output values of a blending operation.</para>
           <para xml:id="para_24673d4d-1fef-44f6-9f2c-ad545744307a">The ICC Profile is an Input Profile. That is, it describes the color characteristics of a (possibly hypothetical) device that was used to generate the input color values.</para>
-          <para xml:id="para_ef2aed98-b0c8-428e-8faa-db28ca600030">The intent is that a rendering device will use this information to achieve color consistency. Typically this will be performed by calibration of the output device to create an ICC Display or Output Profile, the conversion of pixel values using the ICC Input Profile into Profile Connection Space, followed by conversion using the ICC Display or Output Profile into values suitable for rendering on the output device. However, the exact mechanisms used are beyond the scope of the standard to define.</para>
+          <para xml:id="para_ef2aed98-b0c8-428e-8faa-db28ca600030">The intent is that a rendering device will use this information to achieve color consistency. Typically this will be performed by calibration of the output device to create an ICC Display or Output Profile, the conversion of pixel values using the ICC Input Profile into Profile Connection Space, followed by conversion using the ICC Display or Output Profile into values suitable for rendering on the output device. However, the exact mechanisms used are beyond the scope of the Standard to define.</para>
           <note>
             <orderedlist>
               <listitem>
@@ -21996,7 +22257,7 @@
         <para xml:id="para_a2a491f7-8d0f-4ba3-8411-4ff4b4ee9be2">The common spatial and annotation transformations apply to any device-independent values, whether they be grayscale P-Values or color PCS-Values, for any type of presentation state.</para>
         <para xml:id="para_fd872029-4d9e-4ac3-a2c4-e84edc176288">The values with which to render annotations are encoded as device-independent values, either as grayscale P-Values or as color PCS-Values. In the case of PCS-Values, CIELab values are encoded, and defined by reference to a D50 illuminant.</para>
         <para xml:id="para_da65549d-4cb8-4a20-a58c-ac3ffb10eef3">Grayscale presentation states may specify annotations in color for rendering on a color output device.</para>
-        <para xml:id="para_4a689366-478b-422a-adba-13c468331f41">The mechanism for mapping grayscale P-Values and color PCS-values to the same display is implementation-dependent and not defined by the standard.</para>
+        <para xml:id="para_4a689366-478b-422a-adba-13c468331f41">The mechanism for mapping grayscale P-Values and color PCS-values to the same display is implementation-dependent and not defined by the Standard.</para>
         <section label="N.2.3.1" status="4" xml:id="sect_N.2.3.1">
           <title>Shutter</title>
           <para xml:id="para_d6a92389-933b-4bc7-abec-6f8a37d4eba2">The Shutter transformation provides the ability to exclude the perimeter outside a region of an image. A gray level may be specified to replace the area under the shutter.</para>
@@ -22960,7 +23221,7 @@
       <note>
         <orderedlist numeration="arabic">
           <listitem>
-            <para xml:id="para_314dfbaf-bc6f-42d7-94c8-2009166678d4">The SCP of this Service Class is not necessarily the Medication Administration Record system, but may be a gateway system between this DICOM Service and an HL7 or proprietary interface of a MAR system. Such implementation design is beyond the scope of the DICOM standard.</para>
+            <para xml:id="para_314dfbaf-bc6f-42d7-94c8-2009166678d4">The SCP of this Service Class is not necessarily the Medication Administration Record system, but may be a gateway system between this DICOM Service and an HL7 or proprietary interface of a MAR system. Such implementation design is beyond the scope of the DICOM Standard.</para>
           </listitem>
           <listitem>
             <para xml:id="para_3d284e81-2ebc-474f-9cf5-48a7ccd2a100">This SOP Class is not limited to only specifying medications, although the conventional name of the destination log is the Medication Administration Record. The SOP Class may also be used to record the implantation of therapeutic devices, including both drug-eluting and bare stents, prosthetic and cardiovascular devices, implantable infusion pumps, etc.</para>
@@ -24297,7 +24558,7 @@
             <title>Relevant Patient Information Attribute Descriptions</title>
             <para xml:id="para_6d9c121b-f1e3-4d90-936b-6b8d5d591d26">Concept Name Code Sequence (0040,A043) in a C-FIND Response shall have one sequence item that identifies the Root node concept of the returned structure. This shall be the same as the Concept Name of the first row of the template identified in the Content Template Sequence (0040,A504) in the Identifier. The Concept Name Code Sequence (0040,A043) shall always be sent zero length in the Request Identifier.</para>
             <para xml:id="para_86cf35ac-9ed8-43e5-be88-25fd1ca36451">The Value Type (0040,A040) applies to the Concept Name Code Sequence (0040,A043), and shall be the same as the Value Type (0040,A040) of the first row of the template identified in the Content Template Sequence (0040,A504) in the Identifier.</para>
-            <para xml:id="para_e12ddf5d-01c3-4499-92b5-5f4983e6116d">The Content Sequence (0040,A730) is a potentially recursively nested Sequence of Items, as described in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, SR Document Content Module. The Content Sequence shall always be sent zero length in the Request Identifier. The Content Sequence in the data set of the Response shall contain the content items of the requested template.</para>
+            <para xml:id="para_e12ddf5d-01c3-4499-92b5-5f4983e6116d">The Content Sequence (0040,A730) is a potentially recursively nested Sequence of Items, as described in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, SR Document Content Module. The Content Sequence shall always be sent zero length in the Request Identifier. The Content Sequence in the Data Set of the Response shall contain the content items of the requested template.</para>
           </section>
         </section>
         <section label="Q.4.3.2" status="4" xml:id="sect_Q.4.3.2">
@@ -25252,9 +25513,9 @@
               <para xml:id="para_3a1a0771-c46a-4791-8447-ba7e7b3953c6">The SCP may or may not have the capability to include on the created media an application for displaying DICOM instances. If it does, then the following SCP behavior shall apply and the specified Attributes are required to be supported by the SCP.</para>
               <para xml:id="para_e2e2973d-253d-4226-b48e-11ae81bdda29">The Include Display Application (2200,0009) shall be used to request the SCP to add an application for displaying DICOM instances onto the created media.</para>
               <para xml:id="para_4d1fde69-f5a8-4b7c-a646-354662ebf364">An SCP is not required to be able to add such an application. Inability to add a display application is not an error.</para>
-              <para xml:id="para_aaa9cb61-4918-45a6-b506-63147958c493">Whether the display application is capable of displaying all stored instances is beyond the scope of the standard.</para>
-              <para xml:id="para_c180d9b6-4321-481a-a410-26f4668f8732">Whether the display application automatically executes when media is inserted for reading is beyond the scope of the standard.</para>
-              <para xml:id="para_891d7352-9183-409c-ad90-64ad99ca0bc8">Which platforms are supported by the display application(s) is beyond the scope of the standard.</para>
+              <para xml:id="para_aaa9cb61-4918-45a6-b506-63147958c493">Whether the display application is capable of displaying all stored instances is beyond the scope of the Standard.</para>
+              <para xml:id="para_c180d9b6-4321-481a-a410-26f4668f8732">Whether the display application automatically executes when media is inserted for reading is beyond the scope of the Standard.</para>
+              <para xml:id="para_891d7352-9183-409c-ad90-64ad99ca0bc8">Which platforms are supported by the display application(s) is beyond the scope of the Standard.</para>
               <note>
                 <para xml:id="para_e323d2e1-5ea9-4369-a53e-3da08efe61fc">Multiple files may need to be included in the media to support the display application, rather than a single executable file, and these may be present, even if the Include Non-DICOM Objects (2200,0008) Attribute has a value of NO.</para>
               </note>
@@ -26768,7 +27029,7 @@
         <note>
           <orderedlist numeration="arabic">
             <listitem>
-              <para xml:id="para_708e4b46-bec0-4026-ae26-23b8c2b19184">The SCP of this Service Class is not necessarily a clinical decision support (CDS) system, but may be a gateway system between this DICOM Service and an HL7 or proprietary interface of a CDS system. Such implementation design is beyond the scope of the DICOM standard.</para>
+              <para xml:id="para_708e4b46-bec0-4026-ae26-23b8c2b19184">The SCP of this Service Class is not necessarily a clinical decision support (CDS) system, but may be a gateway system between this DICOM Service and an HL7 or proprietary interface of a CDS system. Such implementation design is beyond the scope of the DICOM Standard.</para>
             </listitem>
             <listitem>
               <para xml:id="para_990d50fe-f9b7-408a-aed7-c904b2826489">The Service will result in a Query response containing zero or one items. However, to facilitate implementation, the Service uses the general query mechanism supporting multiple item responses, as used in other DICOM query service classes.</para>
@@ -26822,7 +27083,7 @@
     <section label="V.2" status="2" xml:id="sect_V.2">
       <title>Substance Administration Query Information Model Definition</title>
       <para xml:id="para_e0ee1e57-a8bb-4cff-b601-7700ebec2b86">The Substance Administration Query Information Model is identified by the SOP Class negotiated at Association establishment time. The SOP Class is composed of both an Information Model and a DIMSE-C Service Group.</para>
-      <para xml:id="para_0eb2e5ac-3688-499f-9635-ab40a70a2d4a">Information Model Definitions for standard SOP Classes of the Substance Administration Query Service Class are defined in this Annex. A Substance Administration Query Information Model Definition contains:</para>
+      <para xml:id="para_0eb2e5ac-3688-499f-9635-ab40a70a2d4a">Information Model Definitions for Standard SOP Classes of the Substance Administration Query Service Class are defined in this Annex. A Substance Administration Query Information Model Definition contains:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_56f78a71-ba1f-47a7-b73b-5c109029ac66">an Entity-Relationship Model Definition</para>
@@ -28546,7 +28807,7 @@
             <para xml:id="para_84a7ca76-5795-4381-81c1-a1748f5f8ed2">A C-MOVE service conveys the following semantics:</para>
             <itemizedlist>
               <listitem>
-                <para xml:id="para_377ce154-7144-4bb5-bb99-7191d55a9195">The SCU supplies Unique and Frame Range Key values to identify the requested SOP Instance(s). The SCP creates new SOP instances if necessary and then initiates C-STORE sub-operations for the corresponding storage SOP Instances. These C-STORE sub-operations occur on a different Association than the C-MOVE service. The SCP role of the Retrieve SOP Class and the SCU role of the Storage SOP Class may be performed by different applications that may or may not reside on the same system. Initiation mechanism of C-STORE sub-operations is outside of the scope of DICOM standard.</para>
+                <para xml:id="para_377ce154-7144-4bb5-bb99-7191d55a9195">The SCU supplies Unique and Frame Range Key values to identify the requested SOP Instance(s). The SCP creates new SOP instances if necessary and then initiates C-STORE sub-operations for the corresponding storage SOP Instances. These C-STORE sub-operations occur on a different Association than the C-MOVE service. The SCP role of the Retrieve SOP Class and the SCU role of the Storage SOP Class may be performed by different applications that may or may not reside on the same system. Initiation mechanism of C-STORE sub-operations is outside of the scope of DICOM Standard.</para>
               </listitem>
               <listitem>
                 <para xml:id="para_b6572671-b0e7-4c16-973f-a4725484ec3d">The SCP may optionally generate responses to the C-MOVE with status equal to Pending during the processing of the C-STORE sub-operations. These C-MOVE responses indicate the number of Remaining C-STORE sub-operations and the number of C-STORE sub-operations returning the status of Success, Warning, and Failed.</para>
@@ -28585,7 +28846,7 @@
       <note>
         <para xml:id="para_a286255e-73f7-43fa-98fd-0664b2725469">This SOP Class identifies the class of the Composite Instance Root Retrieve Information Model (i.e., not the SOP Class of the stored SOP Instances for which the SCP has information).</para>
       </note>
-      <para xml:id="para_1dc8deae-c218-4154-a2e7-2a09aeb70690">Information Model Definitions for standard SOP Classes of the Composite Instance Root Retrieve Service are defined in this Annex. A Composite Instance Root Retrieve Information Model Definition contains:</para>
+      <para xml:id="para_1dc8deae-c218-4154-a2e7-2a09aeb70690">Information Model Definitions for Standard SOP Classes of the Composite Instance Root Retrieve Service are defined in this Annex. A Composite Instance Root Retrieve Information Model Definition contains:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_697d2bab-e04a-4678-a771-7eb79f8bbfb9">Entity-Relationship Model Definition</para>
@@ -29700,7 +29961,7 @@
           </tbody>
         </table>
         <note>
-          <para xml:id="para_b4e93462-20a5-4373-bb56-553c91b3ab4b">The use of the word "IMAGE" rather than "Composite Instance" is historical to allow backward compatibility with previous versions of the standard. It should not be taken to mean that Composite Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
+          <para xml:id="para_b4e93462-20a5-4373-bb56-553c91b3ab4b">The use of the word "IMAGE" rather than "Composite Instance" is historical to allow backward compatibility with previous editions of the Standard. It should not be taken to mean that Composite Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
         </note>
         <section label="Y.6.1.1" status="4" xml:id="sect_Y.6.1.1">
           <title>Composite Instance Root Retrieve Only Information Model</title>
@@ -30054,7 +30315,7 @@
       <note>
         <para xml:id="para_43637bf9-fda3-4ca7-8a5f-4bd2d67bb956">This SOP Class identifies the class of the Composite Instance Retrieve Without Bulk Data Information Model (i.e., not the SOP Class of the stored SOP Instances for which the SCP has information).</para>
       </note>
-      <para xml:id="para_91a2944d-e0f3-4db8-8439-1b2ffdaf2aee">Information Model Definitions for standard SOP Classes of the Composite Instance Retrieve Without Bulk Data Service are defined in this Annex. A Composite Instance Retrieve Without Bulk Data Information Model Definition contains:</para>
+      <para xml:id="para_91a2944d-e0f3-4db8-8439-1b2ffdaf2aee">Information Model Definitions for Standard SOP Classes of the Composite Instance Retrieve Without Bulk Data Service are defined in this Annex. A Composite Instance Retrieve Without Bulk Data Information Model Definition contains:</para>
       <itemizedlist>
         <listitem>
           <para xml:id="para_9496b9a4-f991-4147-866f-914beb912afd">Entity-Relationship Model Definition</para>
@@ -30486,7 +30747,7 @@
           </tbody>
         </table>
         <note>
-          <para xml:id="para_27f7184b-18f8-4b5a-926e-53a19564c5e2">The use of the word "IMAGE" rather than "Composite Instance" is historical to allow backward compatibility with previous versions of the standard. It should not be taken to mean that Composite Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
+          <para xml:id="para_27f7184b-18f8-4b5a-926e-53a19564c5e2">The use of the word "IMAGE" rather than "Composite Instance" is historical to allow backward compatibility with previous editions of the Standard. It should not be taken to mean that Composite Instances of other than image type are not included at the level indicated by the value IMAGE.</para>
         </note>
         <section label="Z.6.1.1" status="4" xml:id="sect_Z.6.1.1">
           <title>Composite Instance Retrieve Without Bulk Data Information Model</title>
@@ -32153,8 +32414,8 @@
         <para xml:id="para_1f7d5758-b6f9-48bf-ae5a-dc5030294720">To find a UPS of interest, an SCU uses a C-FIND to query the SCP for relevant UPS instances.</para>
         <para xml:id="para_5b65c28b-c785-457a-b320-c0906bd98e8a">To "claim" and start work on a UPS, an SCU (which will be referred to here as the "Performing SCU") uses an N-ACTION Change State request to set the UPS state to IN PROGRESS and provide a transaction UID (which will be referred to here as the Locking UID). For a SCHEDULED UPS, the SCP responds by changing the UPS state to IN PROGRESS and recording the transaction UID for future use. For a UPS with other status, the SCP rejects the request.</para>
         <para xml:id="para_94f41339-2d78-4074-8450-40c3b893f693">The SCP does not permit the status of a SCHEDULED UPS to be set to COMPLETED or CANCELED without first being set to IN PROGRESS.</para>
-        <para xml:id="para_7e9f1aaa-a917-47bf-bb53-ad8c3deffecc">To modify details of the performed procedure, the Performing SCU uses an N-SET request to the SCP (providing the Locking UID for the UPS). N-SET requests on an IN PROGRESS UPS where the Locking UID in the N-SET data set does not match the Locking UID in the UPS are rejected by the SCP.</para>
-        <para xml:id="para_6f2c5d8c-e783-4485-8a90-966692f66dcc">To modify the status of the procedure step, the Performing SCU uses an N-ACTION Change State request to the SCP (providing the Locking UID for the UPS). N-ACTION Change State requests where the Locking UID in the N-ACTION data set does not match the Locking UID in the UPS are rejected by the SCP.</para>
+        <para xml:id="para_7e9f1aaa-a917-47bf-bb53-ad8c3deffecc">To modify details of the performed procedure, the Performing SCU uses an N-SET request to the SCP (providing the Locking UID for the UPS). N-SET requests on an IN PROGRESS UPS where the Locking UID in the N-SET Data Set does not match the Locking UID in the UPS are rejected by the SCP.</para>
+        <para xml:id="para_6f2c5d8c-e783-4485-8a90-966692f66dcc">To modify the status of the procedure step, the Performing SCU uses an N-ACTION Change State request to the SCP (providing the Locking UID for the UPS). N-ACTION Change State requests where the Locking UID in the N-ACTION Data Set does not match the Locking UID in the UPS are rejected by the SCP.</para>
         <para xml:id="para_144becb7-7881-43de-94f6-a34e5caf2a1c">The Locking UID effectively limits control of the state of an IN PROGRESS UPS to only the SCP and the Performing SCU. The SCP does not check whether IP addresses, AE-Titles, or parameters other than the Locking UID match to determine if the SCU has permission.</para>
         <para xml:id="para_f118b164-255d-4bc2-8238-9756ce82847c">When the Performing SCU completes work on the UPS, it N-SETs any values necessary to meet the Final State requirements in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>, then uses an N-ACTION request (providing the Locking UID for the UPS during both steps) for the SCP to change the UPS state to COMPLETED.</para>
         <para xml:id="para_9600cc22-c3da-416a-a5a6-ebb294f26a30">When the Performing SCU abandons work on an incomplete UPS, it N-SETs any values necessary to meet the Final State requirements in <xref linkend="table_CC.2.5-3" xrefstyle="select: label"/>, then uses an N-ACTION request (providing the Locking UID for the UPS) for the SCP to change the UPS state to CANCELED.</para>
@@ -38430,6 +38691,35 @@
                     </para>
                   </td>
                 </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_7e8fe831-d6b0-4394-b24c-65dc0b47d9f5">
+<emphasis role="italic">All other Attributes of the Unified Procedure Step Relationship Module</emphasis>
+</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_164a768f-5304-4066-93d9-e4ef62fcb29b"/>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_dfafbb6d-7d4e-4cfd-964d-2e836792da72">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_089b23c0-7eb4-4c1b-bdcb-a2121a35b10d">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f7df99b9-4a83-47ed-b378-59c8f51c8b4a">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_482462d3-8943-4942-a04f-541845915cd0">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_38746f95-49b7-4a07-b61f-895f7e503acd">-</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f03eada6-660b-466a-af76-f2ddb1c2c589">-</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
                 <tr valign="top">
                   <td align="left" colspan="9" rowspan="1">
                     <para xml:id="para_44465d10-79a0-428e-b9cf-2514f683c42e">
@@ -39935,7 +40225,7 @@
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_5907c7ff-c3d9-4075-9b2b-55a6e5b960c9">Failed: Unable to process</para>
                 </td>
-                <td align="left" colspan="1" rowspan="1">
+                <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_61572608-6fbc-4d54-ac97-147b38a8768c">Cxxx</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
@@ -40002,8 +40292,8 @@
             <para xml:id="para_15eb5a4a-4d69-411a-a6f5-a0312fad9ea5">Status Codes are returned in DIMSE response messages (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>). The code values stated in column "Status Codes" are returned in Status Command Element (0000,0900).</para>
           </note>
           <para xml:id="para_db1d6836-ae12-450b-9938-bbe334382e3d">Some Failure Status Codes are implementation specific.</para>
-          <para xml:id="para_0e3345bf-faae-4389-89d4-81886c7b3ae3">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed: Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/>.</para>
-          <para xml:id="para_1204e78e-9906-432f-826c-25dfdd07fca9">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_V.4-1" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
+            <para xml:id="para_0e3345bf-faae-4389-89d4-81886c7b3ae3">An SCP implementation shall assign specific failure status codes by replacing each 'x' symbol with a hexadecimal digit in the range from 0 to F. An SCP implementation wishing to differentiate between causes of “Failed: Unable to process” Failure Meaning shall assign those causes specific Status Code Values within valid range specified in <xref linkend="table_CC.2.8-2" xrefstyle="select: label"/>.</para>
+            <para xml:id="para_1204e78e-9906-432f-826c-25dfdd07fca9">An SCU implementation shall recognize any Failure Status Code within the value range specified in <xref linkend="table_CC.2.8-2" xrefstyle="select: label"/> as an indicator of the Failure Meaning stated in the table. There is no requirement for an SCU implementation to differentiate between specific Status Codes within the valid range.</para>
         </section>
       </section>
     </section>
@@ -43862,7 +44152,7 @@
             <para xml:id="para_d35363bf-c740-4eed-bb1b-50ee7683ca13">The SCU uses the N-DELETE to request the SCP to delete an applicable Machine Verification SOP Instance. The SCU shall specify in the N-DELETE request primitive the SOP Instance UID of the applicable Machine Verification instance.</para>
             <para xml:id="para_75c25572-7560-4c36-a236-ff9f7843616f">The SCP shall delete the specified SOP Instance, such that subsequent operations of the same SOP Instance will fail.</para>
             <para xml:id="para_d904d489-3846-456a-ba9d-924cfa55acd8">The SCP shall return the status code of the requested SOP Instance deletion. The meanings of success, warning, and failure status classes are defined in <olink targetdoc="PS3.7" targetptr="chapter_C" xrefstyle="template:Annex %n “%t” in PS3.7"/>.</para>
-            <para xml:id="para_49c95309-ecd8-4422-bc9e-4a821f882d0a">If an N-DELETE is not issued, the SOP Class instance may be deleted on the SCP by a manual or automatic operation. This behavior is beyond the scope of the standard.</para>
+            <para xml:id="para_49c95309-ecd8-4422-bc9e-4a821f882d0a">If an N-DELETE is not issued, the SOP Class instance may be deleted on the SCP by a manual or automatic operation. This behavior is beyond the scope of the Standard.</para>
           </section>
         </section>
         <section label="DD.3.2.5" status="4" xml:id="sect_DD.3.2.5">
@@ -45526,9 +45816,9 @@
         <para xml:id="para_7cc5ad39-376e-4e22-a8a7-acb5f131a553">The result of applying a Volumetric Presentation State is not expected to be exactly reproducible on different systems. It is difficult to describe the display and rendering algorithms in enough detail in an interoperable manner such that a presentation produced at a later time is indistinguishable from that of the original presentation. While Volumetric Presentation States use established DICOM concepts of grayscale and color matching (GSDF and ICC color profiles) and provide a generic description of the different types of display algorithms possible, variations in algorithm implementations within display devices are inevitable and an exact match of volume presentation on multiple devices cannot be guaranteed. Nevertheless, reasonable consistency is provided by specification of inputs, geometric descriptions of spatial views, type of processing to be used, color mapping and blending, input fusion, and many generic
           rendering parameters, producing what is expected to be a clinically acceptable result.</para>
         <para xml:id="para_8744e9d6-d61a-48c5-804e-0ab0c83e150e">The P-Values are in a device independent perceptually linear space that is formally defined in <olink targetdoc="PS3.14" targetptr="PS3.14" xrefstyle="template:%n Grayscale Standard Display Function"/>. The PCS-Values are in a device independent space that is formally defined in the ICC Profiles as CIEXYZ or CIELab values.</para>
-        <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this standard.</para>
-        <para xml:id="para_c597b301-390b-4b3c-9edc-6feb96d94abd">A claim of conformance as an SCP of the SOP Class implies that the SCP shall make the Presentation State available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the standard.</para>
-        <para xml:id="para_81d4a14f-a48b-40bb-b995-e431fe6603f6">How an SCP of these SOP Classes chooses to display multiple states that are part of a Display Collection is beyond the scope of this standard.</para>
+        <para xml:id="para_417292e5-8d0f-4aa4-b536-7698361713cf">How an SCP of these SOP Classes chooses between multiple Presentation State instances that may apply to an image is beyond the scope of this Standard.</para>
+        <para xml:id="para_c597b301-390b-4b3c-9edc-6feb96d94abd">A claim of conformance as an SCP of the SOP Class implies that the SCP shall make the Presentation State available to the user of the device, and if selected by the user, shall apply all the transformations stored in the state in the manner in which they are defined in the Standard.</para>
+        <para xml:id="para_81d4a14f-a48b-40bb-b995-e431fe6603f6">How an SCP of these SOP Classes chooses to display multiple states that are part of a Display Collection is beyond the scope of this Standard.</para>
         <note>
           <para xml:id="para_361a7bcd-8bfb-42da-a057-30dae7b0da00">For example, if a user selects a state that is part of a four state Spatial Collection, an SCP may choose to display all four together, to display the single state selected by the user or to display two of the four states deemed appropriate by the SCP.</para>
         </note>
@@ -45577,7 +45867,7 @@
           <title>Volume Rendering Volumetric Transformations</title>
           <section label="FF.2.1.2.1" status="5" xml:id="sect_FF.2.1.2.1">
             <title>Volume Rendering Pipelines</title>
-            <para xml:id="para_26ac20da-f208-4a02-a1d7-996c0911774f">The Volume Rendering Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data. Attributes comprising the Volume Rendering Volumetric Presentation States are defined in the context of the reference pipelines described in this section. While the reference pipelines imply a certain order of the volume rendering operations of classification, resampling, shading, and compositing, the specific order in which these operations are applied by any device claiming conformance to this standard are implementation-dependent and beyond the scope of this standard. It is the responsibility of the viewing application to transform the standard attributes into parameters appropriate for the particular order of operations implemented in the viewing application.</para>
+            <para xml:id="para_26ac20da-f208-4a02-a1d7-996c0911774f">The Volume Rendering Volumetric Presentation State Storage SOP Classes support a set of transformations to produce derived volumetric views of volume input data. Attributes comprising the Volume Rendering Volumetric Presentation States are defined in the context of the reference pipelines described in this section. While the reference pipelines imply a certain order of the volume rendering operations of classification, resampling, shading, and compositing, the specific order in which these operations are applied by any device claiming conformance to this Standard are implementation-dependent and beyond the scope of this Standard. It is the responsibility of the viewing application to transform the Standard Attributes into parameters appropriate for the particular order of operations implemented in the viewing application.</para>
             <para xml:id="para_2077b9b9-7e4a-440e-9f7d-c331d2e87df2">The Volume Rendering Volumetric Presentation State Storage SOP Class defines a volumetric view from a single volume input to produce a volume rendered view. The sequence of transformations from volumetric inputs into PCS-Values is explicitly defined in the reference pipeline described in <xref linkend="figure_FF.2.1.2.1-1" xrefstyle="select: label"/>.</para>
             <para xml:id="para_020885ac-94a6-43fe-a86d-5ce87f2c30ae">
               <figure label="FF.2.1.2.1-1" pgwide="1" xml:id="figure_FF.2.1.2.1-1">
@@ -45647,7 +45937,7 @@
             </itemizedlist>
             <para xml:id="para_5a2d46f6-61cc-4fbb-a290-45833a8d7389">The Graphic Projection transform algorithm considers whether each volumetric graphic annotation is visible in the current volume rendered view, considering the volume data, Volume Render Geometry, and the value of Annotation Clipping (0070,1907).</para>
             <para xml:id="para_315762d0-eff1-499c-91f8-a8b2c6845800">If Annotation Clipping (0070,1907) is YES, then the annotation shall be visible only if it is present in the field of view and not obscured by opaque structures that may lie between the annotation and the viewpoint. In the case of the Volumetric Presentation Input Annotation Sequence (0070,1905), annotation text shall be visible only if some part of the specified segmentation is visible.</para>
-            <para xml:id="para_0826b865-ff66-4938-b38a-0ffe685cddb4">If Annotation Clipping (0070,1907) is NO, then the annotation shall always be visible. A particular implementation may display annotations that lie behind opaque structures in a different style (such as a softer gray), but the decision to provide such display style is outside the scope of this standard.</para>
+            <para xml:id="para_0826b865-ff66-4938-b38a-0ffe685cddb4">If Annotation Clipping (0070,1907) is NO, then the annotation shall always be visible. A particular implementation may display annotations that lie behind opaque structures in a different style (such as a softer gray), but the decision to provide such display style is outside the scope of this Standard.</para>
             <para xml:id="para_38174934-9ed1-48fe-b386-1459662b9094">The output of the Graphic Projection component is displayed on the 2D presentation view in the graphic layers specified by the corresponding values of Graphic Layer (0070,0002).</para>
           </section>
         </section>
@@ -45848,7 +46138,7 @@
             </listitem>
           </itemizedlist>
           <para xml:id="para_be977d10-84d8-4a5f-99dd-05bec3c49931">Annotations on the view provide the application of free unformatted text or vector graphics as described in the <olink targetdoc="PS3.3" targetptr="sect_C.10.5" xrefstyle="template:Section %n “%t” in PS3.3"/>. Since the Graphic Annotation Module allows only the addition of graphics to the 2D view defined by the Presentation State without attached clinical meaning, Volumetric Graphic Annotations provide a mechanism to create annotations in the VPS-RCS with optional references to other objects which can have structured context attached.</para>
-          <para xml:id="para_1d0a9b68-2b4e-4881-922b-21dde929bada">Volumetric Graphic Annotations can be specified in two variants: either via Graphic Types with 3D coordinates, as defined in <olink targetdoc="PS3.3" targetptr="sect_C.18.9.1.2" xrefstyle="template:Section %n “%t” in PS3.3"/>, or via a reference to inputs of the Presentation State. The latter is intended to be used to display annotation labels for segmentations of the volume data set; for example, when a lesion has been marked via a Segmentation IOD and this segmentation is rendered together with the anatomical data.</para>
+          <para xml:id="para_1d0a9b68-2b4e-4881-922b-21dde929bada">Volumetric Graphic Annotations can be specified in two variants: either via Graphic Types with 3D coordinates, as defined in <olink targetdoc="PS3.3" targetptr="sect_C.18.9.1.2" xrefstyle="template:Section %n “%t” in PS3.3"/>, or via a reference to inputs of the Presentation State. The latter is intended to be used to display annotation labels for segmentations of the volume data; for example, when a lesion has been marked via a Segmentation IOD and this segmentation is rendered together with the anatomical data.</para>
           <para xml:id="para_0a278312-566d-43f8-9310-cd77471c0c08">Since annotations which are added via the Graphic Annotation Module are defined within the display space, they should not be used to point to clinical relevant structures which would be positioned on a different anatomy after manipulation.</para>
           <para xml:id="para_762121c1-56cf-4e75-94e5-cb1dd3d72f4c">In contrast since Volumetric Graphic Annotations have coordinates in the VPS-RCS, applications can still show them after a user has manipulated the initial view which has been defined by the Presentation State.</para>
           <para xml:id="para_23d038d2-08ac-4689-abdd-520b2159c151">The exact visual representation of the annotations is at the discretion of the display application, as well as the mechanisms which may be employed to ensure that Volumetric Graphic Annotations are sufficiently visible, even if the location in the volume is not visible in the current view. E.g. for a Graphic Type POINT a display application might render a crosshair at the specified position in the volume or a sphere with an arrow pointing to it instead of rendering Volumetric Graphic Annotations directly within the volume a projection of the annotations may be rendered as an overlay on top of the view.</para>

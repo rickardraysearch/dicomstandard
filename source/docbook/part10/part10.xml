@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2018e - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2019a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -84,15 +84,15 @@
       </listitem>
       <listitem>
         <para xml:id="para_a4d363fa-bdbc-4963-b66a-be0137cfff2d">
-<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, Information Object Definitions, specifies a number of Information Object Definitions (e.g., various types of images) that may be used in conjunction with this part;</para>
+<olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>, Information Object Definitions, specifies a number of Information Object Definitions (e.g., various types of images) that may be used in conjunction with this Part;</para>
       </listitem>
       <listitem>
         <para xml:id="para_03abf47d-f3d7-4ed5-9999-5882823a981d">
-<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>, builds upon this part to define the Media Storage Service Class;</para>
+<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>, builds upon this Part to define the Media Storage Service Class;</para>
       </listitem>
       <listitem>
         <para xml:id="para_528e9411-9a55-4be2-8e91-0c2a0f5a0839">
-<olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, Data Structure and Encoding, addresses the encoding rules necessary to construct a Data Set that is encapsulated in a file as specified in this part;</para>
+<olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>, Data Structure and Encoding, addresses the encoding rules necessary to construct a Data Set that is encapsulated in a file as specified in this Part;</para>
       </listitem>
       <listitem>
         <para xml:id="para_8be47d8a-bb0e-4b62-a733-257de0da9299">
@@ -136,266 +136,386 @@
             <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
           </bibliosource>
         </biblioentry>
+          <biblioentry xml:id="biblio_ISO7498-1">
+              <abbrev>ISO 7498-1</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1994</date>
+              <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO7498-2">
+              <abbrev>ISO 7498-2</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1989</date>
+              <title>Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8509">
+              <abbrev>ISO/TR 8509</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <title>Information Processing Systems - Open Systems Interconnection - Service Conventions</title>
+              <releaseinfo>
+                  <remark>ISO/TR 8509 has been withdrawn. See ISO/IEC 2382-26:1993 Information technology - Vocabulary - Part 26: Open systems interconnection</remark>
+              </releaseinfo>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISO8822">
+              <abbrev>ISO 8822</abbrev>
+              <author>
+                  <orgname>ISO</orgname>
+              </author>
+              <date>1988</date>
+              <title>Information processing systems - Open Systems Interconnection - Connection oriented presentation service definition</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_ISOIEC8859-1">
+              <abbrev>ISO/IEC 8859-1</abbrev>
+              <author>
+                  <orgname>ISO/IEC</orgname>
+              </author>
+              <date>1987</date>
+              <title>Information processing - 8-bit single-byte coded graphic character sets - Part 1: Latin alphabet No. 1</title>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_2557">
+              <abbrev>RFC2557</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>March 1999</date>
+              <title>MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc2557"/>
+              </bibliosource>
+          </biblioentry>
+          <biblioentry xml:id="biblio_RFC_3369">
+              <abbrev>RFC3369</abbrev>
+              <author>
+                  <orgname>IETF</orgname>
+              </author>
+              <date>August 2002</date>
+              <title>Cryptographic Message Syntax</title>
+              <bibliosource>
+                  <link xl:href="http://tools.ietf.org/html/rfc3369"/>
+              </bibliosource>
+          </biblioentry>
       </bibliography>
-      <para xml:id="para_c6105f8c-c6e3-4611-8fb0-273e40320fea">ISO 7498-1, Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
-      <para xml:id="para_a3b7a114-7571-43b2-a3f7-779bcb7c0a5d">ISO 7498-2, Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</para>
-      <para xml:id="para_2d54a21a-e3e0-4eea-8e06-148d09708a77">ISO/TR 8509, Information Processing Systems - Open Systems Interconnection - Service Conventions</para>
-      <para xml:id="para_c06f580c-5653-4239-82d0-dcfae325b05d">ISO 8822, Information Processing Systems - Open Systems Interconnection - Connection-Oriented Presentation Service Definition.</para>
-      <para xml:id="para_8186ef74-f9c0-42fd-bcfd-4b135316b397">ISO 8859, Information Processing - 8-bit single-byte coded graphic character sets - Part 1: Latin Alphabet No. 1</para>
-      <para xml:id="para_fb74e0ae-581c-4d87-842c-623c3bd489f4">RFC3369, Cryptographic Message Syntax, August 2002</para>
-      <para xml:id="para_0b262212-de3e-473b-84c2-dae4cc31be52">RFC2557 MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</para>
     </section>
   </chapter>
-  <chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_2fa1de01-803f-4be0-a57a-25a28211a1ba">For the purposes of this Standard the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
-      <title>Reference Model Definitions</title>
-      <para xml:id="para_e802e368-205e-4387-a637-103fc76a3c99">This Part of the Standard is based on the concepts developed in ISO 7498-1 and makes use of the following terms defined in it:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_5d9d4c74-2c04-4537-9a90-ea432ffb31cb">Application Entity;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_1af03c45-ea7c-4d45-95bd-e2224a1039ac">Application Process;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_519dbe26-31e4-47f5-9545-8bba3da18977">Service or Layer Service;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_ba887013-072c-4a3b-a4dc-d78820708488">Transfer Syntax.</para>
-        </listitem>
-      </orderedlist>
-      <para xml:id="para_0bf2fa99-9fbd-4506-9e78-cb82d8c57ebd">This Part of the Standard makes use of the following terms defined in ISO 7498-2:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_f3376077-6a73-4676-ad69-275c18dc1be4">Data Confidentiality</para>
-          <note>
-            <para xml:id="para_106eef60-c410-424b-8ed8-b8388282f8ca">The definition is "the property that information is not made available or disclosed to unauthorized individuals, entities or processes."</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para xml:id="para_3755ae53-a42f-4070-94a2-59a67bfca0cd">Data Origin Authentication</para>
-          <note>
-            <para xml:id="para_1da41521-5de8-423c-bfed-9155a76647f0">The definition is "the corroboration that the source of data received is as claimed."</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para xml:id="para_700ae1d9-8345-45d6-b736-a94f93e8157c">Data Integrity</para>
-          <note>
-            <para xml:id="para_33fd3dc9-8abb-4f4d-8760-df0d2f0cd854">The definition is "the property that data has not been altered or destroyed in an unauthorized manner."</para>
-          </note>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
-      <title>Service Conventions Definitions</title>
-      <para xml:id="para_6b9738d2-5da0-4f33-9661-b6f2ba92f560">This Part of the Standard makes use of the following terms defined in ISO/TR 8509:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_256f134e-9520-442a-a512-42dfc6310637">Service Provider;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_883c030f-71f5-498a-b16f-397b0d414dd0">Service User.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.3" status="2" xml:id="sect_3.3">
-      <title>Presentation Service Definitions</title>
-      <para xml:id="para_8d493469-b0a6-4c83-b263-143a2cb8a206">This Part of the Standard makes use of the following terms defined in ISO 8822:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_9059d848-65d3-4194-b708-a644dabfbfa1">Abstract Syntax;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_727dbfb7-2f06-4c8a-abb8-f2df69f7425a">Abstract Syntax Name.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.4" status="2" xml:id="sect_3.4">
-      <title>DICOM Introduction and Overview Definitions</title>
-      <para xml:id="para_7a91b9e1-adc2-4f06-acb0-d0323dfed1ef">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_21dbe325-6851-4119-b7ed-09f6f2135179">Attribute.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.5" status="2" xml:id="sect_3.5">
-      <title>DICOM Information Object Definitions</title>
-      <para xml:id="para_c93e7e2e-91ff-42d6-9098-88fd0a088f98">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_4a92a3c3-6324-4180-beca-151b875b35d4">Information Object Definition.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.6" status="2" xml:id="sect_3.6">
-      <title>DICOM Data Structure and Encoding Definitions</title>
-      <para xml:id="para_da581a0b-1dff-4bf8-b1ee-fb723863b3f8">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_14d032ed-ad93-40f7-bcd6-da2d73bfbe72">Data Element;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_731f4d50-5dbc-4de9-aad6-a45a35102439">Data Set;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_5f4586aa-d0f9-4905-b211-2ad4594c2ccb">Data Element Type;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_6e658db6-afdc-4749-83a8-a89ab498dd0c">Value;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_97b4d05b-4bd2-4ab7-bd8d-2edf83b18f5f">Value Multiplicity;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_bc5f1197-14bf-41c0-9c08-eb167162e6e9">Value Representation;</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.7" status="2" xml:id="sect_3.7">
-      <title>DICOM Message Exchange Definitions</title>
-      <para xml:id="para_e31f2ca4-2c3f-4f00-a4a7-00ed4b48b77a">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_36a44926-e123-410e-8943-367a986a1681">Service Object Pair (SOP) Class;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_e9080c4e-fa1e-4aea-bfbe-6434cfea5f9c">Service Object Pair (SOP) Instance;</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_469425d2-6424-41ac-b7d7-c46f21c0150a">Implementation Class UID.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.8" status="2" xml:id="sect_3.8">
-      <title>DICOM Media Storage and File Format Definitions</title>
-      <para xml:id="para_60261326-655b-4aa2-869c-8ac2736ccff3">The following definitions are commonly used in this Part of the Standard:</para>
-      <variablelist>
-        <varlistentry>
-          <term>Application Profile</term>
-          <listitem>
-            <para xml:id="para_040c7f00-bd2d-47ab-8ee4-37fa80352544">A Media Storage Application Profile defines a selection of choices at the various layers of the DICOM Media Storage Model that are applicable to a specific need or context in which the media interchange is intended to be performed.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>DICOM File Service</term>
-          <listitem>
-            <para xml:id="para_306787f3-0546-4888-9c98-28ed5b254403">The DICOM File Service specifies a minimum abstract view of files to be provided by the Media Format Layer. Constraining access to the content of files by the Application Entities through such a DICOM File Service boundary ensures Media Format and Physical Media independence.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>DICOM File</term>
-          <listitem>
-            <para xml:id="para_b0cb0376-4488-4dd3-b4b9-ffd3f9c9fd2a">A DICOM File is a File with a content formatted according to the requirements of this Part of the DICOM Standard. In particular such files shall contain, the File Meta Information and a properly formatted Data Set.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>DICOMDIR File</term>
-          <listitem>
-            <para xml:id="para_a2ad3343-175c-45f6-8df2-737c1657ecaa">A unique and mandatory DICOM File within a File-set that contains the Media Storage Directory SOP Class. This File is given a single component File ID, DICOMDIR.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File</term>
-          <listitem>
-            <para xml:id="para_7b444be5-755a-4991-9089-16c9e252db37">A File is an ordered string of zero or more bytes, where the first byte is at the beginning of the file and the last byte at the end of the File. Files are identified by a unique File ID and may by written, read and/or deleted.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File ID</term>
-          <listitem>
-            <para xml:id="para_37c0824b-1b72-4e7c-bd90-24da50b3afd2">Files are identified by a File ID that is unique within the context of the File-set they belong to. A set of ordered File ID Components (up to a maximum of eight) forms a File ID.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File ID Component</term>
-          <listitem>
-            <para xml:id="para_e7c59d09-bd65-47bf-93bc-cc9324abf611">A string of one to eight characters of a defined character set.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File Meta Information</term>
-          <listitem>
-            <para xml:id="para_27b5e58c-9676-43c0-9e2f-0dee87357fa2">The File Meta Information includes identifying information on the encapsulated Data Set. It is a mandatory header at the beginning of every DICOM File.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File-set</term>
-          <listitem>
-            <para xml:id="para_d573dbcf-2d4f-4727-b7e0-023f39cfb552">A File-set is a collection of DICOM Files (and possibly non-DICOM Files) that share a common naming space within which File IDs are unique.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File-set Creator</term>
-          <listitem>
-            <para xml:id="para_be0f41b7-e0a7-448a-a40c-ec0d80b25394">An Application Entity that creates the DICOMDIR File (see <xref linkend="sect_8.6" xrefstyle="select: label"/>) and zero or more DICOM Files.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File-set Reader</term>
-          <listitem>
-            <para xml:id="para_6db81891-da88-4303-bd0b-802391c8623c">An Application Entity that accesses one or more files in a File-set.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>File-set Updater</term>
-          <listitem>
-            <para xml:id="para_43595296-9304-44bf-9e57-65a022942be1">An Application Entity that accesses Files, creates additional Files, or deletes existing Files in a File-set. A File-set Updater makes the appropriate alterations to the DICOMDIR file reflecting the additions or deletions.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>DICOM File Format</term>
-          <listitem>
-            <para xml:id="para_977fbd77-369a-4574-b075-0b96c1063144">The DICOM File Format provides a means to encapsulate in a File the Data Set representing a SOP Instance related to a DICOM Information Object.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Media Format</term>
-          <listitem>
-            <para xml:id="para_4b0efb9b-18e3-4800-9bc4-6539fdd63ec0">Data structures and associated policies that organize the bit streams defined by the Physical Media format into data file structures and associated file directories.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Media Storage Model</term>
-          <listitem>
-            <para xml:id="para_16821291-27a4-4096-aba8-1dbac90bb209">The DICOM Media Storage Model pertains to the data structures used at different layers to achieve interoperability through media interchange.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Media Storage Services</term>
-          <listitem>
-            <para xml:id="para_0b007008-9d0e-4ced-9695-03fe28245027">DICOM Media Storage Services define a set of operations with media that facilitate storage to and retrieval from the media of DICOM SOP Instances.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Physical Media</term>
-          <listitem>
-            <para xml:id="para_cbdc04f9-2f6e-4d26-a319-ee2ae5c533f8">A piece of material with recording capabilities for streams of bits. Characteristics of a Physical Media include form factor, mechanical characteristics, recording properties and rules for recording and organizing bit streams in accessible structures</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Secure DICOM File</term>
-          <listitem>
-            <para xml:id="para_4edcdb27-907e-43c6-b05e-d3ab565f1f73">A DICOM File that is encapsulated with the Cryptographic Message Syntax specified in RFC2630.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Secure File-set</term>
-          <listitem>
-            <para xml:id="para_9ef978af-b0d5-4455-bc41-0010cda00957">A File-set in which all DICOM Files are Secure DICOM Files.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term>Secure Media Storage Application Profile</term>
-          <listitem>
-            <para xml:id="para_97ffe0d0-8143-42c8-9546-43cf491f872b">A DICOM Media Storage Application Profile that requires a Secure File-set.</para>
-          </listitem>
-        </varlistentry>
-      </variablelist>
-    </section>
-  </chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_2fa1de01-803f-4be0-a57a-25a28211a1ba">For the purposes of this Standard the following definitions apply.</para>
+        <glossary>
+            <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>Reference Model Definitions</title>
+                <para xml:id="para_e802e368-205e-4387-a637-103fc76a3c99">This Part of the Standard use of the following terms defined in <xref linkend="biblio_ISO7498-1"/> and <xref linkend="biblio_ISO7498-2"/>:</para>
+                <glossentry xml:id="glossentry_ApplicationEntity" xreflabel="Application Entity">
+                    <glossterm>Application Entity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5d9d4c74-2c04-4537-9a90-ea432ffb31cb">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationProcess" xreflabel="Application Process">
+                    <glossterm>Application Process</glossterm>
+                    <glossdef>
+                        <para xml:id="para_1af03c45-ea7c-4d45-95bd-e2224a1039ac">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Service" xreflabel="Service or Layer Service">
+                    <glossterm>Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_519dbe26-31e4-47f5-9545-8bba3da18977">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntax" xreflabel="Transfer Syntax">
+                    <glossterm>Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_ba887013-072c-4a3b-a4dc-d78820708488">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataConfidentiality" xreflabel="Data Confidentiality">
+                    <glossterm>Data Confidentiality</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f3376077-6a73-4676-ad69-275c18dc1be4">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_106eef60-c410-424b-8ed8-b8388282f8ca">The definition is "the property that information is not made available or disclosed to unauthorized individuals, entities or processes."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataOriginAuthentication" xreflabel="Data Origin Authentication">
+                    <glossterm>Data Origin Authentication</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3755ae53-a42f-4070-94a2-59a67bfca0cd">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_1da41521-5de8-423c-bfed-9155a76647f0">The definition is "the corroboration that the source of data received is as claimed."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataIntegrity" xreflabel="Data Integrity">
+                    <glossterm>Data Integrity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_700ae1d9-8345-45d6-b736-a94f93e8157c">See <xref linkend="biblio_ISO7498-2"/>.</para>
+                        <note>
+                            <para xml:id="para_33fd3dc9-8abb-4f4d-8760-df0d2f0cd854">The definition is "the property that data has not been altered or destroyed in an unauthorized manner."</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>Service Conventions Definitions</title>
+                <para xml:id="para_6b9738d2-5da0-4f33-9661-b6f2ba92f560">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8509"/>:</para>
+                <glossentry xml:id="glossentry_ServiceProvider" xreflabel="Service Provider">
+                    <glossterm>Service Provider</glossterm>
+                    <glossdef>
+                        <para xml:id="para_256f134e-9520-442a-a512-42dfc6310637">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceUser" xreflabel="Service User">
+                    <glossterm>Service User</glossterm>
+                    <glossdef>
+                        <para xml:id="para_883c030f-71f5-498a-b16f-397b0d414dd0">See <xref linkend="biblio_ISO8509"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>Presentation Service Definitions</title>
+                <para xml:id="para_8d493469-b0a6-4c83-b263-143a2cb8a206">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_ISO8822"/>:</para>
+                <glossentry xml:id="glossentry_AbstractSyntax" xreflabel="Abstract Syntax">
+                    <glossterm>Abstract Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9059d848-65d3-4194-b708-a644dabfbfa1">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AbstractSyntaxName" xreflabel="Abstract Syntax Name">
+                    <glossterm>Abstract Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_727dbfb7-2f06-4c8a-abb8-f2df69f7425a">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.4" status="2" xml:id="sect_3.4">
+                <title>DICOM Introduction and Overview Definitions</title>
+                <para xml:id="para_7a91b9e1-adc2-4f06-acb0-d0323dfed1ef">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_Attribute" xreflabel="Attribute">
+                    <glossterm>Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_21dbe325-6851-4119-b7ed-09f6f2135179">
+<olink targetdoc="PS3.1" targetptr="glossentry_Attribute"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+                    <glossterm>Service-Object Pair Class</glossterm>
+                    <acronym>SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_73aa0301-e374-4eb3-b2ef-59fbdc789539">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.5" status="2" xml:id="sect_3.5">
+                <title>DICOM Information Object Definitions</title>
+                <para xml:id="para_c93e7e2e-91ff-42d6-9098-88fd0a088f98">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_InformationObjectDefinition" xreflabel="Information Object Definition (IOD)">
+                    <glossterm>Information Object Definition</glossterm>
+                    <acronym>IOD</acronym>
+                    <glossdef>
+                        <para xml:id="para_4a92a3c3-6324-4180-beca-151b875b35d4">
+<olink targetdoc="PS3.3" targetptr="glossentry_InformationObjectDefinition"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.6" status="2" xml:id="sect_3.6">
+                <title>DICOM Data Structure and Encoding Definitions</title>
+                <para xml:id="para_da581a0b-1dff-4bf8-b1ee-fb723863b3f8">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_DataElement" xreflabel="Data Element">
+                    <glossterm>Data Element</glossterm>
+                    <glossdef>
+                        <para xml:id="para_14d032ed-ad93-40f7-bcd6-da2d73bfbe72">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElement"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                    <glossterm>Data Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_731f4d50-5dbc-4de9-aad6-a45a35102439">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DataElementType" xreflabel="Data Element Type">
+                    <glossterm>Data Element Type</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5f4586aa-d0f9-4905-b211-2ad4594c2ccb">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataElementType"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_Value" xreflabel="Value">
+                    <glossterm>Value</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6e658db6-afdc-4749-83a8-a89ab498dd0c">
+<olink targetdoc="PS3.5" targetptr="glossentry_Value"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ValueMultiplicity" xreflabel="Value Multiplicity">
+                    <glossterm>Value Multiplicity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_97b4d05b-4bd2-4ab7-bd8d-2edf83b18f5f">
+<olink targetdoc="PS3.5" targetptr="glossentry_ValueMultiplicity"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ValueRepresentation" xreflabel="Value Representation">
+                    <glossterm>Value Representation</glossterm>
+                    <glossdef>
+                        <para xml:id="para_bc5f1197-14bf-41c0-9c08-eb167162e6e9">
+<olink targetdoc="PS3.5" targetptr="glossentry_ValueRepresentation"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.7" status="2" xml:id="sect_3.7">
+                <title>DICOM Message Exchange Definitions</title>
+                <para xml:id="para_e31f2ca4-2c3f-4f00-a4a7-00ed4b48b77a">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service Object Pair Instance (SOP Instance)">
+                    <glossterm>Service Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_e9080c4e-fa1e-4aea-bfbe-6434cfea5f9c">
+<olink targetdoc="PS3.7" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ImplementationClassUID" xreflabel="Implementation Class UID">
+                    <glossterm>Implementation Class UID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_469425d2-6424-41ac-b7d7-c46f21c0150a">
+<olink targetdoc="PS3.7" targetptr="glossentry_ImplementationClassUID"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.8" status="2" xml:id="sect_3.8">
+                <title>DICOM Media Storage and File Format Definitions</title>
+                <para xml:id="para_60261326-655b-4aa2-869c-8ac2736ccff3">The following definitions are commonly used in this Part of the Standard:</para>
+                <glossentry xml:id="glossentry_ApplicationProfile" xreflabel="Application Profile">
+                    <glossterm>Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_040c7f00-bd2d-47ab-8ee4-37fa80352544">A Media Storage Application Profile defines a selection of choices at the various layers of the DICOM Media Storage Model that are applicable to a specific need or context in which the media interchange is intended to be performed.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFileService" xreflabel="DICOM File Service">
+                    <glossterm>DICOM File Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_306787f3-0546-4888-9c98-28ed5b254403">The DICOM File Service specifies a minimum abstract view of files to be provided by the Media Format Layer. Constraining access to the content of files by the Application Entities through such a DICOM File Service boundary ensures Media Format and Physical Media independence.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFile" xreflabel="DICOM File">
+                    <glossterm>DICOM File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b0cb0376-4488-4dd3-b4b9-ffd3f9c9fd2a">A DICOM File is a File with a content formatted according to the requirements of this Part of the DICOM Standard. In particular such files shall contain, the File Meta Information and a properly formatted Data Set.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMDIRFile" xreflabel="DICOMDIR File">
+                    <glossterm>DICOMDIR File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a2ad3343-175c-45f6-8df2-737c1657ecaa">A unique and mandatory DICOM File within a File-set that contains the Media Storage Directory SOP Class. This File is given a single component File ID, DICOMDIR.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_File" xreflabel="File">
+                    <glossterm>File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_7b444be5-755a-4991-9089-16c9e252db37">A File is an ordered string of zero or more bytes, where the first byte is at the beginning of the file and the last byte at the end of the File. Files are identified by a unique File ID and may by written, read and/or deleted.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileID" xreflabel="File ID">
+                    <glossterm>File ID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_37c0824b-1b72-4e7c-bd90-24da50b3afd2">Files are identified by a File ID that is unique within the context of the File-set they belong to. A set of ordered File ID Components (up to a maximum of eight) forms a File ID.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileIDComponent" xreflabel="File ID Component">
+                    <glossterm>File ID Component</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e7c59d09-bd65-47bf-93bc-cc9324abf611">A string of one to eight characters of a defined character set.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileMetaInformation" xreflabel="File Meta Information">
+                    <glossterm>File Meta Information</glossterm>
+                    <glossdef>
+                        <para xml:id="para_27b5e58c-9676-43c0-9e2f-0dee87357fa2">The File Meta Information includes identifying information on the encapsulated Data Set. It is a mandatory header at the beginning of every DICOM File.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSet" xreflabel="File-set">
+                    <glossterm>File-set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d573dbcf-2d4f-4727-b7e0-023f39cfb552">A File-set is a collection of DICOM Files (and possibly non-DICOM Files) that share a common naming space within which File IDs are unique.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetCreator" xreflabel="File-set Creator">
+                    <glossterm>File-set Creator</glossterm>
+                    <glossdef>
+                        <para xml:id="para_be0f41b7-e0a7-448a-a40c-ec0d80b25394">An Application Entity that creates the DICOMDIR File (see <xref linkend="sect_8.6" xrefstyle="select: label"/>) and zero or more DICOM Files.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetReader" xreflabel="File-set Reader">
+                    <glossterm>File-set Reader</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6db81891-da88-4303-bd0b-802391c8623c">An Application Entity that accesses one or more files in a File-set.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetUpdater" xreflabel="File-set Updater">
+                    <glossterm>File-set Updater</glossterm>
+                    <glossdef>
+                        <para xml:id="para_43595296-9304-44bf-9e57-65a022942be1">An Application Entity that accesses Files, creates additional Files, or deletes existing Files in a File-set. A File-set Updater makes the appropriate alterations to the DICOMDIR file reflecting the additions or deletions.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFileFormat" xreflabel="DICOM File Format">
+                    <glossterm>DICOM File Format</glossterm>
+                    <glossdef>
+                        <para xml:id="para_977fbd77-369a-4574-b075-0b96c1063144">The DICOM File Format provides a means to encapsulate in a File the Data Set representing a SOP Instance related to a DICOM Information Object.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MediaFormat" xreflabel="Media Format">
+                    <glossterm>Media Format</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4b0efb9b-18e3-4800-9bc4-6539fdd63ec0">Data structures and associated policies that organize the bit streams defined by the Physical Media format into data file structures and associated file directories.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MediaStorageModel" xreflabel="Media Storage Model">
+                    <glossterm>Media Storage Model</glossterm>
+                    <glossdef>
+                        <para xml:id="para_16821291-27a4-4096-aba8-1dbac90bb209">The DICOM Media Storage Model pertains to the data structures used at different layers to achieve interoperability through media interchange.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MediaStorageServices" xreflabel="Media Storage Services">
+                    <glossterm>Media Storage Services</glossterm>
+                    <glossdef>
+                        <para xml:id="para_0b007008-9d0e-4ced-9695-03fe28245027">DICOM Media Storage Services define a set of operations with media that facilitate storage to and retrieval from the media of DICOM SOP Instances.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PhysicalMedia" xreflabel="Physical Media">
+                    <glossterm>Physical Media</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cbdc04f9-2f6e-4d26-a319-ee2ae5c533f8">A piece of material with recording capabilities for streams of bits. Characteristics of a Physical Media include form factor, mechanical characteristics, recording properties and rules for recording and organizing bit streams in accessible structures</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecureDICOMFile" xreflabel="Secure DICOM File">
+                    <glossterm>Secure DICOM File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4edcdb27-907e-43c6-b05e-d3ab565f1f73">A DICOM File that is encapsulated with the Cryptographic Message Syntax specified in RFC2630.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecureFileSet" xreflabel="Secure File-set">
+                    <glossterm>Secure File-set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9ef978af-b0d5-4455-bc41-0010cda00957">A File-set in which all DICOM Files are Secure DICOM Files.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecureMediaStorageApplicationProfile" xreflabel="Secure Media Storage Application Profile">
+                    <glossterm>Secure Media Storage Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_97ffe0d0-8143-42c8-9546-43cf491f872b">A DICOM Media Storage Application Profile that requires a Secure File-set.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
     <para xml:id="para_d1d40041-3fb2-473e-981a-56ee8fc8667c">The following symbols and abbreviations are used in this Part of the Standard.</para>
@@ -581,18 +701,24 @@
     <section label="6.1" status="2" xml:id="sect_6.1">
       <title>General DICOM Communication Model</title>
       <para xml:id="para_73a08d0d-fc28-4631-a71c-67795d51019f">
-<xref linkend="figure_6.1-1" xrefstyle="select: label"/> presents the general communication model of DICOM that spans network and storage media interchange communications. The DICOM Application Entities may rely on either one of the following boundaries:</para>
+          <olink targetdoc="PS3.1" targetptr="figure_5-1" xrefstyle="select: docname label"/> presents the general communication model of the DICOM Standard,
+          which spans both network (on-line) and media interchange (off-line) communication.
+          Application Entities may utilize any of the following transport mechanisms:</para>
       <orderedlist numeration="loweralpha">
         <listitem>
-          <para xml:id="para_0acd52b6-4e58-4cab-9e71-5169092fea1c">the OSI Upper Layer Service, which provides independence from specific physical networking communication support</para>
+            <para xml:id="para_0acd52b6-4e58-4cab-9e71-5169092fea1c">the DICOM Message Service and Upper Layer Service, which provides independence from specific physical networking communication support and protocols such as TCP/IP,</para>
         </listitem>
+          <listitem>
+              <para xml:id="para_09ba69c4-4283-41ca-840a-d205380624c9">the DICOM Web Service API and HTTP Service, which allows use of common hypertext and associated protocols for transport of DICOM services, or</para>
+          </listitem>
         <listitem>
-          <para xml:id="para_d4f51692-5c40-4063-ae3c-24d15ed34997">the DICOM File Service, which provides access to Storage Media independently from specific physical media storage formats and file structures.</para>
+          <para xml:id="para_d4f51692-5c40-4063-ae3c-24d15ed34997">the Basic DICOM File Service, which provides access to Storage Media independently from specific physical media storage formats and file structures.</para>
         </listitem>
       </orderedlist>
+        <para xml:id="para_cb585e45-0fcd-41e7-ae51-a916e06e569d">PS3.10 describes the Basic DICOM File Service, as depicted in <xref linkend="figure_6.1-1" xrefstyle="select: label"/>.</para>
       <para xml:id="para_76f67907-a041-4cec-a0e1-fc32eddc5f8e">
         <figure label="6.1-1" pgwide="1" xml:id="figure_6.1-1">
-          <title>General DICOM Communication Model</title>
+            <title>DICOM Communication Model for Media Interchange</title>
           <mediaobject>
             <imageobject>
               <imagedata fileref="figures/PS3.10_6.1-1.svg"/>
@@ -668,25 +794,17 @@
         </orderedlist>
         <section label="6.2.3.1" status="4" xml:id="sect_6.2.3.1">
           <title>DICOM SOP Classes</title>
-          <para xml:id="para_eda15173-ba18-43ee-98dd-c3c2047ffe00">DICOM SOP Classes and associated Information Object Definitions (IODs) are used to convey specific medical imaging information at the Data Format Layer. SOP Classes and IODs used for Media Storage shall follow the framework established in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. Examples of such IODs are modality images, patient information, results, etc.</para>
+          <para xml:id="para_eda15173-ba18-43ee-98dd-c3c2047ffe00">DICOM SOP Classes and associated Information Object Definitions (IODs) are used to convey specific medical imaging information at the Data Format Layer.
+              Examples of such IODs are modality images, patient information, results, etc.</para>
           <para xml:id="para_78d103d5-24d5-48e4-a1f6-df74e9b70411">The use of DICOM IODs in conjunction with Media Storage Services forms a number of Media Storage Service Object Pair Classes or SOP Classes. Media Storage Services (e.g., read, write, delete, etc.) shall be performed through the DICOM File Service. The content of the resulting DICOM Files shall be formatted according to the DICOM File Format as specified below.</para>
-          <note>
-            <orderedlist>
-              <listitem>
-                <para xml:id="para_256fd490-31a1-444d-b754-2e9e06388716">The concept of a SOP Class in the Media Storage context is equivalent to the concept of SOP Class introduced in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> and <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> for network related operations (DIMSE Operations).</para>
-              </listitem>
-              <listitem>
-                <para xml:id="para_cf1351ae-9fb5-42b5-9dfc-c93a66b1edf4">Both Composite and Normalized IODs and SOP Classes may be used in the Media Storage context.</para>
-              </listitem>
-            </orderedlist>
-          </note>
           <para xml:id="para_d52b2b10-d680-4eda-a7ea-a7a8e8053459">
-<olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> defines a number of SOP Classes that may be used for Media Storage. These SOP Classes are based on DICOM Standard IODs that may be found in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
+              <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> defines a number of SOP Classes that may be used for Media Storage in <olink targetdoc="PS3.4" targetptr="chapter_I" xrefstyle="template:Annex %n"/>.
+              These SOP Classes are based on DICOM Standard IODs that may be found in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
           <para xml:id="para_8728f49f-de73-48b7-8db1-78874eaca02f">The structure and encoding of a Data Set representing the data associated with a SOP Class shall follow <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. The specification of Transfer Syntaxes that may be used to encode such a Data Set, is also defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
         </section>
         <section label="6.2.3.2" status="4" xml:id="sect_6.2.3.2">
           <title>Concept of the DICOM File Format</title>
-          <para xml:id="para_362102dc-8f69-4d8b-9c5c-adcee210db56">The encapsulation of a DICOM Data Set in a File shall follow the specifications of Section 7 of this Part. These encapsulation rules define a DICOM File Format able to contain in a File any DICOM Data set. Files are identified by File IDs. No semantics shall be inferred from these File IDs, nor from their structure.</para>
+          <para xml:id="para_362102dc-8f69-4d8b-9c5c-adcee210db56">The encapsulation of a DICOM Data Set in a File shall follow the specifications of Section 7 of this Part. These encapsulation rules define a DICOM File Format able to contain in a File any DICOM Data Set. Files are identified by File IDs. No semantics shall be inferred from these File IDs, nor from their structure.</para>
           <note>
             <para xml:id="para_f72fea34-29ad-498b-9a17-e2fdb8524370">A medical imaging application acting as a creator of a DICOM File may use semantic information to generate a File ID, but readers of DICOM files should not rely on apparent semantic content of a File ID.</para>
           </note>
@@ -945,7 +1063,7 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_77ff131c-a0a1-4400-961e-55ce9df54b2e">The DICOM Application Entity (AE) Title of the AE that wrote this file's content (or last updated it). If used, it allows the tracing of the source of errors in the event of media interchange problems. The policies associated with AE Titles are the same as those defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>.</para>
               <note>
-<para xml:id="para_7bc0bfa5-b241-4653-943f-47ed465fdaa0">If the data set was created de novo by the application writing the file, its AE Title, if it has one, may be used. If the data set was received over the network, there is potential ambiguity as to whether the value is the same as Sending Application Entity Title (0002,0017) or Receiving Application Entity Title (0002,0018) or some other value.</para>
+<para xml:id="para_7bc0bfa5-b241-4653-943f-47ed465fdaa0">If the Data Set was created de novo by the application writing the file, its AE Title, if it has one, may be used. If the Data Set was received over the network, there is potential ambiguity as to whether the value is the same as Sending Application Entity Title (0002,0017) or Receiving Application Entity Title (0002,0018) or some other value.</para>
 </note>
             </td>
           </tr>
@@ -962,7 +1080,7 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_7d19704f-4a61-4206-a73f-9d54006dbc5a">The DICOM Application Entity (AE) Title of the AE that sent this file's content over a network.</para>
               <note>
-<para xml:id="para_70f92a9d-5f85-4fe2-af0d-3f8c4234e65c">This is the AE that was the sender (source) of the content (the data set), in the case of a data set sent over the network (i.e., the Calling AET of the SCU for a C-STORE operation). If the data set was instead created de novo by the application writing the file, it should not be present.</para>
+<para xml:id="para_70f92a9d-5f85-4fe2-af0d-3f8c4234e65c">This is the AE that was the sender (source) of the content (the Data Set), in the case of a Data Set sent over the network (i.e., the Calling AET of the SCU for a C-STORE operation). If the Data Set was instead created de novo by the application writing the file, it should not be present.</para>
 </note>
             </td>
           </tr>
@@ -979,7 +1097,7 @@
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0f90227a-d348-4186-aa9d-04f33d60cf1e">The DICOM Application Entity (AE) Title of the AE that received this file's content over a network.</para>
               <note>
-<para xml:id="para_1e7670d8-1009-4032-899f-78fc71dc1898">This is the AE that was the recipient (destination) of the content (the data set), in the case of a data set received over the network (i.e., the Called AET of the SCP for a C-STORE operation). If the data set was instead created de novo by the application writing the file, it should not be present.</para>
+<para xml:id="para_1e7670d8-1009-4032-899f-78fc71dc1898">This is the AE that was the recipient (destination) of the content (the Data Set), in the case of a Data Set received over the network (i.e., the Called AET of the SCP for a C-STORE operation). If the Data Set was instead created de novo by the application writing the file, it should not be present.</para>
 </note>
             </td>
           </tr>
@@ -1014,7 +1132,7 @@
         </tbody>
       </table>
       <para xml:id="para_30c3d0e1-5179-42cb-b61a-3b59e6cfa5dd">Except for the 128 byte preamble and the 4 byte prefix, the File Meta Information shall be encoded using the Explicit VR Little Endian Transfer Syntax (UID=1.2.840.10008.1.2.1) as defined in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>. Values of each File Meta Element shall be padded when necessary to achieve an even length, as specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> by their corresponding Value Representation. The Unknown (UN) Value Representation shall not be used in the File Meta Information. For compatibility with future versions of this Standard, any Tag (0002,xxxx) not defined in <xref linkend="table_7.1-1" xrefstyle="select: label"/> shall be ignored.</para>
-      <para xml:id="para_c820193f-7a41-4470-a0f4-98b88433b403">Values of all Tags (0002,xxxx) are reserved for use by this Standard and later versions of DICOM. Data Elements with a group of 0002 shall not be used in data sets other than within the File Meta Information.</para>
+      <para xml:id="para_c820193f-7a41-4470-a0f4-98b88433b403">Values of all Tags (0002,xxxx) are reserved for use by this Standard and later versions of DICOM. Data Elements with a group of 0002 shall not be used in Data Sets other than within the File Meta Information.</para>
       <note>
         <para xml:id="para_51694a2b-6e02-4730-b0f1-c2707e7fe5e2">
 <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> specifies that Elements with Tags (0001,xxxx), (0003,xxxx), (0005,xxxx), and (0007,xxxx) shall not be used.</para>
@@ -1097,7 +1215,7 @@
           </listitem>
         </orderedlist>
       </note>
-      <para xml:id="para_a9a9647a-03d5-4131-a51a-c671aa4726bf">A File ID naming space (corresponding to a File-set) shall be associated with an appropriate feature of a Media Format defined structure. This mapping shall be specified in <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> for each Media Format specification (this is integral to the specification of the relationship between any specific Media Format services and the DICOM File Services defined in this part).</para>
+      <para xml:id="para_a9a9647a-03d5-4131-a51a-c671aa4726bf">A File ID naming space (corresponding to a File-set) shall be associated with an appropriate feature of a Media Format defined structure. This mapping shall be specified in <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> for each Media Format specification (this is integral to the specification of the relationship between any specific Media Format services and the DICOM File Services defined in this Part).</para>
       <note>
         <para xml:id="para_e3190aeb-651f-47be-8ca3-5d6d115e5a42">An example of such a relationship is to map the File ID naming space to a volume in a personal computer Media Format or a partition in a workstation File System on a removable medium. Another example is to map the File ID naming space to a directory and its tree of sub-directories. In this case it could offer the possibility of supporting multiple File-sets (one per directory) on the same physical medium. Each File-set would have its own DICOMDIR File. To ensure interoperability, <olink targetdoc="PS3.12" targetptr="PS3.12" xrefstyle="select: labelnumber"/> shall specify these specific mapping rules between the directories and the File ID naming space of a File-set (including the rules to unambiguously locate the DICOMDIR File).</para>
       </note>

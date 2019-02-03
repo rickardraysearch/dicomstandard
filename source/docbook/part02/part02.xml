@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2018e - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2019a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -87,12 +87,6 @@
   <chapter label="2" xml:id="chapter_2">
     <title>Normative References</title>
     <para xml:id="para_34485576-301f-4230-bb3c-3d48bb4d0b86">The following standards contain provisions, which, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
-    <para xml:id="para_d25645c2-e48c-4ec8-986a-7353f5cd8cff">ISO 7498-1 Information Processing Systems - Open Systems Interconnection - Basic Reference Model.</para>
-    <para xml:id="para_508c6091-835c-4bb7-bebb-e26cfae20e38">ISO 8649:1988 Information Processing Systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE).</para>
-    <para xml:id="para_3db34468-59e2-4469-8bf0-f4ba1fac6e99">ISO 8822:1988 Information Processing Systems - Open Systems Interconnection - Connection oriented presentation service definition.</para>
-    <para xml:id="para_d2bde75c-bd33-4782-87b5-dc9893cb111e">ISO/IEC 10646-1:2000 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 1: Architecture and Basic Multilingual Plane</para>
-    <para xml:id="para_a2eb71b4-c940-468c-9088-6b8182187748">ISO/IEC 10646-1:2000/Amd 1:2002 Mathematical symbols and other characters</para>
-    <para xml:id="para_c8e70f2b-bbe8-43af-8ca0-b5b4d2392909">ISO/IEC 10646-2:2001 Information Technology - Universal Multiple-Octet Coded Character Set (UCS) - Part 2: Supplementary Planes</para>
     <bibliography>
       <biblioentry xml:id="biblio_ISODirectives2">
         <abbrev>ISO/IEC Directives, Part 2</abbrev>
@@ -106,239 +100,395 @@
           <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
         </bibliosource>
       </biblioentry>
+        <biblioentry xml:id="biblio_ISO7498-1">
+            <abbrev>ISO 7498-1</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1994</date>
+            <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO8649">
+            <abbrev>ISO 8649</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1988</date>
+            <title>Information Processing Systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE)</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO8822">
+            <abbrev>ISO 8822</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1988</date>
+            <title>Information Processing Systems - Open Systems Interconnection - Connection oriented presentation service definition</title>
+        </biblioentry>
     </bibliography>
   </chapter>
-  <chapter label="3" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_3c261a9e-b786-48ca-8deb-a10f5443ee63">For the purposes of this Standard the following definitions apply.</para>
-    <section label="3.1" xml:id="sect_3.1">
-      <title>Reference Model Definitions</title>
-      <para xml:id="para_13fe50b8-a8b5-4e2e-a2fd-69e822250d2a">This Part makes use of the following terms defined in ISO 7498-1:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_a745cc59-bb63-477a-8ff7-b98b7a8e9447">Application Entity</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_a6bd82ba-3a22-41e8-963e-43b5dfccd315">Application Entity Title</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_9b9ec542-af0b-4b10-92c4-558afa5e910b">Protocol Data Unit</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_0fe70ad9-c046-405d-af98-7982b3366738">Transfer Syntax.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" xml:id="sect_3.2">
-      <title>ACSE Service Definitions</title>
-      <para xml:id="para_f608c503-c544-415a-b8a0-a3930df39af7">This Part makes use of the following terms defined in ISO 8649:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_74bea9ff-edac-4a7f-9c54-5c1c20a0c2fb">Association or Application Association</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_cd0efa42-8af2-4bf1-8af1-a8028035a7c3">Association Initiator.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.3" xml:id="sect_3.3">
-      <title>Presentation Service Definitions</title>
-      <para xml:id="para_5cd4d444-708c-424d-8d7d-d5fa0e0955b6">This Part makes use of the following terms defined in ISO 8822:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_30669f56-e1d4-4c06-a812-ac13f80035d7">Abstract Syntax</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_38f8e25b-883d-4cf5-a150-0d41f2d61242">Abstract Syntax Name</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_82ef5601-7efb-4f4d-9267-fb4d31a18dcf">Presentation Context</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_dd3d72b7-abc2-418b-bf15-e9968f8cd6de">Transfer Syntax</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d67af871-7d58-4464-8551-8ab14733ad10">Transfer Syntax Name.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.4" xml:id="sect_3.4">
-      <title>DICOM Introduction and Overview Definitions</title>
-      <para xml:id="para_9e95a44c-b6a6-41b2-9aab-0fcfe6a5f38e">This Part makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_a9983731-eca8-40f6-a39a-d952a8a3fc5a">Information Object</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.5" xml:id="sect_3.5">
-      <title>DICOM Information Object Definitions</title>
-      <para xml:id="para_4f8f8b67-872a-4f72-a6b1-c544659e7d18">This Part makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_9f759fcc-94ff-405f-9e89-75afbe7c6b70">Information Object Definition (IOD).</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.6" xml:id="sect_3.6">
-      <title>DICOM Service Class Specification Definitions</title>
-      <para xml:id="para_f8ec4315-5416-42ff-93a5-57704040144d">This Part makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_51dabb2d-39c2-4dec-b690-dcb84c1c9d39">Real-World Activity</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_3d63abde-d66f-4da6-a732-7810b1c189c0">Service Class.</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_951a5b5c-a637-4ee9-91c2-a7aa96b648cc">Service Class User (SCU)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_81c24861-53f0-4d09-b053-eaf2a55e7b7f">Service Class Provider (SCP)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_de796d37-8d56-40d7-a680-3a3b257822ee">Service-Object Pair (SOP) Class</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_b4b68b4b-bed9-4325-826a-7214479db2a0">Meta SOP Class.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.7" xml:id="sect_3.7">
-      <title>DICOM Data Structure and Encoding Definitions</title>
-      <para xml:id="para_5217bf05-94f0-4077-bf5b-569fd007480e">This Part makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_64ab0cf1-ff73-4fda-8d17-cdad3b0a8b4b">DICOM Defined UID</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_68f0278d-090e-4961-ba14-aee57518d054">Privately Defined UID</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_207f4f16-038e-427f-86a2-7131fa6089d5">Transfer Syntax: (Standard and Private)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_0244c1d1-9ec1-435b-99e8-1dc58ae1d681">Unique Identifier (UID).</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.8" xml:id="sect_3.8">
-      <title>DICOM Message Exchange Definitions</title>
-      <para xml:id="para_48367d2b-9805-498a-b841-744bc688ce5b">This Part makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_00bf5a79-7355-4017-a777-b17c6561cb1c">Extended Negotiation</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_1aac0d75-0f31-4683-8dba-fcbeb8ea266d">Implementation Class UID.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.9" xml:id="sect_3.9">
-      <title>DICOM Upper Layer Service Definitions</title>
-      <para xml:id="para_fd0c4947-8e5f-4524-a55e-3fd84884dde8">This Part makes use of the following terms defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_46bc675a-a189-4053-a168-d731b9eadd0a">Unique Identifier (UID)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_3aa54f28-17c1-4016-886e-30e93135f8e4">DICOM Upper Layer Service</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_35452382-ba89-451d-9834-a582723a0353">Presentation Address.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.10" xml:id="sect_3.10">
-      <title>Media Storage and File Format for Data Interchange</title>
-      <para xml:id="para_307fc38d-aecb-43ae-a464-d798ec09d9e7">This Part makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>:</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_2a62fec9-bc6a-44b3-b6b1-a479f9680984">File-set</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d473b01c-ae1f-4a75-9714-18f773d6168d">File-set Creator (FSC)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_97150f57-c5ec-44ce-8adf-7b92d27182a0">File-set Reader (FSR)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_c5152d13-e7d9-444e-8d2e-1037fbf5dfdb">File-set Updater (FSU)</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_18e17ffa-624f-429b-aa3d-8b745e1b447a">Application Profile</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.11" xml:id="sect_3.11">
-      <title>DICOM Conformance</title>
-      <para xml:id="para_bd7b5efa-f3d8-4532-a61c-271be091da79">This Part uses the following definitions:</para>
-      <section label="3.11.1" xml:id="sect_3.11.1">
-        <title>Conformance Statement</title>
-        <para xml:id="para_40f61d91-0a20-48c8-afbf-37bff87d6fb0">A formal statement associated with a specific implementation of the DICOM Standard. It specifies the Service Classes, Information Objects, Communications Protocols and Media Storage Application Profiles supported by the implementation.</para>
-      </section>
-      <section label="3.11.2" xml:id="sect_3.11.2">
-        <title>Standard SOP Class</title>
-        <para xml:id="para_5cacc424-c96b-4b71-b2f8-d9594f0db79d">A SOP Class defined in the DICOM Standard that is used in an implementation with no modifications.</para>
-      </section>
-      <section label="3.11.3" xml:id="sect_3.11.3">
-        <title>Standard Extended SOP Class</title>
-        <para xml:id="para_3f1731ec-f189-4d16-917e-465c968937f5">A SOP Class defined in the DICOM Standard extended in an implementation with additional Type 3 Attributes. The additional Attributes may either be drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, or may be Private Attributes. The semantics of the related Standard SOP Class shall not be modified by the additional Type 3 Attributes when absent. Therefore, the Standard Extended SOP Class utilizes the same UID as the related Standard SOP Class.</para>
-        <note>
-          <para xml:id="para_f729c47e-af6f-418f-8ae9-09ca4d5dc9c5">IODs from a Standard Extended SOP Class may be freely exchanged between DICOM implementations since implementations unfamiliar with the additional Type 3 Attributes would simply ignore them.</para>
-        </note>
-      </section>
-      <section label="3.11.4" xml:id="sect_3.11.4">
-        <title>Specialized SOP Class</title>
-        <para xml:id="para_951c7895-8251-4bc0-8250-b52c6dae9845">A SOP Class derived from a Standard SOP Class that has been specialized in an implementation by additional Type 1, 1C, 2, 2C, or 3 Attributes, by enumeration of specific permitted values for Attributes, or by enumeration of specific permitted Templates. The additional Attributes may either be drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, or may be Private Attributes. The enumeration of permitted Attribute values or Templates shall be a subset of those permitted in the related Standard SOP Class. Since the semantics of the related Standard SOP Class may be modified by the additional Attributes, a Specialized SOP Class utilizes a Privately Defined UID that differs from the UID for the related Standard SOP Class.</para>
-        <note>
-          <orderedlist numeration="arabic">
-            <listitem>
-              <para xml:id="para_a8b473c5-4f3e-41e2-85d9-325749a067e6">Since a Specialized SOP Class has a different UID than a Standard or Standard Extended SOP Class, other DICOM implementations may not recognize the Specialized SOP Class. Because of this limitation, a Specialized SOP Class should only be used when a Standard or Standard Extended SOP Class would not be appropriate. Before different implementations can exchange Instances in a Specialized SOP Class, the implementations must agree on the UID, content (in particular the additional Type 1, 1C, 2, and 2C Attributes), and semantics of the Specialized SOP Class. A Specialized SOP Class may be used to create a new or experimental SOP Class that is closely related to a Standard SOP Class.</para>
-            </listitem>
-            <listitem>
-              <para xml:id="para_eec734d1-30e9-4f89-95e4-8ed8f0b47454">The Association Negotiation for a Specialized SOP Class may include a SOP Class Common Extended Negotiation Sub-Item (as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>) for identification of the Service Class and of the Related General SOP Class from which it was specialized. This may allow a receiving application, without prior agreement on the Specialized SOP Class IOD, to process Instances of that class as if they were instances of a Related General SOP Class.</para>
-            </listitem>
-          </orderedlist>
-        </note>
-      </section>
-      <section label="3.11.5" xml:id="sect_3.11.5">
-        <title>Private SOP Class</title>
-        <para xml:id="para_deca5c16-1852-4aa4-b12d-1e7f6ae2b43f">A SOP Class that is not defined in the DICOM Standard, but is published in an implementation's Conformance Statement.</para>
-        <note>
-          <para xml:id="para_885ed23a-ec47-4207-a949-357fb5dee0f1">Since a Private SOP Class is not defined in the DICOM Standard, other DICOM implementations may not recognize the Private SOP Class. Because of this limitation, a Private SOP Class should only be used when a Standard or Standard Extended SOP Class would not be appropriate. In order for different implementations to exchange Instances in a Private SOP Class, the implementations must agree on the UID, content (in particular the Type 1, 1C, 2, and 2C Attributes), and semantics of the Private SOP Class. A Private SOP class may be used to create a totally new or experimental SOP Class.</para>
-        </note>
-      </section>
-      <section label="3.11.6" xml:id="sect_3.11.6">
-        <title>Standard Attribute</title>
-        <para xml:id="para_f8e86dbd-3a30-477c-b7e8-574165aedfcf">An Attribute defined in the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>.</para>
-      </section>
-      <section label="3.11.7" xml:id="sect_3.11.7">
-        <title>Private Attribute</title>
-        <para xml:id="para_b990b29c-2895-4d7f-8136-ec29a2d8e131">An Attribute that is not defined in the DICOM Standard.</para>
-      </section>
-      <section label="3.11.8" xml:id="sect_3.11.8">
-        <title>Standard Application Profile</title>
-        <para xml:id="para_4688c4f1-bcf3-404b-992e-16c520dafa9d">An Application Profile defined in the DICOM Standard that is used in an implementation with no modifications.</para>
-      </section>
-      <section label="3.11.9" xml:id="sect_3.11.9">
-        <title>Augmented Application Profile</title>
-        <para xml:id="para_b578ff0f-2d7f-4546-9598-51e682ad7a25">An Application Profile derived from a Standard Application Profile by incorporating support for additional Standard or Standard Extended SOP Classes.</para>
-      </section>
-      <section label="3.11.10" xml:id="sect_3.11.10">
-        <title>Private Application Profile</title>
-        <para xml:id="para_34dc3ff3-c222-4b70-a5a9-23636b41c6de">An Application Profile that is not defined in the DICOM Standard, but is published in an implementation's Conformance Statement.</para>
-      </section>
-      <section label="3.11.11" xml:id="sect_3.11.11">
-        <title>Security Profile</title>
-        <para xml:id="para_d5d2e9bc-d204-48c3-ac3b-920e87012532">A mechanism for selecting an appropriate set of choices from the Parts of the DICOM standard along with corresponding security mechanisms (e.g., encryption algorithms) for the support of security facilities.</para>
-      </section>
-      <section label="3.11.12" xml:id="sect_3.11.12">
-        <title>Transformation of DICOM SR to CDA</title>
-        <para xml:id="para_9c668d36-d27d-4832-8c06-e64362fcd424">A mechanism for mapping and transforming DICOM SR objects to HL7 CDA documents.</para>
-      </section>
-    </section>
-  </chapter>
+    <chapter label="3" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_3c261a9e-b786-48ca-8deb-a10f5443ee63">For the purposes of this Standard the following definitions apply.</para>
+        <glossary>
+            <glossdiv label="3.1" xml:id="sect_3.1">
+                <title>Reference Model Definitions</title>
+                <para xml:id="para_13fe50b8-a8b5-4e2e-a2fd-69e822250d2a">This Part makes use of the following terms defined in <xref linkend="biblio_ISO7498-1"/>:</para>
+                <glossentry xml:id="glossentry_ApplicationEntity" xreflabel="Application Entity">
+                    <glossterm>Application Entity</glossterm>
+                    <acronym>AE</acronym>
+                    <glossdef>
+                        <para xml:id="para_a745cc59-bb63-477a-8ff7-b98b7a8e9447">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationEntityTitle" xreflabel="Application Entity Title">
+                    <glossterm>Application Entity Title</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a6bd82ba-3a22-41e8-963e-43b5dfccd315">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ProtocolDataUnit" xreflabel="Protocol Data Unit">
+                    <glossterm>Protocol Data Unit</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9b9ec542-af0b-4b10-92c4-558afa5e910b">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntax" xreflabel="Transfer Syntax">
+                    <glossterm>Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_0fe70ad9-c046-405d-af98-7982b3366738">See <xref linkend="biblio_ISO7498-1"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.2" xml:id="sect_3.2">
+                <title>ACSE Service Definitions</title>
+                <para xml:id="para_f608c503-c544-415a-b8a0-a3930df39af7">This Part makes use of the following terms defined in <xref linkend="biblio_ISO8649"/>:</para>
+
+                <glossentry xml:id="glossentry_Association" xreflabel="Association">
+                    <glossterm>Association</glossterm>
+                    <glossdef>
+                        <para xml:id="para_74bea9ff-edac-4a7f-9c54-5c1c20a0c2fb">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AssociationInitiator" xreflabel="Association Initiator">
+                    <glossterm>Association Initiator</glossterm>
+                    <glossdef>
+                        <para xml:id="para_cd0efa42-8af2-4bf1-8af1-a8028035a7c3">See <xref linkend="biblio_ISO8649"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.3" xml:id="sect_3.3">
+                <title>Presentation Service Definitions</title>
+                <para xml:id="para_5cd4d444-708c-424d-8d7d-d5fa0e0955b6">This Part makes use of the following terms defined in <xref linkend="biblio_ISO8822"/>:</para>
+
+                <glossentry xml:id="glossentry_AbstractSyntax" xreflabel="Abstract Syntax">
+                    <glossterm>Abstract Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_30669f56-e1d4-4c06-a812-ac13f80035d7">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AbstractSyntaxName" xreflabel="Abstract Syntax Name">
+                    <glossterm>Abstract Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_38f8e25b-883d-4cf5-a150-0d41f2d61242">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationContext" xreflabel="Presentation Context">
+                    <glossterm>Presentation Context</glossterm>
+                    <glossdef>
+                        <para xml:id="para_82ef5601-7efb-4f4d-9267-fb4d31a18dcf">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransferSyntaxName" xreflabel="Transfer Syntax Name">
+                    <glossterm>Transfer Syntax Name</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d67af871-7d58-4464-8551-8ab14733ad10">See <xref linkend="biblio_ISO8822"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.4" xml:id="sect_3.4">
+                <title>DICOM Introduction and Overview Definitions</title>
+                <para xml:id="para_9e95a44c-b6a6-41b2-9aab-0fcfe6a5f38e">This Part makes use of the following terms defined in <olink targetdoc="PS3.1" targetptr="PS3.1" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_ConformanceStatement" xreflabel="Conformance Statement">
+                    <glossterm>Conformance Statement</glossterm>
+                    <glossdef>
+                        <para xml:id="para_862b0907-6d2d-47fc-acf9-2d639d0c3bd3">
+<olink targetdoc="PS3.1" targetptr="glossentry_ConformanceStatement"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_InformationObject" xreflabel="Information Object">
+                    <glossterm>Information Object</glossterm>
+                    <glossdef>
+                        <para xml:id="para_a9983731-eca8-40f6-a39a-d952a8a3fc5a">
+<olink targetdoc="PS3.1" targetptr="glossentry_InformationObject"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceObjectPairClass" xreflabel="Service-Object Pair Class (SOP Class)">
+                    <glossterm>Service-Object Pair Class</glossterm>
+                    <acronym>SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_de796d37-8d56-40d7-a680-3a3b257822ee">
+<olink targetdoc="PS3.1" targetptr="glossentry_ServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.5" xml:id="sect_3.5">
+                <title>DICOM Information Object Definitions</title>
+                <para xml:id="para_4f8f8b67-872a-4f72-a6b1-c544659e7d18">This Part makes use of the following terms defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_InformationObjectDefinition" xreflabel="Information Object Definition (IOD)">
+                    <glossterm>Information Object Definition</glossterm>
+                    <acronym>IOD</acronym>
+                    <glossdef>
+                        <para xml:id="para_9f759fcc-94ff-405f-9e89-75afbe7c6b70">
+<olink targetdoc="PS3.3" targetptr="glossentry_InformationObjectDefinition"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.6" xml:id="sect_3.6">
+                <title>DICOM Service Class Specification Definitions</title>
+                <para xml:id="para_f8ec4315-5416-42ff-93a5-57704040144d">This Part makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_RealWorldActivity" xreflabel="Real-World Activity">
+                    <glossterm>Real-World Activity</glossterm>
+                    <glossdef>
+                        <para xml:id="para_51dabb2d-39c2-4dec-b690-dcb84c1c9d39">
+<olink targetdoc="PS3.4" targetptr="glossentry_RealWorldActivity"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceClass" xreflabel="Service Class">
+                    <glossterm>Service Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3d63abde-d66f-4da6-a732-7810b1c189c0">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceClassUser" xreflabel="Service Class User (SCU)">
+                    <glossterm>Service Class User</glossterm>
+                    <acronym>SCU</acronym>
+                    <glossdef>
+                        <para xml:id="para_951a5b5c-a637-4ee9-91c2-a7aa96b648cc">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceClassUser"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ServiceClassProvider" xreflabel="Service Class Provider (SCP)">
+                    <glossterm>Service Class Provider</glossterm>
+                    <acronym>SCP</acronym>
+                    <glossdef>
+                        <para xml:id="para_81c24861-53f0-4d09-b053-eaf2a55e7b7f">
+<olink targetdoc="PS3.4" targetptr="glossentry_ServiceClassProvider"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_MetaServiceObjectPairClass" xreflabel="Meta Service-Object Pair Class (Meta SOP Class)">
+                    <glossterm>Meta Service-Object Pair Class</glossterm>
+                    <acronym>Meta SOP Class</acronym>
+                    <glossdef>
+                        <para xml:id="para_b4b68b4b-bed9-4325-826a-7214479db2a0">
+<olink targetdoc="PS3.4" targetptr="glossentry_MetaServiceObjectPairClass"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.7" xml:id="sect_3.7">
+                <title>DICOM Data Structure and Encoding Definitions</title>
+                <para xml:id="para_5217bf05-94f0-4077-bf5b-569fd007480e">This Part makes use of the following terms defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_DataSet" xreflabel="Data Set">
+                    <glossterm>Data Set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_6598130b-7010-40dc-b6f7-700ec8926490">
+<olink targetdoc="PS3.5" targetptr="glossentry_DataSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMTransferSyntax" xreflabel="DICOM Transfer Syntax">
+                    <glossterm>DICOM Transfer Syntax</glossterm>
+                    <glossdef>
+                        <para xml:id="para_207f4f16-038e-427f-86a2-7131fa6089d5">
+<olink targetdoc="PS3.5" targetptr="glossentry_DICOMTransferSyntax"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_UniqueIdentifier" xreflabel="Unique Identifier (UID).">
+                    <glossterm>Unique Identifier</glossterm>
+                    <acronym>UID</acronym>
+                    <glossdef>
+                        <para xml:id="para_0244c1d1-9ec1-435b-99e8-1dc58ae1d681">
+<olink targetdoc="PS3.5" targetptr="glossentry_UniqueIdentifier"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.8" xml:id="sect_3.8">
+                <title>DICOM Message Exchange Definitions</title>
+                <para xml:id="para_48367d2b-9805-498a-b841-744bc688ce5b">This Part makes use of the following terms defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>:</para>
+                <glossentry xml:id="glossentry_ExtendedNegotiation" xreflabel="Extended Negotiation">
+                    <glossterm>Extended Negotiation</glossterm>
+                    <glossdef>
+                        <para xml:id="para_00bf5a79-7355-4017-a777-b17c6561cb1c">
+<olink targetdoc="PS3.7" targetptr="glossentry_ExtendedNegotiation"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ImplementationClassUID" xreflabel="Implementation Class UID">
+                    <glossterm>Implementation Class UID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_1aac0d75-0f31-4683-8dba-fcbeb8ea266d">
+<olink targetdoc="PS3.7" targetptr="glossentry_ImplementationClassUID"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.9" xml:id="sect_3.9">
+                <title>DICOM Upper Layer Service Definitions</title>
+                <para xml:id="para_fd0c4947-8e5f-4524-a55e-3fd84884dde8">This Part makes use of the following terms defined in <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_DICOMUpperLayerService" xreflabel="DICOM Upper Layer Service">
+                    <glossterm>DICOM Upper Layer Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3aa54f28-17c1-4016-886e-30e93135f8e4">
+<olink targetdoc="PS3.8" targetptr="glossentry_DICOMUpperLayerService"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PresentationAddress" xreflabel="Presentation Address">
+                    <glossterm>Presentation Address</glossterm>
+                    <glossdef>
+                        <para xml:id="para_35452382-ba89-451d-9834-a582723a0353">
+<olink targetdoc="PS3.8" targetptr="glossentry_PresentationAddress"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.10" xml:id="sect_3.10">
+                <title>Media Storage and File Format for Data Interchange</title>
+                <para xml:id="para_307fc38d-aecb-43ae-a464-d798ec09d9e7">This Part makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>:</para>
+
+                <glossentry xml:id="glossentry_FileSet" xreflabel="File-set">
+                    <glossterm>File-set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_2a62fec9-bc6a-44b3-b6b1-a479f9680984">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetCreator" xreflabel="File-set Creator (FSC)">
+                    <glossterm>File-set Creator</glossterm>
+                    <acronym>FSC</acronym>
+                    <glossdef>
+                        <para xml:id="para_d473b01c-ae1f-4a75-9714-18f773d6168d">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSetCreator"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetReader" xreflabel="File-set Reader (FSR)">
+                    <glossterm>File-set Reader</glossterm>
+                    <acronym>FSR</acronym>
+                    <glossdef>
+                        <para xml:id="para_97150f57-c5ec-44ce-8adf-7b92d27182a0">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSetReader"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSetUpdater" xreflabel="File-set Updater (FSU)">
+                    <glossterm>File-set Updater</glossterm>
+                    <acronym>FSU</acronym>
+                    <glossdef>
+                        <para xml:id="para_c5152d13-e7d9-444e-8d2e-1037fbf5dfdb">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSetUpdater"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_ApplicationProfile" xreflabel="Application Profile">
+                    <glossterm>Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_18e17ffa-624f-429b-aa3d-8b745e1b447a">
+<olink targetdoc="PS3.10" targetptr="glossentry_ApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+
+            </glossdiv>
+            <glossdiv label="3.11" xml:id="sect_3.11">
+                <title>DICOM Conformance</title>
+                <para xml:id="para_bd7b5efa-f3d8-4532-a61c-271be091da79">This Part uses the following definitions:</para>
+                <glossentry xml:id="glossentry_StandardSOPClass" xreflabel="Standard SOP Class">
+                    <glossterm>Standard SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_5cacc424-c96b-4b71-b2f8-d9594f0db79d">A SOP Class defined in the DICOM Standard that is used in an implementation with no modifications.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardExtendedSOPClass" xreflabel="Standard Extended SOP Class">
+                    <glossterm>Standard Extended SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_3f1731ec-f189-4d16-917e-465c968937f5">A SOP Class defined in the DICOM Standard extended in an implementation with additional Type 3 Attributes. The additional Attributes may either be drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, or may be Private Attributes. The semantics of the related Standard SOP Class shall not be modified by the additional Type 3 Attributes when absent. Therefore, the Standard Extended SOP Class utilizes the same UID as the related Standard SOP Class.</para>
+                        <note>
+                            <para xml:id="para_f729c47e-af6f-418f-8ae9-09ca4d5dc9c5">IODs from a Standard Extended SOP Class may be freely exchanged between DICOM implementations since implementations unfamiliar with the additional Type 3 Attributes would simply ignore them.</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SpecializedSOPClass" xreflabel="Specialized SOP Class">
+                    <glossterm>Specialized SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_951c7895-8251-4bc0-8250-b52c6dae9845">A SOP Class derived from a Standard SOP Class that has been specialized in an implementation by additional Type 1, 1C, 2, 2C, or 3 Attributes, by enumeration of specific permitted values for Attributes, or by enumeration of specific permitted Templates. The additional Attributes may either be drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, or may be Private Attributes. The enumeration of permitted Attribute values or Templates shall be a subset of those permitted in the related Standard SOP Class. Since the semantics of the related Standard SOP Class may be modified by the additional Attributes, a Specialized SOP Class utilizes a Privately Defined UID that differs from the UID for the related Standard SOP Class.</para>
+                        <note>
+                            <orderedlist numeration="arabic">
+                                <listitem>
+                                    <para xml:id="para_a8b473c5-4f3e-41e2-85d9-325749a067e6">Since a Specialized SOP Class has a different UID than a Standard or Standard Extended SOP Class, other DICOM implementations may not recognize the Specialized SOP Class. Because of this limitation, a Specialized SOP Class should only be used when a Standard or Standard Extended SOP Class would not be appropriate. Before different implementations can exchange Instances in a Specialized SOP Class, the implementations must agree on the UID, content (in particular the additional Type 1, 1C, 2, and 2C Attributes), and semantics of the Specialized SOP Class. A Specialized SOP Class may be used to create a new or experimental SOP Class that is closely related to a Standard SOP Class.</para>
+                                </listitem>
+                                <listitem>
+                                    <para xml:id="para_eec734d1-30e9-4f89-95e4-8ed8f0b47454">The Association Negotiation for a Specialized SOP Class may include a SOP Class Common Extended Negotiation Sub-Item (as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>) for identification of the Service Class and of the Related General SOP Class from which it was specialized. This may allow a receiving application, without prior agreement on the Specialized SOP Class IOD, to process Instances of that class as if they were instances of a Related General SOP Class.</para>
+                                </listitem>
+                            </orderedlist>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PrivateSOPClass" xreflabel="Private SOP Class">
+                    <glossterm>Private SOP Class</glossterm>
+                    <glossdef>
+                        <para xml:id="para_deca5c16-1852-4aa4-b12d-1e7f6ae2b43f">A SOP Class that is not defined in the DICOM Standard, but is published in an implementation's Conformance Statement.</para>
+                        <note>
+                            <para xml:id="para_885ed23a-ec47-4207-a949-357fb5dee0f1">Since a Private SOP Class is not defined in the DICOM Standard, other DICOM implementations may not recognize the Private SOP Class. Because of this limitation, a Private SOP Class should only be used when a Standard or Standard Extended SOP Class would not be appropriate. In order for different implementations to exchange Instances in a Private SOP Class, the implementations must agree on the UID, content (in particular the Type 1, 1C, 2, and 2C Attributes), and semantics of the Private SOP Class. A Private SOP class may be used to create a totally new or experimental SOP Class.</para>
+                        </note>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardAttribute" xreflabel="Standard Attribute">
+                    <glossterm>Standard Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_f8e86dbd-3a30-477c-b7e8-574165aedfcf">An Attribute defined in the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PrivateAttribute" xreflabel="Private Attribute">
+                    <glossterm>Private Attribute</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b990b29c-2895-4d7f-8136-ec29a2d8e131">An Attribute that is not defined in the DICOM Standard.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_StandardApplicationProfile" xreflabel="Standard Application Profile">
+                    <glossterm>Standard Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_4688c4f1-bcf3-404b-992e-16c520dafa9d">An Application Profile defined in the DICOM Standard that is used in an implementation with no modifications.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_AugmentedApplicationProfile" xreflabel="Augmented Application Profile">
+                    <glossterm>Augmented Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_b578ff0f-2d7f-4546-9598-51e682ad7a25">An Application Profile derived from a Standard Application Profile by incorporating support for additional Standard or Standard Extended SOP Classes.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_PrivateApplicationProfile" xreflabel="Private Application Profile">
+                    <glossterm>Private Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_34dc3ff3-c222-4b70-a5a9-23636b41c6de">An Application Profile that is not defined in the DICOM Standard, but is published in an implementation's Conformance Statement.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_SecurityProfile" xreflabel="Security Profile">
+                    <glossterm>Security Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d5d2e9bc-d204-48c3-ac3b-920e87012532">A mechanism for selecting an appropriate set of choices from the Parts of the DICOM Standard along with corresponding security mechanisms (e.g., encryption algorithms) for the support of security facilities.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_TransformationOfDICOMSRToCDA" xreflabel="Transformation of DICOM SR to CDA">
+                    <glossterm>Transformation of DICOM SR to CDA</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9c668d36-d27d-4832-8c06-e64362fcd424">A mechanism for mapping and transforming DICOM SR objects to HL7 CDA documents.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
   <chapter label="4" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
     <para xml:id="para_b6a4bddc-bea0-40a1-a158-6fa55b146091">The following symbols and abbreviations are used in this Part.</para>
@@ -4335,7 +4485,7 @@
         </section>
         <section label="A.4.1.2" xml:id="sect_A.4.1.2">
           <title>Functional Definition of AEs</title>
-          <para xml:id="para_955fdcea-6cba-420c-9ac2-22daa005e5c7">This part shall contain a functional definition for each individual local Application Entity. This shall describe in general terms the functions to be performed by the AE, and the DICOM services used to accomplish these functions. In this sense, "DICOM services" refers not only to DICOM Service Classes, but also to lower level DICOM services, such as Association Services.</para>
+          <para xml:id="para_955fdcea-6cba-420c-9ac2-22daa005e5c7">This Part shall contain a functional definition for each individual local Application Entity. This shall describe in general terms the functions to be performed by the AE, and the DICOM services used to accomplish these functions. In this sense, "DICOM services" refers not only to DICOM Service Classes, but also to lower level DICOM services, such as Association Services.</para>
           <section label="A.4.1.2.1" xml:id="sect_A.4.1.2.1">
             <title>Functional Definition of "Application Entity &lt;1&gt;"</title>
             <para xml:id="para_91abad1e-b959-40bb-86b2-a33944a20536">Functional description of "Application Entity &lt;1&gt;" (substitute actual AE name), i.e., what is it that the AE performs.</para>
@@ -25947,7 +26097,7 @@
                           <para xml:id="para_f35f9756-1d29-43e4-8b78-e8e84e6c251c">A9xx</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_513ce7b2-5370-404e-af16-f3af06b0c974">Never sent - data set is not checked prior to storage</para>
+                          <para xml:id="para_513ce7b2-5370-404e-af16-f3af06b0c974">Never sent - Data Set is not checked prior to storage</para>
                         </td>
                       </tr>
                       <tr valign="top">
@@ -25985,7 +26135,7 @@
                           <para xml:id="para_e4bd16d5-3311-41bf-a03c-f66fc5a7a13b">B007</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_df2a0f7f-7d04-4edd-be49-d7e6ab047d22">Never sent - data set is not checked prior to storage</para>
+                          <para xml:id="para_df2a0f7f-7d04-4edd-be49-d7e6ab047d22">Never sent - Data Set is not checked prior to storage</para>
                         </td>
                       </tr>
                       <tr valign="top">
@@ -30404,7 +30554,7 @@
                               <para xml:id="para_b7375c5b-f912-4514-9eb6-ffd782eebab6">B600</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_56690644-9e88-4c26-8149-ee04f4201398">A data set is returned with valid attributes/values.</para>
+                              <para xml:id="para_56690644-9e88-4c26-8149-ee04f4201398">A Data Set is returned with valid attributes/values.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -30432,7 +30582,7 @@
                               <para xml:id="para_455c78a4-0270-45c6-8cdc-b3b89a76314f">0106</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_be4e2cf4-8ebb-48e7-a070-5bfeaf5d15c2">A data set is returned of all invalid attributes/values</para>
+                              <para xml:id="para_be4e2cf4-8ebb-48e7-a070-5bfeaf5d15c2">A Data Set is returned of all invalid attributes/values</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -30529,7 +30679,7 @@
                               <para xml:id="para_d1c847e9-0d8c-4ac9-9d9a-860aec36f26c">0116</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_cb3d4b02-7aea-4a24-8db9-09c821e35676">The attribute in question are returned in the responses data set.</para>
+                              <para xml:id="para_cb3d4b02-7aea-4a24-8db9-09c821e35676">The attribute in question are returned in the responses Data Set.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -30557,7 +30707,7 @@
                               <para xml:id="para_ae63ded0-698a-44d5-a2ae-48a643980494">B600</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_c0223848-4538-4096-a4ca-1b1ab1236266">.A data set is returned with valid attributes/values.</para>
+                              <para xml:id="para_c0223848-4538-4096-a4ca-1b1ab1236266">.A Data Set is returned with valid attributes/values.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -30571,7 +30721,7 @@
                               <para xml:id="para_6d33427e-af51-41d9-8170-d6020bc97281">0106</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_efbd89da-7dda-422b-9dbf-2a5364afe8fa">A data set is returned of all invalid attributes/values</para>
+                              <para xml:id="para_efbd89da-7dda-422b-9dbf-2a5364afe8fa">A Data Set is returned of all invalid attributes/values</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31362,7 +31512,7 @@
                               <para xml:id="para_9bd257ae-035a-453a-b6e9-2a9e433729a1">0116</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_be330045-8664-4367-9d1a-5b55d782ced3">With the exception of the referenced Film Session sequence, the referenced Image Box sequence and the possible referenced Annotation Box sequence, the attribute in question will be the only attribute returned in the responses data set.</para>
+                              <para xml:id="para_be330045-8664-4367-9d1a-5b55d782ced3">With the exception of the referenced Film Session sequence, the referenced Image Box sequence and the possible referenced Annotation Box sequence, the attribute in question will be the only attribute returned in the responses Data Set.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31390,7 +31540,7 @@
                               <para xml:id="para_b7a011cd-665c-475d-998a-3b8df631cc50">0106</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_57fc6563-50c8-4a3f-b1e3-b5102c13959c">A data set is returned with all invalid attributes/values</para>
+                              <para xml:id="para_57fc6563-50c8-4a3f-b1e3-b5102c13959c">A Data Set is returned with all invalid attributes/values</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31462,7 +31612,7 @@
                             </td>
                             <td align="left" colspan="1" rowspan="1">
                               <para xml:id="para_f6274408-5117-46fd-b63b-7c059eb852a7">A mandatory attribute was given, but had no value.</para>
-                              <para xml:id="para_4eeeb242-6c57-47e7-86d2-6d509b7f3a4e">A data set is returned of all attributes/values missing.</para>
+                              <para xml:id="para_4eeeb242-6c57-47e7-86d2-6d509b7f3a4e">A Data Set is returned of all attributes/values missing.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31784,7 +31934,7 @@
                             </td>
                             <td align="left" colspan="1" rowspan="1">
                               <para xml:id="para_e1bceebe-37c6-4a94-aaa7-5da04fe8bcc3">Attributes not recognized within the context of this SOP class. For example, an N-Set on the Image Display format attribute was attempted. A list of offending attribute tags is returned in Attribute List (0000,1005).</para>
-                              <para xml:id="para_75ddea24-13a4-46e6-aadb-909217209459">A data set is still returned with valid attributes/values.</para>
+                              <para xml:id="para_75ddea24-13a4-46e6-aadb-909217209459">A Data Set is still returned with valid attributes/values.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31798,7 +31948,7 @@
                               <para xml:id="para_5b8fbef5-e387-4200-9a71-1d64c93e7437">0116</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_e7f56ac7-48ea-4008-8668-63cbc77b0fa5">The attribute in question is the only attribute returned in the responses data set.</para>
+                              <para xml:id="para_e7f56ac7-48ea-4008-8668-63cbc77b0fa5">The attribute in question is the only attribute returned in the responses Data Set.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31812,7 +31962,7 @@
                               <para xml:id="para_d1c3bf5c-bdbc-4b2a-8b4e-34a7efce78fb">0106</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                              <para xml:id="para_8a87561b-27a9-48cc-b96c-bdd4a467353a">A data set is returned with all invalid attributes/values</para>
+                              <para xml:id="para_8a87561b-27a9-48cc-b96c-bdd4a467353a">A Data Set is returned with all invalid attributes/values</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -31855,7 +32005,7 @@
                             </td>
                             <td align="left" colspan="1" rowspan="1">
                               <para xml:id="para_1658d9a3-5fc9-4edf-9911-c948e7677e62">A mandatory attribute was given, but had no value.</para>
-                              <para xml:id="para_b43ab01d-e7d6-40b8-b0f9-dd5fd5b046f9">A data set is returned of all attributes/values missing.</para>
+                              <para xml:id="para_b43ab01d-e7d6-40b8-b0f9-dd5fd5b046f9">A Data Set is returned of all attributes/values missing.</para>
                             </td>
                           </tr>
                         </tbody>
@@ -32483,7 +32633,7 @@
                             <para xml:id="para_4b220e2c-d374-4683-ace1-4d7062524465">0116</para>
                           </td>
                           <td align="left" colspan="1" rowspan="1">
-                            <para xml:id="para_e4a95f80-928b-43c9-a81b-67de7af60668">The attribute in question is the only attribute returned in the responses data set.</para>
+                            <para xml:id="para_e4a95f80-928b-43c9-a81b-67de7af60668">The attribute in question is the only attribute returned in the responses Data Set.</para>
                           </td>
                         </tr>
                         <tr valign="top">
@@ -32569,7 +32719,7 @@
                           </td>
                           <td align="left" colspan="1" rowspan="1">
                             <para xml:id="para_14f78bce-cf2d-4299-ba8a-8ebd5bff7d2f">A mandatory attribute was given, but had no value.</para>
-                            <para xml:id="para_9da6e965-8233-4a7c-9f47-a42e1a506321">A data set is returned of all attributes/values missing.</para>
+                            <para xml:id="para_9da6e965-8233-4a7c-9f47-a42e1a506321">A Data Set is returned of all attributes/values missing.</para>
                           </td>
                         </tr>
                         <tr valign="top">
@@ -32955,7 +33105,7 @@
                             <td align="left" colspan="1" rowspan="1">
                               <para xml:id="para_90d2f65c-aa3a-42a5-bd4e-d910b638aa70">Attributes not recognized within the context of this SOP class. For example, unsupported attributes were requested.</para>
                               <para xml:id="para_2d5f101c-dc82-474f-95a6-1c88bb7a5b96">A list of offending attribute tags is returned in Attribute List (0000,1005).</para>
-                              <para xml:id="para_d40fb374-8c97-4e70-8b7b-ae9e09c38117">A data set is still returned with valid attributes/values.</para>
+                              <para xml:id="para_d40fb374-8c97-4e70-8b7b-ae9e09c38117">A Data Set is still returned with valid attributes/values.</para>
                             </td>
                           </tr>
                           <tr valign="top">
@@ -33314,7 +33464,7 @@
                           <para xml:id="para_e4373d66-41c7-46ff-bc2d-c2a5104047e7">0116</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_ea04f9b0-0704-4894-821b-b36a58350dbb">The attribute in question is the only attribute returned in the responses data set.</para>
+                          <para xml:id="para_ea04f9b0-0704-4894-821b-b36a58350dbb">The attribute in question is the only attribute returned in the responses Data Set.</para>
                         </td>
                       </tr>
                       <tr valign="top">
@@ -33328,7 +33478,7 @@
                           <para xml:id="para_5292a6bd-b532-4469-a63f-145cd554cddd">0106</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_b58ab2f2-28e4-466a-95d1-44abb2b59619">A data set is returned with all the invalid attributes/values.</para>
+                          <para xml:id="para_b58ab2f2-28e4-466a-95d1-44abb2b59619">A Data Set is returned with all the invalid attributes/values.</para>
                         </td>
                       </tr>
                       <tr valign="top">
@@ -33386,7 +33536,7 @@
                         </td>
                         <td align="left" colspan="1" rowspan="1">
                           <para xml:id="para_c8a7d985-a9c3-491b-a51c-e956cd1f0bad">A mandatory attribute was given, but had no value.</para>
-                          <para xml:id="para_536fc0c2-9363-426f-ac63-d3e75d5bec13">A data set is returned of all attributes/values missing.</para>
+                          <para xml:id="para_536fc0c2-9363-426f-ac63-d3e75d5bec13">A Data Set is returned of all attributes/values missing.</para>
                         </td>
                       </tr>
                     </tbody>
@@ -34084,7 +34234,7 @@
                           <td align="left" colspan="1" rowspan="1">
                             <para xml:id="para_7e17c6fb-34b7-47dc-8b5e-85025e951b8b">Attributes not recognized within the context of this SOP class.</para>
                             <para xml:id="para_5584a3cc-4155-49e8-b5e0-870bc05b6eba">A list of offending attribute tags is returned in Attribute List (0000,1005).</para>
-                            <para xml:id="para_96a847f9-8c32-4bef-b83b-bf231a404706">A data set is still returned with valid attributes/values.</para>
+                            <para xml:id="para_96a847f9-8c32-4bef-b83b-bf231a404706">A Data Set is still returned with valid attributes/values.</para>
                           </td>
                         </tr>
                         <tr valign="top">
@@ -34108,7 +34258,7 @@
                 <section label="E.4.2.1.4.1.3.5" xml:id="sect_E.4.2.1.4.1.3.5">
                   <title>Specific Conformance for Presentation LUT Box SOP Class</title>
                   <para xml:id="para_ca9bb967-f012-4a6a-a626-522f10623de9">The Print Server Management System supports the Presentation LUT SOP class as SCP. Print SCU may negotiate this support and create a Presentation LUT instance prior to the creation of Film Boxes or Image Boxes. Multiple Presentation LUT instances are supported in an association, but only one instance will be supported for each image.</para>
-                  <para xml:id="para_19c5a132-7920-4805-944f-54ad328483a9">The SCU shall send either Presentation LUT Sequence or the Presentation LUT Shape. These values are mutually exclusive and the action will result in an error if neither or both are present. The presence of the Presentation LUT instance overrides any data set in the Configuration Information attribute (2010,0150) of the Film Box or Image Box.</para>
+                  <para xml:id="para_19c5a132-7920-4805-944f-54ad328483a9">The SCU shall send either Presentation LUT Sequence or the Presentation LUT Shape. These values are mutually exclusive and the action will result in an error if neither or both are present. The presence of the Presentation LUT instance overrides any Data Set in the Configuration Information attribute (2010,0150) of the Film Box or Image Box.</para>
                   <para xml:id="para_1a4db6c9-0cb6-4650-a65b-7f90a0928cfd">The Print Server Management System provides support for the following DIMSE Services:</para>
                   <itemizedlist>
                     <listitem>
@@ -41668,7 +41818,7 @@
                           <para xml:id="para_692d732d-1528-42c5-a388-5724028e351c">A900</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_7cceea7e-50e7-4b00-93d6-dd8e78666c9c">Never sent - data set is not checked prior to storage</para>
+                          <para xml:id="para_7cceea7e-50e7-4b00-93d6-dd8e78666c9c">Never sent - Data Set is not checked prior to storage</para>
                         </td>
                       </tr>
                       <tr valign="top">
@@ -41706,7 +41856,7 @@
                           <para xml:id="para_6ca74f09-2648-43d0-bac5-440697f462b3">B007</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                          <para xml:id="para_6d042126-f37b-4876-8495-d4ea5b558978">Never sent - data set is not checked prior to storage</para>
+                          <para xml:id="para_6d042126-f37b-4876-8495-d4ea5b558978">Never sent - Data Set is not checked prior to storage</para>
                         </td>
                       </tr>
                       <tr valign="top">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.12" version="5.0" xml:id="PS3.12">
   <title>PS3.12</title>
-  <subtitle>DICOM PS3.12 2018e - Media Formats and Physical Media for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.12 2019a - Media Formats and Physical Media for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2018</year>
+      <year>2019</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -60,7 +60,7 @@
   </chapter>
   <chapter label="1" status="1" xml:id="chapter_1">
     <title>Scope and Field of Application</title>
-    <para xml:id="para_6142767f-8c03-4459-9372-06cad066a4e0">This part of the DICOM Standard facilitates the interchange of information between digital imaging computer systems in medical environments. This interchange will enhance diagnostic imaging and potentially other clinical applications. The multi-part DICOM Standard defines the services and data that shall be supplied to achieve this interchange of information.</para>
+    <para xml:id="para_6142767f-8c03-4459-9372-06cad066a4e0">This Part of the DICOM Standard facilitates the interchange of information between digital imaging computer systems in medical environments. This interchange will enhance diagnostic imaging and potentially other clinical applications. The multi-part DICOM Standard defines the services and data that shall be supplied to achieve this interchange of information.</para>
     <para xml:id="para_a8d4578e-c096-4e75-bdde-24e076e2ec89">This Part specifies:</para>
     <itemizedlist>
       <listitem>
@@ -73,7 +73,7 @@
   </chapter>
   <chapter label="2" status="1" xml:id="chapter_2">
     <title>Normative References</title>
-    <para xml:id="para_b71853b3-598b-4955-b38d-60057f4b48c9">The following standards contain provisions that, through references in this text, constitute provisions of this standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+    <para xml:id="para_b71853b3-598b-4955-b38d-60057f4b48c9">The following standards contain provisions that, through references in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
     <bibliography>
       <biblioentry xml:id="biblio_ISODirectives2">
         <abbrev>ISO/IEC Directives, Part 2</abbrev>
@@ -146,44 +146,89 @@
     <para xml:id="para_e7fb4972-0dab-480b-9be4-58703c1fd8ba">ZIP File Format Specification, PKWARE, Inc.</para>
     <para xml:id="para_2fbe8b74-1ade-442c-a1ca-c00f29a7b27a">Microsoft Extensible Firmware Initiative FAT32 File System Specification, rev. 1.03, December 6, 2000</para>
   </chapter>
-  <chapter label="3" status="1" xml:id="chapter_3">
-    <title>Definitions</title>
-    <para xml:id="para_6b88592a-cde1-4a0b-97a3-de4cd5e86ec1">For the purposes of this standard, the following definitions apply.</para>
-    <section label="3.1" status="2" xml:id="sect_3.1">
-      <title>DICOM Media Storage and File Format Definitions</title>
-      <para xml:id="para_2214da61-aa1d-47d8-88a3-22dab4d64073">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard.</para>
-      <orderedlist numeration="loweralpha">
-        <listitem>
-          <para xml:id="para_06587d2f-13a3-4bb0-a2b3-eb7a4cbcbe24">Application Profile</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_aba13a6f-3293-4869-b6fe-ecde3fd5ae9d">DICOM File Service</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_ff3f6c93-17c3-4c0c-81d4-da129fdccaa7">DICOM File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_d39a1e7f-e07e-4ef6-afb4-2c25d777c404">DICOMDIR File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_9e57665b-4080-4dba-b5b5-e67fc56d8e3d">File</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_e2313af1-1701-417c-8f6c-49a95b7215d5">File ID</para>
-        </listitem>
-        <listitem>
-          <para xml:id="para_38971e1a-1ad2-498c-8b39-cd4e08ca8226">File-set</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section label="3.2" status="2" xml:id="sect_3.2">
-      <title>PC File System</title>
-      <para xml:id="para_2ccce0fa-fb8d-448d-9a34-83b0254f40fc">A PC file system is commonly used for storing and exchanging files on removable media. This file system is available as either standard or optional software for most models of personal computers. It is available as standard or optional software for most models of workstations. A public domain implementation of this file system, known as "mtools," was developed by the U.S. Army and is available from various public servers on the Internet.</para>
-    </section>
-  </chapter>
+    <chapter label="3" status="1" xml:id="chapter_3">
+        <title>Definitions</title>
+        <para xml:id="para_6b88592a-cde1-4a0b-97a3-de4cd5e86ec1">For the purposes of this Standard, the following definitions apply.</para>
+        <glossary>
+            <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+                <title>DICOM Media Storage and File Format Definitions</title>
+                <para xml:id="para_2214da61-aa1d-47d8-88a3-22dab4d64073">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard.</para>
+                <glossentry xml:id="glossentry_ApplicationProfile" xreflabel="Application Profile">
+                    <glossterm>Application Profile</glossterm>
+                    <glossdef>
+                        <para xml:id="para_06587d2f-13a3-4bb0-a2b3-eb7a4cbcbe24">
+<olink targetdoc="PS3.10" targetptr="glossentry_ApplicationProfile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFileService" xreflabel="DICOM File Service">
+                    <glossterm>DICOM File Service</glossterm>
+                    <glossdef>
+                        <para xml:id="para_aba13a6f-3293-4869-b6fe-ecde3fd5ae9d">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMFileService"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMFile" xreflabel="DICOM File">
+                    <glossterm>DICOM File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_ff3f6c93-17c3-4c0c-81d4-da129fdccaa7">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMFile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_DICOMDIRFile" xreflabel="DICOMDIR File">
+                    <glossterm>DICOMDIR File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_d39a1e7f-e07e-4ef6-afb4-2c25d777c404">
+<olink targetdoc="PS3.10" targetptr="glossentry_DICOMDIRFile"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_File" xreflabel="File">
+                    <glossterm>File</glossterm>
+                    <glossdef>
+                        <para xml:id="para_9e57665b-4080-4dba-b5b5-e67fc56d8e3d">
+<olink targetdoc="PS3.10" targetptr="glossentry_File"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileID" xreflabel="File ID">
+                    <glossterm>File ID</glossterm>
+                    <glossdef>
+                        <para xml:id="para_e2313af1-1701-417c-8f6c-49a95b7215d5">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileID"/>.</para>
+                    </glossdef>
+                </glossentry>
+                <glossentry xml:id="glossentry_FileSet" xreflabel="File-set">
+                    <glossterm>File-set</glossterm>
+                    <glossdef>
+                        <para xml:id="para_38971e1a-1ad2-498c-8b39-cd4e08ca8226">
+<olink targetdoc="PS3.10" targetptr="glossentry_FileSet"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+                <title>PC File System</title>
+                <glossentry xml:id="glossentry_PCFileSystem" xreflabel="PC File System">
+                    <glossterm>PC File System</glossterm>
+                    <glossdef>
+                        <para xml:id="para_2ccce0fa-fb8d-448d-9a34-83b0254f40fc">A PC file system is commonly used for storing and exchanging files on removable media. This file system is available as either standard or optional software for most models of personal computers. It is available as standard or optional software for most models of workstations. A public domain implementation of this file system, known as "mtools," was developed by the U.S. Army and is available from various public servers on the Internet.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+            <glossdiv label="3.3" status="2" xml:id="sect_3.3">
+                <title>DICOM Service Class Definitions</title>
+                <para xml:id="para_3443dd29-b961-4caf-9285-967e9ac8c31a">This Part of the Standard makes use of the following terms defined in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/> of the DICOM Standard:</para>
+                <glossentry xml:id="glossentry_ServiceObjectPairInstance" xreflabel="Service Object Pair Instance (SOP Instance)">
+                    <glossterm>Service Object Pair Instance</glossterm>
+                    <acronym>SOP Instance</acronym>
+                    <glossdef>
+                        <para xml:id="para_56c73cf7-94d4-4559-a0bb-0763d9bed091">
+<olink targetdoc="PS3.10" targetptr="glossentry_ServiceObjectPairInstance"/>.</para>
+                    </glossdef>
+                </glossentry>
+            </glossdiv>
+        </glossary>
+    </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
     <title>Symbols and Abbreviations</title>
-    <para xml:id="para_dd4c673a-3ccd-4660-9eb1-0967eec08c5a">The following symbols and abbreviations are used in this part of the standard.</para>
+    <para xml:id="para_dd4c673a-3ccd-4660-9eb1-0967eec08c5a">The following symbols and abbreviations are used in this Part of the Standard.</para>
     <variablelist>
       <varlistentry>
         <term>ACR</term>
@@ -621,7 +666,7 @@
         <note>
           <orderedlist>
             <listitem>
-              <para xml:id="para_907aa171-9193-4b93-be40-2852e71abe66">The PC File System does not specify or control the time base used for date and time. Coordination of reference time zones is outside the scope of this standard.</para>
+              <para xml:id="para_907aa171-9193-4b93-be40-2852e71abe66">The PC File System does not specify or control the time base used for date and time. Coordination of reference time zones is outside the scope of this Standard.</para>
             </listitem>
             <listitem>
               <para xml:id="para_ca0eb3e3-b562-400a-b266-80b13696045a">The typical written form of a filename is filename.extension (e.g., "FILE.EXT"). The period between filename and extension is a convention used in most programs for entering and displaying the filename and extension. The period is not actually recorded on disk and is not permitted as part of a filename. A file with no extension is recorded as a file with zero extension characters (i.e., all null filled) although it is often written and displayed without the period.</para>
@@ -636,7 +681,7 @@
       <para xml:id="para_92a7323a-ac25-47d3-b714-ae554b83fb52">The PC File System requires that the media be organized into sectors. The media specific value for bytes/sector and the mechanism for doing this is in each media annex.</para>
       <para xml:id="para_a79160c4-ccf2-4cfd-8f6b-9fd0e81c76d4">The PC File System shall be organized as an "mtools" unpartitioned file system (see Note), using either 12-bit or 16-bit File Allocation Table (FAT). The layout of the boot sector shall be as shown in <xref linkend="table_A.2-1" xrefstyle="select: label"/>. The FAT and related file structures are compatible with the DOS 4.0 and later file systems, and are described in detail in the Microsoft MS-DOS Programmer's Reference. Two byte integers shall be encoded in little endian.</para>
       <note>
-        <para xml:id="para_58504bb6-8fa5-40e3-a746-a0968a21b1b5">A PC File system may be either unpartitioned or partitioned. Traditionally, removable media such as floppy disks have been formatted as unpartitioned, and fixed media like hard disks have been formatted with a different form of Master Boot Record that specifies several partitions, each of which has the format of a complete unpartitioned system. When forms of removable media with larger capacity were introduced, some driver vendors chose to format them as unpartitioned, and others as partitioned. In order to facilitate interoperability with existing implementations this Part of the DICOM standard currently specifies one format, the unpartitioned format. Some implementations of the PC DOS file system may experience difficulty reading or writing to large capacity unpartitioned removable media, and require special drivers.</para>
+        <para xml:id="para_58504bb6-8fa5-40e3-a746-a0968a21b1b5">A PC File system may be either unpartitioned or partitioned. Traditionally, removable media such as floppy disks have been formatted as unpartitioned, and fixed media like hard disks have been formatted with a different form of Master Boot Record that specifies several partitions, each of which has the format of a complete unpartitioned system. When forms of removable media with larger capacity were introduced, some driver vendors chose to format them as unpartitioned, and others as partitioned. In order to facilitate interoperability with existing implementations this Part of the DICOM Standard currently specifies one format, the unpartitioned format. Some implementations of the PC DOS file system may experience difficulty reading or writing to large capacity unpartitioned removable media, and require special drivers.</para>
       </note>
       <para xml:id="para_683e5865-878b-4c99-97fc-92eefe93399a">The boot sector, sector 0 of track 0, shall be formatted as follows:</para>
       <table frame="box" label="A.2-1" rules="all" xml:id="table_A.2-1">
@@ -1074,7 +1119,7 @@
                 <para xml:id="para_cbf32c53-b683-491d-83bc-53885b9f8d20">The physical storage capacity of a CD-R disc can be 74 minutes (630 MB) or 80 minutes (700 MB) when using the Mode 1 or Mode 2 Form 1 format. The capacity is fixed by the pre-grooved spiral track present on a blank CD-R. Some older CD players will not be able to read the 80 min capacity CD-R discs.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_dd7978e7-5aca-406b-9c79-d2f661258845">The DICOM standard prohibits the use of Mode 2 Form 2 sectors. This format is used to record data on CD-Rs that exceed 74 minute capacity and can also be used for smaller capacity CD-Rs. CD-ROM-XA Mode 2 Form 2 sectors do not have sector level error correction. This significantly decreases the reliability of the media and significantly increases the likelihood of data corruption.</para>
+                <para xml:id="para_dd7978e7-5aca-406b-9c79-d2f661258845">The DICOM Standard prohibits the use of Mode 2 Form 2 sectors. This format is used to record data on CD-Rs that exceed 74 minute capacity and can also be used for smaller capacity CD-Rs. CD-ROM-XA Mode 2 Form 2 sectors do not have sector level error correction. This significantly decreases the reliability of the media and significantly increases the likelihood of data corruption.</para>
               </listitem>
             </orderedlist>
           </note>
@@ -2036,7 +2081,7 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
         <title>DICOM File Management Information</title>
         <para xml:id="para_47e3205a-60a6-48c7-b585-0b85d3de793a">No file management information beyond that specified in the UDF or ISO 9660 File Entry is required. In particular no Extended Attributes or Named Streams are required.</para>
         <note>
-          <para xml:id="para_2ba091ee-749f-44e4-8660-eba7d58a5a93">Unlike the Annex of this part specifying CD-R media, no restrictions or specifications with respect to ISO 9660 Recording Date and Time, file modification date, file owner identification and permissions, or other Extended Attribute Record values are specified, since these may be beyond the control of the DICOM application.</para>
+          <para xml:id="para_2ba091ee-749f-44e4-8660-eba7d58a5a93">Unlike the Annex of this Part specifying CD-R media, no restrictions or specifications with respect to ISO 9660 Recording Date and Time, file modification date, file owner identification and permissions, or other Extended Attribute Record values are specified, since these may be beyond the control of the DICOM application.</para>
         </note>
       </section>
     </section>
@@ -2120,7 +2165,7 @@ QYmbgJz9/+A+ofb/vlZwf1/V/89adp93yv/dYOz/fvT/m2Pg//////vTppydq8Pa8/////j3////
         <para xml:id="para_43bb9ccc-a9f3-4b4f-9b08-dea0cecd2392">The reader shall be able to read a logical format conforming to ISO 9660 Level 1, 2 and 3, with or without Rockridge or Joliet Extensions, which may or may not be present.</para>
         <para xml:id="para_f42eacc4-27c3-43c7-829f-dac13703fe33">The creator shall be able to create a logical format conforming to ISO 9660 Level 1, 2 or 3, and may or may not add Rockridge or Joliet Extensions.</para>
         <note>
-          <para xml:id="para_b064644c-f68f-4243-b77f-64667001bc14">Though the files within the DICOM File set are restricted to names that conform to a subset of ISO 9660 Level 1, other files on the media may have longer file names. Unlike the Annex of this part specifying CD-R media, strict Level 1 conformance of the file system is not required, since this has proven difficult to constrain in practice.</para>
+          <para xml:id="para_b064644c-f68f-4243-b77f-64667001bc14">Though the files within the DICOM File set are restricted to names that conform to a subset of ISO 9660 Level 1, other files on the media may have longer file names. Unlike the Annex of this Part specifying CD-R media, strict Level 1 conformance of the file system is not required, since this has proven difficult to constrain in practice.</para>
         </note>
         <section label="P.2.2.1" status="4" xml:id="sect_P.2.2.1">
           <title>Extended Attributes, Permissions and File Characteristics</title>
