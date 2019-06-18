@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2019b - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2019c - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -956,13 +956,13 @@
                 <glossentry xml:id="glossentry_RepeatingGroup" xreflabel="Repeating Group">
                     <glossterm>Repeating Group</glossterm>
                     <glossdef>
-                        <para xml:id="para_983b89d0-1971-4249-a938-85b3bce8e52f">Standard Data Elements within a particular range of Group Numbers where elements that have identical Element Numbers have the same meaning within each Group (and the same VR, VM, and Data Element Type). Repeating Groups shall only exist for Curves and Overlay Planes (Group Numbers (50xx,eeee) and (60xx,eeee), respectively) and are a remnant of versions of this Standard prior to V3.0.</para>
+                        <para xml:id="para_983b89d0-1971-4249-a938-85b3bce8e52f">Standard Data Elements within a particular range of Group Numbers where elements that have identical Element Numbers have the same meaning within each Group (and the same VR, VM, and Data Element Type). Repeating Groups shall only exist for Curves and Overlay Planes (Group Numbers (50xx,eeee) and (60xx,eeee), respectively) and are a remnant of older versions of this Standard.</para>
                     </glossdef>
                 </glossentry>
                 <glossentry xml:id="glossentry_RetiredDataElement" xreflabel="Retired Data Element">
                     <glossterm>Retired Data Element</glossterm>
                     <glossdef>
-                        <para xml:id="para_2dc9ae86-fb91-40cb-a371-7013a377ba43">A Data Element that is unsupported beginning with Version 3.0 of this Standard. Implementations may continue to support Retired Data Elements for the purpose of backward compatibility with versions prior to V3.0, but this is not a requirement of this version of the Standard.</para>
+                        <para xml:id="para_2dc9ae86-fb91-40cb-a371-7013a377ba43">A Data Element that is unsupported beginning with the current Standard. Implementations may continue to support Retired Data Elements for the purpose of backward compatibility, but this is not a requirement of the current Standard.</para>
                     </glossdef>
                 </glossentry>
                 <glossentry xml:id="glossentry_SequenceDelimitationItem" xreflabel="Sequence Delimitation Item">
@@ -2432,7 +2432,7 @@
                 <para xml:id="para_139101bd-5f93-42ad-ab2d-947966cc4e30">The implementer should remain mindful of earlier usage forms that represented "given names" as "first" and "middle" and that translations to and from this previous typical usage may be required.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_c01ee868-11b9-4b2e-a8a4-016bcf9e2e6e">For reasons of backward compatibility with versions of this Standard prior to V3.0, person names might be considered a single family name complex (single component without "^" delimiters).</para>
+                <para xml:id="para_c01ee868-11b9-4b2e-a8a4-016bcf9e2e6e">For reasons of backward compatibility with older versions of this Standard, person names might be considered a single family name complex (single component without "^" delimiters).</para>
               </listitem>
             </orderedlist>
           </note>
@@ -2535,7 +2535,7 @@
       <title>Value Multiplicity (VM) and Delimitation</title>
       <para xml:id="para_70e3b80f-afc8-4101-bf11-facde2f4c926">The Value Multiplicity of a Data Element specifies the number of Values that can be encoded in the Value Field of that Data Element. The VM of each Data Element is specified explicitly in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. If the number of Values that may be encoded in an element is variable, it shall be represented by two numbers separated by a dash; e.g., "1-10" means that there may be 1 to 10 Values in the element.</para>
       <note>
-        <para xml:id="para_dcb7bcbb-04cf-4de1-a3e4-86df4d7360ae">Elements having a multiplicity of "S", which represented "single", in versions of this Standard preceding V3.0, will have a multiplicity of "1" in this version of this Standard.</para>
+        <para xml:id="para_dcb7bcbb-04cf-4de1-a3e4-86df4d7360ae">Elements having a multiplicity of "S", which represented "single", in older versions of this Standard, will have a multiplicity of "1" in this version of this Standard.</para>
       </note>
       <para xml:id="para_fc49e903-7152-48d0-b5cc-40e03d07f2c0">When a Data Element has multiple Values, those Values shall be delimited as follows:</para>
       <itemizedlist>
@@ -2580,7 +2580,7 @@
         </listitem>
       </itemizedlist>
       <note>
-        <para xml:id="para_546552db-a324-4e32-8da6-ce9d7470ef25">Although similar or related Data Elements often have the same Group Number; a Data Group does not convey any semantic meaning beginning with DICOM Version 3.0.</para>
+        <para xml:id="para_546552db-a324-4e32-8da6-ce9d7470ef25">Although similar or related Data Elements often have the same Group Number; a Data Group does not convey any semantic meaning.</para>
       </note>
       <para xml:id="para_aa33d759-566e-4a49-a670-c90fe88fbe5e">A Data Element shall have one of three structures. Two of these structures contain the VR of the Data Element (Explicit VR) but differ in the way their lengths are expressed, while the other structure does not contain the VR (Implicit VR). All three structures contain the Data Element Tag, Value Length and Value for the Data Element. See <xref linkend="figure_7.1-1" xrefstyle="select: label"/>.</para>
       <para xml:id="para_21646f2d-5ba6-4efb-a21a-2bc7d88fcbf0">Implicit and Explicit VR Data Elements shall not coexist in a Data Set and Data Sets nested within it (see <xref linkend="sect_7.5" xrefstyle="select: label"/>). Whether a Data Set uses Explicit or Implicit VR, among other characteristics, is determined by the negotiated Transfer Syntax (see <xref linkend="chapter_10" xrefstyle="template:Section %n"/> and <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
@@ -3399,7 +3399,7 @@
     </section>
     <section label="7.6" status="2" xml:id="sect_7.6">
       <title>Repeating Groups</title>
-      <para xml:id="para_4b89896f-a7f3-4ddc-9a2c-7a1ea8b98b0a">Multiple Overlay Planes and Curves are often associated with a single Image (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). Standard Data Elements with even Group Numbers (5000-501E,eeee) represent Curves, while elements with even Group Numbers (6000-601E,eeee) represent Overlay Planes. Both of these ranges of Group numbers are known as Repeating Groups. This use of group numbers is a remnant of versions of this Standard prior to V3.0 that associated a semantic meaning with particular Groups.</para>
+      <para xml:id="para_4b89896f-a7f3-4ddc-9a2c-7a1ea8b98b0a">Multiple Overlay Planes and Curves are often associated with a single Image (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). Standard Data Elements with even Group Numbers (5000-501E,eeee) represent Curves, while elements with even Group Numbers (6000-601E,eeee) represent Overlay Planes. Both of these ranges of Group numbers are known as Repeating Groups. This use of group numbers is a remnant of older versions of this Standard, which associated a semantic meaning with particular Groups.</para>
       <para xml:id="para_0fc2c72a-0ead-4ca0-ac8b-c90b48315a1a">In each of these ranges of Group Numbers, Standard Data Elements that have identical Element Numbers have the same meaning within each Group (and the same VR, VM, and Data Element Type). The notation (50xx,eeee) and (60xx,eeee) are used for the Group Number in Data Element Tags when referring to a common Data Element across these groups (see <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>). Groups (50xx,eeee) and (60xx,eeee) are called Repeating Groups because of these characteristics.</para>
       <para xml:id="para_e2e0f651-e42c-4404-8d97-e31b43de0b09">Repeating Groups shall only be allowed in the even Groups (6000-601E,eeee) and even Groups (5000-501E,eeee) cases. In the future, Data Elements with VRs of SQ shall be used to serve a similar purpose.</para>
       <note>
@@ -3408,7 +3408,7 @@
     </section>
     <section label="7.7" status="2" xml:id="sect_7.7">
       <title>Retired Data Elements</title>
-      <para xml:id="para_aee74b02-df91-4ee5-b583-77416d8f6540">Certain Data Elements are no longer supported beginning with Version 3.0 of this Standard. These Data Elements are retired and are denoted as such (RET) in the VR column in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. Implementations may continue to support these Data Elements for the purpose of backward compatibility with versions of this Standard prior to V3.0, but this is not a requirement of this Standard. If a retired Data Element is used it must contain valid data as specified in versions of this Standard prior to V3.0. Any other use of a retired Data Element, and its associated Data Element Tag, is reserved by this Standard. Retired Data Element Tags shall not be redefined in later versions of this Standard.</para>
+      <para xml:id="para_aee74b02-df91-4ee5-b583-77416d8f6540">Certain Data Elements are no longer supported in the current Standard. These Data Elements are retired and are denoted as such (RET) in the VR column in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. Implementations may continue to support these Data Elements for the purpose of backward compatibility with older versions of this Standard, but this is not a requirement of the current Standard. If a retired Data Element is used it must contain valid data as specified in older versions of this Standard. Any other use of a retired Data Element, and its associated Data Element Tag, is reserved by this Standard. Retired Data Element Tags shall not be redefined in later versions of this Standard.</para>
     </section>
     <section label="7.8" status="2" xml:id="sect_7.8">
       <title>Private Data Elements</title>
@@ -3441,10 +3441,10 @@
             <note>
               <orderedlist numeration="arabic">
                 <listitem>
-                  <para xml:id="para_38c1cb98-d250-4234-85cd-952956a94eef">The versions of this Standard prior to V3.0 described shadow groups. These were groups with a group number one greater than the standard groups. Elimination of conflicts in Private Data Element Tags have made this distinction obsolete and this terminology has been retired.</para>
+                  <para xml:id="para_38c1cb98-d250-4234-85cd-952956a94eef">Older versions of this Standard described shadow groups. These were groups with a group number one greater than the standard groups. Elimination of conflicts in Private Data Element Tags have made this distinction obsolete and this terminology has been retired.</para>
                 </listitem>
                 <listitem>
-                  <para xml:id="para_8d59b8b6-aff4-4463-b947-e02b967a678f">The versions of this Standard prior to V3.0 specified private group element numbers (gggg,10FF-7FFF) reserved for manufacturers and private group element numbers (gggg, 8100-FFFF) reserved for users. Elimination of conflicts in Private Data Element Tags has made this distinction obsolete and this specification has been retired.</para>
+                  <para xml:id="para_8d59b8b6-aff4-4463-b947-e02b967a678f">Older versions of this Standard specified private group element numbers (gggg,10FF-7FFF) reserved for manufacturers and private group element numbers (gggg, 8100-FFFF) reserved for users. Elimination of conflicts in Private Data Element Tags has made this distinction obsolete and this specification has been retired.</para>
                 </listitem>
                 <listitem>
                   <para xml:id="para_c772d8d5-6241-40f5-83e2-0a19653d6ee9">The requirements of this section do not allow any use of elements in the ranges (gggg,0001-000F) and (gggg,0100-0FFF) where gggg is odd.</para>
@@ -3453,7 +3453,7 @@
             </note>
           </listitem>
           <listitem>
-            <para xml:id="para_48211f97-fbd7-4ca7-b1c6-cdffa8604549">Elements with Tags (0001,xxxx), (0003,xxxx), (0005,xxxx), and (0007,xxxx) shall not be used.</para>
+              <para xml:id="para_48211f97-fbd7-4ca7-b1c6-cdffa8604549">Elements with Tags (0001,xxxx), (0003,xxxx), (0005,xxxx), (0007,xxxx) and (FFFF,xxxx) shall not be used.</para>
           </listitem>
           <listitem>
             <para xml:id="para_3dfe862d-2e2f-46ad-b450-323f886feb99">Whether or not Private Data Elements contain identifying information related to de-identification is defined by the Private Data Element Characteristics Sequence (0008,0300). See <olink targetdoc="PS3.3" targetptr="sect_C.12.1" xrefstyle="template:PS3.3 Section %n"/>.</para>
@@ -5308,7 +5308,7 @@
                 <para xml:id="para_38cd30f2-4ec8-413b-b5f1-f59b61df410a">1280</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_7fbd5e88-ef45-4ce0-b6e6-944c69fa90a3">59.94,</para>
+                <para xml:id="para_7fbd5e88-ef45-4ce0-b6e6-944c69fa90a3">59.94</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_d0e978a6-4fb2-41f6-8a04-b691ec61fb52">60 Hz HD</para>
@@ -7678,7 +7678,7 @@
       <para xml:id="para_5998f031-471f-40e0-ae40-05258e522685">An individual pixel may consist of one or more Pixel Sample Values (e.g., color or multi-planar images). Each Pixel Sample Value can be expressed as either a binary 2's complement integer or a binary unsigned integer, as specified by the Pixel Representation Data Element (0028, 0103). The number of bits in each Pixel Sample Value is specified by Bits Stored (0028,0101). For 2's complement integer Pixel Samples the sign bit is the most significant bit of the Pixel Sample Value.</para>
       <para xml:id="para_a165bbc9-4be1-42ae-9c1f-ce62842c6cba">A Pixel Cell is the container for a Pixel Sample Value and optionally additional bits. These additional bits are used to place Pixels on certain boundaries (byte, word, etc.). A Pixel Cell exists for every individual Pixel Sample Value in the Pixel Data. The size of the Pixel Cells is specified by Bits Allocated (0028,0100) and is greater than or equal to the Bits Stored (0028,0101). The placement of the Pixel Sample Values within the Pixel Cells is specified by High Bit (0028,0102).</para>
       <para xml:id="para_9b1447fb-69a8-4e09-90cf-01acc90bd818">Any restrictions on the characteristics of a Pixel Cell and the Pixel Sample Value contained therein are specific to the Information Object Definition (e.g., Image Object) containing the Pixel Data Element (see <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
-      <para xml:id="para_2d9bdfdb-d89e-4134-8216-796a54b2190f">The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word). The Pixel Data in DICOM 3.0, as it was in ACR-NEMA 2.0, is packed, except that Bits Allocated is always either 1, or a multiple of 8 (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
+      <para xml:id="para_2d9bdfdb-d89e-4134-8216-796a54b2190f">The Pixel Data Element, as specified by the DICOM Default Transfer Syntax in <xref linkend="sect_10.1" xrefstyle="select: label"/>, has a Value Representation of OW (Other Word). The Pixel Data in DICOM, as it was in ACR-NEMA 2.0, is packed, except that Bits Allocated is always either 1, or a multiple of 8 (see Figure <xref linkend="figure_D-2" xrefstyle="select: labelnumber"/>). One way to visualize this packed encoding is to imagine encoding the Pixel Cells as a concatenated stream of bits from the least significant bit of the first Pixel Cell up through the most significant bit of the last Pixel Cell. Within this stream, the most significant bit of any Pixel Cell is followed by the least significant bit of the next Pixel Cell. The Pixel Data can then be broken up into a stream of physical 16-bit words, each of which is subject to the byte ordering constraints of the Transfer Syntax.</para>
       <para xml:id="para_797183b5-abb6-4308-a7e1-a1958dabf82d">All other (non-default) DICOM Transfer Syntaxes make use of explicit VR encoding. For these Transfer Syntaxes, all Pixel Data where Bits Allocated is less than or equal to 8 may be encoded with an explicit VR of OB (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). As in the OW case, Pixel Cells are packed together, but in this case the Pixel Data is broken up into a stream of physical 8-bit words.</para>
       <note>
         <para xml:id="para_e83c50bf-f06f-4c8e-87cb-f15f9ad9d31f">For Pixel Data encoded with an explicit VR of OB, the encoding of the Pixel Data is unaffected by byte ordering.</para>

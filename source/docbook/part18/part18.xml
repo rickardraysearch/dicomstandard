@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
     <title>PS3.18</title>
-    <subtitle>DICOM PS3.18 2019b - Web Services</subtitle>
+    <subtitle>DICOM PS3.18 2019c - Web Services</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
@@ -4668,7 +4668,7 @@ cid                = token / quoted-string
                                 </tr>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_929b4f80-7c5b-4ae0-bceb-a2acdff917a6">image/x-dicom-rle</para>
+                                        <para xml:id="para_929b4f80-7c5b-4ae0-bceb-a2acdff917a6">image/dicom-rle</para>
                                     </td>
                                     <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_430320f8-8a09-47f0-adf3-a654b91b49d9">1.2.840.10008.1.2.5</para>
@@ -4682,7 +4682,7 @@ cid                = token / quoted-string
                                 </tr>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="2">
-                                        <para xml:id="para_79c26c30-e953-41ad-a21e-3c5f10795dcc">image/x-jls</para>
+                                        <para xml:id="para_79c26c30-e953-41ad-a21e-3c5f10795dcc">image/jls</para>
                                     </td>
                                     <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_d5db8f5c-7a8d-4a78-915a-d12d6859b7ea">1.2.840.10008.1.2.4.80</para>
@@ -4807,7 +4807,7 @@ cid                = token / quoted-string
                                 </tr>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_b2ea5284-ef22-4286-a6ee-e26eea1242c6">image/x-dicom-rle</para>
+                                        <para xml:id="para_b2ea5284-ef22-4286-a6ee-e26eea1242c6">image/dicom-rle</para>
                                     </td>
                                     <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_1932b145-3462-485b-b74c-a90cbfb02683">1.2.840.10008.1.2.5</para>
@@ -4821,7 +4821,7 @@ cid                = token / quoted-string
                                 </tr>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="2">
-                                        <para xml:id="para_2bd0959b-7852-427c-92a7-5e78431f8460">image/x-jls</para>
+                                        <para xml:id="para_2bd0959b-7852-427c-92a7-5e78431f8460">image/jls</para>
                                     </td>
                                     <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_37209b09-8bd8-409f-8e32-7a36612f4100">1.2.840.10008.1.2.4.80</para>
@@ -5009,7 +5009,7 @@ cid                = token / quoted-string
                                     <para xml:id="para_2a35285a-c184-464a-84b3-e5af7a219c1e">For the media type image/jpeg Transfer Syntaxes, the image may or may not include the JFIF marker segment. The image may or may not include APP2 marker segments with an identifier of "ICC_PROFILE". There is no requirement for the origin server to add a JFIF marker segment nor to copy the value of the ICC Profile (0028,2000) Attribute, if present, into APP2 marker segments in the compressed data stream. See <olink targetdoc="PS3.5" targetptr="sect_8.2.1" xrefstyle="template:Section %n “%t” in PS3.5"/>.</para>
                                 </listitem>
                                 <listitem>
-                                    <para xml:id="para_2554bfd6-19d3-4bb7-9fd3-e918207958a2">For the media type image/dicom+jp2 and image/dicom+jpx Transfer Syntaxes, the image does not include the jp2 marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.4" xrefstyle="template:Section %n “%t” in PS3.5"/> and <olink targetdoc="PS3.5" targetptr="sect_A.4.4" xrefstyle="template:Section %n “%t” in PS3.5"/>
+                                    <para xml:id="para_2554bfd6-19d3-4bb7-9fd3-e918207958a2">For the media type image/jp2 and image/jpx Transfer Syntaxes, the image does not include the jp2 marker segment. See <olink targetdoc="PS3.5" targetptr="sect_8.2.4" xrefstyle="template:Section %n “%t” in PS3.5"/> and <olink targetdoc="PS3.5" targetptr="sect_A.4.4" xrefstyle="template:Section %n “%t” in PS3.5"/>
 </para>
                                 </listitem>
                                 <listitem>
@@ -5027,6 +5027,9 @@ cid                = token / quoted-string
                                 </listitem>
                                 <listitem>
                                     <para xml:id="para_23c268c4-a1f1-4487-a06f-0eab6f8f6042">Each part of a multipart response is distinguished by the Content-Type and Content-Location header fields of the part.</para>
+                                </listitem>
+                                <listitem>
+                                    <para xml:id="para_440b008e-9ab6-4ac1-be8c-40044337e019">Previously, experimental Media Types "image/x-dicom-rle" and "image/x-jls" were defined, so origin servers and user agents may want to account for these when communicating with older implementations. These have been replaced with the standard Media Types "image/dicom-rle" and "image/jls", respectively.</para>
                                 </listitem>
                             </orderedlist>
                         </note>

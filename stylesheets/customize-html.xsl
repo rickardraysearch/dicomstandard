@@ -3,7 +3,8 @@
                 xmlns:d="http://docbook.org/ns/docbook">
 				
 	<xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml/docbook.xsl"/>
-	
+	<!-- <xsl:import href="http://docbook.sourceforge.net/release/xsl-ns/current/xhtml/profile-docbook.xsl"/> --> <!-- see "http://www.sagehill.net/docbookxsl/Localizations.html", "http://www.sagehill.net/docbookxsl/Profiling.html" and "http://www.sagehill.net/docbookxsl/AlternateText.html" -->
+
 	<xsl:import href="customizedtitlepages-xhtml.xsl"/>	<!-- http://www.sagehill.net/docbookxsl/TitlePageGraphics.html -->
 
 	<xsl:import href="customize-common.xsl"/>

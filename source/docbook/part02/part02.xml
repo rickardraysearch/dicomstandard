@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2019b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2019c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -6356,7 +6356,7 @@
             <title>Association Policies</title>
             <section label="B.4.2.1.2.1" xml:id="sect_B.4.2.1.2.1">
               <title>General</title>
-              <para xml:id="para_7dd02740-90e4-450d-b8bd-1207702c015f">The DICOM standard application context name for DICOM 3.0 is always proposed:</para>
+              <para xml:id="para_7dd02740-90e4-450d-b8bd-1207702c015f">The DICOM standard application context name for DICOM is always proposed:</para>
               <table frame="box" label="B.4.2-2" rules="all" xml:id="table_B.4.2-2">
                 <caption>DICOM Application Context for AE Storage</caption>
                 <tbody>
@@ -7345,7 +7345,7 @@
             <title>Association Policies</title>
             <section label="B.4.2.2.2.1" xml:id="sect_B.4.2.2.2.1">
               <title>General</title>
-              <para xml:id="para_08ae401c-a250-4e2a-856d-bdd4bff37869">The DICOM standard application context name for DICOM 3.0 is always proposed:</para>
+              <para xml:id="para_08ae401c-a250-4e2a-856d-bdd4bff37869">The DICOM standard application context name for DICOM is always proposed:</para>
               <table frame="box" label="B.4.2-17" rules="all" xml:id="table_B.4.2-17">
                 <caption>DICOM Application Context for AE Workflow</caption>
                 <tbody>
@@ -9813,7 +9813,7 @@
             <title>Association Policies</title>
             <section label="B.4.2.3.2.1" xml:id="sect_B.4.2.3.2.1">
               <title>General</title>
-              <para xml:id="para_39fa3a50-4ad6-4218-86fb-f87ee236f435">The DICOM standard application context name for DICOM 3.0 is always proposed:</para>
+              <para xml:id="para_39fa3a50-4ad6-4218-86fb-f87ee236f435">The DICOM standard application context name for DICOM is always proposed:</para>
               <table frame="box" label="B.4.2-30" rules="all" xml:id="table_B.4.2-30">
                 <caption>DICOM Application Context for AE Hardcopy</caption>
                 <tbody>
@@ -19820,7 +19820,7 @@
         <title>AE Specifications</title>
         <section label="C.4.2.1" xml:id="sect_C.4.2.1">
           <title>DICOMSRV AE Specification</title>
-          <para xml:id="para_4381dc37-15b5-4826-8495-cf8ed46eda38">This application provides Standard Conformance to the following DICOM V3.0 SOP Classes:</para>
+          <para xml:id="para_4381dc37-15b5-4826-8495-cf8ed46eda38">This application provides Standard Conformance to the following DICOM SOP Classes:</para>
           <section label="C.4.2.1.1" xml:id="sect_C.4.2.1.1">
             <title>SOP Classes</title>
             <table frame="box" label="C.4.2-1" rules="all" xml:id="table_C.4.2-1">
@@ -19891,7 +19891,7 @@
             <title>Association Policies</title>
             <section label="C.4.2.1.2.1" xml:id="sect_C.4.2.1.2.1">
               <title>General</title>
-              <para xml:id="para_946f7087-b563-4932-833b-fadf2a0f8156">The Application Context Name for DICOM 3.0 is the only Application Context proposed.</para>
+              <para xml:id="para_946f7087-b563-4932-833b-fadf2a0f8156">The Application Context Name for DICOM is the only Application Context proposed.</para>
               <table frame="box" label="C.4.2-2" rules="all" xml:id="table_C.4.2-2">
                 <caption>DICOM Application Context</caption>
                 <tbody>
@@ -29704,7 +29704,7 @@
             <section label="E.4.2.1.2.1" xml:id="sect_E.4.2.1.2.1">
               <title>General</title>
               <para xml:id="para_c2f3e888-48ab-4be2-9ab0-0c9b3d1f5816">The Print Server Management System will accept associations while configured as an Print SCP and while a valid local Printer destination exists.</para>
-              <para xml:id="para_e608f1ff-095b-42d8-9a72-143e3b2b6fe2">The DICOM standard application context name for DICOM 3.0 is always accepted</para>
+              <para xml:id="para_e608f1ff-095b-42d8-9a72-143e3b2b6fe2">The DICOM standard application context name for DICOM is always accepted</para>
               <table frame="box" label="E.4.2-2" rules="all" xml:id="table_E.4.2-2">
                 <caption>DICOM Application Context for AE Print SCP</caption>
                 <tbody>
@@ -36241,7 +36241,7 @@
           <title>STORAGE-SCU Application Entity Specification</title>
           <section label="F.4.2.1.1" xml:id="sect_F.4.2.1.1">
             <title>SOP Classes</title>
-            <para xml:id="para_fd69a0ed-0c42-4009-aa59-acca1c089a00">The STORAGE-SCU AE provides Standard Conformance to the following DICOM V3.0 SOP Classes:</para>
+            <para xml:id="para_fd69a0ed-0c42-4009-aa59-acca1c089a00">The STORAGE-SCU AE provides Standard Conformance to the following DICOM SOP Classes:</para>
             <table frame="box" label="F.4.2-1" rules="all" xml:id="table_F.4.2-1">
               <caption>SOP Classes for STORAGE-SCU AE</caption>
               <thead>
@@ -37253,7 +37253,7 @@
           <title>QUERY-RETRIEVE-SCP Application Entity Specification</title>
           <section label="F.4.2.2.1" xml:id="sect_F.4.2.2.1">
             <title>SOP Classes</title>
-            <para xml:id="para_e9839f85-9b31-448a-99a9-800fa0424e5e">The QUERY-RETRIEVE-SCP AE provides Standard Conformance to the following DICOM V3.0 SOP Classes:</para>
+            <para xml:id="para_e9839f85-9b31-448a-99a9-800fa0424e5e">The QUERY-RETRIEVE-SCP AE provides Standard Conformance to the following DICOM SOP Classes:</para>
             <table frame="box" label="F.4.2-9" rules="all" xml:id="table_F.4.2-9">
               <caption>SOP Classes for QUERY-RETRIEVE-SCP AE</caption>
               <thead>
@@ -37337,7 +37337,7 @@
             <section label="F.4.2.2.2.1" xml:id="sect_F.4.2.2.2.1">
               <title>General</title>
               <para xml:id="para_556e8462-6eea-4a23-9780-0edfb363be63">The QUERY-RETRIEVE-SCP AE will never initiate Associations; it only accepts Association Requests from external DICOM AEs. The QUERY-RETRIEVE-SCP AE will accept Associations for Verification, C-FIND, and C-MOVE requests. In the case of a C-MOVE request, the QUERY-RETRIEVE-SCP AE will issue a command to the STORAGE-SCU AE to initiate an Association with the Destination DICOM AE to send images as specified by the originator of the C-MOVE Request.</para>
-              <para xml:id="para_cbafac1e-14e9-4ec0-8939-ba03ce9176f2">The DICOM standard Application Context Name for DICOM 3.0 is always accepted:</para>
+              <para xml:id="para_cbafac1e-14e9-4ec0-8939-ba03ce9176f2">The DICOM standard Application Context Name for DICOM is always accepted:</para>
               <table frame="box" label="F.4.2-10" rules="all" xml:id="table_F.4.2-10">
                 <caption>DICOM Application Context for QUERY-RETRIEVE-SCP AE</caption>
                 <tbody>
@@ -38375,7 +38375,7 @@
           <title>STORAGE-SCP Application Entity Specification</title>
           <section label="F.4.2.3.1" xml:id="sect_F.4.2.3.1">
             <title>SOP Classes</title>
-            <para xml:id="para_123b702e-d82a-4e8e-8aa1-3bd28ba7b643">The STORAGE-SCP AE provides Standard Conformance to the following DICOM V3.0 SOP Classes:</para>
+            <para xml:id="para_123b702e-d82a-4e8e-8aa1-3bd28ba7b643">The STORAGE-SCP AE provides Standard Conformance to the following DICOM SOP Classes:</para>
             <table frame="box" label="F.4.2-22" rules="all" xml:id="table_F.4.2-22">
               <caption>SOP Classes for STORAGE-SCP AE</caption>
               <thead>
@@ -38544,7 +38544,7 @@
             <section label="F.4.2.3.2.1" xml:id="sect_F.4.2.3.2.1">
               <title>General</title>
               <para xml:id="para_e1e155e3-5cab-476c-8fd7-e214519117d1">The STORAGE-SCP AE can both accept and propose Association Requests. The STORAGE-SCP AE will accept Association Requests for the Verification, Storage, and Storage Commitment Push Model Services. It will propose Associations only for the Storage Commitment Push Model Service.</para>
-              <para xml:id="para_0ff4bf28-484a-43be-8f44-f41631cc00d1">The DICOM standard Application Context Name for DICOM 3.0 is always accepted and proposed:</para>
+              <para xml:id="para_0ff4bf28-484a-43be-8f44-f41631cc00d1">The DICOM standard Application Context Name for DICOM is always accepted and proposed:</para>
               <table frame="box" label="F.4.2-23" rules="all" xml:id="table_F.4.2-23">
                 <caption>DICOM Application Context for STORAGE-SCP AE</caption>
                 <tbody>
@@ -46778,7 +46778,7 @@
             <section label="H.4.2.2.2.1" xml:id="sect_H.4.2.2.2.1">
               <title>General</title>
               <para xml:id="para_82f3f919-c0a9-4dba-acf1-30720f18630e">The MAR-SCP AE will never initiate Associations; it only accepts Association Requests from external DICOM AEs. The MAR-SCP AE will accept Associations for Verification (C-ECHO) and Substance Administration Logging (N-ACTION) requests.</para>
-              <para xml:id="para_4f5968d5-6d48-4f8a-8b16-dd68465890f6">The DICOM standard Application Context Name for DICOM 3.0 is always accepted and proposed:</para>
+              <para xml:id="para_4f5968d5-6d48-4f8a-8b16-dd68465890f6">The DICOM standard Application Context Name for DICOM is always accepted and proposed:</para>
               <table frame="box" label="H.4.2-15" rules="all" xml:id="table_H.4.2-15">
                 <caption>DICOM Application Context for MAR-SCP AE</caption>
                 <tbody>

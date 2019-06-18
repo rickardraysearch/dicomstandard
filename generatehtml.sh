@@ -16,6 +16,7 @@ rm -f "output/html/part${part}.html"
 partnoleadingzero=`echo "${part}" | sed -e 's/^0//'`
 
 # need -maxdepth 10000 to handle long tables due to recursive row processing (see http://www.sagehill.net/docbookxsl/LongTables.html)
+# can use --stringparam profile.lang "ja", --stringparam l10n.gentext.language "ja", etc. see "http://www.sagehill.net/docbookxsl/Localizations.html", "http://www.sagehill.net/docbookxsl/Profiling.html" and "http://www.sagehill.net/docbookxsl/AlternateText.html"
 "${XSLTPROC}" -maxdepth 20000 --nonet \
 	--stringparam html.stylesheet dicom.css \
 	--stringparam target.database.document "../../../olinkdb_html.xml" \
