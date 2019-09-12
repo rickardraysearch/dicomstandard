@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2019a - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2019b - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2222,7 +2222,7 @@
               <para xml:id="para_a449f345-242d-4a73-ad38-6d3d4f240d5b">1.2.840.10008.5.1.4.1.1.20</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
-              <para xml:id="para_424eb104-7d38-48c9-a854-05ee400d5684">Nuclear Medicine Image Storage SOP Classe</para>
+              <para xml:id="para_424eb104-7d38-48c9-a854-05ee400d5684">Nuclear Medicine Image Storage SOP Class</para>
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_887440a5-ad38-4431-99bf-0bfe8f2e9a29">Transfer</para>
@@ -46335,14 +46335,14 @@
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_18fc54bd-d64b-489d-9e9b-eba417e1fc8d">
-<link xl:href="http://snomed.info/id/118565006" xl:show="new">(G-D705, SRT, "Volume")</link>
+<link xl:href="http://snomed.info/id/118565006" xl:show="new">(118565006, SCT, "Volume")</link>
 </para>
                       </td>
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
                         <para xml:id="para_8489e057-19fe-4ae7-8def-5a65d2e93883">
-<link xl:href="http://snomed.info/id/127489000" xl:show="new">(G-C52F, SRT, "Active Ingredient")</link>
+<link xl:href="http://snomed.info/id/127489000" xl:show="new">(127489000, SCT, "Active Ingredient")</link>
 </para>
                       </td>
                     </tr>

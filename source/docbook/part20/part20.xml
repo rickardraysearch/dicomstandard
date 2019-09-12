@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2019a - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2019b - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -25431,7 +25431,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_1128e56e-032a-4a6e-8e71-e2e574b46c7d">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(363698007, SCT, "Finding Site")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25443,7 +25443,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_9aeb4907-940a-4731-b42e-d2e64ab51d4e">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(363698007, SCT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(272741003, SCT, "Laterality")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25743,7 +25743,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_b4e54a81-30bc-4d76-95fb-40c59ad55ac0">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(363698007, SCT, "Finding Site")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25755,7 +25755,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_a718e1e6-d125-4fcf-b838-c2358770ac16">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/363698007" xl:show="new">(G-C0E3, SRT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(G-C171, SRT, "Laterality")</link>
+<link xl:href="http://snomed.info/id/363698007" xl:show="new">(363698007, SCT, "Finding Site")</link> &gt; <link xl:href="http://snomed.info/id/272741003" xl:show="new">(272741003, SCT, "Laterality")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25767,7 +25767,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_eef04666-4de9-44c5-82ab-833372a5b3aa">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/370129005" xl:show="new">(G-C036, SRT, "Measurement Method")</link>
+<link xl:href="http://snomed.info/id/370129005" xl:show="new">(370129005, SCT, "Measurement Method")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25779,7 +25779,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_2eff334e-9123-4558-a9ee-e5100c7d866d">
                     <emphasis role="italic">
-<link xl:href="http://snomed.info/id/106233006" xl:show="new">(G-A1F8, SRT, "Topographical modifier")</link>
+<link xl:href="http://snomed.info/id/106233006" xl:show="new">(106233006, SCT, "Topographical modifier")</link>
 </emphasis>
                   </para>
                 </td>
@@ -29028,7 +29028,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <para xml:id="para_b749f39d-28bf-4df7-bd9f-82d4020682bc">0008</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1aa817c5-e8bc-4989-981e-381f1780d2cc">T-D3000</para>
+                  <para xml:id="para_1aa817c5-e8bc-4989-981e-381f1780d2cc">51185008</para>
               </td>
             </tr>
             <tr valign="top">
@@ -29051,7 +29051,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <para xml:id="para_b3f25111-12a7-4bf6-b7b3-ab0581b3da70">0004</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_355dd396-3c46-4d7c-bfac-1586023bf4e7">SRT</para>
+                <para xml:id="para_355dd396-3c46-4d7c-bfac-1586023bf4e7">SCT</para>
               </td>
             </tr>
             <tr valign="top">
@@ -31306,7 +31306,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <para xml:id="para_c9a5394e-d7d6-45c1-affc-4bf380a3f312">0008</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_1bcffd15-ab38-4031-ade1-26af8cddb1ff">M-02550</para>
+                  <para xml:id="para_1bcffd15-ab38-4031-ade1-26af8cddb1ff">81827009</para>
               </td>
             </tr>
             <tr valign="top">
@@ -31329,7 +31329,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <para xml:id="para_a7f04953-9fc9-4455-b2e2-c14c8e23a772">0004</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_b585be17-7ab7-410a-9779-70ab8efd139d">SRT</para>
+                <para xml:id="para_b585be17-7ab7-410a-9779-70ab8efd139d">SCT</para>
               </td>
             </tr>
             <tr valign="top">

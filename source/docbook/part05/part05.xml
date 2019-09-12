@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2019a - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2019b - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2611,7 +2611,7 @@
           <varlistentry>
             <term>Value Representation</term>
             <listitem>
-              <para xml:id="para_8c6abdc8-2439-4aae-bdd0-98f7c35fd830">Two single byte characters containing the VR of the Data Element. The VR for a given Data Element Tag shall be as defined by the Data Dictionary as specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. The two byte VR shall be encoded using characters from the DICOM default character set.</para>
+                <para xml:id="para_8c6abdc8-2439-4aae-bdd0-98f7c35fd830">Two single byte characters containing the VR of the Data Element. The VR for a given Data Element Tag shall be as defined by the Data Dictionary as specified in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>. The two byte VR shall be encoded using only upper case letters from the DICOM default character set.</para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -2650,7 +2650,7 @@
             <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OD, OF, OL, OV, OW, SQ and UN the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of UC, UR and UT the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
+            <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of SV, UC, UR, UV and UT the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
             <note>
               <para xml:id="para_f27d1af5-7ecf-4e2a-9ce6-e2edd366e258">VRs of UC, UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
             </note>
@@ -2660,7 +2660,7 @@
           </listitem>
         </itemizedlist>
         <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
-          <caption>Data Element with Explicit VR of OB, OD, OF, OL, OV, OW, SQ, UC, UR, UT or UN</caption>
+          <caption>Data Element with Explicit VR of OB, OD, OF, OL, OV, OW, SQ, SV, UC, UR, UT, UN or UV</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -2697,7 +2697,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_5e67423f-26ad-4664-888a-d5a4cf4c53d9">VR</para>
-                  <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 single byte characters) of "OB", "OD", "OF", "OL", "OV", "OW", "SQ", "UC", "UR", "UT" or "UN"</para>
+                  <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 single byte characters) of "OB", "OD", "OF", "OL", "OV", "OW", "SQ", "SV", "UC", "UR", "UT", "UN" or "UV"</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_354dbd6a-0245-4914-97b9-2225646113ce">Reserved (2 bytes) set to a value of 0000H</para>
@@ -2860,7 +2860,7 @@
     </section>
     <section label="7.2" status="2" xml:id="sect_7.2">
       <title>Group Length</title>
-      <para xml:id="para_6bd08183-dd74-4f1d-b6a0-b89c9108bb85">Group Length (gggg,0000) Standard Data Elements have been retired. See PS3.5-2007.</para>
+        <para xml:id="para_6bd08183-dd74-4f1d-b6a0-b89c9108bb85">Group Length (gggg,0000) Data Elements were implicitly defined for Standard and Private Data Element groups with a Value Representation of UL and a Value Multiplicity of 1, but have been retired. See PS3.5-2007.</para>
       <para xml:id="para_bfa1c83e-e646-4a00-966a-aa9aca360306">All implementations shall be able to parse Group Length elements, and may discard and not insert or re-insert them; if present they shall be consistent with the encoding of the Data Set even if the Transfer Syntax is changed resulting in a change in the actual length of a group of elements. No implementation shall require the presence of Group Length elements.</para>
       <note>
         <orderedlist numeration="arabic">
@@ -3458,6 +3458,9 @@
           <listitem>
             <para xml:id="para_3dfe862d-2e2f-46ad-b450-323f886feb99">Whether or not Private Data Elements contain identifying information related to de-identification is defined by the Private Data Element Characteristics Sequence (0008,0300). See <olink targetdoc="PS3.3" targetptr="sect_C.12.1" xrefstyle="template:PS3.3 Section %n"/>.</para>
           </listitem>
+            <listitem>
+                <para xml:id="para_f90640db-d11d-4a4f-b224-a459c29def73">Data Elements numbered (gggg,0000), where gggg is odd, were Group Length Elements, which have been retired, See <xref linkend="sect_7.2" xrefstyle="select: label"/>.</para>
+            </listitem>
         </orderedlist>
         <para xml:id="para_e8d512ad-3fa1-4d18-b8d4-911673baeb0d">Since each Item within a sequence is a self contained Data Set (see <xref linkend="sect_7.5" xrefstyle="select: label"/> on the nesting of Data Sets via Sequences of Items), any Item that contains Private Data Elements shall also have Private Creator Data Elements reserving blocks of Elements for those Private Data Elements. The scope of the reservation is just within the Item. Items do not inherit the Private Data Element reservations made by Private Creator Data Elements in the Data Set in which the Item is nested.</para>
         <note>
@@ -3799,6 +3802,7 @@
             <tr valign="top">
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_2af116cd-cdcb-4d6c-ba69-0c56967a88c2">YBR_FULL_422</para>
+                  <para xml:id="para_f2769529-080f-4fcf-8d18-edd426fd3e61">RGB</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                <para xml:id="para_8f836445-dbe9-42a1-831d-d17c75e084f3">JPEG Baseline</para>
@@ -3967,7 +3971,9 @@
               <para xml:id="para_07617cc6-a4a9-4751-9435-7b496910168d">When decompressing, should the characteristics explicitly specified in the compressed data stream (e.g., spatial subsampling or number of components or planar configuration) be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_6424f9ef-dfaa-40ff-9ca9-109d42a93363">Those characteristics not explicitly specified in the compressed data stream (e.g., the color space of the compressed components, which is not specified in the JPEG Interchange Format), or implied by the definition of the compression scheme (e.g., always unsigned in JPEG), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR_FULL_422" would describe the color space that is commonly used to lossy compress images using JPEG. It is unusual to use an RGB color space for lossy compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved.</para>
+                <para xml:id="para_6424f9ef-dfaa-40ff-9ca9-109d42a93363">Those characteristics not explicitly specified in the compressed data stream (e.g., the color space of the compressed components, which is not specified in the JPEG Interchange Format), or implied by the definition of the compression scheme (e.g., always unsigned in JPEG), can therefore be determined from the DICOM Data Element in the enclosing Data Set. For example a Photometric Interpretation of "YBR_FULL_422" would describe the color space that is commonly used to lossy compress images using JPEG.
+                    It is unusual to use an RGB color space for lossy compression, since no advantage is taken of correlation between the red, green and blue components (e.g., of luminance), and poor compression is achieved;
+                    however, for some applications this is permitted, e.g., Whole Slide Microscopy Images, to allow conversion to DICOM from proprietary formats without loss due to color space transformation.</para>
             </listitem>
             <listitem>
               <para xml:id="para_e639eb95-8d71-43a2-9a21-017e0bd8eb56">The JPEG Interchange Format is distinct from the JPEG File Interchange Format (JFIF). The JPEG Interchange Format is defined in <xref linkend="biblio_ISOIEC10918-1"/> section 4.9.1, and refers to the inclusion of decoding tables, as distinct from the "abbreviated format" in which these tables are not sent (and the decoder is assumed to already have them). The JPEG Interchange Format does NOT specify the color space. The JPEG File Interchange Format, not part of the original JPEG standard, but defined in <xref linkend="biblio_ECMA_TR-098"/> and <xref linkend="biblio_ISOIEC10918-5"/>, is often used to store JPEG bit streams in consumer format files, and does include the ability to specify the color space of the components. The JFIF APP0 marker segment is NOT required to be present in DICOM encapsulated JPEG bit streams, and should not be relied upon to recognize the color space. Its presence is not forbidden (unlike the JP2 information for JPEG 2000 Transfer Syntaxes), but it is recommended that it be absent.</para>
@@ -4075,7 +4081,7 @@
                 <para xml:id="para_03f5c942-430f-4737-87a5-08a4eaf9898a">3</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_547ae630-0bcd-4541-985b-29d832bf73ea">1</para>
+                  <para xml:id="para_547ae630-0bcd-4541-985b-29d832bf73ea">0 or 1</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_8b149c18-e49a-4667-9d79-bd5595245670">0</para>
@@ -4098,7 +4104,7 @@
                 <para xml:id="para_24c3d1c5-0809-4c54-91df-c87306a5e472">3</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_fd43d5bc-2292-437e-967e-e3ef1578d0b9">1</para>
+                  <para xml:id="para_fd43d5bc-2292-437e-967e-e3ef1578d0b9">0 or 1</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_345b2ba3-7ffe-4840-a78c-f38c256c07ea">0</para>
@@ -4251,7 +4257,7 @@
                 <para xml:id="para_7384f6e0-d83a-48ce-8cf5-a5ffb59acc94">3</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_b816ec37-4e76-4b33-a3fe-d4fad4ca9003">1</para>
+                <para xml:id="para_b816ec37-4e76-4b33-a3fe-d4fad4ca9003">0</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_98e148f9-c2f4-4095-9db1-cb313492e911">0</para>
@@ -4282,7 +4288,7 @@
                 <para xml:id="para_0aaeedaf-043d-4b16-b1bf-c766cf01c8be">3</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_cd9e6af4-39eb-4895-b294-d75178b5663c">1</para>
+                <para xml:id="para_cd9e6af4-39eb-4895-b294-d75178b5663c">0</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
                 <para xml:id="para_b383ed94-b4ba-4bf7-bf6a-a59ddfb77ceb">0</para>
@@ -4315,6 +4321,7 @@
             </listitem>
           </orderedlist>
          </note>
+          <para xml:id="para_d1e96f41-db25-4a4b-9009-9fd3796e5b43">The value of Planar Configuration (0028,0006) is irrelevant since the manner of encoding components is specified in the JPEG-LS bit stream as component, line or sample interleaved, hence it shall be set to 0.</para>
       </section>
       <section label="8.2.4" status="3" xml:id="sect_8.2.4">
         <title>JPEG 2000 Image Compression</title>
@@ -4545,7 +4552,8 @@
         <note>
           <para xml:id="para_0e5c196d-7b04-42b4-9c18-22c0162d12ca">These requirements are specified in terms of consistency with what is encapsulated, rather than in terms of the uncompressed pixel data from which the compressed data stream may have been derived.</para>
         </note>
-        <para xml:id="para_307b3170-88ee-4604-b4c4-958a8cc15009">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression. The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
+        <para xml:id="para_307b3170-88ee-4604-b4c4-958a8cc15009">When decompressing, should the characteristics explicitly specified in the compressed data stream be inconsistent with those specified in the DICOM Data Elements, those explicitly specified in the compressed data stream should be used to control the decompression.
+            The DICOM data elements, if inconsistent, can be regarded as suggestions as to the form in which an uncompressed Data Set might be encoded, subject to the general and IOD-specific rules for uncompressed Photometric Interpretation and Planar Configuration, which may require that decompressed data be converted to one of the permitted forms.</para>
         <para xml:id="para_db847fdd-ca67-4516-bb90-45d161167bee">The JPEG 2000 bit stream specifies whether or not a reversible or irreversible multi-component (color) transformation [ISO 15444-1 Annex G], if any, has been applied. If no multi-component transformation has been applied, then the components shall correspond to those specified by the DICOM Attribute Photometric Interpretation (0028,0004). If the JPEG 2000 Part 1 reversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_RCT. If the JPEG 2000 Part 1 irreversible multi-component transformation has been applied then the DICOM Attribute Photometric Interpretation (0028,0004) shall be YBR_ICT.</para>
         <note>
           <orderedlist numeration="arabic">
@@ -4556,7 +4564,9 @@
               <para xml:id="para_832bcbc5-922e-43d1-9f35-4cba78b53059">The application of a JPEG 2000 Part 1 reversible multi-component transformation is signaled in the JPEG 2000 bit stream by a value of 1 rather than 0 in the SGcod Multiple component transformation type of the COD marker segment [ISO 15444-1 Table A.17]. No other value of Photometric Interpretation than YBR_RCT or YBR_ICT is permitted when SGcod Multiple component transformation type is 1.</para>
             </listitem>
             <listitem>
-              <para xml:id="para_0a77cfd2-db8f-40f4-8d23-3a10092406af">Though it would be unusual, would not take advantage of correlation between the red, green and blue components, and would not achieve effective compression, a Photometric Interpretation of RGB could be specified as long as no multi-component transformation [ISO 15444-1 Annex G] was specified by the JPEG 2000 bit stream. Alternative methods of decorrelation of the color components than those specified in [ISO 15444-1 Annex G] are permitted as defined in PS3.3, such as a Photometric Interpretation of YBR_FULL; this may be useful when converting existing YBR_FULL Pixel Data (e.g., in a different Transfer Syntax) without further loss.</para>
+              <para xml:id="para_0a77cfd2-db8f-40f4-8d23-3a10092406af">Though it would be unusual, would not take advantage of correlation between the red, green and blue components, and would not achieve effective compression, a Photometric Interpretation of RGB could be specified as long as no multi-component transformation [ISO 15444-1 Annex G] was specified by the JPEG 2000 bit stream.
+                  For some applications the use of RGB is permitted, e.g., Whole Slide Microscopy Images, to allow conversion to DICOM from proprietary formats without loss due to color space transformation.
+                  Alternative methods of decorrelation of the color components than those specified in [ISO 15444-1 Annex G] are permitted as defined in PS3.3, such as a Photometric Interpretation of YBR_FULL; this may be useful when converting existing YBR_FULL Pixel Data (e.g., in a different Transfer Syntax) without further loss.</para>
               <para xml:id="para_30071ffc-c6fa-43f8-84a7-56424cb8f633">In either case (Photometric Interpretation of RGB or YBR_FULL), the value of SGcod Multiple component transformation type would be 0.</para>
               <para xml:id="para_1d6dc6c4-c9e9-4b2b-8175-94181e7c3deb">
 <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/> may constrain the values of Photometric Interpretation for specific IODs.</para>
@@ -9028,7 +9038,8 @@
             <para xml:id="para_e077ba60-fc25-41b5-8058-45dabdd41a7f">If Photometric Interpretation (0028, 0004) equals RGB and Bits Allocated equals 8, then three Segments are generated. The first one holds all the Red values, the second all the Green values, and the third all the Blue values.</para>
           </listitem>
           <listitem>
-            <para xml:id="para_16bd5512-a42f-47ce-9ddf-98806465f1d7">The use of separate segments implies that the Planar Configuration (0028,0006) will always be 1 for RLE compressed images.</para>
+              <para xml:id="para_16bd5512-a42f-47ce-9ddf-98806465f1d7">The use of separate segments implies that the Planar Configuration (0028,0006) could theoretically be 1 for RLE compressed images,
+                  but for consistency with other Encapsulated (compressed) Transfer Syntaxes and restrictions on Planar Configuration in many IODs, it may be 0 unless constrained by the IOD.</para>
           </listitem>
         </orderedlist>
       </note>

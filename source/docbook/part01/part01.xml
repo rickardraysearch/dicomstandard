@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2019a - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2019b - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -948,7 +948,7 @@
         retired.</para>
     </section>
     <section label="6.10" status="2" xml:id="sect_6.10">
-      <title>PS3.10 Media Storage and File Format</title>
+        <title>PS3.10 Media Storage and File Format for Media Interchange</title>
       <para xml:id="para_32d11e4e-6d3f-4b68-a7f0-fb466b3314bd">
 <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies a general model for the storage of medical
         imaging information on removable media (see <xref linkend="figure_6.10-1" xrefstyle="select: label"/>). The purpose of this Part is to

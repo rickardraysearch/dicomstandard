@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2019a - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2019b - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -2182,7 +2182,7 @@
                 <para xml:id="para_7e9b5bcb-9acb-45c5-95ea-993a045b862e">Modification of these Attributes may be necessary if the SCP is also an SCP of a Query/Retrieve SOP Classes. These SOP Classes are described in this Standard. For example, an MR scanner may be implemented to generate Study Instance UIDs for images generated on the MR. When these images are sent to an archive that is HIS/RIS aware, it may choose to change the UID of the study assigned to the study by the PACS. The mechanism by which it performs this coercion is implementation dependent.</para>
               </listitem>
               <listitem>
-                <para xml:id="para_6c71cbf6-d7fe-4d58-b5ef-f6d4095f3825">An SCP may, for instance, convert Coding Scheme Designator values "SNM3" to "SRT", in accordance with the DICOM conventions for SNOMED (see <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>).</para>
+                  <para xml:id="para_6c71cbf6-d7fe-4d58-b5ef-f6d4095f3825">An SCP may, for instance, convert retired Code Values with a Coding Scheme Designator value of "99SDM", "SNM3" or "SRT" to the corresponding SCT Code Values and use the "SCT" Coding Scheme Designator, in accordance with the DICOM conventions for SNOMED (see <olink targetdoc="PS3.16" targetptr="PS3.16" xrefstyle="select: labelnumber"/>).</para>
               </listitem>
               <listitem>
                 <para xml:id="para_082208bc-cb4c-40c5-abaf-4f11f87560dc">Modification of Attributes that may be used to reference a SOP Instance by another SOP Instance (such as Study Instance UID and Series Instance UID Attributes) will make that reference invalid. Modification of these Attributes is strongly discouraged.</para>
@@ -5106,8 +5106,8 @@
                 <para xml:id="para_45da214a-7886-42b8-91da-37919c7b7eb3">The anatomic regions of interest in this Study (i.e., external anatomy, surface anatomy, or general region of the body).</para>
                 <para xml:id="para_251bf3de-7a7f-4515-aafc-6dc02cffded6">One or more Items are permitted in this Sequence.</para>
                 <note>
-                  <para xml:id="para_802acbd3-e255-4bac-9888-3d0acc2b9479">If the Instances in the Study contain Anatomic Region Sequence (0008,2218), then the Items of this Sequence may be the union of the codes in the Instances. Alternatively, multiple (usually contiguous) anatomic regions might be combined into a single code. E.g., <link xl:href="http://snomed.info/id/51185008" xl:show="new">(T-D3000, SRT, "Chest")</link>, <link xl:href="http://snomed.info/id/113345001" xl:show="new">(T-D4000, SRT, "Abdomen")</link> and <link xl:href="http://snomed.info/id/12921003" xl:show="new">(T-D6000, SRT, "Pelvis")</link> might be combined into <link xl:href="http://snomed.info/id/416775004" xl:show="new">(R-FAB56, SRT, "Chest, Abdomen and Pelvis")</link>.</para>
-                  <para xml:id="para_8acc43ef-4b40-45af-a879-dadd13babb63">If Instances in the Study do not contain Anatomic Region Sequence (0008,2218) but do contain Body Part Examined (0018,0015), then codes equivalent to recognized values of Body Part Examined (0018,0015) may be used. See <olink targetdoc="PS3.16" targetptr="chapter_L" xrefstyle="template:Annex %n “%t” in PS3.16"/> for standard equivalent values. E.g., if an Instance contained Body Part Examined (0018,0015) with a value of "CHEST", then this Sequence might contain <link xl:href="http://snomed.info/id/51185008" xl:show="new">(T-D3000, SRT, "Chest")</link>.</para>
+                  <para xml:id="para_802acbd3-e255-4bac-9888-3d0acc2b9479">If the Instances in the Study contain Anatomic Region Sequence (0008,2218), then the Items of this Sequence may be the union of the codes in the Instances. Alternatively, multiple (usually contiguous) anatomic regions might be combined into a single code. E.g., <link xl:href="http://snomed.info/id/51185008" xl:show="new">(51185008, SCT, "Chest")</link>, <link xl:href="http://snomed.info/id/113345001" xl:show="new">(113345001, SCT, "Abdomen")</link> and <link xl:href="http://snomed.info/id/12921003" xl:show="new">(12921003, SCT, "Pelvis")</link> might be combined into <link xl:href="http://snomed.info/id/416775004" xl:show="new">(416775004, SCT, "Chest, Abdomen and Pelvis")</link>.</para>
+                  <para xml:id="para_8acc43ef-4b40-45af-a879-dadd13babb63">If Instances in the Study do not contain Anatomic Region Sequence (0008,2218) but do contain Body Part Examined (0018,0015), then codes equivalent to recognized values of Body Part Examined (0018,0015) may be used. See <olink targetdoc="PS3.16" targetptr="chapter_L" xrefstyle="template:Annex %n “%t” in PS3.16"/> for standard equivalent values. E.g., if an Instance contained Body Part Examined (0018,0015) with a value of "CHEST", then this Sequence might contain <link xl:href="http://snomed.info/id/51185008" xl:show="new">(51185008, SCT, "Chest")</link>.</para>
                 </note>
               </td>
             </tr>
