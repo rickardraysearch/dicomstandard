@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.22" version="5.0" xml:id="PS3.22">
+  
+  <title>PS3.22</title>
+    <subtitle>DICOM PS3.22 2019d - Real-Time Communication</subtitle>
+  <info>
+    <author>
+      <orgname>DICOM Standards Committee</orgname>
+    </author>
+    <copyright>
+      <year>2019</year>
+      <holder>NEMA</holder>
+    </copyright>
+      <legalnotice>
+          <para xml:id="para_c665eb92-0a95-4f33-b2e0-f9a453984be1">A DICOM® publication</para>
+      </legalnotice>
+  </info>
+
+  <chapter label="" status="1" xml:id="chapter_Notice">
+    <title>Notice and Disclaimer</title>
+    <para xml:id="para_6ce2769c-a92b-4099-b613-443b2ecca147">The information in this publication was considered technically sound by the consensus of
+      persons engaged in the development and approval of the document at the time it was developed.
+      Consensus does not necessarily mean that there is unanimous agreement among every person
+      participating in the development of this document.</para>
+    <para xml:id="para_e317e5fd-5dd4-49f4-904e-f2042603ef2d">NEMA standards and guideline publications, of which the document contained herein is one,
+      are developed through a voluntary consensus standards development process. This process brings
+      together volunteers and/or seeks out the views of persons who have an interest in the topic
+      covered by this publication. While NEMA administers the process and establishes rules to
+      promote fairness in the development of consensus, it does not write the document and it does
+      not independently test, evaluate, or verify the accuracy or completeness of any information or
+      the soundness of any judgments contained in its standards and guideline publications.</para>
+    <para xml:id="para_6aae5358-e6e9-480f-9a55-4238872c3c63">NEMA disclaims liability for any personal injury, property, or other damages of any nature
+      whatsoever, whether special, indirect, consequential, or compensatory, directly or indirectly
+      resulting from the publication, use of, application, or reliance on this document. NEMA
+      disclaims and makes no guaranty or warranty, expressed or implied, as to the accuracy or
+      completeness of any information published herein, and disclaims and makes no warranty that the
+      information in this document will fulfill any of your particular purposes or needs. NEMA does
+      not undertake to guarantee the performance of any individual manufacturer or seller's products
+      or services by virtue of this standard or guide.</para>
+    <para xml:id="para_3d9a94a4-b60c-45b5-803f-63294adca27a">In publishing and making this document available, NEMA is not undertaking to render
+      professional or other services for or on behalf of any person or entity, nor is NEMA
+      undertaking to perform any duty owed by any person or entity to someone else. Anyone using
+      this document should rely on his or her own independent judgment or, as appropriate, seek the
+      advice of a competent professional in determining the exercise of reasonable care in any given
+      circumstances. Information and other standards on the topic covered by this publication may be
+      available from other sources, which the user may wish to consult for additional views or
+      information not covered by this publication.</para>
+    <para xml:id="para_33d403da-d2f2-4103-a328-ecf0ad1c69fd">NEMA has no power, nor does it undertake to police or enforce compliance with the contents
+      of this document. NEMA does not certify, test, or inspect products, designs, or installations
+      for safety or health purposes. Any certification or other statement of compliance with any
+      health or safety-related information in this document shall not be attributable to NEMA and is
+      solely the responsibility of the certifier or maker of the statement.</para>
+  </chapter>
+  <chapter label="" status="1" xml:id="chapter_Foreword">
+    <title>Foreword</title>
+    <para xml:id="para_70e6a865-6795-4cec-998e-6fb5903ae803">This DICOM Standard was developed according to the procedures of the DICOM Standards Committee.</para>
+    <para xml:id="para_17aca9ac-bc52-4407-be69-d61b6541ab44">The DICOM Standard is structured as a multi-part document using the guidelines established in <xref linkend="biblio_ISODirectives2"/>.</para>
+  </chapter>
+  <chapter label="1" status="1" xml:id="chapter_1">
+    <title>Scope and Field of Application</title>
+      <para xml:id="para_440e9526-e00c-4bf8-a8d5-c7d405a4b707">This Part of the DICOM Standard specifies an SMPTE ST 2110-10 based service, relying on RTP, for the real-time transport of DICOM metadata.
+          It provides a mechanism for the transport of DICOM metadata associated with a video or an audio flow based on the SMPTE ST 2110-20 and SMPTE ST 2110-30, respectively.</para>
+  </chapter>
+    <chapter label="2" status="1" xml:id="chapter_2">
+        <title>Normative and Informative References</title>
+        <para xml:id="para_843e8301-d084-4d0e-bf51-e7c4aaf58647">The following standards contain provisions that, through reference in this text, constitute provisions of this Standard. At the time of publication, the editions indicated were valid. All standards are subject to revision, and parties to agreements based on this Standard are encouraged to investigate the possibilities of applying the most recent editions of the standards indicated below.</para>
+        <bibliography>
+            <biblioentry xml:id="biblio_ISODirectives2">
+                <abbrev>ISO/IEC Directives, Part 2</abbrev>
+                <author>
+                    <orgname>ISO/IEC</orgname>
+                </author>
+                <date>2016/05</date>
+                <edition>7.0</edition>
+                <title>Rules for the structure and drafting of International Standards</title>
+                <bibliosource>
+                    <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
+                </bibliosource>
+            </biblioentry>
+            <biblioentry xml:id="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report">
+                <abbrev>EBU-SMPTE-VSF JT-NM Phase 2 Report</abbrev>
+                <authorgroup>
+                    <author>
+                        <orgname>European Broadcasting Union (EBU)</orgname>
+                    </author>
+                    <author>
+                        <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+                    </author>
+                    <author>
+                        <orgname>Video Services Forum (VSF)</orgname>
+                    </author>
+                </authorgroup>
+                <date>2015</date>
+                <edition>v1.0</edition>
+                <title>Joint Task Force on Networked Media (JT-NM) Phase 2 Report- Reference Architecture</title>
+                <bibliosource>
+                    <link xl:href="http://jt-nm.org/RA-1.0/JT-NMReferenceArchitecturev1.0%20150904%20FINAL.pdf"/>
+                </bibliosource>
+            </biblioentry>
+            <biblioentry xml:id="biblio_RFC_3550">
+                <abbrev>RFC 3550</abbrev>
+                <author>
+                    <orgname>IETF</orgname>
+                </author>
+                <date>2003/07</date>
+                <title>RTP: A Transport Protocol for Real-Time Applications</title>
+                <bibliosource>
+                    <link xl:href="http://tools.ietf.org/html/rfc3550"/>
+                </bibliosource>
+            </biblioentry>
+            <biblioentry xml:id="biblio_RFC_5285">
+                <abbrev>RFC 5285</abbrev>
+                <author>
+                    <orgname>IETF</orgname>
+                </author>
+                <date>2008/07</date>
+                <title>A General Mechanism for RTP Header Extensions</title>
+                <bibliosource>
+                    <link xl:href="http://tools.ietf.org/html/rfc5285"/>
+                </bibliosource>
+            </biblioentry>
+            <biblioentry xml:id="biblio_SMPTE_ST2110-10">
+                <abbrev>SMPTE ST 2110-10</abbrev>
+                <author>
+                    <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+                </author>
+                <date>2017</date>
+                <title>Professional Media over IP Networks: System Timing and Definitions</title>
+            </biblioentry>
+            <biblioentry xml:id="biblio_SMPTE_ST2110-20">
+                <abbrev>SMPTE ST 2110-20</abbrev>
+                <author>
+                    <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+                </author>
+                <date>2017</date>
+                <title>Professional Media over IP Networks: Uncompressed Active Video</title>
+            </biblioentry>
+            <biblioentry xml:id="biblio_SMPTE_ST2110-30">
+                <abbrev>SMPTE ST 2110-30</abbrev>
+                <author>
+                    <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+                </author>
+                <date>2017</date>
+                <title>Professional Media over IP Networks: PCM Digital Audio</title>
+            </biblioentry>
+        </bibliography>
+    </chapter>
+  <chapter label="3" status="1" xml:id="chapter_3">
+    <title>Definitions</title>
+    <para xml:id="para_123b1971-2048-409f-bfe1-a14a4b66f55b">For the purposes of this Standard the following definitions apply.</para>
+      <glossary>
+          <glossdiv label="3.1" status="2" xml:id="sect_3.1">
+              <title>Reference Architecture Definitions:</title>
+              <para xml:id="para_71318459-72ef-49f3-af01-af8c479cdae1">This Part of the Standard makes use of the following terms defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>:</para>
+              <glossentry xml:id="glossentry_Essence" xreflabel="Essence">
+                  <glossterm>Essence</glossterm>
+                  <glossdef>
+                      <para xml:id="para_f0d07170-6143-4485-bcc3-dd819bf7b969">Video, audio or data type of source.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_Flow" xreflabel="Flow">
+                  <glossterm>Flow</glossterm>
+                  <glossdef>
+                      <para xml:id="para_923ba4d9-bd4f-4091-9e96-24c8e88683af">A sequence of Grains from a Source; a concrete representation of content emanating from the Source.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_Grain" xreflabel="Grain">
+                  <glossterm>Grain</glossterm>
+                  <glossdef>
+                      <para xml:id="para_333a5db8-f684-4725-95ec-db6a2e8bd517">Represents an element of Essence or other data associated with a specific time, such as a frame, or a group of consecutive audio samples, or captions.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_Rendition" xreflabel="Rendition">
+                  <glossterm>Rendition</glossterm>
+                  <glossdef>
+                      <para xml:id="para_e4da4f5c-e542-4ecc-ab8a-4bee097bf068">A collection of time-synchronized Flows intended for simultaneous presentation, providing a complete experience of a Source Group.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_Source" xreflabel="Source">
+                  <glossterm>Source</glossterm>
+                  <glossdef>
+                      <para xml:id="para_ddb66019-1d41-4c55-8217-7e387f53dcb9">An abstract concept that represents the primary origin of a Flow or set of Flows.</para>
+                  </glossdef>
+              </glossentry>
+          </glossdiv>
+          <glossdiv label="3.2" status="2" xml:id="sect_3.2">
+              <title>DICOM Real-Time Video Definitions:</title>
+              <glossentry xml:id="glossentry_DICOMRealTimeVideo" xreflabel="DICOM Real-Time Video">
+                  <glossterm>DICOM Real-Time Video</glossterm>
+                  <glossdef>
+                      <para xml:id="para_1d21e474-edd5-4c4f-abca-7086a09581f0">DICOM-RTV encompasses the DICOM-RTV Service, transport of related multimedia bulk data and the Real-Time IODs to which it may be applied.</para>
+                  </glossdef>
+              </glossentry>
+              <glossentry xml:id="glossentry_DICOMRTVService" xreflabel="DICOM-RTV Service">
+                  <glossterm>DICOM-RTV Service</glossterm>
+                  <glossdef>
+                      <para xml:id="para_32b66df4-b744-4c50-97d2-d834ba686b60">Real-Time transport of metadata which characterize multimedia bulk data.</para>
+                  </glossdef>
+              </glossentry>
+          </glossdiv>
+      </glossary>
+  </chapter>
+  <chapter label="4" status="1" xml:id="chapter_4">
+    <title>Symbols and Abbreviations</title>
+    <para xml:id="para_739c7287-3b0b-455a-a645-08625bc24ed0">The following symbols and abbreviations are used in this Part of the Standard.</para>
+    <variablelist>
+      <varlistentry>
+        <term>AVP</term>
+        <listitem>
+          <para xml:id="para_e5b9a2d1-29e8-45d5-8732-cfc0c8a527f9">Audio Video Profile</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>DICOM-RTV</term>
+        <listitem>
+          <para xml:id="para_5e53670d-fdb0-4ec7-8252-d8bd213e7762">DICOM Real-Time Video</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>NMOS</term>
+        <listitem>
+          <para xml:id="para_b8cbc50a-5aae-47bc-b1cc-742d9a142b24">Networked Media Open Specifications</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>PTP</term>
+        <listitem>
+          <para xml:id="para_3d6e2a89-fac8-4d28-aac4-18a30fa9dd9d">Precision Time Protocol</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>RTP</term>
+        <listitem>
+          <para xml:id="para_d17e5429-72eb-46f7-aa19-959ec5e172cb">Real-Time Protocol</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>SDP</term>
+        <listitem>
+          <para xml:id="para_8f0452d7-38bb-45c2-89d7-5e2b0b5fa9d3">Session Description Protocol</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>SMPTE</term>
+        <listitem>
+          <para xml:id="para_fea59a40-f358-452b-b03b-0141aa0407c8">Society of Motion Picture and Television Engineers</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </chapter>
+  <chapter label="5" status="1" xml:id="chapter_5">
+    <title>Conventions</title>
+      <para xml:id="para_b47d3931-e6e9-4bc3-ae30-29208a975715"/>
+  </chapter>
+    <chapter label="6" status="1" xml:id="chapter_6">
+        <title>Data Communication Requirements</title>
+        <para xml:id="para_94f4a76a-a430-41d1-80da-968f802217db">DICOM Real-Time Video uses the RTP protocol as defined in <xref linkend="biblio_SMPTE_ST2110-10"/>.</para>
+        <section label="6.1" status="2" xml:id="sect_6.1">
+            <title>Interaction</title>
+            <para xml:id="para_afc40fdb-7965-4e02-b62a-b6eee290674d">As shown in <xref linkend="figure_6-1" xrefstyle="select: label"/>, a device can have multiple Sources, one for each Essence which corresponds of the type of bulk data (video, audio or medical metadata) , each Source producing one or multiple Flows representing the same content in different formats (high definition, low definition, uncompressed, compress with or without lossâ€¦).</para>
+            <para xml:id="para_5926b24d-4af6-4f13-a957-e006a3378bb7">Several Sources may be grouped in a Source Group. A concrete experience of a Source Group is a Rendition, defined as a collection of time-synchronized Flows intended for simultaneous presentation (e.g., the audio channel of a surgical camera).</para>
+            <figure label="6-1" pgwide="1" xml:id="figure_6-1">
+                <title>Real World diagram of DICOM-RTV</title>
+                <mediaobject>
+                    <imageobject>
+                        <!--<imagedata fileref="figures/PS3.22_6-1.svg"/>-->
+                        <imagedata fileref="part22_fromword_files/image015_sup202.png" scalefit="1" width="100%"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para xml:id="para_781581ba-098e-457a-8a57-4ac026367ab2">DICOM Real-Time Video standard specifies the communication mechanism for metadata, associated with real-time video and/or audio, originated from a medical imaging device. The mechanism involves one Source and one Flow of "DICOM Video Metadata Essence" for each video Flow and one Source and one Flow of "DICOM Audio Metadata Essence" for each audio Flow. Optionally, there is one Source and one Flow for the "DICOM Rendition Metadata" associating multiple Flows produced by the same device.</para>
+            <para xml:id="para_8bbbcb37-ac29-4afb-abef-ca7fb038f788">The interaction shall be as shown in <xref linkend="figure_6-2" xrefstyle="select: label"/>.</para>
+            <figure label="6-2" pgwide="1" xml:id="figure_6-2">
+                <title>Interaction Diagram</title>
+                <mediaobject>
+                    <imageobject>
+                        <!--<imagedata fileref="figures/PS3.22_6-2.svg"/>-->
+                        <imagedata fileref="part22_fromword_files/image016_sup202.png" scalefit="1" width="100%"/>
+                    </imageobject>
+                </mediaobject>
+            </figure>
+            <para xml:id="para_599581f8-7828-4b0b-b638-6d176446d214">
+<xref linkend="biblio_SMPTE_ST2110-10"/> provides end-to-end network transport functions for applications transmitting real-time data. Content is transmitted in RTP sessions using RTP packets respecting <xref linkend="biblio_SMPTE_ST2110-10"/>.</para>
+            <para xml:id="para_fd39e5ab-b09a-4ed3-92f4-702cb4a8e5bd">A device can provide and/or consume content. A device that provides content has one or more Sources that can be of different Essences (e.g., Video and Audio). A Source is the origin of one or more Flows. Multiple Flows coming from the same Source are representations of the same content in different resolutions and/or codings. This is a broadcast/multicast protocol, so a device provides content whether or not a consuming device is present. A device that consumes content can subscribe/unsubscribe to available Flows.</para>
+            <para xml:id="para_402b8cd5-ccf9-4b96-9735-f3403546dd2b">The context and content of a video and/or audio Flow is described by a DICOM Metadata Flow, which is associated with each Flow. However the same DICOM Metadata Flow may be used to describe more than one Flow if their content is the same and their coding are close enough not to affect professional interpretation. A DICOM Rendition Metadata Flow may be used to associate multiple Flows provided by one device.</para>
+        </section>
+        <section label="6.2" status="2" xml:id="sect_6.2">
+            <title>Transport</title>
+            <section label="6.2.1" status="3" xml:id="sect_6.2.1">
+                <title>RTP Header</title>
+                <para xml:id="para_907a8841-60d5-41b8-979d-65bc4d02e9bc">All Essences shall be transported with RTP according to <xref linkend="biblio_SMPTE_ST2110-10"/>, which requires that each Flow is described by an SDP object which specifies its content as well as connection details enabling the receiver to join the session. In addition to mandatory information specified in <xref linkend="biblio_SMPTE_ST2110-10"/>, for Audio and Video Essence, the SDP may also include the following information:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_96aa6c9a-d713-46f8-a74c-48cc68157b5f">PTP Sync Timestamp</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_9128dbcf-b903-4b57-9336-727f564c38fa">PTP Origin Timestamp</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_457b6b66-61cf-4fad-81fd-40d586f17f86">Source Identifier</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_ffc4de5f-160e-4252-9567-481cc04ce794">Flow Identifier</para>
+                    </listitem>
+                </itemizedlist>
+                <note>
+                    <para xml:id="para_b31dc6b5-ab28-4bc0-8794-1fc5c038452f">This information is the best way for associating multiple Flows originating from the same device. The presence of such information in the SDP implies that it is contained in the RTP Extended Header present in the first IP packet of a Grain (video frame, audio sample, metadata setâ€¦). It makes it possible to automatically associate and temporarily synchronize two Flows based on their content.</para>
+                </note>
+                <para xml:id="para_90221fe9-f14b-4e94-b1d1-9acd3ff2bda1">By definition, all the Flows according to <xref linkend="biblio_SMPTE_ST2110-10"/> are synchronized by means of a common reference to the Universal Time, using PTP, with precision on the order of nanoseconds.</para>
+                <para xml:id="para_ad36d811-00f5-454e-8c42-5fbf37291e27">The RTP Header, for video and audio Flows, shall follow <xref linkend="biblio_SMPTE_ST2110-20"/> and <xref linkend="biblio_SMPTE_ST2110-30"/>, respectively.</para>
+                <para xml:id="para_77626a45-4120-4e49-a3df-0a42d25280cf">The RTP Header, for DICOM Metadata Flows, shall follow <xref linkend="biblio_SMPTE_ST2110-10"/>. The clock rate shall be identical to the one defined in the referenced audio or video Flow. The following additional constraints apply:</para>
+                <variablelist>
+                    <varlistentry>
+                        <term>extension (X) : 1 bit </term>
+                        <listitem>
+<para xml:id="para_be9d1d54-e996-4f6b-9bcc-eb6a6baa3d7c">Shall be set to 1.</para>
+</listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>payload type (PT)</term>
+                        <listitem>
+                            <para xml:id="para_5bca4c96-7897-4bd4-82cf-ed87bd1782fd">The value of payload type is selected from the range 96-127. It is recommended to avoid numbers frequently used for audio (97) and video (96), and for example use 104 for DICOM Metadata Essence.
+                                The value shall be associated to the media type "application" and the subtype "dicom" in the SDP. E.g., (DICOM Metadata on port 12345):</para>
+                            <para xml:id="para_b19d06cc-07c4-4b3b-bb74-de624624cccb">
+<emphasis role="italic">m=application</emphasis>12345 <emphasis role="italic">RTP/AVP</emphasis>104</para>
+                            <para xml:id="para_ab229eef-65c0-4024-bebf-e8702b9741d3">
+<emphasis role="italic">a=rtpmap:</emphasis>104 <emphasis role="italic">dicom/</emphasis>90000</para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist>
+                <para xml:id="para_3785dd83-5385-4c7c-893a-b122b1dca9b9">For the DICOM Metadata Essence, the RTP Header Extension defined by NMOS shall be present, including the following information:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_c64ba9da-79c5-4b10-8e87-2441a2fb5c5e">PTP Sync Timestamp</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_ad88159e-9cd7-4923-9a36-890366d62074">PTP Origin Timestamp</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_5bf6a205-9984-4ab5-9de3-a49598e72ded">Source Identifier</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_46cf5d8b-f315-4796-88e7-6df99d7786d2">Flow Identifier</para>
+                    </listitem>
+                </itemizedlist>
+                <para xml:id="para_2591181f-0de5-4434-a4f2-1e1d5e6a3132">The "defined by profile" part of the RTP Header Extension shall be set to 0xBEDE identifying that the one-byte header extension form is used, as specified in <xref linkend="biblio_RFC_5285"/>.</para>
+            </section>
+            <section label="6.2.2" status="3" xml:id="sect_6.2.2">
+                <title>RTP Payload</title>
+                <para xml:id="para_9b07351d-dde1-4130-b6ee-53e5e71ccd75">The RTP Payload for audio and video Flows shall follow <xref linkend="biblio_SMPTE_ST2110-20"/> and <xref linkend="biblio_SMPTE_ST2110-30"/>, respectively.</para>
+                <para xml:id="para_4a9d52fc-250e-4908-992c-bbf1d8f37f24">The RTP Payload for DICOM Metadata Flows (audio, video and rendition) shall follow <xref linkend="biblio_SMPTE_ST2110-10"/>.</para>
+                <para xml:id="para_68eeeffc-e389-4d86-8de8-04360addad1e">The RTP Payload for DICOM Metadata Flows consists of a DICOM dataset compliant with real-time communication.</para>
+                <para xml:id="para_63cfb9f4-f9b7-459c-bf53-ed254da95187">The DICOM dataset is made of three parts:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_8a68b175-413e-4def-92e7-9ac716587178">the RTV Meta Information part. This part shall be present in each Grain.</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_b61ab2c8-b9a3-4b45-9302-bda60c6ff13c">the dynamic part containing information that varies over time (e.g., Origin Timestamp of the frame, Position of a probe, circle defining the eye. When it exists, this part shall be present in each Grain. The transmission rate of the dynamic part shall be identical to the rate of the associated Flow (e.g., one dataset per frame). This part is for the moment not applicable to DICOM Rendition Metadata.</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_2df95d90-67a2-455d-a71e-89ca19b34a87">the static part containing information that doesn't vary over time (e.g. Patient Name, Modality, â€¦). This part will not be present in every Grain but shall be present at least in one Grain per second.</para>
+                    </listitem>
+                </itemizedlist>
+                <note>
+                    <para xml:id="para_aba091e2-50c9-4b5e-a842-d0da3bfe1e5f">The receiver cannot process information received from a sender until it receives DICOM Metadata including the static part, so it has to be sent at least every second in order to avoid a longer wait by the receiver when "connected" to a sender.</para>
+                </note>
+                <para xml:id="para_6b5d556e-46a3-4596-b352-91da9dbd0fc8">The transmission rate of DICOM audio flows will be typically of the range of 48kHz. The transmission rate of DICOM video flows will be typically of the range of 60Hz. The transmission rate of the DICOM Rendition Metadata Flow shall be at least 1Hz. It may be appropriate to use a higher frequency if there is a need for tight synchronization of associated Flows from a device (e.g., two videos of a stereo pair).</para>
+            </section>
+        </section>
+    </chapter>
+    <chapter label="7" status="1" xml:id="chapter_7">
+        <title>DICOM Real-Time Format</title>
+        <para xml:id="para_ae9f3a15-03c5-4409-9a11-9c054e1c6956">The DICOM Real-Time Format provides a means to encapsulate in an RTP session the Data Set representing a SOP Instance.</para>
+        <para xml:id="para_20876eff-c7a3-4402-b217-aa6d04a6362c">
+<xref linkend="figure_7-1" xrefstyle="select: label"/> illustrates the encapsulation of a DICOM audio or video dataset in RTP. The byte stream of the Data Set is placed into the RTP Payload after the DICOM-RTV Meta Information. Each RTP session corresponds to a single SOP Instance.</para>
+        <figure label="7-1" pgwide="1" xml:id="figure_7-1">
+            <title>DICOM Dataset Encapsulation Within RTP</title>
+            <mediaobject>
+                <imageobject>
+                    <!--<imagedata fileref="figures/PS3.22_7-1.svg"/>-->
+                    <imagedata fileref="part22_fromword_files/image7-1SC_sup202.png" scalefit="1" width="100%"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <section label="7.1" status="2" xml:id="sect_7.1">
+            <title>RTV Meta Information</title>
+            <para xml:id="para_933099db-47a7-41e8-8126-980659afa530">The RTV Meta Information includes identifying information on the encapsulated DICOM Data Set.</para>
+            <note>
+                <para xml:id="para_497a67bc-18ae-420e-981e-4085a7e91754">The group number of the RTV Meta Information attributes (0002,xxxx) is lower than the one of other attributes in order to place the RTV Meta Information at the beginning of the payload, as is done in <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
+            </note>
+            <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
+                <caption>RTV Meta Information</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_bbcbd6d5-0353-4404-b83e-54c0a7f715ef">Attribute Name</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_bc4a8380-3397-4dde-8423-0c8b3a442c98">Tag</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_c382e686-df2b-4676-b372-7395a630bff0">Type</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_6f946dfd-22e5-499b-a516-39ff318de9a5">Attribute Description</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_6402b7a9-87bf-4f77-bac0-7605eef2c3e7">Header Preamble</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_da20afa3-b933-4c7d-95f8-51b933e658a6">
+                                <emphasis role="italic">No Tag or Length Fields</emphasis>
+                            </para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_4b917666-3cb9-4d03-8f9e-3807411144d3">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_70b33c29-314c-41c2-843f-625f67f29abf">A fixed 128 byte field available for Application Profile or implementation specified use. If not used by an Application Profile or a specific implementation, all bytes shall be set to 00H.</para>
+                            <para xml:id="para_ed5b035a-f4f3-4de9-8bd1-0c2665f0258e">Receivers shall not rely on the content of this Preamble to determine that this payload is or is not a DICOM payload.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7376164d-7e4a-456d-9bcd-60f61648a5fe">DICOM Prefix</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_cdf57685-9be2-4b27-a12d-ac2e645933d3">
+                                <emphasis role="italic">No Tag or Length Fields</emphasis>
+                            </para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_18db1463-ed96-444a-af3a-ef9f5949f3c2">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_2007690b-dbfb-4558-b600-76c8eba36432">Four bytes containing the character string "DICM". This Prefix is intended to be used to recognize that this payload is or is not a DICOM payload.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_41482db0-b341-437b-8137-4aac20ac8351">File Meta Information Group Length</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_229da25f-570a-4b2c-b908-d0c2e8210050">(0002,0000)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_a4f7ef7c-00eb-4c5a-aad8-7e539b58c11b">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_ade3d47d-5a45-41a0-aac9-086b39829bc6">Number of bytes following this RTV Meta Element (end of the Value field) up to and including the last RTV Meta Element of the Group 2 RTV Meta Information</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_3bc692a1-6112-424e-b71c-ef167f872ecb">Transfer Syntax UID</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_17f18438-4042-4b11-aa15-25f5ff608baf">(0002,0010)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_166c8069-8f16-4d61-bc97-919e75a7d6b8">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_fc1e6370-1cb4-44f7-9296-04cbf805c1c3">Uniquely identifies the Transfer Syntax used to encode the referred bulk-data Flow. This Transfer Syntax does not apply to the RTV Metadata which is encoded using the Explicit VR Little Endian Transfer Syntax.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_0e8e17b4-c127-4d57-9a52-4cf79ac7bf26">RTV Meta Information Version</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_eb95b6b0-f82a-45aa-a759-800d8306761d">(0002,0031)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_09d33701-ef9d-4703-b164-3f65721a26f0">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_74b0d542-fd2c-4da9-87e5-801ca146e506">This is a two byte field where each bit identifies a version of this RTV Meta Information header. In version 1 the first byte value is 00H and the second byte value is 01H.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_5a08e345-6d50-46b5-9195-0654d9a6aee3">RTV Communication SOP Class UID</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_36897e27-dcf6-46b3-829b-6e020b291556">(0002,0032)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_e3539353-ccd1-4134-9a73-890a42bab4ed">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_13852351-092a-4fdd-ba05-4fc4db1a2473">Uniquely identifies the SOP Class associated with the Data Set. SOP Class UIDs allowed for RTV Communication are specified in section 7.2 STANDARD SOP CLASSES.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_b77cbc9e-5d49-4bfe-9f14-c8cf5d1ae1d5">RTV Communication SOP Instance UID</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_acef297b-ab6d-4798-987b-605032fa4a15">(0002,0033)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_378d85a3-a9cc-409c-9094-ce60339526be">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_d5cebc76-2988-401e-bdfa-5ebc10435a2d">Uniquely identifies the SOP Instance associated with the Data Set placed in the RTP Payload and following the RTV Meta Information.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_8b582cd8-cfca-4964-b7bd-75a6b3f93234">RTV Source Identifier</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_9416a62f-5a62-40c4-8c86-89ee857c4d15">(0002,0035)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_fe973f12-194e-4af0-9b1e-e5b2e00bd21b">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c7ae2415-7977-4332-b089-ea069a843ae2">The UUID of the RTP source that sends the RTV Metadata Flow.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7509ffc4-94a4-4caa-8dbb-7ebd5b3b2f39">RTV Flow Identifier</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_497e3df3-fb76-4b20-bdcd-b96064679df2">(0002,0036)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_5165d954-61d4-4de0-9778-9564da7629da">1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_e864cca3-fc27-4c75-9574-da4a971094ec">The UUID of the RTV Metadata Flow.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_bad4da3c-5b20-4e65-affd-774c7cdd1246">RTV Flow RTP Sampling Rate</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_80085556-a91c-4665-a3bc-8ccaa1d02425">(0002,0037)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_608e0bb3-a7f8-4ecf-8396-e5d6739608cf">1C</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_4b04d39f-2765-423d-ab61-01a5b6747d01">The rate of the dynamic part of the RTV Metadata Flow, the same as the bulk-data Flow rate.</para>
+                            <para xml:id="para_83d0b441-5d71-4563-9226-7d40304009e2">Required if RTV Metadata Flow includes a dynamic part.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_4f1e546e-77cd-49e3-91e3-005b32fd976f">RTV Flow Actual Frame Duration</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_118cad21-d613-4f81-a6e3-4c2aa9fba876">(0002,0038)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_8ba045a5-447b-4dfa-bb73-f03cbc013528">3</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_ede71fab-46ae-428e-8f73-c4cb5dca7191">Duration of image capture in msec.</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_91c3a928-0d4b-43ea-b08c-cc6a6089f885">Private Information Creator UID</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_f6961e94-a757-4dd2-a9da-de4409c768ac">(0002,0100)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_9137a217-0221-421c-a570-71582cc0a1e4">3</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_aef4b65b-b401-4c72-8457-b5f8a62b28f4">The UID of the creator of the private information (0002,0102).</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_39f1ee95-022e-40ee-b60f-aa4cbd1ea0a1">Private Information</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_339b675d-81dc-4de7-bb11-7690d35e4746">(0002,0102)</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_9fa85a8d-ef6c-46f0-a6e1-295350a2cb97">1C</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7823de3b-aabe-4bd3-888b-6f5fcbf456fc">Contains Private Information placed in the RTV Meta Information. The creator shall be identified in (0002,0100). Required if Private Information Creator UID (0002,0100) is present.</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section label="7.2" status="2" xml:id="sect_7.2">
+            <title>Standard SOP Classes</title>
+            <para xml:id="para_4d5e02b9-a94e-40ee-a87d-b43bf0883d6a">The SOP Classes in the Real-Time Communication Class identify the Composite IODs to be sent. <xref linkend="table_7.2-1" xrefstyle="select: label"/> identifies Standard SOP Classes.</para>
+            <table frame="box" label="7.2-1" rules="all" xml:id="table_7.2-1">
+                <caption>Standard SOP Classes</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_16c4a9b6-7c81-428e-8ef8-e5c3598c1e51">SOP Class Name</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_17d0597b-7d8d-408a-b75a-11526c4eaa32">SOP Class UID</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_4444d16d-b67b-4cc1-bdc5-83f193c56820">IOD Specification (defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>)</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_9955abaf-fd20-4012-9386-929d2c2355f7">Video Endoscopic Image Real-Time Communication</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_9c181fff-b0e8-42ea-a750-b0afe7367804">1.2.840.10008.10.1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_3c09e5be-4f10-44f7-96e9-1b0c04ad7a71">Real-Time Video Endoscopic Image IOD</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_0b7c3888-a970-41fd-8449-33b473042848">Video Photographic Image Real-Time Communication</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_1fe22030-52b8-4dd6-aaad-a11cd331831f">1.2.840.10008.10.2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_a2e93311-5dd0-4bd2-9deb-92b555856b25">Real-Time Video Photographic Image IOD</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_d61f3621-984f-44df-8786-31a8be56c91f">Audio Waveform Real-Time Communication</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_38e66890-0f89-470e-b892-a69f33065788">1.2.840.10008.10.3</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_83bbe8ff-a280-44d0-9b23-4021c9f35a92">Real-Time Audio Waveform IOD</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_29945957-4d89-493c-b47b-def1c19a2e7d">Rendition Selection Document Real-Time Communication</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_65b94bc0-a6aa-4c78-9fd8-56a4a33c78e2">1.2.840.10008.10.4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c539348e-c1da-46a8-8c96-5099569663a7">Rendition Selection Document IOD</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </chapter>
+    <chapter label="8" status="1" xml:id="chapter_8">
+        <title>Security Considerations</title>
+        <para xml:id="para_eef397f1-0e2f-4687-98f5-0a868eb7a007">The metadata and ancillary streams usually contain Personally Identifiable Information (PII). The video and audio streams might contain protected information. The underlying SMPTE protocols do not specify any security protections to ensure confidentiality, integrity, or availability of the various data streams. DICOM does not specify any additions to the SMPTE protocols to provide such protection. Authorization and authentication of access to the DICOM-RTV Service is handled by configuration. Authentication is not re-confirmed at initiation of the underlying SMPTE protocols, and DICOM does not specify any additions to the SMPTE protocols for access control, authorization, or authentication.</para>
+        <para xml:id="para_49f5f4cd-2550-4393-98da-fa1b8535b0d5">The potential eavesdropping, replay, message insertion, deletion, modification, man-in-the-middle and denial of service attacks have not been analyzed. That analysis is up to the individual sites and installations.</para>
+        <para xml:id="para_364eccc8-d6a5-4359-9467-ee3051c6e1ce">Individual sites and installations will also need to perform their own assessments and selection of security mechanisms and add protections as necessary. The data rates and strict timing requirements for the data streams require careful analysis of any security mechanisms that are added. There do exist security mechanisms that operate at and below the IP level that can meet foreseen use cases, but there is insufficient experience or evidence to justify DICOM making a recommendation.</para>
+    </chapter>
+    <chapter label="9" status="1" xml:id="chapter_9">
+        <title>Conformance</title>
+        <para xml:id="para_11ce68a7-64ce-408b-9467-f3ff0ec1224b">An implementation claiming conformance to PS3.22 shall function in accordance with all its mandatory sections.</para>
+        <para xml:id="para_0f671eee-4a52-4d79-8386-6ad05810b8e4">DICOM-RTV Services are used to transmit in real-time Composite SOP Instances. All Composite SOP Instances transmitted shall conform to the requirements specified in other Parts of the Standard.</para>
+        <para xml:id="para_065fd09f-74d9-4837-858c-487cab1e2f4a">An implementation may conform to the DICOM-RTV Services by supporting the role of origin device or receiving device, or both, for any of the Services defined in PS3.22.</para>
+        <para xml:id="para_afbe033c-b3ce-4c4d-8f38-a1155678fcf2">The structure of Conformance Statements is specified in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_235ec34b-8632-424e-9bb4-f6ee97d9097f">An implementation shall describe in its Conformance Statement the Real-World Activity associated with its use of DICOM-RTV Services, including any proxy functionality between a DICOM-RTV and another service provided through DIMSE Service or RESTful (i.e.; storage of received video and audio with associated metadata).</para>
+        <para xml:id="para_9b4de115-5eed-44d1-880f-b71aab05d9fa">In addition, the Conformance Statement document for a DICOM-RTV sending device shall specify how the receivers can get the content of the SDP objects describing the metadata and associated video and/or audio flows.</para>
+    </chapter>
+</book>

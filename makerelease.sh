@@ -31,6 +31,7 @@ zip "${releasefilebasename}_docbook_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}
 	source/docbook/part19/part19.xml \
 	source/docbook/part20/part20.xml \
 	source/docbook/part21/part21.xml \
+	source/docbook/part22/part22.xml \
 	source/docbook/part01/figures \
 	source/docbook/part02/figures \
 	source/docbook/part03/figures \
@@ -50,6 +51,7 @@ zip "${releasefilebasename}_docbook_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}
 	source/docbook/part19/figures \
 	source/docbook/part20/figures \
 	source/docbook/part21/figures \
+	source/docbook/part22/figures \
 	support/stylesheets/extractcompositeiodsfordicom3tooltemplate.xsl \
 	support/stylesheets/extractcontextgroupsforpixelmed.xsl \
 	support/stylesheets/extractdcmdefinitionsasowl.xsl \
@@ -74,7 +76,8 @@ zip "${releasefilebasename}_docbook_changes_${releasedate}.zip" -v -r "-x@${EXCL
 	source/docbook/part18/part18_changes.xml \
 	source/docbook/part19/part19_changes.xml \
 	source/docbook/part20/part20_changes.xml \
-	source/docbook/part21/part21_changes.xml
+	source/docbook/part21/part21_changes.xml \
+	source/docbook/part22/part22_changes.xml
 
 zip "${releasefilebasename}_html_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/html/targetdb \
@@ -105,7 +108,8 @@ zip "${releasefilebasename}_html_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/html/part17_fromword_files \
 	output/html/part18_fromword_files \
 	output/html/part20_fromword_files \
-	output/html/part21_fromword_files
+	output/html/part21_fromword_files \
+	output/html/part22_fromword_files
 
 zip "${releasefilebasename}_chtml_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/chtml/targetdb \
@@ -127,7 +131,8 @@ zip "${releasefilebasename}_chtml_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" 
 	output/chtml/part18 \
 	output/chtml/part19 \
 	output/chtml/part20 \
-	output/chtml/part21
+	output/chtml/part21 \
+	output/chtml/part22
 
 zip "${releasefilebasename}_pdf_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/pdf/releasenotes_${release}.pdf \
@@ -149,7 +154,8 @@ zip "${releasefilebasename}_pdf_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/pdf/part18.pdf \
 	output/pdf/part19.pdf \
 	output/pdf/part20.pdf \
-	output/pdf/part21.pdf
+	output/pdf/part21.pdf \
+	output/pdf/part22.pdf
 
 zip "${releasefilebasename}_pdf_changes_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/pdf/part01_changes.pdf \
@@ -170,7 +176,8 @@ zip "${releasefilebasename}_pdf_changes_${releasedate}.zip" -v -r "-x@${EXCLUDEF
 	output/pdf/part18_changes.pdf \
 	output/pdf/part19_changes.pdf \
 	output/pdf/part20_changes.pdf \
-	output/pdf/part21_changes.pdf
+	output/pdf/part21_changes.pdf \
+	output/pdf/part22_changes.pdf
 
 zip "${releasefilebasename}_docx_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/docx/part01.docx \
@@ -191,7 +198,8 @@ zip "${releasefilebasename}_docx_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/docx/part18.docx \
 	output/docx/part19.docx \
 	output/docx/part20.docx \
-	output/docx/part21.docx
+	output/docx/part21.docx \
+	output/docx/part22.docx
 
 zip "${releasefilebasename}_odt_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/odt/part01.odt \
@@ -212,6 +220,7 @@ zip "${releasefilebasename}_odt_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/odt/part18.odt \
 	output/odt/part19.odt \
 	output/odt/part20.odt \
-	output/odt/part21.odt
+	output/odt/part21.odt \
+	output/odt/part22.odt
 
 rm "${EXCLUDEFILE}"

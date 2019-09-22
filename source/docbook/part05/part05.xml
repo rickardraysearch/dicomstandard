@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2019c - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2019d - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -648,7 +648,30 @@
           <link xl:href="http://tools.ietf.org/html/rfc5891"/>
         </bibliosource>
       </biblioentry>
-      
+        <biblioentry xml:id="biblio_SMPTE_ST2110-10">
+            <abbrev>SMPTE ST 2110-10</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: System Timing and Definitions</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_SMPTE_ST2110-20">
+            <abbrev>SMPTE ST 2110-20</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: Uncompressed Active Video</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_SMPTE_ST2110-30">
+            <abbrev>SMPTE ST 2110-30</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: PCM Digital Audio</title>
+        </biblioentry>
     </bibliography>
   </chapter>
     <chapter label="3" status="1" xml:id="chapter_3">
@@ -2627,7 +2650,14 @@
                 </listitem>
               </itemizedlist>
               <note>
-                <para xml:id="para_424d0f69-a07d-45c9-8c46-62f818b9e9e0">The decoder of a Data Set should support both Explicit and Undefined Lengths for VRs of SQ and UN and, when applicable, for VRs of OW and OB.</para>
+                  <orderedlist>
+                      <listitem>
+                          <para xml:id="para_424d0f69-a07d-45c9-8c46-62f818b9e9e0">The decoder of a Data Set should support both Explicit and Undefined Lengths for VRs of SQ and UN and, when applicable, for VRs of OW and OB.</para>
+                      </listitem>
+                      <listitem>
+                          <para xml:id="para_101cc10c-2686-4e6e-b828-8fba1e557033">The 32-bit Value Length Field limits the maximum size of large data values such as Pixel Data sent in a Native Format (encoded in Transfer Syntaxes that use only the unencapsulated form).</para>
+                      </listitem>
+                  </orderedlist>
               </note>
             </listitem>
           </varlistentry>
@@ -3548,7 +3578,10 @@
         <para xml:id="para_0486e172-df22-40c4-a38f-9286022646c3">Additional restrictions that are placed on acceptable Values for Bits Allocated (0028,0100), Bits Stored (0028,0101), and High Bit (0028,0102) for Pixel Data (7FE0,0010) are specified in the Information Object Definitions in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>.</para>
         <para xml:id="para_aa6d49ab-498a-42a9-a432-5282587040e2">Restrictions are placed on acceptable Values for Bits Allocated (0028,0100) for Float Pixel Data (7FE0,0008) and Double Float Pixel Data (7FE0,0009), such that only a single Pixel Cell entirely occupies the allocated bits specified by Bits Allocated (0028,0100), hence Bits Stored (0028,0101) and High Bit (0028,0102) are not sent.</para>
         <para xml:id="para_5ac3a1cc-12f7-4303-86fc-33bf4c34f3c1">Also, the Value Field containing Pixel Data, like all other Value Fields in DICOM, shall be an even number of bytes in length. This means that the Value Field may need to be padded with data that is not part of the image and shall not be considered significant. If needed, the padding bits shall be appended to the end of the Value Field, and shall be used only to extend the data to the next even byte increment of length.</para>
-        <para xml:id="para_3e55e85c-a189-418d-a160-3837b41c7240">In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field.</para>
+          <note>
+              <para xml:id="para_23a52e85-e9ea-41b8-9cd5-5c6eeec077bc">The 32-bit Value Length Field limits the maximum size of large data values such as Pixel Data sent in a Native Format (encoded in Transfer Syntaxes that use only the unencapsulated form).</para>
+          </note>
+          <para xml:id="para_3e55e85c-a189-418d-a160-3837b41c7240">In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field.</para>
         <note>
           <para xml:id="para_362cebd6-ea8c-4a91-a674-3cd2a3097ad2">Receiving applications should be aware that some older applications may send Pixel Data with excess padding, which was not explicitly prohibited in earlier versions of the Standard. Applications should be prepared to accept such Pixel Data elements, but may delete the excess padding. In no case should a sending application place private data in the padding data.</para>
         </note>
@@ -3616,7 +3649,14 @@
       </note>
       <para xml:id="para_cdbe477b-a4f5-417d-bee0-82e5a0b1a9ad">If Pixel Data (7FE0,0010) is sent in a Native Format, the Value Representation OW is most often required. The Value Representation OB may also be used for Pixel Data (7FE0,0010) in cases where Bits Allocated has a value less than or equal to 8, but only with Transfer Syntaxes where the Value Representation is explicitly conveyed (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>).</para>
       <note>
-        <para xml:id="para_ec814ff7-cbc9-4530-a0b6-a580a48d6cf4">The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data (7FE0,0010) when using the default Transfer Syntax.</para>
+          <orderedlist>
+              <listitem>
+                  <para xml:id="para_ec814ff7-cbc9-4530-a0b6-a580a48d6cf4">The DICOM default Transfer Syntax (Implicit VR Little Endian) does not explicitly convey Value Representation and therefore the VR of OB may not be used for Pixel Data (7FE0,0010) when using the default Transfer Syntax.</para>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_a7e1bfa6-d021-48eb-bbe7-4bbe16f873a4">The 32-bit Value Length Field limits the maximum size of large data values such as Pixel Data sent in a Native Format.</para>
+              </listitem>
+          </orderedlist>
       </note>
       <para xml:id="para_dec19bac-823e-44b1-ba85-3bc875c2010d">Float Pixel Data (7FE0,0008) is sent
         in Native Format; the Value Representation shall be OF, Bits Allocated (0028,0100)
@@ -6024,7 +6064,237 @@
           </listitem>
         </itemizedlist>
     </section>
-</section>
+        <section label="8.2.13" status="4" xml:id="sect_8.2.13">
+            <title>Constraints For SMPTE ST 2110-20 Uncompressed Active Video For DICOM-RTV</title>
+            <para xml:id="para_467e286c-0370-4784-8a68-d5739a2628b0">This section describes the constraints applying to pixel data carried in the DICOM-RTV Flow (separated from DICOM-RTV Metadata Flow) and fully described in <xref linkend="biblio_SMPTE_ST2110-20"/> .</para>
+            <para xml:id="para_383ed391-bf77-43c8-928b-d778f581ae05">The following table describes constraints on the <xref linkend="biblio_SMPTE_ST2110-20"/> Video Flow in terms of the valid values for the corresponding DICOM Attributes in the DICOM-RTV Metadata Flow:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_6fdf0572-7b9c-4948-a698-d69cc42dcbbc">Samples per pixel</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_51187497-a0e4-430a-bc84-2282a1b783e5">Bits Allocated</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_93bb4ca8-a72f-48e7-8cf7-fecb75bf8566">Bits Stored</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_00bca179-e177-4cb3-9b3f-a668733b5625">High Bit</para>
+                </listitem>
+            </itemizedlist>
+            <table frame="box" label="8.2.13-1" rules="all" xml:id="table_8.2.13-1">
+                <caption>Constraints Applicable to Attributes describing Pixel Data</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_3fb1e77b-9148-4b38-8287-052bd1f05d33">Samples per Pixel (0028,0002)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_cd796949-1a83-405a-b215-93b44083550b">Bits Allocated (0028,0100)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_3233d001-7a66-41ba-9628-394c624c9d5e">Bits Stored (0028,0101)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_d7a4e59c-7fe8-4507-bcd2-e7c7aefde095">High Bit (0028,0102)</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7f7edd8b-e6d5-43b4-9058-b923f56be020">3</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c1539e78-2ab6-4b6d-baf1-9ef59ff5d5f8">8, 16, 16, 16</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_0c74d136-028d-43ff-b628-2d797fd4b185">8, 10, 12, 16</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_02b60728-949f-4167-bffb-7ae94e6e5ab8">7, 9, 11, 15</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <para xml:id="para_f3515b6c-4ec5-4b13-b556-7f8116a78807">DICOM Photometric Interpretation is based on CCIR 601 (aka ITU-R BT.601), therefore some restrictions apply to the possible combination of Sampling System and Colorimetry parameters as stated by <xref linkend="biblio_SMPTE_ST2110-20"/> .</para>
+            <table frame="box" label="8.2.13-2" rules="all" xml:id="table_8.2.13-2">
+                <caption>List of supported SMPTE ST 2110-20 Parameter Combinations</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="2" rowspan="1">
+                            <para xml:id="para_51c417a8-61c2-4ff4-a0fa-e5a533b3e274">SMPTE ST 2110-20</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="2">
+                            <para xml:id="para_2e5b86dc-97a4-4abc-8432-92b083ead219">DICOM Photometric Interpretation (0028,0004)</para>
+                        </th>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_2ca0aa38-97ce-4038-87c5-11904c891dbf">Sampling system</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_97aefcad-7445-4cc5-b609-47a9b1e0df2c">Colorimetry</para>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_24ce08a5-b67b-453d-91d3-9c33841a8c0b">RGB</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_2fa28179-26ac-4ec4-9f34-824b783dd3ba">BT601</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7283d384-5d85-47ff-afe7-b7c7e1005b1d">RGB</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7ef1ec8c-fa6d-4481-a3ca-89e0ad468adb">YCbCr-4:4:4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_9171357b-2218-49a4-8751-f550dffb7644">BT601</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c9893c19-0602-4e64-a4d5-4b022e90ddba">YBR_FULL</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_ea665c5a-27c7-4e8a-b3e6-ed658ac5b25e">YCbCr-4:2:2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_387af67b-12b4-48bb-a98b-4258e4f8e340">BT601</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7c3a63e7-6b70-4cce-9336-89facf1ef63a">YBR_FULL_422</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_ab3e1b37-60ef-471b-bbda-5d5316b59efa">YCbCr-4:2:0</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_494ffb0c-d787-41d5-bb62-99903b86c1c3">BT601</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_4f000189-2cd3-48f0-a45d-93953c40f65a">YBR_PARTIAL_420</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <para xml:id="para_ca24f9cf-2ab5-42b6-8d15-1035f64b2fcb">Some other <xref linkend="biblio_SMPTE_ST2110-20"/> parameter combinations do not correspond to existing DICOM photometric interpretations, so their use is currently not permitted.
+                <xref linkend="table_8.2.13-3" xrefstyle="select: label"/> lists the unsupported combinations.</para>
+            <table frame="box" label="8.2.13-3" rules="all" xml:id="table_8.2.13-3">
+                <caption>List of unsupported SMPTE ST 2110-20 Parameter Combinations</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="left" colspan="2" rowspan="1">
+                            <para xml:id="para_f05292fd-e58c-475d-b350-d8b35ae0dfa4">SMPTE ST 2110-20</para>
+                        </th>
+                    </tr>
+                    <tr valign="top">
+                        <th align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_3cb9eb59-a7e2-40ff-8545-6598334dc261">Sampling system</para>
+                        </th>
+                        <th align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_37475943-a11f-4eaa-9c4c-5462cc68294e">Colorimetry</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_02c31c15-fee8-4b15-b653-62c3e3f15325">RGB</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_78793972-b9f2-43a8-8c3d-98698753c766">BT2020, BT709, BT2100, ST2065-1, ST2065-3</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7ba9876f-f5f4-4c52-be4c-c1954c84e25d">YCbCr-4:4:4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_c8a1b600-da3c-4211-bc9f-b15693d9e49e">BT2020, BT709, BT2100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_4ed3881d-9039-42fd-af4e-21df73599fc3">YCbCr-4:2:2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_894be815-88ac-41a7-b468-fb4c334b47db">BT2020, BT709, BT2100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_afd1bd7f-568f-421d-ba5a-82db78e6f6e3">YCbCr-4:2:0</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_e7dc4216-0334-4802-8efe-0c42db85761b">BT2020, BT709, BT2100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_5bac2f1e-c0f1-4152-8cb6-24eb62fe55ca">CLYCbCr-4:4:4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_528cbda6-a7db-4421-8e85-3705d7f9e949">BT2020</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_31afd9d0-bace-49ae-874f-ca1c09cc3f57">CLYCbCr-4:2:2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_556c685b-a698-40ef-a38f-eb6dd9edf885">BT2020</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_731a12f9-0c7f-44fd-a8e5-cc2ffc080acd">CLYCbCr-4:2:0</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_6db55dd3-a299-4b1e-aad8-341f1f429f26">BT2020</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_e0a913c0-f461-4144-a045-eab137288f16">ICtCp-4:4:4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_672d2bd9-abb9-4473-bc8e-12d1fafd1321">BT2100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_cf6c2361-be59-48cd-92c1-0eabad16f2cf">ICtCp-4:2:2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_12f045cd-b3b0-4fdf-b31a-0b57dccb9865">BT2100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_a569c8c7-776e-4109-9a92-cee40516db28">XYZ</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_0688fb56-b4c0-4a34-bac0-57e537c9ae54">XYZ</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_2ff3236c-6c90-44c3-8aa6-58e45a1c82c0">KEY</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
     <section label="8.3" status="2" xml:id="sect_8.3">
       <title>Waveform Data and Related Data Elements</title>
       <para xml:id="para_9a8e1cfc-73c8-4db2-a88a-040b4251f39d">The DICOM protocol provides for the exchange of encoded time-based signals, or waveforms, encoded in the Waveform Data 5400,1010).</para>
@@ -6285,6 +6555,22 @@
       <title>Transfer Syntax for HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression</title>
       <para xml:id="para_3f19e318-3ba1-4850-bd28-ae8b75d2e03d">One Transfer Syntax is specified for HEVC/H.265 Main 10 Profile / Level 5.1 Video Compression. Transfer Syntax HEVC/H.265 Main 10 Profile corresponds to the <xref linkend="biblio_ISOIEC23008-2"/> HEVC standard's profile and level specifications.</para>
     </section>
+      <section label="10.15" status="2" xml:id="sect_10.15">
+          <title>Transfer Syntax for SMPTE ST 2110-20 Uncompressed Progressive Active Video</title>
+          <para xml:id="para_51bfd1fb-8c06-4d78-b046-68673ffbb525">This Transfer Syntax is used for Uncompressed Video pixels carried in a DICOM-RTV Flow (separated from DICOM-RTV Metadata Flow) as described by <xref linkend="biblio_SMPTE_ST2110-20"/>, in the case the video is progressive (e.g., 1080p). The main parameters of the transfer syntax are described in <xref linkend="sect_A.8" xrefstyle="select: label"/>.</para>
+      </section>
+      <section label="10.16" status="2" xml:id="sect_10.16">
+          <title>Transfer Syntax for SMPTE ST 2110-20 Uncompressed Interlaced Active Video</title>
+          <para xml:id="para_8ff67c6d-e48f-4fa3-a1bd-bfa3ce2ea3c4">This Transfer Syntax is used for Uncompressed Video pixels carried in a DICOM-RTV Flow (separated from DICOM-RTV Metadata Flow) as described by <xref linkend="biblio_SMPTE_ST2110-20"/>, in the case the video is interlaced (e.g., 1080i). The main parameters of the transfer syntax are described in <xref linkend="sect_A.9" xrefstyle="select: label"/>.</para>
+          <section label="10.16.1" status="3" xml:id="sect_10.16.1">
+              <title>Interlaced Vs. Progressive Video</title>
+              <para xml:id="para_1642d40a-8bf9-4f36-a83a-ac7b27f02874">Interlaced video supports transmitting video with a smaller bandwidth. One frame contains only odd lines and the next one contains only even lines. Interlaced video is acceptable for display but may cause problems in image processing. It is recommended to use progressive video. However, in case an original interlaced video signal is converted in the DICOM-RTV format, it is recommended to maintain the interlaced format and let the processing application deal with it.</para>
+          </section>
+      </section>
+      <section label="10.17" status="2" xml:id="sect_10.17">
+          <title>Transfer Syntax for SMPTE ST 2110-30 PCM Digital Audio</title>
+          <para xml:id="para_402a3ea9-97ca-4959-9c69-57415540447e">This Transfer Syntax is used for audio channel data carried in a DICOM-RTV Flow (separated from DICOM-RTV Metadata Flow) as described by <xref linkend="biblio_SMPTE_ST2110-30"/>. The main parameters of the transfer syntax are described in <xref linkend="sect_A.10" xrefstyle="select: label"/>.</para>
+      </section>
   </chapter>
   <chapter label="A" status="1" xml:id="chapter_A">
     <title>Transfer Syntax Specifications (Normative)</title>
@@ -6310,7 +6596,14 @@
                 <listitem>
                   <para xml:id="para_721bde46-66b0-4def-83d6-422e845a8abe">Pixel Data (7FE0,0010) has the Value Representation OW and shall be encoded in Little Endian.</para>
                   <note>
-                    <para xml:id="para_8e5a1a29-830f-4e34-9849-19d37640200b">The OL and OV Value Representations are not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32 or 64, since OL and OV were added to the Standard after the encoding of Pixel Data had been established</para>
+                      <orderedlist>
+                          <listitem>
+                              <para xml:id="para_8e5a1a29-830f-4e34-9849-19d37640200b">The OL and OV Value Representations are not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32 or 64, since OL and OV were added to the Standard after the encoding of Pixel Data had been established</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_5d7e9e92-31ff-47c0-b8eb-73f0a11fd5c3">The 32-bit Value Length Field limits the maximum size of the Pixel Data that can be encoded in Implicit VR Little Endian Transfer Syntax, since they are sent in a Native Format.</para>
+                          </listitem>
+                      </orderedlist>
                   </note>
                 </listitem>
                 <listitem>
@@ -6400,7 +6693,14 @@
                     </listitem>
                   </itemizedlist>
                   <note>
-                      <para xml:id="para_b6daae19-f7e3-4a49-b3c0-b45e8b812a99">The OL and OV Value Representations are not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32 or 64, since OL and OV were added to the Standard after the encoding of Pixel Data had been established</para>
+                      <orderedlist>
+                          <listitem>
+                              <para xml:id="para_b6daae19-f7e3-4a49-b3c0-b45e8b812a99">The OL and OV Value Representations are not used for Pixel Data, even if it has a Bits Allocated (0028,0100) of 32 or 64, since OL and OV were added to the Standard after the encoding of Pixel Data had been established</para>
+                          </listitem>
+                          <listitem>
+                              <para xml:id="para_3b6f8a2a-b48f-4ddd-9645-9ba8256c1b3c">The 32-bit Value Length Field limits the maximum size of the Pixel Data that can be encoded in Little Endian Transfer Syntax (Explicit VR) since they are sent in a Native Format.</para>
+                          </listitem>
+                      </orderedlist>
                   </note>
                 </listitem>
                 <listitem>
@@ -7522,6 +7822,435 @@
       <para xml:id="para_a0c08dde-4620-4350-be5a-34f374f9bc99">The entire byte stream is then compressed using the "Deflate" algorithm defined in Internet RFC 1951.</para>
       <para xml:id="para_ff74d158-d42f-4b58-93c2-2d7d6be0fcdc">This DICOM JPIP Referenced Deflate Transfer Syntax shall be identified by a UID of Value "1.2.840.10008.1.2.4.95".</para>
     </section>
+        <section label="A.8" status="2" xml:id="sect_A.8">
+            <title>SMPTE ST 2110-20 Uncompressed Progressive Active Video Transfer Syntax</title>
+            <para xml:id="para_da80c567-43f1-473d-9483-85ae895610b4">This Transfer Syntax is used in a DICOM-RTV Metadata Flow in order to describe the accompanying <xref linkend="biblio_SMPTE_ST2110-20"/> Video Flow.</para>
+            <para xml:id="para_82192435-6c37-4d69-9458-7d42f23db324">DICOM Attributes</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_38eb76e2-726e-47c0-aa78-ef0f0fc78b03">Samples per Pixel (0028,0002)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_afa2d833-b1b7-4a55-be0e-9b357a9f3927">Photometric Interpretation (0028,0004)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_d7576144-8496-479e-a406-46da301ee0f1">Bits Allocated (0028,0100)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_c720ea8b-eb1b-4f46-9ce9-dfd0eb4eb5a3">Bits Stored (0028,0101)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_f4700c94-5a1d-47d7-986b-68d886115725">High Bit (0028,0102)</para>
+                </listitem>
+            </itemizedlist>
+            <para xml:id="para_c5c43e89-2019-42f7-b879-94db28bf98e7">are still applicable with some accommodations below.</para>
+            <para xml:id="para_52c63781-db1f-49c5-8d9b-c618ce0d964d">As DICOM Photometric Interpretation (0028,0004) values YBR_FULL, YBR_FULL_422, YBR_PARTIAL_420 are based on CCIR 601 (aka BT.601), DICOM-RTV supports only the following:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_a17c110d-8cef-4ea9-8acd-f9ce2207aba7">
+<xref linkend="biblio_SMPTE_ST2110-20"/> YCbCr-4:4:4 sampling system</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_e53e5e71-a9c0-4fa6-93b2-47f1bdeedf5a">
+<xref linkend="biblio_SMPTE_ST2110-20"/> RGB sampling system</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_f68a03fd-7559-4af2-8902-e8a6ed5485aa">
+<xref linkend="biblio_SMPTE_ST2110-20"/> YCbCr-4:2:2 sampling system</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_ce20ec73-0792-473c-b6ab-5f9483424a63">
+<xref linkend="biblio_SMPTE_ST2110-20"/> YCbCr-4:2:0 sampling system</para>
+                </listitem>
+            </itemizedlist>
+            <para xml:id="para_642cadb8-938f-4439-82c2-375b550c09e3">
+<xref linkend="table_A.8-1" xrefstyle="select: label"/> describes the different color resolution.</para>
+            <table frame="box" label="A.8-1" rules="all" xml:id="table_A.8-1">
+                <caption>DICOM Attributes for different color resolution</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_68c30330-883a-4666-a106-890ea4f34c77">Bit Depth</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0f27f34a-3a30-461f-a224-267e083a4218">Samples per Pixel (0028,0002)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_7d94e455-e8a0-4a2a-8537-2e1f78524e6c">Bits Allocated (0028,0100)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_24fca27e-90c2-4a1c-8d9a-121e64f41d68">Bits Stored (0028,0101)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_212b4fd4-a2b5-4701-b7a3-74b297c41698">High Bit (0028,0102)</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_1992962e-131c-4f7c-a032-f46b74134fd3">8</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_afbd4b97-46a9-4f67-857c-4d7c82c380ab">3</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_f830d8cf-0b6e-4f3f-bf8d-a4e9c13a7cc9">8</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_2540817b-e88e-4504-8e0a-5fd7bee81085">8</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_7bdf314a-baa4-45f6-a153-719f51cfc7bb">7</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_a7aa3858-98bf-4cb7-a861-6e2cf8b3bfce">10</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_8e283cff-7307-4bbd-88de-75d9e71adff9">3</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_e9ee9079-ae12-4ab3-81e4-404471c08afc">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_5f6ebf3b-1e71-4b10-b462-43329bf7367d">10</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_38065520-b6e1-4d02-80e5-d7660573392f">9</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_f8b863e1-24ca-499a-834b-ce194daa65fc">12</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_edffd79a-a7fc-4ad8-a1e6-4ed344e21931">3</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_d2d1a9f5-a3e0-4e2b-8b11-7ee81caf8760">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_19e8a476-dcb3-4425-a04b-1348bd302ee1">12</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_8896b962-9e8f-4d11-9675-bd68cd870924">11</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_a20f16e0-ce6d-40f3-8fa2-13999724d6f5">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_e26eaf99-d741-4622-93c7-e3c256cb6212">3</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_b20d5d4b-bc1a-4966-b2a1-aaa2574ae62f">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_d01dd4da-696d-48a3-8c69-39c8519332dd">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_4105438b-8d30-402f-ad13-cdfee3a71a6a">15</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <para xml:id="para_649b76a4-bf75-4c27-b84d-d92ab7d5be02">The way of encoding pixels shall respect SMPTE ST2110-20.</para>
+            <note>
+                <para xml:id="para_b4293890-aa89-4d5d-aa88-e94bdd72a25d">This encoding is different than the encoding of Pixel Data (7FE0,0010). Example, for YBR_FULL_422 10 bits:</para>
+            </note>
+            <para xml:id="para_89741c5f-7c22-44ed-9d02-282532fd0fa9">- SMPTE ST 2110-20 Video Flow YCbCr 4:2:2 10 bits</para>
+            <programlisting><![CDATA[
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   C'B00 (10 bits) |   Y'00 (10 bits)  |   C'R00 (10 bits) |   Y'01 (10 bits)  |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+]]></programlisting>
+            <para xml:id="para_aa2c3854-700d-43ab-a78e-a6a2ee68a995">- DICOM Pixel Data (7FE0,0010) YBR_FULL_422 10 bits</para>
+            <programlisting><![CDATA[
+ 0                   1                   2                   3                   4                   5                   6
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Y'00 (10 bits)  |0|0|0|0|0|0|    Y'01 (10 bits) |0|0|0|0|0|0|   C'B00 (10 bits) |0|0|0|0|0|0|   C'R00 (10 bits) |0|0|0|0|0|0|
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+]]></programlisting>
+            <para xml:id="para_d18dce96-3fa7-4ec1-aa29-62b0228833ca">A DICOM Transfer Syntax for SMPTE ST 2110-20 Uncompressed Progressive Active Video shall be identified by a UID value of</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_532d102c-13a0-414c-af3f-8634fd60a65c">1.2.840.10008.1.2.7.1 corresponding to <xref linkend="biblio_SMPTE_ST2110-20"/> for the progressive video.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section label="A.9" status="2" xml:id="sect_A.9">
+            <title>SMPTE ST 2110-20 Uncompressed Interlaced Active Video Transfer Syntax</title>
+            <para xml:id="para_5e1c62ff-9622-4b05-b296-ae8e36dc8956">This Transfer Syntax is used in a DICOM-RTV Metadata Flow in order to describe the accompanying <xref linkend="biblio_SMPTE_ST2110-20"/> Video Flow.</para>
+            <para xml:id="para_15a331ec-e82a-4577-8563-9daaa7ce3e07">The parameters are similar to the ones described in the <xref linkend="biblio_SMPTE_ST2110-20"/> Uncompressed Progressive Active Video (<xref linkend="sect_A.8" xrefstyle="template: label"/>), but the frames are interlaced, one frame containing only odd lines and the next one containing only even lines.</para>
+            <para xml:id="para_02d90f3f-bc9b-4126-82c6-5069df486261">A DICOM Transfer Syntax for SMPTE ST 2110-20 Uncompressed Interlaced Active Video shall be identified by a UID value of:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_af30a842-1bed-4fcb-aa81-b3c5fef122b7">1.2.840.10008.1.2.7.2 corresponding to <xref linkend="biblio_SMPTE_ST2110-20"/> for the interlaced video.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section label="A.10" status="2" xml:id="sect_A.10">
+            <title>: SMPTE ST 2110-30 PCM Audio Transfer Syntax</title>
+            <para xml:id="para_d85aaae3-643f-4517-82b5-3af8a9a2e30c">This Transfer Syntax is used in a DICOM-RTV Metadata Flow in order to describe the accompanying SMPTE ST21110-30 Audio Flow.</para>
+            <para xml:id="para_7ce5d079-7958-492b-805f-500120545274">DICOM Attributes</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_533f377c-f45f-4720-858d-9c5e8b93d079">Number of Waveform Channels (003A,0005) is limited to 15</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_96e0b66e-e387-4556-805f-5a1fa961fab8">Number of Waveform Samples (003A,0010) is limited to 96 (1ms at 96 kHz)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_833751a2-529f-4a68-8798-446401616316">Sampling Frequency (003A,001A) shall either be 44100, 48000 or 96000</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_7480c9ce-0a51-4f05-86fc-1b09a2256450">Waveform Bits Stored (003A,021A) shall either be 16 or 24</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_6f693573-14cd-491b-a0f3-d9e2e3c53652">Waveform Bits Allocated (5400,1004) shall either be 16 or 24</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_22a82792-2e2a-440d-b811-993e92fe201d">Waveform Sample Interpretation (5400,1006) shall either be US, SS or OB</para>
+                </listitem>
+            </itemizedlist>
+            <table frame="box" label="A.10-1" rules="all" xml:id="table_A.10-1">
+                <caption>ST 2110-30 and DICOM sampling frequency</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_4a4cfbba-821a-4ee1-af0a-201cd1a14aff">ST 2110-30 Sampling Frequency</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_10ded564-f5e7-4cc5-b242-5babc2739455">Sampling frequency(0003,001A)</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_a99c74cf-684b-4c97-9ea3-c9c1a24f6660">44.1 kHz</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0db86977-0ba6-41a0-b89f-385b0cb70b9b">44100</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_eb370510-8992-4575-bb00-56b11df74277">48 kHz*</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_91663d0d-03c6-45cf-ac77-797ec2d7801d">48000</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_28fe46a9-0a95-4411-b163-704397bad1bd">96 kHz</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_34541a47-600f-4e82-84e7-60106c1b9e54">96000</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <note>
+                <para xml:id="para_9f4db6ea-3e34-48db-814b-f858bce44836">* 48 kHz is recommended by SMPTE</para>
+            </note>
+            <table frame="box" label="A.10-2" rules="all" xml:id="table_A.10-2">
+                <caption>Waveform Sample Interpretation</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_57dfa9c4-fae7-460f-a0ef-491a79f65a54">Bit Depth</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_46fcc4f0-46b8-492f-94e2-bc938d6848c2">Waveform Bits Stored (003A,021A)</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_21cad7bd-c287-48c4-b811-09c0a51e1bfe">Waveform Bits Allocated (5400,1006)</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_0b4291f0-3551-4716-a8c2-057f4302ae91">Waveform Sample Interpretation (5400,1006)</para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_4549a750-527a-4f81-9d94-4fa4da0a59f9">Wave Sample Interpretation meaning</para>
+                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_7491f6db-b928-4920-9b25-49ef42658242">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0caf5aa8-1e2c-491f-9ee9-08df59e0e20b">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_9953a3fd-1315-4245-9d90-274b84d5174c">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_774af7b6-726d-44b7-93ac-eea5d5550300">SS</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_bf87584a-ed14-4b0a-be27-0e75b7dbb806">signed 16-bit linear</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_8ab04fa6-6827-40d7-91b2-fdbabac9c998">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_099ffa06-826c-44c3-998a-13b783a80751">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0e871d3f-1435-478c-a891-4bfa12f96557">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0c2dc2c5-e4ae-44bb-920e-e0a9d8213d1b">US</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_cf275976-5401-468e-b048-bd3022f31895">unsigned 16-bit linear</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_58efeee0-dfe6-4dce-b058-7294de66dd76">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0b67313d-2714-41a5-a246-ef668256668b">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_a1624a01-90e5-4fc0-9e29-1d7edf98d31b">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_34912a31-a6d5-4e8d-9979-42547ee49804">OB</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_45425b00-7aac-405b-a023-59fcbf6332d2">24 bit linear</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table frame="box" label="A.10-3" rules="all" xml:id="table_A.10-3">
+                <caption>Example of Number of Waveform Samples for 48kHz for basic Audio (Mono or Stereo)</caption>
+                <thead>
+                    <tr valign="top">
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_fc6e1da2-4292-4913-b404-bce58be1e3d0">Bit Depth</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_2e0beb5f-e82f-49d8-b166-992030d1ba02">Waveform Bits Stored (003A,021A)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0bdd4387-7107-4aa4-892d-d9068a47b280">Numbers of Waveform Channels (003A,0005)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_2848eeac-73c6-4aa2-b3e1-c739b80cf0c9">Number of Waveform Sample (003A,0010)</para>
+                        </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_e7daeeca-6978-441d-a7bd-c5e5ece0b5d0">Resulting packet Length (1ms)</para>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_dff50bfe-0c18-4c78-aaa4-a3e736112c33">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_78fc0228-67ae-412b-aa3e-92781a9faf3b">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_947191a0-8792-4de0-a99a-6ec08a9e1b33">1</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_5ac4edda-20ac-488f-bcf7-90b94d7b96bc">48</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_525acfa1-4c1c-40e9-b6ce-e8aba26321ab">96</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_326a83c4-1384-4e49-9e54-2ce393c14a07">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_d433cd84-a47d-4d6d-93d3-c5647d14ec8b">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_5db16d91-b9f1-435e-84b1-4133101de2df">1</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_6cf9d734-a875-474f-9fee-89831f2552e7">48</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_919f2d1a-3c19-4608-996e-adfcae0151c9">144</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_0f8f6db5-9eb3-4bb4-a330-6309c245f91b">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_2cadfa3b-dfc2-410f-9856-c2649dd7a253">16</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_c594d422-c845-4cac-b718-67135b28d3c5">2</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_ec410a08-a29b-4c0e-b7bb-c3b6bcf133fd">48</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_24bf1189-ab6e-4bf6-b251-f4f6237d874c">192</para>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_756c08b1-4c95-4ce8-98e6-d13e083588f8">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_305a4c29-165d-4aa5-a979-3464bb80bb92">24</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_9a3c35a0-9020-49f8-94f7-2aa9a1d00708">2</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_43924f4c-337c-4864-8830-3228b57b6556">48</para>
+                        </td>
+                        <td align="center" colspan="1" rowspan="1">
+                            <para xml:id="para_252e197d-94ff-4c2b-9284-1cc077dee861">288</para>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <para xml:id="para_0b03401a-eeaf-4a8b-a337-a3ceedeb1832">
+<xref linkend="biblio_SMPTE_ST2110-30"/> restricts the audio Flow:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_66b5ba31-8b6e-42f6-b7ef-1101f4ecded2">Sampling frequency is either 44.1 kHz, 48 kHz or 96 kHz, 48 kHz being the recommended value</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_e9bbd97e-5647-4a35-861c-04e40ad63511">Coding scheme is either L16 (16-bit linear) or L24 (24-bit linear)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_52ed88c8-1b36-434a-9977-053f223b523a">Packet time should be 1ms (but could get down to 125 Âµs)</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_0cb90b6c-dd25-4714-ba20-98559754f748">Number of Waveform Channels is limited to 15</para>
+                </listitem>
+            </itemizedlist>
+            <para xml:id="para_827da0bb-b9e0-42b1-b44f-b5b002c5fb7c">A DICOM Transfer Syntax for SMPTE ST 2110-30 PCM Digital Audio shall be identified by a UID value of:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_b4ebd975-5606-43f0-8ac6-3920763d8240">1.2.840.10008.1.2.7.3 corresponding to the SMPTE ST 2110-30 Professional Media over IP Networks: PCM Digital Audio.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
   </chapter>
   <chapter label="B" status="1" xml:id="chapter_B">
     <title>Creating a Privately Defined Unique Identifier (Informative)</title>

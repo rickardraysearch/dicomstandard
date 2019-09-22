@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
     <title>PS3.18</title>
-    <subtitle>DICOM PS3.18 2019c - Web Services</subtitle>
+    <subtitle>DICOM PS3.18 2019d - Web Services</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
@@ -2313,6 +2313,9 @@ tag            = 8HEXDIG
                             <para xml:id="para_2bb886d8-d7d2-4f78-b518-c5f84d49d7ee">Each attribute in the Query Parameter shall have a single value, unless the associated DICOM Attribute allows UID List matching (see <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.2" xrefstyle="select: docname label"/>), in which case the value is a comma-separated list of UIDs.</para>
                         </listitem>
                         <listitem>
+                            <para xml:id="para_9e977efe-506d-4353-ab46-8e7b0c22f426">If a tag represents a Private Data Element the query shall also include a corresponding Private Creator Element (see <olink targetdoc="PS3.5" targetptr="sect_7.8.1" xrefstyle="select: docname label"/>).</para>
+                        </listitem>
+                        <listitem>
                             <para xml:id="para_72e5413a-2f15-4736-b514-54275c68e6f8">The acceptable values are determined by the types of matching allowed by C-FIND for its associated attribute. See <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2" xrefstyle="select: docname label"/>. All characters in values that are not qp-chars shall be percent-encoded. All non-ASCII characters shall be percent encoded. See <xref linkend="biblio_RFC_3986"/> for details.</para>
                         </listitem>
                     </orderedlist>
@@ -2359,6 +2362,7 @@ tag            = 8HEXDIG
                     <para xml:id="para_6c1c6d97-603f-4c92-b8bc-cd8e4d71b0c0">A parameter specifies the Attributes that should be included in the response. The value is either a comma-separated list of attributes, or the single keyword "all", which means that all available attributes of the object should be included in the response.</para>
                     <programlisting>includefield = *("includefield" "=" (1#attribute / "all") )</programlisting>
                     <para xml:id="para_5a71829e-51bb-4d4c-979c-7c5b33692055">The request may contain one or more include parameters; however, if a parameter with the value of "all" is present, then other includefield parameters shall not be present. If an attribute is a value of an includefield parameter, it is equivalent to C-FIND Universal matching for that attribute. See <olink targetdoc="PS3.4" targetptr="sect_C.2.2.2.3" xrefstyle="select: docname label"/>.</para>
+                    <para xml:id="para_2a016e37-82c7-4096-ad3d-cbe76cf07c74">If an include parameter represents a Private Data Element a corresponding Private Creator Element shall be specified as an additional match parameter (see <olink targetdoc="PS3.5" targetptr="sect_7.8.1" xrefstyle="select: docname label"/>).</para>
                     <para xml:id="para_9d35058d-4dfc-4018-a841-bd8040db6d96">The includefield Query Parameter corresponds to DIMSE Return Keys. See <olink targetdoc="PS3.4" targetptr="sect_K.2.2.1.2" xrefstyle="select: docname label"/>.</para>
                 </section>
                 <section label="8.3.4.4" status="4" xml:id="sect_8.3.4.4">
@@ -10165,6 +10169,9 @@ cid                = token / quoted-string
                                 <para xml:id="para_4dd39d95-06c6-48c8-80b6-f7b3596fda72">Additional Query/Retrieve Attributes (see <olink targetdoc="PS3.4" targetptr="sect_C.3.4" xrefstyle="select: docname label"/>)</para>
                             </listitem>
                             <listitem>
+                                <para xml:id="para_2f57e07b-aad5-4855-9487-add1d0dc13bf">Private Data Element Tags and their corresponding Private Creator Element Tags</para>
+                            </listitem>
+                            <listitem>
                                 <para xml:id="para_0f1372df-006b-46b7-9064-9512e7411d4c">Timezone Offset From UTC (0008,0201)</para>
                             </listitem>
                         </itemizedlist>
@@ -10177,6 +10184,8 @@ cid                = token / quoted-string
                         <programlisting>/studies?PatientID=11235813&amp;includefield=00081048&amp;includefield=00081049&amp;includefield=00081060</programlisting>
                         <programlisting>/studies?PatientID=11235813&amp;StudyDate=20130509-20130510</programlisting>
                         <programlisting>/studies?StudyInstanceUID=1.2.392.200036.9116.2.2.2.2162893313.1029997326.94587,1.2.392.200036.9116.2.2.2.2162893313.1029997326.94583</programlisting>
+                        <programlisting>/studies?00230010=AcmeCompany&amp;includefield=00231002&amp;includefield=00231003</programlisting>
+                        <programlisting>/studies?00230010=AcmeCompany&amp;00231001=001239&amp;includefield=00231002&amp;includefield=00231003</programlisting>
                     </section>
                     <section label="10.6.1.2.2" status="5" xml:id="sect_10.6.1.2.2">
                         <title>Search Key Types and Requirements</title>
@@ -10988,6 +10997,9 @@ cid                = token / quoted-string
                             <listitem>
                                 <para xml:id="para_3271cbbd-ef8c-40cd-b257-cef585d7841f">If the includefield parameter has been specified in the request, and its value is "all", all available Study Level Attributes.</para>
                             </listitem>
+                            <listitem>
+                                <para xml:id="para_75061bb6-0006-4dae-8613-a6aaae98db1c">If a Private Data Element has been specified as an include parameter and it is supported by the origin server, the Private Data Element and its corresponding Private Creator Element.</para>
+                            </listitem>
                         </itemizedlist>
                         <para xml:id="para_1f3d610c-6832-4088-b5db-34c80bdb44e2">Series or Instance Level Attributes contained in includefield parameters shall not be returned.</para>
                     </section>
@@ -11199,6 +11211,9 @@ cid                = token / quoted-string
                             <listitem>
                                 <para xml:id="para_200330d7-7441-44c3-b199-5e29af638abe">If the Target Resource is All Series, then include all Study Level Attributes specified in <xref linkend="sect_10.6.3.3.1" xrefstyle="select: label"/>.</para>
                             </listitem>
+                            <listitem>
+                                <para xml:id="para_1e5c8c3d-5e99-4c93-80b2-95b2246a54c5">If a Private Data Element has been specified as an include parameter and it is supported by the origin server, the Private Data Element and its corresponding Private Creator Element.</para>
+                            </listitem>
                         </itemizedlist>
                         <para xml:id="para_38c6ed63-4da2-4911-bb92-bb7c46e603fe">Instance Level Attributes contained in includefield parameters shall not be returned.</para>
                     </section>
@@ -11390,6 +11405,9 @@ cid                = token / quoted-string
                             </listitem>
                             <listitem>
                                 <para xml:id="para_89fa4c5c-83d3-491b-8c64-e85b305c84dd">If the Target Resource is All Instances or Study's Instances, then include all Series level Attributes specified in <xref linkend="sect_10.6.3.3.2" xrefstyle="select: label"/>.</para>
+                            </listitem>
+                            <listitem>
+                                <para xml:id="para_34f22df0-f144-414a-bb2e-15e6cb579859">If a Private Data Element has been specified as an include parameter and it is supported by the origin server, the Private Data Element and its corresponding Private Creator Element.</para>
                             </listitem>
                         </itemizedlist>
                     </section>

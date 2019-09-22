@@ -31,7 +31,7 @@
 			<rdfs:comment>DICOM PS3.16 DCMR Annex D DICOM Controlled Terminology Definitions; converted by "extractdcmdefinitionsasowl.xsl".</rdfs:comment>
 			<rdfs:label>DCM</rdfs:label>
 			<owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-			<owl:versionInfo>2019b_20190425</owl:versionInfo>
+			<owl:versionInfo>2019d_20190922</owl:versionInfo>
 		</rdf:Description>
 		
 		<xsl:apply-templates match=""/>

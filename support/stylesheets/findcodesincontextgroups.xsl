@@ -24,9 +24,9 @@
 		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
 			and d:thead/d:tr/d:th[2] = 'Code Value'
 			and d:thead/d:tr/d:th[3] = 'Code Meaning'
-			and d:thead/d:tr/d:th[4] = 'SNOMED-CT Concept ID'
+			and d:thead/d:tr/d:th[4] = 'SNOMED-RT ID'
 			and d:thead/d:tr/d:th[5] = 'UMLS Concept Unique ID'">
-			<xsl:message>Matching table pattern no version but with SCT and UMLS for <xsl:value-of select="@label"/></xsl:message>
+			<xsl:message>Matching table pattern no version but with SRT and UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include'))">
@@ -45,7 +45,7 @@
 							<xsl:text>(</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[4])"/>
 							<xsl:text>,</xsl:text>
-							<xsl:text>SCT</xsl:text>
+							<xsl:text>SRT</xsl:text>
 							<xsl:text>,"</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[3])"/>
 							<xsl:text>")</xsl:text>
@@ -71,9 +71,9 @@
 			and d:thead/d:tr/d:th[2] = 'Coding Scheme Version'
 			and d:thead/d:tr/d:th[3] = 'Code Value'
 			and d:thead/d:tr/d:th[4] = 'Code Meaning'
-			and d:thead/d:tr/d:th[5] = 'SNOMED-CT Concept ID'
+			and d:thead/d:tr/d:th[5] = 'SNOMED-RT ID'
 			and d:thead/d:tr/d:th[6] = 'UMLS Concept Unique ID'">
-			<xsl:message>Matching table pattern with version and SCT and UMLS for <xsl:value-of select="@label"/></xsl:message>
+			<xsl:message>Matching table pattern with version and SRT and UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 3 and not(starts-with(d:td[1],'Include'))">
@@ -92,7 +92,7 @@
 							<xsl:text>(</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[5])"/>
 							<xsl:text>,</xsl:text>
-							<xsl:text>SCT</xsl:text>
+							<xsl:text>SRT</xsl:text>
 							<xsl:text>,"</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[4])"/>
 							<xsl:text>")</xsl:text>
@@ -117,8 +117,8 @@
 		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
 			and d:thead/d:tr/d:th[2] = 'Code Value'
 			and d:thead/d:tr/d:th[3] = 'Code Meaning'
-			and d:thead/d:tr/d:th[5] = 'SNOMED-CT Concept ID'">
-			<xsl:message>Matching table pattern no version but with one extra column then SCT but no UMLS for <xsl:value-of select="@label"/></xsl:message>
+			and d:thead/d:tr/d:th[5] = 'SNOMED-RT ID'">
+			<xsl:message>Matching table pattern no version but with one extra column then SRT but no UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include'))">
@@ -137,7 +137,7 @@
 							<xsl:text>(</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[5])"/>
 							<xsl:text>,</xsl:text>
-							<xsl:text>SCT</xsl:text>
+							<xsl:text>SRT</xsl:text>
 							<xsl:text>,"</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[3])"/>
 							<xsl:text>")</xsl:text>
@@ -150,8 +150,8 @@
 		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
 			and d:thead/d:tr/d:th[2] = 'Code Value'
 			and d:thead/d:tr/d:th[3] = 'Code Meaning'
-			and d:thead/d:tr/d:th[7] = 'SNOMED-CT Concept ID'">
-			<xsl:message>Matching table pattern no version but with three extra columns then SCT but no UMLS for <xsl:value-of select="@label"/></xsl:message>
+			and d:thead/d:tr/d:th[7] = 'SNOMED-RT ID'">
+			<xsl:message>Matching table pattern no version but with three extra columns then SRT but no UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include'))">
@@ -170,7 +170,7 @@
 							<xsl:text>(</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[7])"/>
 							<xsl:text>,</xsl:text>
-							<xsl:text>SCT</xsl:text>
+							<xsl:text>SRT</xsl:text>
 							<xsl:text>,"</xsl:text>
 							<xsl:value-of select="normalize-space(d:td[3])"/>
 							<xsl:text>")</xsl:text>
@@ -183,7 +183,7 @@
 		<xsl:when test="d:thead/d:tr/d:th[1] = 'Coding Scheme Designator'
 			and d:thead/d:tr/d:th[2] = 'Code Value'
 			and d:thead/d:tr/d:th[3] = 'Code Meaning'">
-			<xsl:message>Matching table pattern no version no SCT and UMLS for <xsl:value-of select="@label"/></xsl:message>
+			<xsl:message>Matching table pattern no version no SRT and UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 2 and not(starts-with(d:td[1],'Include'))">
@@ -199,8 +199,8 @@
 						</xsl:if>
 					</xsl:when>
 				</xsl:choose>
-				<xsl:if test="normalize-space(d:td[1]) = 'SRT'">
-					<xsl:message>SRT code <xsl:value-of select="normalize-space(d:td[2])"/> in table without SCT and UMLS columns</xsl:message>
+				<xsl:if test="normalize-space(d:td[1]) = 'SCT'">
+					<xsl:message>SCT code <xsl:value-of select="normalize-space(d:td[2])"/> in table without SRT and UMLS columns</xsl:message>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:when>
@@ -208,7 +208,7 @@
 			and d:thead/d:tr/d:th[2] = 'Coding Scheme Version'
 			and d:thead/d:tr/d:th[3] = 'Code Value'
 			and d:thead/d:tr/d:th[4] = 'Code Meaning'">
-			<xsl:message>Matching table pattern with version but no SCT and UMLS for <xsl:value-of select="@label"/></xsl:message>
+			<xsl:message>Matching table pattern with version but no SRT and UMLS for <xsl:value-of select="@label"/></xsl:message>
 			<xsl:for-each select="d:tbody/d:tr">
 				<xsl:choose>
 					<xsl:when test="count(d:td) &gt; 3 and not(starts-with(d:td[1],'Include'))">
@@ -224,8 +224,8 @@
 						</xsl:if>
 					</xsl:when>
 				</xsl:choose>
-				<xsl:if test="normalize-space(d:td[1]) = 'SRT'">
-					<xsl:message>SRT code <xsl:value-of select="normalize-space(d:td[2])"/> in table without SCT and UMLS columns</xsl:message>
+				<xsl:if test="normalize-space(d:td[1]) = 'SCT'">
+					<xsl:message>SCT code <xsl:value-of select="normalize-space(d:td[2])"/> in table without SRT and UMLS columns</xsl:message>
 				</xsl:if>
 			</xsl:for-each>
 		</xsl:when>

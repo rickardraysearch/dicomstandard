@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2019c - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2019d - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -4062,7 +4062,29 @@
                     </para>
                 </td>
             </tr>
-          <tr valign="top">
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c812a097-374c-4c86-937a-550bb97ce875">RT Radiation Set Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5b1f4944-40b5-47dd-971d-9bf2ab968de0">1.2.840.10008.5.1.4.1.1.481.12</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <olink targetdoc="PS3.3" targetptr="sect_A.86.1.4" xrefstyle="select: title"/>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_0334c766-b37f-4af9-a569-682972ecc031">C-Arm Photon-Electron Radiation Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6b89163f-9790-44b0-8b87-bbe645520c38">1.2.840.10008.5.1.4.1.1.481.13</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <olink targetdoc="PS3.3" targetptr="sect_A.86.1.5" xrefstyle="select: title"/>
+                </td>
+            </tr>
+            <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_f4e800a4-4d22-4bcf-8569-5bdad38c0a56">RT Beams Delivery Instruction Storage</para>
             </td>
@@ -13358,11 +13380,11 @@
           <varlistentry>
             <term>U/U</term>
             <listitem>
-              <para xml:id="para_0dfa5cd6-d246-48f9-adf5-ebd43acefc18">The SCU may provide a value for the Attribute. If the SCP does not support the value specified by the SCU, but does support the Attribute, it shall return either a Failure status ("Invalid Attribute Value", code 0106H) or a Warning status ("Attribute Value out of Range", code 0116H.). In the case of Warning status, the SCP will apply the default value as defined in the SCP Conformance Statement.</para>
+              <para xml:id="para_0dfa5cd6-d246-48f9-adf5-ebd43acefc18">The SCU may provide a value for the Attribute. If the SCP does not support the value specified by the SCU, but does support the Attribute, it shall return either a Failure status ("Invalid Attribute Value", code 0106H) or a Warning status ("Attribute Value out of Range", code 0116H). In the case of Warning status, the SCP will apply the default value as defined in the SCP Conformance Statement.</para>
+              <para xml:id="para_f4e4ac2f-b7e4-4d5c-b765-1819b1dfe203">If the SCP does not support the Attribute specified by the SCU, it shall return either a Failure status ("No Such Attribute", code 0105H) or return a Warning status ("Attribute List Error", code 0107H). In the case of Warning status, the behavior of the SCP is defined in the SCP Conformance Statement.</para>
             </listitem>
           </varlistentry>
         </variablelist>
-        <para xml:id="para_f4e4ac2f-b7e4-4d5c-b765-1819b1dfe203">If the SCP does not support the Attribute specified by the SCU, it shall return either a Failure status ("No Such Attribute", code 0105H) or return a Warning status ("Attribute List Error", code 0107H.)). In the case of Warning status, the behavior of the SCP is defined in the SCP Conformance Statement.</para>
         <para xml:id="para_1f678782-ee86-4927-9a56-5d0783e4ce34">If the usage type designation is modified by a "C" (e.g., MC/M) the specification stated above shall be modified to include the requirement that the Attribute shall be supported if the specified condition is met.</para>
       </section>
       <section label="H.2.5" status="3" xml:id="sect_H.2.5">

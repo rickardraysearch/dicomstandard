@@ -82,6 +82,7 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	source/docbook/part19/part19.xml \
 	source/docbook/part20/part20.xml \
 	source/docbook/part21/part21.xml \
+	source/docbook/part22/part22.xml \
 	source/docbook/part01/figures \
 	source/docbook/part02/figures \
 	source/docbook/part03/figures \
@@ -101,6 +102,7 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	source/docbook/part19/figures \
 	source/docbook/part20/figures \
 	source/docbook/part21/figures \
+	source/docbook/part22/figures \
 	stylesheets/customize-chunk.xsl \
 	stylesheets/customize-common.xsl \
 	stylesheets/customize-fo-pdf-cp.xsl \
@@ -141,6 +143,8 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	wordexport/part18/part18_fromword_files \
 	wordexport/part19/part19_fromword_files \
 	wordexport/part20/part20_fromword_files \
+	wordexport/part21/part21_fromword_files \
+	wordexport/part22/part22_fromword_files \
 	support/stylesheets/extractcompositeiodsfordicom3tooltemplate.xsl \
 	support/stylesheets/extractcompositemodulesfordicom3tooltemplate.xsl \
 	support/stylesheets/extractcontextgroupsforpixelmed.xsl \

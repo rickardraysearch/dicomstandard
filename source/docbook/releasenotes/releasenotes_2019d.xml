@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0">
-  <title>DICOM PS3 2019c</title>
+  <title>DICOM PS3 2019d</title>
   <subtitle>Release Notes</subtitle>
   <info>
     <author>
@@ -18,8 +18,8 @@
     <title/>
     <section>
       <title/>
-    <para>2019/06/14</para>
-    <para>The following changes have been made relative to the previously published PS3 2019b release of the standard, by incorporating the changes specified in the supplements and correction items.</para>
+    <para>2019/09/16</para>
+    <para>The following changes have been made relative to the previously published PS3 2019c release of the standard, by incorporating the changes specified in the supplements and correction items.</para>
       <para>The Final Text of all applied Supplements and Correction Proposals is available at <link xl:href="ftp://medical.nema.org/medical/dicom/final/"/></para>
     </section>
 
@@ -97,41 +97,48 @@
       <section>
         <title>PS3.2</title>
         <itemizedlist>
-            <listitem><para>Remove reference to 3.0 version of DICOM</para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link></para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
         </itemizedlist>
       </section>
       
       <section>
         <title>PS3.3</title>
         <itemizedlist>
-            <listitem><para>Correct Projection Calibration figure titles</para></listitem>
-            <listitem><para>Make mouse strain example consistent wrt. presence of data elements for code sequence items</para></listitem>
-            <listitem><para><link linkend="cp_1839">CP 1839</link></para></listitem>
-            <listitem><para><link linkend="cp_1854">CP 1854</link></para></listitem>
-            <listitem><para><link linkend="cp_1856">CP 1856</link></para></listitem>
-            <listitem><para><link linkend="cp_1864">CP 1864</link></para></listitem>
+            <listitem><para>Correct changes to alternative occurences of Referenced Presentation State Sequence in Table C.11.17-1 Structured Display Image Box Attributes to match Sup 156</para></listitem>
+            <listitem><para>Correct reference to be to Source rather than Path Attributes in Table C.8-124 CT Exposure Macro Attributes to match Sup 188</para></listitem>
+            <listitem><para>Change "Date Time" to "DateTime" for multi-energy elements to match usage for all other elements</para></listitem>
+            <listitem><para>Add missing RADIOTHERAPY term in Table F.3-3 that is required by other directory record related additions from Sup 147</para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link> (FT3)</para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1879">CP 1879</link></para></listitem>
+            <listitem><para><link linkend="cp_1880">CP 1880</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.4</title>
         <itemizedlist>
-            <listitem><para>Update incorrect links to PS3.18 caused by Sup 183</para></listitem>
+            <listitem><para>Correct nesting of second paragraph for U/U in Section H.2.4.</para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.5</title>
         <itemizedlist>
-            <listitem><para>Remove reference to 3.0 version of DICOM</para></listitem>
-            <listitem><para>Make consistent definition of which private groups are not allowed (include FFFF) Sections 7.1 and 7.8</para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1877">CP 1877</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.6</title>
         <itemizedlist>
-            <listitem><para><link linkend="cp_1858">CP 1858</link></para></listitem>
+            <listitem><para>Change "Date Time" to "DateTime" for multi-energy elements to match usage for all other elements</para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link> (FT4)</para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1879">CP 1879</link></para></listitem>
         </itemizedlist>
       </section>
 
@@ -162,7 +169,6 @@
       <section>
         <title>PS3.12</title>
         <itemizedlist>
-            <listitem><para>Remove reference to 3.0 version of DICOM</para></listitem>
         </itemizedlist>
       </section>
 
@@ -175,34 +181,44 @@
       <section>
         <title>PS3.15</title>
         <itemizedlist>
-            <listitem><para><link linkend="cp_1856">CP 1856</link></para></listitem>
-            <listitem><para><link linkend="cp_1860">CP 1860</link></para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link></para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1878">CP 1878</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.16</title>
         <itemizedlist>
-            <listitem><para>Make TID 15400 Row 1 DT rather than EV per CP 1835 FT</para></listitem>
-            <listitem><para>Update CID 33 table title and leading paragraph and note to match CP 1853</para></listitem>
-            <listitem><para><link linkend="cp_1856">CP 1856</link></para></listitem>
-            <listitem><para><link linkend="cp_1857">CP 1857</link></para></listitem>
-            <listitem><para><link linkend="cp_1858">CP 1858</link></para></listitem>
-            <listitem><para><link linkend="cp_1859">CP 1859</link></para></listitem>
-            <listitem><para><link linkend="cp_1874">CP 1874</link></para></listitem>
+            <listitem><para>Remove duplicate entries in translation table</para></listitem>
+            <listitem><para>Update all FMA hyperlinks to indirect through purl.org, which then goes to current browser</para></listitem>
+            <listitem><para>Add ICD 11 extension hyperlinks to CID 4029 and correct ICD 11 code for skin of umbilicus</para></listitem>
+            <listitem><para>Make knee paired structure</para></listitem>
+            <listitem><para>Correct data element tag for Device UID, and add missing row for TID 1004 (that was added by CP 1856)</para></listitem>
+            <listitem><para>Correct various SRT column entries that are still SCT codes (not fixed when CP 1850 applied)</para></listitem>
+            <listitem><para>Remove paired anatomy entries for retired SNOMED concepts for left and right outflow chambers</para></listitem>
+            <listitem><para><link linkend="sup_175">Sup 175</link></para></listitem>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1808">CP 1808</link></para></listitem>
+            <listitem><para><link linkend="cp_1865">CP 1865</link></para></listitem>
+            <listitem><para><link linkend="cp_1876">CP 1876</link></para></listitem>
+            <listitem><para><link linkend="cp_1883">CP 1883</link></para></listitem>
+            <listitem><para><link linkend="cp_1884">CP 1884</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.17</title>
         <itemizedlist>
+            <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            <listitem><para><link linkend="cp_1808">CP 1808</link></para></listitem>
         </itemizedlist>
       </section>
 
       <section>
         <title>PS3.18</title>
         <itemizedlist>
-            <listitem><para>Reapply CP 1816 that was not included in Sup 183</para></listitem>
+            <listitem><para><link linkend="cp_1882">CP 1882</link></para></listitem>
         </itemizedlist>
       </section>
 
@@ -217,34 +233,43 @@
         <itemizedlist>
         </itemizedlist>
       </section>
-      
-      <section>
-        <title>PS3.21</title>
-        <itemizedlist>
-         </itemizedlist>
-      </section>
-      
+        
+        <section>
+            <title>PS3.21</title>
+            <itemizedlist>
+            </itemizedlist>
+        </section>
+        
+        <section>
+            <title>PS3.22</title>
+            <itemizedlist>
+                <listitem><para><link linkend="sup_202">Sup 202</link></para></listitem>
+            </itemizedlist>
+        </section>
+        
     </section>
     
     <section>
       <title>Supplements Incorporated</title>
       <variablelist>
+          <varlistentry xml:id="sup_175"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/sup175_ft2_CArmRadiation.pdf">Sup 175</link></term><listitem><para>Second Generation Radiotherapy – C-Arm RT Treatment Modalities</para></listitem></varlistentry>
+          <varlistentry xml:id="sup_202"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/sup202_ft_RealTimeVideo.pdf">Sup 202</link></term><listitem><para>Real-Time Video</para></listitem></varlistentry>
       </variablelist>
     </section>
     
     <section>
       <title>Correction Items Incorporated</title>
       <variablelist>
-          <varlistentry xml:id="cp_1839"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1839_ft_Ophthalmic_QC_Reference_tag.pdf">CP 1839</link></term><listitem><para>Incorrect Ophthalmic QC Reference tag</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1854"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1854_ft_ChangeVisualFieldTestPointNormalsSequenceTypefrom1Cto2C.pdf">CP 1854</link></term><listitem><para>Change Visual Field Test Point Normals Sequence’s Type from 1C to 2C</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1856"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1856_ft_moreonuniquedeviceid.pdf">CP 1856</link></term><listitem><para>Unique device identification consistency and de-identification</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1857"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1857_ft_tid1500algorithmid.pdf">CP 1857</link></term><listitem><para>Factor out algorithm identification common to multiple observations</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1858"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1858_ft_tid1500qualitativesinglemodifier.pdf">CP 1858</link></term><listitem><para>Allow single modifier for categorical observations in TID 1500</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1859"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1859_ft_middleversusmedian.pdf">CP 1859</link></term><listitem><para>Allow single modifier for categorical observations in TID 1500</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1860"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1860_ft_cleanstructuredcontent.pdf">CP 1860</link></term><listitem><para>Content items for de-identification with Clean Structured Content Option</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1864"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1864_ft_AddAnatomicRegionSequenceToRTStructureSet.pdf">CP 1864</link></term><listitem><para>Add Anatomic Region Sequence to RT Structure Set</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1874"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1874_ft_imagelibrarymutuallyexclusive.pdf">CP 1874</link></term><listitem><para>Modality-specific Image Library Entry Descriptors should be mutually exclusive</para></listitem></varlistentry>
-          <varlistentry xml:id="cp_1875"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1875_ft_graphinsrdatamissingconcept.pdf">CP 1875</link></term><listitem><para>Two Dimensional Measurement Graph in SR has no concept for data values</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1808"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1808_ft_ihtsdoJul2018INTreleaseupdate.pdf">CP 1808</link></term><listitem><para>Update DICOM to reflect changes in IHTSDO SNOMED CT-DICOM Subset for JUL 2018 and JAN 2019 INT Release</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1865"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1865_ft_UPSParameterConceptCodesForRTTreatments.pdf">CP 1865</link></term><listitem><para>Concept Codes for use of UPS in RT Treatment Sessions</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1876"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1876_ft_usetid1501imagepurposeparam.pdf">CP 1876</link></term><listitem><para>TID 1501 should pass ImagePurpose and WavePurpose parameters to TID 300</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1877"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1877_ft_Prohibit_Uncompressed_TS_With_Very_Large_Pixel_Data.pdf">CP 1877</link></term><listitem><para>Prohibit Uncompressed Transfer Syntax With Very Large Pixel Data</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1878"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1878_ft_Part15forRTPhysIntentAndRTSegAnnotation.pdf">CP 1878</link></term><listitem><para>Add Part 15 definitions to RT Physician's Intent and RT Segment Annotation</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1879"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1879_ft_RetireBeamDoseSpecificationPoint.pdf">CP 1879</link></term><listitem><para>Retire Beam Dose Specification Point</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1880"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1880_ft_UpdateLinearExactAndSigmoidFormula.pdf">CP 1880</link></term><listitem><para>Update Linear Exact and Sigmoid formula</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1882"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1882_ft_private_attributes_in_C-FIND_and_QIDO-RS.pdf">CP 1882</link></term><listitem><para>Handling of private attributes in C-FIND and QIDO-RS</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1883"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1883_ft_retiredcmdigitalmammocode.pdf">CP 1883</link></term><listitem><para>Retire DCM code for Digital Mammography and replace with LOINC code</para></listitem></varlistentry>
+          <varlistentry xml:id="cp_1884"><term><link xl:href="ftp://medical.nema.org/medical/dicom/final/cp1884_ft_procedurereportedbaselinenotdefined.pdf">CP 1884</link></term><listitem><para>Procedure reported value set should be baseline not defined</para></listitem></varlistentry>
       </variablelist>
     </section>
 

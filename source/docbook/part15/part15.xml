@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2019c - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2019d - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -10904,6 +10904,9 @@ start = message
                     <listitem>
                         <para xml:id="para_41258edc-da3a-43bb-ae04-3734051a876b">If the Dataset being de-identified is being stored within a DICOM File, then the File Meta Information including the 128 byte preamble, if present, shall be replaced with a description of the de-identifying application. Otherwise, there is a risk that identity information may leak through unmodified File Meta Information or preamble. See <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>.</para>
                     </listitem>
+                    <listitem>
+                        <para xml:id="para_3f2a2e5f-92da-442a-847e-232d77a14d9d">If the Dataset being de-identified is being communicated by DICOM Real-Time Video, then the File Meta Information including the 128 byte preamble, if present, shall be replaced with a description of the de-identifying application. Otherwise, there is a risk that identity information may leak through unmodified File Meta Information or preamble. See <olink targetdoc="PS3.22" targetptr="PS3.22" xrefstyle="select: labelnumber"/>.</para>
+                    </listitem>
                 </orderedlist>
 
 
@@ -11822,407 +11825,396 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
-                                      <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_cfd9459b-d35d-411d-8ca0-e682479e66af">Clinical Trial Time Point ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_408b793e-d78f-4543-8929-d7e797cccd91">(0012,0050)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_ac4764b2-0d97-495f-9c1a-258d8582a959">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_a7ec4f6c-9842-4506-a2a8-fa18d79abc35">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_eed68db6-7602-4a9f-921c-6f85997d7ce6">Z</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_81fb1084-0864-44a5-b970-0a9450460415">Clinical Trial Time Point Description</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_aaf44e10-6bad-417f-ba0f-8d582ddf48d1">(0012,0051)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_63f3f5da-7562-47d4-a4a9-7f6fed48e5a7">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_c178bda0-af6e-4c1b-a94e-e6d0d5e9be6d">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_efa90eb8-503a-48ff-add5-4d7aa66f40d2">X</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_71731c15-ac2e-4e17-9ab2-77e50ecd3e41">C</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_30ddb15c-530b-43a5-971e-ded48eb5c3a9">Clinical Trial Sponsor Name</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_63ae620a-7c69-4364-bbea-15507746f356">(0012,0010)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_20f91483-a684-42a6-87b6-9e33abe8f473">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_1b053575-336b-4a95-9d03-597120def4e5">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_37be3852-a074-4bd9-becd-89b98180c183">D</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_be04b8e9-040f-4046-8418-29cd323f6cfa">Clinical Trial Protocol ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_fed12231-cf97-4804-a878-9d4e6bd1eaca">(0012,0020)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_bd3fe0ec-3951-446b-890d-7e1cc8526c16">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_ca32847a-520c-4135-ad8a-66295f5f07e8">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_1612bf78-6950-49b4-b71f-7e433908f944">D</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_bf26dfb8-9a3a-4dcf-8e15-f05e75627553">Clinical Trial Protocol Name</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_f8cd9392-7d47-42ed-9066-7db3a3e3a3e6">(0012,0021)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_0d726e67-5697-4360-aee5-7efb14aba4a0">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_2c33a5a5-1565-4568-a6c7-e7a82621b341">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_0d5de0d7-e5c2-48b4-85be-b786b6338b2c">Z</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_8db6f6f3-59a2-44fe-9f23-bb9a0236f2ae">Clinical Trial Site ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_af22136b-9b8d-48bb-8dc3-416c7a4c51b4">(0012,0030)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_a53a7555-bbd9-4675-8528-34e444c060f2">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_7a11fef8-dc4e-486c-a7dc-fb695363d646">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_4c0a120a-e67f-4750-ba17-7a761b07a3b8">Z</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_a9128551-fb61-41f5-a295-3d93e903bca9">K</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_e4a7a4b8-13d6-4f20-b92e-e53c0f03a882">Clinical Trial Site Name</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_f500c9bb-6e32-4dc7-8cbf-338ecc1bbce7">(0012,0031)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_1886508f-fb63-4702-aeff-8aa38f6d9915">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_6cc51edf-3c0e-4f17-8288-034875b51245">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_e08eb231-b0e6-470d-8584-66a435ede6b2">Z</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_9a1151f9-aa18-43f6-9221-45bb18c0e575">K</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_aca85ad6-6fa4-4453-b036-7b9453001cde">Clinical Trial Subject ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_b3aa1169-7170-43a0-9baa-fa98a3b35b28">(0012,0040)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_c8dab3d2-ae61-4f73-bc78-3c8c57820bd9">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_14e0e13e-079d-47c3-8085-b40f1472a8f5">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_84ddef59-d0b4-4171-87f1-14ff83deecc0">D</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_64b95406-36b5-41c4-a28d-d5565ae80443">Clinical Trial Subject Reading ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_9d6e2dc5-14af-4649-8dfa-7beefd8660b4">(0012,0042)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_f5292df6-4c3a-4b4e-b63f-ab84fcf244d1">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_2a15081e-bb79-48fe-9f8f-a057f5b73543">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_1a90f5e6-2ef3-4d00-acd7-2cb0f51ae8da">D</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_ca2932a6-2bec-4b69-86a3-b727706cc420">Clinical Trial Protocol Ethics Committee Name</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_a0e2d7a0-ce35-4f30-9758-c6a6da42bd66">(0012,0081)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_8b3e11ed-ab8f-4a7c-a178-2696c000f3df">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_e6b89838-f91c-491c-aa7a-459a4364140e">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_12d1ab00-4cca-4561-be46-8d8b05a79ed5">D</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_463784ab-a5f2-441b-bf69-a0a7d02a40e4">K</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_7b18fd2e-1996-4410-9d98-e33f63a6c9f0">Clinical Trial Protocol Ethics Committee Approval Number</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_b87e58e3-b626-49b6-b669-2f1cbd89e222">(0012,0082)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_1fb2a442-e8e4-4980-9755-41718f38d1d0">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_0415be53-b305-4503-9379-d9a20088b8f6">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_b0b6f3d9-1e52-40f8-be8e-56e8d68c46fe">X</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_c8681bd6-fe5b-4e99-beb3-bf25ccfa57d9">Clinical Trial Coordinating Center Name</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_3556e997-9655-4f29-9ea6-7a23c9c1898b">(0012,0060)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_7cbfad29-b777-44be-9857-ed5c8900bebd">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_d15083d2-e437-4064-a298-bfc3c19fe3d5">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_6132fcab-34d5-4848-b170-5ff4a9573498">Z</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_74d9b2f7-0089-4cb6-bde3-7e640bb9474c">K</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_65b58402-ba01-4eb3-bf4f-c458c03245b1">Clinical Trial Series ID</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_16174f00-62bb-4464-a9ca-0491896bb18a">(0012,0071)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_248bd5fe-357c-4ad4-8352-91a152e23e51">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_b218c676-1324-4c2b-bffc-512f9f32344a">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_8083ca92-0303-4798-a91b-217fcdb393ea">X</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
-
-              <tr valign="top">
-                  <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_fdbd562d-8b73-4854-8cfc-5874f9425e0a">Clinical Trial Series Description</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_888c80f8-c739-4cc5-9a2c-6315ae3eec57">(0012,0072)</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_86e3dcc3-aa83-4409-8a75-de9b6bdef2dc">N</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_07ae8c46-ca7e-4d9e-aa7a-b70629f8f011">Y</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_570569a5-077a-418a-adae-59139915038f">X</para>
-                  </td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1">
-                      <para xml:id="para_0dccfed0-1e80-48ad-a19a-b336b9c0182b">C</para>
-</td>
-                  <td align="center" colspan="1" rowspan="1"/>
-                  <td align="center" colspan="1" rowspan="1"/>
-              </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_c8681bd6-fe5b-4e99-beb3-bf25ccfa57d9">Clinical Trial Coordinating Center Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3556e997-9655-4f29-9ea6-7a23c9c1898b">(0012,0060)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7cbfad29-b777-44be-9857-ed5c8900bebd">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d15083d2-e437-4064-a298-bfc3c19fe3d5">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6132fcab-34d5-4848-b170-5ff4a9573498">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_74d9b2f7-0089-4cb6-bde3-7e640bb9474c">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_7b18fd2e-1996-4410-9d98-e33f63a6c9f0">Clinical Trial Protocol Ethics Committee Approval Number</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b87e58e3-b626-49b6-b669-2f1cbd89e222">(0012,0082)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1fb2a442-e8e4-4980-9755-41718f38d1d0">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0415be53-b305-4503-9379-d9a20088b8f6">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b0b6f3d9-1e52-40f8-be8e-56e8d68c46fe">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_ca2932a6-2bec-4b69-86a3-b727706cc420">Clinical Trial Protocol Ethics Committee Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a0e2d7a0-ce35-4f30-9758-c6a6da42bd66">(0012,0081)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8b3e11ed-ab8f-4a7c-a178-2696c000f3df">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e6b89838-f91c-491c-aa7a-459a4364140e">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_12d1ab00-4cca-4561-be46-8d8b05a79ed5">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_463784ab-a5f2-441b-bf69-a0a7d02a40e4">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_be04b8e9-040f-4046-8418-29cd323f6cfa">Clinical Trial Protocol ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fed12231-cf97-4804-a878-9d4e6bd1eaca">(0012,0020)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_bd3fe0ec-3951-446b-890d-7e1cc8526c16">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ca32847a-520c-4135-ad8a-66295f5f07e8">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1612bf78-6950-49b4-b71f-7e433908f944">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_bf26dfb8-9a3a-4dcf-8e15-f05e75627553">Clinical Trial Protocol Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f8cd9392-7d47-42ed-9066-7db3a3e3a3e6">(0012,0021)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0d726e67-5697-4360-aee5-7efb14aba4a0">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2c33a5a5-1565-4568-a6c7-e7a82621b341">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0d5de0d7-e5c2-48b4-85be-b786b6338b2c">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fdbd562d-8b73-4854-8cfc-5874f9425e0a">Clinical Trial Series Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_888c80f8-c739-4cc5-9a2c-6315ae3eec57">(0012,0072)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_86e3dcc3-aa83-4409-8a75-de9b6bdef2dc">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_07ae8c46-ca7e-4d9e-aa7a-b70629f8f011">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_570569a5-077a-418a-adae-59139915038f">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0dccfed0-1e80-48ad-a19a-b336b9c0182b">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_65b58402-ba01-4eb3-bf4f-c458c03245b1">Clinical Trial Series ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_16174f00-62bb-4464-a9ca-0491896bb18a">(0012,0071)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_248bd5fe-357c-4ad4-8352-91a152e23e51">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b218c676-1324-4c2b-bffc-512f9f32344a">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8083ca92-0303-4798-a91b-217fcdb393ea">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_8db6f6f3-59a2-44fe-9f23-bb9a0236f2ae">Clinical Trial Site ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_af22136b-9b8d-48bb-8dc3-416c7a4c51b4">(0012,0030)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a53a7555-bbd9-4675-8528-34e444c060f2">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7a11fef8-dc4e-486c-a7dc-fb695363d646">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_4c0a120a-e67f-4750-ba17-7a761b07a3b8">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a9128551-fb61-41f5-a295-3d93e903bca9">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_e4a7a4b8-13d6-4f20-b92e-e53c0f03a882">Clinical Trial Site Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f500c9bb-6e32-4dc7-8cbf-338ecc1bbce7">(0012,0031)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1886508f-fb63-4702-aeff-8aa38f6d9915">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6cc51edf-3c0e-4f17-8288-034875b51245">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e08eb231-b0e6-470d-8584-66a435ede6b2">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9a1151f9-aa18-43f6-9221-45bb18c0e575">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_30ddb15c-530b-43a5-971e-ded48eb5c3a9">Clinical Trial Sponsor Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_63ae620a-7c69-4364-bbea-15507746f356">(0012,0010)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_20f91483-a684-42a6-87b6-9e33abe8f473">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1b053575-336b-4a95-9d03-597120def4e5">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_37be3852-a074-4bd9-becd-89b98180c183">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_aca85ad6-6fa4-4453-b036-7b9453001cde">Clinical Trial Subject ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b3aa1169-7170-43a0-9baa-fa98a3b35b28">(0012,0040)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c8dab3d2-ae61-4f73-bc78-3c8c57820bd9">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_14e0e13e-079d-47c3-8085-b40f1472a8f5">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_84ddef59-d0b4-4171-87f1-14ff83deecc0">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_64b95406-36b5-41c4-a28d-d5565ae80443">Clinical Trial Subject Reading ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9d6e2dc5-14af-4649-8dfa-7beefd8660b4">(0012,0042)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f5292df6-4c3a-4b4e-b63f-ab84fcf244d1">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2a15081e-bb79-48fe-9f8f-a057f5b73543">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1a90f5e6-2ef3-4d00-acd7-2cb0f51ae8da">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_81fb1084-0864-44a5-b970-0a9450460415">Clinical Trial Time Point Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_aaf44e10-6bad-417f-ba0f-8d582ddf48d1">(0012,0051)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_63f3f5da-7562-47d4-a4a9-7f6fed48e5a7">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c178bda0-af6e-4c1b-a94e-e6d0d5e9be6d">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_efa90eb8-503a-48ff-add5-4d7aa66f40d2">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_71731c15-ac2e-4e17-9ab2-77e50ecd3e41">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_cfd9459b-d35d-411d-8ca0-e682479e66af">Clinical Trial Time Point ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_408b793e-d78f-4543-8929-d7e797cccd91">(0012,0050)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ac4764b2-0d97-495f-9c1a-258d8582a959">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a7ec4f6c-9842-4506-a2a8-fa18d79abc35">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_eed68db6-7602-4a9f-921c-6f85997d7ce6">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_0bcc96fe-d804-4061-b8a3-6a0b0aafeab1">Comments on the Performed Procedure Step</para>
@@ -12312,6 +12304,93 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_ef565faf-3b96-4615-8a22-bc867b7323e9">Conceptual Volume Combination Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2fa7289f-bc03-480f-b83d-bd90e3f3dc36">(3010,000F)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1ba9c8e3-208f-464d-b1e0-fbb1addf3482">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d0d869c5-5d7e-405b-a17b-7c17f9191c0a">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_07723a2a-ea32-438b-b187-150d35d940cd">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_72c53627-1a1d-4271-b415-1dff39034b6e">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_c9de0d11-4e81-45de-a5d0-7e8843df215b">Conceptual Volume Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a92b5c6d-8add-4a66-8074-c7c1cf262e4d">(3010,0017)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ef704d9d-dbf6-4f61-943c-f65718a6f9ef">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e574986c-205a-44f9-8b91-d4268273fec2">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_56e88491-17e3-484c-9759-b334fe98a07d">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b48d7383-2e58-4691-a738-067cd1b4ba7d">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_63e4ab92-1694-4c53-9185-e8c1ee5f9211">Conceptual Volume UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3861fe03-ed19-4804-b123-3aeadb2c9903">(3010,0006)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fa27d50d-073f-44e8-a3bb-ec6275d2a38f">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_02e14ee8-eec2-4ca1-b00c-0bdd32089eba">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_85ea1ad1-bce2-4d00-b431-492820718f81">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a671accc-ba3b-4282-a2ec-617e364f2f8e">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_8d3a688d-991c-4542-86c5-2358fc5b2125">Confidentiality Constraint on Patient Data Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -12330,6 +12409,35 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_05b0adee-3aaf-4988-97a2-71e3bf720f63">Constituent Conceptual Volume UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f9e9f465-98a8-4ff5-bb32-37700452d75a">(3010,0013)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_543ef70d-8f83-4a57-a61a-d4a4443ffdbd">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7ceb4110-a090-422f-a4b3-f37eec3e4ad9">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_29c01376-4563-4361-9942-8e8ea960f3f6">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_29a061f0-05bc-40db-b764-92003ef38c4d">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -12963,6 +13071,33 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_b5881e2a-62a6-4d6c-8b75-e0de9fb4f891">Device Alternate Identifier</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5d3bc77a-8f1b-4072-a194-2a3aaa39bf47">(3010,001B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_19b26edb-7187-4461-8f7a-0e2dc3ac1be0">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ba1d36f1-d411-42ea-983c-812795c034b3">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a6f152a2-03c3-4b0b-b6ba-a323c8207e75">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_59cbbd3d-eadc-45d2-96e1-84f6940d55f2">Device Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -12983,6 +13118,35 @@ start = message
                                 <para xml:id="para_a290ca30-c265-47c1-8f51-7f0a48447b68">K</para>
                             </td>
                             <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_6ad8d7eb-0bde-4f01-8369-3a7cd7bf48e2">Device Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2aced51b-017a-46a4-8ded-bf41b2fd2a40">(3010,002D)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_53e1a3b6-3ccb-4c36-b586-493d8c621e9f">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cf35a9a6-a2bd-491f-8696-655302a42d1d">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9c01acbb-ea50-4bbc-9fd7-ae89d86169d0">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8f8118f9-7573-4785-9c24-8157a81462b5">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -13305,6 +13469,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_5d80626c-e8cd-4c9b-84ef-ce82eb42eaaf">Dosimetric Objective UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5d603b63-703e-48c1-9fd3-1a2e1863bb13">(3010,006E)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fd23ac4a-0822-4ce6-a794-1eb2f1f63295">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b5727839-2ea8-4563-bba9-6ee5a4fbbe6c">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6f485f63-cf00-4422-ad52-3a46c142728e">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d5397821-e8e9-4293-a6ce-49fb4368a0be">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_3f357336-b8c6-4bdb-b8b6-98d479e38662">End Acquisition DateTime</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -13331,6 +13524,151 @@ start = message
                                 <para xml:id="para_1b861f3c-e091-4317-ae25-466367fda3ad">C</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_ae30957b-c27b-42c1-bf24-330d5d3d828d">Entity Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_46e267e7-ddb7-4f9e-9701-9b820782e84f">(3010,0037)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_4812b310-aa67-4370-80e1-e07b5b45ff41">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e9942a56-b15b-40c0-bf55-66ceff0cec66">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8df219f4-680a-4bda-8a4e-4007f7282142">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e61d2836-c703-48c5-8f0c-cc12a1b60c29">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_f2884571-48da-43f3-a53e-51aa26b05c32">Entity Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_352a5217-6509-41f2-93ba-bbf8caad7a2d">(3010,0035)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_da5c4f2d-e6f2-41fe-ba54-f2d5cf171cd8">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7174e6e3-4569-4a3f-bb55-8604b171d059">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_45760fd2-3e75-4ca0-922e-5ebe8b84d555">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_170d88d2-ca2e-411d-8bb8-3b9dabc87353">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a2bc55ef-30fb-4a1f-96ca-64d58f545e5f">Entity Long Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6757cf5e-ca02-4c00-a2d3-1f00685c7f3c">(3010,0038)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d34449e9-88ca-40f9-8a38-0f88c20e84c5">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_37e99356-a347-4f68-af2c-3b5392fea052">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0d90bd92-6725-49da-b1f7-63ff6e1f6259">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_71a9279f-0692-4cad-8f50-171e2d633f62">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_129bb1d8-d319-4636-991b-3a0bbe6ffb80">Entity Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5a811320-77c6-4e5a-96e1-a12e4285f788">(3010,0036)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a2c01e80-3e11-4a78-8599-2b39e95b4620">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_df980e89-fa12-4875-997d-2a7a8e2eb7e8">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_79584181-4a44-428a-89cf-04f3b8383d07">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f778bf57-eaf0-462f-accc-39615bdaff06">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_5a50269e-ec7f-42d6-94f7-412d709644c6">Equipment Frame of Reference Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7369d122-c0e7-4ded-8900-d1a1da62098e">(300A,0676)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c50b949e-48ee-41fc-92ec-5411b66de74f">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0e1a09d2-22a8-4635-880f-a444501ac7c3">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a7452ce2-6033-4e58-9463-02c1c85d21d7">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c21c1f59-b74f-4b94-baec-e86d2ba99dbe">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -13541,6 +13879,89 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_7cd87adc-3ade-4f95-b23f-90f0e302931b">Flow Identifier</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c6f4a1a7-e029-4f9a-b109-712bb5cf8de3">(0034,0002)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a88ac4ee-b733-49a2-a76c-a33636acad6c">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fffa7753-a757-4730-84b9-189d92b6c27f">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_83227907-60ed-46a3-a3e4-f4ea8750bba2">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_11e15dff-0709-4b37-97ee-d2c0d565dcf5">Flow Identifier Sequence</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_dea9dad5-4dce-41f8-99ec-894e57adfca4">(0034,0001)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_26cc644f-a205-4e80-accf-9f3326c3ce75">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_163b4e00-5089-42df-b46c-50bafb584fbb">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_79504cf7-a66a-4ef8-945c-603f56726dde">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_9d8d0b46-5e9a-4fa3-8677-8ce60b771903">Fractionation Notes</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e08b429b-5642-4865-9cc3-96fb23fb8ab9">(3010,007F)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a06a037c-11b1-4d00-af01-2173eed3de96">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_45eb255a-f4b6-447d-a87f-235c9aa752d2">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f83b87b2-c055-4bf2-8e40-909ec823fc45">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_33165b41-08f3-4e8c-b9bf-9180a0487040">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_438b50f1-55a9-4bcb-b845-e2815e28f401">Fraction Group Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -13622,6 +14043,37 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_6f5129a7-0559-4d4f-b886-7d5139661b52">Frame Origin Timestamp</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0916e594-6da6-4719-bdf8-ee05c27a9f25">(0034,0007)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_addee5ac-7c7e-4135-8487-5354f7932ba7">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_11a647b2-d854-492f-add3-b2e50d2c2dff">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_4abeb760-430a-4e74-bbae-003b53addc22">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_018f4571-a912-4a4f-ba21-813c5813c5f6">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6d8ca9a3-062e-49a1-bcc4-494239f7b8dd">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -15040,6 +15492,68 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_93380a6b-8a02-487f-8528-77b1b3a5e0fe">Intended Phase End Date</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_73648944-f58e-4060-9a6d-c93f961828ff">(3010,004D)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_590c095b-387a-4e38-b202-e2c4279ec9ef">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d702359a-ed0e-47d7-ae5a-63cf63b03da0">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_bd537330-d5f3-46bf-9584-112e4fc010c8">X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8fef0046-b7d6-469d-87f2-6dd63b42dc55">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a2d89290-4974-4e90-9437-635f00158174">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_577950e9-f02f-4c52-8843-a53b4f7a42ac">Intended Phase Start Date</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6d77ec98-ad75-45e5-a99c-bb251a8818ca">(3010,004C)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_db3c6c66-5f51-4c05-9fc3-ee144d20d7e9">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_15cae992-ece5-4c07-88dd-02058d5d057e">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e75748ac-a2aa-4ae7-aefb-db7bdcf5de4b">X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c425ce13-3790-43ba-a824-e6f665b90c9d">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cddeb16a-15c8-42a1-87f5-c141d4d3dd35">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_0cd12b07-197d-4e3a-b1e6-779daa102e13">Intended Recipients of Results Identification Sequence</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -15683,6 +16197,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a87435b5-2dfb-4294-920a-88d1243cdea0">Long Device Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fb16f3b9-28e9-495d-8ba2-8ee45fe36975">(0052,0021)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f2cdecbb-e86a-4bd0-9adb-3d9738e4dc77">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_18faf587-03b1-4df5-a9c4-649aef4a999b">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3ae40bad-3048-434f-9fdb-4a66de7c6bc7">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_4870c4f9-502d-4acb-9911-4b4328058056">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_6382aa3e-e294-451e-b140-0b0dbb5f58f9">MAC</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -15734,6 +16277,66 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_7a76dd28-7fdf-4b3e-a185-1e1fce467171">C</para>
                             </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_0b8d6659-fef0-4d8f-8d61-81225bc393a2">Manufacturer's Device Class UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5f257738-9e5a-4e83-8bda-9419d5775b4e">(0018,100B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_eaddc3a2-6d24-40a9-bcae-6e0f973fa9b8">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2722469d-38aa-4f4d-b689-76c09bb6d479">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3d8f49a3-7787-4bf5-b847-df2acd0d2cb2">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f3f101e0-f091-4bbd-a5c6-0f6787cdad81">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ce4296c5-6085-45a1-a12c-eab3361de6c9">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_e77fd488-4825-406b-971a-51a2b0e36c91">Manufacturer's Device Identifier</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_628cc8eb-e633-49bb-ad99-77238736c59e">(3010,0043)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_965a5b8e-3ac3-4348-8517-232a862a723a">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0f6e6437-b49e-495a-899d-fca5dc9205f4">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_73ec787d-2e79-42aa-916d-694d61124ede">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b417dd34-5d08-4355-a448-76bd20ee9d8a">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -16612,6 +17215,33 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_96c7ca6d-fdc7-4fe6-943d-eb59af94f4f0">Patient's Address</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f2698779-a55c-406d-8118-29973d836e52">(0010,1040)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9caa8b9f-9556-4502-a617-264fccb0321d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b2567180-d930-41ec-88a6-40fdca478e29">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e2807b8d-27f8-4926-bd59-e915c1b595fa">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_13f58c3d-04f6-4a76-b601-bc07d480ad96">Patient's Age</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -16928,6 +17558,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_7d7406e3-3222-413f-8a26-2300ce385d5a">Patient's Sex Neutered</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_98595183-5b10-41b1-aed4-a86a8f6b2a8e">(0010,2203)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7d042a55-728f-48ed-9006-6e58d7a3bec6">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_33709cc8-5f82-4ac7-b72e-4f5fea24b8b5">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_59b0b170-b493-4e70-9295-551ab9b1add6">X/Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7d4c445c-fc9f-4110-a2e6-44a3dafa2029">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_78cb78fe-4bf3-4df5-a42c-8087f352f64a">Patient's Size</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -17040,33 +17699,6 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_96c7ca6d-fdc7-4fe6-943d-eb59af94f4f0">Patient's Address</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_f2698779-a55c-406d-8118-29973d836e52">(0010,1040)</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_9caa8b9f-9556-4502-a617-264fccb0321d">N</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_b2567180-d930-41ec-88a6-40fdca478e29">N</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_e2807b8d-27f8-4926-bd59-e915c1b595fa">X</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                        </tr>
-                        <tr valign="top">
-                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_7dfcb567-143c-4f2c-95a7-c10a63c9f448">Patient Comments</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -17123,27 +17755,27 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_7d7406e3-3222-413f-8a26-2300ce385d5a">Patient's Sex Neutered</para>
+                                <para xml:id="para_ac3898d3-bea2-4195-9d77-adeb5cf386f0">Patient Setup UID</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_98595183-5b10-41b1-aed4-a86a8f6b2a8e">(0010,2203)</para>
+                                <para xml:id="para_603e4516-11aa-4059-baa3-3277e767ed75">(300A,0650)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_7d042a55-728f-48ed-9006-6e58d7a3bec6">N</para>
+                                <para xml:id="para_4d54828d-1423-45c6-8b25-7ce6076b4a21">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_33709cc8-5f82-4ac7-b72e-4f5fea24b8b5">Y</para>
+                                <para xml:id="para_ee8df3cc-de75-4074-9dfb-25f1bc85365f">Y</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_59b0b170-b493-4e70-9295-551ab9b1add6">X/Z</para>
+                                <para xml:id="para_11cdc87d-6343-4546-92b1-6249d3998dd6">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a61f8712-6095-4c39-aa6e-390e073b75eb">K</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
-                            <td/>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_7d4c445c-fc9f-4110-a2e6-44a3dafa2029">K</para>
-                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -17595,6 +18227,33 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a507b0b0-1969-4a7b-ba55-31ce0ce7056e">Performing Physician's Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a0aff0e8-3af0-496f-940d-c19911b1ae6b">(0008,1050)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_10ae7d37-9373-47c0-9320-86fccd401dd2">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_23062fb1-6c1f-43bd-9c16-0ecea8a21798">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c332d824-7afb-4d22-b4f8-caac5efaadc6">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_9d670f8c-a8eb-4f58-8344-a586071a981b">Performing Physician Identification Sequence</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -17622,19 +18281,19 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_a507b0b0-1969-4a7b-ba55-31ce0ce7056e">Performing Physician's Name</para>
+                                <para xml:id="para_3624bbee-46bb-4ceb-a0e5-9df78a754b55">Person's Address</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_a0aff0e8-3af0-496f-940d-c19911b1ae6b">(0008,1050)</para>
+                                <para xml:id="para_175e3d2b-2740-444e-94b6-ab0056df2b1a">(0040,1102)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_10ae7d37-9373-47c0-9320-86fccd401dd2">N</para>
+                                <para xml:id="para_f2b62e2d-f861-49ee-a6a7-491abb4c3126">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_23062fb1-6c1f-43bd-9c16-0ecea8a21798">Y</para>
+                                <para xml:id="para_468146a5-92f2-4fe4-aef1-29f4e908a7e6">Y</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_c332d824-7afb-4d22-b4f8-caac5efaadc6">X</para>
+                                <para xml:id="para_32403bda-5f38-4204-8af2-80d0d1471151">X</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -17689,33 +18348,6 @@ start = message
                             </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_bd5ac7b5-7785-4d49-ae4c-0ebbaf3d31e0">X</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                        </tr>
-                        <tr valign="top">
-                            <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_3624bbee-46bb-4ceb-a0e5-9df78a754b55">Person's Address</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_175e3d2b-2740-444e-94b6-ab0056df2b1a">(0040,1102)</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_f2b62e2d-f861-49ee-a6a7-491abb4c3126">N</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_468146a5-92f2-4fe4-aef1-29f4e908a7e6">Y</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_32403bda-5f38-4204-8af2-80d0d1471151">X</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -18035,6 +18667,64 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_8fe3c712-18af-4c1e-8802-4a6ddb1b8918">Prescription Notes</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_08e8415b-10e2-4393-a995-563f2724caf4">(3010,007B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1f8c7054-cbc5-41a2-96f8-b7417f8e9a00">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a0885684-9634-40ab-81ee-14b748aba9f0">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3df299b5-b85f-4d9e-951f-fac5b2c02c49">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c8429ebc-d980-4963-a6ce-0ca65f909145">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_0e234c49-ca3e-4e86-8f8d-0f5bce98acfd">Prescription Notes Sequence</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e7535359-bed1-4264-a437-b808990e4332">(3010,0081)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_065d83aa-725c-44fa-8748-593f12346619">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a375e619-ff0f-400b-91e3-240f9c3bb2f0">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_daf3bff1-99cf-4566-8460-c9771f36bcca">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9673212c-6549-41cb-be39-75b3fb62d9cb">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_3f15e6b2-bc70-4626-80bf-f258dd153f12">Presentation Display Collection UID</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -18088,6 +18778,35 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_126b4ba9-bd65-499b-b538-300f9f55d101">Prior Treatment Dose Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3d5954b1-bdb1-44c7-9576-c570659e1582">(3010,0061)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fe5a2ae7-9789-4208-9e9a-62fbd650ec10">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_91ee2626-6e4e-4473-9623-dff172172fd7">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cf9867a5-32ab-491d-a7b5-d4e5debdc4cc">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9c818926-111e-4d77-af84-d722a7cd2a71">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -18186,6 +18905,122 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_b34b3ff6-f23b-4cf8-a48a-fde6d17d43ae">Radiation Dose Identification Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5d906d53-5006-40e6-8026-4b537de5c6b2">(300A,0619)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2afe924a-ebc4-4971-96b6-7fa7ba0e6e86">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_19937f1e-5364-46d0-aec5-5ddf9711971e">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_998e78da-bd7e-4ad1-a2b7-1a5a3aa076c8">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b684b44c-5a38-4919-912a-009b62506c15">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_3213dc15-c2bf-4537-bdc5-9bda1627de74">Radiation Dose In-Vivo Measurement Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a5ab5795-ccb7-4722-9e45-b03001b35579">(300A,0623)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1b93153d-5991-46ba-b21b-ddee50a7a78a">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9762d1c1-998e-4dbf-90c9-d941508c066f">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6979fd35-005c-48c2-a550-fc7c1a5e8933">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_419ad016-61f6-4765-abfc-3e935d05a15b">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_67704500-a23b-4b6d-a11c-94a567be4c24">Radiation Generation Mode Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_815bc3af-40a8-4678-afb9-f5bfd1f00280">(300A,067D)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f46bfb0b-a739-4afc-bab4-3c009c4dab49">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ecf0a923-79d9-4936-9148-617eb0b7149a">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_83ef2161-8fa8-44e0-bd75-86714b83d5c6">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_beb80061-0cd7-4b7c-b786-1e703818d556">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_11536566-ba8b-46fa-bc95-2a2237c03962">Radiation Generation Mode Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3d6d8261-a327-4de0-b7d2-06f59670a9fd">(300A,067C)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7f28bb2f-4a11-44d0-a13a-9b63af112afe">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7b65c4b6-8432-4295-baa3-6ad84868b756">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ef74ccae-7486-46b7-adb8-518d2302f274">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_bd2fa43a-2bff-431d-a83b-258e58dfa61a">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_f3d5c806-6e03-4b87-aceb-ecc8309a1449">Reason for Omission Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -18215,6 +19050,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_c53a407e-a3f8-4c1b-94b7-e45474bb636a">Reason for Requested Procedure Code Sequence</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_00f8bee8-6068-4e6b-afd8-405adbc6ec8d">(0040,100A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ffd8f2ef-7459-4681-ae58-fc0a5e485050">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3fc5034d-e0e9-4456-83e2-cb2992cbd5fb">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d1e54742-cbb4-458f-b38a-2d19c51e854a">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_67ec652a-1f65-4ac1-96f8-59b36b3d94dc">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_933708bc-e9bd-450d-8b2f-744f427d2fce">Reason for Study</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -18238,6 +19102,35 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_19e06bf1-7dfe-4158-9b90-1d8b5f891063">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_370f3155-0ced-4393-95fe-a8b25d0cebf0">Reason for Superseding</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0790dd9f-e0ff-4710-af1b-0ece8a1d4266">(3010,005C)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_08bd5db4-a2f3-4d34-b58d-6ddd38baf5f4">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a415050d-58e5-4b49-9c9b-e3cc23fd4198">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9465158e-f6c5-4b7f-aa4d-1cb923c7b7c0">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1109cdb0-ecde-4131-8b5b-22aa6575d23a">C</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -18302,35 +19195,6 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_c53a407e-a3f8-4c1b-94b7-e45474bb636a">Reason for Requested Procedure Code Sequence</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_00f8bee8-6068-4e6b-afd8-405adbc6ec8d">(0040,100A)</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_ffd8f2ef-7459-4681-ae58-fc0a5e485050">N</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_3fc5034d-e0e9-4456-83e2-cb2992cbd5fb">Y</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_d1e54742-cbb4-458f-b38a-2d19c51e854a">X</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_67ec652a-1f65-4ac1-96f8-59b36b3d94dc">C</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                        </tr>
-                        <tr valign="top">
-                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_b08901b8-e374-4dda-9bc1-3e3773d77ea4">Reason for Visit</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -18389,6 +19253,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_12916206-7b6a-407b-b7ac-3400149180b2">Referenced Conceptual Volume UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0edff033-b8b5-4355-a180-471f598d89ee">(3010,000B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2d9b0d0e-54a3-492d-98fc-8fbcf5ad41e0">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_597cabf6-d20c-4c8a-a536-cac415249c1d">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_092eaef4-ee14-4f32-a542-0cbb78437233">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b70bc0e1-ff5f-4abf-b3e6-3d3f8f287c86">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_56139c88-359a-43a4-8bab-ebf1333ad807">Referenced Digital Signature Sequence</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -18433,6 +19326,64 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_97fc848c-16b2-41b9-bfae-83a95c57ebe8">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_42185c84-fc28-4eaf-bc0a-803ed7b5beee">Referenced Dosimetric Objective UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6dc67120-5ef6-401b-8bf2-0f3ec2a8139b">(3010,006F)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_19a02500-7843-4800-8d2a-b7984c846cf8">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_67b79aa7-c936-4409-b6ab-1710f2908e81">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_95368b3b-dd8b-4800-bdcc-b4d3254d14bc">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d26aa2ed-dd5d-4ccc-b5e6-eab1a19efb8c">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_3b6962c9-4e59-4fe0-a242-7850b662d0a8">Referenced Fiducials UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_044b7af9-6c39-4922-8458-261d5ac16f54">(3010,0031)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1031cced-2183-473f-8b99-c8bd0c66ff21">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_411f85b2-4ded-4f89-a8a3-c20af7d7c6cd">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8e5ee3b8-5246-4712-9474-e285ed4f3f64">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_16e0fe58-67ff-4f22-8575-31765e015621">K</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -19397,6 +20348,89 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_6b2fde84-8a06-476a-a169-84608643a43e">RT Accessory Device Slot ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_dbb4b198-f3e7-4e96-bc16-f67c63c1e641">(300A,0615)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c881859a-71c1-424d-a0db-52118ce7ab35">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5c8e3114-0100-467b-8bad-811151b32579">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b97aa117-ce5f-47af-accf-b9c4d9d03123">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_1deb763c-6e56-4b7c-8ef2-2b0e40c4d9e5">RT Accessory Holder Slot ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6fdc190f-bdea-4188-a77f-76a80d9c4fe1">(300A,0611)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e16aedf8-485b-4029-8a90-f43cc567db79">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a88382b3-909f-493c-920c-d1c3698e209d">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fe00090d-7f8d-4164-baa0-aa78f3d7f336">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_1012ae54-a333-4428-9474-41d93c935a7e">RT Physician Intent Narrative</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_490450e4-a44d-430a-809a-36e5f04b7c2d">(3010,005A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ce4074e7-ad7e-4d34-9638-9ddcbd8c3b0d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_bdf623f8-a694-4713-9ba8-0e0cd678b42f">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e472418b-42ee-4831-a4e8-66ff0d61c05d">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_efe3100f-dcf4-49e0-9849-c551d833656b">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_6f65679f-149e-474f-854b-c0521f877287">RT Plan Date</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -19546,6 +20580,122 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_e9845955-c24b-4972-9b1f-047d3a4b30b5">RT Prescription Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1b9cf9d8-8938-46e4-8d50-abf4e194bd4e">(3010,0054)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f633d200-4300-4f44-940f-cfa55b58fe57">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0c13fd6f-3708-41f7-bb97-a2c94b3dd9ff">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e0df5277-79a7-430b-b721-8277a277e589">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b3ca9249-2db7-48fd-8dc1-b751e586a905">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fa2a0043-4945-4495-bee9-723ed355a7ea">RT Tolerance Set Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d8fd84bb-62db-4604-ba50-073d56b14d56">(300A,062A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f2e0c180-0772-4f88-b090-12bb36b58898">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e0de8400-955d-45d2-8f43-57e558daebc3">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_defd8356-1370-4a12-bb6f-a0226f857eee">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ac135460-f89c-4350-9c3b-32cd9ffd8711">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_f778021f-408b-4285-b1c7-919e4bc3ab1d">RT Treatment Approach Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ffacb79e-07a1-4721-8470-7f2ea8377b4f">(3010,0056)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_79b1fa62-016a-4b5a-b6cf-92049043a238">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_48011b73-0882-4438-a286-858219f89a3a">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fe9755f8-0744-4aa4-80c3-bbcbace08025">X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6d15af26-68af-4d39-9ee7-cd5f3057dacf">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fc105c86-f54b-4559-8c28-a22bab8c39df">RT Treatment Phase UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_68676e2e-f42b-4232-b946-01d8058b92c3">(3010,003B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e845f66d-0d29-4e85-b6db-4f5f01e6ea7d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3f32fa53-ea4b-48dd-bb48-88120aa8c885">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_797f695d-bc72-452a-a287-74e4b1b09e70">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e5487728-18a2-4af3-96c0-62efc2c060c8">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_869083bf-08fa-4237-b770-8eef1ec8a883">Scheduled Human Performers Sequence</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -19600,19 +20750,19 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_4289424a-9231-4ed7-86a9-9114b9f871e8">Scheduled Performing Physician Identification Sequence</para>
+                                <para xml:id="para_723d7c50-bb32-4562-b7a0-cefd46632fdc">Scheduled Performing Physician's Name</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_fb446b0f-6c75-451a-b346-336782ca9705">(0040,000B)</para>
+                                <para xml:id="para_aff35c1a-887d-4c3f-ad5d-33e149c54b02">(0040,0006)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_b4462865-edc4-4398-97b8-17f089ca7bbe">N</para>
+                                <para xml:id="para_59d870c7-d9a9-4e2c-b7d6-b24e7a5a791a">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_21a919dc-9cc3-4c6a-b89d-fbdab9707c5d">N</para>
+                                <para xml:id="para_df7e5190-e6a6-4221-ba24-b513fae8f39d">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_7155e715-2daa-4bb6-ac84-37d93b9f1bae">X</para>
+                                <para xml:id="para_2553ed61-d70b-459a-a295-acc415891b9e">X</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -19627,19 +20777,19 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_723d7c50-bb32-4562-b7a0-cefd46632fdc">Scheduled Performing Physician's Name</para>
+                                <para xml:id="para_4289424a-9231-4ed7-86a9-9114b9f871e8">Scheduled Performing Physician Identification Sequence</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_aff35c1a-887d-4c3f-ad5d-33e149c54b02">(0040,0006)</para>
+                                <para xml:id="para_fb446b0f-6c75-451a-b346-336782ca9705">(0040,000B)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_59d870c7-d9a9-4e2c-b7d6-b24e7a5a791a">N</para>
+                                <para xml:id="para_b4462865-edc4-4398-97b8-17f089ca7bbe">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_df7e5190-e6a6-4221-ba24-b513fae8f39d">N</para>
+                                <para xml:id="para_21a919dc-9cc3-4c6a-b89d-fbdab9707c5d">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_2553ed61-d70b-459a-a295-acc415891b9e">X</para>
+                                <para xml:id="para_7155e715-2daa-4bb6-ac84-37d93b9f1bae">X</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -20413,6 +21563,62 @@ start = message
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_b1bc25b0-1d51-4e35-a9e4-584cfc18648e">Source Conceptual Volume UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ceb072ed-edda-4946-872a-0e8ecaa2a9d7">(3010,0015)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6fbdf1c2-0e3b-4469-a5b2-55349de4d5c2">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f8be66f6-f912-413e-95e0-d6b7f0839526">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0fa23544-4f7f-42b3-9d21-6c5800f8834e">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2ff4cfa1-f207-43d2-98bb-9bcc7a6cd196">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_5ec513fe-05df-481b-beb0-15e0beaa11c9">Source Identifier</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_09a20ccc-f372-4362-bdd4-40d8f5e6b4bd">(0034,0005)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3835cece-d411-4788-a053-e6d76fe7a05d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0f2e627e-4b50-43ac-addc-65f051870438">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_139cad7c-3432-4a77-adbf-0bb972ce4052">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -21483,6 +22689,122 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_f643a0e7-4870-48e0-a2f6-973833dc69d1">Treatment Position Group Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e9e9d5d4-b190-4792-848c-1d3772159a17">(300A,0608)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8874dddf-c67b-4651-b27e-7355d5d2ecd2">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_615204c1-7810-48be-a708-6ef9ea058b83">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_656be82c-d212-49a3-a813-e0b2784c2dfa">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_232228d4-798a-4682-b2a6-598c4e1e3001">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_4bd1de86-df46-4ce2-aa77-08615fbe8253">Treatment Position Group UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a7e3e30f-d42a-4b67-92ba-3a85c258a9ca">(300A,0609)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_65f4b0fc-c1ec-44e7-989e-7535fdf09b8d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c60cc37d-6d41-43f7-b319-4ceea303fb84">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_fdb676c0-5a14-48ad-b251-4e943ba31c6c">U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_be34639d-61ec-437f-a598-e167fde8b242">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_57d6499e-2595-42e4-95bf-e19294b2e07a">Treatment Site</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_37368faa-f1a3-4e7f-9b76-98a16bd2596e">(3010,0077)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b7f2b3ab-8788-46d7-a208-56f501d8ba10">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0aec072c-bdf9-4820-a36f-5b39dd9abd08">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d9a2faed-7067-45b7-a755-f443d1ab8057">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0fb5f9db-6c1c-4301-8394-83f5c843a9e2">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a72eef6e-3f60-4791-87a8-01b34da0742a">Treatment Technique Notes</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b70d9413-c9c1-42b9-84d5-83de0b98cc96">(3010,007A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0df62252-0a11-440f-a2cb-2d338b793bf5">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ea7db8b5-3bfa-4065-90e5-de6a9c882435">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_39185bd3-0cc9-4b17-9737-ab98befa4ca9">Z</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_34c19749-1146-4ba7-be50-e6194c714df6">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_6d6d59d5-0826-47fb-8476-38bd145d8b98">Treatment Time</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -21594,6 +22916,64 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_37bdd0a8-1a40-4891-9560-1395f0f28003">User Content Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_10066ecf-f7f8-4a0b-ab44-fd4645a85dea">(3010,0033)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cc1c14aa-6cfc-4a7f-9925-8d3e8e98b7c8">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_79e7c4e0-d637-44cb-b69e-808e1d56abb2">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c75a32b0-e87c-44ca-9f5d-873b0e60474b">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1663273c-e361-4485-9a36-e07ec2543caf">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_1aecb2a0-4ab8-4be9-aee8-d9644b8d180b">User Content Long Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_281d6638-a95d-4c8a-96d7-e7c327397566">(3010,0034)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1e15d75f-fffa-470a-be04-ee71f7146714">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_094675da-2d80-4d9b-9f40-54770533396a">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_874e829a-0672-4cfb-8de8-69ea663e9bc5">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_067e15de-a3df-4971-8259-eca23e4d5e07">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
