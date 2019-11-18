@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
     <title>PS3.18</title>
-    <subtitle>DICOM PS3.18 2019d - Web Services</subtitle>
+    <subtitle>DICOM PS3.18 2019e - Web Services</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
@@ -4011,7 +4011,7 @@ cid                = token / quoted-string
                 <para xml:id="para_17c5961a-b915-423b-8eb8-07f041ba75ab">The media types defined in this section are distinct from those into which DICOM Instances may be rendered (which are defined in <xref linkend="sect_8.7.4" xrefstyle="select: label"/>); some of the same media types are used for both rendered content and Bulkdata.</para>
                 <para xml:id="para_b37bbd99-a55a-4222-b93d-28c1c3ac842f">Depending on the service, the media types may be single part or multipart, and may have required or optional Transfer Syntax and/or character set parameters.</para>
                 <para xml:id="para_219374fc-3332-47a8-9239-320f74a9093e">The Implicit VR Little Endian (1.2.840.10008.1.2), and Explicit VR Big Endian (1.2.840.10008.1.2.2 - Retired) Transfer Syntaxes shall not be used with Web Services.</para>
-                <para xml:id="para_9bd1128f-a5f0-49a8-811b-71a9f7f25ad2">If a Transfer Syntax parameter for a DICOM Media Type is not specified in a request or response, the Transfer Syntax in the response shall be the Transfer Syntax specified as the default for the Resource Category and media type combination in <xref linkend="table_8.7.3-2" xrefstyle="select: label"/>, <xref linkend="table_8.7.3-4" xrefstyle="select: label"/> or <xref linkend="table_8.7.3-5" xrefstyle="select: label"/>.</para>
+                <para xml:id="para_9bd1128f-a5f0-49a8-811b-71a9f7f25ad2">If a Transfer Syntax parameter for a DICOM Media Type is not specified in a request or response, the Transfer Syntax in the response shall be the Transfer Syntax specified as the default for the Resource Category and media type combination in <xref linkend="table_8.7.3-2" xrefstyle="select: label"/>, <xref linkend="table_8.7.3-4" xrefstyle="select: label"/> or <xref linkend="table_8.7.3-5" xrefstyle="select: label"/>, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                 <para xml:id="para_20d1da2f-48ad-43cf-877c-9731b40c9bd9">
 <xref linkend="table_8.7.3-1" xrefstyle="select: label"/> specifies the definition of media type requirement terms used in the tables in this section.</para>
                 <table frame="box" label="8.7.3-1" rules="all" xml:id="table_8.7.3-1">
@@ -4070,8 +4070,11 @@ cid                = token / quoted-string
                 <section label="8.7.3.1" status="4" xml:id="sect_8.7.3.1">
                     <title>The application/dicom Media Type</title>
                     <para xml:id="para_47a6547d-80ef-453a-82e6-2adc550f82db">The application/dicom media type specifies a representation of Instances encoded in the DICOM File Format specified in <olink targetdoc="PS3.10" targetptr="chapter_7" xrefstyle="template:Section %n “%t” in PS3.10"/>.</para>
+                    <note>
+                        <para xml:id="para_2db85632-05a8-4ea6-861c-c938c857bc96">The origin server may populate the <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/> File Meta Information with the identification of the Source, Sending and Receiving AE Titles and Presentation Addresses as described in <olink targetdoc="PS3.10" targetptr="sect_7.1" xrefstyle="select: docname label"/>, or these Attributes may have been left unaltered from when the origin server received the objects. The user agent storing the objects received in the response may populate or coerce these Attributes based on its own knowledge of the endpoints involved in the transaction, so that they accurately identify the most recent storage transaction.</para>
+                    </note>
                     <para xml:id="para_500a6fa6-1823-4929-905f-a9fdc2ff988c">
-<xref linkend="table_8.7.3-2" xrefstyle="select: label"/> specifies the default and optional Transfer Syntax UID combinations for each DICOM Resource Category (see <xref linkend="table_8.7.2-1" xrefstyle="select: label"/>). The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types.</para>
+                        <xref linkend="table_8.7.3-2" xrefstyle="select: label"/> specifies the default and optional Transfer Syntax UID combinations for each DICOM Resource Category (see <xref linkend="table_8.7.2-1" xrefstyle="select: label"/>). The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                     <table frame="box" label="8.7.3-2" rules="all" xml:id="table_8.7.3-2">
                         <caption>Transfer Syntax UIDs for application/dicom Media Types</caption>
                         <thead>
@@ -4463,9 +4466,9 @@ cid                = token / quoted-string
                 <section label="8.7.3.3" status="4" xml:id="sect_8.7.3.3">
                     <title>DICOM Bulkdata Media Types</title>
                     <para xml:id="para_e07c47ea-b10b-49bd-a26a-a08c8eaf4b6a">Bulkdata representations are only supported by RESTful services. There are two categories of Bulkdata: uncompressed and compressed.</para>
-                    <para xml:id="para_a3293c53-be9b-4115-ab2d-526bdefa1657">The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types.</para>
+                    <para xml:id="para_a3293c53-be9b-4115-ab2d-526bdefa1657">The default media type for the Resource Category shall be returned when the origin server supports none of the Acceptable Media Types, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                     <para xml:id="para_e048f289-bc29-439e-aaf2-a6008a7ce879">The origin server may support additional Transfer Syntaxes.</para>
-                    <para xml:id="para_7659125e-1aea-4f78-a044-ea99d2e827a6">If no media type Transfer Syntax parameter is specified, then the Explicit VR Little Endian Transfer Syntax "1.2.840.10008.1.2.1" shall be used.</para>
+                    <para xml:id="para_7659125e-1aea-4f78-a044-ea99d2e827a6">If no media type Transfer Syntax parameter is specified, then the Explicit VR Little Endian Transfer Syntax "1.2.840.10008.1.2.1" shall be used, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                     <note>
                         <para xml:id="para_0a9e5741-08c1-425a-9a22-32d694e04dc0">The tables in this section have no entries for the URI service, since they do not support separate retrieval of Bulkdata.</para>
                     </note>
@@ -5041,9 +5044,19 @@ cid                = token / quoted-string
                 </section>
                 <section label="8.7.3.4" status="4" xml:id="sect_8.7.3.4">
                     <title>Transfer Syntax</title>
-                    <para xml:id="para_f66ec54d-5d7e-4c89-8620-036d2c60db62">The Default Transfer Syntax for DICOM objects contained in a payload shall be Explicit VR Little Endian Uncompressed "1.2.840.10008.1.2.1". If the Transfer Syntax is not specified in a message, then the Default Transfer Syntax shall be used.</para>
+                    <para xml:id="para_f66ec54d-5d7e-4c89-8620-036d2c60db62">The Default Transfer Syntax for DICOM objects contained in a payload shall be Explicit VR Little Endian Uncompressed "1.2.840.10008.1.2.1". If the Transfer Syntax is not specified in a message, then the Default Transfer Syntax shall be used, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                     <note>
-                        <para xml:id="para_1b43e82d-c76b-4b06-acd1-360407c287f1">This is different from the Default Transfer Syntax defined in <olink targetdoc="PS3.5" targetptr="sect_10.1" xrefstyle="template:Section %n “%t” in PS3.5"/>, which is Implicit VR Little Endian.</para>
+                        <orderedlist>
+                            <listitem>
+                                <para xml:id="para_1b43e82d-c76b-4b06-acd1-360407c287f1">This is different from the Default Transfer Syntax defined in <olink targetdoc="PS3.5" targetptr="sect_10.1" xrefstyle="template:Section %n “%t” in PS3.5"/>, which is Implicit VR Little Endian.</para>
+                            </listitem>
+                            <listitem>
+                                <para xml:id="para_d8ccb50d-fcf2-4227-9874-c25b528bc842">Every origin server is required to be able to convert any Data Set it is going to return into the Explicit VR Little Endian Transfer Syntax, regardless of the form in which it originally received or stored the Data Set, except in the cases of when the decompressed Pixel Data is too large to encode in the Explicit VR Little Endian Transfer Syntax or is received in a lossy compressed form. In the case of lossy compressed Pixel Data, the origin server is permitted to return the lossy compressed Transfer Syntax appropriate to the lossy form that was received. In the case of lossless compressed Pixel Data that is too large to encode in the Explicit VR Little Endian Transfer Syntax, the origin server is permitted to return any appropriate lossless compression Transfer Syntax, not necessarily that in which the image was received, as an alternative to the Explicit VR Little Endian Transfer Syntax.</para>
+                            </listitem>
+                            <listitem>
+                                <para xml:id="para_5f8f41c1-5912-4850-b485-d11072e77330">If transcoding to the Explicit VR Little Endian Transfer Syntax, a VR of UN may be needed for the encoding of Data Elements with explicit VR whose value length exceeds 65534 (2<superscript>16</superscript>-2) (FFFEH, the largest even length unsigned 16 bit number) but which are defined to have a 16 bit explicit VR length field. See <olink targetdoc="PS3.5" targetptr="sect_6.2.2" xrefstyle="select: docname label"/>.</para>
+                            </listitem>
+                        </orderedlist>
                     </note>
                     <para xml:id="para_90b7dcf5-f060-4916-9471-2f96b11a11d1">Implicit VR Little Endian, or Explicit VR Big Endian shall not be used.</para>
                     <para xml:id="para_f37a20de-8ca2-41fe-9454-cdc8deaabb87">The response payload encoding requirements are defined in <xref linkend="sect_8.7.8" xrefstyle="select: label"/>.</para>
@@ -5104,7 +5117,7 @@ cid                = token / quoted-string
                             <para xml:id="para_837b5c40-5cae-497c-a4db-704b3dc7d849">Per <xref linkend="biblio_RFC_6838"/> Media Type Specifications and Registration Procedures, it is an error for a specific parameter to be specified more than once. If a choice of Transfer Syntaxes is acceptable. more than one media type may be provided in the Accept header with different q parameter values to indicate preference. E.g., to specify that 1.2.840.10008.1.2.4.50 and to specify that 1.2.840.10008.1.2.4.57 are acceptable but 1.2.840.10008.1.2.4.50 is preferred, an Accept header field could be:</para>
                             <programlisting>Accept: multipart/related; type="application/dicom";transfer-syntax=1.2.840.10008.1.2.4.50;boundary=**, multipart/related; type="application/dicom";transfer-syntax=1.2.840.10008.1.2.4.57;q=0.5;boundary=**</programlisting>
                         </note>
-                        <para xml:id="para_f163164d-a31c-44f7-8ea8-279730ceb65e">The wildcard value "*" indicates that the user agent will accept any Transfer Syntax. This allows, for example, the origin server to respond without needing to transcode an existing representation to a new Transfer Syntax, or to respond with the Explicit VR Little Endian Transfer Syntax regardless of the Transfer Syntax stored.</para>
+                        <para xml:id="para_f163164d-a31c-44f7-8ea8-279730ceb65e">The wildcard value "*" indicates that the user agent will accept any Transfer Syntax. This allows, for example, the origin server to respond without needing to transcode an existing representation to a new Transfer Syntax, or to respond with the Explicit VR Little Endian Transfer Syntax regardless of the Transfer Syntax stored, unless the origin server has only access to the pixel data in lossy compressed form or the pixel data in a lossless compressed form that is of such length that it cannot be encoded in the Explicit VR Little Endian Transfer Syntax.</para>
                         <para xml:id="para_cab002bf-1076-48fe-8c13-4fea4307e925">If an Origin server supports the Transfer Syntax parameter, it shall support the wildcard value.</para>
                         <para xml:id="para_ecb84aee-85f0-4a66-a4a0-993f61dbcf6c">Origin servers that support the Transfer Syntax parameter shall specify in their Conformance Statement those values of Transfer Syntax parameter that are supported in the response.</para>
                         <para xml:id="para_c6fd9735-8826-4a77-b23f-9712373972b1">User agents that support the Transfer Syntax parameter shall specify in their Conformance Statement those Transfer Syntax parameter values that may be supplied in the request.</para>
@@ -9664,13 +9677,17 @@ cid                = token / quoted-string
                             <para xml:id="para_3ef4fa6b-1da0-410b-8ca4-290ce378b07c">If the number of bits per channel of an image/png file is not supported by the IOD, a lossless transformation cannot be performed.</para>
                         </listitem>
                         <listitem>
-                            <para xml:id="para_4ff1f2cc-d2fe-4a90-a7aa-62ef36f682f8">An animated image/gif will be converted into a multi-frame image; image/png does not support animation, and Multiple-image Network Graphics (MNG) is not included in <xref linkend="table_10.5.2-1" xrefstyle="select: label"/>.</para>
+                            <para xml:id="para_4ff1f2cc-d2fe-4a90-a7aa-62ef36f682f8">An animated image/gif will be converted into a multi-frame image by transforming the frame deltas into fully decoded frames; image/png does not support animation, and Multiple-image Network Graphics (MNG) is not included in <xref linkend="table_10.5.2-1" xrefstyle="select: label"/>.</para>
                         </listitem>
                         <listitem>
-                            <para xml:id="para_b8c5cccd-8b9e-4090-8825-b0b3cc036e80">Any transparency information present in an image/gif or image/png file will be discarded, since DICOM does not support the concept of transparency.</para>
+                            <para xml:id="para_b8c5cccd-8b9e-4090-8825-b0b3cc036e80">Any transparency information present in an image/gif or image/png file will be discarded, since DICOM does not support the concept of transparency.
+                                The actual pixel value used to replace transparent pixels (e.g., black or white) is at the discretion of the implementation, but if the value used does not appear elsewhere in the image, it may be useful to record it in Pixel Padding Value (0028,0120).</para>
                         </listitem>
                         <listitem>
-                            <para xml:id="para_6262c534-bb2f-4f40-bbe0-0bca75adec62">If an alpha channel is supplied in an image/png file, and the IOD does not support the RGBA Photometric Interpretation, the alpha channel will be discarded (i.e., considered to consist of all opaque values, consistent with the policy of discarding any transparency information).</para>
+                            <para xml:id="para_6262c534-bb2f-4f40-bbe0-0bca75adec62">If an alpha channel is supplied in an image/png file, the alpha channel will be discarded (i.e., considered to consist of all opaque values, consistent with the policy of discarding any transparency information).</para>
+                        </listitem>
+                        <listitem>
+                            <para xml:id="para_3f86616f-f714-44af-a009-abf08e9080ca">In the case of pixel data that contains a single channel in the absence of metadata describing the interpretation of the pixel values, the Photometric Interpretation may be assumed by the origin server to be MONOCHROME2 (zero is interpreted as black).</para>
                         </listitem>
                     </orderedlist>
                 </note>
@@ -11410,6 +11427,12 @@ cid                = token / quoted-string
                                 <para xml:id="para_34f22df0-f144-414a-bb2e-15e6cb579859">If a Private Data Element has been specified as an include parameter and it is supported by the origin server, the Private Data Element and its corresponding Private Creator Element.</para>
                             </listitem>
                         </itemizedlist>
+                        <para xml:id="para_8a7d0758-a6fb-4761-a55b-a82b23403788">The response may optionally include:</para>
+                        <itemizedlist>
+                            <listitem>
+                                <para xml:id="para_66309ba1-925d-4263-b997-ea18663b92ba">the Available Transfer Syntax UID (0008,3002) to describe the Transfer Syntaxes that the origin server can assure will be supported for retrieval of the SOP Instance. See <olink targetdoc="PS3.4" targetptr="sect_C.6.1.1.5.2" xrefstyle="select: docname label"/>.</para>
+                            </listitem>
+                        </itemizedlist>
                     </section>
                 </section>
             </section>
@@ -11938,7 +11961,7 @@ cid                = token / quoted-string
         </section>
         <section label="11.2" status="2" xml:id="sect_11.2">
             <title>Conformance</title>
-            <para xml:id="para_b7297259-0cc5-47ea-99a9-fb559349c6d0">An origin server shall support all transactions of this service. Additional requirements for an origin server that is also a Unified Worklist and Procedure Step SCP are described in <olink targetdoc="PS3.4" targetptr="sect_CC.1" xrefstyle="select: docname label"/>.</para>
+            <para xml:id="para_b7297259-0cc5-47ea-99a9-fb559349c6d0">An origin server shall support sets of transactions of this service that correspond to one or more UPS SOP Classes (DIMSE Service Groups). See <olink targetdoc="PS3.4" targetptr="sect_CC.2" xrefstyle="select: docname label"/>. Additional requirements for an origin server that is also a Unified Worklist and Procedure Step SCP are described in <olink targetdoc="PS3.4" targetptr="sect_CC.1" xrefstyle="select: docname label"/>.</para>
             <para xml:id="para_30d10e42-8511-46cc-b0a9-c29c8291278a">A user agent or origin server implementing the Worklist Service shall comply with all requirements placed on the SCU or SCP, respectively, for the corresponding services in <olink targetdoc="PS3.4" targetptr="chapter_CC" xrefstyle="template:Annex %n “%t” in PS3.4"/> including Conformance Statement requirements.</para>
             <para xml:id="para_83000bd8-b4cc-4c6b-a0dd-01f92a7165a0">An implementation supporting the Worklist Service shall describe its support in its Conformance Statement and in its response to the Retrieve Capabilities transaction, and whether it plays the role of origin server, user agent, or both.</para>
         </section>

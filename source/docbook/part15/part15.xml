@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2019d - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2019e - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -16200,7 +16200,7 @@ start = message
                                 <para xml:id="para_a87435b5-2dfb-4294-920a-88d1243cdea0">Long Device Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_fb16f3b9-28e9-495d-8ba2-8ee45fe36975">(0052,0021)</para>
+                                <para xml:id="para_fb16f3b9-28e9-495d-8ba2-8ee45fe36975">(0050,0021)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_f2cdecbb-e86a-4bd0-9adb-3d9738e4dc77">N</para>
@@ -16406,7 +16406,7 @@ start = message
                                 <para xml:id="para_aa337c56-683d-4fc5-8fbd-46d270709178">(0010,1090)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_80f6f140-9f25-4f90-8472-1c00074b95da">N</para>
+                                <para xml:id="para_80f6f140-9f25-4f90-8472-1c00074b95da">Y</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_bdb39c76-74e8-4f50-bd91-1114248b7318">N</para>
@@ -17384,8 +17384,12 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_b81fcec5-a200-48dd-87ed-6be14d756f95">(0010,0050)</para>
                             </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cd0ca444-028c-4cee-8fd7-1cd99dec4050">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_87637802-4f62-4527-8433-44246749b542">Y</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_20c940a2-f82b-4e40-8c06-bc3876e580c8">X</para>
                             </td>
@@ -17461,8 +17465,12 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_a847dd29-7727-4fdd-b1ec-ce066645e745">(0010,0101)</para>
                             </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_370a5c40-3780-4004-aa03-f7cc4119601c">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9570aab8-1836-483f-9877-e23ddffc1c3e">Y</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_c1b1b5f8-6351-40a0-b074-33ffbea7b5d2">X</para>
                             </td>
@@ -17484,8 +17492,12 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_51bfac38-8c2d-4558-bb24-9f77fcd63936">(0010,0102)</para>
                             </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2587da6a-80ca-4eba-80bf-d57250c96b04">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_34db69ba-526a-4a06-bf23-8165d2e4c675">Y</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_f44a373a-4c11-4be4-acc3-029c845afef3">X</para>
                             </td>
@@ -19879,10 +19891,10 @@ start = message
                                 <para xml:id="para_33b2c33c-5006-43a7-a9dc-dfa5d21b3ee4">(3006,00C2)</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_ca8b78a0-856f-454a-a5e8-947f5abd6337">N</para>
+                                <para xml:id="para_ca8b78a0-856f-454a-a5e8-947f5abd6337">Y</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_09c409fd-75d8-44dd-aa15-c84bdd4f09c8">Y</para>
+                                <para xml:id="para_09c409fd-75d8-44dd-aa15-c84bdd4f09c8">N</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_3c41fb65-5793-4617-b71e-2f8a8a396ed8">U</para>

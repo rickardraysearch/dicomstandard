@@ -143,7 +143,6 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	wordexport/part18/part18_fromword_files \
 	wordexport/part19/part19_fromword_files \
 	wordexport/part20/part20_fromword_files \
-	wordexport/part21/part21_fromword_files \
 	wordexport/part22/part22_fromword_files \
 	support/stylesheets/extractcompositeiodsfordicom3tooltemplate.xsl \
 	support/stylesheets/extractcompositemodulesfordicom3tooltemplate.xsl \

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="502px" height="137px" viewBox="0 0 502 137" enable-background="new 0 0 502 137" xml:space="preserve">
+	 viewBox="0 0 502 137" enable-background="new 0 0 502 137" xml:space="preserve">
 
 <defs>
 	<style type="text/css">
@@ -13,19 +12,19 @@
 </defs>
 
 <g>
-  <desc>
-	PS 3.18 Part 18: Web Services
-  </desc>
+   <desc>
+	PS 3.18 : Web Services
+   </desc>
 </g>
 
 <g>
-	<rect x="1" y="1" fill="#F5EED6" width="500" height="135"/>
+	<rect x="1" y="1" fill="#F2EDD6" width="500" height="135"/>
 	<g>
 		
 			<line fill="#4F8ABE" stroke="#005695" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3" x1="396.267" y1="119.581" x2="396.267" y2="22.941"/>
 		
-			<rect x="364.215" y="17.419" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="64.348" height="27"/>
-		<text transform="matrix(1.0079 0 0 1 369.04 28.9414)"><tspan x="16" y="0" font-size="9">origin</tspan><tspan x="14" y="10.8" font-size="9">server</tspan></text>
+			<rect x="363.889" y="17.419" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="65" height="27"/>
+		<text transform="matrix(1.0079 0 0 1 369.5537 33.425)" font-size="9px">Origin Server</text>
 		<g>
 			<line fill="#4F8ABE" x1="100.281" y1="70.346" x2="390.886" y2="70.346"/>
 			<g>
@@ -49,9 +48,9 @@
 		
 			<line fill="#4F8ABE" stroke="#005695" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="3" x1="96.116" y1="119.581" x2="96.116" y2="22.941"/>
 		
-			<rect x="73.438" y="17.419" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="45.357" height="27"/>
-		<text transform="matrix(1.0079 0 0 1 73.939 28.9414)"><tspan x="11" y="0" font-size="9">user</tspan><tspan x="9" y="10.8" font-size="9">agent</tspan></text>
-		<text transform="matrix(1.0079 0 0 1 118.564 66.71)"><tspan x="80" y="0" font-size="8">1. HTTP Request</tspan><tspan x="80" y="27.6" font-size="8">2. HTTP Response</tspan></text>
+			<rect x="63.616" y="17.419" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="65" height="27"/>
+		<text transform="matrix(1.0079 0 0 1 73.4316 33.425)" font-size="9px">User Agent</text>
+		<text transform="matrix(1.0079 0 0 1 118.564 66.7095)"><tspan x="0" y="0" font-size="8px">1. HTTP Request</tspan><tspan x="0" y="27.6" font-size="8px">2. HTTP Response</tspan></text>
 		
 			<path fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" d="
 			M100.304,58.872c-2.993,0-5.955,0-9.073,0v21.6c2.961,0,6.044,0,9.073,0V58.872z"/>

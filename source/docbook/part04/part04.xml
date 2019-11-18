@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
   <title>PS3.4</title>
-  <subtitle>DICOM PS3.4 2019d - Service Class Specifications</subtitle>
+  <subtitle>DICOM PS3.4 2019e - Service Class Specifications</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -5144,6 +5144,17 @@
                 <para xml:id="para_32613412-1537-477d-ad0c-67167c5bb97d">A Sequence of Items, each identifying an alternate encoding of an image that matches the Instance level Query/Retrieve search criteria (see <xref linkend="sect_C.6.1.1.5.1" xrefstyle="select: label"/>)</para>
               </td>
             </tr>
+              <tr valign="top">
+                  <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_017c9627-1d27-419f-a573-990e8a31f686">Available Transfer Syntax UID</para>
+                  </td>
+                  <td align="center" colspan="1" rowspan="1">
+                      <para xml:id="para_206686a4-adf1-470e-8ba7-4e97e373e1ad">(0008,3002)</para>
+                  </td>
+                  <td align="left" colspan="1" rowspan="1">
+                      <para xml:id="para_fff28639-577b-4962-b786-05f9d70682f1">Describes one or more Transfer Syntaxes that the SCP can assure will be supported for retrieval of the SOP Instance (see <xref linkend="sect_C.6.1.1.5.2" xrefstyle="select: label"/>).</para>
+                  </td>
+              </tr>
           </tbody>
         </table>
         <para xml:id="para_12d37be6-3667-4be0-a405-830e1a86f3fa">If the SCP manages images in multiple alternate encodings, only one of the alternate encodings of an image is included in the number of object instances.</para>
@@ -5482,6 +5493,9 @@
                       </listitem>
                       <listitem>
                         <para xml:id="para_423ebd14-c71d-473b-af19-4b88a76f7133">The requirement that unsupported Optional Keys present in the Request Identifier not be included in the Response Identifier is specified in <xref linkend="sect_C.2.2.1.3" xrefstyle="select: label"/>.</para>
+                      </listitem>
+                      <listitem>
+                          <para xml:id="para_2f704199-5db5-42be-83a1-264c67e58069">Private Attributes present in the Request Identifier may be ignored by the SCP if unrecognized (as defined for a <olink targetdoc="PS3.2" targetptr="glossentry_StandardExtendedSOPClass" xrefstyle="select: docname title"/>), hence may or may not be present in the Response Identifier.</para>
                       </listitem>
                     </orderedlist>
                   </note>
@@ -8138,7 +8152,18 @@
                     <para xml:id="para_d74597af-9b95-4cfe-ba28-d9e7dce9b6b5">O</para>
                   </td>
                 </tr>
-                <tr valign="top">
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_6f0d24d0-3c61-412d-aa56-18f7c4502a0e">Available Transfer Syntax UID</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_fd429aa4-2a43-49cc-b109-278cc69ee9f3">(0008,3002)</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_5e8326b2-0a85-4d89-9eb1-223d642f5be7">O</para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_a6a06776-21bf-4987-8eeb-1952d3e8dfd8">Alternate Representation Sequence</para>
                   </td>
@@ -8424,6 +8449,15 @@
                 </listitem>
               </itemizedlist>
             </section>
+              <section label="C.6.1.1.5.2" status="6" xml:id="sect_C.6.1.1.5.2">
+                  <title>Available SOP Transfer Syntax UID</title>
+                  <para xml:id="para_7e47aab0-d434-4ed3-b27f-3f9ff0c9c145">The Available Transfer Syntax UID (0008,3002) describes one or more Transfer Syntaxes that the SCP can assure will be supported for retrieval of the SOP Instance. This may, but is not required to, include the Transfer Syntax in which the SCP has stored the instance. For all Transfer Syntaxes listed, no loss shall be involved in transcoding from whatever is stored.</para>
+                  <para xml:id="para_b48313a4-e805-4c3b-ae0e-85f27d6fa4c0">The Attribute is multi-valued, and if more than one value is present, then the SCU may interpret those Transfer Syntaxes listed earlier as being preferred by the SCP over those listed later. E.g., the order might reflect the amount of effort required to convert from the stored form, and the first listed might be the stored form.</para>
+                  <para xml:id="para_f5d1899c-ff30-40cf-a9ac-b8078c7e64b3">There is no requirement to include every Transfer Syntax in which the instance may be retrieved without loss. E.g., the Default Transfer Syntax as specified in <olink targetdoc="PS3.5" targetptr="sect_10.1" xrefstyle="select: docname label"/>, if it is applicable, might be omitted if it is not the Transfer Syntax in which the instance happens to be stored.</para>
+                  <note>
+                      <para xml:id="para_43d60d1f-8f74-4bba-847b-c0bd472504a2">The value of this Attribute may be useful, for example, to determine if the the instance is stored in a lossy Transfer Syntax that is not supported by the SCU, and for which decompression or conversion into a different compressed form would involve loss and be inappropriate, and require use of an Alternate Representation.</para>
+                  </note>
+              </section>
           </section>
           <section label="C.6.1.1.6" status="5" xml:id="sect_C.6.1.1.6">
             <title>Scope of the C-GET and C-MOVE Commands and Sub-Operations</title>
@@ -15616,7 +15650,7 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_d45814fe-55b2-4676-a57d-b8037ba19399">&gt; Referenced SOP Class UID</para>
+                        <para xml:id="para_d45814fe-55b2-4676-a57d-b8037ba19399">&gt;Referenced SOP Class UID</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_2195020c-05ea-42c7-973d-2a4828cb1d2c">(0008,1150)</para>
@@ -15627,7 +15661,7 @@
                     </tr>
                     <tr valign="top">
                       <td align="left" colspan="1" rowspan="1">
-                        <para xml:id="para_95c1d7a4-100a-4edd-8188-6624e08d5a2c">&gt; Referenced SOP Instance UID</para>
+                        <para xml:id="para_95c1d7a4-100a-4edd-8188-6624e08d5a2c">&gt;Referenced SOP Instance UID</para>
                       </td>
                       <td align="center" colspan="1" rowspan="1">
                         <para xml:id="para_67a68951-5fa7-4a66-b53e-0c559853026e">(0008,1155)</para>
@@ -23524,7 +23558,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_24836178-4f27-4095-a234-d2164d0ee313">&gt; <emphasis role="italic">All Attributes of the Substance Administration Parameter Sequence</emphasis>
+                  <para xml:id="para_24836178-4f27-4095-a234-d2164d0ee313">&gt;<emphasis role="italic">All Attributes of the Substance Administration Parameter Sequence</emphasis>
                   </para>
                 </td>
                 <td align="left" colspan="1" rowspan="1"/>
@@ -26462,7 +26496,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_e31d6643-2058-4d22-9718-7bd5f55a27ac">&gt;&gt; Code Value</para>
+                  <para xml:id="para_e31d6643-2058-4d22-9718-7bd5f55a27ac">&gt;&gt;Code Value</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_34a7b1d0-1979-4584-9da2-afaf7f58c8ee">(0008,0100)</para>
@@ -26479,7 +26513,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_ae66fee0-0cf7-414f-ab24-7ee2b0d8e693">&gt;&gt; Coding Scheme Designator</para>
+                  <para xml:id="para_ae66fee0-0cf7-414f-ab24-7ee2b0d8e693">&gt;&gt;Coding Scheme Designator</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_929e01ca-dd28-4244-98b7-476d73b515f0">(0008,0102)</para>
@@ -26543,7 +26577,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_4d525a73-7723-4f15-9181-260ac8e70ca3">&gt; Procedure Code Sequence</para>
+                  <para xml:id="para_4d525a73-7723-4f15-9181-260ac8e70ca3">&gt;Procedure Code Sequence</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_3315d25d-f02b-4914-8969-729b19eb12e9">(0008,1032)</para>
@@ -26560,7 +26594,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_c4b26324-5eef-4588-b699-2d78fc59f9df">&gt;&gt; Code Value</para>
+                  <para xml:id="para_c4b26324-5eef-4588-b699-2d78fc59f9df">&gt;&gt;Code Value</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_b8957289-11ff-4d92-a3a8-855d7139490e">(0008,0100)</para>
@@ -26577,7 +26611,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_d948aef4-5168-4a4a-a143-c33480c29dc0">&gt;&gt; Coding Scheme Designator</para>
+                  <para xml:id="para_d948aef4-5168-4a4a-a143-c33480c29dc0">&gt;&gt;Coding Scheme Designator</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_2cf9b579-e4f4-4b4b-b772-04f1c20056e2">(0008,0102)</para>
@@ -26641,7 +26675,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_e4b98cf6-658e-4c97-9dd5-730d744e940d">&gt;&gt; Code Value</para>
+                  <para xml:id="para_e4b98cf6-658e-4c97-9dd5-730d744e940d">&gt;&gt;Code Value</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_3e4a26d4-1efa-4947-8572-b94572e2cd5a">(0008,0100)</para>
@@ -26658,7 +26692,7 @@
               </tr>
               <tr valign="top">
                 <td align="left" colspan="1" rowspan="1">
-                  <para xml:id="para_298da3f4-70fa-426c-971c-6ecac1f5e81a">&gt;&gt; Coding Scheme Designator</para>
+                  <para xml:id="para_298da3f4-70fa-426c-971c-6ecac1f5e81a">&gt;&gt;Coding Scheme Designator</para>
                 </td>
                 <td align="center" colspan="1" rowspan="1">
                   <para xml:id="para_f2a3da29-d032-49e9-9ff1-c7df0302710b">(0008,0102)</para>
@@ -32376,9 +32410,10 @@
       <para xml:id="para_9266e62f-4d50-4d3d-b091-9be4ffdbe186">A worklist is a list of Unified Procedure Step (UPS) instances. Each UPS instance unifies the worklist details for a single requested procedure step together with the result details of the corresponding performed procedure step. There is a one to one relationship between the procedure step request and the procedure step performed.</para>
       <para xml:id="para_43a11843-aec7-45e8-bdfb-013b2f23914a">Unified Procedure Step instances may be used to represent a variety of scheduled tasks such as: Image Processing, Quality Control, Computer Aided Detection, Interpretation, Transcription, Report Verification, or Printing.</para>
       <para xml:id="para_db301bc2-26fe-4a22-8a43-6b7dbd76b44b">The UPS instance can contain details of the requested task such as when it is scheduled to be performed or Workitem Codes describing the requested actions. The UPS may also contain details of the input information the performer needs to do the task and the output the performer produced, such as: Current Images, Prior Images, Reports, Films, Presentation States, or Audio recordings.</para>
-      <para xml:id="para_e622beb3-50af-453e-bc3f-d90161f2eb68">The Unified Worklist and Procedure Step Service Class includes four SOP Classes associated with UPS instances. The SOP Class UID for any UPS Instance always specifies the UPS Push SOP Class. The separate SOP Classes facilitate better negotiation and logical implementation groups of functionality.</para>
+      <para xml:id="para_e622beb3-50af-453e-bc3f-d90161f2eb68">The Unified Worklist and Procedure Step Service Class includes five SOP Classes associated with UPS instances. The SOP Class UID for any UPS Instance always specifies the UPS Push SOP Class. The separate SOP Classes facilitate better negotiation and logical implementation groups of functionalities.</para>
       <para xml:id="para_9977ef57-e8e7-40b5-8eec-41337ab3453a">The UPS Push SOP Class allows an SCU to instruct the SCP to create a new UPS instance, effectively letting a system push a new work item onto the SCP's worklist. It is important to note that the SCP could be a Worklist Manager that maintains the worklist for other systems that will perform the work, or the SCP could be a performing system itself that manages an internal worklist.</para>
       <para xml:id="para_5f04813b-0d4a-4c82-beb2-6857fcc1cd07">The UPS Pull SOP Class allows an SCU to query a Worklist Manager (the SCP) for matching UPS instances, and instruct the SCP to update the status and contents of selected items (UPS instances). The SCU effectively pulls work instructions from the worklist. As work progresses, the SCU records details of the activities performed and the results created in the UPS instance.</para>
+      <para xml:id="para_3f8e886c-2ca8-44fe-9081-4d4dbaf67fe5">The UPS Query SOP Class allows an SCU to query a Worklist Manager (the SCP), but does not otherwise interact with the UPS instances</para>
       <para xml:id="para_f5c1d13f-5698-47ed-9e82-40a52c368d3a">The UPS Watch SOP Class allows an SCU to subscribe for status update events and retrieve the details of work items (UPS instances) managed by the SCP.</para>
       <para xml:id="para_2975d128-f773-494d-8ec6-473c3783b496">The UPS Event SOP Class allows an SCP to provide the actual status update events for work items it manages to relevant (i.e., subscribed) SCUs.</para>
       <para xml:id="para_ad4b3a4f-873d-4eb6-ab13-a2126c9f1b00">Each of these services has an equivalent HTTP operation defined by the UPS-RS Worklist Service (see <olink targetdoc="PS3.18" targetptr="chapter_11" xrefstyle="template:Section %n “%t” in PS3.18"/>).</para>
@@ -32779,7 +32814,7 @@
     </section>
     <section label="CC.2" status="2" xml:id="sect_CC.2">
       <title>DIMSE Service Groups</title>
-      <para xml:id="para_ddf44980-e04e-4cc2-9a9d-7478269569a9">The DIMSE Services shown in <xref linkend="table_CC.2-1" xrefstyle="select: label"/>, <xref linkend="table_CC.2-2" xrefstyle="select: label"/>, <xref linkend="table_CC.2-3" xrefstyle="select: label"/> and <xref linkend="table_CC.2-4" xrefstyle="select: label"/> are applicable to the Unified Procedure Step (UPS) IOD under the UPS Push, UPS Pull, UPS Watch and UPS Event SOP Classes respectively.</para>
+        <para xml:id="para_ddf44980-e04e-4cc2-9a9d-7478269569a9">The DIMSE Services shown in <xref linkend="table_CC.2-1" xrefstyle="select: label"/>, <xref linkend="table_CC.2-2" xrefstyle="select: label"/>, <xref linkend="table_CC.2-3" xrefstyle="select: label"/>, <xref linkend="table_CC.2-4" xrefstyle="select: label"/> and <xref linkend="table_CC.2-5" xrefstyle="select: label"/> are applicable to the Unified Procedure Step (UPS) IOD under the UPS Push, UPS Pull, UPS Watch, UPS Event and UPS Query SOP Classes respectively.</para>
       <table frame="box" label="CC.2-1" rules="all" xml:id="table_CC.2-1">
         <caption>DIMSE Service Group Applicable to UPS Push</caption>
         <thead>
@@ -32952,6 +32987,33 @@
           </tr>
         </tbody>
       </table>
+        <table frame="box" label="CC.2-5" rules="all" xml:id="table_CC.2-5">
+            <caption>DIMSE Service Group Applicable to UPS Query</caption>
+            <thead>
+                <tr valign="top">
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_42757f52-05c1-4b05-b189-384d39f9b9b9">
+                            <emphasis role="bold">DICOM Message Service Element</emphasis>
+                        </para>
+                    </th>
+                    <th align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_c790550a-40a8-4f09-b6ce-39799d6112db">
+                            <emphasis role="bold">Usage SCU/SCP</emphasis>
+                        </para>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top">
+                    <td align="left" colspan="1" rowspan="1">
+                        <para xml:id="para_e9834ed7-440c-4a41-b63e-df0b0e275187">C-FIND</para>
+                    </td>
+                    <td align="center" colspan="1" rowspan="1">
+                        <para xml:id="para_1a07c842-f279-4a72-8f5f-4421e6b61e0d">M/M</para>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
       <section label="CC.2.1" status="3" xml:id="sect_CC.2.1">
         <title>Change UPS State (N-ACTION)</title>
         <para xml:id="para_d1cb21a6-c729-4e0c-a8f4-987ea046e6fa">This operation allows an SCU to ask the SCP to change the state of a Unified Procedure Step (UPS) instance. This operation shall be invoked by the SCU through the DIMSE N-ACTION Service.</para>
@@ -38352,16 +38414,16 @@
                     <para xml:id="para_28a93d45-2f03-4285-a90c-774b44e8d8c8">-/3</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_58bf0b91-e2f5-4e69-a678-3f112c7f3077">-</para>
+                    <para xml:id="para_58bf0b91-e2f5-4e69-a678-3f112c7f3077">O</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_508d1f97-0b66-49a7-a257-0e3ea1f6d886">-</para>
+                    <para xml:id="para_508d1f97-0b66-49a7-a257-0e3ea1f6d886">3</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
                 <tr valign="top">
                   <td align="left" colspan="1" rowspan="1">
-                    <para xml:id="para_fc020fb4-613a-4454-a3aa-f196f0752a58">&gt; Reason for Requested Procedure Code Sequence</para>
+                    <para xml:id="para_fc020fb4-613a-4454-a3aa-f196f0752a58">&gt;Reason for Requested Procedure Code Sequence</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
                     <para xml:id="para_445da882-99e2-4527-b40d-096ed3014e69">(0040,100A)</para>
@@ -38379,10 +38441,10 @@
                     <para xml:id="para_792e3027-b423-4074-93e1-d2966f152543">-/3</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_395d7478-6703-4e3b-bafe-d50047ff984c">-</para>
+                    <para xml:id="para_395d7478-6703-4e3b-bafe-d50047ff984c">O</para>
                   </td>
                   <td align="center" colspan="1" rowspan="1">
-                    <para xml:id="para_31642047-fb5b-4738-acc9-da08f46c8e1b">-</para>
+                    <para xml:id="para_31642047-fb5b-4738-acc9-da08f46c8e1b">3</para>
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
@@ -38742,7 +38804,42 @@
                       </td>
                       <td align="left" colspan="1" rowspan="1"/>
                   </tr>
-                <tr valign="top">
+                  <tr valign="top">
+                      <td align="left" colspan="9" rowspan="1">
+                          <para xml:id="para_aceb805e-ccdf-4a55-a9d4-6d5eb31dece0">
+                              <emphasis role="bold">Patient Demographic Module</emphasis>
+                          </para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_69a8fa9d-1643-4276-857e-99cdd53bf701">
+                              <emphasis role="italic">All Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.2.3" xrefstyle="select: title"/>
+                              </emphasis>
+                          </para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f34fcd1e-5dce-4dd5-9439-1c8adbb4b690">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_744c06b9-e0d3-402e-b280-4c497b3fb30e">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_64994fcb-02e9-4a3b-acbe-e351e5ad7348">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_8303bcf2-8a1c-4d4b-aa8c-3aa4ed694d29">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_308e7970-ae05-4d10-9f90-563b079564ea">-</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_fa474fe0-aea2-4d29-8f27-8ff2f7002090">-</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
+                  <tr valign="top">
                   <td align="left" colspan="9" rowspan="1">
                     <para xml:id="para_44465d10-79a0-428e-b9cf-2514f683c42e">
                       <emphasis role="bold">Patient Medical Module</emphasis>
@@ -38864,7 +38961,112 @@
                   </td>
                   <td align="left" colspan="1" rowspan="1"/>
                 </tr>
-                <tr valign="top">
+                  <tr valign="top">
+                      <td align="left" colspan="9" rowspan="1">
+                          <para xml:id="para_ee26d4ac-87a5-4ee7-a549-8473edf93852">
+                              <emphasis role="bold">Visit Identification Module</emphasis>
+                          </para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_59259a4e-70d9-45a4-b53d-df4fd353beaf">
+                              <emphasis role="italic">All Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.3.2" xrefstyle="select: title"/>
+                              </emphasis>
+                          </para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_2eeda56b-cf32-4699-be44-90dc176bd081">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f83798c4-7fac-45a7-be92-071416e768a8">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_6a4508c8-98ed-42db-a492-869b3b3f2e34">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_f43cb491-338d-423f-bbbe-d7ad750ffe4f">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_fd63368b-7c9d-4b83-8ab6-1d29235982e8">-</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_95089b08-7d4b-435a-8666-8f942cec9988">-</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="9" rowspan="1">
+                          <para xml:id="para_ede9d20b-8f75-4aed-81bf-9d74413fb547">
+                              <emphasis role="bold">Visit Status Module</emphasis>
+                          </para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_5ecb6d9e-1866-4efa-984e-fe54da33a198">
+                              <emphasis role="italic">All Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.3.3" xrefstyle="select: title"/>
+                              </emphasis>
+                          </para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_8fc47b46-469f-46a3-a171-5d123fed8c56">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_2fcb50a4-a31e-4a84-82ce-055ca5e0628c">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_9265ebac-5968-44dc-8dba-72de63fdf12b">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_685f9234-1f64-4c3b-99af-521666c3cb6b">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_0e6ca209-b8bf-424d-bf58-7cc8eb1a0e96">-</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_587bc5f8-4c72-4d5a-b8d7-e0db4192cb44">-</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="9" rowspan="1">
+                          <para xml:id="para_c4fbe5f8-26b5-4237-a6d5-e11cf52cedc3">
+                              <emphasis role="bold">Visit Admission Module</emphasis>
+                          </para>
+                      </td>
+                  </tr>
+                  <tr valign="top">
+                      <td align="left" colspan="1" rowspan="1">
+                          <para xml:id="para_316c2e73-75fc-4f52-abed-45ecb4fddaec">
+                              <emphasis role="italic">All Attributes of the <olink targetdoc="PS3.3" targetptr="sect_C.3.4" xrefstyle="select: title"/>
+                              </emphasis>
+                          </para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_d4900a79-fc9a-42fd-b571-8830fe045321">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_b668975b-4aa6-44ad-8a2a-0efdeb52394c">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_7be2b0bb-776b-4ea0-b677-1acc65d613c2">O</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_7530c7b4-a04d-41da-8572-af9aa754650b">3/3</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_6b3cd603-5bad-4018-b46d-9bceb5cc51e0">-</para>
+                      </td>
+                      <td align="center" colspan="1" rowspan="1">
+                          <para xml:id="para_b6527a5d-44fc-4141-a27e-1aad445e6ab3">-</para>
+                      </td>
+                      <td align="left" colspan="1" rowspan="1"/>
+                  </tr>
+                  <tr valign="top">
                   <td align="left" colspan="9" rowspan="1">
                     <para xml:id="para_2e260a12-5c8d-4c98-b962-907784d4f059">
                       <emphasis role="bold">Unified Procedure Step Progress Information Module</emphasis>
@@ -40041,8 +40243,8 @@
             <title>C-FIND Service Parameters</title>
             <section label="CC.2.8.1.2.1" status="6" xml:id="sect_CC.2.8.1.2.1">
               <title>SOP Class UID</title>
-              <para xml:id="para_6c7136e1-5ffa-4ca9-8fab-78a8cc22f75c">The Affected SOP Class UID of the C-FIND DIMSE request shall always be the UPS SOP Class negotiated for the Presentation Context under which the service is requested. This will always be either the UPS Pull SOP Class or the UPS Watch SOP Class. See <xref linkend="sect_CC.3.1" xrefstyle="select: label"/> for further details.</para>
-              <para xml:id="para_8faf7bc5-ded5-44a1-b86b-4b41997b032d">For both the UPS Pull SOP Class and the UPS Watch SOP Class, the C-FIND is performed against the Unified Procedure Step Information Model shown in <xref linkend="figure_CC.2.8-1" xrefstyle="select: label"/>.</para>
+                <para xml:id="para_6c7136e1-5ffa-4ca9-8fab-78a8cc22f75c">The Affected SOP Class UID of the C-FIND DIMSE request shall always be the UPS SOP Class negotiated for the Presentation Context under which the service is requested. This will always be the UPS Pull SOP Class, the UPS Watch SOP Class, or the UPS Query SOP Class. See <xref linkend="sect_CC.3.1" xrefstyle="select: label"/> for further details.</para>
+              <para xml:id="para_8faf7bc5-ded5-44a1-b86b-4b41997b032d">The C-FIND is performed against the Unified Procedure Step Information Model shown in <xref linkend="figure_CC.2.8-1" xrefstyle="select: label"/>.</para>
             </section>
             <section label="CC.2.8.1.2.2" status="6" xml:id="sect_CC.2.8.1.2.2">
               <title>Priority</title>
@@ -40118,7 +40320,7 @@
         </section>
         <section label="CC.2.8.3" status="4" xml:id="sect_CC.2.8.3">
           <title>Service Class Provider Behavior</title>
-          <para xml:id="para_a1f8e2ed-a9c4-42b4-b58f-6aec54e56ff3">All C-FIND SCPs shall be capable of processing queries that meet the requirements of the "Worklist" Search (see <xref linkend="sect_CC.2.8.3.1" xrefstyle="select: label"/>). This does not imply that an SCP that supports the UPS Watch SOP Class must also be an SCP of the UPS Pull SOP Class.</para>
+            <para xml:id="para_a1f8e2ed-a9c4-42b4-b58f-6aec54e56ff3">All C-FIND SCPs shall be capable of processing queries that meet the requirements of the "Worklist" Search (see <xref linkend="sect_CC.2.8.3.1" xrefstyle="select: label"/>). This does not imply that an SCP that supports the UPS Watch SOP Class or the UPS Query SOP Class must also be an SCP of the UPS Pull SOP Class.</para>
           <para xml:id="para_59dc5e5b-f1c7-419c-90f9-a265a600d679">The SCP shall support Attribute matching as described in <xref linkend="sect_C.2.2.2" xrefstyle="select: label"/>.</para>
           <para xml:id="para_f2e6f58b-df02-4c62-ae6c-b02cea82d47f">An SCP conveys the following semantics using the C-FIND requests and responses:</para>
           <itemizedlist>
@@ -40321,7 +40523,7 @@
     </section>
     <section label="CC.3" status="2" xml:id="sect_CC.3">
       <title>UPS SOP Classes</title>
-      <para xml:id="para_0cd129b6-2423-42ee-8375-228740df4d8e">There are four UPS SOP Classes associated with the Unified Procedure Step IOD. Each SOP Class supports different interactions with a UPS Instance (also referred to as a worklist item).</para>
+      <para xml:id="para_0cd129b6-2423-42ee-8375-228740df4d8e">There are five UPS SOP Classes associated with the Unified Procedure Step IOD. Each SOP Class supports different interactions with a UPS Instance (also referred to as a worklist item).</para>
       <para xml:id="para_0ab50540-ccdb-495a-b34a-848b4488653b">The UPS Push SOP Class allows SCU systems to:</para>
       <itemizedlist>
         <listitem>
@@ -40370,7 +40572,13 @@
           <para xml:id="para_b4702f29-9725-4473-a141-b139a1beb2fa">receive event notifications of changes to a worklist item</para>
         </listitem>
       </itemizedlist>
-      <para xml:id="para_16e42973-03e4-4125-a14e-bf0104e7f3bb">The DICOM AEs that claim conformance to one or more of these SOP Classes shall support all services listed as "M" in the corresponding <xref linkend="table_CC.2-1" xrefstyle="select: label"/>, <xref linkend="table_CC.2-2" xrefstyle="select: label"/>, <xref linkend="table_CC.2-3" xrefstyle="select: label"/> and <xref linkend="table_CC.2-4" xrefstyle="select: label"/>.</para>
+        <para xml:id="para_875e53e7-c84d-4d1b-8941-dfdc45ff802a">The UPS Query SOP Class allows SCU systems to:</para>
+        <itemizedlist>
+            <listitem>
+                <para xml:id="para_46fd53e3-cc43-4c3d-a863-39c63a219890">query a worklist for matching items</para>
+            </listitem>
+        </itemizedlist>
+        <para xml:id="para_16e42973-03e4-4125-a14e-bf0104e7f3bb">The DICOM AEs that claim conformance to one or more of these SOP Classes shall support all services listed as "M" in the corresponding <xref linkend="table_CC.2-1" xrefstyle="select: label"/>, <xref linkend="table_CC.2-2" xrefstyle="select: label"/>, <xref linkend="table_CC.2-3" xrefstyle="select: label"/>, <xref linkend="table_CC.2-4" xrefstyle="select: label"/> and <xref linkend="table_CC.2-5" xrefstyle="select: label"/>.</para>
       <section label="CC.3.1" status="3" xml:id="sect_CC.3.1">
         <title>Service Class and SOP Class UIDs</title>
         <para xml:id="para_1d6d0ccd-7a8b-4647-a60b-dfe40383bff8">All UPS Instances shall be created with the value of SOP Class UID set to "1.2.840.10008.5.1.4.34.6.1" (i.e., that of the UPS Push SOP Class).</para>
@@ -40392,12 +40600,15 @@
           <listitem>
             <para xml:id="para_0519706e-cce4-4b34-8ef6-32f914e3eca0">1.2.840.10008.5.1.4.34.6.4 (UPS Event SOP Class)</para>
           </listitem>
+            <listitem>
+                <para xml:id="para_e5f98b0d-9a1d-412e-bcfb-59633cba4b75">1.2.840.10008.5.1.4.34.6.5 (UPS Query SOP Class)</para>
+            </listitem>
         </itemizedlist>
         <section label="CC.3.1.1" status="4" xml:id="sect_CC.3.1.1">
           <title>DIMSE Implications for UPS (Informative)</title>
             <para xml:id="para_9c11daaf-82f4-4adb-aaa8-a0729b3df621">A SOP Instance may be created with one SOP Class UID (UPS Push) and later DIMSE Services may refer to it over an association negotiated for a different SOP Class UID. Further details on this can be found in <olink targetdoc="PS3.7" targetptr="chapter_10" xrefstyle="template:Section %n “%t” in PS3.7"/>.</para>
-          <para xml:id="para_ca899ee5-c938-485a-9a08-390071611b16">For DIMSE-N Services, the Affected SOP Class UID (0000,0002) or Requested SOP Class UID (0000,0003), when present, will be the UID of the UPS Push SOP Class regardless of the negotiated Abstract Syntax UID. The SCU and SCP will not reject DIMSE-N messages on the basis of the Affected/Requested SOP Class UID being that of the UPS Push SOP Class, rather than one of the other three SOP Class UIDs as listed in the Abstract Syntax UID during association negotiation. The SCU and SCP may reject the DIMSE-N messages if the instance is not a UPS Push SOP Class Instance.</para>
-          <para xml:id="para_b0959e8b-0324-4900-822a-765517981ac3">For DIMSE-C Services (C-FIND), the Affected SOP Class UID will always match the negotiated Abstract Syntax UID for the Presentation Context under which the request is made. This will be either UPS Watch or UPS Pull. Both of these SOP Classes represent the UPS Information Model described in <xref linkend="sect_CC.2.8.1" xrefstyle="select: label"/>.</para>
+          <para xml:id="para_ca899ee5-c938-485a-9a08-390071611b16">For DIMSE-N Services, the Affected SOP Class UID (0000,0002) or Requested SOP Class UID (0000,0003), when present, will be the UID of the UPS Push SOP Class regardless of the negotiated Abstract Syntax UID. The SCU and SCP will not reject DIMSE-N messages on the basis of the Affected/Requested SOP Class UID being that of the UPS Push SOP Class, rather than one of the other four SOP Class UIDs as listed in the Abstract Syntax UID during association negotiation. The SCU and SCP may reject the DIMSE-N messages if the instance is not a UPS Push SOP Class Instance.</para>
+          <para xml:id="para_b0959e8b-0324-4900-822a-765517981ac3">For DIMSE-C Services (C-FIND), the Affected SOP Class UID will always match the negotiated Abstract Syntax UID for the Presentation Context under which the request is made. This will be UPS Watch, UPS Pull or UPS Query. All of these SOP Classes represent the UPS Information Model described in <xref linkend="sect_CC.2.8.1" xrefstyle="select: label"/>.</para>
           <para xml:id="para_05b9e8ca-8614-4fd8-bf63-e8996bf011c7">For example, in a typical "Pull Workflow" message exchange, the C-FIND query from a "performing SCU" would use the UPS Pull SOP Class UID for both the negotiated Abstract Syntax UID and the Affected SOP Class UID (0000,0002), however the SOP Class UID (0008,0016) of the C-FIND responses themselves will be set to the UPS Push SOP Class UID by the SCP. All the subsequent N-ACTION, N-SET, and N-GET messages, would then use the UPS Pull SOP Class UID for the negotiated Abstract Syntax UID, and the UPS Push SOP Class UID for the Affected SOP Class UID (0000,0002).</para>
         </section>
         <section label="CC.3.1.2" status="4" xml:id="sect_CC.3.1.2">
@@ -40413,7 +40624,7 @@
     </section>
     <section label="CC.4" status="2" xml:id="sect_CC.4">
       <title>Conformance Requirements</title>
-      <para xml:id="para_d005f2cd-e2e7-4e0d-9a72-f5b74c680007">Implementations providing conformance to any of the UPS SOP Classes (UPS Pull, UPS Push, UPS Watch and UPS Event) shall be conformant as described in the following sections and shall include within their Conformance Statement information as described below.</para>
+        <para xml:id="para_d005f2cd-e2e7-4e0d-9a72-f5b74c680007">Implementations providing conformance to any of the UPS SOP Classes (UPS Pull, UPS Push, UPS Watch, UPS Event and UPS Query) shall be conformant as described in the following sections and shall include within their Conformance Statement information as described below.</para>
       <para xml:id="para_2563023d-4e21-4687-9100-f70845c05e97">An implementation may conform to any of the UPS SOP Classes as an SCU or as an SCP. The Conformance Statement shall be in the format defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n “%t” in PS3.2"/>.</para>
       <section label="CC.4.1" status="3" xml:id="sect_CC.4.1">
         <title>SCU Conformance</title>
@@ -40422,7 +40633,7 @@
           <title>Operations</title>
           <para xml:id="para_271b69f1-7640-4d13-8d37-7159144b3a54">The SCU Conformance Statement shall be formatted as defined in <olink targetdoc="PS3.2" targetptr="chapter_A" xrefstyle="template:Annex %n “%t” in PS3.2"/>.</para>
           <para xml:id="para_4a704754-f1d2-4298-ac5d-ff8ed02b6cb6">An implementation, that conforms to any of the UPS Push, UPS Pull or UPS Watch SOP Classes as an SCU, shall specify under which conditions it will request the modification of the value of the Procedure Step State (0074,1000) Attribute to "IN PROGRESS", "COMPLETED", and "CANCELED".</para>
-          <para xml:id="para_883ecf85-027d-4279-869e-d8f7658d3133">An implementation that conforms to the UPS Pull or UPS Watch SOP Classes as an SCU shall state in its Conformance Statement</para>
+          <para xml:id="para_883ecf85-027d-4279-869e-d8f7658d3133">An implementation that conforms to the UPS Pull, UPS Watch or UPS Query SOP Classes as an SCU shall state in its Conformance Statement</para>
           <itemizedlist>
             <listitem>
               <para xml:id="para_f5abd854-4b8a-4b12-a595-9f70937062da">Whether it requests matching on Optional Matching Key Attributes for C-FIND.</para>
@@ -45242,7 +45453,7 @@
                   </tr>
                   <tr valign="top">
                     <td align="left" colspan="1" rowspan="1">
-                      <para xml:id="para_e1e455b8-a5b4-4ac3-8258-2e414191a3f5">&gt;&gt; Configuration QA Results Sequence</para>
+                      <para xml:id="para_e1e455b8-a5b4-4ac3-8258-2e414191a3f5">&gt;&gt;Configuration QA Results Sequence</para>
                     </td>
                     <td align="center" colspan="1" rowspan="1">
                       <para xml:id="para_1c44f63b-5aac-494d-90e1-ecbbea3094dc">(0028,7011)</para>

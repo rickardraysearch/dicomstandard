@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2019d - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2019e - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1705,7 +1705,7 @@
       <title>Value Representation (VR)</title>
       <para xml:id="para_3f79e255-1c8e-48b1-811f-97aa468ea546">The Value Representation of a Data Element describes the data type and format of that Data Element's Value(s). <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/> lists the VR of each Data Element by Data Element Tag.</para>
       <para xml:id="para_5365717b-21d7-4c05-853c-9ab38004b2bb">Values with VRs constructed of character strings, except in the case of the VR UI, shall be padded with SPACE characters (20H, in the Default Character Repertoire) when necessary to achieve even length. Values with a VR of UI shall be padded with a single trailing NULL (00H) character when necessary to achieve even length. Values with a VR of OB shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</para>
-      <para xml:id="para_32d49290-4ed4-45ef-bced-0524398a84c1">All new VRs defined in future versions of DICOM shall be of the same Data Element Structure as defined in <xref linkend="sect_7.1.2" xrefstyle="select: label"/> (i.e., following the format for VRs such as OB, OD, OF, OL, OV, OW, SQ and UN).</para>
+        <para xml:id="para_32d49290-4ed4-45ef-bced-0524398a84c1">All new VRs defined in future versions of DICOM shall be of the same Data Element Structure as defined in <xref linkend="sect_7.1.2" xrefstyle="select: label"/> with reserved bytes after the VR and a 32-bit unsigned integer VL (i.e., following the format for VRs such as OB or UT), and may or may not permit undefined length.</para>
       <note>
         <orderedlist>
           <listitem>
@@ -2676,21 +2676,27 @@
         <title>Data Element Structure with Explicit VR</title>
         <para xml:id="para_fdb2bf98-c448-4d0b-bea4-d41171c8b883">When using the Explicit VR structures, the Data Element shall be constructed of four consecutive fields: Data Element Tag, VR, Value Length, and Value. Depending on the VR of the Data Element, the Data Element will be structured in one of two ways:</para>
         <itemizedlist>
-          <listitem>
-            <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for VRs of OB, OD, OF, OL, OV, OW, SQ and UN the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer. If the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field. Otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
-          </listitem>
-          <listitem>
-            <para xml:id="para_e70550e8-0a4e-40f4-b64b-f82cdf5b1aa8">for VRs of SV, UC, UR, UV and UT the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded. The Value Length Field is a 32-bit unsigned integer. The Value Field is required to have an Explicit Length, that is the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
-            <note>
-              <para xml:id="para_f27d1af5-7ecf-4e2a-9ce6-e2edd366e258">VRs of UC, UR and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
-            </note>
-          </listitem>
-          <listitem>
-            <para xml:id="para_1dadedad-a61e-4cf1-bafd-ab5efe1d2a85">for all other VRs the Value Length Field is the 16-bit unsigned integer following the two byte VR Field (<xref linkend="table_7.1-2" xrefstyle="select: label"/>). The value of the Value Length Field shall equal the length of the Value Field.</para>
-          </listitem>
+            <listitem>
+                <para xml:id="para_1dadedad-a61e-4cf1-bafd-ab5efe1d2a85">for VRs of AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT, PN, SH, SL, SS, ST, TM, UI, UL and US the Value Length Field is the 16-bit unsigned integer following the two byte VR Field (<xref linkend="table_7.1-2" xrefstyle="select: label"/>). The value of the Value Length Field shall equal the length of the Value Field.</para>
+            </listitem>
+            <listitem>
+                <para xml:id="para_5feaf34b-29ce-486d-98f9-5fe7ef4ec0ee">for all other VRs the 16 bits following the two byte VR Field are reserved for use by later versions of the DICOM Standard. These reserved bytes shall be set to 0000H and shall not be used or decoded (<xref linkend="table_7.1-1" xrefstyle="select: label"/>). The Value Length Field is a 32-bit unsigned integer.</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_142f8ee1-71eb-4c64-bd86-d45dc957e233">for VRs of OB, OD, OF, OL, OV, OW, SQ and UN, if the Value Field has an Explicit Length, then the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field, otherwise, the Value Field has an Undefined Length and a Sequence Delimitation Item marks the end of the Value Field.</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_3e043b97-0758-428e-86b4-0af722008d1f">for all other VRs with a 32-bit Value Length Field, the Value Length Field shall contain a value equal to the length (in bytes) of the Value Field.</para>
+                    </listitem>
+                </itemizedlist>
+                <note>
+                    <para xml:id="para_f27d1af5-7ecf-4e2a-9ce6-e2edd366e258">VRs of SV, UC, UR, UV and UT may not have an Undefined Length, i.e.,a Value Length of FFFFFFFFH.</para>
+                </note>
+            </listitem>
         </itemizedlist>
-        <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
-          <caption>Data Element with Explicit VR of OB, OD, OF, OL, OV, OW, SQ, SV, UC, UR, UT, UN or UV</caption>
+          <table frame="box" label="7.1-1" rules="all" xml:id="table_7.1-1">
+              <caption>Data Element with Explicit VR other than as shown in <xref linkend="table_7.1-2" xrefstyle="select: label"/>
+</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -2727,7 +2733,7 @@
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_5e67423f-26ad-4664-888a-d5a4cf4c53d9">VR</para>
-                  <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 single byte characters) of "OB", "OD", "OF", "OL", "OV", "OW", "SQ", "SV", "UC", "UR", "UT", "UN" or "UV"</para>
+                  <para xml:id="para_cdf30654-9bf2-4383-ac19-8bda04ba1eeb">(2 single byte characters)</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_354dbd6a-0245-4914-97b9-2225646113ce">Reserved (2 bytes) set to a value of 0000H</para>
@@ -2762,8 +2768,7 @@
           </tbody>
         </table>
         <table frame="box" label="7.1-2" rules="all" xml:id="table_7.1-2">
-          <caption>Data Element with Explicit VR other than as shown in <xref linkend="table_7.1-1" xrefstyle="select: label"/>
-</caption>
+            <caption>Data Element with Explicit VR of AE, AS, AT, CS, DA, DS, DT, FL, FD, IS, LO, LT, PN, SH, SL, SS, ST, TM, UI, UL and US</caption>
           <thead>
             <tr valign="top">
               <th align="center" colspan="2" rowspan="1">
@@ -3581,7 +3586,7 @@
           <note>
               <para xml:id="para_23a52e85-e9ea-41b8-9cd5-5c6eeec077bc">The 32-bit Value Length Field limits the maximum size of large data values such as Pixel Data sent in a Native Format (encoded in Transfer Syntaxes that use only the unencapsulated form).</para>
           </note>
-          <para xml:id="para_3e55e85c-a189-418d-a160-3837b41c7240">In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field.</para>
+          <para xml:id="para_3e55e85c-a189-418d-a160-3837b41c7240">In a multi-frame object that is transmitted in Native Format, the individual frames are not padded. The individual frames shall be concatenated and padding bits (if necessary) apply to the complete Value Field. At least one frame shall be present.</para>
         <note>
           <para xml:id="para_362cebd6-ea8c-4a91-a674-3cd2a3097ad2">Receiving applications should be aware that some older applications may send Pixel Data with excess padding, which was not explicitly prohibited in earlier versions of the Standard. Applications should be prepared to accept such Pixel Data elements, but may delete the excess padding. In no case should a sending application place private data in the padding data.</para>
         </note>
@@ -3688,7 +3693,7 @@
           </listitem>
         </orderedlist>
       </note>
-      <para xml:id="para_6287384f-06a5-47f6-ab74-625074661b31">If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>).</para>
+        <para xml:id="para_6287384f-06a5-47f6-ab74-625074661b31">If sent in an Encapsulated Format (i.e., other than the Native Format) the Value Representation OB is used. The Pixel Cells are encoded according to the encoding process defined by one of the negotiated Transfer Syntaxes (see <xref linkend="chapter_A" xrefstyle="template:Annex %n"/>). The encapsulated pixel stream of encoded pixel data is segmented into one or more Fragments, each of which conveys its own explicit length. The sequence of Fragments of the encapsulated pixel stream is terminated by a delimiter, thus allowing the support of encoding processes where the resulting length of the entire pixel stream is not known until it is entirely encoded. This Encapsulated Format supports both Single-Frame and Multi-Frame images (as defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>). At least one frame shall be present, and hence at least one fragment will be present.</para>
       <note>
         <para xml:id="para_b50189ee-a299-4737-bea1-c0510c91ffe1">Depending on the Transfer Syntax, a frame may be entirely contained within a single fragment, or may span multiple fragments to support buffering during compression or to avoid exceeding the maximum size of a fixed length fragment. A recipient can detect fragmentation of frames by comparing the number of fragments (the number of Items minus one for the Basic Offset Table) with the number of frames. Some performance optimizations may be available to a recipient in the absence of fragmentation of frames, but an implementation that fails to support such fragmentation does not conform to the Standard.</para>
       </note>
@@ -6448,6 +6453,7 @@
           In the case of lossy compressed Pixel Data, the sending AE is permitted to propose only the lossy compressed Transfer Syntax appropriate to the lossy form that was received.
           In the case of lossless compressed Pixel Data that is too large to encode in the default Transfer Syntax, the sending AE is permitted to propose any appropriate lossless compression Transfer Syntax, not necessarily that in which the image was received, as an alternative to the default Transfer Syntax.</para>
         <para xml:id="para_b0be2e91-ed38-41d7-b1db-92e9b8477086">This waiver does not apply to Data Sets received in a lossless compressed form if the decompressed Pixel Data is small enough to encode in the default Transfer Syntax, which means that any AE receiving a Data Set in a lossless compressed Transfer Syntax that needs to re-send the Data Set is required to be able to decompress it in order to support (at least) the default Transfer Syntax.</para>
+          <para xml:id="para_8f58345a-7eff-40fa-868a-48c000556f0e">Similar concerns apply to the Web Services transactions and are addressed by specific requirements in <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>.</para>
       </note>
     </section>
     <section label="10.2" status="2" xml:id="sect_10.2">

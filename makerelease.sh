@@ -106,9 +106,7 @@ zip "${releasefilebasename}_html_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/html/part14_fromword_files \
 	output/html/part16_fromword_files \
 	output/html/part17_fromword_files \
-	output/html/part18_fromword_files \
 	output/html/part20_fromword_files \
-	output/html/part21_fromword_files \
 	output/html/part22_fromword_files
 
 zip "${releasefilebasename}_chtml_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \

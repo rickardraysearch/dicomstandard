@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 542 332" enable-background="new 0 0 542 332" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.3 Part 3: Information Object Definitions
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F2EDD6" width="540" height="330"/>
+	<g>
+		<text transform="matrix(0.8999 0 0 1 333.5875 244.8875)" font-size="11px">Base Beam Modifier Definition Plane</text>
+		
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" x1="105.678" y1="241.888" x2="328.655" y2="241.888"/>
+		<g>
+			<text transform="matrix(0.8999 0 0 1 202.7329 293.7591)" font-size="11px">Positive</text>
+		</g>
+		<g>
+			<text transform="matrix(0.8999 0 0 1 248.8591 268.7591)" font-size="11px">Negative</text>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#005695" stroke-width="3" stroke-miterlimit="1" x1="243.953" y1="253.759" x2="293.028" y2="253.759"/>
+				<g>
+					<polygon fill="#005695" points="290.353,257.681 304.988,253.759 290.353,249.837 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#005695" stroke-width="3" stroke-miterlimit="1" x1="243.953" y1="278.759" x2="198.075" y2="278.759"/>
+				<g>
+					<polygon fill="#005695" points="200.75,274.837 186.115,278.759 200.75,282.681 					"/>
+				</g>
+			</g>
+		</g>
+		
+			<line fill="#808285" stroke="#939598" stroke-width="0.5" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="186.115" y1="179.784" x2="186.115" y2="293.759"/>
+		
+			<line fill="#808285" stroke="#939598" stroke-width="0.5" stroke-linecap="round" stroke-miterlimit="1" stroke-dasharray="4,4" x1="304.988" y1="140.565" x2="304.988" y2="268.759"/>
+		
+			<text transform="matrix(0.8999 -0.0019 0.0017 1 236.6235 29.4782)" fill="#00AEEF" font-size="14px">+Z</text>
+		<text transform="matrix(0.8999 0 0 1 295.7226 80.0396)" font-size="11px">Radiation Source</text>
+		<text transform="matrix(0.8999 0 0 1 165.3245 116.3498)" font-size="11px">Wedge</text>
+		<g>
+			<g>
+				<line fill="none" stroke="#000000" stroke-miterlimit="1" x1="292.472" y1="76.769" x2="254.636" y2="76.769"/>
+				<g>
+					<polygon points="255.825,75.025 249.321,76.769 255.825,78.512 					"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#00AEEF" stroke-width="2" stroke-linecap="round" x1="243.953" y1="314.964" x2="243.953" y2="45.66"/>
+				<g>
+					<polygon fill="#00AEEF" points="248.021,48.434 243.953,33.257 239.886,48.434 					"/>
+				</g>
+			</g>
+		</g>
+		<polygon opacity="0.55" fill-rule="evenodd" clip-rule="evenodd" fill="#B2CEE7" stroke="#000000" stroke-miterlimit="1" points="
+			201.105,140.565 304.24,140.565 201.105,116.371 		"/>
+		<text transform="matrix(0.8999 0 0 1 47.1999 155.5696)" font-size="11px">Wedge</text>
+		<polygon opacity="0.55" fill-rule="evenodd" clip-rule="evenodd" fill="#B2CEE7" stroke="#000000" stroke-miterlimit="1" points="
+			82.981,179.784 186.115,179.784 82.981,155.591 		"/>
+		<g>
+			<circle cx="244.043" cy="76.789" r="6"/>
+			<path fill="#FEDA00" d="M246.924,72.158c-2.491-1.478-5.805-0.611-7.393,1.943c-1.59,2.56-0.855,5.833,1.642,7.321
+				c2.489,1.478,5.803,0.608,7.382-1.956C250.143,76.906,249.416,73.641,246.924,72.158z"/>
+			<path d="M244.225,76.315c0.245,0.143,0.31,0.47,0.153,0.731c-0.16,0.258-0.491,0.343-0.74,0.197
+				c-0.237-0.138-0.312-0.468-0.147-0.729C243.65,76.257,243.978,76.17,244.225,76.315z"/>
+			<path d="M244.591,77.944c-0.419,0.243-0.937,0.268-1.368,0.008c-0.032-0.018-0.061-0.036-0.091-0.059l-1.763,2.838
+				c0.031,0.018,0.064,0.038,0.093,0.056c1.452,0.862,3.216,0.806,4.634,0.005L244.591,77.944z"/>
+			<path d="M245.281,76.834c0.027-0.473-0.195-0.944-0.625-1.197c-0.027-0.018-0.061-0.036-0.097-0.054l1.764-2.833
+				c0.033,0.015,0.064,0.033,0.096,0.054c1.451,0.867,2.213,2.421,2.137,4.022L245.281,76.834z"/>
+			<path d="M242.589,76.888c0.027-0.47,0.24-0.979,0.699-1.24c0.035-0.02,0.069-0.038,0.107-0.051l-1.45-2.805
+				c-0.037,0.015-0.072,0.036-0.106,0.056c-1.541,0.898-2.388,2.524-2.492,4.127L242.589,76.888z"/>
+		</g>
+	</g>
+</g>
+</svg>

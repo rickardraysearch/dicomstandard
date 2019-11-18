@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2019d - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2019e - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -395,7 +395,7 @@
             <glossentry xml:id="glossentry_InformationObjectInstance" xreflabel="Information Object Instance">
                 <glossterm>Information Object Instance</glossterm>
                 <glossdef>
-                    <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurrence of an real-world entity, which includes values for the Attributes of the Information Object Class to which the entity belongs.</para>
+                    <para xml:id="para_5018512a-d7e7-4d1e-85bb-d5a2d598c6be">A representation of an occurrence of a real-world entity, which includes values for the Attributes of the Information Object Class to which the entity belongs.</para>
                     <note>
                         <para xml:id="para_f46795a4-3588-4be5-8d4a-1e2e9bbed96e">This term is only used in PS3.1. It is an informal term corresponding to a formal term that is introduced in <olink targetdoc="PS3.4" targetptr="PS3.4" xrefstyle="select: labelnumber"/>. This formal term is known as a Service-Object Pair Instance or more commonly as a SOP Instance.</para>
                     </note>

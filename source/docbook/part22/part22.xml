@@ -2,7 +2,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.22" version="5.0" xml:id="PS3.22">
   
   <title>PS3.22</title>
-    <subtitle>DICOM PS3.22 2019d - Real-Time Communication</subtitle>
+    <subtitle>DICOM PS3.22 2019e - Real-Time Communication</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -263,8 +263,8 @@
                 <title>Real World diagram of DICOM-RTV</title>
                 <mediaobject>
                     <imageobject>
-                        <!--<imagedata fileref="figures/PS3.22_6-1.svg"/>-->
-                        <imagedata fileref="part22_fromword_files/image015_sup202.png" scalefit="1" width="100%"/>
+                        <imagedata fileref="figures/PS3.22_6-1.svg"/>
+                        <!--<imagedata fileref="part22_fromword_files/image015_sup202.png" scalefit="1" width="100%"/>-->
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -274,8 +274,8 @@
                 <title>Interaction Diagram</title>
                 <mediaobject>
                     <imageobject>
-                        <!--<imagedata fileref="figures/PS3.22_6-2.svg"/>-->
-                        <imagedata fileref="part22_fromword_files/image016_sup202.png" scalefit="1" width="100%"/>
+                        <imagedata fileref="figures/PS3.22_6-2.svg"/>
+                        <!--<imagedata fileref="part22_fromword_files/image016_sup202.png" scalefit="1" width="100%"/>-->
                     </imageobject>
                 </mediaobject>
             </figure>
@@ -378,8 +378,8 @@
             <title>DICOM Dataset Encapsulation Within RTP</title>
             <mediaobject>
                 <imageobject>
-                    <!--<imagedata fileref="figures/PS3.22_7-1.svg"/>-->
-                    <imagedata fileref="part22_fromword_files/image7-1SC_sup202.png" scalefit="1" width="100%"/>
+                    <imagedata fileref="figures/PS3.22_7-1.svg"/>
+                    <!--<imagedata fileref="part22_fromword_files/image7-1SC_sup202.png" scalefit="1" width="100%"/>-->
                 </imageobject>
             </mediaobject>
         </figure>

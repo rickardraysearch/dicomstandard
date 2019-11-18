@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 502 397" enable-background="new 0 0 502 397" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.3 Part 3: Information Object Definitions
+   </desc>
+</g>
+
+<g>
+	<rect x="1" y="1" fill="#F2EDD6" width="500" height="395"/>
+	<g>
+		
+			<rect x="93.359" y="16.232" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="263.332" height="364.536"/>
+		<rect x="94.522" y="18.796" fill="none" width="175.978" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 94.5225 24.5837)" font-size="8.1589px">Control Point Sequence</text>
+		
+			<rect x="109.284" y="28.705" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="247.407" height="163.415"/>
+		
+			<rect x="124.492" y="42.45" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="113.216" y="31.98" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 113.2163 37.7673)" font-size="8.1589px">Item 1</text>
+		<rect x="128.631" y="45.592" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 51.3798)" font-size="8.1589px">&gt;RT Control Point Index</text>
+		<rect x="363.657" y="45.861" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 51.7018)" font-size="8.1589px">= 1</text>
+		
+			<rect x="124.492" y="55.144" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="128.631" y="58.286" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 64.0739)" font-size="8.1589px">&gt;Cumulative Meterset</text>
+		<rect x="363.657" y="58.556" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 64.3959)" font-size="8.1589px">= 0</text>
+		
+			<rect x="124.492" y="67.838" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="124.281"/>
+		<rect x="128.631" y="71.262" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 77.0495)" font-size="8.1589px">RT BLD Settings Sequence</text>
+		
+			<rect x="139.602" y="82.26" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="217.089" height="54.696"/>
+		
+			<rect x="154.812" y="95.423" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		
+			<rect x="154.812" y="108.998" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="162.189" y="98.566" fill="none" width="108.83" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 162.189 104.3534)" font-size="8.1589px">&gt;&gt;Referenced Device Index</text>
+		<rect x="162.188" y="112.14" fill="none" width="108.83" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 117.9284)" font-size="8.1589px">&gt;&gt;RT BLD Continuous Angle</text>
+		<rect x="143.872" y="86.176" fill="none" width="127.729" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 143.8721 91.9636)" font-size="8.1589px">Item 1 (Jaw Pair, X)</text>
+		<rect x="363.657" y="100.247" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 106.0348)" font-size="8.1589px">= 1</text>
+		<rect x="363.657" y="113.756" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 119.5434)" font-size="8.1589px">= 30</text>
+		
+			<rect x="154.812" y="122.956" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="162.188" y="126.099" fill="none" width="138.801" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 131.9392)" font-size="8.1589px">&gt;&gt;Parallel RT Beam Delimiters Positions</text>
+		<rect x="363.657" y="127.714" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 133.5019)" font-size="8.1589px">= 2x2</text>
+		
+			<rect x="139.602" y="137.195" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="217.089" height="54.696"/>
+		
+			<rect x="154.812" y="150.358" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		
+			<rect x="154.812" y="163.932" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="162.189" y="153.5" fill="none" width="108.83" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 162.189 159.288)" font-size="8.1589px">&gt;&gt;Referenced Device Index</text>
+		<rect x="162.188" y="167.075" fill="none" width="108.83" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 172.863)" font-size="8.1589px">&gt;&gt;RT BLD Continuous Angle</text>
+		<rect x="143.872" y="141.111" fill="none" width="127.729" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 143.8721 146.8982)" font-size="8.1589px">Item 2 (Jaw Pair, Y)</text>
+		<rect x="363.657" y="155.182" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 160.9695)" font-size="8.1589px">= 2</text>
+		<rect x="363.657" y="168.69" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 174.478)" font-size="8.1589px">= 30</text>
+		
+			<rect x="154.812" y="177.891" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="363.657" y="182.649" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 188.4365)" font-size="8.1589px">= 2x2</text>
+		<rect x="162.188" y="181.033" fill="none" width="138.801" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 186.8738)" font-size="8.1589px">&gt;&gt;Parallel RT Beam Delimiters Positions</text>
+		
+			<rect x="109.284" y="192.145" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="247.407" height="94.293"/>
+		
+			<rect x="124.492" y="205.891" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="113.216" y="195.42" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 113.2163 201.208)" font-size="8.1589px">Item 2</text>
+		<rect x="128.631" y="209.033" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 214.8205)" font-size="8.1589px">&gt;RT Control Point Index</text>
+		<rect x="363.657" y="209.302" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 215.143)" font-size="8.1589px">= 2</text>
+		
+			<rect x="124.492" y="218.585" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="128.631" y="221.727" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 227.5146)" font-size="8.1589px">&gt;Cumulative Meterset</text>
+		<rect x="363.657" y="221.996" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 227.8361)" font-size="8.1589px">= 40</text>
+		
+			<rect x="124.492" y="231.279" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="55.16"/>
+		<rect x="128.631" y="234.702" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 240.4902)" font-size="8.1589px">RT BLD Settings Sequence</text>
+		
+			<rect x="139.602" y="245.701" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="217.089" height="40.738"/>
+		
+			<rect x="154.812" y="258.864" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		
+			<rect x="154.812" y="272.438" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="162.189" y="262.007" fill="none" width="108.83" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 162.189 267.7941)" font-size="8.1589px">&gt;&gt;Referenced Device Index</text>
+		<rect x="143.872" y="249.617" fill="none" width="127.729" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 143.8721 255.4043)" font-size="8.1589px">Item 1 (Jaw Pair, Y)</text>
+		<rect x="363.657" y="263.688" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 269.4756)" font-size="8.1589px">= 2</text>
+		<rect x="363.657" y="277.196" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 282.9841)" font-size="8.1589px">= 4x4</text>
+		<rect x="162.188" y="275.581" fill="none" width="138.801" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 281.4214)" font-size="8.1589px">&gt;&gt;Parallel RT Beam Delimiters Positions</text>
+		
+			<rect x="109.284" y="286.475" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="247.407" height="94.293"/>
+		
+			<rect x="124.492" y="300.22" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="113.216" y="289.75" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 113.2163 295.5375)" font-size="8.1589px">Item 3</text>
+		<rect x="128.631" y="303.362" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 309.15)" font-size="8.1589px">&gt;RT Control Point Index</text>
+		<rect x="363.657" y="303.632" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 309.472)" font-size="8.1589px">= 3</text>
+		
+			<rect x="124.492" y="312.914" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="14"/>
+		<rect x="128.631" y="316.056" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 321.8441)" font-size="8.1589px">&gt;Cumulative Meterset</text>
+		<rect x="363.657" y="316.326" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 322.1661)" font-size="8.1589px">= 80</text>
+		
+			<rect x="124.492" y="325.608" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="232.199" height="55.16"/>
+		<rect x="128.631" y="329.032" fill="none" width="142.655" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 128.6313 334.8197)" font-size="8.1589px">RT BLD Settings Sequence</text>
+		
+			<rect x="139.602" y="340.03" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="217.089" height="40.738"/>
+		
+			<rect x="154.812" y="353.193" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		
+			<rect x="154.812" y="366.768" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="201.879" height="14"/>
+		<rect x="162.189" y="356.336" fill="none" width="108.83" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 162.189 362.1236)" font-size="8.1589px">&gt;&gt;Referenced Device Index</text>
+		<rect x="143.872" y="343.946" fill="none" width="127.729" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 143.8721 349.7338)" font-size="8.1589px">Item 1 (Jaw Pair, X)</text>
+		<rect x="363.657" y="358.017" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 363.8051)" font-size="8.1589px">= 1</text>
+		<rect x="363.657" y="371.526" fill="none" width="44.984" height="7.714"/>
+		<text transform="matrix(0.9288 0 0 1 363.6567 377.3136)" font-size="8.1589px">= 4x4</text>
+		<rect x="162.188" y="369.91" fill="none" width="138.801" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 162.1885 375.7509)" font-size="8.1589px">&gt;&gt;Parallel RT Beam Delimiters Positions</text>
+	</g>
+</g>
+</svg>

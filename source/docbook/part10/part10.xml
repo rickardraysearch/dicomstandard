@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2019d - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2019e - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1101,7 +1101,52 @@
 </note>
             </td>
           </tr>
-          <tr valign="top">
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_451f015b-6825-4b1a-91f7-4c5eeceec080">Source Presentation Address</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_03d476b0-f21b-4fa1-8db7-86850467bda8">(0002,0026)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_46b246bd-cbab-4273-b01b-6efd06092f4c">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_bbd2cd4f-7c02-4d5b-a403-d4d4cea1654a">The DICOM Presentation Address corresponding to the Source Application Entity Title (0002,0016).</para>
+                    <para xml:id="para_09fb7c3d-a875-4417-b514-6d8a4bf1dee3">See <xref linkend="sect_7.1.1.1" xrefstyle="select: label"/>.</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_52f33b5f-967c-474d-a38a-b454c4448be6">Sending Presentation Address</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_8da2a369-4dcb-42ee-af03-2236769c2751">(0002,0027)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_ea5527f1-44a4-4591-9c04-e665fc5997c9">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_5c100735-0408-4dac-a6eb-835890abc63a">The DICOM Presentation Address corresponding to the Sending Application Entity Title (0002,0017).</para>
+                    <para xml:id="para_6b5e1fdc-8190-46c2-9c6c-7edea6e99105">See <xref linkend="sect_7.1.1.1" xrefstyle="select: label"/>.</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_8e56788c-835a-4a66-b74a-4ec6b85f7d20">Receiving Presentation Address</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_f6a8370b-fd18-49ef-8ad9-5abe25cd2896">(0002,0028)</para>
+                </td>
+                <td align="center" colspan="1" rowspan="1">
+                    <para xml:id="para_b3fa801f-b72c-4cad-b0f8-424c0ecfe1e2">3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d46c80b3-c784-4c92-9487-c4e122a48844">The DICOM Presentation Address corresponding to the Receiving Application Entity Title (0002,0018).</para>
+                    <para xml:id="para_d6249ba5-5acd-4237-8a8e-6901600e55b0">See <xref linkend="sect_7.1.1.1" xrefstyle="select: label"/>.</para>
+                </td>
+            </tr>
+            <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c3eb0e4a-53af-4704-9417-20ff2552eed1">Private Information Creator UID</para>
             </td>
@@ -1137,6 +1182,18 @@
         <para xml:id="para_51694a2b-6e02-4730-b0f1-c2707e7fe5e2">
 <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> specifies that Elements with Tags (0001,xxxx), (0003,xxxx), (0005,xxxx), and (0007,xxxx) shall not be used.</para>
       </note>
+        <section label="7.1.1" status="3" xml:id="sect_7.1.1">
+            <title>DICOM File Meta Information Attributes</title>
+            <section label="7.1.1.1" status="4" xml:id="sect_7.1.1.1">
+                <title>Presentation Address Attributes</title>
+                <para xml:id="para_ecf2b50c-ab8c-4bd3-9d84-40adbb448229">The encoding of the presentation address depends on the network transport protocol.</para>
+                <para xml:id="para_982cbac5-60d6-47fe-9f78-dcd7261475d9">For objects exchanged using the <olink targetdoc="PS3.8" targetptr="PS3.8" xrefstyle="select: labelnumber"/> DICOM Upper Layer Protocol for TCP/IP, the presentation address shall be encoded as a URI consisting of the scheme "dicom" followed by a colon, then either the fully qualified host name or IP address, followed by a colon and then the port number. E.g., "dicom:127.0.0.1:104", "dicom:myhost.mydomain.com:104".</para>
+                <para xml:id="para_cd20c210-174a-4bdf-ab61-6466aaf80e65">For objects exchanged using the <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> Web Services, the presentation address shall be encoded as the absolute URL of the endpoint of the base of the resource or service, sufficient to identify the system. E.g., "http://myhost.mydomain.com:80/wado-rs/". The presentation address is not expected to be the complete address of the resource. The scheme shall be "http", regardless of whether secure transport was actually used or not.</para>
+                <note>
+                    <para xml:id="para_ae1ddfd8-c840-433e-92a5-6a4398ba6625">For security reasons, care should be taken to assure that no access credentials such as usernames, passwords or authentication token parameters are encoded in the presentation address.</para>
+                </note>
+            </section>
+        </section>
     </section>
     <section label="7.2" status="2" xml:id="sect_7.2">
       <title>Data Set Encapsulation</title>

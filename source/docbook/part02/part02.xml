@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2019d - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2019e - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -415,7 +415,7 @@
                     <glossdef>
                         <para xml:id="para_3f1731ec-f189-4d16-917e-465c968937f5">A SOP Class defined in the DICOM Standard extended in an implementation with additional Type 3 Attributes. The additional Attributes may either be drawn from the Data Dictionary in <olink targetdoc="PS3.6" targetptr="PS3.6" xrefstyle="select: labelnumber"/>, or may be Private Attributes. The semantics of the related Standard SOP Class shall not be modified by the additional Type 3 Attributes when absent. Therefore, the Standard Extended SOP Class utilizes the same UID as the related Standard SOP Class.</para>
                         <note>
-                            <para xml:id="para_f729c47e-af6f-418f-8ae9-09ca4d5dc9c5">IODs from a Standard Extended SOP Class may be freely exchanged between DICOM implementations since implementations unfamiliar with the additional Type 3 Attributes would simply ignore them.</para>
+                            <para xml:id="para_f729c47e-af6f-418f-8ae9-09ca4d5dc9c5">IODs from a Standard Extended SOP Class may be freely exchanged between DICOM implementations since implementations that do not recognize the additional Type 3 Attributes would simply ignore them.</para>
                         </note>
                     </glossdef>
                 </glossentry>
@@ -3395,6 +3395,17 @@
               <para xml:id="para_03a2c1a6-d1a8-4a72-a00b-69b37e0d975f">Workflow Management</para>
             </td>
           </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ea3e5551-a311-4136-92ea-f9c9d008a448">1.2.840.10008.5.1.4.34.6.5</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_ce562573-9039-4e39-acc6-dff2b6054beb">Unified Procedure Step - Query SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_3c5ccbe4-2119-42d2-9182-c3131ba0346f">Workflow Management</para>
+                </td>
+            </tr>
           <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_0c4bce39-b6d8-450c-a7e4-268112ef2069">1.2.840.10008.5.1.4.34.7</para>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 502 442" enable-background="new 0 0 502 442" xml:space="preserve">
+
+<defs>
+	<style type="text/css">
+	text {
+	  font-family: Helvetica, Verdana, ArialUnicodeMS, san-serif
+	}
+	</style>
+</defs>
+
+<g>
+   <desc>
+	PS 3.22 : Real-Time Communication (DICOM-RTV)
+   </desc>
+</g>
+
+<g>
+	<g>
+		<rect x="1" y="1" fill="#F2EDD6" width="500" height="440"/>
+	</g>
+	<g>
+		
+			<rect x="90.721" y="249.444" fill="#E4E6EF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="320.559" height="175.397"/>
+		
+			<rect x="106.645" y="261.916" fill="#86B2D8" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.634" height="162.924"/>
+		
+			<rect x="90.721" y="17.16" fill="#E4E6EF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="320.559" height="136.836"/>
+		<rect x="94.384" y="19.724" fill="none" width="175.978" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 94.3837 25.5639)" font-size="8.1589px">RTP Header</text>
+		
+			<rect x="106.657" y="29.632" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="32.907" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 38.7475)" font-size="8.1589px">Version (V)</text>
+		
+			<rect x="106.657" y="43.425" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="46.7" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 52.5405)" font-size="8.1589px">Padding (P)</text>
+		
+			<rect x="106.657" y="57.218" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="60.493" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 66.3336)" font-size="8.1589px">Extension (X)</text>
+		
+			<rect x="106.657" y="71.011" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="74.286" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 80.1267)" font-size="8.1589px">CRSC (CC)</text>
+		
+			<rect x="106.657" y="84.804" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="88.079" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 93.9198)" font-size="8.1589px">Marker (M)</text>
+		
+			<rect x="106.657" y="98.598" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="101.872" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 107.7129)" font-size="8.1589px">Payload Type (PT)</text>
+		
+			<rect x="106.657" y="112.391" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="115.666" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 121.5059)" font-size="8.1589px">Sequence Number</text>
+		
+			<rect x="106.657" y="126.184" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="129.459" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 135.299)" font-size="8.1589px">(RTP) Timestamp</text>
+		
+			<rect x="106.657" y="139.977" fill="#B2B9D1" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="143.252" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 149.0916)" font-size="8.1589px">Synchronization Source (SSRC) Identifier</text>
+		
+			<rect x="90.721" y="153.987" fill="#E4E6EF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="320.559" height="95.457"/>
+		<rect x="94.384" y="156.551" fill="none" width="175.978" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 94.3837 162.3912)" font-size="8.1589px">RTP Header Extension</text>
+		
+			<rect x="106.657" y="166.459" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="169.734" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 175.5748)" font-size="8.1589px">PTP Sync Timestamp</text>
+		
+			<rect x="106.657" y="180.253" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="183.527" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 189.3678)" font-size="8.1589px">PTP Origin Timestamp</text>
+		
+			<rect x="106.657" y="194.046" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="197.321" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 203.1604)" font-size="8.1589px">Flow Identifier</text>
+		
+			<rect x="106.657" y="207.839" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="211.114" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 216.954)" font-size="8.1589px">Source Identifier</text>
+		
+			<rect x="106.657" y="221.632" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="224.907" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 230.7471)" font-size="8.1589px">Grain Duration</text>
+		
+			<rect x="106.657" y="235.425" fill="#CBD0E0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="304.622" height="14"/>
+		<rect x="110.578" y="238.7" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 244.5402)" font-size="8.1589px">Grain Flags</text>
+		<rect x="94.384" y="252.008" fill="none" width="175.978" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 94.3837 257.8476)" font-size="8.1589px">RTP Payload</text>
+		<rect x="110.578" y="265.191" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 110.5776 271.0312)" font-size="8.1589px">DICOM dataset</text>
+		
+			<rect x="121.587" y="275.979" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="289.591" height="37.792"/>
+		<rect x="125.578" y="279.254" fill="none" width="156.672" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 125.5776 285.0939)" font-size="8.1589px">Payload Header (RTV Meta Information)</text>
+		
+			<rect x="136.283" y="289.772" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="274.895" height="24"/>
+		<rect x="140.578" y="293.047" fill="none" width="245.253" height="18.94"/>
+		<text transform="matrix(0.9288 0 0 1 140.5776 298.8865)"><tspan x="0" y="0" font-size="8.1589px">Fixed-size preamble for compatibility with other standards and Definition </tspan><tspan x="0" y="9.791" font-size="8.1589px">of the header (e.g., Media RTV SOP Class UID, Transfer Syntax UID...)</tspan></text>
+		
+			<rect x="121.587" y="313.72" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="289.591" height="37.792"/>
+		<rect x="125.578" y="316.995" fill="none" width="227.46" height="7.715"/>
+		<text transform="matrix(0.9288 0 0 1 125.5776 322.8347)" font-size="8.1589px">Dynamic part (Curent Frame Functional Groups Module)</text>
+		
+			<rect x="136.283" y="327.513" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="274.895" height="24"/>
+		<rect x="140.578" y="330.788" fill="none" width="245.253" height="18.94"/>
+		<text transform="matrix(0.9288 0 0 1 140.5776 336.6278)"><tspan x="0" y="0" font-size="8.1589px">Parameters of the current frame</tspan><tspan x="0" y="9.791" font-size="8.1589px"> (e.g., Position of the ultrasound probe, circle definig the eye...)</tspan></text>
+		
+			<rect x="121.587" y="351.461" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="289.692" height="73.379"/>
+		<rect x="125.578" y="354.736" fill="none" width="275.046" height="18.078"/>
+		<text transform="matrix(0.9288 0 0 1 125.5776 360.576)"><tspan x="0" y="0" font-size="8.1589px">[Static part (Video xx Image / Waveform / Rendition Selection Document IOD)]</tspan><tspan x="0" y="9.791" font-size="8.1589px">(present at least every second)</tspan></text>
+		
+			<rect x="136.283" y="374.254" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="274.996" height="14"/>
+		<rect x="140.578" y="377.529" fill="none" width="268.735" height="9.354"/>
+		<text transform="matrix(0.9288 0 0 1 140.5776 383.3691)" font-size="8.1589px">Patient/Study/Series/Equipment/FrameOfReference/Synchronization Attributes</text>
+		
+			<rect x="136.283" y="388.335" fill="#CCDEF0" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="274.895" height="36.492"/>
+		<rect x="140.578" y="391.609" fill="none" width="268.735" height="9.354"/>
+		<text transform="matrix(0.9288 0 0 1 140.5776 397.4503)" font-size="8.1589px">Flow Description</text>
+		
+			<rect x="150.923" y="400.84" fill="#FFFFFF" stroke="#010101" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1" width="260.256" height="24"/>
+		<rect x="155.578" y="404.115" fill="none" width="245.253" height="18.94"/>
+		<text transform="matrix(0.9288 0 0 1 155.5776 409.9562)"><tspan x="0" y="0" font-size="8.1589px">Parameters shared with all frames: list of: source id/flow id (i.e., some </tspan><tspan x="0" y="9.791" font-size="8.1589px">information of the SDP “translated” to DICOM) ...</tspan></text>
+	</g>
+</g>
+</svg>
