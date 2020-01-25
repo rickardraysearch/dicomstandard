@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.18" version="5.0" xml:id="PS3.18">
     <title>PS3.18</title>
-    <subtitle>DICOM PS3.18 2019e - Web Services</subtitle>
+    <subtitle>DICOM PS3.18 2020a - Web Services</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
         </author>
         <copyright>
-            <year>2019</year>
+            <year>2020</year>
             <holder>NEMA</holder>
         </copyright>
         <legalnotice>
@@ -1127,10 +1127,18 @@
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <programlisting>non-zero-digit</programlisting>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <programlisting>= %31-39</programlisting>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <programlisting>pos-int</programlisting>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                                <programlisting>= NON-ZERO-DIGIT *DIGIT</programlisting>
+                                <programlisting>= non-zero-digit *DIGIT</programlisting>
                                 <programlisting>; An integer greater than zero</programlisting>
                             </td>
                         </tr>
@@ -1370,7 +1378,7 @@
         <para xml:id="para_28e24b18-67c1-428f-80b7-8dc90bd5b114">DICOM Web Services are used to transmit Composite SOP Instances. All Composite SOP Instances transmitted shall conform to the requirements specified in other Parts of the Standard.</para>
         <para xml:id="para_c9ec676d-e27e-41de-b66c-7b0cac0c00ba">An implementation may conform to the DICOM Web Services by supporting the role of origin server or user agent, or both, for any of the Services defined in this Part of the Standard. The structure of Conformance Statements is specified in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>.</para>
         <para xml:id="para_0458efe6-0478-42b1-808e-3e41ddcd1ffe">An implementation shall describe in its Conformance Statement the Real-World Activity associated with its use of DICOM Web Services, including any proxy functionality between a Web Service and the equivalent DIMSE Service.</para>
-        <para xml:id="para_84e2cd0f-55f1-47ba-9842-01a5893ab7d0">An implementation shall describe in its Conformance Statement the security mechanisms utilized by the implementation.</para>
+        <para xml:id="para_84e2cd0f-55f1-47ba-9842-01a5893ab7d0">An implementation shall describe in its Conformance Statement the security mechanisms utilized by the implementation.See <xref linkend="sect_8.11" xrefstyle="select: label"/>.</para>
     </chapter>
     <chapter label="7" status="1" xml:id="chapter_7">
         <title>Overview of DICOM Web Services (Informative)</title>
@@ -1777,8 +1785,8 @@ parameter = qp-name
           / attribute "=" 1#qp-value
 ]]></programlisting>
                 <para xml:id="para_cc638749-7d03-4da8-9d37-bcd1597c8b55">The qp-name is case sensitive, and starts with an alphabetic or underscore character, followed by zero or more alphanumeric or underscore "_" characters:</para>
-                <programlisting>name =%s DQ 1*(ALPHA / "_") *(ALPHA / DIGIT / "_") DQ</programlisting>
-                <para xml:id="para_44cba91b-69f5-442b-b5be-8e82ea2575cc">A qp-name by itself (with no values) is a legal Query Parameter. A parameter &lt;name&gt; may also be followed by a comma-separated list of one or more qp-values, or one or more Attributes.</para>
+                <programlisting>qp-name = %s 1*(ALPHA / "_") *(ALPHA / DIGIT / "_")</programlisting>
+                <para xml:id="para_44cba91b-69f5-442b-b5be-8e82ea2575cc">A qp-name by itself (with no values) is a legal Query Parameter. A parameter qp-name may also be followed by a comma-separated list of one or more qp-values, or one or more Attributes.</para>
                 <para xml:id="para_c581666e-88fd-4c05-9e23-6fee9859efa2">The qp-values are case-sensitive. A qp-value is composed of qp-chars, where qp-char is the set of legal query component characters as defined by <xref linkend="biblio_RFC_3986"/>, minus the equal ("="), ampersand ("&amp;"), and comma (",") characters.</para>
                 <programlisting><![CDATA[
 qp-value   = %s DQ 1*qp-char DQ
@@ -6333,8 +6341,11 @@ cid                = token / quoted-string
         </section>
         <section label="8.11" status="2" xml:id="sect_8.11">
             <title>Security and Privacy</title>
-            <para xml:id="para_5f69c7bb-35de-4ed8-8abc-56213379de47">It is very likely that DICOM objects contain Protected Health Information. Privacy regulations in the United States (HIPAA), Europe (GDPR), and elsewhere, require that Individually Identifiable Information be kept private. It is the responsibility of implementers of the DICOM Standard to ensure that governmental regulations for security and privacy are satisfied.</para>
+            <para xml:id="para_5f69c7bb-35de-4ed8-8abc-56213379de47">It is very likely that DICOM objects contain Protected Health Information.
+                Privacy regulations in the United States (HIPAA), Europe (GDPR), and elsewhere, require that Individually Identifiable Information be kept private.
+                It is the responsibility of those implementing and deploying the DICOM Standard to ensure that applicable regulations for security and privacy are satisfied.</para>
             <para xml:id="para_fdee4226-0ee9-4af4-adb8-9c597bcc55a3">See, for example, <xref linkend="biblio_ONC_PrivacySecurityGuide"/>.</para>
+            <para xml:id="para_ec606905-132b-43ee-bd16-b988ea21885b">The DICOM PS3.10 File Format has security considerations that will apply whenever DICOM PS3.10 File format is used. See <olink targetdoc="PS3.10" targetptr="sect_7.5" xrefstyle="select: docname label"/>.</para>
         </section>
     </chapter>
     <chapter label="9" status="1" xml:id="chapter_9">
@@ -8107,6 +8118,8 @@ cid                = token / quoted-string
             <section label="10.1.3" status="3" xml:id="sect_10.1.3">
                 <title>Common Media Types</title>
                 <para xml:id="para_7427e2b3-085b-4a73-bbc1-ff8404ff7fdb">The origin server media type requirements are defined in each Transaction of this Service.</para>
+                <para xml:id="para_f05bdfe1-e9fa-4422-9319-f00dfc0b926d">The origin server shall support the Transfer Syntax and Character Set media type parameters.
+                    See <xref linkend="sect_8.7.3.5.2" xrefstyle="select: label"/> and <xref linkend="sect_8.7.3.5.3" xrefstyle="select: label"/>.</para>
             </section>
         </section>
         <section label="10.2" status="2" xml:id="sect_10.2">
@@ -8633,7 +8646,8 @@ cid                = token / quoted-string
                                 </tr>
                             </tbody>
                         </table>
-                        <para xml:id="para_02e4f734-ced6-46a2-95bb-dbf733ef79be">The Metadata Resources are used to retrieve the DICOM instances without retrieving Bulkdata. The Metadata returned for a study, series, or instance resource includes all Attributes in the resource. For Data Elements having a Value Representation (VR) of DS, FL, FD, IS, LT, OB, OD, OF, OL, OW, SL, SS, ST, UC, UL, UN, US, and UT, the origin server is permitted to replace the Value Field of the Data Element with a Bulkdata URI. The user agent can use the Bulkdata URI to retrieve the Bulkdata.</para>
+                        <para xml:id="para_02e4f734-ced6-46a2-95bb-dbf733ef79be">The Metadata Resources are used to retrieve the DICOM instances without retrieving Bulkdata. The Metadata returned for a study, series, or instance resource includes all Attributes in the resource.
+                            For Data Elements having a Value Representation (VR) of DS, FL, FD, IS, LT, OB, OD, OF, OL, OV, OW, SL, SS, ST, SV, UC, UL, UN, US, UT and UV, the origin server is permitted to replace the Value Field of the Data Element with a Bulkdata URI. The user agent can use the Bulkdata URI to retrieve the Bulkdata.</para>
                     </section>
                     <section label="10.4.1.1.3" status="5" xml:id="sect_10.4.1.1.3">
                         <title>Rendered Resources</title>
@@ -9284,6 +9298,19 @@ cid                = token / quoted-string
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_65fbda7f-1286-4ae0-b511-35fabe9efcbe">multipart/related; type="application/octet-stream"</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a2b12f58-1360-478a-9bbc-1dcce865a206">Required</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_7d182526-fcb0-4944-9da4-b4dd323f3326">
+                                    <xref linkend="sect_8.7.3.3" xrefstyle="select: label"/>
+                                </para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_e9dc65dc-2161-4bb5-b1b1-f9419d6e799f">Rendered Media Types</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
@@ -9295,9 +9322,21 @@ cid                = token / quoted-string
 </para>
                             </td>
                         </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_c34b98b2-962e-445f-85ff-70c8dc5946cb">Rendered Media Types</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_bf1e9d52-7b77-40e0-955e-50a0f6d2c226">Optional</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fe351b0b-76e4-4353-acae-64198a09251c">
+                                    <xref linkend="sect_8.7.4" xrefstyle="select: label"/>
+                                </para>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-                <para xml:id="para_f05bdfe1-e9fa-4422-9319-f00dfc0b926d">The origin server shall support the Transfer Syntax and Character Set media type parameters. See <xref linkend="sect_8.7.3.5.2" xrefstyle="select: label"/> and <xref linkend="sect_8.7.3.5.3" xrefstyle="select: label"/>.</para>
             </section>
             <section label="10.4.5" status="3" xml:id="sect_10.4.5">
                 <title>Conformance Statement</title>
@@ -9939,6 +9978,19 @@ cid                = token / quoted-string
                                 <para xml:id="para_dc1efe92-6758-4c20-976a-9a8d369826be">
 <xref linkend="sect_8.7.3.2" xrefstyle="select: label"/>
 </para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_5d4e0a9e-ebe8-4ce2-9edc-1395548ddc6f">multipart/related; type="application/octet-stream"</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a900b58a-9dff-43e6-b2b8-45c3717f46be">Required</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_58abdcdf-2efb-40d6-b4c0-9cc87731389b">
+                                    <xref linkend="sect_8.7.3.3" xrefstyle="select: label"/>
+                                </para>
                             </td>
                         </tr>
                     </tbody>
@@ -10791,20 +10843,6 @@ cid                = token / quoted-string
                             <tbody>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_53e5e123-4624-40a0-9aa9-8a5b2595ff4f">Specific Character Set</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_ecaf481c-f57e-4c4d-83c4-b51c62acba17">(0008,0005)</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_a7d7be10-610b-4a02-aef9-17ffabff6326">C</para>
-                                    </td>
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_72b16fb0-a787-487b-b760-52fab1d5dbd0">Shall be present if known</para>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_4ffcdc10-7496-42a6-9919-7fe636bd75e3">Study Date</para>
                                     </td>
                                     <td align="center" colspan="1" rowspan="1">
@@ -11044,20 +11082,6 @@ cid                = token / quoted-string
                             <tbody>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_1123734a-b026-4e5b-9695-cb910eaacb2c">Specific Character Set</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_cb714d91-fa67-4a22-afe7-28bf1deefb82">(0008,0005)</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_99714ad3-2961-4ff4-ba29-d62df78f0e7a">C</para>
-                                    </td>
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_a43bccbd-3b9b-4bc1-8e88-ffb9c142b700">Shall be present if known</para>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_e4d519ad-4b92-43a1-91e9-2e0ee210bdc0">Modality</para>
                                     </td>
                                     <td align="center" colspan="1" rowspan="1">
@@ -11256,20 +11280,6 @@ cid                = token / quoted-string
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr valign="top">
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_8bd61927-8982-4f88-9eeb-6af4352d3f69">Specific Character Set</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_c848858f-805a-4af6-91ca-92ab5b772ce1">(0008,0005)</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_c6e551a6-8af8-4643-a4d9-20af68c576f2">C</para>
-                                    </td>
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_b0ad54c3-761a-46d5-95f2-1d559bc8c0b2">Shall be present if known</para>
-                                    </td>
-                                </tr>
                                 <tr valign="top">
                                     <td align="left" colspan="1" rowspan="1">
                                         <para xml:id="para_cc2deb52-f164-469b-854c-c50604f0d5a7">SOP Class UID</para>
@@ -11492,6 +11502,19 @@ cid                = token / quoted-string
                                 <para xml:id="para_bdfbea24-e889-4c9a-983e-84d7217453c1">
 <xref linkend="sect_8.7.3.2" xrefstyle="select: label"/>
 </para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_1cc7aaae-f11f-4e9b-9074-7af0a168effe">multipart/related; type="application/octet-stream"</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_22d244e0-2667-4b44-b2de-40ff33106ae7">Required</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_98abc63b-1162-4634-8e63-96ff855dfcbb">
+                                    <xref linkend="sect_8.7.3.3" xrefstyle="select: label"/>
+                                </para>
                             </td>
                         </tr>
                     </tbody>
@@ -16455,6 +16478,8 @@ uid         ; is the Unique Identifier of an NPI Instance
             <title>Introduction to JavaScript Object Notation (JSON)</title>
             <para xml:id="para_0ae6e059-ed41-42bc-bbc6-ec6214fefa37">JSON is a text-based open standard, derived from JavaScript, for representing data structures and associated arrays. It is language-independent, and primarily used for serializing and transmitting lightweight structured data over a network connection. It is described in detail by the Internet Engineering Task Force (IETF) in <xref linkend="biblio_RFC_4627"/>, available at <link xl:href="http://www.ietf.org/rfc/rfc4627.txt"/>.</para>
             <para xml:id="para_838562fa-2db9-4202-b072-6accb6d91852">The DICOM JSON Model complements the XML-based Native DICOM Model, by providing a lightweight representation of data returned by DICOM web services. While this representation can be used to encode any type of DICOM Data Set it is expected to be used by client applications, especially mobile clients, such as described in the QIDO-RS use cases (see <olink targetdoc="PS3.17" targetptr="chapter_HHH" xrefstyle="template:Annex %n “%t” in PS3.17"/>).</para>
+            <para xml:id="para_8b66b719-3014-40a8-8ae2-27b038f0d5ec">With the exception of padding to even byte length, a data source that is creating a new instance of a DICOM JSON Model shall follow the DICOM encoding rules in creating Values for the DICOM Attributes within the instance of the DICOM JSON Model. Attribute Values encoded in a DICOM JSON Model are not required to be padded to an even byte length.</para>
+            <para xml:id="para_11ad61d2-cff1-460f-9a7a-af475789c9bf">A data recipient that converts data from an instance of the DICOM JSON Model back into a binary encoded DICOM object shall adjust the padding to an even byte length as necessary to meet the encoding rules specified in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
         </section>
         <section label="F.2" status="2" xml:id="sect_F.2">
             <title>DICOM JSON Model</title>
@@ -16525,7 +16550,7 @@ uid         ; is the Unique Identifier of an NPI Instance
                                 <para xml:id="para_e053047a-bbc3-47f8-8ac1-ce4169fd76e5">Value: An array containing one of:</para>
                                 <itemizedlist>
                                     <listitem>
-                                        <para xml:id="para_949c513c-d191-41f2-a2b4-6bf4c8baaddf">The Value Field elements of a DICOM attribute with a VR other than PN, SQ, OB, OD, OF, OL, OW, or UN (described in <xref linkend="sect_F.2.4" xrefstyle="select: label"/>)</para>
+                                        <para xml:id="para_949c513c-d191-41f2-a2b4-6bf4c8baaddf">The Value Field elements of a DICOM attribute with a VR other than PN, SQ, OB, OD, OF, OL, OV, OW, or UN (described in <xref linkend="sect_F.2.4" xrefstyle="select: label"/>)</para>
                                         <para xml:id="para_d93ae819-585f-4912-b04b-fa0d802b28f4">The encoding of empty Value Field elements is described in <xref linkend="sect_F.2.5" xrefstyle="select: label"/>
                                         </para>
                                     </listitem>
@@ -16550,10 +16575,10 @@ uid         ; is the Unique Identifier of an NPI Instance
                                 </itemizedlist>
                             </listitem>
                             <listitem>
-                                <para xml:id="para_fc52cacc-bb58-4dd7-99c9-b739319c7f8b">BulkDataURI: A string encoding the WADO-RS URL of a bulk data item describing the Value Field of an enclosing Attribute with a VR of DS, FL, FD, IS, LT, OB, OD, OF, OL, OW, SL, SS, ST, UC, UL, UN, US, or UT (described in <xref linkend="sect_F.2.6" xrefstyle="select: label"/>)</para>
+                                <para xml:id="para_fc52cacc-bb58-4dd7-99c9-b739319c7f8b">BulkDataURI: A string encoding the WADO-RS URL of a bulk data item describing the Value Field of an enclosing Attribute with a VR of DS, FL, FD, IS, LT, OB, OD, OF, OL, OV, OW, SL, SS, ST, SV, UC, UL, UN, US, UT or UV (described in <xref linkend="sect_F.2.6" xrefstyle="select: label"/>)</para>
                             </listitem>
                             <listitem>
-                                <para xml:id="para_e451c65f-31b9-4f15-bd19-04f483f5cd6e">InlineBinary: A base64 string encoding the Value Field of an enclosing Attribute with a VR of OB, OD, OF, OL, OW, or UN (described in <xref linkend="sect_F.2.7" xrefstyle="select: label"/>)</para>
+                                <para xml:id="para_e451c65f-31b9-4f15-bd19-04f483f5cd6e">InlineBinary: A base64 string encoding the Value Field of an enclosing Attribute with a VR of OB, OD, OF, OL, OV, OW, or UN (described in <xref linkend="sect_F.2.7" xrefstyle="select: label"/>)</para>
                             </listitem>
                         </itemizedlist>
                     </listitem>
@@ -16572,10 +16597,11 @@ uid         ; is the Unique Identifier of an NPI Instance
             </section>
             <section label="F.2.3" status="3" xml:id="sect_F.2.3">
                 <title>DICOM JSON Value Representation</title>
-                <para xml:id="para_57f37df1-2a7b-4b6b-b4e2-3b0af204bc0f">The value representation (VR) is included in each DICOM JSON Model attribute object and named "vr". For example:</para>
+                <para xml:id="para_57f37df1-2a7b-4b6b-b4e2-3b0af204bc0f">The DICOM Value Representation (VR) is included in each DICOM JSON Model attribute object and named "vr". For example:</para>
                 <programlisting><![CDATA["vr": "CS"
 ]]></programlisting>
-                <para xml:id="para_280f3113-55b6-4746-88b5-79df55e19345">All DICOM Value Representations are mapped to specified JSON Data Types (see <xref linkend="table_F.2.3-1" xrefstyle="select: label"/>). The JSON encodings shall conform to the Definition, Character Repertoire (if applicable) and Length of Value specified for that Value Representation (see <olink targetdoc="PS3.5" targetptr="sect_6.2" xrefstyle="select: docname label quotedtitle"/>) with the following exceptions:</para>
+                <para xml:id="para_280f3113-55b6-4746-88b5-79df55e19345">The JSON encoding of an Attribute shall use the JSON Data Type corresponding to the DICOM Value Representations in <xref linkend="table_F.2.3-1" xrefstyle="select: label"/>.
+                    The JSON encodings shall conform to the Definition, Character Repertoire (if applicable) and Length of Value specified for that DICOM Value Representation (see <olink targetdoc="PS3.5" targetptr="sect_6.2" xrefstyle="select: docname label quotedtitle"/>) with the following exceptions:</para>
                 <itemizedlist>
                     <listitem>
                         <para xml:id="para_89f5a907-97b1-439e-92ab-e866996c4526">Attributes with a Value Representation of AT shall be restricted to eight character uppercase hexadecimal representation of a DICOM Tag</para>
@@ -16666,7 +16692,8 @@ uid         ; is the Unique Identifier of an NPI Instance
                                 <para xml:id="para_088d3637-eaf9-4004-8ae2-ab1e598027c5">Decimal String</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_fb941f0b-25b8-45c6-9542-85953c51a4d5">Number</para>
+                                <para xml:id="para_fb941f0b-25b8-45c6-9542-85953c51a4d5">Number or String</para>
+                                <para xml:id="para_63648c04-3b90-4f37-a6d8-988c41da8663">See note.</para>
                             </td>
                         </tr>
                         <tr valign="top">
@@ -16710,7 +16737,8 @@ uid         ; is the Unique Identifier of an NPI Instance
                                 <para xml:id="para_cd017b6d-d87e-4de5-8000-33d6a8bd4cef">Integer String</para>
                             </td>
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_dea6fd02-9c86-47ef-8048-a6373e438014">Number</para>
+                                <para xml:id="para_dea6fd02-9c86-47ef-8048-a6373e438014">Number or String</para>
+                                <para xml:id="para_22cc0a80-c385-4d50-9e70-5aca751ebf8e">See note.</para>
                             </td>
                         </tr>
                         <tr valign="top">
@@ -16777,6 +16805,17 @@ uid         ; is the Unique Identifier of an NPI Instance
                             </td>
                             <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_8eb12e2f-a208-4644-9ded-624f6b5fdb0a">Base64 encoded octet-stream</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_657bb68f-e891-49ca-a883-6b82ede9af3a">OV</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_2a0ef8f9-eb7e-4617-9e23-8978c43fd538">Other 64-bit Very Long</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_9b76daa4-3cee-441a-a9f9-edaec660f469">Base64 encoded octet-stream</para>
                             </td>
                         </tr>
                         <tr valign="top">
@@ -16854,6 +16893,18 @@ uid         ; is the Unique Identifier of an NPI Instance
                             </td>
                             <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_76c6f3d9-9e91-444d-9a1e-0c261f55887b">String</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_72d3b614-e778-4e1c-9a05-b16fff2d311a">SV</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_824794a0-2a7a-40bb-8194-b7798e299a66">Signed 64-bit Very Long</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_19e23a4c-f41e-4ac4-9342-0d0daeae6b20">Number or String</para>
+                                <para xml:id="para_9244643f-32d6-4c65-a343-ef1338173138">See Note.</para>
                             </td>
                         </tr>
                         <tr valign="top">
@@ -16944,8 +16995,23 @@ uid         ; is the Unique Identifier of an NPI Instance
                                 <para xml:id="para_0e05f5fd-7267-4a3f-ac2f-1a0e146d492c">String</para>
                             </td>
                         </tr>
+                        <tr valign="top">
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ea501a29-d605-4b30-89dc-b4ca3da629b8">UV</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_890745d7-cc41-4453-89a1-d516b10460d6">Unsigned 64-bit Very Long</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_d0978169-afa7-4d0f-9625-bc24eaffc115">Number or String.</para>
+                                <para xml:id="para_d8deb56c-10f9-44d4-a5af-2c392e37477f">See Note.</para>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+                <note>
+                    <para xml:id="para_ddeff55b-d04a-4e22-91d6-b6b22d268066">For IS, DS, SV and UV, a JSON String representation can be used to preserve the original format during transformation of the representation, or if needed to avoid losing precision of a decimal string.</para>
+                </note>
                 <para xml:id="para_2d250794-12f9-4f50-b89e-7b67d0209f89">Although data, such as dates, are represented in the DICOM JSON model as strings, it is expected that they will be treated in the same manner as the original attribute as defined by <olink targetdoc="PS3.6" targetptr="chapter_6" xrefstyle="select: docname label"/>.</para>
             </section>
             <section label="F.2.4" status="3" xml:id="sect_F.2.4">

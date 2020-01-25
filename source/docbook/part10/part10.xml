@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.10" version="5.0" xml:id="PS3.10">
   <title>PS3.10</title>
-  <subtitle>DICOM PS3.10 2019e - Media Storage and File Format for Media Interchange</subtitle>
+  <subtitle>DICOM PS3.10 2020a - Media Storage and File Format for Media Interchange</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -1248,6 +1248,75 @@
       </itemizedlist>
       <para xml:id="para_e4a0aa88-9c96-4b7e-a6e3-febf70b3bd02">In addition, a Secure DICOM File offers the possibility to communicate encryption keys and certificates to the intended recipients by means of key transport, key agreement or symmetric key-encryption key schemes.</para>
     </section>
+      <section label="7.5" status="2" xml:id="sect_7.5">
+          <title>Security Considerations for DICOM File Format</title>
+          <para xml:id="para_e5d008fb-9829-43c5-bc81-817f60435b6d">The DICOM File Format has a potential security vulnerability when the 128-byte File Preamble contains malicious executable content. Such malicious executable content may also refer to other malicious content in the file hidden within Data Elements of the File Meta Information or the Data Set.</para>
+          <para xml:id="para_da577221-78ba-4c0b-8cac-6a4f0a41babd">Depending upon the use and purpose of a particular application it may be appropriate to:</para>
+          <itemizedlist>
+              <listitem>
+                  <para xml:id="para_0ebdc4f2-9de8-40a8-b9bf-95f4964b7598">Sanitize the preamble, such as by:</para>
+                  <itemizedlist>
+                      <listitem>
+                          <para xml:id="para_cd652a8a-1403-429b-b7cf-c4b2b048d146">Verifying that the preamble is:</para>
+                          <itemizedlist>
+                              <listitem>
+                                  <para xml:id="para_8eb25c3b-21f4-4ca2-85cc-cdc93c5078ef">all zeroes, or</para>
+                              </listitem>
+                              <listitem>
+                                  <para xml:id="para_9526e3ef-dab5-480a-bef8-588cb9eb7677">begins with a valid magic number for recognized dual format content (e.g., TIFF or BigTIFF), or</para>
+                              </listitem>
+                              <listitem>
+                                  <para xml:id="para_2b57aae2-3436-4401-a938-f636c58c222e">contains other known safe content.</para>
+                              </listitem>
+                          </itemizedlist>
+                      </listitem>
+                      <listitem>
+                          <para xml:id="para_07b3087a-303d-48ee-8a09-c9b1fab4878c">Clearing the preamble regardless of its content</para>
+                          <note>
+                              <para xml:id="para_55ab1eed-6aab-46e8-8f1f-0d8c22caac45">This will prevent use by applications that depend on the non-DICOM format, if the dual format capability has been used.</para>
+                          </note>
+                      </listitem>
+                      <listitem>
+                          <para xml:id="para_d68d500b-7531-483a-b3bf-58a3419e2761">Testing explicitly for executable preamble contents.</para>
+                          <note>
+                              <para xml:id="para_75172478-b1e5-4dfa-a26f-ba7584991959">The proper response to the presence of executable content depends upon the purpose of the application, but generally, legitimate executable content will not be found in a DICOM File.
+                                  A hypothetical example of an exception would be if the file contained its own executable viewer; this is sufficiently unlikely as to be not worth considering.</para>
+                          </note>
+                      </listitem>
+                  </itemizedlist>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_f41eaab2-f377-44b8-930d-474a92e2bea1">Test explicitly for executable content anywhere within the DICOM File.</para>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_5a52a50d-54fa-4da7-b963-1c238597c4f7">Validate that the DICOM values, structures and content comply with the standard encoding rules and the IOD of the specified SOP Class, including Private Data Elements.</para>
+                  <note>
+                      <para xml:id="para_c5c56b92-6030-4ac7-b3ea-1fafd9b515be">Validation that Data Element Values comply with their Value Representation may partially mitigate the risk of hidden malicious content,
+                          but it may be necessary to remove or analyze the contents of opaque binary data in OB or other binary numeric value Data Elements,
+                          whether they be Standard or Private Data Elements.
+                          The VR of Private Data Elements may not be known.
+                          Without an executable preamble, such hidden content may not be directly executable, but may still serve as a repository of malicious code to be activated by some other accompanying exploit.</para>
+                  </note>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_a9a822e3-3a1b-4ac1-93f5-ba6e200fcdec">Validate that the contents are of the appropriate SOP Classes.</para>
+              </listitem>
+              <listitem>
+                  <para xml:id="para_8bed7e68-f2b6-497c-9593-9a0637d8a493">Validate that DICOM File Format files created for HTTP requests and responses do not contain such malicious content.</para>
+                  <note>
+                      <para xml:id="para_9e7cb254-4818-4e7e-a308-c5e47d0b1be0">For example, it may be appropriate for an archive that stores and retrieves PS3.10 Files to verify and validate both input and output, rather than store and retrieve files without checking the content.</para>
+                  </note>
+              </listitem>
+          </itemizedlist>
+          <para xml:id="para_41907368-1897-45ee-9f7d-5c36d1b61311">The proper response to a validation failure depends upon the purpose of the application. Validation might be performed on input, output, or both.</para>
+          <note>
+              <para xml:id="para_94854e7e-bc04-4e5c-af4f-c7805879d3d7">For example, an archive may choose to sanitize SOP Instances upon receipt, sanitize SOP Instances upon retrieval,
+                  validate the structure and fail storage requests for SOP Instances that fail validation,
+                  or other behavior based on the product purpose and the threat environment.
+                  This behavior is not specified by DICOM because the product purpose and the threat environment are highly dependent upon the application.</para>
+          </note>
+          <para xml:id="para_2d9bdc13-f186-4944-98e2-2203b9475872">An implementation shall describe in its Conformance Statement its behavior with respect to sanitization of the preamble and any other validation performed.</para>
+      </section>
   </chapter>
   <chapter label="8" status="1" xml:id="chapter_8">
     <title>DICOM File Service</title>
@@ -1643,7 +1712,7 @@
     <para xml:id="para_20f04c7e-9656-4eae-8c5a-24cce5d9ac90">An implementation of PS3.10 shall:</para>
     <orderedlist numeration="loweralpha">
       <listitem>
-        <para xml:id="para_0ab1ce12-c73e-4fe8-bcf5-699acafeaba0">have a Conformance Statement based on a <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> Application Profile in accordance with the framework defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>;</para>
+          <para xml:id="para_0ab1ce12-c73e-4fe8-bcf5-699acafeaba0">have a Conformance Statement based on a <olink targetdoc="PS3.11" targetptr="PS3.11" xrefstyle="select: labelnumber"/> Application Profile in accordance with the framework defined in <olink targetdoc="PS3.2" targetptr="PS3.2" xrefstyle="select: labelnumber"/>, which will include addressing the Security Requirements defined in <xref linkend="sect_7.5" xrefstyle="select: label"/>;</para>
       </listitem>
       <listitem>
         <para xml:id="para_d7cbc386-7c33-462b-bb77-42834702b172">meet the requirements of the DICOM File Format as specified in <xref linkend="chapter_7" xrefstyle="template:Section %n"/>;</para>

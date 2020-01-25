@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.19" version="5.0" xml:id="PS3.19">
   <title>PS3.19</title>
-  <subtitle>DICOM PS3.19 2019e - Application Hosting</subtitle>
+  <subtitle>DICOM PS3.19 2020a - Application Hosting</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -2017,9 +2017,15 @@
         <note>
           <para xml:id="para_94007198-f168-4973-b2f4-12b7a636e4f6">It is not the intention that this form be utilized as the basis for other uses. This form does not take advantage of the self-validation features that could be possible with a pure XML representation of the data.</para>
         </note>
-        <para xml:id="para_a8115fff-75ff-415c-ab58-0ea9147bb66a">With the exception of padding, a data source that is creating a new instance of a Native DICOM Model (e.g., the result from some analysis application) shall follow the DICOM encoding rules (e.g., the handling of character sets) in creating Values for the DicomAttributes within the instance of the Native DICOM Model.</para>
+          <para xml:id="para_a8115fff-75ff-415c-ab58-0ea9147bb66a">With the exception of padding to an even byte length,
+              a data source that is creating a new instance of a Native DICOM Model
+              (e.g., the result from some analysis application) shall follow the DICOM encoding rules
+              (e.g., the handling of character sets) in creating Values for the DicomAttributes within the instance of the Native DICOM Model.
+              Attribute Values encoded in a Native DICOM Model are not required to be padded to an even byte length.</para>
         <para xml:id="para_7dc8dcaf-f53d-49cd-8570-4d9993788825">Group Length (gggg,0000) attributes shall not be included in a Native DICOM Model instance.</para>
-        <para xml:id="para_8d20e0b7-09d7-44b4-841a-7ad8690364e0">A data recipient that converts data from an instance of the Native DICOM Model back into a binary encoded DICOM object shall adjust the padding as necessary to meet the encoding rules specified in DICOM <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
+        <para xml:id="para_8d20e0b7-09d7-44b4-841a-7ad8690364e0">A data recipient that converts data from an instance of the Native DICOM Model
+            back into a binary encoded DICOM object shall adjust the padding to an even byte length as necessary to meet the encoding rules specified in DICOM
+            <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>.</para>
       </section>
       <section label="A.1.2" status="3" xml:id="sect_A.1.2">
         <title>Identification</title>
@@ -2089,7 +2095,7 @@
                     <para xml:id="para_4732d3b0-05c0-4012-8af2-11cba3b2a0ab">the contents of part of a DICOM Composite Instance in response to a query on a native model, or</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_6b875924-267e-4a38-a988-75676a6d8834">the contents of a STOW-RS response</para>
+                      <para xml:id="para_6b875924-267e-4a38-a988-75676a6d8834">the contents of a <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> Studies Service Store (STOW-RS) response</para>
                   </listitem>
                   <listitem>
                     <para xml:id="para_cef5d8f3-4943-404a-9281-438b73d60ff4">the contents of a Sequence Item (as defined in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/>), recursively included within an Infoset Value element.</para>
@@ -2414,7 +2420,9 @@
                 <para xml:id="para_916744f4-562d-45bf-bc50-b5d2aba9934b">1</para>
               </td>
               <td align="left" colspan="1" rowspan="1">
-                <para xml:id="para_e28f29d3-876d-4219-823d-d63a61daa38e">A reference to a blob of data that the recipient may retrieve through use of the GetData() method, a WADO-RS call or a STOW-RS call.</para>
+                <para xml:id="para_e28f29d3-876d-4219-823d-d63a61daa38e">A reference to a blob of data that the recipient may retrieve through use of the GetData() method,
+                    a <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> Studies Service Retrieve (WADO-RS) transaction or
+                    a <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> Studies Service Store (STOW-RS) transaction.</para>
                 <para xml:id="para_56897839-8f7d-4cbe-9959-e50ec10937cd">Required if the DICOM Data Element represented is not zero length and an XML Infoset Value, Item, InlineBinary or PersonName element is not present.</para>
                 <para xml:id="para_05efa8e6-e32a-4bc7-8c41-1e8eda28f39b">The provider of the data may use a BulkData reference at its discretion to avoid encoding a large DICOM Value Field as text by value in the Infoset. For example, pixel data or look up tables.</para>
                 <para xml:id="para_ac5ff352-569c-43cb-864c-882bd9deb93f">There is a single BulkData Infoset element representing the entire Value Field, and not one per Value in the case where the Value Multiplicity is greater than one.</para>
@@ -2423,7 +2431,7 @@
                 </note>
                 <para xml:id="para_40e6cfd1-d1ab-428c-aa1d-759b3233246a">All rules (e.g., byte ordering and swapping) in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply.</para>
                 <note>
-                  <para xml:id="para_368ed09e-9d16-43d8-acad-d6712577863f">Implementers should in particular pay attention the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL and OW.</para>
+                    <para xml:id="para_368ed09e-9d16-43d8-acad-d6712577863f">Implementers should pay particular attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL, OV and OW.</para>
                 </note>
                 <para xml:id="para_63ec0186-3bf5-40db-80b1-b9418adccb87">If the BulkData has a string or text Value Representation, the value(s) of the DICOM Specific Character Set Data Element, if present, might be necessary to determine its encoding.</para>
               </td>
@@ -2458,7 +2466,7 @@
                 <para xml:id="para_5b121441-d071-4191-8924-eed4a2bda48c">Required if the NativeDicomModel was:</para>
                 <itemizedlist>
                   <listitem>
-                    <para xml:id="para_2b854968-2dc5-4ee0-b53d-576843e1d67f">returned in response to a WADO-RS Retrieve Metadata request</para>
+                      <para xml:id="para_2b854968-2dc5-4ee0-b53d-576843e1d67f">returned in response to a <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/> Studies Service Retrieve (WADO-RS) Retrieve Metadata request</para>
                   </listitem>
                 </itemizedlist>
                 <para xml:id="para_d531a2f7-01e6-4b69-96b5-3cd81da55589">Shall not be present otherwise.</para>
@@ -2482,7 +2490,7 @@
                     <para xml:id="para_ae8c8397-ac01-44c6-ab86-c1331edbdf51">not zero length</para>
                   </listitem>
                   <listitem>
-                    <para xml:id="para_ea43ed8e-37de-4f23-bb03-143638a399e9">the VR if the enclosing Attribute is either OB, OD, OF, OW, or UN</para>
+                    <para xml:id="para_ea43ed8e-37de-4f23-bb03-143638a399e9">the VR if the enclosing Attribute is OB, OD, OF, OL, OV, OW, or UN</para>
                   </listitem>
                   <listitem>
                     <para xml:id="para_b03235fb-fdb4-4ead-90ef-6e72088c8ccb">an XML Infoset Value or BulkData XML element is not present</para>
@@ -2495,7 +2503,7 @@
                 </note>
                  <para xml:id="para_59619b0f-1a7f-49ec-9d00-3dd74f2c1b72">All rules (e.g., byte ordering and swapping) in <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> apply.</para>
                 <note>
-                  <para xml:id="para_50130faa-0218-41ff-86cb-3c9c9a4d8e7b">Implementers should in particular pay attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL and OW.</para>
+                    <para xml:id="para_50130faa-0218-41ff-86cb-3c9c9a4d8e7b">Implementers should pay particular attention to the <olink targetdoc="PS3.5" targetptr="PS3.5" xrefstyle="select: labelnumber"/> rules regarding the value representations of OD, OF, OL, OV and OW.</para>
                 </note>
               </td>
             </tr>
@@ -2558,8 +2566,8 @@ Keyword = attribute keyword { xsd:token }
 # canonical XML definition of Hex, with lowercase letters disallowed
 Tag = attribute tag { xsd:string{ minLength="8" maxLength="8" pattern="[0-9A-F]{8}" } } 
 VR = attribute vr { "AE" | "AS" | "AT"| "CS" | "DA" | "DS" | "DT" | "FL" | "FD" 
-                    | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OL" | "OW" | "PN" | "SH" | "SL" 
-                    | "SQ" | "SS" | "ST" | "TM" | "UC" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" }
+                    | "IS" | "LO" | "LT" | "OB" | "OD" | "OF" | "OL" | "OV" | | "OW" | "PN" | "SH" | "SL" 
+                    | "SQ" | "SS" | "ST" | "SV" | "TM" | "UC" | "UI" | "UL" | "UN" | "UR" | "US" | "UT" | "UV" }
 PrivateCreator = attribute privateCreator{ xsd:string }
 UUID = attribute uuid { xsd:string }
 URI = attribute uri { xsd:anyURI }
@@ -3944,7 +3952,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetState">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/SetState"
       style="document" />
       <wsdl:input>
@@ -3955,7 +3963,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="BringToFront">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/BringToFront"
       style="document" />
       <wsdl:input>
@@ -3966,7 +3974,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="NotifyDataAvailable">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/NotifyDataAvailable"
       style="document" />
       <wsdl:input>
@@ -3977,7 +3985,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetData">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/GetData"
       style="document" />
       <wsdl:input>
@@ -3988,7 +3996,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReleaseData">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/ReleaseData"
       style="document" />
       <wsdl:input>
@@ -3999,7 +4007,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAsModels">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/GetAsModels"
       style="document" />
       <wsdl:input>
@@ -4010,7 +4018,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReleaseModels">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/ReleaseModels"
       style="document" />
       <wsdl:input>
@@ -4021,7 +4029,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="QueryModel">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/QueryModel"
       style="document" />
       <wsdl:input>
@@ -4032,7 +4040,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="QueryInfoSet">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IApplicationService/QueryInfoSet"
       style="document" />
       <wsdl:input>
@@ -4782,7 +4790,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   type="tns:IHostService-20100825">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GenerateUID">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/GenerateUID"
       style="document" />
       <wsdl:input>
@@ -4793,7 +4801,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAvailableScreen">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/GetAvailableScreen"
       style="document" />
       <wsdl:input>
@@ -4804,7 +4812,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetOutputLocation">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/GetOutputLocation"
       style="document" />
       <wsdl:input>
@@ -4815,7 +4823,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="NotifyStateChanged">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/NotifyStateChanged"
       style="document" />
       <wsdl:input>
@@ -4826,7 +4834,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="NotifyStatus">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/NotifyStatus"
       style="document" />
       <wsdl:input>
@@ -4837,7 +4845,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="NotifyDataAvailable">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/NotifyDataAvailable"
       style="document" />
       <wsdl:input>
@@ -4848,7 +4856,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetData">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/GetData"
       style="document" />
       <wsdl:input>
@@ -4859,7 +4867,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReleaseData">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/ReleaseData"
       style="document" />
       <wsdl:input>
@@ -4870,7 +4878,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAsModels">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/GetAsModels"
       style="document" />
       <wsdl:input>
@@ -4881,7 +4889,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ReleaseModels">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/ReleaseModels"
       style="document" />
       <wsdl:input>
@@ -4892,7 +4900,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="QueryModel">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/QueryModel"
       style="document" />
       <wsdl:input>
@@ -4903,7 +4911,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="QueryInfoSet">
-      <<soap:operation
+      <soap:operation
          soapAction="http://dicom.nema.org/PS3.19/IHostService/QueryInfoSet"
       style="document" />
       <wsdl:input>

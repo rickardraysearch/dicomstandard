@@ -159,6 +159,8 @@ tar -X "${EXCLUDEFILE}" -cvf - \
 	support/stylesheets/findcodesincontextgroups.xsl \
 	support/stylesheets/findcodetuples.xsl \
 	support/stylesheets/finddcmconceptswithoutdefinition.xsl \
+	valuesets/ContextGroupExtraction.java \
+	valuesets/extractvaluesets.sh \
 	XEP_trial \
 	pMML2SVG-0.8.5 \
 	svg2emf \

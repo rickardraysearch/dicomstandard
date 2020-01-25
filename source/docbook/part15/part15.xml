@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2019e - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2020a - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -165,7 +165,17 @@
           <date>1998</date>
           <title>Triple Data Encryption Algorithm Modes of Operation</title>
       </biblioentry>
-      <biblioentry xml:id="biblio_FIPS_46">
+        <biblioentry xml:id="biblio_DNSSD">
+            <abbrev>DNS-SD</abbrev>
+            <author>
+                <personname>Cheshire S.</personname>
+            </author>
+            <title>DNS Self-Discovery</title>
+            <bibliosource>
+                <link xl:href="http://www.dns-sd.org/"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_FIPS_46">
           <abbrev>FIPS 46</abbrev>
           <author>
               <orgname>National Institute of Standards and Technology</orgname>
@@ -422,6 +432,31 @@
         <title>Security Audit and Access Accountability Message - XML Data Definitions for Healthcare Applications</title>
     </biblioentry>
         
+        <biblioentry xml:id="biblio_RFC_4033">
+            <abbrev>RFC 4033</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>March 2005</date>
+            <title>DNS Security Introduction and Requirements</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_4034">
+            <abbrev>RFC 4034</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>March 2005</date>
+            <title>Resource Records for the DNS Security Extensions</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_4035">
+            <abbrev>RFC 4035</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>March 2005</date>
+            <title>Protocol Modifications for the DNS Security Extensions</title>
+        </biblioentry>
+        
         <biblioentry xml:id="biblio_RFC_4346">
             <abbrev>RFC 4346</abbrev>
             <author>
@@ -478,18 +513,28 @@
             <title>DNS-Based Service Discovery</title>
         </biblioentry>
         
-        
-      <biblioentry xml:id="biblio_RFC_7525">
-          <abbrev>RFC 7525</abbrev>
-          <author>
-              <orgname>IETF</orgname>
-          </author>
-          <title>Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</title>
-          <bibliosource>
-              <link xl:href="http://tools.ietf.org/html/rfc7525"/>
-          </bibliosource>
-      </biblioentry>
+        <biblioentry xml:id="biblio_RFC_7525">
+            <abbrev>RFC 7525</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc7525"/>
+            </bibliosource>
+        </biblioentry>
 
+        <biblioentry xml:id="biblio_RFC_8553">
+            <abbrev>RFC 8553</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>DNS AttrLeaf Changes: Fixing Specifications That Use Underscored Node Names</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc8553"/>
+            </bibliosource>
+        </biblioentry>
+        
       <biblioentry xml:id="biblio_BCP_195">
           <abbrev>BCP 195</abbrev>
           <author>
@@ -500,7 +545,6 @@
               <link xl:href="http://tools.ietf.org/html/bcp195"/>
           </bibliosource>
       </biblioentry>
-      
       
       
   </bibliography>
@@ -13013,6 +13057,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_d79e6098-a660-4718-a479-d061ee91316e">Decomposition Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5ba0cd7c-e617-4d71-8671-5d61361dd19c">(0018,937F)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_46201c0a-ed58-46f7-a6ab-969d22c17ff8">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_57c78402-32a3-42fb-8812-175790d4fb83">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6e4a290a-a251-4035-9e5f-feaaad6582f8">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b4d36824-0385-4b37-81d2-b99820a40c56">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_35644cf0-03ba-47af-b306-4b5d43a70a83">Derivation Description</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -16561,6 +16634,35 @@ start = message
                                 <para xml:id="para_8b1bc129-210f-4738-acfb-0650d239b0e8">C</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_9fde3ed8-708a-49ff-b429-991a31b4776b">Multi-energy Acquisition Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_acc63392-c9a4-4727-8cb8-852e00b616c7">(0018,937B)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5705ca7b-73f8-4d66-847d-85d61a60dab6">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_796ad01e-9e0d-4c2c-af92-68f575a24e8d">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3cf3f520-966e-46db-ab93-72ba96e12258">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1220af88-b556-4f1b-985c-efc715d4d57a">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -21613,6 +21715,37 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_87376e0a-9820-4f25-b93a-2beaf7344039">Source End DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9c2c8554-d97d-4a7b-a407-61613a8fce26">(0018,936A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_23ce4e18-fa6e-487b-9b26-f186f4babe1a">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_5052a3af-46b1-492b-910e-2c5b929959e6">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_584ef90b-19e1-4d04-ad63-db58719a1ed3">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_669c2975-abb7-4ec4-8bd5-d52e3509e54b">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8ccbe8ab-628e-44b3-851b-f859948ab77f">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_5ec513fe-05df-481b-beb0-15e0beaa11c9">Source Identifier</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -21750,6 +21883,37 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_ac3dc212-86b8-45a6-aa1e-e44a37c39f0d">Source Start DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9c9dd5bd-30fd-4fa9-b9e6-8f6625e0473d">(0018,9369)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a8245659-a306-4ee4-b884-1d239b5f82ed">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ad7e047d-eaff-441d-9f2e-1b9926378738">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_561ba3f2-a7db-4acc-a9d9-6323892159da">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_e0b504ea-63a3-405a-910c-349178ed5d71">K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9e3faf01-d8e9-4000-b74b-1b3285f2dabc">C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -23177,6 +23341,93 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_9deeb716-dd8a-4f1f-901f-8b67c32a16e1">C</para>
                             </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_a189bc4d-940a-4035-9f6a-14cda7d8321e">X-Ray Detector ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_31233bfd-6596-4775-a2a6-8850be08a2dc">(0018,9371)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_52adab15-6976-4d65-8511-98cb6b419d06">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_98b82fa5-807c-4c7b-9b4a-83a33f4a7a4b">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ab2b4ba1-20cc-43f2-8eae-99e1da6883c1">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_05409fd2-09d0-4229-81d9-bb181b235d8e">K</para>
+                            </td>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_cedf035a-b3bd-4b8a-b96f-35a2c30548fd">X-Ray Detector Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3275f691-4d5b-4dc7-ad3b-a3c51e2d16a3">(0018,9373)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7ed492e8-dcc5-4678-ad11-eed3284774d5">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_6bc09a4b-b4b9-43e3-8a70-a5187c15c662">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_0dc91233-51e7-45e4-b95b-9dc77286ef86">X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_7860b116-2053-4838-bce2-ff34e1c4907a">K</para>
+                            </td>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_8e14b01e-10db-4fd5-9b3a-dcb0553efbb4">X-Ray Source ID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_c774e946-2a17-42ce-a1ec-fd0aa7d91de1">(0018,9367)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b78f2763-715b-4308-a781-6d037b636e7d">N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_44e81e80-625d-4d25-9b9a-549dd1b5cbc3">Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ddb2c9f5-dc18-4227-8757-d1a3351e26a7">D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_8a81c351-940b-423e-9f8d-99173481323e">K</para>
+                            </td>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -30310,6 +30561,23 @@ start = message
                                     </tr>
                                     <tr valign="top">
                                         <td align="center" colspan="1" rowspan="1">
+                                            <para xml:id="para_56039e61-4536-4335-b253-1d9dfbd46bab">(00E1,xx50)</para>
+                                        </td>
+                                        <td align="left" colspan="1" rowspan="1">
+                                            <para xml:id="para_88f69dd8-3eab-4889-aad5-c53d27e79488">ELSCINT1</para>
+                                        </td>
+                                        <td align="center" colspan="1" rowspan="1">
+                                            <para xml:id="para_4dfe3344-9784-4d17-93a6-7b9223befcd0">DS</para>
+                                        </td>
+                                        <td align="center" colspan="1" rowspan="1">
+                                            <para xml:id="para_3ef81964-dbba-4e4b-83e8-c65b909c94e2">1</para>
+                                        </td>
+                                        <td align="left" colspan="1" rowspan="1">
+                                            <para xml:id="para_813263c3-953d-4cca-aa7c-ebad18aaa2b2">Acquisition Duration</para>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top">
+                                        <td align="center" colspan="1" rowspan="1">
                                             <para xml:id="para_00079aa2-36e6-4d90-a874-38c53bd56673">(01E1,xx26)</para>
                                         </td>
                                         <td align="left" colspan="1" rowspan="1">
@@ -30323,23 +30591,6 @@ start = message
                                         </td>
                                         <td align="left" colspan="1" rowspan="1">
                                             <para xml:id="para_009030a5-173b-40a0-a613-da9b7e8e0cc8">Phantom Type</para>
-                                        </td>
-                                    </tr>
-                                    <tr valign="top">
-                                        <td align="center" colspan="1" rowspan="1">
-                                            <para xml:id="para_56039e61-4536-4335-b253-1d9dfbd46bab">(01E1,xx50)</para>
-                                        </td>
-                                        <td align="left" colspan="1" rowspan="1">
-                                            <para xml:id="para_88f69dd8-3eab-4889-aad5-c53d27e79488">ELSCINT1</para>
-                                        </td>
-                                        <td align="center" colspan="1" rowspan="1">
-                                            <para xml:id="para_4dfe3344-9784-4d17-93a6-7b9223befcd0">DS</para>
-                                        </td>
-                                        <td align="center" colspan="1" rowspan="1">
-                                            <para xml:id="para_3ef81964-dbba-4e4b-83e8-c65b909c94e2">1</para>
-                                        </td>
-                                        <td align="left" colspan="1" rowspan="1">
-                                            <para xml:id="para_813263c3-953d-4cca-aa7c-ebad18aaa2b2">Acquisition Duration</para>
                                         </td>
                                     </tr>
                                     <tr valign="top">
@@ -33110,7 +33361,8 @@ start = message
     <title>Scope</title>
   
   <para xml:id="para_bc387209-ade9-4c28-acf3-bd666c18e3b2">DHCP servers may coordinate their IP and hostname assignments with a DNS server. This permits dynamic assignment of IP addresses without interfering with access to DHCP Clients by other systems. The other systems utilize the agreed hostname (which DHCP can manage and provide to the client) and obtain the current IP address by means of DNS lookup.</para>
-  <para xml:id="para_3ce0bcc9-63d1-4809-9bde-25bd771b4d15">A DHCP Server is in compliance with this optional part of the Basic Network Address Management Profile profile if it maintains and updates the relevant DNS server so as to maintain the proper hostname/IP relationships in the DNS database.</para>
+      <para xml:id="para_709f1747-b1ff-4495-af66-561479458cda">Dynamic DNS (DDNS) provides the capability to the client to update DNS records hosted on the DNS server. The client can be a DHCP server, Active Directory or LDAP servers, or even an application announcing the systems IP address and optionally any available services.</para>
+      <para xml:id="para_3ce0bcc9-63d1-4809-9bde-25bd771b4d15">A DHCP Server complies with this optional part of the Basic Network Address Management Profile if it maintains and updates the relevant DNS entry so as to maintain the hostname and IP relationships in the DNS database when they change.</para>
   </section>
 <section label="F.1.5.2" status="4" xml:id="sect_F.1.5.2">
     <title>Use Case Roles</title>
@@ -33162,7 +33414,9 @@ start = message
 <section label="F.1.5.4" status="4" xml:id="sect_F.1.5.4">
     <title>Basic Course of Events</title>
   
-  <para xml:id="para_56ae9536-422c-4501-90cf-c8ce298b7281">After the DHCP server has assigned an IP address to a DHCP client, the DHCP server uses DDNS to inform the DNS server that the hostname assigned to the DHCP client has been given the assigned IP address. The DNS Server updates the DNS database so that subsequent DNS queries for this hostname are given the assigned IP address. When the lease for the IP address expires without renewal, the DHCP server informs the DNS server that the IP address and hostname are no longer valid. The DNS server removes them from the DNS database.</para>
+    <para xml:id="para_56ae9536-422c-4501-90cf-c8ce298b7281">The DHCP server assigns an IP address to a DHCP client, then informs the DDNS server that the hostname associated with the DHCP client has been given an assigned IP address.
+        The DDNS server updates the DNS database and links the IP address to the hostname. DNS queries for this hostname are directed to the assigned IP address.
+        If the assigned IP address changes or expires, the DHCP server informs the DDNS server, which updates the DNS database.</para>
   </section>
 </section>
 <section label="F.1.6" status="3" xml:id="sect_F.1.6">
@@ -33199,11 +33453,10 @@ start = message
 <section label="F.1.8" status="3" xml:id="sect_F.1.8">
     <title>Conformance</title>
   
-  <para xml:id="para_607060bc-7118-4068-9739-9abfba36b53d">The Conformance Statement for an LDAP Client shall describe its use of LDAP to configure the local AE titles. Any conformance to the Update LDAP Server option shall be specified, together with the values for all component object attributes in the update sent to the LDAP Server. Any use of LDAP to configure the remote device addresses and capabilities shall be described. The LDAP queries used to obtain remote device component object attributes shall be specified.</para>
-  <note>
-    <para xml:id="para_a5fb78f1-ecd2-4362-ac51-469e5538f84b">In particular, use of LDAP to obtain the AE Title, TCP port, and IP address for specific system actors (e.g., an Image Archive, or a Performed Procedure Step Manager) should be detailed, as well as how the LDAP information for remote devices is selected for operational use.</para>
-  </note>
-  
+    <para xml:id="para_8750df41-100a-4031-97b4-610915f2b646">An implementation that supports this profile shall state in its Conformance Statement whether it supports DHCP as DHCP Client or DHCP Server.</para>
+    <para xml:id="para_61768d52-6395-4c40-b592-8b3bf0938f85">An implementation that supports this profile as a DHCP Client shall state in its Conformance Statement how the DHCP Server is discovered (see <xref linkend="sect_F.1.3" xrefstyle="select: label"/>).</para>
+    <para xml:id="para_38a928ab-986d-4cab-b037-38ac3a737af1">An implementation that supports this profile shall state in its Conformance Statement whether it supports DNSSEC <xref linkend="biblio_RFC_4033"/> <xref linkend="biblio_RFC_4034"/> <xref linkend="biblio_RFC_4035"/> for the interactions described in this profile, in which case either the options supported shall be stated or a reference provided to the DNSSEC support for this product.</para>
+    
   </section>
 </section>
 </chapter>
@@ -35892,7 +36145,7 @@ objectclass ( 1.2.840.10008.15.0.4.8
   
   <para xml:id="para_eb59053e-d585-4813-9589-a265a7e20712">Service discovery mechanisms provide a means for devices to announce their presence and seek information about the existence of other services on the network. Many of these mechanisms are DNS-based.</para>
   <para xml:id="para_831b841c-cd6c-4cdd-ab6e-0abff7e9d0f9">The exact use of such protocols as DNS Service Discovery (DNS-SD), Multi-cast DNS (mDNS) and DNS Dynamic Updates is defined in RFC's referenced by DICOM. This section standardizes the name to be used in DNS SRV records for such purposes, and the DNS TXT records that encode accompanying parameters.</para>
-  <para xml:id="para_7f29c0ba-4c52-4e19-b334-1ca98aa95d08">Security issues associated with self discovery are out of scope. See <xref linkend="sect_F.1.1.4" xrefstyle="select: label"/> for the informative discussion on DNS Security issues.</para>
+  <para xml:id="para_7f29c0ba-4c52-4e19-b334-1ca98aa95d08">Security issues associated with self-discovery are out of scope. See <xref linkend="sect_F.1.1.4" xrefstyle="select: label"/> for the informative discussion on DNS Security issues.</para>
   </section>
 <section label="H.2.2" status="3" xml:id="sect_H.2.2">
     <title>Use Case Roles</title>
@@ -35923,76 +36176,65 @@ objectclass ( 1.2.840.10008.15.0.4.8
 </varlistentry>
   </variablelist>
 </section>
-<section label="H.2.3" status="3" xml:id="sect_H.2.3">
-    <title>Referenced Standards</title>
-  
-  <para xml:id="para_34b6e767-ea16-4db3-af31-8a5c2cd1aabf">
-<xref linkend="biblio_RFC_2136"/> DNS Dynamic Updates
-</para>
-  <para xml:id="para_a620f0d5-02c5-4543-a057-7299af7b010c">
-<xref linkend="biblio_RFC_2181"/> Clarifications to the DNS Specification
-</para>
-  <para xml:id="para_08fa6e11-8bc2-4bbc-a788-29ce47262885">
-<xref linkend="biblio_RFC_2219"/> Use of DNS Aliases for Network Services
-</para>
-  <para xml:id="para_a3bd3b28-8e2c-4918-bfbd-da44226ec0f5">
-<xref linkend="biblio_RFC_2782"/> A DNS RR for specifying the location of services (DNS SRV)
-</para>
-  <para xml:id="para_4176f1ce-179f-4920-9df5-317b294f09be">
-<xref linkend="biblio_RFC_6762"/> Multicast DNS
-</para>
-  <para xml:id="para_1bc7caba-1c2b-4509-87bc-3ca1cdbaed1a">
-<xref linkend="biblio_RFC_6763"/> DNS-Based Service Discovery
-</para>
-  <para xml:id="para_0ed85e47-1f58-4f0c-83bf-5a330a6f521f">DNS Self-Discovery <link xl:href="http://www.dns-sd.org/"/>
-</para>
-  
-  <para xml:id="para_d60d1240-2101-48da-92a3-5c5f26e02198">The name to be used in the DNS SRV to advertise DICOM Association Acceptors, regardless of the SOP Class(es) supported, shall be</para>
-<itemizedlist>
-  <listitem>
-<para xml:id="para_74a3bc73-aac7-4631-a50b-8fd245684c5b">"dicom" for unsecured DICOM communication</para>
-</listitem>
-  <listitem>
-<para xml:id="para_ed2638cd-33c9-4f4e-8fd1-141bbe7a807e">"dicom-tls" for the Basic TLS Secure Transport Connection Profile</para>
-</listitem>
-  <listitem>
-<para xml:id="para_fec61f4e-c092-42c5-87bd-4cf8328a0094">"dicom-iscl" for ISCL Transport Connection Profile</para>
-</listitem>
-  <listitem>
-<para xml:id="para_872fd0d7-d7bc-4d15-bbf1-02c27f69972a">"dicomweb" for DICOM web services over unsecured http</para>
-</listitem>
-  <listitem>
-<para xml:id="para_6ac6baf9-64b0-4088-9195-a6abd8fa1735">"dicomweb-tls" for DICOM web services over https</para>
-</listitem>
-</itemizedlist>
-<note>
-    <para xml:id="para_d82058b3-3695-44d5-9d2d-1e97e19b6515">These choices are consistent with the names registered with IANA to define the mapping of IP ports to services, which is conventional for this usage. The choice "dicom" is used rather than the "acr-nema" alternative for clarity. There is no implied port choice by the usage in the DNS SRV Service Type, since the port is explicitly conveyed.</para>
-  </note>
-  <para xml:id="para_f35e3cf8-a6e5-4bc1-ba4e-fc09056ea256">The DNS TXT record may contain the following parameters:</para>
-  <itemizedlist>
-    <listitem>
-      <para xml:id="para_feca3b53-c009-4142-8d29-a1ef84cbc276">AET=
-      <emphasis role="italic">&lt;application entity title&gt;</emphasis>, where the value
-      <emphasis role="italic">&lt;application entity title&gt;</emphasis>is to be used as the Called Application Entity Title when initiating Associations to the device</para>
-    </listitem>
-    <listitem>
-      <para xml:id="para_ed187a3b-81d6-4444-aa22-63a2e2303bf0">PrimaryDeviceType=
-      <emphasis role="italic">&lt;primary device type&gt;</emphasis>, where the value
-      <emphasis role="italic">&lt;primary device type&gt;</emphasis>is as defined <xref linkend="table_H.1-2" xrefstyle="select: label"/> Attributes of Device Object</para>
-    </listitem>
-    <listitem>
-      <para xml:id="para_eafdda71-3d03-479c-baf6-70de6e10654f">DICOMWebPath=
-        <emphasis role="italic">&lt;service&gt;</emphasis>, where the value
-        <emphasis role="italic">&lt;service&gt;</emphasis> is the
-        <emphasis role="italic">path</emphasis> component of the DICOM Web Service root as defined in <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>
-</para>
-    </listitem>
-  </itemizedlist>
-  <para xml:id="para_6239b305-7c22-4957-ba47-ef5364e90b0c">In the absence of a DNS TXT record, or the AET parameter of the DNS TXT record, then the Instance Name preceding the Service Type in the DNS SRV record used for DICOM service discovery shall be the AET.</para>
-  <note>
-    <para xml:id="para_f26c9b62-fec1-4076-b790-6980bb11c58a">Further parameters are not specified, for example to indicate the SOP Classes supported or other information, since the size of DNS records encoded as UDP datagrams is strictly limited, and furthermore, the envisaged multicast usage encourages the exchange of the minimal information necessary. The existing DICOM association negotiation mechanism can be used to explore the SOP Classes offered once the IP address, port number and AET are known. The primary device type is supplied because it is useful to indicate to users the type of device, which is not conveyed during association establishment.</para>
-  </note>
-</section>
+            <section label="H.2.3" status="3" xml:id="sect_H.2.3">
+                <title>Referenced Standards</title>
+
+                <para xml:id="para_34b6e767-ea16-4db3-af31-8a5c2cd1aabf">
+                    <xref linkend="biblio_RFC_2136"/> DNS Dynamic Updates</para>
+                <para xml:id="para_a620f0d5-02c5-4543-a057-7299af7b010c">
+                    <xref linkend="biblio_RFC_2181"/> Clarifications to the DNS Specification</para>
+                <para xml:id="para_08fa6e11-8bc2-4bbc-a788-29ce47262885">
+                    <xref linkend="biblio_RFC_2219"/> Use of DNS Aliases for Network Services</para>
+                <para xml:id="para_a3bd3b28-8e2c-4918-bfbd-da44226ec0f5">
+                    <xref linkend="biblio_RFC_2782"/> A DNS RR for specifying the location of services (DNS SRV)</para>
+                <para xml:id="para_4176f1ce-179f-4920-9df5-317b294f09be">
+                    <xref linkend="biblio_RFC_6762"/> Multicast DNS</para>
+                <para xml:id="para_1bc7caba-1c2b-4509-87bc-3ca1cdbaed1a">
+                    <xref linkend="biblio_RFC_6763"/> DNS-Based Service Discovery</para>
+                <para xml:id="para_186d9a1c-3717-47a8-8c38-f4b24457d619">
+                    <xref linkend="biblio_RFC_8553"/> DNS AttrLeaf Changes</para>
+                <para xml:id="para_0ed85e47-1f58-4f0c-83bf-5a330a6f521f">
+                    <xref linkend="biblio_DNSSD"/> DNS Self-Discovery </para>
+
+                <para xml:id="para_d60d1240-2101-48da-92a3-5c5f26e02198">The name to be used in the DNS SRV to advertise DICOM Association Acceptors, regardless of the SOP Class(es) supported, shall be</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_74a3bc73-aac7-4631-a50b-8fd245684c5b">"dicom" for unsecured DICOM communication</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_ed2638cd-33c9-4f4e-8fd1-141bbe7a807e">"dicom-tls" for the Basic TLS Secure Transport Connection Profile</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_fec61f4e-c092-42c5-87bd-4cf8328a0094">"dicom-iscl" for ISCL Transport Connection Profile</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_872fd0d7-d7bc-4d15-bbf1-02c27f69972a">"dicomweb" for DICOM web services over unsecured http</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_6ac6baf9-64b0-4088-9195-a6abd8fa1735">"dicomweb-tls" for DICOM web services over https</para>
+                    </listitem>
+                </itemizedlist>
+                <note>
+                    <para xml:id="para_d82058b3-3695-44d5-9d2d-1e97e19b6515">These choices are consistent with the names registered with IANA to define the mapping of IP ports to services, which is conventional for this usage. The choice "dicom" is used rather than the "acr-nema" alternative for clarity. There is no implied port choice by the usage in the DNS SRV Service Type, since the port is explicitly conveyed.</para>
+                </note>
+                <para xml:id="para_f35e3cf8-a6e5-4bc1-ba4e-fc09056ea256">The DNS TXT record may contain the following parameters:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para xml:id="para_feca3b53-c009-4142-8d29-a1ef84cbc276">AET= <emphasis role="italic">&lt;application entity title&gt;</emphasis>, where the value <emphasis role="italic">&lt;application entity title&gt;</emphasis>is to be used as the Called Application Entity Title when initiating Associations to the device</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_ed187a3b-81d6-4444-aa22-63a2e2303bf0">PrimaryDeviceType= <emphasis role="italic">&lt;primary device type&gt;</emphasis>, where the value <emphasis role="italic">&lt;primary device type&gt;</emphasis>is as defined <xref linkend="table_H.1-2" xrefstyle="select: label"/> Attributes of Device Object</para>
+                    </listitem>
+                    <listitem>
+                        <para xml:id="para_eafdda71-3d03-479c-baf6-70de6e10654f">DICOMWebPath= <emphasis role="italic">&lt;service&gt;</emphasis>, where the value <emphasis role="italic">&lt;service&gt;</emphasis> is the <emphasis role="italic">path</emphasis> component of the DICOM Web Service root as defined in <olink targetdoc="PS3.18" targetptr="PS3.18" xrefstyle="select: labelnumber"/>
+                        </para>
+                    </listitem>
+                </itemizedlist>
+                <para xml:id="para_6239b305-7c22-4957-ba47-ef5364e90b0c">In the absence of a DNS TXT record, or the AET parameter of the DNS TXT record, then the Instance Name preceding the Service Type in the DNS SRV record used for DICOM service discovery shall be the AET.</para>
+                <note>
+                    <para xml:id="para_f26c9b62-fec1-4076-b790-6980bb11c58a">Further parameters are not specified, for example to indicate the SOP Classes supported or other information, since the size of DNS records encoded as UDP datagrams is strictly limited, and furthermore, the envisaged multicast usage encourages the exchange of the minimal information necessary. The existing DICOM association negotiation mechanism can be used to explore the SOP Classes offered once the IP address, port number and AET are known. The primary device type is supplied because it is useful to indicate to users the type of device, which is not conveyed during association establishment.</para>
+                </note>
+            </section>
   <section label="H.2.4" status="3" xml:id="sect_H.2.4">
     <title>Examples</title>
     <para xml:id="para_f20e3ede-8d69-4ea5-b731-a8b4e215fb04">Example SRV record:</para>
@@ -36014,6 +36256,11 @@ objectclass ( 1.2.840.10008.15.0.4.8
       </listitem>
     </itemizedlist>
   </section>
+    <section label="H.2.5" status="3" xml:id="sect_H.2.5">
+        <title>Conformance</title>
+        <para xml:id="para_9afc5d9c-0c0b-40f1-a586-d054d5c092ca">An implementation that supports this profile shall state in its Conformance Statement whether it supports reading (DNS Client) or writing DNS (DNS Server) records.</para>
+        <para xml:id="para_8ae48d53-3d2d-4414-9cad-f136f6c907a5">An implementation that supports this profile shall state in its Conformance Statement whether it supports DNSSEC <xref linkend="biblio_RFC_4033"/> <xref linkend="biblio_RFC_4034"/> <xref linkend="biblio_RFC_4035"/> for the interactions described in this profile, in which case either the options supported shall be stated or a reference provided to the DNSSEC support for this product.</para>
+    </section>
 </section>
 </chapter>
 </book>

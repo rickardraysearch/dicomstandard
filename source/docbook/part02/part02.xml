@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2019e - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2020a - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -2887,7 +2887,29 @@
               <para xml:id="para_23c38862-60ae-4292-9a05-5e9c72652738">Transfer</para>
             </td>
           </tr>
-          <tr valign="top">
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_cd633c99-872d-4616-b1e0-c87dc80d7140">1.2.840.10008.5.1.4.1.1.104.4</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_c262d4d2-37db-4957-abe8-ccb4ead99c72">Encapsulated OBJ Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_2508e7e3-f007-4bf6-936a-b4d6b47b88ee">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_4d7ca265-92d7-40b1-b797-9cf36664db1e">1.2.840.10008.5.1.4.1.1.104.5</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_e48730fa-bdd8-437b-ae08-10b2883c884f">Encapsulated MTL Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_6f36a898-91c9-4e31-a063-5403500dd46d">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_c882eb6d-a344-4b60-ac45-6d109a404878">1.2.840.10008.5.1.4.1.1.128</para>
             </td>
@@ -3094,6 +3116,28 @@
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_4ad4308f-4450-43a9-80d9-389dd8abb5cc">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_1bfb9576-c9d8-47bd-94fa-6399a0c168df">1.2.840.10008.5.1.4.1.1.481.14</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_00700514-898f-462c-8fa0-7b8e5cb93c25">Tomotherapeutic Radiation Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_a30493d3-c4d4-4bed-9b96-b46595e7e018">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_67de18e2-bdcf-4a2e-a106-5a5894d4b791">1.2.840.10008.5.1.4.1.1.481.15</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_986a7c37-0b3c-4001-b9da-912dc1b4fb87">Robotic-Arm Radiation Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para xml:id="para_d0fd594e-b11b-4796-a53c-11198b9c0df3">Transfer</para>
                 </td>
             </tr>
             <tr valign="top">
@@ -49092,7 +49136,7 @@
       </section>
       <section label="J.4.2" xml:id="sect_J.4.2">
         <title>AE Specifications</title>
-        <para xml:id="para_d4f63864-31f6-4536-baf1-4d3d65f45995">This AE complies with <olink targetdoc="PS3.18" targetptr="sect_6.6" xrefstyle="select: docname label quotedtitle"/>, specification for STOW-RS storage.</para>
+          <para xml:id="para_d4f63864-31f6-4536-baf1-4d3d65f45995">This AE complies with <olink targetdoc="PS3.18" targetptr="sect_10.5" xrefstyle="select: docname label quotedtitle"/>, specification for STOW-RS storage.</para>
         <section label="J.4.2.1" xml:id="sect_J.4.2.1">
           <title>STOW-RS Specifications</title>
           <section label="J.4.2.1.1" xml:id="sect_J.4.2.1.1">
@@ -49638,7 +49682,7 @@
       </section>
       <section label="K.4.2" xml:id="sect_K.4.2">
         <title>AE Specifications</title>
-        <para xml:id="para_f27dbc01-0f50-434c-b573-f4cff826777e">This AE complies with <olink targetdoc="PS3.18" targetptr="sect_6.7" xrefstyle="select: docname label"/>, specification for QIDO-RS.</para>
+        <para xml:id="para_f27dbc01-0f50-434c-b573-f4cff826777e">This AE complies with <olink targetdoc="PS3.18" targetptr="sect_10.6" xrefstyle="select: docname label"/>, specification for QIDO-RS.</para>
         <section label="K.4.2.1" xml:id="sect_K.4.2.1">
           <title>QIDO-RS Specifications</title>
           <section label="K.4.2.1.1" xml:id="sect_K.4.2.1.1">
@@ -50867,7 +50911,7 @@
                         <mediaobject>
                             <imageobject>
                                 <!--<imagedata fileref="figures/PS3.2_L.4.1-1.svg"/>-->
-                                <imagedata fileref="part2_fromword_files/image017_sup202.png"/>
+                                <imagedata fileref="part02_fromword_files/image017_sup202.png"/>
                             </imageobject>
                         </mediaobject>
                     </figure>
@@ -51368,7 +51412,7 @@
                         <mediaobject>
                             <imageobject>
                                 <!--<imagedata fileref="figures/PS3.2_M.4.1-1.svg"/>-->
-                                <imagedata fileref="part2_fromword_files/imageNNN.png"/>
+                                <imagedata fileref="part02_fromword_files/image018_sup202.png"/>
                             </imageobject>
                         </mediaobject>
                     </figure>

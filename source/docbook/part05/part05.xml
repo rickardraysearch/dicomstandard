@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.5" version="5.0" xml:id="PS3.5">
   <title>PS3.5</title>
-  <subtitle>DICOM PS3.5 2019e - Data Structures and Encoding</subtitle>
+  <subtitle>DICOM PS3.5 2020a - Data Structures and Encoding</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
     </author>
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
       <holder>NEMA</holder>
     </copyright>
       <legalnotice>
@@ -4937,7 +4937,7 @@
                 <para xml:id="para_20c915b1-cde8-452f-a3fa-716317d06231">60</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_bb4827d8-b9cc-4c3c-acc8-2b3fa6f34e7c">16.17 ms</para>
+                <para xml:id="para_bb4827d8-b9cc-4c3c-acc8-2b3fa6f34e7c">16.67 ms</para>
               </td>
             </tr>
             <tr valign="top">
@@ -5492,7 +5492,7 @@
                 <para xml:id="para_78a6e7a6-739b-4ad0-89e4-b3dc87890fbb">60</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_8a8ca35e-8880-4a52-9363-5086164aa50d">16.17 ms</para>
+                <para xml:id="para_8a8ca35e-8880-4a52-9363-5086164aa50d">16.67 ms</para>
               </td>
             </tr>
             <tr valign="top">
@@ -5633,7 +5633,7 @@
                 <para xml:id="para_e17b99e9-fd88-477f-bfc6-ad3754faea8a">60</para>
               </td>
               <td align="center" colspan="1" rowspan="1">
-                <para xml:id="para_d6abe5e2-4198-427e-92b6-b72c4e94dbca">16.17 ms</para>
+                <para xml:id="para_d6abe5e2-4198-427e-92b6-b72c4e94dbca">16.67 ms</para>
               </td>
             </tr>
             <tr valign="top">
@@ -6359,6 +6359,23 @@
           </orderedlist>
         </note>
       </section>
+        <section label="8.5" status="2" xml:id="sect_8.5">
+            <title>Security Considerations for Encoding of Pixel, Overlay, and Waveform Data (Informative)</title>
+            <para xml:id="para_0134b041-f3fe-4167-9146-34fff5b1fc85">The encapsulated formats conform to other standards, e.g., JPEG. Many of these formats have had their own security issues, both with the format itself and with common implementations for processing the format.</para>
+            <para xml:id="para_fa9145f9-2c72-4bbe-912a-460d6f6c1a03">Implementations that support encapsulated format encoding may need to:</para>
+            <itemizedlist>
+                <listitem>
+                    <para xml:id="para_3262e962-324a-4e42-a0f0-5786d6972df0">Perform input validation and sanitation to detect and perhaps remove invalid or malicious content.</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_bea42dd8-2ce6-40e4-a027-77e10117c2f5">Perform output validation to ensure safe compliance with format specification.</para>
+                </listitem>
+                <listitem>
+                    <para xml:id="para_69d64971-5ba2-41d8-82a1-3ce18226dec4">Monitor library implementations for vulnerability reports, updates, and have a process for managing these updates.</para>
+                </listitem>
+            </itemizedlist>
+            <para xml:id="para_2121163c-9cc8-4bb6-84d9-412fae31b60f">Tracking, notification, and remediation of these security problems will normally be in the context of the encapsulated format and not in the context of DICOM. This means those implementing and deploying the encapsulated format must consider security issues from those other contexts.</para>
+        </section>
     </section>
   </chapter>
   <chapter label="9" status="1" xml:id="chapter_9">

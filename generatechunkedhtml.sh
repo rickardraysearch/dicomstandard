@@ -86,6 +86,10 @@ if [ ! -z `ls -1 source/docbook/part${part}/figures/*.svg 2>&1| grep -v 'No such
 then
   cp -v source/docbook/part${part}/figures/*.svg output/chtml/part${part}/figures
 fi
+if [ ! -z `ls -1 source/docbook/part${part}/figures/*.png 2>&1| grep -v 'No such file or directory' | head -1` ]
+then
+  cp -v source/docbook/part${part}/figures/*.png output/chtml/part${part}/figures
+fi
 
 cp -v docbook-xsl-ns-1.78.1/images/draft.png output/chtml/part${part}/figures
 
