@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2020a - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2020b - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -88,83 +88,83 @@
         <para xml:id="para_7a3fb8ed-7510-486c-b790-d36c06e0b0b9">Normative RFC's are frequently updated by issuance of subsequent RFC's. The original older RFC is not modified to include references to the newer RFC.</para>
     </note>   
     <bibliography>
-    <biblioentry xml:id="biblio_ISODirectives2">
-      <abbrev>ISO/IEC Directives, Part 2</abbrev>
-      <author>
-        <orgname>ISO/IEC</orgname>
-      </author>
-      <date>2016/05</date>
-      <edition>7.0</edition>
-      <title>Rules for the structure and drafting of International Standards</title>
-      <bibliosource>
-        <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
-      </bibliosource>
-    </biblioentry>
-      <biblioentry xml:id="biblio_ISO7498-1">
-          <abbrev>ISO 7498-1</abbrev>
-          <author>
-              <orgname>ISO</orgname>
-          </author>
-          <date>1994</date>
-          <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ISO7498-2">
-          <abbrev>ISO 7498-2</abbrev>
-          <author>
-              <orgname>ISO</orgname>
-          </author>
-          <date>1989</date>
-          <title>Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ISO8509">
-          <abbrev>ISO/TR 8509</abbrev>
-          <author>
-              <orgname>ISO</orgname>
-          </author>
-          <title>Information Processing Systems - Open Systems Interconnection - Service Conventions</title>
-          <releaseinfo>
-              <remark>ISO/TR 8509 has been withdrawn. See ISO/IEC 2382-26:1993 Information technology - Vocabulary - Part 26: Open systems interconnection</remark>
-          </releaseinfo>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ISO8649">
-          <abbrev>ISO 8649</abbrev>
-          <author>
-              <orgname>ISO</orgname>
-          </author>
-          <date>1988</date>
-          <title>Information processing systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE)</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ISOIEC10118-3">
-          <abbrev>ISO/IEC 10118-3</abbrev>
-          <author>
-              <orgname>ISO</orgname>
-          </author>
-          <date>2004</date>
-          <title>Information technology - Security techniques - Hash-functions - Part 3: Dedicated hash-functions (RIPEMD-160 reference)</title>
-          <releaseinfo>
-              <remark xml:id="para_f641993e-69a8-40dd-8e94-81b442a281e9">The draft RIPEMD-160 specification and sample code are also available at <link xl:href="http://homes.esat.kuleuven.be/~bosselae/ripemd160.html"/>
-</remark>
-          </releaseinfo>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ECMA235">
-          <abbrev>ECMA 235</abbrev>
-          <author>
-              <orgname>ECMA</orgname>
-          </author>
-          <date>March 1996</date>
-          <title>The ECMA GSS-API Mechanism</title>
-          <bibliosource>
-              <link xl:href="http://www.ecma-international.org/publications/standards/Ecma-235.htm"/>
-          </bibliosource>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ANSIX9.52">
-          <abbrev>ANSI X9.52</abbrev>
-          <author>
-              <orgname>ANSI</orgname>
-          </author>
-          <date>1998</date>
-          <title>Triple Data Encryption Algorithm Modes of Operation</title>
-      </biblioentry>
+        <biblioentry xml:id="biblio_ISODirectives2">
+            <abbrev>ISO/IEC Directives, Part 2</abbrev>
+            <author>
+                <orgname>ISO/IEC</orgname>
+            </author>
+            <date>2016/05</date>
+            <edition>7.0</edition>
+            <title>Rules for the structure and drafting of International Standards</title>
+            <bibliosource>
+                <link xl:href="http://www.iec.ch/members_experts/refdocs/iec/isoiecdir-2%7Bed7.0%7Den.pdf"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO7498-1">
+            <abbrev>ISO 7498-1</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1994</date>
+            <title>Information Processing Systems - Open Systems Interconnection - Basic Reference Model</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO7498-2">
+            <abbrev>ISO 7498-2</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1989</date>
+            <title>Information processing systems - Open Systems Interconnection - Basic reference Model - Part 2: Security Architecture</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO8509">
+            <abbrev>ISO/TR 8509</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <title>Information Processing Systems - Open Systems Interconnection - Service Conventions</title>
+            <releaseinfo>
+                <remark>ISO/TR 8509 has been withdrawn. See ISO/IEC 2382-26:1993 Information technology - Vocabulary - Part 26: Open systems interconnection</remark>
+            </releaseinfo>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO8649">
+            <abbrev>ISO 8649</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>1988</date>
+            <title>Information processing systems - Open Systems Interconnection - Service definition for the Association Control Service Element (ACSE)</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISOIEC10118-3">
+            <abbrev>ISO/IEC 10118-3</abbrev>
+            <author>
+                <orgname>ISO</orgname>
+            </author>
+            <date>2004</date>
+            <title>Information technology - Security techniques - Hash-functions - Part 3: Dedicated hash-functions (RIPEMD-160 reference)</title>
+            <releaseinfo>
+                <remark xml:id="para_f641993e-69a8-40dd-8e94-81b442a281e9">The draft RIPEMD-160 specification and sample code are also available at <link xl:href="http://homes.esat.kuleuven.be/~bosselae/ripemd160.html"/>
+                </remark>
+            </releaseinfo>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ECMA235">
+            <abbrev>ECMA 235</abbrev>
+            <author>
+                <orgname>ECMA</orgname>
+            </author>
+            <date>March 1996</date>
+            <title>The ECMA GSS-API Mechanism</title>
+            <bibliosource>
+                <link xl:href="http://www.ecma-international.org/publications/standards/Ecma-235.htm"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ANSIX9.52">
+            <abbrev>ANSI X9.52</abbrev>
+            <author>
+                <orgname>ANSI</orgname>
+            </author>
+            <date>1998</date>
+            <title>Triple Data Encryption Algorithm Modes of Operation</title>
+        </biblioentry>
         <biblioentry xml:id="biblio_DNSSD">
             <abbrev>DNS-SD</abbrev>
             <author>
@@ -176,133 +176,155 @@
             </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_FIPS_46">
-          <abbrev>FIPS 46</abbrev>
-          <author>
-              <orgname>National Institute of Standards and Technology</orgname>
-          </author>
-          <title>Data Encryption Standard (DES)</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_FIPS_81">
-          <abbrev>FIPS 81</abbrev>
-          <author>
-              <orgname>National Institute of Standards and Technology</orgname>
-          </author>
-          <title>DES Modes of Operation</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_FIPS_180-1">
-          <abbrev>FIPS 180-1</abbrev>
-          <author>
-              <orgname>National Institute of Standards and Technology</orgname>
-          </author>
-          <date>17 April 1995</date>
-          <title>SHA-1: Secure Hash Standard</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_FIPS_180-2">
-          <abbrev>FIPS 180-2</abbrev>
-          <author>
-              <orgname>National Institute of Standards and Technology</orgname>
-          </author>
-          <date>1 August 2002</date>
-          <title>SHA-2: Secure Hash Standard</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_MEDIS-DC_ISCL_V1.00">
-          <abbrev>ISCL V1.00</abbrev>
-          <author>
-              <orgname>MEDIS-DC</orgname>
-          </author>
-          <title>Integrated Secure Communication Layer V1.00</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_ITU-T_X.509">
-          <abbrev>ITU-T X.509</abbrev>
-          <author>
-              <orgname>ITU</orgname>
-          </author>
-          <title>Information technology - Open Systems Interconnection - The directory: Public-key and attribute certificate frameworks</title>
-          <bibliosource>
-              <link xl:href="http://www.itu.int/rec/T-REC-X.509"/>
-          </bibliosource>
-          <releaseinfo>ITU-T Recommendation X.509 is similar to ISO/IEC 9594-8 1990. However, the ITU-T recommendation is the more familiar form, and was revised in 1993 and 2000, with two sets of corrections in 2001. ITU-T was formerly known as CCITT.</releaseinfo>
-      </biblioentry>
-  <biblioentry xml:id="biblio_RFC_1035">
-        <abbrev>RFC 1035</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Domain Name System (DNS)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_1305">
-        <abbrev>RFC 1305</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Network Time Protocol (Version 3) Specification, Implementation</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2030">
-        <abbrev>RFC 2030</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Simple Network Time Protocol (SNTP) Version 4</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2131">
-        <abbrev>RFC 2131</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Dynamic Host Configuration Protocol</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2132">
-        <abbrev>RFC 2132</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Dynamic Host Configuration Protocol Options</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2136">
-        <abbrev>RFC 2136</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Dynamic Updates in the Domain Name System (DNS UPDATE)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2181">
-        <abbrev>RFC 2181</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Clarifications to the DNS Specification</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2219">
-        <abbrev>RFC 2219</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Use of DNS Aliases for Network Services</title>
-    </biblioentry>
-       <biblioentry xml:id="biblio_RFC_2246">
-          <abbrev>RFC 2246</abbrev>
-          <author>
-              <orgname>IETF</orgname>
-          </author>
-          <title>Transport Layer Security (TLS) 1.0 Internet Engineering Task Force</title>
-           <releaseinfo>TLS is derived from SSL 3.0, and is largely compatible with it.</releaseinfo>
-      </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2251">
-        <abbrev>RFC 2251</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Lightweight Directory Access Protocol (v3)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2313">
-        <abbrev>RFC 2313</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>March 1998</date>
-        <title>PKCS #1: RSA Encryption, Version 1.5</title>
-    </biblioentry>
-        
+            <abbrev>FIPS 46</abbrev>
+            <author>
+                <orgname>National Institute of Standards and Technology</orgname>
+            </author>
+            <title>Data Encryption Standard (DES)</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_FIPS_81">
+            <abbrev>FIPS 81</abbrev>
+            <author>
+                <orgname>National Institute of Standards and Technology</orgname>
+            </author>
+            <title>DES Modes of Operation</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_FIPS_180-1">
+            <abbrev>FIPS 180-1</abbrev>
+            <author>
+                <orgname>National Institute of Standards and Technology</orgname>
+            </author>
+            <date>17 April 1995</date>
+            <title>SHA-1: Secure Hash Standard</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_FIPS_180-2">
+            <abbrev>FIPS 180-2</abbrev>
+            <author>
+                <orgname>National Institute of Standards and Technology</orgname>
+            </author>
+            <date>1 August 2002</date>
+            <title>SHA-2: Secure Hash Standard</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_MEDIS-DC_ISCL_V1.00">
+            <abbrev>ISCL V1.00</abbrev>
+            <author>
+                <orgname>MEDIS-DC</orgname>
+            </author>
+            <title>Integrated Secure Communication Layer V1.00</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ITU-T_X.509">
+            <abbrev>ITU-T X.509</abbrev>
+            <author>
+                <orgname>ITU</orgname>
+            </author>
+            <title>Information technology - Open Systems Interconnection - The directory: Public-key and attribute certificate frameworks</title>
+            <bibliosource>
+                <link xl:href="http://www.itu.int/rec/T-REC-X.509"/>
+            </bibliosource>
+            <releaseinfo>ITU-T Recommendation X.509 is similar to ISO/IEC 9594-8 1990. However, the ITU-T recommendation is the more familiar form, and was revised in 1993 and 2000, with two sets of corrections in 2001. ITU-T was formerly known as CCITT.</releaseinfo>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_1035">
+            <abbrev>RFC 1035</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Domain Name System (DNS)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc1035"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2030">
+            <abbrev>RFC 2030</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Simple Network Time Protocol (SNTP) Version 4</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2030"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2131">
+            <abbrev>RFC 2131</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Dynamic Host Configuration Protocol</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2131"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2132">
+            <abbrev>RFC 2132</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Dynamic Host Configuration Protocol Options</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2132"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2136">
+            <abbrev>RFC 2136</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Dynamic Updates in the Domain Name System (DNS UPDATE)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2136"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2181">
+            <abbrev>RFC 2181</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Clarifications to the DNS Specification</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2181"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2219">
+            <abbrev>RFC 2219</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Use of DNS Aliases for Network Services</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2219"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2246">
+            <abbrev>RFC 2246</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Transport Layer Security (TLS) 1.0 Internet Engineering Task Force</title>
+            <releaseinfo>TLS is derived from SSL 3.0, and is largely compatible with it.</releaseinfo>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2246"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2251">
+            <abbrev>RFC 2251</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Lightweight Directory Access Protocol (v3)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2251"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2313">
+            <abbrev>RFC 2313</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>March 1998</date>
+            <title>PKCS #1: RSA Encryption, Version 1.5</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2313"/>
+            </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_2437">
             <abbrev>RFC 2437</abbrev>
             <author>
@@ -310,128 +332,180 @@
             </author>
             <date>October 1998</date>
             <title>PKCS #1: RSA Cryptography Specifications - Version 2.0</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2437"/>
+            </bibliosource>
         </biblioentry>
-        
-        
-  <biblioentry xml:id="biblio_RFC_2563">
-        <abbrev>RFC 2563</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>DHCP Option to Disable Stateless Auto-Configuration in IPv4 Clients</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2782">
-        <abbrev>RFC 2782</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>A DNS RR for specifying the location of services (DNS SRV)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2849">
-        <abbrev>RFC 2849</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>The LDAP Data Interchange Format (LDIF)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_2898">
-        <abbrev>RFC 2898</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>September 2000</date>
-        <title>PKCS #5: Password-Based Cryptography Specification Version 2.0</title>
-    </biblioentry>
-      
-       <biblioentry xml:id="biblio_RFC_3161">
-          <abbrev>RFC 3161</abbrev>
-          <author>
-              <orgname>IETF</orgname>
-          </author>
-          <date>March 2000</date>
-          <title>Internet X.509 Public Key Infrastructure - Time-Stamp Protocol (TSP)</title>
-      </biblioentry>
-      <biblioentry xml:id="biblio_RFC_3164">
-          <abbrev>RFC 3164</abbrev>
-          <author>
-              <orgname>IETF</orgname>
-          </author>
-          <date>August 2001</date>
-          <title>The BSD syslog Protocol</title>
-      </biblioentry>
-      
-      
-  <biblioentry xml:id="biblio_RFC_3211">
-        <abbrev>RFC 3211</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>December 2001</date>
-        <title>Password-based Encryption for CMS</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3268">
-        <abbrev>RFC 3268</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>June 2002</date>
-        <title>Advanced Encryption Standard (AES) Ciphersuites for Transport Layer Security (TLS)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3447">
-        <abbrev>RFC 3447</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>February 2003</date>
-        <title>PKCS #1 RSA Cryptography Specifications Version 2.1</title>
-    </biblioentry>
-   <biblioentry xml:id="biblio_RFC_3852">
-        <abbrev>RFC 3852</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>July 2004</date>
-        <title>Cryptographic Message Syntax</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3370">
-        <abbrev>RFC 3370</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>August 2002</date>
-        <title>Cryptographic Message Syntax (CMS) Algorithms</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3565">
-        <abbrev>RFC 3565</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>July 2003</date>
-        <title>Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS)</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3851">
-        <abbrev>RFC 3851</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.1 Message Specification</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_3853">
-        <abbrev>RFC 3853</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>S/MIME Advanced Encryption Standard (AES) Requirement for the Session Initiation Protocol (SIP)</title>
-    </biblioentry>
-    <biblioentry xml:id="biblio_RFC_3881">
-        <abbrev>RFC 3881</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-        <date>September 2004</date>
-        <title>Security Audit and Access Accountability Message - XML Data Definitions for Healthcare Applications</title>
-    </biblioentry>
-        
+        <biblioentry xml:id="biblio_RFC_2563">
+            <abbrev>RFC 2563</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>DHCP Option to Disable Stateless Auto-Configuration in IPv4 Clients</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2563"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2782">
+            <abbrev>RFC 2782</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>A DNS RR for specifying the location of services (DNS SRV)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2782"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2827">
+            <abbrev>RFC 2827</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Network Ingress Filtering: Defeating Denial of Service Attacks which employ IP Source Address Spoofing</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2827"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2849">
+            <abbrev>RFC 2849</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>The LDAP Data Interchange Format (LDIF)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2849"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_2898">
+            <abbrev>RFC 2898</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>September 2000</date>
+            <title>PKCS #5: Password-Based Cryptography Specification Version 2.0</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc2898"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3161">
+            <abbrev>RFC 3161</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>March 2000</date>
+            <title>Internet X.509 Public Key Infrastructure - Time-Stamp Protocol (TSP)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3161"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3164">
+            <abbrev>RFC 3164</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>August 2001</date>
+            <title>The BSD syslog Protocol</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3164"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3211">
+            <abbrev>RFC 3211</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>December 2001</date>
+            <title>Password-based Encryption for CMS</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3211"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3268">
+            <abbrev>RFC 3268</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>June 2002</date>
+            <title>Advanced Encryption Standard (AES) Ciphersuites for Transport Layer Security (TLS)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3268"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3447">
+            <abbrev>RFC 3447</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>February 2003</date>
+            <title>PKCS #1 RSA Cryptography Specifications Version 2.1</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3447"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3852">
+            <abbrev>RFC 3852</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>July 2004</date>
+            <title>Cryptographic Message Syntax</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3852"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3370">
+            <abbrev>RFC 3370</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>August 2002</date>
+            <title>Cryptographic Message Syntax (CMS) Algorithms</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3370"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3565">
+            <abbrev>RFC 3565</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>July 2003</date>
+            <title>Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3565"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3851">
+            <abbrev>RFC 3851</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.1 Message Specification</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3851"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3853">
+            <abbrev>RFC 3853</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>S/MIME Advanced Encryption Standard (AES) Requirement for the Session Initiation Protocol (SIP)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3853"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_3881">
+            <abbrev>RFC 3881</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <date>September 2004</date>
+            <title>Security Audit and Access Accountability Message - XML Data Definitions for Healthcare Applications</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc3881"/>
+            </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_4033">
             <abbrev>RFC 4033</abbrev>
             <author>
@@ -439,6 +513,9 @@
             </author>
             <date>March 2005</date>
             <title>DNS Security Introduction and Requirements</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc4033"/>
+            </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_4034">
             <abbrev>RFC 4034</abbrev>
@@ -447,6 +524,9 @@
             </author>
             <date>March 2005</date>
             <title>Resource Records for the DNS Security Extensions</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc4034"/>
+            </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_4035">
             <abbrev>RFC 4035</abbrev>
@@ -456,7 +536,6 @@
             <date>March 2005</date>
             <title>Protocol Modifications for the DNS Security Extensions</title>
         </biblioentry>
-        
         <biblioentry xml:id="biblio_RFC_4346">
             <abbrev>RFC 4346</abbrev>
             <author>
@@ -464,6 +543,9 @@
             </author>
             <date>April 2006</date>
             <title>The Transport Layer Security (TLS) Protocol - Version 1.1</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc4346"/>
+            </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_4347">
             <abbrev>RFC 4347</abbrev>
@@ -472,30 +554,60 @@
             </author>
             <date>April 2006</date>
             <title>Datagram Transport Layer Security</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc4347"/>
+            </bibliosource>
         </biblioentry>
-        
-  <biblioentry xml:id="biblio_RFC_5424">
-        <abbrev>RFC 5424</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>The Syslog Protocol</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_5425">
-        <abbrev>RFC 5425</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Transport Layer Security (TLS) Transport Mapping for Syslog</title>
-    </biblioentry>
-  <biblioentry xml:id="biblio_RFC_5426">
-        <abbrev>RFC 5426</abbrev>
-        <author>
-            <orgname>IETF</orgname>
-        </author>
-         <title>Transmission of Syslog Messages over UDP</title>
-    </biblioentry>
-        
+        <biblioentry xml:id="biblio_RFC_5424">
+            <abbrev>RFC 5424</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>The Syslog Protocol</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc5424"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_5425">
+            <abbrev>RFC 5425</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Transport Layer Security (TLS) Transport Mapping for Syslog</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc5425"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_5426">
+            <abbrev>RFC 5426</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Transmission of Syslog Messages over UDP</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc5426"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_5905">
+            <abbrev>RFC 5905</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Network Time Protocol Version 4: Protocol and Algorithms Specification</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc5905"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_RFC_5906">
+            <abbrev>RFC 5906</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Network Time Protocol Version 4: Autokey Specification</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc5906"/>
+            </bibliosource>
+        </biblioentry>
         <biblioentry xml:id="biblio_RFC_6762">
             <abbrev>RFC 6762</abbrev>
             <author>
@@ -503,6 +615,9 @@
             </author>
             <date>February 2013</date>
             <title>Multicast DNS</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc6762"/>
+            </bibliosource>
         </biblioentry>
         <biblioentry xml:id="biblio_RFC_6763">
             <abbrev>RFC 6763</abbrev>
@@ -511,8 +626,10 @@
             </author>
             <date>February 2013</date>
             <title>DNS-Based Service Discovery</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc6763"/>
+            </bibliosource>
         </biblioentry>
-        
         <biblioentry xml:id="biblio_RFC_7525">
             <abbrev>RFC 7525</abbrev>
             <author>
@@ -523,7 +640,6 @@
                 <link xl:href="http://tools.ietf.org/html/rfc7525"/>
             </bibliosource>
         </biblioentry>
-
         <biblioentry xml:id="biblio_RFC_8553">
             <abbrev>RFC 8553</abbrev>
             <author>
@@ -534,20 +650,27 @@
                 <link xl:href="http://tools.ietf.org/html/rfc8553"/>
             </bibliosource>
         </biblioentry>
-        
-      <biblioentry xml:id="biblio_BCP_195">
-          <abbrev>BCP 195</abbrev>
-          <author>
-              <orgname>IETF</orgname>
-          </author>
-          <title>Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</title>
-          <bibliosource>
-              <link xl:href="http://tools.ietf.org/html/bcp195"/>
-          </bibliosource>
-      </biblioentry>
-      
-      
-  </bibliography>
+        <biblioentry xml:id="biblio_RFC_8633">
+            <abbrev>RFC 8633</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>RFC8633 Network Time Protocol Best Current Practices</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/rfc8633"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_BCP_195">
+            <abbrev>BCP 195</abbrev>
+            <author>
+                <orgname>IETF</orgname>
+            </author>
+            <title>Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)</title>
+            <bibliosource>
+                <link xl:href="http://tools.ietf.org/html/bcp195"/>
+            </bibliosource>
+        </biblioentry>
+    </bibliography>
 
   </chapter>
     <chapter label="3" status="1" xml:id="chapter_3">
@@ -21860,35 +21983,6 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
-                                <para xml:id="para_aa5f9d5a-deb2-4c17-8f00-ee23630f0c9f">Source Serial Number</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_20a7c436-4c6b-41b2-a998-df293e81c501">(3008,0105)</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_41d8cfe7-2eec-4327-b379-44e26293b203">N</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_f79c9afa-8be0-44fe-8be4-7a0d155ce018">Y</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_a4269624-bf35-4a1c-99a8-5906ce7233df">X</para>
-                            </td>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1">
-                                <para xml:id="para_31d0274a-cfd6-43e1-a76e-dea6d3debae0">K</para>
-                            </td>
-                            <td/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                            <td align="center" colspan="1" rowspan="1"/>
-                        </tr>
-                        <tr valign="top">
-                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_ac3dc212-86b8-45a6-aa1e-e44a37c39f0d">Source Start DateTime</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -30445,6 +30539,13 @@ start = message
                         <listitem>
                             <para xml:id="para_c1e98f23-4759-473f-9d65-c6543dca708e">The Implementation Class UID (0002,0012) is not included in the list of UID attributes to be retained, since it is part of the File Meta Information (see <olink targetdoc="PS3.10" targetptr="PS3.10" xrefstyle="select: labelnumber"/>), which is entirely replaced whenever a file is stored or modified during de-identification. See <xref linkend="sect_E.1.1" xrefstyle="select: label"/>.</para>
                         </listitem>
+                        <listitem>
+                            <para xml:id="para_6a425e0d-9e2d-462e-924f-845f63c2c203">UIDs may have been generated using a date/time stamp mechanism to assist in uniqueness generation.
+                                Hence if the original UIDs are not replaced, they may assist identity recovery.
+                                That said, the presence of an apparent date/time stamp in a UID does not indicate that it is an original UID, since replacement UIDs may contain new date/time stamps related to when the instance was de-identified.
+                                Also, UUIDs may be time-based rather than name-based or random-number-based,
+                                so use of the <olink targetdoc="PS3.5" targetptr="sect_B.2" xrefstyle="template:PS3.5 Section %n %t"/> mechanism does not necessarily avoid this issue.</para>
+                        </listitem>
                     </orderedlist>
                 </note>
             </section>
@@ -33461,303 +33562,317 @@ start = message
 </section>
 </chapter>
 <chapter label="G" status="1" xml:id="chapter_G">
-    <title>Time Synchronization Profiles</title>
-  
-  <section label="G.1" status="2" xml:id="sect_G.1">
-    <title>Basic Time Synchronization Profile</title>
-  
-  <para xml:id="para_b121cf7b-9b61-4f90-b52e-6991cbf4e735">The Basic Time Synchronization Profile defines services to synchronize the clocks on multiple computers. It employs the Network Time Protocol (NTP) services that have been used for this purpose by many other disciplines. NTP permits synchronization to a local server that provides a local time source, and synchronization to a variety of external time services. The accuracy and precision controls are not explicitly part of the protocol. They are determined in large part by the selection of clock hardware and network topology.</para>
-  <para xml:id="para_e0f0d1cb-6fd1-49f3-a254-bf3093b57cdb">An extensive discussion of implementation strategies for NTP can be found at http://www.ntp.org.</para>
-  <para xml:id="para_dac1c42a-4b39-4aa9-a1c9-ac5bae887dcc">The Basic Time Synchronization Profile applies to the actors DHCP Client, DHCP Server, SNTP Client, NTP Client and NTP Server. The mandatory and optional transactions are described in the table and sections below.</para>
-    <table frame="box" label="G.1-1" rules="all" xml:id="table_G.1-1">
-    <caption>Basic Time Synchronization Profile</caption>
-    <thead>
-    <tr valign="top">
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_aae02944-2082-42a2-accc-a235a000c6d5">Actor</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_9f691895-f654-405a-8c55-60a81376e995">Transaction</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_a5650fb8-5eb9-4986-bf11-7c8748e32753">Optionality</para>
-      </th>
-      <th align="center" colspan="1" rowspan="1">
-        <para xml:id="para_4e42325b-ceb0-44f5-ac61-ee1ab693d955">Section</para>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_72140d49-adf8-427a-846a-90e0a9e001ad">NTP Server</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f01c2603-063a-478d-a97d-8c7f6f2ccb9c">Maintain Time</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_725e96c2-b109-4a02-bb0a-4898c6871d3f">M</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_b9c5b34f-d633-40be-8b94-d057d810837b">G.1.2</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_f0c67fd3-b6de-450c-8c11-1f4580c28b07">Find NTP Servers</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_1f0abdff-d6db-46f7-9a36-1949b0cb147d">O</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_f9d91707-8d8a-433c-915b-3ea367ca33ac">G.1.1</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_474c1e21-af9f-4636-a042-cdfa4dbe1e2a">NTP Client</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_5f06444b-dfd6-44b4-b0f4-d7a876e0b66e">Maintain Time</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_476aa4dd-a0cb-4c17-a72e-be36904a18bd">M</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_f9fb9ebc-22eb-4377-ba1f-2c87957297db">G.1.2</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="center" colspan="1" rowspan="1"/>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_7780ff97-0c9c-405b-8699-f47d92548d3a">Find NTP Servers</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_9427eb69-7484-4cee-b1ed-f1adaff8d89d">O</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_d43356bf-571e-4ed2-8294-dca5f1c364d9">G.1.1</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_283efee2-b91a-44d4-8da7-f2496bb819f2">SNTP Client</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_c62d63cd-c936-4e7a-9a1b-5600139dad0f">Maintain Time</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_2e970f4f-ec75-40f2-bb3a-024f6907cf38">M</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_cb2f1bcd-60b5-444e-9d9a-602fb6f6562b">G.1.2</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_fc1373c0-de78-4b20-9f0c-6a8ca99fe887">DHCP Server</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_8eae1598-c244-4a18-bd68-0bf21a8e583a">Find NTP Servers</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_31a09a0a-ff99-4096-a20a-2259247d9b75">O</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_3a830935-e868-47d6-94b9-6f113d499c7b">G.1.1</para>
-      </td>
-    </tr>
-    <tr valign="top">
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_05d02498-eab3-4123-81b8-9dc7b2e8ed3d">DCHP Client</para>
-      </td>
-      <td align="left" colspan="1" rowspan="1">
-        <para xml:id="para_fcf030fe-4244-4518-ab8e-749f91ad09db">Find NTP Servers</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_ffd3657a-b678-42bd-8d24-87c110d56a14">M</para>
-      </td>
-      <td align="center" colspan="1" rowspan="1">
-        <para xml:id="para_44751e2b-7f8d-4f2f-89a6-03e792025473">G.1.1</para>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-  <section label="G.1.1" status="3" xml:id="sect_G.1.1">
-    <title>Find NTP Servers</title>
-  
-  <para xml:id="para_b9d07d59-3176-4aa3-83bf-5f0cd9c774b3">The optional NTP protocol elements for NTP autoconfiguration and NTP autodiscovery can significantly simplify installation. The NTP specification for these is defined such that they are truly optional for both client and server. In the event that a client cannot find an NTP server automatically using these services, it can use the DHCP optional information or manually configured information to find a server. Support for these services is recommended but not mandatory.</para>
-  <para xml:id="para_6cf12e12-9a96-46ed-bfe5-306ca292736e">This transaction exists primarily as a means of documenting whether particular models of equipment support the automatic discovery. This lets installation and operation plan their DHCP and equipment installation procedures in advance.</para>
-  <section label="G.1.1.1" status="4" xml:id="sect_G.1.1.1">
-    <title>Scope</title>
-  
-  <para xml:id="para_14469ea4-9871-4e67-820f-c724c7a4a759">This applies to any client that needs the correct time, or that needs to have its time stamps synchronized with those of another system. The accuracy of synchronization is determined by details of the configuration and implementation of the network and NTP servers at any specific site.</para>
-  <para xml:id="para_c0bc2b47-7cb8-4ebe-ac72-ce4c89f7b304">Both the NTP and SNTP clients shall utilize the NTP server information if it is provided by DHCP and NTP services have not been found using autodiscovery. Manual configuration shall be provided as a backup. Autodiscovery or DHCP are preferred.</para>
-  </section>
-<section label="G.1.1.2" status="4" xml:id="sect_G.1.1.2">
-    <title>Use Case Roles</title>
-  
-  <para xml:id="para_4c45d72b-8c53-4732-9da2-5faa8c467fc2">
-  <figure label="G.1-1" pgwide="1" xml:id="figure_G.1-1">
-    <title>Find NTP Servers</title>
-    <mediaobject>
-      <imageobject>
-        <imagedata fileref="figures/PS3.15_G.1-1.svg"/>
-        <!--<imagedata fileref="part15_fromword_files/image018.png"/>-->
-      </imageobject>
-    </mediaobject>
-  </figure>
-</para>
-  <variablelist>
-    <varlistentry>
-<term>DHCP Server</term>
-<listitem>
-<para xml:id="para_110d7468-40d9-4fc7-9454-2468b6d694ff">Provides UTC offset, provides list of NTP servers</para>
-</listitem>
-</varlistentry>
-  <varlistentry>
-<term>DHCP Client</term>
-<listitem>
-<para xml:id="para_d589744b-cce9-4980-83f9-5a58284d05de">Receives UTC offset and list of NTP servers</para>
-</listitem>
-</varlistentry>
-  <varlistentry>
-<term>NTP Client</term>
-<listitem>
-<para xml:id="para_bfe0a800-9bd7-4ce9-9e92-b5872fbb19a3">Maintains client clock</para>
-</listitem>
-</varlistentry>
-  <varlistentry>
-<term>SNTP Client</term>
-<listitem>
-<para xml:id="para_c96bb8db-0bc1-4009-8c1c-633959ecd56b">Maintains client clock</para>
-</listitem>
-</varlistentry>
-  <varlistentry>
-<term>NTP Servers</term>
-<listitem>
-<para xml:id="para_4952a965-dc9f-4479-9625-397d51e693f6">External time servers. These may have connections to other time servers, and may be synchronized with national time sources.</para>
-</listitem>
-</varlistentry>
-  </variablelist>
-</section>
-<section label="G.1.1.3" status="4" xml:id="sect_G.1.1.3">
-    <title>Referenced Standards</title>
-  
-  <para xml:id="para_aa1a8df0-22e8-4b64-a236-b999d74a57ed">
-<xref linkend="biblio_RFC_1305"/> Network Time Protocol (NTP) standard specification</para>
-  <para xml:id="para_372e551e-8da1-4d2b-b42f-6baffb829f8a">
-<xref linkend="biblio_RFC_2030"/> Simple NTP</para>
-  </section>
-<section label="G.1.1.4" status="4" xml:id="sect_G.1.1.4">
-    <title>Basic Course of Events.</title>
-  
-  <para xml:id="para_03d27d8a-246d-477f-b694-bc64144615b0">The DHCP server may have provided a list of NTP servers or one may be obtained through optional NTP discovery mechanisms. If this list is empty and no manually configured NTP server address is present, the client shall select its internal clock as the time source (see below). If the list is not empty, the client shall attempt to maintain time synchronization with all those NTP servers. The client may attempt to use the multi-cast, manycast, and broadcast options as defined in <xref linkend="biblio_RFC_1305"/>. It shall utilize the point to point synchronization option if these are not available. The synchronization shall be in compliance with either <xref linkend="biblio_RFC_1305"/> (NTP) or <xref linkend="biblio_RFC_2030"/> (SNTP).</para>
-  <para xml:id="para_951a0deb-40b1-47a3-8792-7510dccca8fd">If the application requires time synchronization of better than 1s mean error, the client should use NTP. SNTP cannot ensure a more accurate time synchronization.</para>
-  <para xml:id="para_fab75851-df8a-4c2d-a25a-9ca747d8ddc8">The DHCP server may have provided a UTC offset between the local time at the machine and UTC. If this is missing, the UTC offset will be obtained in a device specific manner (e.g., service, CMOS). If the UTC offset is provided, the client shall use this offset for converting between UTC and local time.</para>
-  </section>
-<section label="G.1.1.5" status="4" xml:id="sect_G.1.1.5">
-    <title>Alternative Paths</title>
-  
-  <para xml:id="para_335ace0c-a43c-43cf-8855-087ade3d8e16">If there is no UTC offset information from the DHCP server, then the NTP client will use its preset or service set UTC offset.</para>
-  <para xml:id="para_f069a1e0-a19d-4421-871c-f66496c7db8f">If there is no NTP time server, then the NTP client will select its internal battery clock as the source of UTC. These may have substantial errors. This also means that when there are multiple systems but no NTP source, the multiple systems will not attempt to synchronize with one another.</para>
-  </section>
-<section label="G.1.1.6" status="4" xml:id="sect_G.1.1.6">
-    <title>Assumptions</title>
-  
-  <para xml:id="para_e1b0cce7-d59a-4dc3-8908-9c126870fba3">The local battery clock time is set to UTC, or the local operating system has proper support to manage both battery clock time, NTP clock time, and system clock time. The NTP time is always in UTC.</para>
-  </section>
-<section label="G.1.1.7" status="4" xml:id="sect_G.1.1.7">
-    <title>Postconditions</title>
-  
-  <para xml:id="para_4f61a9de-75e6-4540-b36d-7556b29605cd">The client will remain synchronized with its selected time source. In an environment with one or more NTP servers, this will be good time synchronization. In the absence of NTP servers, the selected source will be the internal client clock, with all its attendant errors.</para>
-  </section>
-</section>
-<section label="G.1.2" status="3" xml:id="sect_G.1.2">
-    <title>Maintain Time</title>
-  
-  <section label="G.1.2.1" status="4" xml:id="sect_G.1.2.1">
-    <title>Scope</title>
-  
-  <para xml:id="para_13dba35c-a573-4aeb-a40e-e4e08336ca09">This applies to any client that needs the correct time, or that needs to have its time stamps synchronized with those of another system. The accuracy of synchronization is determined by details of the configuration and implementation of the network and NTP servers at any specific site.</para>
-  </section>
-<section label="G.1.2.2" status="4" xml:id="sect_G.1.2.2">
-    <title>Use Case Roles</title>
-  
-  <para xml:id="para_33490feb-1650-4cee-a6db-85725fcf058c">
-  <figure label="G.2-1" pgwide="1" xml:id="figure_G.2-1">
-    <title>Maintain Time</title>
-    <mediaobject>
-      <imageobject>
-        <imagedata fileref="figures/PS3.15_G.2-1.svg"/>
-        <!--<imagedata fileref="part15_fromword_files/image020.png"/>-->
-      </imageobject>
-    </mediaobject>
-  </figure>
-</para>
-  <variablelist>
-    <varlistentry>
-<term>NTP/SNTP Client</term>
-<listitem>
-<para xml:id="para_e44ad7e2-df93-4b36-ab30-bb665c4f9ca6">Maintains client clock</para>
-</listitem>
-</varlistentry>
-  <varlistentry>
-<term>NTP Servers</term>
-<listitem>
-<para xml:id="para_219f0aca-93de-4a24-a21e-1f775d99130d">External time servers. These may have connections to other time servers, and may be synchronized with national time sources.</para>
-</listitem>
-</varlistentry>
-  </variablelist>
-</section>
-<section label="G.1.2.3" status="4" xml:id="sect_G.1.2.3">
-    <title>Referenced Standards</title>
-  
-  <para xml:id="para_3cedce94-3713-4ac5-a03a-aac08697a067">
-<xref linkend="biblio_RFC_1305"/> Network Time Protocol (NTP) standard specification</para>
-  <para xml:id="para_e5646722-26ef-46b7-8d77-b7c0fff25aa2">
-<xref linkend="biblio_RFC_2030"/> Simple NTP</para>
-  </section>
-<section label="G.1.2.4" status="4" xml:id="sect_G.1.2.4">
-    <title>Basic Course of Events.</title>
-  
-  <para xml:id="para_a4409ba6-9707-4fb3-b790-0dda3f158551">All the full detail is in <xref linkend="biblio_RFC_1305"/> and <xref linkend="biblio_RFC_2030"/>. The most common and mandatory minimum mode for NTP operation establishes a ping pong of messages between client and servers. The client sends requests to the servers, which fill in time related fields in a response, and the client performs optimal estimation of the present time. The RFCs deal with issues of lost messages, estimation formulae, etc. Once the clocks are in synchronization these ping pong exchanges typically stabilize at roughly 1000 second intervals.</para>
-  <para xml:id="para_483906c6-fd0d-4bfc-8d5c-bbb986cf8163">The client machine typically uses the time estimate to maintain the internal operating system clock. This clock is then used by applications that need time information. This approach eliminates the application visible difference between synchronized and unsynchronized time. The RFCs provide guidance on proper implementations.</para>
-  </section>
-</section>
-<section label="G.1.3" status="3" xml:id="sect_G.1.3">
-    <title>NTP Security Considerations (Informative)</title>
-  
-  <para xml:id="para_b953f9d7-3d38-4fb2-8bd2-c04c9d7f2b63">The Basic Time Synchronization profile should not be used outside a secured environment. At a minimum there should be:</para>
-  <orderedlist numeration="loweralpha">
-<listitem>
-<para xml:id="para_aea6ecf4-6a1f-445b-a217-12af2d323de9">Firewall and or router protections to ensure that only approved hosts are used for NTP services.</para>
-</listitem>
-<listitem>
-<para xml:id="para_aa021628-167c-4d2d-aee5-06f11f082e8d">Agreements for VPN and other access should require that use only approved NTP servers over the VPN.</para>
-</listitem>
-</orderedlist>
-  <para xml:id="para_a002062e-daf3-4f6f-8ab5-82afa771faca">This limits the risks to insider denial of service attacks. The service denial is manipulation of the time synchronization such that systems report the incorrect time. The NTP protocols incorporate secure transaction capabilities that can be negotiated. This profile assumes that the above protections are sufficient and does not require support of secure transactions, but they may be supported by an implementation. The SNTP client does not support the use of secured transactions.</para>
-  <para xml:id="para_d4acc6ed-b598-4367-9341-5480bc55889b">Sites with particular concerns regarding security of external network time sources may choose to utilize a GPS or radio based time synchronization. Note that when selecting GPS and radio time sources, care must be taken to establish the accuracy and stability provided by the particular time source. The underlying time accuracy of GPS and radio sources is superb, but some receivers are intended for low accuracy uses and do not provide an accurate or stable result.</para>
-  </section>
-<section label="G.1.4" status="3" xml:id="sect_G.1.4">
-    <title>NTP Implementation Considerations (Informative)</title>
-  
-  <para xml:id="para_72aa46a6-0514-45b6-8ceb-2bdb644b4b9d">NTP servers always support both NTP and SNTP clients. The difference is one of synchronization accuracy, not communications compatibility. Although in theory both NTP and SNTP clients could run at the same time on a client this is not recommended. The SNTP updates will simply degrade the time accuracy. When other time protocol clients, such as IRIG, are also being used these clients must be coordinated with the NTP client to avoid synchronization problems.</para>
-  <para xml:id="para_680f2382-0521-437b-a53a-f81a30806f43">
-<xref linkend="biblio_RFC_1305"/> includes specifications for management of intermittent access to the NTP servers, broken servers, etc. The NTP servers do not need to be present and operational when the NTP process begins. NTP supports the use of multiple servers to provide backup and better accuracy. <xref linkend="biblio_RFC_1305"/> specifies the mechanisms used by the NTP client. The site www.ntp.org provides extensive guidance and references regarding the most effective configurations for backups and multiple server configurations.</para>
-  <para xml:id="para_ecc586e7-0f09-413b-b17d-ea56d66865d9">The local battery clock and client operating system must be properly UTC aware. NTP synchronization is in UTC. This can be a source of confusion because some computers are configured with their hardware clocks set to local time and the operating system set (incorrectly) to UTC. This is a common error that only becomes apparent when the devices attempt to synchronize clocks.</para>
-  </section>
-<section label="G.1.5" status="3" xml:id="sect_G.1.5">
-    <title>Conformance</title>
-  
-  <para xml:id="para_48aae726-a244-4a3b-82b5-f522d8a1aeab">The Conformance Statement for the NTP Server and NTP Client shall state whether secure transactions are supported.</para>
-  <para xml:id="para_d082e2cb-f95b-4744-bfea-12c4d72510a7">The Conformance Statement for the NTP Server shall state whether it is also an NTP Client.</para>
-  
-  </section>
-</section>
-</chapter>
+            <title>Time Synchronization Profiles</title>
+            
+            <section label="G.1" status="2" xml:id="sect_G.1">
+                <title>Basic Time Synchronization Profile</title>
+                
+                <para xml:id="para_b121cf7b-9b61-4f90-b52e-6991cbf4e735">The Basic Time Synchronization Profile defines services to synchronize the clocks on multiple computers. It employs the Network Time Protocol (NTP) services that have been used for this purpose by many other disciplines. NTP permits synchronization to a local server that provides a local time source, and synchronization to a variety of external time services. The accuracy and precision controls are not explicitly part of the protocol. They are determined in large part by the selection of clock hardware and network topology.</para>
+                <para xml:id="para_e0f0d1cb-6fd1-49f3-a254-bf3093b57cdb">An extensive discussion of implementation strategies for NTP can be found at http://www.ntp.org.</para>
+                <para xml:id="para_dac1c42a-4b39-4aa9-a1c9-ac5bae887dcc">The Basic Time Synchronization Profile applies to the actors DHCP Client, DHCP Server, SNTP Client, NTP Client and NTP Server. The mandatory and optional transactions are described in the table and sections below.</para>
+                <table frame="box" label="G.1-1" rules="all" xml:id="table_G.1-1">
+                    <caption>Basic Time Synchronization Profile</caption>
+                    <thead>
+                        <tr valign="top">
+                            <th align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_aae02944-2082-42a2-accc-a235a000c6d5">Actor</para>
+                            </th>
+                            <th align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9f691895-f654-405a-8c55-60a81376e995">Transaction</para>
+                            </th>
+                            <th align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_a5650fb8-5eb9-4986-bf11-7c8748e32753">Optionality</para>
+                            </th>
+                            <th align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_4e42325b-ceb0-44f5-ac61-ee1ab693d955">Section</para>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_72140d49-adf8-427a-846a-90e0a9e001ad">NTP Server</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_f01c2603-063a-478d-a97d-8c7f6f2ccb9c">Maintain Time</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_725e96c2-b109-4a02-bb0a-4898c6871d3f">M</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_b9c5b34f-d633-40be-8b94-d057d810837b">G.1.2</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_f0c67fd3-b6de-450c-8c11-1f4580c28b07">Find NTP Servers</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_1f0abdff-d6db-46f7-9a36-1949b0cb147d">O</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f9d91707-8d8a-433c-915b-3ea367ca33ac">G.1.1</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_474c1e21-af9f-4636-a042-cdfa4dbe1e2a">NTP Client</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_5f06444b-dfd6-44b4-b0f4-d7a876e0b66e">Maintain Time</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_476aa4dd-a0cb-4c17-a72e-be36904a18bd">M</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_f9fb9ebc-22eb-4377-ba1f-2c87957297db">G.1.2</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_7780ff97-0c9c-405b-8699-f47d92548d3a">Find NTP Servers</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_9427eb69-7484-4cee-b1ed-f1adaff8d89d">O</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_d43356bf-571e-4ed2-8294-dca5f1c364d9">G.1.1</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_283efee2-b91a-44d4-8da7-f2496bb819f2">SNTP Client</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_c62d63cd-c936-4e7a-9a1b-5600139dad0f">Maintain Time</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_2e970f4f-ec75-40f2-bb3a-024f6907cf38">M</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_cb2f1bcd-60b5-444e-9d9a-602fb6f6562b">G.1.2</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fc1373c0-de78-4b20-9f0c-6a8ca99fe887">DHCP Server</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_8eae1598-c244-4a18-bd68-0bf21a8e583a">Find NTP Servers</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_31a09a0a-ff99-4096-a20a-2259247d9b75">O</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_3a830935-e868-47d6-94b9-6f113d499c7b">G.1.1</para>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_05d02498-eab3-4123-81b8-9dc7b2e8ed3d">DCHP Client</para>
+                            </td>
+                            <td align="left" colspan="1" rowspan="1">
+                                <para xml:id="para_fcf030fe-4244-4518-ab8e-749f91ad09db">Find NTP Servers</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_ffd3657a-b678-42bd-8d24-87c110d56a14">M</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para xml:id="para_44751e2b-7f8d-4f2f-89a6-03e792025473">G.1.1</para>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <section label="G.1.1" status="3" xml:id="sect_G.1.1">
+                    <title>Find NTP Servers</title>
+                    
+                    <para xml:id="para_b9d07d59-3176-4aa3-83bf-5f0cd9c774b3">The optional NTP protocol elements for NTP autoconfiguration and NTP autodiscovery can significantly simplify installation. The NTP specification for these is defined such that they are truly optional for both client and server. In the event that a client cannot find an NTP server automatically using these services, it can use the DHCP optional information or manually configured information to find a server. Support for these services is recommended but not mandatory.</para>
+                    <para xml:id="para_6cf12e12-9a96-46ed-bfe5-306ca292736e">This transaction exists primarily as a means of documenting whether particular models of equipment support the automatic discovery. This lets installation and operation plan their DHCP and equipment installation procedures in advance.</para>
+                    <section label="G.1.1.1" status="4" xml:id="sect_G.1.1.1">
+                        <title>Scope</title>
+                        
+                        <para xml:id="para_14469ea4-9871-4e67-820f-c724c7a4a759">This applies to any client that needs the correct time, or that needs to have its time stamps synchronized with those of another system. The accuracy of synchronization is determined by details of the configuration and implementation of the network and NTP servers at any specific site.</para>
+                        <para xml:id="para_c0bc2b47-7cb8-4ebe-ac72-ce4c89f7b304">Both the NTP and SNTP clients shall utilize the NTP server information if it is provided by DHCP and NTP services have not been found using autodiscovery. Manual configuration shall be provided as a backup. Autodiscovery or DHCP are preferred.</para>
+                    </section>
+                    <section label="G.1.1.2" status="4" xml:id="sect_G.1.1.2">
+                        <title>Use Case Roles</title>
+                        
+                        <para xml:id="para_4c45d72b-8c53-4732-9da2-5faa8c467fc2">
+                            <figure label="G.1-1" pgwide="1" xml:id="figure_G.1-1">
+                                <title>Find NTP Servers</title>
+                                <mediaobject>
+                                    <imageobject>
+                                        <imagedata fileref="figures/PS3.15_G.1-1.svg"/>
+                                        <!--<imagedata fileref="part15_fromword_files/image018.png"/>-->
+                                    </imageobject>
+                                </mediaobject>
+                            </figure>
+                        </para>
+                        <variablelist>
+                            <varlistentry>
+                                <term>DHCP Server</term>
+                                <listitem>
+                                    <para xml:id="para_110d7468-40d9-4fc7-9454-2468b6d694ff">Provides UTC offset, provides list of NTP servers</para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>DHCP Client</term>
+                                <listitem>
+                                    <para xml:id="para_d589744b-cce9-4980-83f9-5a58284d05de">Receives UTC offset and list of NTP servers</para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>NTP Client</term>
+                                <listitem>
+                                    <para xml:id="para_bfe0a800-9bd7-4ce9-9e92-b5872fbb19a3">Maintains client clock</para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>SNTP Client</term>
+                                <listitem>
+                                    <para xml:id="para_c96bb8db-0bc1-4009-8c1c-633959ecd56b">Maintains client clock</para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>NTP Servers</term>
+                                <listitem>
+                                    <para xml:id="para_4952a965-dc9f-4479-9625-397d51e693f6">External time servers. These may have connections to other time servers, and may be synchronized with national time sources.</para>
+                                </listitem>
+                            </varlistentry>
+                        </variablelist>
+                    </section>
+                    <section label="G.1.1.3" status="4" xml:id="sect_G.1.1.3">
+                        <title>Referenced Standards</title>
+                        <para xml:id="para_372e551e-8da1-4d2b-b42f-6baffb829f8a">
+                            <xref linkend="biblio_RFC_2030"/> Simple Network Time Protocol (SNTP) Version 4</para>
+                        <para xml:id="para_aa1a8df0-22e8-4b64-a236-b999d74a57ed">
+                            <xref linkend="biblio_RFC_5905"/> Network Time Protocol Version 4: Protocol and Algorithms Specification</para>
+                        <para xml:id="para_248bc6ac-2a1d-4e16-874f-b57f534650b6">
+                            <xref linkend="biblio_RFC_5906"/> Network Time Protocol Version 4: Autokey Specification</para>
+                        <para xml:id="para_87decc42-e898-478b-a6fb-320aa71c9a10">
+                            <xref linkend="biblio_RFC_8633"/> Network Time Protocol Best Current Practices</para>
+                    </section>
+                    <section label="G.1.1.4" status="4" xml:id="sect_G.1.1.4">
+                        <title>Basic Course of Events.</title>
+                        <para xml:id="para_03d27d8a-246d-477f-b694-bc64144615b0">The NTP Client uses a list of NTP Servers, which may be:</para>
+                        <itemizedlist>
+                            <listitem>
+                                <para xml:id="para_59815bdf-1e18-4c4a-8623-7e3c60712b46">obtained through optional NTP discovery mechanisms (see <xref linkend="biblio_RFC_5905"/>Section 3.1),</para>
+                            </listitem>
+                            <listitem>
+                                <para xml:id="para_94e09f83-8455-4487-b384-8ffd4aef82f5">provided by a DHCP Server, see Annex F on DHCP, and/or</para>
+                            </listitem>
+                            <listitem>
+                                <para xml:id="para_a11c4e24-5eca-4099-af8a-2b9ecfc80619">manually configured.</para>
+                            </listitem>
+                        </itemizedlist>
+                        <para xml:id="para_3b6f5224-fa97-40c3-a97b-312983b00956">If the list is not empty, the client shall attempt to maintain time synchronization with at least one of the NTP servers.
+                            The client synchronization shall be in compliance with either <xref linkend="biblio_RFC_5905"/> (NTP) or <xref linkend="biblio_RFC_2030"/> (SNTP).
+                            If the list is empty, the client may choose an alternative method of time synchronization.</para>
+                        <para xml:id="para_951a0deb-40b1-47a3-8792-7510dccca8fd">SNTP provides much lower accuracy than NTP.
+                            If time synchronization of better than 1s mean error is required, the client should use NTP.
+                            <xref linkend="biblio_RFC_5905"/> and <xref linkend="biblio_RFC_8633"/> discuss implementation and accuracy considerations.</para>
+                        <para xml:id="para_fab75851-df8a-4c2d-a25a-9ca747d8ddc8">A DHCP server may provide to the DHCP Client a UTC offset between the local time at the machine and UTC, which the client shall use for converting between UTC and local time.</para>
+                    </section>
+                    <section label="G.1.1.5" status="4" xml:id="sect_G.1.1.5">
+                        <title>Alternative Paths</title>
+                        <para xml:id="para_335ace0c-a43c-43cf-8855-087ade3d8e16">If there is no UTC offset information from the DHCP or NTP server, then the UTC offset will be obtained in a device specific manner (e.g., service, CMOS, internal battery clock).</para>
+                    </section>
+                    <section label="G.1.1.6" status="4" xml:id="sect_G.1.1.6">
+                        <title>Assumptions</title>
+                        <para xml:id="para_e1b0cce7-d59a-4dc3-8908-9c126870fba3">The local battery clock time is set to UTC, or the local operating system has proper support to manage both battery clock time, NTP clock time, and system clock time. The NTP time is always in UTC.</para>
+                    </section>
+                    <section label="G.1.1.7" status="4" xml:id="sect_G.1.1.7">
+                        <title>Postconditions</title>
+                        <para xml:id="para_4f61a9de-75e6-4540-b36d-7556b29605cd">The client will remain synchronized with its selected time source. In an environment with one or more NTP servers, this will be good time synchronization. In the absence of NTP servers, the selected source will be the internal client clock.</para>
+                    </section>
+                </section>
+                <section label="G.1.2" status="3" xml:id="sect_G.1.2">
+                    <title>Maintain Time</title>
+                    
+                    <section label="G.1.2.1" status="4" xml:id="sect_G.1.2.1">
+                        <title>Scope</title>
+                        
+                        <para xml:id="para_13dba35c-a573-4aeb-a40e-e4e08336ca09">This applies to any client that needs the correct time, or that needs to have its time stamps synchronized with those of another system. The accuracy of synchronization is determined by details of the configuration and implementation of the network and NTP servers at any specific site.</para>
+                    </section>
+                    <section label="G.1.2.2" status="4" xml:id="sect_G.1.2.2">
+                        <title>Use Case Roles</title>
+                        
+                        <para xml:id="para_33490feb-1650-4cee-a6db-85725fcf058c">
+                            <figure label="G.2-1" pgwide="1" xml:id="figure_G.2-1">
+                                <title>Maintain Time</title>
+                                <mediaobject>
+                                    <imageobject>
+                                        <imagedata fileref="figures/PS3.15_G.2-1.svg"/>
+                                        <!--<imagedata fileref="part15_fromword_files/image020.png"/>-->
+                                    </imageobject>
+                                </mediaobject>
+                            </figure>
+                        </para>
+                        <variablelist>
+                            <varlistentry>
+                                <term>NTP/SNTP Client</term>
+                                <listitem>
+                                    <para xml:id="para_e44ad7e2-df93-4b36-ab30-bb665c4f9ca6">Maintains client clock</para>
+                                </listitem>
+                            </varlistentry>
+                            <varlistentry>
+                                <term>NTP Servers</term>
+                                <listitem>
+                                    <para xml:id="para_219f0aca-93de-4a24-a21e-1f775d99130d">External time servers. These may have connections to other time servers, and may be synchronized with national time sources.</para>
+                                </listitem>
+                            </varlistentry>
+                        </variablelist>
+                    </section>
+                    <section label="G.1.2.3" status="4" xml:id="sect_G.1.2.3">
+                        <title>Referenced Standards</title>
+                        <para xml:id="para_e5646722-26ef-46b7-8d77-b7c0fff25aa2">
+                            <xref linkend="biblio_RFC_2030"/> Simple Network Time Protocol (SNTP) Version 4</para>
+                        <para xml:id="para_ab5975a4-e0fc-4780-aa08-393ab7a81df9">
+                            <xref linkend="biblio_RFC_2827"/> Network Ingress Filtering: Defeating Denial of Service Attacks which employ IP Source Address Spoofing</para>
+                        <para xml:id="para_3cedce94-3713-4ac5-a03a-aac08697a067">
+                            <xref linkend="biblio_RFC_5905"/> Network Time Protocol Version 4: Protocol and Algorithms Specification</para>
+                        <para xml:id="para_bdaf7172-4b2b-4a08-9e0e-9b960913f305">
+                            <xref linkend="biblio_RFC_5906"/> Network Time Protocol Version 4: Autokey Specification</para>
+                        <para xml:id="para_41bce424-1e50-449b-a22c-409a56ad19c9">
+                            <xref linkend="biblio_RFC_8633"/> Network Time Protocol Best Current Practices</para>
+                    </section>
+                    <section label="G.1.2.4" status="4" xml:id="sect_G.1.2.4">
+                        <title>Basic Course of Events.</title>
+                        <para xml:id="para_a4409ba6-9707-4fb3-b790-0dda3f158551">The detail on Maintain Time transactions is described in <xref linkend="biblio_RFC_5905"/> and <xref linkend="biblio_RFC_2030"/>.
+                            The most common and the mandatory minimum mode for NTP operation uses a series of messages between client and servers.
+                            The client sends requests to the servers, which fill in time related fields in a response, and the client performs optimal estimation of the present time based on that information.
+                            The RFCs deal with issues of lost messages, estimation formulae, etc.
+                            Once the clocks are in synchronization these message exchanges typically stabilize at roughly 1000 second intervals.</para>
+                        <para xml:id="para_483906c6-fd0d-4bfc-8d5c-bbb986cf8163">The client machine uses the time estimate to maintain the internal operating system clock. This clock is then used by applications that need time information. This approach eliminates the application visible difference between synchronized and unsynchronized time. The RFCs provide guidance on proper implementations.</para>
+                    </section>
+                </section>
+                <section label="G.1.3" status="3" xml:id="sect_G.1.3">
+                    <title>NTP Security Considerations (Informative)</title>
+                    <para xml:id="para_b953f9d7-3d38-4fb2-8bd2-c04c9d7f2b63">NTP security considerations (<xref linkend="biblio_RFC_5905"/> Section 8, <xref linkend="biblio_RFC_5906"/>, and <xref linkend="biblio_RFC_8633"/>) may be applicable based on site-specific environment and threat considerations.
+                        Locations with NTP Servers should also consider <xref linkend="biblio_RFC_2827"/> and implementing access controls on the use of the server.</para>
+                    <para xml:id="para_d4acc6ed-b598-4367-9341-5480bc55889b">Security Policies and Procedures for NTP are maintained at <link xl:href="http://www.nwtime.org/security-policy/"/> as part of the Network Time Foundation.</para>
+                </section>
+                <section label="G.1.4" status="3" xml:id="sect_G.1.4">
+                    <title>NTP Implementation Considerations (Informative)</title>
+                    <para xml:id="para_72aa46a6-0514-45b6-8ceb-2bdb644b4b9d">NTP compliant servers always support both NTP and SNTP clients.
+                        The difference is one of synchronization accuracy, not communications compatibility.
+                        Although in theory both NTP and SNTP clients could run at the same time on the same system, this is not recommended.
+                        The SNTP updates will simply degrade the time accuracy.
+                        When other time protocol clients, such as IRIG, are also being used, these clients must be coordinated with the NTP client to avoid synchronization problems.</para>
+                    <para xml:id="para_680f2382-0521-437b-a53a-f81a30806f43">These and other considerations, such as multiple clock types, accuracy implications, and configuration alternatives, are documented at <link xl:href="http://www.ntp.org"/>.</para>
+                </section>
+                <section label="G.1.5" status="3" xml:id="sect_G.1.5">
+                    <title>Conformance</title>
+                    <para xml:id="para_48aae726-a244-4a3b-82b5-f522d8a1aeab">The Conformance Statement for the NTP Server and NTP Client shall state whether secure transactions (<xref linkend="biblio_RFC_5906"/>) are supported.</para>
+                    <para xml:id="para_d082e2cb-f95b-4744-bfea-12c4d72510a7">The Conformance Statement for the NTP Server shall state whether it is also an NTP Client.</para>
+                    <para xml:id="para_2ad23b6e-ddbf-42d3-a083-6eee630b2803">The Conformance Statement for the NTP Client shall state how it manages time when no NTP Server is available.</para>
+                </section>
+            </section>
+        </chapter>
+    
 <chapter label="H" status="1" xml:id="chapter_H">
     <title>Application Configuration Management Profiles</title>
   

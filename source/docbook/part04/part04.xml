@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
     <title>PS3.4</title>
-    <subtitle>DICOM PS3.4 2020a - Service Class Specifications</subtitle>
+    <subtitle>DICOM PS3.4 2020b - Service Class Specifications</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
@@ -2792,7 +2792,7 @@
                 <para xml:id="para_41418307-c7d0-4ce9-8efb-14085ba10117">Extended negotiation is optional. In the event that either the SCU or the SCP does not support extended negotiation, the defaults shall apply.</para>
                 <section label="B.3.1.1" status="4" xml:id="sect_B.3.1.1">
                     <title>Service-Class-Application-Information (A-ASSOCIATE-RQ)</title>
-                    <para xml:id="para_11a25564-2515-43eb-ba3b-8f3a80bb3852">The SOP Class Extended Negotiation Sub-item is made of a sequence of mandatory fields as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. <xref linkend="table_B.3-1" xrefstyle="select: label"/> shows the format of the Service-class-application-information field of the SOP Class Extended Negotiation Sub-Item for SOP Classes of the Storage Service Class in the A-ASSOCIATE-RQ.</para>
+                    <para xml:id="para_11a25564-2515-43eb-ba3b-8f3a80bb3852">The SOP Class Extended Negotiation Sub-Item is made of a sequence of mandatory fields as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. <xref linkend="table_B.3-1" xrefstyle="select: label"/> shows the format of the Service-class-application-information field of the SOP Class Extended Negotiation Sub-Item for SOP Classes of the Storage Service Class in the A-ASSOCIATE-RQ.</para>
                     <table frame="box" label="B.3-1" rules="all" xml:id="table_B.3-1">
                         <caption>Service-Class-Application-Information (A-ASSOCIATE-RQ)</caption>
                         <thead>
@@ -2894,7 +2894,7 @@
                 </section>
                 <section label="B.3.1.2" status="4" xml:id="sect_B.3.1.2">
                     <title>Service-Class-Application-Information (A-ASSOCIATE-AC)</title>
-                    <para xml:id="para_2148bbf6-817b-455a-ab0a-430a51a51585">The SOP Class Extended Negotiation Sub-item is made of a sequence of mandatory fields as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. <xref linkend="table_B.3-2" xrefstyle="select: label"/> shows the format of the Service-class-application-information field of the SOP Class Extended Negotiation Sub-Item for SOP Classes of the Storage Service Class in the A-ASSOCIATE-AC.</para>
+                    <para xml:id="para_2148bbf6-817b-455a-ab0a-430a51a51585">The SOP Class Extended Negotiation Sub-Item is made of a sequence of mandatory fields as defined by <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>. <xref linkend="table_B.3-2" xrefstyle="select: label"/> shows the format of the Service-class-application-information field of the SOP Class Extended Negotiation Sub-Item for SOP Classes of the Storage Service Class in the A-ASSOCIATE-AC.</para>
                     <table frame="box" label="B.3-2" rules="all" xml:id="table_B.3-2">
                         <caption>Service-Class-Application-Information (A-ASSOCIATE-AC)</caption>
                         <thead>
@@ -4913,7 +4913,7 @@
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
-                            <para xml:id="para_e0787ccf-2193-4e4e-b08c-baea19068ddb">Key Object Selection Storage</para>
+                            <para xml:id="para_e0787ccf-2193-4e4e-b08c-baea19068ddb">Key Object Selection Document Storage</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
                             <para xml:id="para_f2b0b9fb-df4d-4564-b34b-f140041bb3fd">1.2.840.10008.5.1.4.1.1.88.59</para>
@@ -8480,7 +8480,7 @@
                                 <para xml:id="para_76ccd8f3-ce52-41e1-bf5d-d7aaf70ebd57">one Abstract Syntax in a Presentation Context</para>
                             </listitem>
                             <listitem>
-                                <para xml:id="para_1014db28-59cc-4f7b-b448-68e5f7d879f6">one SCP/SCU Role Selection Negotiation Sub-item with the SCP-role field set to indicate support of the SCP role. The SCP/SCU Role Selection Negotiation shall be used as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+                                <para xml:id="para_1014db28-59cc-4f7b-b448-68e5f7d879f6">one SCP/SCU Role Selection Negotiation Sub-Item with the SCP-role field set to indicate support of the SCP role. The SCP/SCU Role Selection Negotiation shall be used as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                             </listitem>
                         </itemizedlist>
                     </listitem>
@@ -8516,7 +8516,7 @@
                                 <para xml:id="para_ad883eff-a541-416c-934c-a9c15422e29e">one Abstract Syntax, in a Presentation Context</para>
                             </listitem>
                             <listitem>
-                                <para xml:id="para_984bae67-884f-47a9-ab09-fb5910bd4b13">one SCP/SCU Role Selection Negotiation Sub-item with the SCP-role field set to indicate the acceptance of the Association-requester's support of the SCP role. The SCP/SCU Role Selection Negotiation shall be used as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
+                                <para xml:id="para_984bae67-884f-47a9-ab09-fb5910bd4b13">one SCP/SCU Role Selection Negotiation Sub-Item with the SCP-role field set to indicate the acceptance of the Association-requester's support of the SCP role. The SCP/SCU Role Selection Negotiation shall be used as defined in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                             </listitem>
                         </itemizedlist>
                     </listitem>
@@ -10677,7 +10677,7 @@
             <section label="F.2.1" status="3" xml:id="sect_F.2.1">
                 <title>Association Negotiation</title>
                 <para xml:id="para_856e5590-8bc4-4f4e-ad23-37f238fa4d78">Association establishment is the first phase of any instance of communication between peer DICOM AEs. The Association negotiation procedure specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> shall be used to negotiate the supported SOP Classes.</para>
-                <para xml:id="para_9292bfb6-8840-438f-9009-99eb218f2879">Support for the SCP/SCU role selection negotiation is mandatory. The SOP Class Extended Negotiation shall not be supported.</para>
+                <para xml:id="para_9292bfb6-8840-438f-9009-99eb218f2879">Support for the SCP/SCU Role Selection Negotiation is mandatory. The SOP Class Extended Negotiation shall not be supported.</para>
                 <note>
                     <para xml:id="para_782fda98-7c4c-4520-8478-0affb72b3925">Event notification is a process that logically extends across multiple Associations. SCP implementations should support a local table of SCUs to which event notifications are to be sent.</para>
                 </note>
@@ -19375,7 +19375,7 @@
             <section label="J.2.1" status="3" xml:id="sect_J.2.1">
                 <title>Association Negotiation</title>
                 <para xml:id="para_abf4d4f3-7483-441d-819f-9ac1b4bf3186">Association establishment is the first phase of any instance of communication between peer DICOM AEs. The Association negotiation rules as specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> shall be used to negotiate the supported SOP Classes.</para>
-                <para xml:id="para_3ba36ca8-4173-4b48-a6d0-f4a77f320f50">Support for the SCP/SCU role selection negotiation is mandatory. The SOP Class Extended Negotiation shall not be supported.</para>
+                <para xml:id="para_3ba36ca8-4173-4b48-a6d0-f4a77f320f50">Support for the SCP/SCU Role Selection Negotiation is mandatory. The SOP Class Extended Negotiation shall not be supported.</para>
                 <para xml:id="para_3cbeb47a-59bd-48c4-85e5-04cd3f8be996">An SCP implementation of the Storage Commitment Service Class shall support the Storage Commitment Push Model SOP Class.</para>
             </section>
         </section>
@@ -20006,7 +20006,7 @@
                         <note>
                             <orderedlist numeration="arabic">
                                 <listitem>
-                                    <para xml:id="para_bf756025-bc45-4d26-85ae-bae0cf6583df">The SCP may attempt to issue the N-EVENT-REPORT on the same Association, but this operation may fail because the SCU is free to release at any time the Association on which it sent the N-ACTION-Request. As DICOM defaults the association requestor to the SCU role, the SCP (i.e., the association requester) negotiates an SCP role using the SCU/SCP role negotiation (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>).</para>
+                                    <para xml:id="para_bf756025-bc45-4d26-85ae-bae0cf6583df">The SCP may attempt to issue the N-EVENT-REPORT on the same Association, but this operation may fail because the SCU is free to release at any time the Association on which it sent the N-ACTION-Request. As DICOM defaults the association requestor to the SCU role, the SCP (i.e., the association requester) negotiates an SCP role using the SCU/SCP Role Selection Negotiation (see <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>).</para>
                                 </listitem>
                                 <listitem>
                                     <para xml:id="para_383622cd-f8d7-492b-a9f9-7d6619938133">When responding on a different Association, the SCP must use the same AE Title as it used on the original Association, because the DICOM Standard defines a Service between two peer applications, each identified by an AE Title. Thus the SCP should be consistently identified for all Associations in the particular instance of the Storage Commitment Service.</para>
@@ -20610,7 +20610,7 @@
         <section label="K.5" status="2" xml:id="sect_K.5">
             <title>Association Negotiation</title>
             <para xml:id="para_800b99a8-4460-42ac-99f6-03671c695034">Association establishment is the first phase of any instance of communication between peer DICOM AEs. The Association negotiation procedure specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> shall be used to negotiate the supported SOP Classes or Meta SOP Classes.</para>
-            <para xml:id="para_318e584f-b070-4daf-9090-25a9a7499cfc">Support for the SCP/SCU role selection negotiation is optional. The SOP Class Extended Negotiation is optional.</para>
+            <para xml:id="para_318e584f-b070-4daf-9090-25a9a7499cfc">Support for the SCP/SCU Role Selection Negotiation is optional. The SOP Class Extended Negotiation is optional.</para>
             <section label="K.5.1" status="3" xml:id="sect_K.5.1">
                 <title>SOP Class Extended Negotiation</title>
                 <para xml:id="para_b96c5b9a-2ce0-4c94-8c99-0893678131bb">The SOP Class Extended Negotiation allows, at Association establishment, peer DICOM AEs to exchange application Association information defined by specific SOP Classes. This is achieved by defining the Service-class-application-information field. The Service-class-application-information field is used to define support for fuzzy semantic matching of person names.</para>
@@ -25625,7 +25625,7 @@
             <section label="S.2.1" status="3" xml:id="sect_S.2.1">
                 <title>Association Negotiation</title>
                 <para xml:id="para_febe5059-6c3b-4c7b-91ae-92a2081388b4">Association establishment is the first phase of any instance of communication between peer DICOM AEs. The Association negotiation rules as specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> shall be used to negotiate the supported SOP Classes.</para>
-                <para xml:id="para_2e882513-00a8-4bc0-8005-a727cc07b1bb">Support for the SCP/SCU role selection negotiation is not applicable. The SOP Class Extended Negotiation is not defined for this Service Class.</para>
+                <para xml:id="para_2e882513-00a8-4bc0-8005-a727cc07b1bb">Support for the SCP/SCU Role Selection Negotiation is not applicable. The SOP Class Extended Negotiation is not defined for this Service Class.</para>
             </section>
         </section>
         <section label="S.3" status="2" xml:id="sect_S.3">
@@ -27673,7 +27673,7 @@
         <section label="V.5" status="2" xml:id="sect_V.5">
             <title>Association Negotiation</title>
             <para xml:id="para_b3616beb-d162-4dc6-9ba5-20f396f0af77">Association establishment is the first phase of any instance of communication between peer DICOM AEs. The Association negotiation procedure specified in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> shall be used to negotiate the supported SOP Classes.</para>
-            <para xml:id="para_d40a8cdc-7b59-4fba-be98-cc504fe09b7b">Support for the SCP/SCU role selection negotiation is optional. The SOP Class Extended Negotiation is not used by this Service Class.</para>
+            <para xml:id="para_d40a8cdc-7b59-4fba-be98-cc504fe09b7b">Support for the SCP/SCU Role Selection Negotiation is optional. The SOP Class Extended Negotiation is not used by this Service Class.</para>
         </section>
         <section label="V.6" status="2" xml:id="sect_V.6">
             <title>SOP Class Definitions</title>
@@ -29090,7 +29090,7 @@
                         <para xml:id="para_9a305015-2f5a-4c8d-aab8-979e36556232">
                             <xref linkend="table_Y.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-MOVE response. General status code values and fields related to status code values are defined for C-MOVE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                         <table frame="box" label="Y.4-1" rules="all" xml:id="table_Y.4-1">
-                            <caption>C-MOVE Response Status Values for Instance Root Retrieve</caption>
+                            <caption>C-MOVE Response Status Values for Composite Instance Root Retrieve</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -29465,7 +29465,7 @@
                         <para xml:id="para_4350903a-a528-4988-aba9-2521d99b1c6a">The status code values that might be returned in a C-GET response shall be as specified in <xref linkend="table_Y.4-2" xrefstyle="select: label"/>
                         </para>
                         <table frame="box" label="Y.4-2" rules="all" xml:id="table_Y.4-2">
-                            <caption>C-GET Response Status Values for Instance Root Retrieve</caption>
+                            <caption>C-GET Response Status Values for Composite Instance Root Retrieve</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -29916,7 +29916,7 @@
                 <title>Composite Instance Root SOP Class Group</title>
                 <para xml:id="para_070ca1d7-3175-490f-81a3-e16231b83183">In the Composite Instance Root Retrieve Only Information Model, the information is arranged into two levels that correspond to one of the two values in element (0008,0052) shown in <xref linkend="table_Y.6.1-1" xrefstyle="select: label"/>.</para>
                 <table frame="box" label="Y.6.1-1" rules="all" xml:id="table_Y.6.1-1">
-                    <caption>Retrieve Level Values for Composite Instance Root</caption>
+                    <caption>Retrieve Level Values for Composite Instance Root Retrieve</caption>
                     <thead>
                         <tr valign="top">
                             <th align="center" colspan="1" rowspan="1">
@@ -29957,7 +29957,7 @@
                         </para>
                         <para xml:id="para_76182bc1-5d55-474d-bdc9-98dd19cf5327">
                             <figure label="Y.6-1" pgwide="1" xml:id="figure_Y.6-1">
-                                <title>Composite Instance Root Information Model E/R Diagram</title>
+                                <title>Composite Instance Root Retrieve Information Model E/R Diagram</title>
                                 <mediaobject>
                                     <imageobject>
                                         <imagedata fileref="figures/PS3.4_Y.6-1.svg"/>
@@ -29972,7 +29972,7 @@
                         <para xml:id="para_141ea7ab-aae1-4d2a-adc1-177a07061683">
                             <xref linkend="table_Y.6-1" xrefstyle="select: label"/> defines the keys at the Composite Instance level of the Composite Instance Root Query/Retrieve Information model.</para>
                         <table frame="box" label="Y.6-1" rules="all" xml:id="table_Y.6-1">
-                            <caption>Composite Instance Level Keys for the Composite Instance Root Query/Retrieve Information Model</caption>
+                            <caption>Composite Instance Level Keys for the Composite Instance Root Retrieve Information Model</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -30006,7 +30006,7 @@
                         <para xml:id="para_c42b6fa3-f91f-4f44-9f9f-257ef07597dd">
                             <xref linkend="table_Y.6-2" xrefstyle="select: label"/> defines the keys at the Frame level of the Composite Instance Root Query/Retrieve Information Model. One and only one of the frame level keys listed in <xref linkend="table_Y.6-2" xrefstyle="select: label"/> shall be present in a FRAME level request</para>
                         <table frame="box" label="Y.6-2" rules="all" xml:id="table_Y.6-2">
-                            <caption>Frame Level Keys for the Composite Instance Root Query/Retrieve Information Model</caption>
+                            <caption>Frame Level Keys for the Composite Instance Root Retrieve Information Model</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -30100,7 +30100,7 @@
                     <title>SOP Classes</title>
                     <para xml:id="para_a521abc4-8b5f-4530-8207-828404a54d4e">The SOP Classes in the Composite Instance Root SOP Class Group of the Query/Retrieve Service Class identify the Composite Instance Root Retrieve Only Information Model, and the DIMSE-C operations supported. The Standard SOP Classes are listed in <xref linkend="table_Y.6.1.3-1" xrefstyle="select: label"/>.</para>
                     <table frame="box" label="Y.6.1.3-1" rules="all" xml:id="table_Y.6.1.3-1">
-                        <caption>SOP Classes for Composite Instance Query/Retrieve Root</caption>
+                        <caption>SOP Classes for Composite Instance Root Retrieve</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -30386,7 +30386,7 @@
                         <para xml:id="para_f49891d6-3809-42cb-be26-547e3585d022">
                             <xref linkend="table_Z.4-1" xrefstyle="select: label"/> defines the status code values that might be returned in a C-GET response. General status code values and fields related to status code values are defined for C-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                         <table frame="box" label="Z.4-1" rules="all" xml:id="table_Z.4-1">
-                            <caption>C-GET Response Status Values for Instance Root Retrieve</caption>
+                            <caption>C-GET Response Status Values for Composite Instance Retrieve Without Bulk Data</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -30678,7 +30678,7 @@
                 <title>Composite Instance Retrieve Without Bulk Data SOP Class Group</title>
                 <para xml:id="para_9b09b797-f8de-4040-900a-90f3034e7ddd">In the Composite Instance Retrieve Without Bulk Data Only Information Model, only a single Retrieve Level is used.</para>
                 <table frame="box" label="Z.6.1-1" rules="all" xml:id="table_Z.6.1-1">
-                    <caption>Retrieve Level Value for Retrieve Without Bulk Data</caption>
+                    <caption>Retrieve Level Value for Composite Instance Retrieve Without Bulk Data</caption>
                     <thead>
                         <tr valign="top">
                             <th align="center" colspan="1" rowspan="1">
@@ -30714,7 +30714,7 @@
                         <para xml:id="para_a841bc06-eada-41ca-ae26-52a3253d1283">
                             <xref linkend="table_Z.6-1" xrefstyle="select: label"/> defines the keys at the Composite Instance level of the Composite Instance Retrieve Without Bulk Data Query/Retrieve Information model.</para>
                         <table frame="box" label="Z.6-1" rules="all" xml:id="table_Z.6-1">
-                            <caption>Composite Instance Level Keys for the Composite Instance Root Query/Retrieve Information Model</caption>
+                            <caption>Composite Instance Level Keys for the Composite Instance Retrieve Without Bulk Data Information Model</caption>
                             <thead>
                                 <tr valign="top">
                                     <th align="center" colspan="1" rowspan="1">
@@ -30764,7 +30764,7 @@
                     <title>SOP Classes</title>
                     <para xml:id="para_6ca9b5fa-4a16-4593-a633-cacfbc8db0e9">The SOP Classes in the Composite Instance Retrieve Without Bulk Data SOP Class Group of the Query/Retrieve Service Class identify the Composite Instance Retrieve Without Bulk Data Only Information Model, and the DIMSE-C operations supported. The Standard SOP Classes are listed in <xref linkend="table_Z.6.1.3-1" xrefstyle="select: label"/>.</para>
                     <table frame="box" label="Z.6.1.3-1" rules="all" xml:id="table_Z.6.1.3-1">
-                        <caption>SOP Classes for Composite Instance Query/Retrieve Root</caption>
+                        <caption>SOP Classes for Composite Instance Retrieve Without Bulk Data</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -32741,7 +32741,7 @@
                     <para xml:id="para_e9473bb3-3097-4988-8c36-a6d665f6ea31">
                         <xref linkend="table_CC.2.1-2" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/> .</para>
                     <table frame="box" label="CC.2.1-2" rules="all" xml:id="table_CC.2.1-2">
-                        <caption>Status Values</caption>
+                        <caption>N-ACTION Response Status Values [for Change UPS State]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -32966,7 +32966,7 @@
                     <para xml:id="para_217b1f3f-6e13-44f7-bb17-688ff5743d58">
                         <xref linkend="table_CC.2.2-2" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.2-2" rules="all" xml:id="table_CC.2.2-2">
-                        <caption>Status Values</caption>
+                        <caption>N-ACTION Response Status Values [for Request UPS Cancel]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -33486,7 +33486,7 @@
                     <para xml:id="para_e3b30cd4-9a7a-44c8-8cb0-a955117bcc67">
                         <xref linkend="table_CC.2.3-3" xrefstyle="select: label"/> defines the status code values that might be returned in a N-ACTION response. General status code values and fields related to status code values are defined for N-ACTION DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.3-3" rules="all" xml:id="table_CC.2.3-3">
-                        <caption>Status Values</caption>
+                        <caption>N-ACTION Response Status Values [for Subscribe/Unsubscribe to Receive UPS sEvent Reports]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -35551,34 +35551,7 @@
                                         <para xml:id="para_d44a9aed-3af5-4361-b11b-ddcf374edf4f">Return Key required if set.</para>
                                     </td>
                                 </tr>
-                                <tr valign="top">
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_11a4e922-2d5c-4e8c-9687-ba03b840921a">Local Namespace Entity ID</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_469a5519-bbe3-4d17-bc7f-26e3fd171420">(0040,0031)</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_82f4d3b7-4c7e-4fca-9860-95a613f9d3d5">1C/1</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_6be620b4-e8fa-4a45-aa69-8a65c21a3095">Not Allowed</para>
-                                    </td>
-                                    <td align="left" colspan="1" rowspan="1"/>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_66b73608-f8a5-4715-bfb9-9eb4ae7e8d1e">-/1</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_b29d37af-affa-4665-9e57-9bf6b43b0cc6">*</para>
-                                    </td>
-                                    <td align="center" colspan="1" rowspan="1">
-                                        <para xml:id="para_9617089d-0e46-4408-9b00-30622b616bb9">1C</para>
-                                    </td>
-                                    <td align="left" colspan="1" rowspan="1">
-                                        <para xml:id="para_4626859b-fd93-4166-b124-e9d6b0872394">Creation required if Universal Entity ID (0040,0032) is not present; may be present otherwise.</para>
-                                        <para xml:id="para_f5c1de17-dcab-401e-b7a6-a31119aa9a04">Return Key required if set.</para>
-                                    </td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                         <table frame="box" label="CC.2.5-2e" rules="all" xml:id="table_CC.2.5-2e">
@@ -39388,7 +39361,7 @@
                     <para xml:id="para_e00eb7cb-01b0-4b51-a6dd-9bd473291576">
                         <xref linkend="table_CC.2.5-4" xrefstyle="select: label"/> defines the status code values that might be returned in a N-CREATE response. General status code values and fields related to status code values are defined for N-CREATE DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.5-4" rules="all" xml:id="table_CC.2.5-4">
-                        <caption>Status Values</caption>
+                        <caption>N-CREATE Response Status Values [for Create a Unified Procedure Step]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -39479,7 +39452,7 @@
                     <para xml:id="para_f809bb02-2842-48e2-9973-cbbe20ad79f9">
                         <xref linkend="table_CC.2.6-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-SET response. General status code values and fields related to status code values are defined for N-SET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.6-1" rules="all" xml:id="table_CC.2.6-1">
-                        <caption>Status Values</caption>
+                        <caption>N-SET Response Status Values [for Set Unified Procedure Step Information]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -39602,7 +39575,7 @@
                     <para xml:id="para_877bc66c-8c88-4eea-aa17-3924f807f4d1">
                         <xref linkend="table_CC.2.7-1" xrefstyle="select: label"/> defines the status code values that might be returned in a N-GET response. General status code values and fields related to status code values are defined for N-GET DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.7-1" rules="all" xml:id="table_CC.2.7-1">
-                        <caption>Status Values</caption>
+                        <caption>N-GET Response Status Values [for Get Unified Procedure Step Information]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
@@ -39811,7 +39784,7 @@
                     <para xml:id="para_9e81bf94-27ee-4c73-9d28-2ec2d81cdb64">
                         <xref linkend="table_CC.2.8-2" xrefstyle="select: label"/> defines the status code values that might be returned in a C-FIND response. General status code values and fields related to status code values are defined for C-FIND DIMSE Service in <olink targetdoc="PS3.7" targetptr="PS3.7" xrefstyle="select: labelnumber"/>.</para>
                     <table frame="box" label="CC.2.8-2" rules="all" xml:id="table_CC.2.8-2">
-                        <caption>C-FIND Response Status Values</caption>
+                        <caption>C-FIND Response Status Values [for Search for Unified Procedure Step]</caption>
                         <thead>
                             <tr valign="top">
                                 <th align="center" colspan="1" rowspan="1">
