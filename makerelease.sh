@@ -102,12 +102,13 @@ zip "${releasefilebasename}_html_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/html/part19.html \
 	output/html/part20.html \
 	output/html/part21.html \
+	output/html/part22.html \
+	output/html/part02_fromword_files \
 	output/html/part03_fromword_files \
 	output/html/part14_fromword_files \
 	output/html/part16_fromword_files \
 	output/html/part17_fromword_files \
-	output/html/part20_fromword_files \
-	output/html/part22_fromword_files
+	output/html/part20_fromword_files
 
 zip "${releasefilebasename}_chtml_${releasedate}.zip" -v -r "-x@${EXCLUDEFILE}" \
 	output/chtml/targetdb \

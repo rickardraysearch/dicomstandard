@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.20" version="5.0" xml:id="PS3.20">
   <title>PS3.20</title>
-  <subtitle>DICOM PS3.20 2020b - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
+  <subtitle>DICOM PS3.20 2020c - Imaging Reports using HL7 Clinical Document Architecture</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1346,7 +1346,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
 </listitem>
               </itemizedlist>
               <para xml:id="para_3a09ecaf-3448-40f4-99a5-e4ed2b7183ea">The report templates sponsored by the RSNA Radiology Reporting Initiative (<link xl:href="http://www.radreport.org"/>) adhere to this general section outline.</para>
-                <para xml:id="para_6c38c50a-df80-4578-9457-914784f993c0">The section and subsection structure of this template is also identified by LOINC panel code <link xl:href="http://s.details.loinc.org/LOINC/87416-4.html">87416-4</link>.</para>
+                <para xml:id="para_6c38c50a-df80-4578-9457-914784f993c0">The section and subsection structure of this template is also identified by LOINC panel code <link xl:href="http://loinc.org/87416-4/">87416-4</link>.</para>
             </td>
           </tr>
           <tr valign="top">
@@ -8279,9 +8279,9 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_e0d9ed75-354f-4687-ba4e-35a649df5951">
-<link xl:href="http://s.details.loinc.org/LOINC/55752-0.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55752-0.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55752-0.html" xl:show="new">(55752-0, LOINC, "Clinical Information")</link>
+<link xl:href="http://loinc.org/55752-0/" xl:show="new">
+<link xl:href="http://loinc.org/55752-0/" xl:show="new">
+<link xl:href="http://loinc.org/55752-0/" xl:show="new">(55752-0, LOINC, "Clinical Information")</link>
 </link>
 </link>
 </para>
@@ -8780,8 +8780,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_611e3d8f-9616-4b06-b777-9f6b8b057ad9">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">(55111-9, LOINC, "Current Imaging Procedure Description")</link>
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">(55111-9, LOINC, "Current Imaging Procedure Description")</link>
 </link>
 </para>
             </td>
@@ -9405,8 +9405,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_a4a09c68-fd63-4e64-8760-07fd611f2166">
-<link xl:href="http://s.details.loinc.org/LOINC/18834-2.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/18834-2.html" xl:show="new">(18834-2, LOINC, "Radiology Comparison study")</link>
+<link xl:href="http://loinc.org/18834-2/" xl:show="new">
+<link xl:href="http://loinc.org/18834-2/" xl:show="new">(18834-2, LOINC, "Radiology Comparison study")</link>
 </link>
 </para>
             </td>
@@ -9854,8 +9854,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_178f958d-c314-47fc-9bd0-1e20609ff6c2">
-<link xl:href="http://s.details.loinc.org/LOINC/59776-5.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/59776-5.html" xl:show="new">(59776-5, LOINC, "Procedure Findings")</link>
+<link xl:href="http://loinc.org/59776-5/" xl:show="new">
+<link xl:href="http://loinc.org/59776-5/" xl:show="new">(59776-5, LOINC, "Procedure Findings")</link>
 </link>
 </para>
             </td>
@@ -10327,8 +10327,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_790d4d6b-247a-4eb0-b2f5-cfefb331754a">
-<link xl:href="http://s.details.loinc.org/LOINC/19005-8.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/19005-8.html" xl:show="new">(19005-8, LOINC, "Impressions")</link>
+<link xl:href="http://loinc.org/19005-8/" xl:show="new">
+<link xl:href="http://loinc.org/19005-8/" xl:show="new">(19005-8, LOINC, "Impressions")</link>
 </link>
 </para>
             </td>
@@ -10857,7 +10857,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
             </td>
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_03524b91-399f-47c7-bfcd-02967b058d64">
-<link xl:href="http://s.details.loinc.org/LOINC/55107-7.html" xl:show="new">(55107-7, LOINC, "Addendum")</link>
+<link xl:href="http://loinc.org/55107-7/" xl:show="new">(55107-7, LOINC, "Addendum")</link>
 </para>
             </td>
             <td align="left" colspan="1" rowspan="1"/>
@@ -11420,8 +11420,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_31ddb46e-e4dd-4b77-9054-ab4a4488b981">
-<link xl:href="http://s.details.loinc.org/LOINC/55115-0.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55115-0.html" xl:show="new">(55115-0, LOINC, "Request")</link>
+<link xl:href="http://loinc.org/55115-0/" xl:show="new">
+<link xl:href="http://loinc.org/55115-0/" xl:show="new">(55115-0, LOINC, "Request")</link>
 </link>
 </para>
               </td>
@@ -11851,8 +11851,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_cb2c4ec1-c249-473b-9afd-b0d501aad5ae">
-<link xl:href="http://s.details.loinc.org/LOINC/59768-2.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/59768-2.html" xl:show="new">(59768-2, LOINC, "Procedure Indications")</link>
+<link xl:href="http://loinc.org/59768-2/" xl:show="new">
+<link xl:href="http://loinc.org/59768-2/" xl:show="new">(59768-2, LOINC, "Procedure Indications")</link>
 </link>
 </para>
               </td>
@@ -12301,8 +12301,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_b4720602-f297-43f9-81a9-c1f0613b044e">
-<link xl:href="http://s.details.loinc.org/LOINC/11329-0.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/11329-0.html" xl:show="new">(11329-0, LOINC, "History General")</link>
+<link xl:href="http://loinc.org/11329-0/" xl:show="new">
+<link xl:href="http://loinc.org/11329-0/" xl:show="new">(11329-0, LOINC, "History General")</link>
 </link>
 </para>
               </td>
@@ -12686,7 +12686,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_4cdbabfe-31b1-42f5-a476-5d6630d365e8">
-<link xl:href="http://s.details.loinc.org/LOINC/55109-3.html" xl:show="new">(55109-3, LOINC, "Complications")</link>
+<link xl:href="http://loinc.org/55109-3/" xl:show="new">(55109-3, LOINC, "Complications")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -13071,7 +13071,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_3ee171c2-02a8-4e77-8b87-b0085300ccb1">
-<link xl:href="http://s.details.loinc.org/LOINC/73569-6.html" xl:show="new">(73569-6, LOINC, "Radiation exposure and protection information")</link>
+<link xl:href="http://loinc.org/73569-6/" xl:show="new">(73569-6, LOINC, "Radiation exposure and protection information")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -14352,7 +14352,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_a8927609-3df4-4062-b7c2-3fb6a0b76669">
-<link xl:href="http://s.details.loinc.org/LOINC/55113-5.html" xl:show="new">(55113-5, LOINC, "Key Images")</link>
+<link xl:href="http://loinc.org/55113-5/" xl:show="new">(55113-5, LOINC, "Key Images")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -15258,7 +15258,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_61951a81-5511-474a-8ce7-34cd8da6c7fa">
-<link xl:href="http://s.details.loinc.org/LOINC/76514-9.html" xl:show="new">(76514-9, LOINC, "Fetal Study observation")</link>
+<link xl:href="http://loinc.org/76514-9/" xl:show="new">(76514-9, LOINC, "Fetal Study observation")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -16216,7 +16216,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_30ca27ed-b518-4cae-8940-781b3956816c">
-<link xl:href="http://s.details.loinc.org/LOINC/73568-8.html" xl:show="new">(73568-8, LOINC, "Communication of Critical Results")</link>
+<link xl:href="http://loinc.org/73568-8/" xl:show="new">(73568-8, LOINC, "Communication of Critical Results")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -17138,7 +17138,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
               </td>
               <td align="left" colspan="1" rowspan="1">
                 <para xml:id="para_2e3689a9-9d8d-4cc3-b14e-80e82203ae13">
-<link xl:href="http://s.details.loinc.org/LOINC/18783-1.html" xl:show="new">(18783-1, LOINC, "Study recommendation")</link>
+<link xl:href="http://loinc.org/18783-1/" xl:show="new">(18783-1, LOINC, "Study recommendation")</link>
 </para>
               </td>
               <td align="left" colspan="1" rowspan="1"/>
@@ -24585,8 +24585,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
 <olink targetdoc="PS3.16" targetptr="DCM_122142">(122142, DCM, "Acquisition Device Type")</olink>
 </emphasis> or
                 <emphasis role="italic">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">(55111-9, LN, "Current Procedure Descriptions")</link>
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">(55111-9, LN, "Current Procedure Descriptions")</link>
 </link> &gt; <olink targetdoc="PS3.16" targetptr="DCM_122142">(122142, DCM, "Acquisition Device Type")</olink>
 </emphasis>
               </para>
@@ -24602,8 +24602,8 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
 <olink targetdoc="PS3.16" targetptr="DCM_123014">(123014, DCM, "Target Region")</olink>
 </emphasis> or
                 <emphasis role="italic">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">
-<link xl:href="http://s.details.loinc.org/LOINC/55111-9.html" xl:show="new">(55111-9, LN, "Current Procedure Descriptions")</link>
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">
+<link xl:href="http://loinc.org/55111-9/" xl:show="new">(55111-9, LN, "Current Procedure Descriptions")</link>
 </link> &gt; <olink targetdoc="PS3.16" targetptr="DCM_123014">(123014, DCM, "Target Region")</olink>
 </emphasis>
               </para>
@@ -25347,7 +25347,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
 <olink targetdoc="PS3.16" targetptr="DCM_121030">(121030, DCM, "Subject ID")</olink>
 </emphasis> or
                     <emphasis role="italic">
-<link xl:href="http://s.details.loinc.org/LOINC/11951-1.html" xl:show="new">(11951-1, LN, "Fetus ID")</link>
+<link xl:href="http://loinc.org/11951-1/" xl:show="new">(11951-1, LN, "Fetus ID")</link>
 </emphasis>
                   </para>
                 </td>
@@ -25824,7 +25824,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
           <title>Procedure Indications</title>
           <para xml:id="para_a9a1d2ca-8066-45c9-b229-a8ca4a855da5">The DICOM SR Document General Module may specify the Reason for the Requested Procedure as either free text in attribute (0040,1002), and/or as multiple coded values in attribute (0040,100A). These are mapped to the Procedure Indications subsection of the Clinical Information section of the CDA Imaging Report.</para>
           <note>
-            <para xml:id="para_8c47292d-27ea-4aef-8281-6b5330946baf">Procedure indications may also be specified as SR content items in the <link xl:href="http://s.details.loinc.org/LOINC/18785-6.html" xl:show="new">(18785-6, LN, "Indications for Procedure")</link> CONTAINER, which may be mapped to the CDA instance in accordance with <xref linkend="sect_C.4.3" xrefstyle="select: label"/>. It is an implementation decision how to handle multiple representations of indications in the SR document.</para>
+            <para xml:id="para_8c47292d-27ea-4aef-8281-6b5330946baf">Procedure indications may also be specified as SR content items in the <link xl:href="http://loinc.org/18785-6/" xl:show="new">(18785-6, LN, "Indications for Procedure")</link> CONTAINER, which may be mapped to the CDA instance in accordance with <xref linkend="sect_C.4.3" xrefstyle="select: label"/>. It is an implementation decision how to handle multiple representations of indications in the SR document.</para>
           </note>
           <table frame="box" label="C.4-10" rules="all" xml:id="table_C.4-10">
             <caption>Clinical Information Procedure Indications mapping from SR</caption>
@@ -26017,7 +26017,7 @@ ImagingReport:Findings:QuantityMeasurement[Q21b]:MeasurementUnits = "mm"]]></pro
                 <td align="left" colspan="1" rowspan="1">
                   <para xml:id="para_11c90025-3d3b-47bd-abbd-01010b64d74e">
                     <emphasis role="italic">
-<link xl:href="http://s.details.loinc.org/LOINC/18785-6.html" xl:show="new">(18785-6, LN, "Indications for Procedure")</link>
+<link xl:href="http://loinc.org/18785-6/" xl:show="new">(18785-6, LN, "Indications for Procedure")</link>
 </emphasis>
                   </para>
                 </td>

@@ -2,7 +2,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.22" version="5.0" xml:id="PS3.22">
   
   <title>PS3.22</title>
-    <subtitle>DICOM PS3.22 2020b - Real-Time Communication</subtitle>
+    <subtitle>DICOM PS3.22 2020c - Real-Time Communication</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -231,7 +231,7 @@
       <varlistentry>
         <term>RTP</term>
         <listitem>
-          <para xml:id="para_d17e5429-72eb-46f7-aa19-959ec5e172cb">Real-Time Protocol</para>
+          <para xml:id="para_d17e5429-72eb-46f7-aa19-959ec5e172cb">Real-Time Transport Protocol</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -257,7 +257,7 @@
         <para xml:id="para_94f4a76a-a430-41d1-80da-968f802217db">DICOM Real-Time Video uses the RTP protocol as defined in <xref linkend="biblio_SMPTE_ST2110-10"/>.</para>
         <section label="6.1" status="2" xml:id="sect_6.1">
             <title>Interaction</title>
-            <para xml:id="para_afc40fdb-7965-4e02-b62a-b6eee290674d">As shown in <xref linkend="figure_6-1" xrefstyle="select: label"/>, a device can have multiple Sources, one for each Essence which corresponds of the type of bulk data (video, audio or medical metadata) , each Source producing one or multiple Flows representing the same content in different formats (high definition, low definition, uncompressed, compress with or without lossâ€¦).</para>
+            <para xml:id="para_afc40fdb-7965-4e02-b62a-b6eee290674d">As shown in <xref linkend="figure_6-1" xrefstyle="select: label"/>, a device can have multiple Sources, one for each Essence which corresponds of the type of bulk data (video, audio or medical metadata), each Source producing one or multiple Flows representing the same content in different formats (high definition, low definition, uncompressed, compress with or without loss, …).</para>
             <para xml:id="para_5926b24d-4af6-4f13-a957-e006a3378bb7">Several Sources may be grouped in a Source Group. A concrete experience of a Source Group is a Rendition, defined as a collection of time-synchronized Flows intended for simultaneous presentation (e.g., the audio channel of a surgical camera).</para>
             <figure label="6-1" pgwide="1" xml:id="figure_6-1">
                 <title>Real World diagram of DICOM-RTV</title>

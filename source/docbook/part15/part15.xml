@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.15" version="5.0" xml:id="PS3.15">
   <title>PS3.15</title>
-  <subtitle>DICOM PS3.15 2020b - Security and System Management Profiles</subtitle>
+  <subtitle>DICOM PS3.15 2020c - Security and System Management Profiles</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -15400,6 +15400,37 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para>Impedance Measurement DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(003A,0314)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_e68a91ad-0461-4482-95d1-92a55d30862e">Impressions</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -15772,6 +15803,95 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Interlock DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0741)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Interlock Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0742)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Interlock Origin Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0783)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -16791,6 +16911,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para>Multiplex Group UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(003A,0310)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_3c78afc9-891f-4d23-9f76-b639d25d7d01">Name of Physician(s) Reading Study</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -17377,6 +17526,37 @@ start = message
                             </td>
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_04b1faef-29db-4b0b-8808-d4f2f8effa97">C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Override DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0760)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
@@ -19485,6 +19665,37 @@ start = message
                             <td align="center" colspan="1" rowspan="1">
                                 <para xml:id="para_57e93aa9-87f8-43ae-ab85-63b187bba23e">C</para>
                             </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Recorded RT Control Point DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,073A)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -23017,6 +23228,35 @@ start = message
                         </tr>
                         <tr valign="top">
                             <td align="left" colspan="1" rowspan="1">
+                                <para>Treatment Session UID</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0700)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>U</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
                                 <para xml:id="para_57d6499e-2595-42e4-95bf-e19294b2e07a">Treatment Site</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1">
@@ -23101,6 +23341,66 @@ start = message
                                 <para xml:id="para_cb37cc39-cbf7-46fb-9732-6890a63b35db">C</para>
                             </td>
                             <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Treatment Tolerance Violation DateTime</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0736)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Treatment Tolerance Violation Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(300A,0734)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
@@ -23525,6 +23825,385 @@ start = message
                             <td align="center" colspan="1" rowspan="1"/>
                             <td align="center" colspan="1" rowspan="1"/>
                         </tr>
+                        <!-- CP 2038 draft - do not activate until final text
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Structure Set Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0002)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Structure Set Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0004)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Structure Set Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0006)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Structure Set Date</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0008)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Structure Set Time</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0009)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>K</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Name</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0026)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X/D</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0028)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Generation Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0038)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Observation Label</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0085)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Observation Description</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,0088)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>C</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>ROI Interpreter</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(3006,00A6)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>Y</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        -->
+                        <!-- cp_dac559_DeIdNonConforming draft - do not activate until final text
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Nonconforming Modified Attributes Sequence</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(0400,0551)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                        <tr valign="top">
+                            <td align="left" colspan="1" rowspan="1">
+                                <para>Nonconforming Data Element Value</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>(0400,0552)</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>N</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1">
+                                <para>X</para>
+                            </td>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                            <td align="center" colspan="1" rowspan="1"/>
+                        </tr>
+                          -->
                     </tbody>
                 </table>
             </section>

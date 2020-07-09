@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.4" version="5.0" xml:id="PS3.4">
     <title>PS3.4</title>
-    <subtitle>DICOM PS3.4 2020b - Service Class Specifications</subtitle>
+    <subtitle>DICOM PS3.4 2020c - Service Class Specifications</subtitle>
     <info>
         <author>
             <orgname>DICOM Standards Committee</orgname>
@@ -3583,6 +3583,9 @@
                                 <emphasis role="bold">IOD Specification (defined in <olink targetdoc="PS3.3" targetptr="PS3.3" xrefstyle="select: labelnumber"/>)</emphasis>
                             </para>
                         </th>
+                        <th align="center" colspan="1" rowspan="1">
+                            <para>Specialization</para>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -3598,6 +3601,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3610,7 +3614,9 @@
                             <para xml:id="para_7bf5bd6f-fd05-44fd-8d13-9900de2647e7">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.26" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_06c885b6-b78c-4ed6-a899-31cf0a305ee0">(see <xref linkend="sect_B.5.1.1" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_06c885b6-b78c-4ed6-a899-31cf0a305ee0"><xref linkend="sect_B.5.1.1" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3624,7 +3630,9 @@
                             <para xml:id="para_50e7d3a3-346a-42e0-a6ef-5cd4d7bfd34e">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.26" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_23cfcb8e-1013-443b-9afd-1ba5f2776a9c">(see <xref linkend="sect_B.5.1.1" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_23cfcb8e-1013-443b-9afd-1ba5f2776a9c"><xref linkend="sect_B.5.1.1" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3638,7 +3646,9 @@
                             <para xml:id="para_f3ebdb80-cd30-4488-bf2f-243e2ac2f5f9">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.27" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_5acdb83f-ec28-445c-ba5a-aac041c97e51">(see <xref linkend="sect_B.5.1.2" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_5acdb83f-ec28-445c-ba5a-aac041c97e51"><xref linkend="sect_B.5.1.2" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3652,7 +3662,9 @@
                             <para xml:id="para_8b454884-87f1-4ce8-a8d5-0ce43c62feae">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.27" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_7545a1b4-23e2-4157-859e-c40ba8682d3e">(see <xref linkend="sect_B.5.1.2" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_7545a1b4-23e2-4157-859e-c40ba8682d3e"><xref linkend="sect_B.5.1.2" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3666,7 +3678,9 @@
                             <para xml:id="para_a9a871eb-05a0-4a07-8ab3-dee2a8d3a26f">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.28" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_d1ef408a-39c4-49a2-958d-b765c36ca02e">(see <xref linkend="sect_B.5.1.3" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_d1ef408a-39c4-49a2-958d-b765c36ca02e"><xref linkend="sect_B.5.1.3" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3680,7 +3694,9 @@
                             <para xml:id="para_e98a8f6a-367a-4603-955e-1364716096f9">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.28" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_1edc8056-e125-4a25-ab54-422b23b0f69d">(see <xref linkend="sect_B.5.1.3" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_1edc8056-e125-4a25-ab54-422b23b0f69d"><xref linkend="sect_B.5.1.3" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3695,6 +3711,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3707,7 +3724,10 @@
                             <para xml:id="para_de49dec8-83be-4d5d-8e91-0ced14849386">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.38.1" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_f0b999d0-69ae-45c7-9e0f-bea95947513a">(see <xref linkend="sect_B.5.1.7" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_f0b999d0-69ae-45c7-9e0f-bea95947513a"><xref linkend="sect_B.5.1.7" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3721,7 +3741,10 @@
                             <para xml:id="para_e4dd6b8d-c64f-4b10-8c48-6490635cabdc">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.70" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_d40d89f5-86b0-4416-937b-e099066d8bbd">(see <xref linkend="sect_B.5.1.7" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_d40d89f5-86b0-4416-937b-e099066d8bbd"><xref linkend="sect_B.5.1.7" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3736,6 +3759,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3749,6 +3773,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3761,7 +3786,10 @@
                             <para xml:id="para_652e2323-b7ce-47b5-9d18-d9f51d4998bf">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.36.2" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_2c3e38a3-c6d0-4d4d-af88-0bbddc1e2c1a">(see <xref linkend="sect_B.5.1.6" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_2c3e38a3-c6d0-4d4d-af88-0bbddc1e2c1a"><xref linkend="sect_B.5.1.6" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3776,6 +3804,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.36.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3789,6 +3818,10 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.36.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.8" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
+                        </td>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3801,7 +3834,10 @@
                             <para xml:id="para_6dcf9469-d51f-4dc9-afe1-c76b9c25098c">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.71" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_e255415a-7520-4f4e-9875-ee7f1042c89c">(see <xref linkend="sect_B.5.1.6" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_e255415a-7520-4f4e-9875-ee7f1042c89c"><xref linkend="sect_B.5.1.6" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -3816,6 +3852,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3829,6 +3866,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.59" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3842,6 +3880,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.8.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3855,6 +3894,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.8.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3868,6 +3908,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.8.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3881,6 +3922,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.8.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3894,6 +3936,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.8.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3907,6 +3950,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3920,6 +3964,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3933,6 +3978,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3946,6 +3992,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3959,6 +4006,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3972,6 +4020,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3985,6 +4034,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.10" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -3998,6 +4048,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.8" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4011,8 +4062,93 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.34.9" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Multi-channel Respiratory Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.6.2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.16" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Routine Scalp Electroencephalogram Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.7.1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.12" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Electromyogram Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.7.2</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.13" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Electrooculogram Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.7.3</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.14" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Sleep Electroencephalogram Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.7.4</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.15" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Body Position Waveform Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.9.8.1</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.34.17" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                   <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
                             <para xml:id="para_6b687850-0dd0-4907-992c-93c80cf3a1db">Grayscale Softcopy Presentation State Storage</para>
                         </td>
@@ -4024,6 +4160,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4037,6 +4174,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4050,6 +4188,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4063,6 +4202,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4076,6 +4216,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4088,6 +4229,9 @@
                             <para xml:id="para_0a9d2383-e314-46a4-b6d4-d2e1b66a9580">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.19" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4102,6 +4246,9 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.80.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.19" xrefstyle="select: labelnumber"/></para>
+                        </td>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4115,6 +4262,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4127,6 +4275,9 @@
                             <para xml:id="para_8de0d168-15a2-40b9-97c3-124ed05814e6">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.24" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4141,6 +4292,9 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.24" xrefstyle="select: labelnumber"/></para>
+                        </td>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4153,6 +4307,9 @@
                             <para xml:id="para_116f510c-b2c0-4f17-847b-1735f490db0f">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.80.2" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.24" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4167,6 +4324,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.14" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4180,6 +4338,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.47" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4193,6 +4352,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.16" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4206,6 +4366,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.48" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4219,6 +4380,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.53" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4232,6 +4394,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.54" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4245,6 +4408,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.55" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4257,6 +4421,9 @@
                             <para xml:id="para_4e16c6e0-67cb-41cd-aba1-10c7a496d99e">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.18" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4271,6 +4438,9 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.74" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.18" xrefstyle="select: labelnumber"/></para>
+                        </td>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4283,7 +4453,9 @@
                             <para xml:id="para_69b3766e-2e7b-4945-ace9-9e899f4e15f4">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.66" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_1c7fe911-5389-4b52-9dd2-73fe8c5d4903">(see <xref linkend="sect_B.5.1.13" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_1c7fe911-5389-4b52-9dd2-73fe8c5d4903"><xref linkend="sect_B.5.1.13" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4297,7 +4469,9 @@
                             <para xml:id="para_f0da7a5a-ae0a-4e39-a03a-805d0a7ad622">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.66" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_37f9d300-ef3c-430e-8e7c-0631163341ed">(see <xref linkend="sect_B.5.1.13" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_37f9d300-ef3c-430e-8e7c-0631163341ed"><xref linkend="sect_B.5.1.13" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4312,6 +4486,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4325,6 +4500,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.75" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4337,6 +4513,9 @@
                             <para xml:id="para_0cad0e82-ff42-408c-98ce-a29d1dc648ed">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.37" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.22" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4351,6 +4530,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.39.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4364,6 +4544,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.40" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4377,6 +4558,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.39.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4390,6 +4572,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.51" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4403,6 +4586,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.57" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4416,6 +4600,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.78" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4429,6 +4614,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.46" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4442,6 +4628,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.68" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4455,6 +4642,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.69" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4468,6 +4656,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4481,6 +4670,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4494,6 +4684,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4507,6 +4698,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4520,6 +4712,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4533,6 +4726,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4546,6 +4740,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4559,6 +4754,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.41" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4572,6 +4768,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.42" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4585,6 +4782,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.43" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4598,6 +4796,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.52" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4611,6 +4810,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.76" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4624,6 +4824,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.77" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4637,6 +4838,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.83" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4650,6 +4852,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.84" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4663,6 +4866,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.32.8" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4676,6 +4880,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4689,6 +4894,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4702,6 +4908,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4715,6 +4922,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4728,6 +4936,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4741,6 +4950,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.9" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4754,6 +4964,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4767,6 +4978,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.60.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4780,6 +4992,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.11" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4793,6 +5006,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.65" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4806,6 +5020,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.67" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4818,6 +5033,9 @@
                             <para xml:id="para_2476194b-7352-4136-be5a-b3c868d1ba6b">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.73" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.17" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -4832,6 +5050,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4845,6 +5064,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4858,6 +5078,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4871,6 +5092,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.13" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4884,6 +5106,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.15" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4897,6 +5120,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.7" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4910,6 +5134,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.5" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4923,6 +5148,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.4" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4936,6 +5162,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.6" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4949,6 +5176,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.8" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4962,6 +5190,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.14" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4975,6 +5204,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.10" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -4988,6 +5218,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.12" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5001,6 +5232,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.16" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5014,6 +5246,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.17" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5027,6 +5260,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.18" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5040,6 +5274,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.19" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5053,6 +5288,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.35.20" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5063,6 +5299,9 @@
                         </td>
                         <td align="left" colspan="1" rowspan="1">
                             <olink targetdoc="PS3.3" targetptr="sect_A.81" xrefstyle="select: title"/>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.20" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -5077,6 +5316,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.45.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5090,6 +5330,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.45.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5103,6 +5344,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.85.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5116,6 +5358,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.85.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5129,6 +5372,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.85.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5142,6 +5386,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.21" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5154,7 +5399,10 @@
                             <para xml:id="para_a1fd0cd1-143c-463f-a7c7-c1e0000d7dc7">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.56" xrefstyle="select: title"/>
                             </para>
-                            <para xml:id="para_16edc374-4003-4040-b276-2eb0e579357f">(see <xref linkend="sect_B.5.1.16" xrefstyle="select: label"/>)</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para xml:id="para_16edc374-4003-4040-b276-2eb0e579357f"><xref linkend="sect_B.5.1.16" xrefstyle="select: labelnumber"/></para>
+                            <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -5167,8 +5415,10 @@
                         <td align="left" colspan="1" rowspan="1">
                             <para xml:id="para_b64de540-b6ff-4167-980f-1afc3e47cfc8">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.72" xrefstyle="select: title"/>
+                                <para><xref linkend="sect_B.5.1.23" xrefstyle="select: labelnumber"/></para>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5181,6 +5431,9 @@
                             <para xml:id="para_747a90c8-d518-40de-b9b7-a6482008a6ec">
                                 <olink targetdoc="PS3.3" targetptr="sect_A.33.5" xrefstyle="select: title"/>
                             </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.9" xrefstyle="select: labelnumber"/></para>
                         </td>
                     </tr>
                     <tr valign="top">
@@ -5195,6 +5448,9 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.82.1" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para><xref linkend="sect_B.5.1.21" xrefstyle="select: labelnumber"/></para>
+                        </td>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5208,6 +5464,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.17" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5221,6 +5478,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.18" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5234,6 +5492,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.19" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5247,6 +5506,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.29" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5260,6 +5520,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.20" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5273,6 +5534,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.30" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5286,6 +5548,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.31" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5299,6 +5562,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.49" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5312,6 +5576,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.50" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5325,6 +5590,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.86.1.2" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5338,6 +5604,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.86.1.3" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5347,8 +5614,11 @@
                             <para xml:id="para_5b1f4944-40b5-47dd-971d-9bf2ab968de0">1.2.840.10008.5.1.4.1.1.481.12</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                            <olink targetdoc="PS3.3" targetptr="sect_A.86.1.4" xrefstyle="select: title"/>
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.4" xrefstyle="select: title"/>
+                            </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5358,8 +5628,11 @@
                             <para xml:id="para_6b89163f-9790-44b0-8b87-bbe645520c38">1.2.840.10008.5.1.4.1.1.481.13</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                            <olink targetdoc="PS3.3" targetptr="sect_A.86.1.5" xrefstyle="select: title"/>
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.5" xrefstyle="select: title"/>
+                            </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5369,8 +5642,11 @@
                             <para xml:id="para_5d42f286-f797-48e4-98f8-115c3e602965">1.2.840.10008.5.1.4.1.1.481.14</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                            <olink targetdoc="PS3.3" targetptr="sect_A.86.1.6" xrefstyle="select: title"/>
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.6" xrefstyle="select: title"/>
+                            </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5380,8 +5656,81 @@
                             <para xml:id="para_2be178d2-c639-4835-8406-82c85e9f3936">1.2.840.10008.5.1.4.1.1.481.15</para>
                         </td>
                         <td align="left" colspan="1" rowspan="1">
-                            <olink targetdoc="PS3.3" targetptr="sect_A.86.1.7" xrefstyle="select: title"/>
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.7" xrefstyle="select: title"/>
+                            </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>RT Radiation Record Set Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.481.16</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.8" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>RT Radiation Salvage Record Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.481.17</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.9" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Tomotherapeutic Radiation Record Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.481.18</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.11" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>C-Arm Photon-Electron Radiation Record Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.481.19</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.10" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
+                    </tr>
+                    <tr valign="top">
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>Robotic Radiation Record Storage</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>1.2.840.10008.5.1.4.1.1.481.20</para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1">
+                            <para>
+                                <olink targetdoc="PS3.3" targetptr="sect_A.86.1.12" xrefstyle="select: title"/>
+                            </para>
+                        </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5395,6 +5744,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.64" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                     <tr valign="top">
                         <td align="left" colspan="1" rowspan="1">
@@ -5408,6 +5758,7 @@
                                 <olink targetdoc="PS3.3" targetptr="sect_A.79" xrefstyle="select: title"/>
                             </para>
                         </td>
+                        <td align="left" colspan="1" rowspan="1"/>
                     </tr>
                 </tbody>
             </table>
@@ -12646,7 +12997,7 @@
                                     <td align="left" colspan="1" rowspan="1"/>
                                 </tr>
                                 <tr valign="top">
-                                    <td align="left" colspan="1" rowspan="1">
+                                    <td align="left" colspan="5" rowspan="1">
                                         <para xml:id="para_89789d90-de0c-4bd9-8efb-24d507c62a9a">
 <emphasis role="italic">&gt;Include <xref linkend="table_F.7.2-1c" xrefstyle="select: label quotedtitle"/>
 </emphasis>
@@ -14693,7 +15044,7 @@
             <para xml:id="para_8367b367-aa6a-4de0-9010-401a27d6222e">Retired. See PS3.4-2011.</para>
         </section>
         <section label="F.11" status="2" xml:id="sect_F.11">
-            <title>General Purpose Performed Procedure Step SOP Class(Retired)</title>
+            <title>General Purpose Performed Procedure Step SOP Class (Retired)</title>
             <para xml:id="para_5b6ce3ec-3e0f-4e01-b407-07eb4dc4e196">Retired. See PS3.4-2011.</para>
         </section>
     </chapter>
@@ -32079,7 +32430,7 @@
                     <para xml:id="para_38d9acc8-6a9e-4d7f-8ec8-15bd1127e1ee">A C-FIND request and an HTTP SearchForUPS request with the same parameters shall return the same set of results</para>
                 </listitem>
                 <listitem>
-                    <para xml:id="para_dc1984d4-432e-490a-8098-acf1100c340f">An N-EVERT-REPORT SCU that also supports HTTP subscriptions will record whether a given subscriber uses DIMSE or WebSockets and send the appropriate form of notification to that subscriber</para>
+                    <para xml:id="para_dc1984d4-432e-490a-8098-acf1100c340f">An N-EVENT-REPORT SCU that also supports HTTP subscriptions will record whether a given subscriber uses DIMSE or WebSockets and send the appropriate form of notification to that subscriber</para>
                 </listitem>
                 <listitem>
                     <para xml:id="para_2be23a79-8adb-4d12-856a-7ea17d6d0756">A change made to a Workitem instance will result in the same event notifications regardless of whether the change was requested via DIMSE or HTTP</para>
@@ -45494,7 +45845,11 @@
             <section label="FF.2.2" status="3" xml:id="sect_FF.2.2">
                 <title>Volumetric Inputs, Registration and Cropping</title>
                 <para xml:id="para_445bff8d-3f58-416a-86ff-4346ef7aca72">A Volumetric Presentation State can take multiple volumes as input. A volume is defined in <olink targetdoc="PS3.3" targetptr="sect_C.11.23.1" xrefstyle="template:Section %n “%t” in PS3.3"/>. The same source data can be referenced in more than one input.</para>
-                <para xml:id="para_9e8c5c40-c6a5-46ef-8a0e-156d6a126b5d">The VOI LUT encoded in the Volumetric Presentation State is applied to the input data.</para>
+                <para>For each input volume, the Modality LUT or Rescale Slope and Rescale Intercept transformation(s) as specified in the source image(s) is applied first to the pixel data, otherwise an identity transformation shall be assumed.</para>
+                <note>
+                    <para>In enhanced multi-frame IODs this is specified in the Pixel Value Transformation Functional Group.</para>
+                </note>
+                <para xml:id="para_9e8c5c40-c6a5-46ef-8a0e-156d6a126b5d">The VOI LUT encoded in the Volumetric Presentation State, if any, is next applied to the input data, otherwise an identity transformation shall be assumed.</para>
                 <para xml:id="para_e9a3446f-7a84-4d76-8ab8-f573e8b18829">The input volumes may or may not be in the Volumetric Presentation State Reference Coordinate System (VPS-RCS). If they are not, they shall be registered into the VPS-RCS.</para>
                 <para xml:id="para_997a435d-6e74-46fa-801e-d06af80e918f">Two methods of cropping the input volumes are provided:</para>
                 <itemizedlist>

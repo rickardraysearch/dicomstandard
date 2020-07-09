@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.1" version="5.0" xml:id="PS3.1">
   <title>PS3.1</title>
-  <subtitle>DICOM PS3.1 2020b - Introduction and Overview</subtitle>
+  <subtitle>DICOM PS3.1 2020c - Introduction and Overview</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -294,7 +294,27 @@
         <date>1988</date>
         <title>Digital Imaging and Communications</title>
       </biblioentry>
-      <biblioentry xml:id="biblio_ISO8822_1994">
+        <biblioentry xml:id="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report">
+            <abbrev>EBU-SMPTE-VSF JT-NM Phase 2 Report</abbrev>
+            <authorgroup>
+                <author>
+                    <orgname>European Broadcasting Union (EBU)</orgname>
+                </author>
+                <author>
+                    <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+                </author>
+                <author>
+                    <orgname>Video Services Forum (VSF)</orgname>
+                </author>
+            </authorgroup>
+            <date>2015</date>
+            <edition>v1.0</edition>
+            <title>Joint Task Force on Networked Media (JT-NM) Phase 2 Report- Reference Architecture</title>
+            <bibliosource>
+                <link xl:href="http://jt-nm.org/RA-1.0/JT-NMReferenceArchitecturev1.0%20150904%20FINAL.pdf"/>
+            </bibliosource>
+        </biblioentry>
+        <biblioentry xml:id="biblio_ISO8822_1994">
         <abbrev>ISO/IEC 8822</abbrev>
         <author>
           <orgname>ISO/IEC</orgname>
@@ -313,6 +333,30 @@
           <remark>Withdrawn 2012.</remark>
         </releaseinfo>
       </biblioentry>
+        <biblioentry xml:id="biblio_SMPTE_ST2110-10">
+            <abbrev>SMPTE ST 2110-10</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: System Timing and Definitions</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_SMPTE_ST2110-20">
+            <abbrev>SMPTE ST 2110-20</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: Uncompressed Active Video</title>
+        </biblioentry>
+        <biblioentry xml:id="biblio_SMPTE_ST2110-30">
+            <abbrev>SMPTE ST 2110-30</abbrev>
+            <author>
+                <orgname>Society of Motion Picture and Television Engineers (SMPTE)</orgname>
+            </author>
+            <date>2017</date>
+            <title>Professional Media over IP Networks: PCM Digital Audio</title>
+        </biblioentry>
     </bibliography>
   </chapter>
     <chapter label="3" status="1" xml:id="chapter_3">
@@ -426,6 +470,41 @@
                     <para xml:id="para_b19fe384-7c7b-4932-aeba-e6b348a8e057">The pair of an Information Object and either a DIMSE Service Group, a Media Storage Service, or a Web Service.</para>
                 </glossdef>
             </glossentry>
+            <glossentry xml:id="glossentry_Essence" xreflabel="Essence">
+                <glossterm>Essence</glossterm>
+                <acronym></acronym>
+                <glossdef>
+                    <para>Video, audio or data type of source, as defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Flow" xreflabel="Flow">
+                <glossterm>Flow</glossterm>
+                <acronym></acronym>
+                <glossdef>
+                    <para>A sequence of Grains from a Source; a concrete representation of content emanating from the Source, as defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Grain" xreflabel="Grain">
+                <glossterm>Grain</glossterm>
+                <acronym></acronym>
+                <glossdef>
+                    <para>Represents an element of Essence or other data associated with a specific time, such as a frame, or a group of consecutive audio samples, or captions, as defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Rendition" xreflabel="Rendition">
+                <glossterm>Rendition</glossterm>
+                <acronym></acronym>
+                <glossdef>
+                    <para>A collection of time-synchronized Flows intended for simultaneous presentation, providing a complete experience of a Source Group, as defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>.</para>
+                </glossdef>
+            </glossentry>
+            <glossentry xml:id="glossentry_Source" xreflabel="Source">
+                <glossterm>Source</glossterm>
+                <acronym></acronym>
+                <glossdef>
+                    <para>An abstract concept that represents the primary origin of a Flow or set of Flows, as defined in <xref linkend="biblio_EBU-SMPTE-VSF_JT-NM_Phase2Report"/>.</para>
+                </glossdef>
+            </glossentry>
         </glossary>
     </chapter>
   <chapter label="4" status="1" xml:id="chapter_4">
@@ -449,6 +528,12 @@
           <para xml:id="para_27c4717c-7201-4038-a14a-61876e7b84d0">Digital Imaging and Communications in Medicine</para>
         </listitem>
       </varlistentry>
+        <varlistentry>
+            <term>DICOM-RTV</term>
+            <listitem>
+                <para>DICOM Real-Time Video</para>
+            </listitem>
+        </varlistentry>
         <varlistentry>
             <term>DIMSE</term>
             <listitem>
@@ -479,7 +564,13 @@
           <para xml:id="para_e61ca775-dc6e-4acb-b816-3d6f3c4079b2">Picture Archiving and Communication Systems</para>
         </listitem>
       </varlistentry>
-      <varlistentry>
+        <varlistentry>
+            <term>PTP</term>
+            <listitem>
+                <para>Precision Time Protocol</para>
+            </listitem>
+        </varlistentry>
+        <varlistentry>
         <term>REST</term>
         <listitem>
           <para xml:id="para_c60e17b8-4a34-4258-a37f-594861a74336">Representational State Transfer</para>
@@ -498,7 +589,19 @@
           <para xml:id="para_012920c3-044d-4405-b48a-cbab3d18a8b9">Radiology Information System</para>
         </listitem>
       </varlistentry>
-      <varlistentry>
+        <varlistentry>
+            <term>RTP</term>
+            <listitem>
+                <para>Real-Time Transport Protocol</para>
+            </listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SMPTE</term>
+            <listitem>
+                <para>Society of Motion Picture and Television Engineers</para>
+            </listitem>
+        </varlistentry>
+        <varlistentry>
         <term>STOW-RS</term>
         <listitem>
           <para xml:id="para_15a0a882-025a-4d4d-84e7-f161bd4cda7b">STore Over the Web by RESTful Services</para>
@@ -572,9 +675,11 @@
           <para xml:id="para_bc812d57-953f-4c9e-8864-e275dea08784">the DICOM Web Service API and HTTP Service, which allows use of common hypertext and associated protocols for transport of DICOM services</para>
         </listitem>
         <listitem>
-          <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">the Basic DICOM File Service, which provides access to Storage Media independently
-            from specific media storage formats and file structures.</para>
-        </listitem>
+                    <para xml:id="para_f1368667-cbeb-4f40-a789-33a02cc2bd60">the Basic DICOM File Service, which provides access to Storage Media independently from specific media storage formats and file structures</para>
+                </listitem>
+                <listitem>
+                    <para>the DICOM-RTV and RTP Service, which allows use of real-time transmission for transport of DICOM services.</para>
+                </listitem>
       </itemizedlist>
     </para>
     <para xml:id="para_ea38162d-7112-496c-b343-ee5e48f366d4">
@@ -582,7 +687,8 @@
         <title>General Communication Model</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="figures/PS3.1_5-1.svg"/>
+              <imagedata fileref="part01_fromword_files/PS3.1_5-1.png" width="4in"/>
+            <!--<imagedata fileref="figures/PS3.1_5-1.svg"/>-->
           </imageobject>
         </mediaobject>
       </figure>
@@ -689,10 +795,15 @@
 </para>
         </listitem>
         <listitem>
-          <para xml:id="para_e436fac8-343c-437c-9bc5-ebadc0707717">
-            <olink targetdoc="PS3.21" targetptr="PS3.21">PS3.21: Transformations between DICOM and other Representations</olink>
-          </para>
-        </listitem>
+                    <para xml:id="para_e436fac8-343c-437c-9bc5-ebadc0707717">
+                        <olink targetdoc="PS3.21" targetptr="PS3.21">PS3.21: Transformations between DICOM and other Representations</olink>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <olink targetdoc="PS3.22" targetptr="PS3.22">PS3.22: Real-Time Communication (DICOM-RTV)</olink>
+                    </para>
+                </listitem>
       </itemizedlist>
       <para xml:id="para_559273ae-baec-40c4-9f4d-b5182bb599db">These parts of the Standard are related but independent documents. A brief description
         of each Part is provided in this section.</para>
@@ -1213,6 +1324,16 @@
       <para xml:id="para_96d91af1-a80c-487b-9936-ec68d93f5840">
 <olink targetdoc="PS3.21" targetptr="PS3.21" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies the transformations between DICOM and other representations of the same information. Within its scope are transformations to and from the NCI Annotation and Image Markup format.</para>
     </section>
+      <section label="6.22" status="2" xml:id="sect_6.22">
+          <title>PS3.22: Real-Time Communication (DICOM-RTV)</title>
+          <para>
+              <olink targetdoc="PS3.22" targetptr="PS3.22" xrefstyle="select: labelnumber"/> of the DICOM Standard specifies an
+              <xref linkend="biblio_SMPTE_ST2110-10"/>
+              based service for the real-time transport of DICOM metadata. It provides a mechanism for the transport of DICOM metadata associated with a video or an audio flow based on the
+              <xref linkend="biblio_SMPTE_ST2110-20"/>
+              and
+              <xref linkend="biblio_SMPTE_ST2110-30"/>, respectively.</para>
+      </section>
   </chapter>
   <chapter label="7" status="1" xml:id="chapter_7">
     <title>Referencing The DICOM Standard</title>

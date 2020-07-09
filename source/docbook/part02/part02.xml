@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xl="http://www.w3.org/1999/xlink" label="PS3.2" version="5.0" xml:id="PS3.2">
   <title>PS3.2</title>
-  <subtitle>DICOM PS3.2 2020b - Conformance</subtitle>
+  <subtitle>DICOM PS3.2 2020c - Conformance</subtitle>
   <info>
     <author>
       <orgname>DICOM Standards Committee</orgname>
@@ -1975,7 +1975,73 @@
               <para xml:id="para_eb82a7be-3488-478f-89ac-9df11dae6d0d">Transfer</para>
             </td>
           </tr>
-          <tr valign="top">
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.6.2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Multi-channel Respiratory Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.7.1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Routine Scalp Electroencephalogram Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.7.2</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Electromyogram Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.7.3</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Electrooculogram Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.7.4</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Sleep Electroencephalogram Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.9.8.1</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Body Position Waveform Storage SOP Class</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
             <td align="left" colspan="1" rowspan="1">
               <para xml:id="para_61e84f90-f70c-45d9-ba99-de1610de22e9">1.2.840.10008.5.1.4.1.1.11.1</para>
             </td>
@@ -3138,6 +3204,61 @@
                 </td>
                 <td align="left" colspan="1" rowspan="1">
                     <para xml:id="para_d0fd594e-b11b-4796-a53c-11198b9c0df3">Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.481.16</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>RT Radiation Record Set Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.481.17</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>RT Radiation Salvage Record Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.481.18</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Tomotherapeutic Radiation Record Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.481.19</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>C-Arm Photon Electron Radiation Record Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td align="left" colspan="1" rowspan="1">
+                    <para>1.2.840.10008.5.1.4.1.1.481.20</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Robotic-Arm Radiation Record Storage</para>
+                </td>
+                <td align="left" colspan="1" rowspan="1">
+                    <para>Transfer</para>
                 </td>
             </tr>
             <tr valign="top">
